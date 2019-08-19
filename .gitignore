@@ -1,0 +1,6 @@
+builds/*
+misc/*
+experiments/*
+src/CMakeLists.txt.user
+driver/.cache/v/cache/lastfailed
+*.pyc
