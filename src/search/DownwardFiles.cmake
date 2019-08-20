@@ -75,6 +75,7 @@ fast_downward_plugin(
         search_progress
         search_space
         search_statistics
+        state_generator
         state_id
         state_registry
         task_id
@@ -550,6 +551,7 @@ fast_downward_plugin(
         tasks/domain_abstracted_task
         tasks/domain_abstracted_task_factory
         tasks/modified_goals_task
+        tasks/modified_init_task
         tasks/modified_operator_costs_task
     DEPENDS TASK_PROPERTIES
     DEPENDENCY_ONLY

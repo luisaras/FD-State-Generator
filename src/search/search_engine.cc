@@ -44,7 +44,8 @@ successor_generator::SuccessorGenerator &get_successor_generator(const TaskProxy
 SearchEngine::SearchEngine(const Options &opts)
     : status(IN_PROGRESS),
       solution_found(false),
-      task(tasks::g_root_task),
+      state_generator(opts),
+      task(state_generator.generate(tasks::g_root_task)),
       task_proxy(*task),
       state_registry(task_proxy),
       successor_generator(get_successor_generator(task_proxy)),
@@ -150,6 +151,7 @@ void SearchEngine::add_options_to_parser(OptionParser &parser) {
         "experiments. Timed-out searches are treated as failed searches, "
         "just like incomplete search algorithms that exhaust their search space.",
         "infinity");
+    StateGenerator::add_options_to_parser(parser);
     utils::add_verbosity_option_to_parser(parser);
 }
 
