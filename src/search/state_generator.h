@@ -1,12 +1,14 @@
-#include "../tasks/modified_init_task.h"
+#include "abstract_task.h"
 #include "evaluator.h"
-
-#include "../option_parser.h"
+#include "open_list.h"
+#include "option_parser.h"
 
 class StateGenerator {
 	
 	double max_time;
-	std::shared_ptr<Evaluator> f_evaluator;
+	
+	std::shared_ptr<Evaluator> evaluator;
+	std::unique_ptr<StateOpenList> open_list;
 
 public:
 

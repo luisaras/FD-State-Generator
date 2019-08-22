@@ -1,7 +1,12 @@
 #include "state_generator.h"
+#include "../tasks/modified_init_task.h"
+#include "../heuristics/lm_cut_heuristic.h"
+#include "../open_lists/best_first_open_list.h"
 
 StateGenerator::StateGenerator(const options::Options &opts) :
-	max_time(opts.get<double>("r_max_time")) {
+	max_time(opts.get<double>("r_max_time")),
+	evaluator(std::make_shared<lm_cut_heuristic::LandmarkCutHeuristic>(opts)),
+	open_list(standard_scalar_open_list::BestFirstOpenListFactory(opts).create_state_open_list()) {
 }
 
 const std::shared_ptr<AbstractTask> StateGenerator::generate(const std::shared_ptr<AbstractTask> &original_task) const {
@@ -11,12 +16,22 @@ const std::shared_ptr<AbstractTask> StateGenerator::generate(const std::shared_p
 }
 
 void StateGenerator::add_options_to_parser(options::OptionParser &parser) {
-    parser.add_option<double>(
-        "r_max_time",
-        "maximum time in seconds the search is allowed to run for. The "
-        "timeout is only checked after each complete search step "
-        "(usually a node expansion), so the actual runtime can be arbitrarily "
-        "longer. Therefore, this parameter should not be used for time-limiting "
-        "experiments.",
-        "infinity");
+	parser.add_option<double>(
+		"r_max_time",
+		"maximum time in seconds the search is allowed to run for. The "
+		"timeout is only checked after each complete search step "
+		"(usually a node expansion), so the actual runtime can be arbitrarily "
+		"longer. Therefore, this parameter should not be used for time-limiting "
+		"experiments.",
+		"infinity");
+	parser.add_option<double>(
+		"r_novelty_level",
+		"",
+		"0");
+	parser.add_option<bool>(
+		"r_novelty_h",
+		"false");
+	parser.add_option<bool>(
+		"r_novelty_prune",
+		"false");
 }
