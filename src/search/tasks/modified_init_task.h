@@ -12,7 +12,7 @@ class ModifiedInitTask : public tasks::DelegatingTask {
 public:
     ModifiedInitTask(
         const std::shared_ptr<AbstractTask> &parent,
-        std::vector<int> &init);
+        const std::vector<int> &init);
     ~ModifiedInitTask() = default;
 
     virtual std::vector<int> get_initial_state_values() const override;

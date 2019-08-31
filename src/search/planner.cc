@@ -20,11 +20,13 @@ int main(int argc, const char **argv) {
         cout << usage(argv[0]) << endl;
         utils::exit_with(ExitCode::SEARCH_INPUT_ERROR);
     }
+    
+    string file_name(argv[1]);
 
     bool unit_cost = false;
-    if (static_cast<string>(argv[1]) != "--help") {
+    if (file_name != "--help") {
         cout << "reading input... [t=" << utils::g_timer << "]" << endl;
-        tasks::read_root_task(cin);
+        tasks::read_root_task(file_name);
         cout << "done reading input! [t=" << utils::g_timer << "]" << endl;
         TaskProxy task_proxy(*tasks::g_root_task);
         unit_cost = task_properties::is_unit_cost(task_proxy);
@@ -55,9 +57,11 @@ int main(int argc, const char **argv) {
     engine->search();
     search_timer.stop();
     utils::g_timer.stop();
-
+    
+    engine->save_task_if_necessary();
     engine->save_plan_if_necessary();
     engine->print_statistics();
+    
     cout << "Search time: " << search_timer << endl;
     cout << "Total time: " << utils::g_timer << endl;
 

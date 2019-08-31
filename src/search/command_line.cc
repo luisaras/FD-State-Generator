@@ -132,7 +132,7 @@ shared_ptr<SearchEngine> parse_cmd_line(
     int argc, const char **argv, options::Registry &registry, bool dry_run, bool is_unit_cost) {
     vector<string> args;
     bool active = true;
-    for (int i = 1; i < argc; ++i) {
+    for (int i = 2; i < argc; ++i) {
         string arg = sanitize_arg_string(argv[i]);
 
         if (arg == "--if-unit-cost") {

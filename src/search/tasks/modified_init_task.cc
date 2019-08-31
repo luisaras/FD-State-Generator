@@ -6,7 +6,7 @@ namespace extra_tasks {
 
 ModifiedInitTask::ModifiedInitTask(
     const shared_ptr<AbstractTask> &parent,
-    vector<int> &init)
+    const vector<int> &init)
     : DelegatingTask(parent),
       init(init) {
 }

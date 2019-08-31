@@ -7,7 +7,6 @@
 #include "search_progress.h"
 #include "search_space.h"
 #include "search_statistics.h"
-#include "state_generator.h"
 #include "state_registry.h"
 #include "task_proxy.h"
 
@@ -38,9 +37,6 @@ class SearchEngine {
     bool solution_found;
     Plan plan;
 protected:
-
-    const StateGenerator state_generator;
-    
     // Hold a reference to the task implementation and pass it to objects that need it.
     const std::shared_ptr<AbstractTask> task;
     // Use task_proxy to access task information.
@@ -58,7 +54,6 @@ protected:
     double max_time;
     const utils::Verbosity verbosity;
 
-
     virtual void initialize() {}
     virtual SearchStatus step() = 0;
 
@@ -70,6 +65,7 @@ public:
     virtual ~SearchEngine();
     virtual void print_statistics() const = 0;
     virtual void save_plan_if_necessary();
+    virtual void save_task_if_necessary();
     bool found_solution() const;
     SearchStatus get_status() const;
     const Plan &get_plan() const;

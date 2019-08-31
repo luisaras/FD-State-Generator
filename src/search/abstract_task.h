@@ -10,6 +10,11 @@
 #include <string>
 #include <utility>
 #include <vector>
+#include <set>
+
+namespace tasks {
+	static const int PRE_FILE_VERSION = 3;
+}
 
 namespace options {
 class Options;
@@ -64,6 +69,7 @@ public:
     virtual int get_variable_default_axiom_value(int var) const = 0;
     virtual std::string get_fact_name(const FactPair &fact) const = 0;
     virtual bool are_facts_mutex(const FactPair &fact1, const FactPair &fact2) const = 0;
+    virtual std::set<FactPair> get_mutex_facts(const FactPair& fact) const = 0;
 
     virtual int get_operator_cost(int index, bool is_axiom) const = 0;
     virtual std::string get_operator_name(int index, bool is_axiom) const = 0;
@@ -107,5 +113,7 @@ public:
         std::vector<int> &values,
         const AbstractTask *ancestor_task) const = 0;
 };
+
+std::ostream &operator<<(std::ostream &os, std::shared_ptr<AbstractTask> task);
 
 #endif

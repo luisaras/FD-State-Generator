@@ -10,16 +10,14 @@
 #include <algorithm>
 #include <cassert>
 #include <memory>
-#include <set>
 #include <unordered_set>
 #include <vector>
-
+#include <fstream>
 
 using namespace std;
 using utils::ExitCode;
 
 namespace tasks {
-static const int PRE_FILE_VERSION = 3;
 shared_ptr<AbstractTask> g_root_task = nullptr;
 
 struct ExplicitVariable {
@@ -77,6 +75,7 @@ public:
     virtual string get_fact_name(const FactPair &fact) const override;
     virtual bool are_facts_mutex(
         const FactPair &fact1, const FactPair &fact2) const override;
+    virtual set<FactPair> get_mutex_facts(const FactPair& fact) const override;
 
     virtual int get_operator_cost(int index, bool is_axiom) const override;
     virtual string get_operator_name(
@@ -417,6 +416,10 @@ bool RootTask::are_facts_mutex(const FactPair &fact1, const FactPair &fact2) con
     return bool(mutexes[fact1.var][fact1.value].count(fact2));
 }
 
+set<FactPair> RootTask::get_mutex_facts(const FactPair& fact) const {
+    return mutexes[fact.var][fact.value];
+}
+
 int RootTask::get_operator_cost(int index, bool is_axiom) const {
     return get_operator_or_axiom(index, is_axiom).cost;
 }
@@ -493,9 +496,10 @@ void RootTask::convert_state_values(
     }
 }
 
-void read_root_task(istream &in) {
+void read_root_task(string &name) {
     assert(!g_root_task);
-    g_root_task = make_shared<RootTask>(in);
+				ifstream file(name, ifstream::in);
+    g_root_task = make_shared<RootTask>(file);
 }
 
 static shared_ptr<AbstractTask> _parse(OptionParser &parser) {

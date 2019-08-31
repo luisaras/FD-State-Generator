@@ -126,8 +126,8 @@ def run_search(args):
         try:
             call.check_call(
                 "search",
-                [executable] + args.search_options,
-                stdin=args.search_input,
+                [executable] + [args.search_input] + args.search_options,
+                #stdin=args.search_input,
                 time_limit=time_limit,
                 memory_limit=memory_limit)
         except subprocess.CalledProcessError as err:
