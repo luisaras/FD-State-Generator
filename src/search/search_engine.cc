@@ -18,7 +18,6 @@
 #include <cassert>
 #include <iostream>
 #include <limits>
-#include <fstream>
 
 using namespace std;
 using utils::ExitCode;
@@ -119,9 +118,7 @@ void SearchEngine::save_plan_if_necessary() {
 }
 
 void SearchEngine::save_task_if_necessary() {
-    ofstream file("new_output.sas");
-    file << task;
-    file.close();
+    // Does not change task.
 }
 
 int SearchEngine::get_adjusted_cost(const OperatorProxy &op) const {

@@ -436,6 +436,15 @@ fast_downward_plugin(
 )
 
 fast_downward_plugin(
+    NAME STATE_GENERATOR
+    HELP "Search engine to generate new initial states"
+    SOURCES
+        search_engines/state_generator
+        search_engines/plugin_generator
+    DEPENDS SEARCH_COMMON
+)
+
+fast_downward_plugin(
     NAME LP_SOLVER
     HELP "Interface to an LP solver"
     SOURCES
@@ -481,7 +490,7 @@ fast_downward_plugin(
     NAME CG_HEURISTIC
     HELP "The causal graph heuristic"
     SOURCES heuristics/cg_heuristic
-            heuristics/cg_cache
+        heuristics/cg_cache
     DEPENDS DOMAIN_TRANSITION_GRAPH PRIORITY_QUEUES TASK_PROPERTIES
 )
 
@@ -550,6 +559,7 @@ fast_downward_plugin(
         tasks/domain_abstracted_task
         tasks/domain_abstracted_task_factory
         tasks/modified_goals_task
+        tasks/modified_init_task
         tasks/modified_operator_costs_task
     DEPENDS TASK_PROPERTIES
     DEPENDENCY_ONLY

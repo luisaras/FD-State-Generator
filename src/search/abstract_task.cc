@@ -37,6 +37,16 @@ ostream &operator<<(ostream &os, shared_ptr<AbstractTask> task) {
     }
     
     // Mutex groups
+    int num_mutex = 0;
+     for (int i = 0; i < num_var; ++i) {
+        int domain_size = task->get_variable_domain_size(i);
+        for (int v = 0; v < domain_size; ++v) {
+            FactPair fact1(i, v);
+            set<FactPair> mutex_facts = task->get_mutex_facts(fact1);
+            num_mutex += mutex_facts.size();
+        }
+    }
+    os << num_mutex << endl;
     for (int i = 0; i < num_var; ++i) {
         int domain_size = task->get_variable_domain_size(i);
         for (int v = 0; v < domain_size; ++v) {
