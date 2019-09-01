@@ -55,33 +55,27 @@ void StateGenerator::initialize() {
       Collect path-dependent evaluators that are used for preferred operators
       (in case they are not also used in the open list).
     */
-    for (const shared_ptr<Evaluator> &evaluator : preferred_operator_evaluators) {
+    for (const shared_ptr<Evaluator> &evaluator : preferred_operator_evaluators)
         evaluator->get_path_dependent_evaluators(evals);
-    }
 
     /*
       Collect path-dependent evaluators that are used in the f_evaluator.
       They are usually also used in the open list and will hence already be
       included, but we want to be sure.
     */
-    if (f_evaluator) {
+    if (f_evaluator)
         f_evaluator->get_path_dependent_evaluators(evals);
-    }
 
     /*
       Collect path-dependent evaluators that are used in the lazy_evaluator
       (in case they are not already included).
     */
-    if (lazy_evaluator) {
+    if (lazy_evaluator)
         lazy_evaluator->get_path_dependent_evaluators(evals);
-    }
-
     path_dependent_evaluators.assign(evals.begin(), evals.end());
-
     const GlobalState &initial_state = state_registry.get_initial_state();
-    for (Evaluator *evaluator : path_dependent_evaluators) {
+    for (Evaluator *evaluator : path_dependent_evaluators)
         evaluator->notify_initial_state(initial_state);
-    }
 
     /*
       Note: we consider the initial state as reached by a preferred

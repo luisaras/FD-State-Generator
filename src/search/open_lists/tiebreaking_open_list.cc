@@ -16,11 +16,12 @@
 using namespace std;
 
 namespace tiebreaking_open_list {
-template<class Entry>
+
+template<class Entry, class Compare = std::less<vector<int>> >
 class TieBreakingOpenList : public OpenList<Entry> {
     using Bucket = deque<Entry>;
 
-    map<const vector<int>, Bucket> buckets;
+    map<const vector<int>, Bucket, Compare> buckets;
     int size;
 
     vector<shared_ptr<Evaluator>> evaluators;
@@ -52,15 +53,15 @@ public:
 };
 
 
-template<class Entry>
-TieBreakingOpenList<Entry>::TieBreakingOpenList(const Options &opts)
+template<class Entry, class Compare>
+TieBreakingOpenList<Entry, Compare>::TieBreakingOpenList(const Options &opts)
     : OpenList<Entry>(opts.get<bool>("pref_only")),
       size(0), evaluators(opts.get_list<shared_ptr<Evaluator>>("evals")),
       allow_unsafe_pruning(opts.get<bool>("unsafe_pruning")) {
 }
 
-template<class Entry>
-void TieBreakingOpenList<Entry>::do_insertion(
+template<class Entry, class Compare>
+void TieBreakingOpenList<Entry, Compare>::do_insertion(
     EvaluationContext &eval_context, const Entry &entry) {
     vector<int> key;
     key.reserve(evaluators.size());
@@ -71,8 +72,8 @@ void TieBreakingOpenList<Entry>::do_insertion(
     ++size;
 }
 
-template<class Entry>
-Entry TieBreakingOpenList<Entry>::remove_min() {
+template<class Entry, class Compare>
+Entry TieBreakingOpenList<Entry, Compare>::remove_min() {
     assert(size > 0);
     typename map<const vector<int>, Bucket>::iterator it;
     it = buckets.begin();
@@ -86,31 +87,31 @@ Entry TieBreakingOpenList<Entry>::remove_min() {
     return result;
 }
 
-template<class Entry>
-bool TieBreakingOpenList<Entry>::empty() const {
+template<class Entry, class Compare>
+bool TieBreakingOpenList<Entry, Compare>::empty() const {
     return size == 0;
 }
 
-template<class Entry>
-void TieBreakingOpenList<Entry>::clear() {
+template<class Entry, class Compare>
+void TieBreakingOpenList<Entry, Compare>::clear() {
     buckets.clear();
     size = 0;
 }
 
-template<class Entry>
-int TieBreakingOpenList<Entry>::dimension() const {
+template<class Entry, class Compare>
+int TieBreakingOpenList<Entry, Compare>::dimension() const {
     return evaluators.size();
 }
 
-template<class Entry>
-void TieBreakingOpenList<Entry>::get_path_dependent_evaluators(
+template<class Entry, class Compare>
+void TieBreakingOpenList<Entry, Compare>::get_path_dependent_evaluators(
     set<Evaluator *> &evals) {
     for (const shared_ptr<Evaluator> &evaluator : evaluators)
         evaluator->get_path_dependent_evaluators(evals);
 }
 
-template<class Entry>
-bool TieBreakingOpenList<Entry>::is_dead_end(
+template<class Entry, class Compare>
+bool TieBreakingOpenList<Entry, Compare>::is_dead_end(
     EvaluationContext &eval_context) const {
     // TODO: Properly document this behaviour.
     // If one safe heuristic detects a dead end, return true.
@@ -128,8 +129,8 @@ bool TieBreakingOpenList<Entry>::is_dead_end(
     return true;
 }
 
-template<class Entry>
-bool TieBreakingOpenList<Entry>::is_reliable_dead_end(
+template<class Entry, class Compare>
+bool TieBreakingOpenList<Entry, Compare>::is_reliable_dead_end(
     EvaluationContext &eval_context) const {
     for (const shared_ptr<Evaluator> &evaluator : evaluators)
         if (eval_context.is_evaluator_value_infinite(evaluator.get()) &&
@@ -144,12 +145,18 @@ TieBreakingOpenListFactory::TieBreakingOpenListFactory(const Options &options)
 
 unique_ptr<StateOpenList>
 TieBreakingOpenListFactory::create_state_open_list() {
-    return utils::make_unique_ptr<TieBreakingOpenList<StateOpenListEntry>>(options);
+    if (options.get<bool>("reverse"))
+        return utils::make_unique_ptr< TieBreakingOpenList< StateOpenListEntry, greater<vector<int>> > >(options);
+    else
+        return utils::make_unique_ptr<TieBreakingOpenList<StateOpenListEntry>>(options);
 }
 
 unique_ptr<EdgeOpenList>
 TieBreakingOpenListFactory::create_edge_open_list() {
-    return utils::make_unique_ptr<TieBreakingOpenList<EdgeOpenListEntry>>(options);
+    if (options.get<bool>("reverse"))
+        return utils::make_unique_ptr< TieBreakingOpenList< EdgeOpenListEntry, greater<vector<int>> > >(options);
+    else
+        return utils::make_unique_ptr<TieBreakingOpenList<EdgeOpenListEntry>>(options);
 }
 
 static shared_ptr<OpenListFactory> _parse(OptionParser &parser) {
@@ -161,6 +168,10 @@ static shared_ptr<OpenListFactory> _parse(OptionParser &parser) {
     parser.add_option<bool>(
         "unsafe_pruning",
         "allow unsafe pruning when the main evaluator regards a state a dead end",
+        "true");
+    parser.add_option<bool>(
+        "reverse",
+        "reverse order",
         "true");
     Options opts = parser.parse();
     opts.verify_list_non_empty<shared_ptr<Evaluator>>("evals");

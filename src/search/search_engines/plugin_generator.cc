@@ -39,7 +39,7 @@ static shared_ptr<SearchEngine> _parse(OptionParser &parser) {
 
     shared_ptr<state_generator::StateGenerator> engine;
     if (!parser.dry_run()) {
-        auto temp = search_common::create_astar_open_list_factory_and_f_eval(opts);
+        auto temp = search_common::create_astar_open_list_factory_and_f_eval(opts, true);
         opts.set("open", temp.first);
         opts.set("f_eval", temp.second);
         opts.set("reopen_closed", true);

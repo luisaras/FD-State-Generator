@@ -111,7 +111,7 @@ shared_ptr<OpenListFactory> create_wastar_open_list_factory(
 }
 
 pair<shared_ptr<OpenListFactory>, const shared_ptr<Evaluator>>
-create_astar_open_list_factory_and_f_eval(const Options &opts) {
+create_astar_open_list_factory_and_f_eval(const Options &opts, bool reverse) {
     shared_ptr<GEval> g = make_shared<GEval>();
     shared_ptr<Evaluator> h = opts.get<shared_ptr<Evaluator>>("eval");
     shared_ptr<Evaluator> f = make_shared<SumEval>(vector<shared_ptr<Evaluator>>({g, h}));
@@ -121,6 +121,7 @@ create_astar_open_list_factory_and_f_eval(const Options &opts) {
     options.set("evals", evals);
     options.set("pref_only", false);
     options.set("unsafe_pruning", false);
+    options.set("reverse", reverse);
     shared_ptr<OpenListFactory> open =
         make_shared<tiebreaking_open_list::TieBreakingOpenListFactory>(options);
     return make_pair(open, f);
