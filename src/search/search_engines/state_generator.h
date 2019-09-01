@@ -3,6 +3,8 @@
 
 #include "../open_list.h"
 #include "../search_engine.h"
+#include "match_tree.h"
+#include "reverse_operator.h"
 
 #include <memory>
 #include <vector>
@@ -28,6 +30,12 @@ class StateGenerator : public SearchEngine {
     std::shared_ptr<Evaluator> lazy_evaluator;
 
     std::shared_ptr<PruningMethod> pruning_method;
+    
+    std::vector<reverse_search::ReverseOperator> operators;
+    
+    reverse_search::MatchTree match_tree;
+    
+    std::vector<int> best_state;
 
     void start_f_value_statistics(EvaluationContext &eval_context);
     void update_f_value_statistics(EvaluationContext &eval_context);

@@ -439,6 +439,8 @@ fast_downward_plugin(
     NAME STATE_GENERATOR
     HELP "Search engine to generate new initial states"
     SOURCES
+        search_engines/match_tree
+        search_engines/reverse_operator
         search_engines/state_generator
         search_engines/plugin_generator
     DEPENDS SEARCH_COMMON

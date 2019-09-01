@@ -4,3 +4,6 @@ experiments/*
 src/CMakeLists.txt.user
 driver/.cache/v/cache/lastfailed
 *.pyc
+output.sas
+new_output.sas
+sas_plan

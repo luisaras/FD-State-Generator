@@ -8,6 +8,7 @@
 
 #include "../algorithms/ordered_set.h"
 #include "../task_utils/successor_generator.h"
+#include "../tasks/modified_init_task.h"
 
 #include "../utils/logging.h"
 
@@ -19,8 +20,10 @@
 #include <set>
 
 using namespace std;
+using namespace reverse_search;
 
 namespace state_generator {
+
 StateGenerator::StateGenerator(const Options &opts)
     : SearchEngine(opts),
       reopen_closed_nodes(opts.get<bool>("reopen_closed")),
@@ -29,7 +32,9 @@ StateGenerator::StateGenerator(const Options &opts)
       f_evaluator(opts.get<shared_ptr<Evaluator>>("f_eval", nullptr)),
       preferred_operator_evaluators(opts.get_list<shared_ptr<Evaluator>>("preferred")),
       lazy_evaluator(opts.get<shared_ptr<Evaluator>>("lazy_evaluator", nullptr)),
-      pruning_method(opts.get<shared_ptr<PruningMethod>>("pruning")) {
+      pruning_method(opts.get<shared_ptr<PruningMethod>>("pruning")),
+      match_tree(task_proxy),
+      best_state(task->get_initial_state_values()) {
     if (lazy_evaluator && !lazy_evaluator->does_cache_estimates()) {
         cerr << "lazy_evaluator must cache its estimates" << endl;
         utils::exit_with(utils::ExitCode::SEARCH_INPUT_ERROR);
@@ -101,6 +106,16 @@ void StateGenerator::initialize() {
     print_initial_evaluator_values(eval_context);
 
     pruning_method->initialize(task);
+    
+    // Build reverse operators
+    VariablesProxy variables = task_proxy.get_variables();
+    for (OperatorProxy op : task_proxy.get_operators())
+        reverse_search::build_reverse_operators(op, op.get_cost(), variables, operators);
+    
+    // Match Tree
+    for (size_t op_id = 0; op_id < operators.size(); ++op_id)
+        match_tree.insert(op_id, operators[op_id].regression_preconditions);
+    
 }
 
 void StateGenerator::print_statistics() const {
@@ -174,8 +189,8 @@ SearchStatus StateGenerator::step() {
     }
 
     GlobalState s = node->get_state();
-    if (check_goal_and_set_plan(s))
-        return SOLVED;
+    //if (check_goal_and_set_plan(s))
+    //    return SOLVED;
 
     vector<OperatorID> applicable_ops;
     successor_generator.generate_applicable_ops(s, applicable_ops);
@@ -298,8 +313,9 @@ void StateGenerator::dump_search_space() const {
 }
 
 void StateGenerator::save_task_if_necessary() {
+    shared_ptr<AbstractTask> new_task = make_shared<extra_tasks::ModifiedInitTask>(task, best_state);
     ofstream file("new_output.sas");
-    file << task;
+    file << new_task;
     file.close();
 }
 
