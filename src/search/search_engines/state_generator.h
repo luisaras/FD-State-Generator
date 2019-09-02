@@ -47,6 +47,8 @@ public:
     virtual void save_plan_if_necessary() override;
     virtual void save_task_if_necessary() override;
 
+    virtual bool found_solution() const override;
+
     void dump_search_space() const;
 };
 

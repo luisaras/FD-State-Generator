@@ -66,7 +66,7 @@ public:
     virtual void print_statistics() const = 0;
     virtual void save_plan_if_necessary();
     virtual void save_task_if_necessary();
-    bool found_solution() const;
+    virtual bool found_solution() const;
     SearchStatus get_status() const;
     const Plan &get_plan() const;
     void search();

@@ -129,6 +129,8 @@ SearchStatus StateGenerator::step() {
     set<int> applicable_operator_ids;
     match_tree.get_applicable_operator_ids(state_values, applicable_operator_ids);
 
+    cout << "APPLICABLE OPERATOR IDS: " << applicable_operator_ids.size() << endl;
+
     for (int op_id : applicable_operator_ids) {
         ReverseOperator& op = operators[op_id];
 
@@ -194,9 +196,13 @@ void StateGenerator::save_task_if_necessary() {
     file.close();
 }
 
+bool StateGenerator::found_solution() const {
+    return true;
+}
+
 void add_options_to_parser(OptionParser &parser) {
-    SearchEngine::add_options_to_parser(parser);
     parser.add_option<shared_ptr<Evaluator>>("eval", "evaluator for h-value");
+    SearchEngine::add_options_to_parser(parser);
 }
 
 }
