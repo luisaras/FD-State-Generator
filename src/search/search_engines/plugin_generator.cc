@@ -28,19 +28,13 @@ static shared_ptr<SearchEngine> _parse(OptionParser &parser) {
         "--search eager(tiebreaking([sum([g(), h]), h], unsafe_pruning=false),\n"
         "               reopen_closed=true, f_eval=sum([g(), h]))\n"
         "```\n", true);
-    parser.add_option<shared_ptr<Evaluator>>("eval", "evaluator for h-value");
-    parser.add_option<shared_ptr<Evaluator>>(
-        "lazy_evaluator",
-        "An evaluator that re-evaluates a state before it is expanded.",
-        OptionParser::NONE);
 
     state_generator::add_options_to_parser(parser);
     Options opts = parser.parse();
 
     shared_ptr<state_generator::StateGenerator> engine;
     if (!parser.dry_run()) {
-        auto temp = search_common::create_reverse_open_list_factory(opts);
-        opts.set("open", temp);
+        opts.set("open", search_common::create_reverse_open_list_factory(opts));
         engine = make_shared<state_generator::StateGenerator>(opts);
     }
 

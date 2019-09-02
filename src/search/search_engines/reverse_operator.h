@@ -43,6 +43,8 @@ public:
                      int cost);
     ~ReverseOperator() = default;
 
+    void apply(std::vector<int>& state);
+
 };
 
 /*

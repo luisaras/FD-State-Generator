@@ -188,6 +188,12 @@ public:
     GlobalState lookup_state(StateID id) const;
 
     /*
+      Returns the state with given values. This is an expensive operation
+      as it includes duplicate checking.
+    */
+    GlobalState get_state(const std::vector<int>& values);
+
+    /*
       Returns a reference to the initial state and registers it if this was not
       done before. The result is cached internally so subsequent calls are cheap.
     */

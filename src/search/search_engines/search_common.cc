@@ -62,8 +62,7 @@ static shared_ptr<OpenListFactory> create_alternation_open_list_factory_aux(
     }
 }
 
-shared_ptr<OpenListFactory> create_greedy_open_list_factory(
-    const Options &options, bool reverse) {
+shared_ptr<OpenListFactory> create_greedy_open_list_factory(const Options &options) {
     return create_alternation_open_list_factory_aux(
         options.get_list<shared_ptr<Evaluator>>("evals"),
         options.get_list<shared_ptr<Evaluator>>("preferred"),
@@ -128,9 +127,15 @@ create_astar_open_list_factory_and_f_eval(const Options &opts) {
 }
 
 shared_ptr<OpenListFactory> create_reverse_open_list_factory(const Options &opts) {
-    vector<shared_ptr<Evaluator>> evals = opts.get<shared_ptr<Evaluator>>("evals");
+    shared_ptr<Evaluator> h = opts.get<shared_ptr<Evaluator>>("eval");
+    shared_ptr<GEval> g = make_shared<GEval>();
+    vector<shared_ptr<Evaluator>> evals;
     if (opts.contains("novelty")) {
-        //TODO: evals.push_front(opts.get<shared_ptr<Novelty>>("novelty"));
+        // TODO
+        //shared_ptr<Novelty> n = opts.get<shared_ptr<Novelty>>("novelty");
+        //evals = {n, h, g};
+    } else {
+        evals = {h, g};
     }
     Options options;
     options.set("evals", evals);

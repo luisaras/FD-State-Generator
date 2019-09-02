@@ -20,20 +20,18 @@ class Options;
 namespace state_generator {
     
 class StateGenerator : public SearchEngine {
-    const bool reopen_closed_nodes;
 
     std::unique_ptr<StateOpenList> open_list;
 
-    std::vector<Evaluator *> path_dependent_evaluators;
-    std::vector<std::shared_ptr<Evaluator>> preferred_operator_evaluators;
-    std::shared_ptr<Evaluator> lazy_evaluator;
+    std::shared_ptr<Evaluator> h_evaluator;
+    std::vector<Evaluator*> path_dependent_evaluators;
     
     std::vector<reverse_search::ReverseOperator> operators;
     
     reverse_search::MatchTree match_tree;
     
     std::vector<int> best_state;
-    EvaluationContext best_state_eval;
+    int best_state_h = 0;
 
     void reward_progress();
 
@@ -46,12 +44,14 @@ public:
     virtual ~StateGenerator() = default;
 
     virtual void print_statistics() const override;
+    virtual void save_plan_if_necessary() override;
     virtual void save_task_if_necessary() override;
 
     void dump_search_space() const;
 };
 
 extern void add_options_to_parser(options::OptionParser &parser);
+
 }
 
 #endif

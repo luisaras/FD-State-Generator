@@ -22,6 +22,11 @@ ReverseOperator::ReverseOperator(const vector<FactPair> &prev_pairs,
     }
 }
 
+void ReverseOperator::apply(vector<int>& state) {
+    for (const FactPair& effect : regression_effects)
+        state[effect.var] = effect.value;
+}
+
 /*
   Recursive method; called by build_abstract_operators. In the case
   of a precondition with value = -1 in the concrete operator, all
