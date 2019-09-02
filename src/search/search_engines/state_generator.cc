@@ -26,13 +26,8 @@ namespace state_generator {
 
 StateGenerator::StateGenerator(const Options &opts)
     : SearchEngine(opts),
-      reopen_closed_nodes(opts.get<bool>("reopen_closed")),
-      open_list(opts.get<shared_ptr<OpenListFactory>>("open")->
-                create_state_open_list()),
-      f_evaluator(opts.get<shared_ptr<Evaluator>>("f_eval", nullptr)),
-      preferred_operator_evaluators(opts.get_list<shared_ptr<Evaluator>>("preferred")),
+      open_list(opts.get<shared_ptr<OpenListFactory>>("open")->create_state_open_list()),
       lazy_evaluator(opts.get<shared_ptr<Evaluator>>("lazy_evaluator", nullptr)),
-      pruning_method(opts.get<shared_ptr<PruningMethod>>("pruning")),
       match_tree(task_proxy),
       best_state(task->get_initial_state_values()) {
     if (lazy_evaluator && !lazy_evaluator->does_cache_estimates()) {
@@ -43,28 +38,12 @@ StateGenerator::StateGenerator(const Options &opts)
 
 void StateGenerator::initialize() {
     cout << "Conducting best first search"
-         << (reopen_closed_nodes ? " with" : " without")
-         << " reopening closed nodes, (real) bound = " << bound
+         << " (real) bound = " << bound
          << endl;
     assert(open_list);
 
     set<Evaluator *> evals;
     open_list->get_path_dependent_evaluators(evals);
-
-    /*
-      Collect path-dependent evaluators that are used for preferred operators
-      (in case they are not also used in the open list).
-    */
-    for (const shared_ptr<Evaluator> &evaluator : preferred_operator_evaluators)
-        evaluator->get_path_dependent_evaluators(evals);
-
-    /*
-      Collect path-dependent evaluators that are used in the f_evaluator.
-      They are usually also used in the open list and will hence already be
-      included, but we want to be sure.
-    */
-    if (f_evaluator)
-        f_evaluator->get_path_dependent_evaluators(evals);
 
     /*
       Collect path-dependent evaluators that are used in the lazy_evaluator
@@ -90,7 +69,6 @@ void StateGenerator::initialize() {
     } else {
         if (search_progress.check_progress(eval_context))
             statistics.print_checkpoint_line(0);
-        start_f_value_statistics(eval_context);
         SearchNode node = search_space.get_node(initial_state);
         node.open_initial();
 
@@ -98,8 +76,6 @@ void StateGenerator::initialize() {
     }
 
     print_initial_evaluator_values(eval_context);
-
-    pruning_method->initialize(task);
     
     // Build reverse operators
     VariablesProxy variables = task_proxy.get_variables();
@@ -110,12 +86,6 @@ void StateGenerator::initialize() {
     for (size_t op_id = 0; op_id < operators.size(); ++op_id)
         match_tree.insert(op_id, operators[op_id].regression_preconditions);
     
-}
-
-void StateGenerator::print_statistics() const {
-    statistics.print_detailed_statistics();
-    search_space.print_statistics();
-    pruning_method->print_statistics();
 }
 
 SearchStatus StateGenerator::step() {
@@ -174,44 +144,27 @@ SearchStatus StateGenerator::step() {
                 }
             }
         }
+        
+        // TODO: update best_state
 
         node->close();
         assert(!node->is_dead_end());
-        update_f_value_statistics(eval_context);
         statistics.inc_expanded();
         break;
     }
 
     GlobalState s = node->get_state();
-    //if (check_goal_and_set_plan(s))
-    //    return SOLVED;
 
-    vector<OperatorID> applicable_ops;
-    successor_generator.generate_applicable_ops(s, applicable_ops);
+    set<int> applicable_operator_ids;
+    match_tree.get_applicable_operator_ids(s, applicable_operator_ids);
 
-    /*
-      TODO: When preferred operators are in use, a preferred operator will be
-      considered by the preferred operator queues even when it is pruned.
-    */
-    pruning_method->prune_operators(s, applicable_ops);
-
-    // This evaluates the expanded state (again) to get preferred ops
-    EvaluationContext eval_context(s, node->get_g(), false, &statistics, true);
-    ordered_set::OrderedSet<OperatorID> preferred_operators;
-    for (const shared_ptr<Evaluator> &preferred_operator_evaluator : preferred_operator_evaluators) {
-        collect_preferred_operators(eval_context,
-                                    preferred_operator_evaluator.get(),
-                                    preferred_operators);
-    }
-
-    for (OperatorID op_id : applicable_ops) {
-        OperatorProxy op = task_proxy.get_operators()[op_id];
-        if ((node->get_real_g() + op.get_cost()) >= bound)
+    for (int op_id : applicable_operator_ids) {
+        ReverseOperator& op = operators[op_id];
+        if ((node->get_real_g() + op.cost) >= bound)
             continue;
 
         GlobalState succ_state = state_registry.get_successor_state(s, op);
         statistics.inc_generated();
-        bool is_preferred = preferred_operators.contains(op_id);
 
         SearchNode succ_node = search_space.get_node(succ_state);
 
@@ -296,6 +249,11 @@ SearchStatus StateGenerator::step() {
     return IN_PROGRESS;
 }
 
+void StateGenerator::print_statistics() const {
+    statistics.print_detailed_statistics();
+    search_space.print_statistics();
+}
+
 void StateGenerator::reward_progress() {
     // Boost the "preferred operator" open lists somewhat whenever
     // one of the heuristics finds a state with a new best h value.
@@ -313,25 +271,9 @@ void StateGenerator::save_task_if_necessary() {
     file.close();
 }
 
-void StateGenerator::start_f_value_statistics(EvaluationContext &eval_context) {
-    if (f_evaluator) {
-        int f_value = eval_context.get_evaluator_value(f_evaluator.get());
-        statistics.report_f_value_progress(f_value);
-    }
-}
-
-/* TODO: HACK! This is very inefficient for simply looking up an h value.
-   Also, if h values are not saved it would recompute h for each and every state. */
-void StateGenerator::update_f_value_statistics(EvaluationContext &eval_context) {
-    if (f_evaluator) {
-        int f_value = eval_context.get_evaluator_value(f_evaluator.get());
-        statistics.report_f_value_progress(f_value);
-    }
-}
-
 void add_options_to_parser(OptionParser &parser) {
-    SearchEngine::add_pruning_option(parser);
     SearchEngine::add_options_to_parser(parser);
+    
 }
 
 }

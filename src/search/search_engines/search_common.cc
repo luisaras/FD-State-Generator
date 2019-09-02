@@ -63,7 +63,7 @@ static shared_ptr<OpenListFactory> create_alternation_open_list_factory_aux(
 }
 
 shared_ptr<OpenListFactory> create_greedy_open_list_factory(
-    const Options &options) {
+    const Options &options, bool reverse) {
     return create_alternation_open_list_factory_aux(
         options.get_list<shared_ptr<Evaluator>>("evals"),
         options.get_list<shared_ptr<Evaluator>>("preferred"),
@@ -111,7 +111,7 @@ shared_ptr<OpenListFactory> create_wastar_open_list_factory(
 }
 
 pair<shared_ptr<OpenListFactory>, const shared_ptr<Evaluator>>
-create_astar_open_list_factory_and_f_eval(const Options &opts, bool reverse) {
+create_astar_open_list_factory_and_f_eval(const Options &opts) {
     shared_ptr<GEval> g = make_shared<GEval>();
     shared_ptr<Evaluator> h = opts.get<shared_ptr<Evaluator>>("eval");
     shared_ptr<Evaluator> f = make_shared<SumEval>(vector<shared_ptr<Evaluator>>({g, h}));
@@ -121,9 +121,23 @@ create_astar_open_list_factory_and_f_eval(const Options &opts, bool reverse) {
     options.set("evals", evals);
     options.set("pref_only", false);
     options.set("unsafe_pruning", false);
-    options.set("reverse", reverse);
+    options.set("reverse", false);
     shared_ptr<OpenListFactory> open =
         make_shared<tiebreaking_open_list::TieBreakingOpenListFactory>(options);
     return make_pair(open, f);
 }
+
+shared_ptr<OpenListFactory> create_reverse_open_list_factory(const Options &opts) {
+    vector<shared_ptr<Evaluator>> evals = opts.get<shared_ptr<Evaluator>>("evals");
+    if (opts.contains("novelty")) {
+        //TODO: evals.push_front(opts.get<shared_ptr<Novelty>>("novelty"));
+    }
+    Options options;
+    options.set("evals", evals);
+    options.set("pref_only", false);
+    options.set("unsafe_pruning", false);
+    options.set("reverse", true);
+    return make_shared<tiebreaking_open_list::TieBreakingOpenListFactory>(options);
+}
+
 }
