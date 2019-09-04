@@ -109,6 +109,49 @@ class SASTask:
             task_size += axiom.get_encoding_size()
         return task_size
 
+    def transform_to_tnf(self):
+        print("Translating to TNF...")
+        
+        # Variables that are missing in goal
+        goal_miss = [True] * len(self.variables.ranges)
+        for var, val in self.goal.pairs:
+            goal_miss[var] = False
+        for var in range(len(self.variables.ranges)):
+            if goal_miss[var]:
+                self.goal.pairs.append((var, self.variables.ranges[var]))
+
+        # Variables that are missing in operators
+        op_miss = [False] * len(self.variables.ranges)
+        for op in self.operators:
+            # Variables that are missing in preconcitions
+            pre_miss = [True] * len(self.variables.ranges)
+            for var, val in op.prevail:
+                pre_miss[var] = False
+            # Variables that are mentioned in effects
+            for var, pre, post, cond in op.pre_post:
+                if pre == -1 and pre_miss[var]:
+                    op_miss[var] = True
+                    op.prevail.append((var, self.variables.ranges[var]))
+
+        # Create var->u operators
+        ops = 0
+        for var in range(len(self.variables.ranges)):
+            if goal_miss[var] or op_miss[var]:
+                u = self.variables.ranges[var]
+                for val in range(u):
+                    name = "undef(%s,%s)" % (var, val)
+                    prevail = [(var, val)]
+                    pre_post = [(var, -1, u, [])]
+                    op = SASOperator(name, prevail, pre_post, 0)
+                    self.operators.append(op)
+                self.variables.ranges[var] += 1
+                self.variables.value_names[var].append("undefined")
+                ops += u
+            else:
+                print("no need: %s" & var)
+        print("%s new operators in TNF." % ops)
+        print("Done!")
+
 
 class SASVariables:
     def __init__(self, ranges, axiom_layers, value_names):

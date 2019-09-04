@@ -580,6 +580,9 @@ def pddl_to_sas(task):
             task.init, goal_list, actions, axioms, task.use_min_cost_metric,
             implied_facts)
 
+    if options.tnf:
+        sas_task.transform_to_tnf()
+
     print("%d effect conditions simplified" %
           simplified_effect_condition_counter)
     print("%d implied preconditions added" %
