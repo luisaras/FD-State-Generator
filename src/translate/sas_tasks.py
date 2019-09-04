@@ -140,15 +140,14 @@ class SASTask:
                 u = self.variables.ranges[var]
                 for val in range(u):
                     name = "undef(%s,%s)" % (var, val)
-                    prevail = [(var, val)]
-                    pre_post = [(var, -1, u, [])]
-                    op = SASOperator(name, prevail, pre_post, 0)
+                    pre_post = [(var, val, u, [])]
+                    op = SASOperator(name, [], pre_post, 0)
                     self.operators.append(op)
                 self.variables.ranges[var] += 1
                 self.variables.value_names[var].append("undefined")
                 ops += u
             else:
-                print("no need: %s" & var)
+                print("no need: %s" % var)
         print("%s new operators in TNF." % ops)
         print("Done!")
 

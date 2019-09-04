@@ -83,6 +83,8 @@ extern int get_num_facts(const TaskProxy &task_proxy);
 */
 extern int get_num_total_effects(const TaskProxy &task_proxy);
 
+extern bool verify_tnf(const TaskProxy &task_proxy);
+
 template<class FactProxyCollection>
 std::vector<FactPair> get_fact_pairs(const FactProxyCollection &facts) {
     std::vector<FactPair> fact_pairs;

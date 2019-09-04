@@ -32,7 +32,6 @@ void verify_no_axioms(TaskProxy task) {
     }
 }
 
-
 static int get_first_conditional_effects_op_id(TaskProxy task) {
     for (OperatorProxy op : task.get_operators()) {
         for (EffectProxy effect : op.get_effects()) {
@@ -97,6 +96,46 @@ int get_num_total_effects(const TaskProxy &task_proxy) {
         num_effects += op.get_effects().size();
     num_effects += task_proxy.get_axioms().size();
     return num_effects;
+}
+
+bool verify_tnf(const TaskProxy &task_proxy) {
+    VariablesProxy variables = task_proxy.get_variables();
+    GoalsProxy goals = task_proxy.get_goals();
+    if (goals.size() < variables.size())
+        return false;
+    bool miss[variables.size()];
+    for (uint i = 0; i < variables.size(); i++)
+        miss[i] = true;
+    for (uint i = 0; i < goals.size(); i++)
+        miss[goals[i].get_pair().var] = false;
+    for (uint i = 0; i < variables.size(); i++) {
+        if (miss[i]) {
+            cout << "Goal does not mention all variables." << endl;
+            return false;
+        }
+    }
+
+    OperatorsProxy operators = task_proxy.get_operators();
+    for (uint i = 0; i < operators.size(); i++) {
+        for (uint j = 0; j < variables.size(); j++)
+            miss[j] = true;
+        PreconditionsProxy pre_cond = operators[i].get_preconditions();
+        for (uint j = 0; j < pre_cond.size(); j++)
+            miss[pre_cond[i].get_pair().var] = false;
+        EffectsProxy effects = operators[i].get_effects();
+        for (uint j = 0; j < effects.size(); j++) {
+            if (!effects[i].get_conditions().empty()) {
+                cout << "Task have conditional effects." << endl;
+                return false;
+            }
+            FactPair fact = effects[i].get_fact().get_pair();
+            if (miss[fact.var]) {
+                cout << "Effect variable not mentioned in preconditions." << endl;
+                return false; 
+            }
+        }
+    }
+    return true;
 }
 
 void print_variable_statistics(const TaskProxy &task_proxy) {

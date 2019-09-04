@@ -7,7 +7,7 @@
 #include "../pruning_method.h"
 
 #include "../algorithms/ordered_set.h"
-#include "../task_utils/successor_generator.h"
+#include "../task_utils/task_properties.h"
 #include "../tasks/modified_init_task.h"
 
 #include "../utils/logging.h"
@@ -29,7 +29,12 @@ StateGenerator::StateGenerator(const Options &opts)
       open_list(opts.get<shared_ptr<OpenListFactory>>("open")->create_state_open_list()),
       h_evaluator(opts.get<shared_ptr<Evaluator>>("eval")),
       match_tree(task_proxy),
-      best_state(task->get_num_variables(), -1) {
+      best_state(task->get_num_variables()) {
+    if (!task_properties::verify_tnf(task_proxy)) {
+        cerr << "State generator needs a task in TNF."
+             << endl;
+        utils::exit_with(utils::ExitCode::SEARCH_UNSUPPORTED);
+    }
 }
 
 void StateGenerator::initialize() {
