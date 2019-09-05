@@ -121,7 +121,7 @@ def run_search(args):
         if not args.search_options:
             returncodes.exit_with_driver_input_error(
                 "search needs --alias, --portfolio, or search options")
-        if "--help" not in args.search_options:
+        if "--help" not in args.search_options and "--internal-plan-file" not in args.search_options:
             args.search_options.extend(["--internal-plan-file", args.plan_file])
         try:
             call.check_call(

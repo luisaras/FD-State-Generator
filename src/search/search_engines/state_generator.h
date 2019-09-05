@@ -21,6 +21,8 @@ namespace state_generator {
     
 class StateGenerator : public SearchEngine {
 
+    int max_it;
+    
     std::unique_ptr<StateOpenList> open_list;
 
     std::shared_ptr<Evaluator> h_evaluator;
@@ -32,6 +34,7 @@ class StateGenerator : public SearchEngine {
     
     std::vector<int> best_state;
     int best_state_h = 0;
+    int original_state_h;
 
     void reward_progress();
 

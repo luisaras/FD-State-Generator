@@ -103,9 +103,8 @@ bool verify_tnf(const TaskProxy &task_proxy) {
     GoalsProxy goals = task_proxy.get_goals();
     if (goals.size() < variables.size())
         return false;
-    bool miss[variables.size()];
-    for (uint i = 0; i < variables.size(); i++)
-        miss[i] = true;
+    vector<bool> miss(variables.size(), true);
+    // Check variables in goal
     for (uint i = 0; i < goals.size(); i++)
         miss[goals[i].get_pair().var] = false;
     for (uint i = 0; i < variables.size(); i++) {
@@ -114,23 +113,25 @@ bool verify_tnf(const TaskProxy &task_proxy) {
             return false;
         }
     }
-
+    // Check variables in operators
     OperatorsProxy operators = task_proxy.get_operators();
     for (uint i = 0; i < operators.size(); i++) {
         for (uint j = 0; j < variables.size(); j++)
             miss[j] = true;
         PreconditionsProxy pre_cond = operators[i].get_preconditions();
         for (uint j = 0; j < pre_cond.size(); j++)
-            miss[pre_cond[i].get_pair().var] = false;
+            miss[pre_cond[j].get_pair().var] = false;
         EffectsProxy effects = operators[i].get_effects();
         for (uint j = 0; j < effects.size(); j++) {
-            if (!effects[i].get_conditions().empty()) {
+            if (!effects[j].get_conditions().empty()) {
                 cout << "Task have conditional effects." << endl;
                 return false;
             }
-            FactPair fact = effects[i].get_fact().get_pair();
+            FactPair fact = effects[j].get_fact().get_pair();
             if (miss[fact.var]) {
-                cout << "Effect variable not mentioned in preconditions." << endl;
+                cout << "Effect variable " << fact.var 
+                     << " not mentioned in preconditions of " << operators[i].get_name()
+                     << endl;
                 return false; 
             }
         }

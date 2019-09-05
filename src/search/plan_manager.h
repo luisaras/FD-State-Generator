@@ -10,10 +10,11 @@ class TaskProxy;
 using Plan = std::vector<OperatorID>;
 
 class PlanManager {
+public:
     std::string plan_filename;
     int num_previously_generated_plans;
     bool is_part_of_anytime_portfolio;
-public:
+
     PlanManager();
 
     void set_plan_filename(const std::string &plan_filename);

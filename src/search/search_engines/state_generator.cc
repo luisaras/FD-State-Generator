@@ -26,6 +26,7 @@ namespace state_generator {
 
 StateGenerator::StateGenerator(const Options &opts)
     : SearchEngine(opts),
+      max_it(opts.get<int>("max_it")),
       open_list(opts.get<shared_ptr<OpenListFactory>>("open")->create_state_open_list()),
       h_evaluator(opts.get<shared_ptr<Evaluator>>("eval")),
       match_tree(task_proxy),
@@ -47,8 +48,12 @@ void StateGenerator::initialize() {
     open_list->get_path_dependent_evaluators(evals);
     path_dependent_evaluators.assign(evals.begin(), evals.end());
 
+    const GlobalState& original_state = state_registry.get_initial_state();
+    EvaluationContext original_state_eval(original_state, 0, false, &statistics);
+    original_state_h = original_state_eval.get_evaluator_value_or_infinity(h_evaluator.get());
+
     /*
-      Set initial state
+      Set goal state
     */
     GoalsProxy goal_facts = task_proxy.get_goals();
     for (uint i = 0; i < goal_facts.size(); i++) {
@@ -60,14 +65,9 @@ void StateGenerator::initialize() {
     for (Evaluator *evaluator : path_dependent_evaluators)
         evaluator->notify_initial_state(goal_state);
 
-    /*
-      Note: we consider the initial state as reached by a preferred
-      operator.
-    */
     EvaluationContext eval_context(goal_state, 0, true, &statistics);
 
     statistics.inc_evaluated_states();
-
     if (search_progress.check_progress(eval_context))
         statistics.print_checkpoint_line(0);
     SearchNode node = search_space.get_node(goal_state);
@@ -89,83 +89,77 @@ void StateGenerator::initialize() {
 }
 
 SearchStatus StateGenerator::step() {
-    tl::optional<SearchNode> node;
-    tl::optional<GlobalState> node_state;
+    // Select next node
     vector<int> state_values;
+    int node_g;
     while (true) {
-
         if (open_list->empty()) {
             cout << "Completely explored state space." << endl;
             return SOLVED;
         }
-
         StateID id = open_list->remove_min();
-        // TODO is there a way we can avoid creating the state here and then
-        //      recreate it outside of this function with node.get_state()?
-        //      One way would be to store GlobalState objects inside SearchNodes
-        //      instead of StateIDs
-        node_state.emplace(state_registry.lookup_state(id));
-        node.emplace(search_space.get_node(*node_state));
-
-        if (node->is_closed())
+        GlobalState node_state = state_registry.lookup_state(id);
+        SearchNode node = search_space.get_node(node_state);
+        state_values = node_state.unpack().get_values();
+        node_g = node.get_g();
+        if (node.is_closed())
             continue;
-
-        EvaluationContext eval_context(*node_state, node->get_g(), false, &statistics);
-
-        state_values = node_state->unpack().get_values();
-
-        // Update best state
-        int node_h = eval_context.get_evaluator_value_or_infinity(h_evaluator.get());
-        if (node_h > best_state_h) {
-            best_state = state_values;
-            best_state_h = node_h;
-            if (node_h > bound) {
-                cout << "Reached h bound." << endl;
-                return SOLVED;
-            }
-        }
-
-        node->close();
-        assert(!node->is_dead_end());
+        node.close();
+        assert(!node.is_dead_end());
         statistics.inc_expanded();
         break;
     }
-
+    
+    // Gets operators
     set<int> applicable_operator_ids;
     match_tree.get_applicable_operator_ids(state_values, applicable_operator_ids);
 
-    cout << "APPLICABLE OPERATOR IDS: " << applicable_operator_ids.size() << endl;
-
+    // Expand
     for (int op_id : applicable_operator_ids) {
+        
+        // Get values of previous state
         ReverseOperator& op = operators[op_id];
-
         vector<int> pred_values(state_values);
         op.apply(pred_values);
-
+        
+        // Get search node of previous state
         GlobalState pred_state = state_registry.get_state(pred_values);
         statistics.inc_generated();
-
         SearchNode pred_node = search_space.get_node(pred_state);
-
-        /*for (Evaluator *evaluator : path_dependent_evaluators) {
-            evaluator->notify_state_transition(pred_state, op_id, *node_state);
-        }*/
-
+        
         if (pred_node.is_new()) {
-            int pred_g = node->get_g() + 1;
-
-            EvaluationContext pred_eval_context(
-                pred_state, pred_g, false, &statistics);
-            statistics.inc_evaluated_states();
-
-            //pred_node.open(*node, op, 1);
-
-            open_list->insert(pred_eval_context, pred_state.get_id());
-            if (search_progress.check_progress(pred_eval_context)) {
-                statistics.print_checkpoint_line(pred_node.get_g());
+            int pred_g = node_g + 1;
+            EvaluationContext eval_context(pred_state, pred_g, false, &statistics);
+            // Update best state
+            int h = eval_context.get_evaluator_value_or_infinity(h_evaluator.get());
+            if (h > best_state_h) {
+                best_state = pred_values;
+                best_state_h = h;
+                cout << "New best h: " << best_state_h << endl;
+                if (h > bound) {
+                    cout << "Reached h bound." << endl;
+                    return SOLVED;
+                }
+            }
+            // Check iteration limit
+            if (max_it > 0) {
+                max_it--;
+            } else if (max_it == 0) {
+                cout << "Reached iteration limit." << endl;
+                return SOLVED;
+            }
+            // Insert node in list
+            open_list->insert(eval_context, pred_state.get_id());
+            if (search_progress.check_progress(eval_context)) {
+                statistics.print_checkpoint_line(pred_g);
                 reward_progress();
             }
         }
+        
+    }
+    
+    if (max_it >= 0) {
+        cout << "Remaining " << max_it << " iterations." << endl;
     }
 
     return IN_PROGRESS;
@@ -191,12 +185,14 @@ void StateGenerator::save_plan_if_necessary() {
 }
 
 void StateGenerator::save_task_if_necessary() {
+    cout << "Original state h-value: " << original_state_h << endl;
+    cout << "New state h-value: " << best_state_h << endl;
     for (uint i = 0; i < best_state.size(); i++) {
         if (best_state[i] == -1)
             best_state[i] = 0;
     }
     shared_ptr<AbstractTask> new_task = make_shared<extra_tasks::ModifiedInitTask>(task, best_state);
-    ofstream file("new_output.sas");
+    ofstream file(get_plan_manager().plan_filename);
     file << new_task;
     file.close();
 }
@@ -207,6 +203,7 @@ bool StateGenerator::found_solution() const {
 
 void add_options_to_parser(OptionParser &parser) {
     parser.add_option<shared_ptr<Evaluator>>("eval", "evaluator for h-value");
+    parser.add_option<int>("max_it", "maximum number of open-list insertions", "-1");
     SearchEngine::add_options_to_parser(parser);
 }
 
