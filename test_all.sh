@@ -19,5 +19,5 @@ task()
 }
 
 task sokoban
-task airplane
+task airport
 task blocks
