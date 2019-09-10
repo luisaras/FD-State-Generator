@@ -75,7 +75,7 @@ void StateGenerator::initialize() {
 
     open_list->insert(eval_context, goal_state.get_id());
 
-    print_initial_evaluator_values(eval_context);
+    //print_initial_evaluator_values(eval_context);
     
     // Build reverse operators
     VariablesProxy variables = task_proxy.get_variables();
@@ -128,6 +128,7 @@ SearchStatus StateGenerator::step() {
         SearchNode pred_node = search_space.get_node(pred_state);
         
         if (pred_node.is_new()) {
+
             int pred_g = node_g + 1;
             EvaluationContext eval_context(pred_state, pred_g, false, &statistics);
             // Update best state
@@ -135,19 +136,20 @@ SearchStatus StateGenerator::step() {
             if (h > best_state_h) {
                 best_state = pred_values;
                 best_state_h = h;
-                cout << "New best h: " << best_state_h << endl;
+                cout << "New best h: " << best_state_h << " (iteration " << it_count << ")" << endl;
                 if (h > bound) {
                     cout << "Reached h bound." << endl;
                     return SOLVED;
                 }
             }
+
             // Check iteration limit
-            if (max_it > 0) {
-                max_it--;
-            } else if (max_it == 0) {
+            it_count++;
+            if (max_it >= 0 && it_count >= max_it) {
                 cout << "Reached iteration limit." << endl;
                 return SOLVED;
             }
+
             // Insert node in list
             open_list->insert(eval_context, pred_state.get_id());
             if (search_progress.check_progress(eval_context)) {
@@ -156,10 +158,6 @@ SearchStatus StateGenerator::step() {
             }
         }
         
-    }
-    
-    if (max_it >= 0) {
-        cout << "Remaining " << max_it << " iterations." << endl;
     }
 
     return IN_PROGRESS;

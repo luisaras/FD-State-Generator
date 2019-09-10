@@ -22,6 +22,7 @@ namespace state_generator {
 class StateGenerator : public SearchEngine {
 
     int max_it;
+    int it_count = 0;
     
     std::unique_ptr<StateOpenList> open_list;
 
