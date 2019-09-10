@@ -36,6 +36,20 @@ struct ExplicitEffect {
     vector<FactPair> conditions;
 
     ExplicitEffect(int var, int value, vector<FactPair> &&conditions);
+
+
+    bool operator<(const ExplicitEffect &other) const {
+        return fact < other.fact;
+    }
+
+    bool operator==(const ExplicitEffect &other) const {
+        return fact == other.fact && conditions == other.conditions;
+    }
+
+    bool operator!=(const ExplicitEffect &other) const {
+        return fact != other.fact || conditions != other.conditions;
+    }
+
 };
 
 
@@ -215,6 +229,8 @@ ExplicitOperator::ExplicitOperator(istream &in, bool is_an_axiom, bool use_metri
         read_pre_post(in);
         check_magic(in, "end_rule");
     }
+    utils::sort_unique(effects);
+    utils::sort_unique(preconditions);
     assert(cost >= 0);
 }
 
@@ -307,6 +323,7 @@ vector<FactPair> read_goal(istream &in) {
         cerr << "Task has no goal condition!" << endl;
         utils::exit_with(ExitCode::SEARCH_INPUT_ERROR);
     }
+    utils::sort_unique(goals);
     return goals;
 }
 

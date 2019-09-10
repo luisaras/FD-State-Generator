@@ -17,7 +17,7 @@ using namespace std;
 
 namespace tiebreaking_open_list {
 
-template<class Entry, class Compare = std::less<vector<int>> >
+template<class Entry, class Compare = std::less<const vector<int>> >
 class TieBreakingOpenList : public OpenList<Entry> {
     using Bucket = deque<Entry>;
 
@@ -75,7 +75,7 @@ void TieBreakingOpenList<Entry, Compare>::do_insertion(
 template<class Entry, class Compare>
 Entry TieBreakingOpenList<Entry, Compare>::remove_min() {
     assert(size > 0);
-    typename map<const vector<int>, Bucket>::iterator it;
+    typename map<const vector<int>, Bucket, Compare>::iterator it;
     it = buckets.begin();
     assert(it != buckets.end());
     assert(!it->second.empty());
@@ -146,7 +146,7 @@ TieBreakingOpenListFactory::TieBreakingOpenListFactory(const Options &options)
 unique_ptr<StateOpenList>
 TieBreakingOpenListFactory::create_state_open_list() {
     if (options.get<bool>("reverse"))
-        return utils::make_unique_ptr< TieBreakingOpenList< StateOpenListEntry, greater<vector<int>> > >(options);
+        return utils::make_unique_ptr< TieBreakingOpenList< StateOpenListEntry, greater<const vector<int>> > >(options);
     else
         return utils::make_unique_ptr<TieBreakingOpenList<StateOpenListEntry>>(options);
 }
@@ -154,7 +154,7 @@ TieBreakingOpenListFactory::create_state_open_list() {
 unique_ptr<EdgeOpenList>
 TieBreakingOpenListFactory::create_edge_open_list() {
     if (options.get<bool>("reverse"))
-        return utils::make_unique_ptr< TieBreakingOpenList< EdgeOpenListEntry, greater<vector<int>> > >(options);
+        return utils::make_unique_ptr< TieBreakingOpenList< EdgeOpenListEntry, greater<const vector<int>> > >(options);
     else
         return utils::make_unique_ptr<TieBreakingOpenList<EdgeOpenListEntry>>(options);
 }
