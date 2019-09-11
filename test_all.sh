@@ -36,7 +36,7 @@ task()
         TASK_INPUT=${PDDL_DIR}/task$i.pddl
 
         # Generate output.sas
-        ./fast-downward.py --translate --sas-file ${TRANSLATOR_TEMP} ${DOMAIN_INPUT} ${TASK_INPUT} --translate-options --tnf
+        ./fast-downward.py --translate --sas-file ${TRANSLATOR_TEMP} ${DOMAIN_INPUT} ${TASK_INPUT} #--translate-options --tnf
 
         # Generator output files
         #NEW_TASK=${OUTPUT_DIR}/${i}_task.sas

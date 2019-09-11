@@ -32,12 +32,16 @@ class StateGenerator : public SearchEngine {
     std::vector<reverse_search::ReverseOperator> operators;
     
     reverse_search::MatchTree match_tree;
-    
+
     std::vector<int> best_state;
-    int best_state_h = 0;
+    int best_state_h = -1;
     int original_state_h;
 
     void reward_progress();
+
+    // Generation of candidate goal state
+    int convergence_count = 0;
+    bool next_goal_state();
 
 protected:
     virtual void initialize() override;

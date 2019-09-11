@@ -21,8 +21,11 @@
 
 using namespace std;
 using namespace reverse_search;
+#include "../utils/rng.h"
 
 namespace state_generator {
+
+utils::RandomNumberGenerator random(0);
 
 StateGenerator::StateGenerator(const Options &opts)
     : SearchEngine(opts),
@@ -31,11 +34,11 @@ StateGenerator::StateGenerator(const Options &opts)
       h_evaluator(opts.get<shared_ptr<Evaluator>>("eval")),
       match_tree(task_proxy),
       best_state(task->get_num_variables()) {
-    if (!task_properties::verify_tnf(task_proxy)) {
+    /*if (!task_properties::verify_tnf(task_proxy)) {
         cerr << "State generator needs a task in TNF."
              << endl;
         utils::exit_with(utils::ExitCode::SEARCH_UNSUPPORTED);
-    }
+    }*/
 }
 
 void StateGenerator::initialize() {
@@ -55,28 +58,8 @@ void StateGenerator::initialize() {
     /*
       Set goal state
     */
-    GoalsProxy goal_facts = task_proxy.get_goals();
-    for (uint i = 0; i < goal_facts.size(); i++) {
-        FactPair fact = goal_facts[i].get_pair();
-        best_state[fact.var] = fact.value;
-    }
-    const GlobalState& goal_state = state_registry.get_state(best_state);
+    next_goal_state();
 
-    for (Evaluator *evaluator : path_dependent_evaluators)
-        evaluator->notify_initial_state(goal_state);
-
-    EvaluationContext eval_context(goal_state, 0, true, &statistics);
-
-    statistics.inc_evaluated_states();
-    if (search_progress.check_progress(eval_context))
-        statistics.print_checkpoint_line(0);
-    SearchNode node = search_space.get_node(goal_state);
-    node.open_initial();
-
-    open_list->insert(eval_context, goal_state.get_id());
-
-    //print_initial_evaluator_values(eval_context);
-    
     // Build reverse operators
     VariablesProxy variables = task_proxy.get_variables();
     for (OperatorProxy op : task_proxy.get_operators())
@@ -94,8 +77,11 @@ SearchStatus StateGenerator::step() {
     int node_g;
     while (true) {
         if (open_list->empty()) {
-            cout << "Completely explored state space." << endl;
-            return SOLVED;
+            cout << "Inserting new goal state." << endl;
+            if (!next_goal_state()) {
+                cout << "Completely explored state space." << endl;
+                return SOLVED;
+            }
         }
         StateID id = open_list->remove_min();
         GlobalState node_state = state_registry.lookup_state(id);
@@ -129,7 +115,7 @@ SearchStatus StateGenerator::step() {
         
         if (pred_node.is_new()) {
 
-            int pred_g = node_g + 1;
+            int pred_g = node_g + op.cost;
             EvaluationContext eval_context(pred_state, pred_g, false, &statistics);
             // Update best state
             int h = eval_context.get_evaluator_value_or_infinity(h_evaluator.get());
@@ -137,6 +123,7 @@ SearchStatus StateGenerator::step() {
                 best_state = pred_values;
                 best_state_h = h;
                 cout << "New best h: " << best_state_h << " (iteration " << it_count << ")" << endl;
+                convergence_count = 0;
                 if (h > bound) {
                     cout << "Reached h bound." << endl;
                     return SOLVED;
@@ -160,7 +147,64 @@ SearchStatus StateGenerator::step() {
         
     }
 
+    convergence_count++;
+    if (convergence_count > 100) { // ass-pulled limit
+        cout << "Converged. ";
+        open_list->clear();
+    }
+
     return IN_PROGRESS;
+}
+
+bool StateGenerator::next_goal_state() {
+    VariablesProxy variables = task_proxy.get_variables();
+    std::vector<int> state_values(variables.size());
+
+    do {
+        // Random state
+        for (uint i = 0; i < state_values.size(); ++i) {
+            int domain_size = variables[i].get_domain_size();
+            state_values[i] = random(domain_size);
+        }
+        // Transform to goal state
+        GoalsProxy goal_facts = task_proxy.get_goals();
+        for (uint i = 0; i < goal_facts.size(); ++i) {
+            FactPair fact = goal_facts[i].get_pair();
+            state_values[fact.var] = fact.value;
+            cout << fact << endl;
+        }
+        const GlobalState& goal_state = state_registry.get_state(state_values);
+
+        for (Evaluator *evaluator : path_dependent_evaluators)
+            evaluator->notify_initial_state(goal_state);
+
+        SearchNode node = search_space.get_node(goal_state);
+
+        if (node.is_new()) {
+
+            EvaluationContext eval_context(goal_state, 0, true, &statistics);
+
+            statistics.inc_evaluated_states();
+            if (search_progress.check_progress(eval_context))
+                statistics.print_checkpoint_line(0);
+
+            node.open_initial();
+            open_list->insert(eval_context, goal_state.get_id());
+
+            node.get_g();
+
+            if (best_state_h == -1) {
+                best_state_h = eval_context.get_evaluator_value_or_infinity(h_evaluator.get());
+                best_state = state_values;
+            }
+
+            break;
+        }
+
+    } while (true);
+
+    cout << "Inserted new goal state." << endl;
+    return true;
 }
 
 void StateGenerator::print_statistics() const {
