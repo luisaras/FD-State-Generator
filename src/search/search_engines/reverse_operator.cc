@@ -4,13 +4,15 @@ using namespace std;
 
 namespace reverse_search {
 
-ReverseOperator::ReverseOperator(const vector<FactPair> &prev_pairs,
-                                   const vector<FactPair> &pre_pairs,
-                                   const vector<FactPair> &eff_pairs,
-                                   int cost)
-    : cost(cost),
-      regression_preconditions(prev_pairs),
-      regression_effects(pre_pairs) {
+ReverseOperator::ReverseOperator(const OperatorProxy& op,
+                                const vector<FactPair> &prev_pairs,
+                                const vector<FactPair> &pre_pairs,
+                                const vector<FactPair> &eff_pairs) :
+        original_id(op.get_id()),
+        cost(op.get_cost()),
+        regression_preconditions(prev_pairs),
+        regression_effects(pre_pairs) {
+    
     regression_preconditions.insert(regression_preconditions.end(),
                                     eff_pairs.begin(),
                                     eff_pairs.end());
@@ -34,8 +36,9 @@ void ReverseOperator::apply(vector<int>& state) {
   possible values of the variable (with precondition = -1), one
   abstract operator with a concrete value (!= -1) is computed.
 */
-void multiply_out(
-    int pos, int cost, vector<FactPair> &prev_pairs,
+void multiply_out(int pos,
+    const OperatorProxy &op, 
+    vector<FactPair> &prev_pairs,
     vector<FactPair> &pre_pairs,
     vector<FactPair> &eff_pairs,
     const vector<FactPair> &effects_without_pre,
@@ -45,7 +48,7 @@ void multiply_out(
         // All effects without precondition have been checked: insert op.
         if (!eff_pairs.empty()) {
             operators.push_back(
-                ReverseOperator(prev_pairs, pre_pairs, eff_pairs, cost));
+                ReverseOperator(op, prev_pairs, pre_pairs, eff_pairs));
         }
     } else {
         // For each possible value for the current variable, build an
@@ -60,7 +63,7 @@ void multiply_out(
             } else {
                 prev_pairs.emplace_back(var_id, i);
             }
-            multiply_out(pos + 1, cost, prev_pairs, pre_pairs, eff_pairs,
+            multiply_out(pos + 1, op, prev_pairs, pre_pairs, eff_pairs,
                          effects_without_pre, variables, operators);
             if (i != eff) {
                 pre_pairs.pop_back();
@@ -73,7 +76,7 @@ void multiply_out(
 }
 
 void build_reverse_operators(
-    const OperatorProxy &op, int cost,
+    const OperatorProxy &op,
     const VariablesProxy &variables,
     std::vector<ReverseOperator> &operators) {
     // All variable value pairs that are a prevail condition
@@ -115,7 +118,7 @@ void build_reverse_operators(
             prev_pairs.emplace_back(var_id, val);
         }
     }
-    multiply_out(0, cost, prev_pairs, pre_pairs, eff_pairs, effects_without_pre,
+    multiply_out(0, op, prev_pairs, pre_pairs, eff_pairs, effects_without_pre,
                  variables, operators);
 }
 

@@ -40,6 +40,8 @@ class StateGenerator : public SearchEngine {
     void reward_progress();
 
     // Generation of candidate goal state
+    std::vector<int> current_best_state;
+    int current_best_state_h;
     int convergence_count = 0;
     bool next_goal_state();
 

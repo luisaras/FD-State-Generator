@@ -8,6 +8,8 @@ namespace reverse_search {
 class ReverseOperator {
 public:
 
+    const int original_id;
+
     /*
       This class represents an abstract operator how it is needed for
       the regression search performed during the PDB-construction. As
@@ -17,7 +19,7 @@ public:
       abstract state.
     */
 
-    int cost;
+    const int cost;
 
     /*
       Preconditions for the regression search, corresponds to normal
@@ -37,10 +39,10 @@ public:
       meaning prevail, preconditions and effects are all related to
       progression search.
     */
-    ReverseOperator(const std::vector<FactPair> &prevail,
-                     const std::vector<FactPair> &preconditions,
-                     const std::vector<FactPair> &effects,
-                     int cost);
+    ReverseOperator(const OperatorProxy& op,
+                    const std::vector<FactPair> &prevail,
+                    const std::vector<FactPair> &preconditions,
+                    const std::vector<FactPair> &effects);
     ~ReverseOperator() = default;
 
     void apply(std::vector<int>& state);
@@ -54,7 +56,7 @@ public:
   variables in the task to their index in the pattern or -1.
 */
 void build_reverse_operators(
-    const OperatorProxy &op, int cost,
+    const OperatorProxy &op,
     const VariablesProxy &variables,
     std::vector<ReverseOperator> &operators);
 

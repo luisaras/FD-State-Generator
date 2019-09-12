@@ -6,9 +6,6 @@ task()
     HEURISTIC=$3 # Heuristic method to generate/plan
 
     # Create folders
-    if [ ! -d "$generator-tests" ]; then
-        mkdir generator-tests
-    fi
     if [ ! -d "$generator-tests/${FOLDER}" ]; then
         mkdir generator-tests/${FOLDER}
     fi
