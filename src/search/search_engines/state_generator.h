@@ -20,10 +20,12 @@ class Options;
 namespace state_generator {
     
 class StateGenerator : public SearchEngine {
+    
+protected:
 
     int max_it;
     int it_count = 0;
-    
+
     std::unique_ptr<StateOpenList> open_list;
 
     std::shared_ptr<Evaluator> h_evaluator;
@@ -34,20 +36,12 @@ class StateGenerator : public SearchEngine {
     reverse_search::MatchTree match_tree;
 
     std::vector<int> best_state;
-    int best_state_h = -1;
+    int best_state_h;
     int original_state_h;
 
-    void reward_progress();
-
-    // Generation of candidate goal state
-    std::vector<int> current_best_state;
-    int current_best_state_h;
-    int convergence_count = 0;
-    bool next_goal_state();
-
-protected:
     virtual void initialize() override;
-    virtual SearchStatus step() override;
+    
+    virtual void reward_progress();
 
 public:
     explicit StateGenerator(const options::Options &opts);
@@ -60,9 +54,9 @@ public:
     virtual bool found_solution() const override;
 
     void dump_search_space() const;
+    
+    static void add_options_to_parser(options::OptionParser &parser);
 };
-
-extern void add_options_to_parser(options::OptionParser &parser);
 
 }
 

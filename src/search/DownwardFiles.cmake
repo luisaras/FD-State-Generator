@@ -442,6 +442,9 @@ fast_downward_plugin(
         search_engines/match_tree
         search_engines/reverse_operator
         search_engines/state_generator
+        search_engines/generator_tnf
+        search_engines/generator_random_goal
+        search_engines/generator_abstract_goal
         search_engines/plugin_generator
     DEPENDS SEARCH_COMMON
 )
@@ -541,6 +544,14 @@ fast_downward_plugin(
     HELP "The Max heuristic"
     SOURCES
         heuristics/max_heuristic
+    DEPENDS PRIORITY_QUEUES RELAXATION_HEURISTIC
+)
+
+fast_downward_plugin(
+    NAME ABSTRACT_HEURISTIC
+    HELP "Heuristic for states with undefined variables"
+    SOURCES
+        heuristics/abstract_heuristic
     DEPENDS PRIORITY_QUEUES RELAXATION_HEURISTIC
 )
 
