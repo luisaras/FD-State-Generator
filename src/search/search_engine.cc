@@ -45,7 +45,7 @@ SearchEngine::SearchEngine(const Options &opts)
     : status(IN_PROGRESS),
       solution_found(false),
       task(tasks::g_root_task),
-      task_proxy(*task),
+      task_proxy(*task, opts.get<bool>("undef_value", false)),
       state_registry(task_proxy),
       successor_generator(get_successor_generator(task_proxy)),
       search_space(state_registry),

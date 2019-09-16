@@ -28,7 +28,7 @@ EvaluationResult AbstractHeuristic::compute_result(
     EvaluationContext &eval_context) {
         
     EvaluationResult result = Heuristic::compute_result(eval_context);
-    if (result.get_evaluator_value() == DEAD_END) {
+    if (result.get_evaluator_value() == EvaluationResult::INFTY) {
         return concrete_evaluator->compute_result(eval_context);
     }
     return result;

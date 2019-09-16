@@ -23,7 +23,7 @@ using namespace reverse_search;
 namespace state_generator {
 
 GeneratorAbstractGoal::GeneratorAbstractGoal(const Options &opts)
-    : StateGenerator(opts) {    
+    : StateGenerator(opts) {
 }
 
 void GeneratorAbstractGoal::initialize() {
@@ -100,6 +100,7 @@ SearchStatus GeneratorAbstractGoal::step() {
             
             // Update best state
             int h = eval_context.get_evaluator_value_or_infinity(h_evaluator.get());
+            assert(h < 2147483647);
             if (h > best_state_h) {
                 best_state = pred_values;
                 best_state_h = h;

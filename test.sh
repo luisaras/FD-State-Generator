@@ -2,17 +2,17 @@ PDDL="../pyperplan/benchmarks/sokoban"
 
 IPDB="ipdb(min_improvement=100, collection_max_size=200000)"
 CPDB="cpdbs(patterns=systematic(4))"
-PDB="cpdbs(patterns=manual([[19], [20], [16, 20], [14, 16, 20], [10, 14, 16, 20], [10, 14, 16, 19, 20], [10, 14, 16, 18, 20], [10, 14, 15, 16, 18, 20], [10, 14, 15, 16, 18, 19, 20], [10, 11, 14, 15, 16, 18, 19, 20]]))"
+PDB="cpdbs(patterns=manual_patterns([[19], [20], [16, 20], [14, 16, 20], [10, 14, 16, 20], [10, 14, 16, 19, 20], [10, 14, 16, 18, 20], [10, 14, 15, 16, 18, 20], [10, 14, 15, 16, 18, 19, 20], [10, 11, 14, 15, 16, 18, 19, 20]]))"
 
 test_tnf_planner() {
     # Generate output.sas
     ./fast-downward.py --debug --translate --sas-file "output.sas" ${PDDL}/domain.pddl ${PDDL}/task$1.pddl
     # Find plan for output.sas
-    ./fast-downward.py --debug "output.sas" --search "astar($IPDB)"
+    ./fast-downward.py --debug "output.sas" --search "astar($PDB)"
     # Generate output.sas
     ./fast-downward.py --debug --translate --sas-file "output.sas" ${PDDL}/domain.pddl ${PDDL}/task$1.pddl --translate-options --tnf
     # Find plan for output.sas
-    ./fast-downward.py --debug "output.sas" --search "astar($IPDB)"
+    ./fast-downward.py --debug "output.sas" --search "astar($PDB)"
 }
 
 # [[19], [20], [16, 20], [14, 16, 20], [10, 14, 16, 20], [10, 14, 16, 19, 20], [10, 14, 16, 18, 20], [10, 14, 15, 16, 18, 20], [10, 14, 15, 16, 18, 19, 20], [10, 11, 14, 15, 16, 18, 19, 20]]
@@ -45,4 +45,5 @@ test_abstract() {
     ./fast-downward.py --debug "new_output.sas" --search "astar(lmcut())"
 }
 
-test_tnf_planner 03
+#test_tnf_planner 03
+test_abstract 03

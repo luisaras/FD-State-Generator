@@ -143,7 +143,7 @@ void MatchTree::get_applicable_operator_ids_recursive(
 
     int val = state[node->var_id];
 
-    if (val == -1) {
+    if (val >= node->var_domain_size or val < 0) {
         // Undefined, could be any value
         for (int val = 0; val < node->var_domain_size; ++val) {
             if (!node->successors[val])

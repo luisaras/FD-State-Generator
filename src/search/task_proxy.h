@@ -642,9 +642,10 @@ inline void feed(HashState &hash_state, const State &state) {
 
 class TaskProxy {
     const AbstractTask *task;
+    bool undef_value;
 public:
-    explicit TaskProxy(const AbstractTask &task)
-        : task(&task) {}
+    explicit TaskProxy(const AbstractTask &task, bool undef_value = false)
+        : task(&task), undef_value(undef_value) {}
     ~TaskProxy() = default;
 
     TaskID get_id() const {
@@ -699,6 +700,11 @@ public:
     }
 
     const causal_graph::CausalGraph &get_causal_graph() const;
+
+    bool has_undef_value() const {
+        return undef_value;
+    }
+    
 };
 
 

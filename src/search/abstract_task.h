@@ -112,6 +112,7 @@ public:
     virtual void convert_state_values(
         std::vector<int> &values,
         const AbstractTask *ancestor_task) const = 0;
+
 };
 
 std::ostream &operator<<(std::ostream &os, std::shared_ptr<AbstractTask> task);
