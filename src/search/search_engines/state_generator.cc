@@ -50,10 +50,18 @@ void StateGenerator::initialize() {
     VariablesProxy variables = task_proxy.get_variables();
     for (const OperatorProxy &op : task_proxy.get_operators())
         reverse_search::build_reverse_operators(op, variables, operators);
-    
+
     // Match Tree
-    for (size_t op_id = 0; op_id < operators.size(); ++op_id)
+    for (size_t op_id = 0; op_id < operators.size(); ++op_id) {
         match_tree.insert(op_id, operators[op_id].regression_preconditions);
+
+        for (const FactPair& effect : operators[op_id].regression_effects)
+            cout << effect << " ";
+        cout << " | ";
+        for (const FactPair& effect : operators[op_id].regression_preconditions)
+            cout << effect << " ";
+        cout << endl;
+    }
     
 }
 
@@ -80,7 +88,7 @@ void StateGenerator::save_task_if_necessary() {
     cout << "Original state h-value: " << original_state_h << endl;
     cout << "New state h-value: " << best_state_h << endl;
     for (uint i = 0; i < best_state.size(); i++) {
-        if (best_state[i] == -1)
+        if (best_state[i] == -1 or best_state[i] >= task->get_variable_domain_size(i))
             best_state[i] = 0;
     }
     shared_ptr<AbstractTask> new_task = make_shared<extra_tasks::ModifiedInitTask>(task, best_state);

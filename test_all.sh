@@ -3,13 +3,13 @@ task()
     # Parameters
     TASK=$1 # Problem name
     FOLDER=$2 # Test folder where the output files will be written
-    HEURISTIC=$3 # Heuristic method to generate/plan
+    HEURISTIC=$3 # Heuristic method to guide generation
 
     # Create folders
-    if [ ! -d "$generator-tests/${FOLDER}" ]; then
+    if [ ! -d "generator-tests/${FOLDER}" ]; then
         mkdir generator-tests/${FOLDER}
     fi
-    if [ ! -d "$generator-tests/${FOLDER}/${TASK}" ]; then
+    if [ ! -d "generator-tests/${FOLDER}/${TASK}" ]; then
         mkdir generator-tests/${FOLDER}/${TASK}
     fi
 
@@ -27,7 +27,7 @@ task()
 
         # Input files
         DOMAIN_INPUT=${PDDL_DIR}/domain$i.pddl
-        if [ ! -f "$DOMAIN" ]; then
+        if [ ! -f "${DOMAIN_INPUT}" ]; then
             DOMAIN_INPUT=${PDDL_DIR}/domain.pddl
         fi
         TASK_INPUT=${PDDL_DIR}/task$i.pddl
@@ -36,17 +36,17 @@ task()
         ./fast-downward.py --translate --sas-file ${TRANSLATOR_TEMP} ${DOMAIN_INPUT} ${TASK_INPUT} #--translate-options --tnf
 
         # Generator output files
-        #NEW_TASK=${OUTPUT_DIR}/${i}_task.sas
-        #GEN_OUTPUT=${OUTPUT_DIR}/${i}_gen.txt
+        NEW_TASK=${OUTPUT_DIR}/${i}_task.sas
+        GEN_OUTPUT=${OUTPUT_DIR}/${i}_gen.txt
 
         # Generate $i_task.sas
-        #./fast-downward.py ${TRANSLATOR_TEMP} --internal-plan-file "${NEW_TASK}" --search "generator(${HEURISTIC}, max_it=1000000)" > ${GEN_OUTPUT}
+        ./fast-downward.py ${TRANSLATOR_TEMP} --internal-plan-file "${NEW_TASK}" --search "generator_abstract(abstract(${HEURISTIC}), max_it=20000000)" > ${GEN_OUTPUT}
 
         # Planner output files
         PLAN_OUTPUT=${OUTPUT_DIR}/${i}_plan.txt
 
         # Find plan for $i_task.sas
-        ./fast-downward.py "${TRANSLATOR_TEMP}" --internal-plan-file "${PLANNER_TEMP}" --search "astar(${HEURISTIC})" > ${PLAN_OUTPUT}
+        ./fast-downward.py "${NEW_TASK}" --internal-plan-file "${PLANNER_TEMP}" --search "astar(lmcut())" > ${PLAN_OUTPUT}
 
     done
 
@@ -57,4 +57,12 @@ task()
 }
 
 #task sokoban lmcut "lmcut()"
-task sokoban ipdb "ipdb()"
+#task sokoban ipdb "ipdb()"
+#task sokoban max "max([lmcut(), ipdb()])"
+
+#task blocks lmcut "lmcut()"
+#task blocks ipdb "ipdb()"
+#task blocks max "max([lmcut(), ipdb()])"
+
+task airport lmcut "lmcut()"
+#task airport ipdb "ipdb()"

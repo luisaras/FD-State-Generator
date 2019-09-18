@@ -40,7 +40,11 @@ void GeneratorAbstractGoal::initialize() {
     for (uint i = 0; i < goal_facts.size(); ++i) {
         FactPair fact = goal_facts[i].get_pair();
         best_state[fact.var] = fact.value;
+        cout << fact << " ";
     }
+    cout << endl;
+
+    undef_variable_count = task->get_num_variables() - goal_facts.size();
     
     cout << "Inserting initial (goal) state..." << endl;
     
@@ -98,9 +102,27 @@ SearchStatus GeneratorAbstractGoal::step() {
             
             EvaluationContext eval_context(pred_state, pred_node.get_g(), false, &statistics);
             
+            {
+                uint undefs = 0;
+                int last_undef_var;
+                for (uint i = 0; i < pred_values.size(); i++) {
+                    if (pred_values[i] >= task->get_variable_domain_size(i)) {
+                        undefs++;
+                        last_undef_var = i;
+                    }
+                }
+                if (undefs < undef_variable_count) {
+                    cout << "New undef count: " << undefs << endl;
+                    undef_variable_count = undefs;
+                    if (undefs == 1)
+                        cout << "Last undef var: " << last_undef_var << endl;
+                }
+            }
+
             // Update best state
             int h = eval_context.get_evaluator_value_or_infinity(h_evaluator.get());
             assert(h < 2147483647);
+            
             if (h > best_state_h) {
                 best_state = pred_values;
                 best_state_h = h;

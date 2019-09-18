@@ -15,6 +15,8 @@ namespace state_generator {
     
 class GeneratorAbstractGoal : public StateGenerator {
 
+	uint undef_variable_count;
+
 protected:
 
     virtual void initialize() override;

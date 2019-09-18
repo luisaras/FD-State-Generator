@@ -29,7 +29,10 @@ EvaluationResult AbstractHeuristic::compute_result(
         
     EvaluationResult result = Heuristic::compute_result(eval_context);
     if (result.get_evaluator_value() == EvaluationResult::INFTY) {
-        return concrete_evaluator->compute_result(eval_context);
+        if (concrete_state_count == 1)
+            cout << "Found first concrete state." << endl;
+        concrete_state_count++;
+        result = concrete_evaluator->compute_result(eval_context);
     }
     return result;
 }
