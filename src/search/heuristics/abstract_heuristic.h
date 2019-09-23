@@ -12,7 +12,8 @@ class AbstractHeuristic : public Heuristic {
     int min_operator_cost;
     std::shared_ptr<Evaluator> concrete_evaluator;
 
-    int concrete_state_count = 0;
+    uint concrete_state_count = 0;
+    uint undef_variable_count = 0;
     
 protected:
     virtual int compute_heuristic(const GlobalState &global_state);

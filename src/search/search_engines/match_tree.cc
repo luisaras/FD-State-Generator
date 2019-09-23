@@ -123,6 +123,7 @@ void MatchTree::insert_recursive(
 }
 
 void MatchTree::insert(int op_id, const vector<FactPair> &regression_preconditions) {
+    // Regression preconditions are the effects of the original operator
     insert_recursive(op_id, regression_preconditions, 0, &root);
 }
 

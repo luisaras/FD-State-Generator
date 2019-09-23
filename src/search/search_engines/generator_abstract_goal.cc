@@ -24,12 +24,15 @@ namespace state_generator {
 
 GeneratorAbstractGoal::GeneratorAbstractGoal(const Options &opts)
     : StateGenerator(opts) {
+    if (!(task_proxy.has_undef_value() || task_properties::verify_tnf(task_proxy))) {
+        cerr << "State generator needs a task in TNF or undef values for all variables."
+             << endl;
+        utils::exit_with(utils::ExitCode::SEARCH_UNSUPPORTED);
+    }
 }
 
 void GeneratorAbstractGoal::initialize() {
     StateGenerator::initialize();
-    
-    // task->get_undef_value();
     
     // All variables have "undefined" values
     for (uint i = 0; i < best_state.size(); ++i)
@@ -43,8 +46,6 @@ void GeneratorAbstractGoal::initialize() {
         cout << fact << " ";
     }
     cout << endl;
-
-    undef_variable_count = task->get_num_variables() - goal_facts.size();
     
     cout << "Inserting initial (goal) state..." << endl;
     
@@ -57,6 +58,8 @@ void GeneratorAbstractGoal::initialize() {
 }
 
 SearchStatus GeneratorAbstractGoal::step() {
+    try {
+
     // Select next node
     vector<int> state_values;
     tl::optional<SearchNode> node;
@@ -101,23 +104,6 @@ SearchStatus GeneratorAbstractGoal::step() {
             pred_node.open(*node, task_proxy.get_operators()[op.original_id], op.cost);
             
             EvaluationContext eval_context(pred_state, pred_node.get_g(), false, &statistics);
-            
-            {
-                uint undefs = 0;
-                int last_undef_var;
-                for (uint i = 0; i < pred_values.size(); i++) {
-                    if (pred_values[i] >= task->get_variable_domain_size(i)) {
-                        undefs++;
-                        last_undef_var = i;
-                    }
-                }
-                if (undefs < undef_variable_count) {
-                    cout << "New undef count: " << undefs << endl;
-                    undef_variable_count = undefs;
-                    if (undefs == 1)
-                        cout << "Last undef var: " << last_undef_var << endl;
-                }
-            }
 
             // Update best state
             int h = eval_context.get_evaluator_value_or_infinity(h_evaluator.get());
@@ -149,6 +135,11 @@ SearchStatus GeneratorAbstractGoal::step() {
             
         }
         
+    }
+
+    } catch (const std::bad_alloc& e) {
+        open_list->clear();
+        return SOLVED;
     }
 
     return IN_PROGRESS;

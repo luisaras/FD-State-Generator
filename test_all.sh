@@ -2,19 +2,19 @@ task()
 {
     # Parameters
     TASK=$1 # Problem name
-    FOLDER=$2 # Test folder where the output files will be written
+    FOLDER=generator-tests-abstract/$2 # Test folder where the output files will be written
     HEURISTIC=$3 # Heuristic method to guide generation
 
     # Create folders
-    if [ ! -d "generator-tests/${FOLDER}" ]; then
-        mkdir generator-tests/${FOLDER}
+    if [ ! -d ${FOLDER} ]; then
+        mkdir ${FOLDER}
     fi
-    if [ ! -d "generator-tests/${FOLDER}/${TASK}" ]; then
-        mkdir generator-tests/${FOLDER}/${TASK}
+    if [ ! -d ${FOLDER}/${TASK} ]; then
+        mkdir ${FOLDER}/${TASK}
     fi
 
     # Output directory 
-    OUTPUT_DIR=generator-tests/${FOLDER}/${TASK}
+    OUTPUT_DIR=${FOLDER}/${TASK}
 
     # Input directory
     PDDL_DIR="../pyperplan/benchmarks/${TASK}"
@@ -40,7 +40,7 @@ task()
         GEN_OUTPUT=${OUTPUT_DIR}/${i}_gen.txt
 
         # Generate $i_task.sas
-        ./fast-downward.py --search-time-limit 5m --search-memory-limit 2G ${TRANSLATOR_TEMP} --internal-plan-file ${NEW_TASK} --search "generator_random(${HEURISTIC}, max_it=20000000)" > ${GEN_OUTPUT}
+        ./fast-downward.py --search-time-limit 10m --search-memory-limit 8G ${TRANSLATOR_TEMP} --internal-plan-file ${NEW_TASK} --search "generator_abstract(abstract(${HEURISTIC}), max_it=20000000)" > ${GEN_OUTPUT}
 
         # Planner output files
         PLAN_OUTPUT=${OUTPUT_DIR}/${i}_plan.txt
@@ -56,11 +56,11 @@ task()
 
 }
 
-#task sokoban lmcut "lmcut()"
-#task sokoban ipdb "ipdb()"
+task sokoban lmcut "lmcut()"
+task sokoban ipdb "ipdb()"
 
-#task blocks lmcut "lmcut()"
-#task blocks ipdb "ipdb()"
+task blocks lmcut "lmcut()"
+task blocks ipdb "ipdb()"
 
 task airport lmcut "lmcut()"
 task airport ipdb "ipdb()"
