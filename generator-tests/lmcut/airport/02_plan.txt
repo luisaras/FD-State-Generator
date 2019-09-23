@@ -1,0 +1,73 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward generator-tests/lmcut/airport/02_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0s]
+done reading input! [t=0s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 29
+FactPairs: 73
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 10
+[g=0, 1 evaluated, 0 expanded, t=0s, 0 KB]
+f = 10 [1 evaluated, 0 expanded, t=0s, 0 KB]
+Initial heuristic value for lmcut: 10
+pruning method: none
+New best heuristic value for lmcut: 9
+[g=1, 3 evaluated, 1 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 8
+[g=2, 4 evaluated, 2 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 7
+[g=3, 5 evaluated, 3 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 6
+[g=4, 6 evaluated, 4 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 5
+[g=5, 7 evaluated, 5 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 4
+[g=6, 9 evaluated, 6 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 3
+[g=7, 10 evaluated, 7 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 2
+[g=8, 11 evaluated, 8 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 1
+[g=9, 12 evaluated, 9 expanded, t=0.015625s, 0 KB]
+New best heuristic value for lmcut: 0
+[g=10, 13 evaluated, 10 expanded, t=0.015625s, 0 KB]
+Solution found!
+Actual search time: 0.015625s [t=0.015625s]
+startup_seg_tww4_0_50_north_medium airplane_daewh (1)
+move_seg_tww4_0_50_seg_tww3_0_50_north_north_medium airplane_daewh (1)
+move_seg_tww3_0_50_seg_tww2_0_50_north_north_medium airplane_daewh (1)
+move_seg_tww2_0_50_seg_tww1_0_200_north_north_medium airplane_daewh (1)
+move_seg_tww1_0_200_seg_twe1_0_200_north_south_medium airplane_daewh (1)
+move_seg_twe1_0_200_seg_twe2_0_50_south_south_medium airplane_daewh (1)
+move_seg_twe2_0_50_seg_twe3_0_50_south_south_medium airplane_daewh (1)
+move_seg_twe3_0_50_seg_twe4_0_50_south_south_medium airplane_daewh (1)
+move_seg_twe4_0_50_seg_rwe_0_50_south_south_medium airplane_daewh (1)
+takeoff_seg_rwe_0_50_south airplane_daewh (1)
+Plan length: 10 step(s).
+Plan cost: 10
+Expanded 11 state(s).
+Reopened 0 state(s).
+Evaluated 13 state(s).
+Evaluations: 13
+Generated 12 state(s).
+Dead ends: 2 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 13
+Int hash set load factor: 13/16 = 0.8125
+Int hash set resizes: 4
+Search time: 0.015625s
+Total time: 0.015625s
+Solution found.
+Peak memory: 0 KB
+search exit code: 0
+

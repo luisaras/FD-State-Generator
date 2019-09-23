@@ -1,0 +1,73 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward generator-tests/ipdb/blocks/08_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0s]
+done reading input! [t=0s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 13
+FactPairs: 56
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 10
+[g=0, 1 evaluated, 0 expanded, t=0s, 0 KB]
+f = 10 [1 evaluated, 0 expanded, t=0s, 0 KB]
+Initial heuristic value for lmcut: 10
+pruning method: none
+New best heuristic value for lmcut: 9
+[g=1, 8 evaluated, 1 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 8
+[g=2, 18 evaluated, 2 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 7
+[g=3, 29 evaluated, 3 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 6
+[g=4, 38 evaluated, 4 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 5
+[g=5, 48 evaluated, 5 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 4
+[g=6, 56 evaluated, 6 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 3
+[g=7, 66 evaluated, 7 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 2
+[g=8, 80 evaluated, 9 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 1
+[g=9, 88 evaluated, 10 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 0
+[g=10, 93 evaluated, 11 expanded, t=0s, 0 KB]
+Solution found!
+Actual search time: 0s [t=0s]
+pick-up a (1)
+stack a d (1)
+unstack b c (1)
+stack b a (1)
+unstack c a (1)
+stack c b (1)
+unstack f a (1)
+stack f c (1)
+pick-up e (1)
+stack e f (1)
+Plan length: 10 step(s).
+Plan cost: 10
+Expanded 12 state(s).
+Reopened 0 state(s).
+Evaluated 93 state(s).
+Evaluations: 93
+Generated 100 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 93
+Int hash set load factor: 93/128 = 0.726562
+Int hash set resizes: 7
+Search time: 0s
+Total time: 0s
+Solution found.
+Peak memory: 0 KB
+search exit code: 0
+

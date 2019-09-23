@@ -1,0 +1,93 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward generator-tests/ipdb/sokoban/05_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0s]
+done reading input! [t=0.015625s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.015625s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 53
+FactPairs: 412
+Bytes per state: 16
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 7
+[g=0, 1 evaluated, 0 expanded, t=0.015625s, 0 KB]
+f = 7 [1 evaluated, 0 expanded, t=0.015625s, 0 KB]
+Initial heuristic value for lmcut: 7
+pruning method: none
+f = 9 [6 evaluated, 1 expanded, t=0.015625s, 0 KB]
+f = 12 [8 evaluated, 3 expanded, t=0.015625s, 0 KB]
+f = 13 [17 evaluated, 6 expanded, t=0.015625s, 0 KB]
+f = 14 [57 evaluated, 22 expanded, t=0.03125s, 0 KB]
+f = 15 [61 evaluated, 29 expanded, t=0.03125s, 0 KB]
+f = 16 [159 evaluated, 72 expanded, t=0.0625s, 0 KB]
+f = 17 [246 evaluated, 105 expanded, t=0.078125s, 0 KB]
+f = 18 [525 evaluated, 228 expanded, t=0.15625s, 0 KB]
+New best heuristic value for lmcut: 6
+[g=11, 745 evaluated, 346 expanded, t=0.203125s, 0 KB]
+f = 19 [887 evaluated, 392 expanded, t=0.234375s, 0 KB]
+New best heuristic value for lmcut: 5
+[g=14, 1329 evaluated, 586 expanded, t=0.3125s, 0 KB]
+f = 20 [1805 evaluated, 772 expanded, t=0.4375s, 0 KB]
+New best heuristic value for lmcut: 4
+[g=12, 2478 evaluated, 1132 expanded, t=0.59375s, 0 KB]
+f = 21 [3262 evaluated, 1469 expanded, t=0.796875s, 0 KB]
+f = 22 [7676 evaluated, 3248 expanded, t=1.75s, 0 KB]
+f = 23 [13307 evaluated, 5851 expanded, t=2.9375s, 0 KB]
+New best heuristic value for lmcut: 3
+[g=20, 13312 evaluated, 5852 expanded, t=2.9375s, 0 KB]
+New best heuristic value for lmcut: 2
+[g=21, 13314 evaluated, 5853 expanded, t=2.9375s, 0 KB]
+New best heuristic value for lmcut: 1
+[g=22, 13389 evaluated, 5875 expanded, t=2.95312s, 0 KB]
+New best heuristic value for lmcut: 0
+[g=23, 13393 evaluated, 5876 expanded, t=2.95312s, 0 KB]
+Solution found!
+Actual search time: 2.9375s [t=2.95312s]
+push-to-nongoal player-01 stone-01 pos-6-7 pos-6-6 pos-6-5 dir-up (1)
+push-to-nongoal player-01 stone-01 pos-6-6 pos-6-5 pos-6-4 dir-up (1)
+push-to-goal player-01 stone-01 pos-6-5 pos-6-4 pos-6-3 dir-up (1)
+move player-01 pos-6-4 pos-6-5 dir-down (1)
+move player-01 pos-6-5 pos-6-6 dir-down (1)
+move player-01 pos-6-6 pos-6-7 dir-down (1)
+push-to-nongoal player-01 stone-03 pos-6-7 pos-6-6 pos-6-5 dir-up (1)
+push-to-nongoal player-01 stone-03 pos-6-6 pos-6-5 pos-6-4 dir-up (1)
+move player-01 pos-6-5 pos-6-6 dir-down (1)
+move player-01 pos-6-6 pos-6-7 dir-down (1)
+push-to-nongoal player-01 stone-04 pos-6-7 pos-6-6 pos-6-5 dir-up (1)
+move player-01 pos-6-6 pos-7-6 dir-right (1)
+move player-01 pos-7-6 pos-7-5 dir-up (1)
+move player-01 pos-7-5 pos-7-4 dir-up (1)
+push-to-goal player-01 stone-03 pos-7-4 pos-6-4 pos-5-4 dir-left (1)
+push-to-goal player-01 stone-04 pos-6-4 pos-6-5 pos-6-6 dir-down (1)
+move player-01 pos-6-5 pos-6-4 dir-up (1)
+push-to-goal player-01 stone-06 pos-6-4 pos-5-4 pos-4-4 dir-left (1)
+move player-01 pos-5-4 pos-5-5 dir-down (1)
+move player-01 pos-5-5 pos-4-5 dir-left (1)
+move player-01 pos-4-5 pos-3-5 dir-left (1)
+push-to-goal player-01 stone-07 pos-3-5 pos-3-4 pos-3-3 dir-up (1)
+push-to-goal player-01 stone-08 pos-3-4 pos-3-5 pos-3-6 dir-down (1)
+Plan length: 23 step(s).
+Plan cost: 23
+Expanded 5877 state(s).
+Reopened 0 state(s).
+Evaluated 13396 state(s).
+Evaluations: 13396
+Generated 20610 state(s).
+Dead ends: 1508 state(s).
+Expanded until last jump: 5851 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 13307 state(s).
+Generated until last jump: 20503 state(s).
+Number of registered states: 13396
+Int hash set load factor: 13396/16384 = 0.817627
+Int hash set resizes: 14
+Search time: 2.9375s
+Total time: 2.95312s
+Solution found.
+Peak memory: 0 KB
+search exit code: 0
+

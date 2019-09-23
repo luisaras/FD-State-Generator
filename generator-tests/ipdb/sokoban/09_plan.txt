@@ -1,0 +1,105 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward generator-tests/ipdb/sokoban/09_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0s]
+done reading input! [t=0s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 42
+FactPairs: 223
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 20
+[g=0, 1 evaluated, 0 expanded, t=0s, 0 KB]
+f = 20 [1 evaluated, 0 expanded, t=0s, 0 KB]
+Initial heuristic value for lmcut: 20
+pruning method: none
+New best heuristic value for lmcut: 19
+[g=1, 2 evaluated, 1 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 18
+[g=2, 4 evaluated, 2 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 17
+[g=3, 5 evaluated, 3 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 16
+[g=4, 6 evaluated, 4 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 15
+[g=5, 8 evaluated, 5 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 14
+[g=6, 12 evaluated, 6 expanded, t=0s, 0 KB]
+f = 21 [14 evaluated, 7 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 13
+[g=8, 15 evaluated, 8 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 12
+[g=9, 16 evaluated, 9 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 11
+[g=10, 19 evaluated, 10 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 10
+[g=11, 21 evaluated, 11 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 9
+[g=12, 23 evaluated, 12 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 8
+[g=13, 26 evaluated, 13 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 7
+[g=14, 27 evaluated, 14 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 6
+[g=15, 28 evaluated, 15 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 5
+[g=16, 29 evaluated, 16 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 4
+[g=17, 30 evaluated, 17 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 3
+[g=18, 32 evaluated, 18 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 2
+[g=19, 34 evaluated, 19 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 1
+[g=20, 36 evaluated, 20 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 0
+[g=21, 40 evaluated, 21 expanded, t=0s, 0 KB]
+Solution found!
+Actual search time: 0s [t=0s]
+move player-01 pos-03-03 pos-04-03 dir-right (1)
+move player-01 pos-04-03 pos-04-04 dir-down (1)
+move player-01 pos-04-04 pos-05-04 dir-right (1)
+move player-01 pos-05-04 pos-05-05 dir-down (1)
+move player-01 pos-05-05 pos-05-06 dir-down (1)
+move player-01 pos-05-06 pos-04-06 dir-left (1)
+move player-01 pos-04-06 pos-03-06 dir-left (1)
+push-to-nongoal player-01 stone-03 pos-03-06 pos-04-06 pos-05-06 dir-right (1)
+move player-01 pos-04-06 pos-04-07 dir-down (1)
+move player-01 pos-04-07 pos-05-07 dir-right (1)
+push-to-goal player-01 stone-03 pos-05-07 pos-05-06 pos-05-05 dir-up (1)
+move player-01 pos-05-06 pos-06-06 dir-right (1)
+move player-01 pos-06-06 pos-07-06 dir-right (1)
+move player-01 pos-07-06 pos-07-05 dir-up (1)
+move player-01 pos-07-05 pos-08-05 dir-right (1)
+move player-01 pos-08-05 pos-09-05 dir-right (1)
+move player-01 pos-09-05 pos-09-04 dir-up (1)
+move player-01 pos-09-04 pos-09-03 dir-up (1)
+move player-01 pos-09-03 pos-10-03 dir-right (1)
+push-to-nongoal player-01 stone-02 pos-10-03 pos-09-03 pos-08-03 dir-left (1)
+push-to-goal player-01 stone-02 pos-09-03 pos-08-03 pos-07-03 dir-left (1)
+Plan length: 21 step(s).
+Plan cost: 21
+Expanded 22 state(s).
+Reopened 0 state(s).
+Evaluated 40 state(s).
+Evaluations: 40
+Generated 54 state(s).
+Dead ends: 3 state(s).
+Expanded until last jump: 7 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 14 state(s).
+Generated until last jump: 18 state(s).
+Number of registered states: 40
+Int hash set load factor: 40/64 = 0.625
+Int hash set resizes: 6
+Search time: 0s
+Total time: 0s
+Solution found.
+Peak memory: 0 KB
+search exit code: 0
+

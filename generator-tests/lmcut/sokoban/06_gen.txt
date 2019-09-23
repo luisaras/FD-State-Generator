@@ -1,0 +1,2058 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: 300s
+INFO     search memory limit: 2048 MB
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/sokoban/06_task.sas --search 'generator_random(lmcut(), max_it=20000000)'
+reading input... [t=0s]
+done reading input! [t=0s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 24
+FactPairs: 108
+Bytes per state: 8
+Conducting best first search (real) bound = 2147483647
+Building match tree...
+8=0 19=0  | 8=1 11=0 19=1 
+8=0 19=0 11=1  | 8=1 11=0 19=1 
+13=0 19=0  | 11=0 13=1 19=4 
+13=0 19=0 11=1  | 11=0 13=1 19=4 
+11=0 19=1  | 8=0 11=1 19=0 
+11=0 19=1 8=1  | 8=0 11=1 19=0 
+10=0 19=1  | 8=0 10=1 19=2 
+10=0 19=1 8=1  | 8=0 10=1 19=2 
+16=0 19=1  | 8=0 16=1 19=5 
+16=0 19=1 8=1  | 8=0 16=1 19=5 
+8=0 19=2  | 8=1 10=0 19=1 
+8=0 19=2 10=1  | 8=1 10=0 19=1 
+9=0 19=2  | 9=1 10=0 19=6 
+9=0 19=2 10=1  | 9=1 10=0 19=6 
+13=0 19=3  | 0=0 13=1 19=4 
+13=0 19=3 0=1  | 0=0 13=1 19=4 
+1=0 19=3  | 0=0 1=1 19=8 
+1=0 19=3 0=1  | 0=0 1=1 19=8 
+11=0 19=4  | 11=1 13=0 19=0 
+11=0 19=4 13=1  | 11=1 13=0 19=0 
+0=0 19=4  | 0=1 13=0 19=3 
+0=0 19=4 13=1  | 0=1 13=0 19=3 
+16=0 19=4  | 13=0 16=1 19=5 
+16=0 19=4 13=1  | 13=0 16=1 19=5 
+17=0 19=4  | 13=0 17=1 19=9 
+17=0 19=4 13=1  | 13=0 17=1 19=9 
+8=0 19=5  | 8=1 16=0 19=1 
+8=0 19=5 16=1  | 8=1 16=0 19=1 
+13=0 19=5  | 13=1 16=0 19=4 
+13=0 19=5 16=1  | 13=1 16=0 19=4 
+9=0 19=5  | 9=1 16=0 19=6 
+9=0 19=5 16=1  | 9=1 16=0 19=6 
+19=5 20=0  | 16=0 19=10 20=1 
+19=5 20=0 16=1  | 16=0 19=10 20=1 
+10=0 19=6  | 9=0 10=1 19=2 
+10=0 19=6 9=1  | 9=0 10=1 19=2 
+16=0 19=6  | 9=0 16=1 19=5 
+16=0 19=6 9=1  | 9=0 16=1 19=5 
+2=0 19=6  | 2=1 9=0 19=7 
+2=0 19=6 9=1  | 2=1 9=0 19=7 
+12=0 19=6  | 9=0 12=1 19=11 
+12=0 19=6 9=1  | 9=0 12=1 19=11 
+9=0 19=7  | 2=0 9=1 19=6 
+9=0 19=7 2=1  | 2=0 9=1 19=6 
+3=0 19=7  | 2=0 3=1 19=12 
+3=0 19=7 2=1  | 2=0 3=1 19=12 
+0=0 19=8  | 0=1 1=0 19=3 
+0=0 19=8 1=1  | 0=1 1=0 19=3 
+17=0 19=8  | 1=0 17=1 19=9 
+17=0 19=8 1=1  | 1=0 17=1 19=9 
+13=0 19=9  | 13=1 17=0 19=4 
+13=0 19=9 17=1  | 13=1 17=0 19=4 
+1=0 19=9  | 1=1 17=0 19=8 
+1=0 19=9 17=1  | 1=1 17=0 19=8 
+19=9 20=0  | 17=0 19=10 20=1 
+19=9 20=0 17=1  | 17=0 19=10 20=1 
+7=0 19=9  | 7=1 17=0 19=13 
+7=0 19=9 17=1  | 7=1 17=0 19=13 
+16=0 19=10  | 16=1 19=5 20=0 
+16=0 19=10 20=1  | 16=1 19=5 20=0 
+17=0 19=10  | 17=1 19=9 20=0 
+17=0 19=10 20=1  | 17=1 19=9 20=0 
+12=0 19=10  | 12=1 19=11 20=0 
+12=0 19=10 20=1  | 12=1 19=11 20=0 
+6=0 19=10  | 6=1 19=14 20=0 
+6=0 19=10 20=1  | 6=1 19=14 20=0 
+9=0 19=11  | 9=1 12=0 19=6 
+9=0 19=11 12=1  | 9=1 12=0 19=6 
+19=11 20=0  | 12=0 19=10 20=1 
+19=11 20=0 12=1  | 12=0 19=10 20=1 
+3=0 19=11  | 3=1 12=0 19=12 
+3=0 19=11 12=1  | 3=1 12=0 19=12 
+2=0 19=12  | 2=1 3=0 19=7 
+2=0 19=12 3=1  | 2=1 3=0 19=7 
+12=0 19=12  | 3=0 12=1 19=11 
+12=0 19=12 3=1  | 3=0 12=1 19=11 
+17=0 19=13  | 7=0 17=1 19=9 
+17=0 19=13 7=1  | 7=0 17=1 19=9 
+6=0 19=13  | 6=1 7=0 19=14 
+6=0 19=13 7=1  | 6=1 7=0 19=14 
+5=0 19=13  | 5=1 7=0 19=15 
+5=0 19=13 7=1  | 5=1 7=0 19=15 
+19=14 20=0  | 6=0 19=10 20=1 
+19=14 20=0 6=1  | 6=0 19=10 20=1 
+7=0 19=14  | 6=0 7=1 19=13 
+7=0 19=14 6=1  | 6=0 7=1 19=13 
+4=0 19=14  | 4=1 6=0 19=16 
+4=0 19=14 6=1  | 4=1 6=0 19=16 
+7=0 19=15  | 5=0 7=1 19=13 
+7=0 19=15 5=1  | 5=0 7=1 19=13 
+4=0 19=15  | 4=1 5=0 19=16 
+4=0 19=15 5=1  | 4=1 5=0 19=16 
+6=0 19=16  | 4=0 6=1 19=14 
+6=0 19=16 4=1  | 4=0 6=1 19=14 
+5=0 19=16  | 4=0 5=1 19=15 
+5=0 19=16 4=1  | 4=0 5=1 19=15 
+14=5 19=1 20=0  | 8=0 14=10 19=5 20=1 23=0 
+14=5 19=1 20=0 23=1  | 8=0 14=10 19=5 20=1 23=0 
+14=5 19=1 20=0 8=1  | 8=0 14=10 19=5 20=1 23=0 
+14=5 19=1 20=0 8=1 23=1  | 8=0 14=10 19=5 20=1 23=0 
+14=4 16=0 19=3  | 0=0 14=5 16=1 19=4 23=0 
+14=4 16=0 19=3 23=1  | 0=0 14=5 16=1 19=4 23=0 
+14=4 16=0 19=3 0=1  | 0=0 14=5 16=1 19=4 23=0 
+14=4 16=0 19=3 0=1 23=1  | 0=0 14=5 16=1 19=4 23=0 
+14=6 16=0 19=7  | 2=0 14=5 16=1 19=6 23=0 
+14=6 16=0 19=7 23=1  | 2=0 14=5 16=1 19=6 23=0 
+14=6 16=0 19=7 2=1  | 2=0 14=5 16=1 19=6 23=0 
+14=6 16=0 19=7 2=1 23=1  | 2=0 14=5 16=1 19=6 23=0 
+14=9 19=8 20=0  | 1=0 14=10 19=9 20=1 23=0 
+14=9 19=8 20=0 23=1  | 1=0 14=10 19=9 20=1 23=0 
+14=9 19=8 20=0 1=1  | 1=0 14=10 19=9 20=1 23=0 
+14=9 19=8 20=0 1=1 23=1  | 1=0 14=10 19=9 20=1 23=0 
+8=0 14=5 19=10  | 8=1 14=1 19=5 20=0 23=0 
+8=0 14=5 19=10 23=1  | 8=1 14=1 19=5 20=0 23=0 
+8=0 14=5 19=10 20=1  | 8=1 14=1 19=5 20=0 23=0 
+8=0 14=5 19=10 20=1 23=1  | 8=1 14=1 19=5 20=0 23=0 
+14=11 19=12 20=0  | 3=0 14=10 19=11 20=1 23=0 
+14=11 19=12 20=0 23=1  | 3=0 14=10 19=11 20=1 23=0 
+14=11 19=12 20=0 3=1  | 3=0 14=10 19=11 20=1 23=0 
+14=11 19=12 20=0 3=1 23=1  | 3=0 14=10 19=11 20=1 23=0 
+14=10 16=0 19=14  | 6=0 14=5 16=1 19=10 23=0 
+14=10 16=0 19=14 23=1  | 6=0 14=5 16=1 19=10 23=0 
+14=10 16=0 19=14 6=1  | 6=0 14=5 16=1 19=10 23=0 
+14=10 16=0 19=14 6=1 23=1  | 6=0 14=5 16=1 19=10 23=0 
+14=14 19=16 20=0  | 4=0 14=10 19=14 20=1 23=0 
+14=14 19=16 20=0 23=1  | 4=0 14=10 19=14 20=1 23=0 
+14=14 19=16 20=0 4=1  | 4=0 14=10 19=14 20=1 23=0 
+14=14 19=16 20=0 4=1 23=1  | 4=0 14=10 19=14 20=1 23=0 
+15=5 19=1 20=0  | 8=0 15=10 19=5 20=1 22=0 
+15=5 19=1 20=0 22=1  | 8=0 15=10 19=5 20=1 22=0 
+15=5 19=1 20=0 8=1  | 8=0 15=10 19=5 20=1 22=0 
+15=5 19=1 20=0 8=1 22=1  | 8=0 15=10 19=5 20=1 22=0 
+15=4 16=0 19=3  | 0=0 15=5 16=1 19=4 22=0 
+15=4 16=0 19=3 22=1  | 0=0 15=5 16=1 19=4 22=0 
+15=4 16=0 19=3 0=1  | 0=0 15=5 16=1 19=4 22=0 
+15=4 16=0 19=3 0=1 22=1  | 0=0 15=5 16=1 19=4 22=0 
+15=6 16=0 19=7  | 2=0 15=5 16=1 19=6 22=0 
+15=6 16=0 19=7 22=1  | 2=0 15=5 16=1 19=6 22=0 
+15=6 16=0 19=7 2=1  | 2=0 15=5 16=1 19=6 22=0 
+15=6 16=0 19=7 2=1 22=1  | 2=0 15=5 16=1 19=6 22=0 
+15=9 19=8 20=0  | 1=0 15=10 19=9 20=1 22=0 
+15=9 19=8 20=0 22=1  | 1=0 15=10 19=9 20=1 22=0 
+15=9 19=8 20=0 1=1  | 1=0 15=10 19=9 20=1 22=0 
+15=9 19=8 20=0 1=1 22=1  | 1=0 15=10 19=9 20=1 22=0 
+8=0 15=5 19=10  | 8=1 15=1 19=5 20=0 22=0 
+8=0 15=5 19=10 22=1  | 8=1 15=1 19=5 20=0 22=0 
+8=0 15=5 19=10 20=1  | 8=1 15=1 19=5 20=0 22=0 
+8=0 15=5 19=10 20=1 22=1  | 8=1 15=1 19=5 20=0 22=0 
+15=11 19=12 20=0  | 3=0 15=10 19=11 20=1 22=0 
+15=11 19=12 20=0 22=1  | 3=0 15=10 19=11 20=1 22=0 
+15=11 19=12 20=0 3=1  | 3=0 15=10 19=11 20=1 22=0 
+15=11 19=12 20=0 3=1 22=1  | 3=0 15=10 19=11 20=1 22=0 
+15=10 16=0 19=14  | 6=0 15=5 16=1 19=10 22=0 
+15=10 16=0 19=14 22=1  | 6=0 15=5 16=1 19=10 22=0 
+15=10 16=0 19=14 6=1  | 6=0 15=5 16=1 19=10 22=0 
+15=10 16=0 19=14 6=1 22=1  | 6=0 15=5 16=1 19=10 22=0 
+15=14 19=16 20=0  | 4=0 15=10 19=14 20=1 22=0 
+15=14 19=16 20=0 22=1  | 4=0 15=10 19=14 20=1 22=0 
+15=14 19=16 20=0 4=1  | 4=0 15=10 19=14 20=1 22=0 
+15=14 19=16 20=0 4=1 22=1  | 4=0 15=10 19=14 20=1 22=0 
+18=5 19=1 20=0  | 8=0 18=10 19=5 20=1 21=0 
+18=5 19=1 20=0 21=1  | 8=0 18=10 19=5 20=1 21=0 
+18=5 19=1 20=0 8=1  | 8=0 18=10 19=5 20=1 21=0 
+18=5 19=1 20=0 8=1 21=1  | 8=0 18=10 19=5 20=1 21=0 
+16=0 18=4 19=3  | 0=0 16=1 18=5 19=4 21=0 
+16=0 18=4 19=3 21=1  | 0=0 16=1 18=5 19=4 21=0 
+16=0 18=4 19=3 0=1  | 0=0 16=1 18=5 19=4 21=0 
+16=0 18=4 19=3 0=1 21=1  | 0=0 16=1 18=5 19=4 21=0 
+16=0 18=6 19=7  | 2=0 16=1 18=5 19=6 21=0 
+16=0 18=6 19=7 21=1  | 2=0 16=1 18=5 19=6 21=0 
+16=0 18=6 19=7 2=1  | 2=0 16=1 18=5 19=6 21=0 
+16=0 18=6 19=7 2=1 21=1  | 2=0 16=1 18=5 19=6 21=0 
+18=9 19=8 20=0  | 1=0 18=10 19=9 20=1 21=0 
+18=9 19=8 20=0 21=1  | 1=0 18=10 19=9 20=1 21=0 
+18=9 19=8 20=0 1=1  | 1=0 18=10 19=9 20=1 21=0 
+18=9 19=8 20=0 1=1 21=1  | 1=0 18=10 19=9 20=1 21=0 
+8=0 18=5 19=10  | 8=1 18=1 19=5 20=0 21=0 
+8=0 18=5 19=10 21=1  | 8=1 18=1 19=5 20=0 21=0 
+8=0 18=5 19=10 20=1  | 8=1 18=1 19=5 20=0 21=0 
+8=0 18=5 19=10 20=1 21=1  | 8=1 18=1 19=5 20=0 21=0 
+18=11 19=12 20=0  | 3=0 18=10 19=11 20=1 21=0 
+18=11 19=12 20=0 21=1  | 3=0 18=10 19=11 20=1 21=0 
+18=11 19=12 20=0 3=1  | 3=0 18=10 19=11 20=1 21=0 
+18=11 19=12 20=0 3=1 21=1  | 3=0 18=10 19=11 20=1 21=0 
+16=0 18=10 19=14  | 6=0 16=1 18=5 19=10 21=0 
+16=0 18=10 19=14 21=1  | 6=0 16=1 18=5 19=10 21=0 
+16=0 18=10 19=14 6=1  | 6=0 16=1 18=5 19=10 21=0 
+16=0 18=10 19=14 6=1 21=1  | 6=0 16=1 18=5 19=10 21=0 
+18=14 19=16 20=0  | 4=0 18=10 19=14 20=1 21=0 
+18=14 19=16 20=0 21=1  | 4=0 18=10 19=14 20=1 21=0 
+18=14 19=16 20=0 4=1  | 4=0 18=10 19=14 20=1 21=0 
+18=14 19=16 20=0 4=1 21=1  | 4=0 18=10 19=14 20=1 21=0 
+10=0 14=1 19=0 23=0  | 10=1 11=0 14=2 19=1 23=1 
+10=0 14=1 19=0  | 10=1 11=0 14=2 19=1 23=1 
+10=0 14=1 19=0 11=1 23=0  | 10=1 11=0 14=2 19=1 23=1 
+10=0 14=1 19=0 11=1  | 10=1 11=0 14=2 19=1 23=1 
+14=4 17=0 19=0 23=0  | 11=0 14=9 17=1 19=4 23=1 
+14=4 17=0 19=0  | 11=0 14=9 17=1 19=4 23=1 
+14=4 17=0 19=0 11=1 23=0  | 11=0 14=9 17=1 19=4 23=1 
+14=4 17=0 19=0 11=1  | 11=0 14=9 17=1 19=4 23=1 
+11=0 14=1 19=2 23=0  | 10=0 11=1 14=0 19=1 23=1 
+11=0 14=1 19=2  | 10=0 11=1 14=0 19=1 23=1 
+11=0 14=1 19=2 10=1 23=0  | 10=0 11=1 14=0 19=1 23=1 
+11=0 14=1 19=2 10=1  | 10=0 11=1 14=0 19=1 23=1 
+12=0 14=6 19=2 23=0  | 10=0 12=1 14=11 19=6 23=1 
+12=0 14=6 19=2  | 10=0 12=1 14=11 19=6 23=1 
+12=0 14=6 19=2 10=1 23=0  | 10=0 12=1 14=11 19=6 23=1 
+12=0 14=6 19=2 10=1  | 10=0 12=1 14=11 19=6 23=1 
+9=0 14=5 19=4 23=0  | 9=1 13=0 14=6 19=5 23=1 
+9=0 14=5 19=4  | 9=1 13=0 14=6 19=5 23=1 
+9=0 14=5 19=4 13=1 23=0  | 9=1 13=0 14=6 19=5 23=1 
+9=0 14=5 19=4 13=1  | 9=1 13=0 14=6 19=5 23=1 
+7=0 14=9 19=4 23=0  | 7=1 13=0 14=13 19=9 23=1 
+7=0 14=9 19=4  | 7=1 13=0 14=13 19=9 23=1 
+7=0 14=9 19=4 13=1 23=0  | 7=1 13=0 14=13 19=9 23=1 
+7=0 14=9 19=4 13=1  | 7=1 13=0 14=13 19=9 23=1 
+0=0 14=4 19=5 23=0  | 0=1 14=3 16=0 19=4 23=1 
+0=0 14=4 19=5  | 0=1 14=3 16=0 19=4 23=1 
+0=0 14=4 19=5 16=1 23=0  | 0=1 14=3 16=0 19=4 23=1 
+0=0 14=4 19=5 16=1  | 0=1 14=3 16=0 19=4 23=1 
+2=0 14=6 19=5 23=0  | 2=1 14=7 16=0 19=6 23=1 
+2=0 14=6 19=5  | 2=1 14=7 16=0 19=6 23=1 
+2=0 14=6 19=5 16=1 23=0  | 2=1 14=7 16=0 19=6 23=1 
+2=0 14=6 19=5 16=1  | 2=1 14=7 16=0 19=6 23=1 
+6=0 14=10 19=5 23=0  | 6=1 14=14 16=0 19=10 23=1 
+6=0 14=10 19=5  | 6=1 14=14 16=0 19=10 23=1 
+6=0 14=10 19=5 16=1 23=0  | 6=1 14=14 16=0 19=10 23=1 
+6=0 14=10 19=5 16=1  | 6=1 14=14 16=0 19=10 23=1 
+13=0 14=5 19=6 23=0  | 9=0 13=1 14=4 19=5 23=1 
+13=0 14=5 19=6  | 9=0 13=1 14=4 19=5 23=1 
+13=0 14=5 19=6 9=1 23=0  | 9=0 13=1 14=4 19=5 23=1 
+13=0 14=5 19=6 9=1  | 9=0 13=1 14=4 19=5 23=1 
+11=0 14=4 19=9 23=0  | 11=1 14=0 17=0 19=4 23=1 
+11=0 14=4 19=9  | 11=1 14=0 17=0 19=4 23=1 
+11=0 14=4 19=9 17=1 23=0  | 11=1 14=0 17=0 19=4 23=1 
+11=0 14=4 19=9 17=1  | 11=1 14=0 17=0 19=4 23=1 
+12=0 14=10 19=9 23=0  | 12=1 14=11 17=0 19=10 23=1 
+12=0 14=10 19=9  | 12=1 14=11 17=0 19=10 23=1 
+12=0 14=10 19=9 17=1 23=0  | 12=1 14=11 17=0 19=10 23=1 
+12=0 14=10 19=9 17=1  | 12=1 14=11 17=0 19=10 23=1 
+5=0 14=13 19=9 23=0  | 5=1 14=15 17=0 19=13 23=1 
+5=0 14=13 19=9  | 5=1 14=15 17=0 19=13 23=1 
+5=0 14=13 19=9 17=1 23=0  | 5=1 14=15 17=0 19=13 23=1 
+5=0 14=13 19=9 17=1  | 5=1 14=15 17=0 19=13 23=1 
+1=0 14=9 19=10 23=0  | 1=1 14=8 19=9 20=0 23=1 
+1=0 14=9 19=10  | 1=1 14=8 19=9 20=0 23=1 
+1=0 14=9 19=10 20=1 23=0  | 1=1 14=8 19=9 20=0 23=1 
+1=0 14=9 19=10 20=1  | 1=1 14=8 19=9 20=0 23=1 
+3=0 14=11 19=10 23=0  | 3=1 14=12 19=11 20=0 23=1 
+3=0 14=11 19=10  | 3=1 14=12 19=11 20=0 23=1 
+3=0 14=11 19=10 20=1 23=0  | 3=1 14=12 19=11 20=0 23=1 
+3=0 14=11 19=10 20=1  | 3=1 14=12 19=11 20=0 23=1 
+4=0 14=14 19=10 23=0  | 4=1 14=16 19=14 20=0 23=1 
+4=0 14=14 19=10  | 4=1 14=16 19=14 20=0 23=1 
+4=0 14=14 19=10 20=1 23=0  | 4=1 14=16 19=14 20=0 23=1 
+4=0 14=14 19=10 20=1  | 4=1 14=16 19=14 20=0 23=1 
+10=0 14=6 19=11 23=0  | 10=1 12=0 14=2 19=6 23=1 
+10=0 14=6 19=11  | 10=1 12=0 14=2 19=6 23=1 
+10=0 14=6 19=11 12=1 23=0  | 10=1 12=0 14=2 19=6 23=1 
+10=0 14=6 19=11 12=1  | 10=1 12=0 14=2 19=6 23=1 
+14=10 17=0 19=11 23=0  | 12=0 14=9 17=1 19=10 23=1 
+14=10 17=0 19=11  | 12=0 14=9 17=1 19=10 23=1 
+14=10 17=0 19=11 12=1 23=0  | 12=0 14=9 17=1 19=10 23=1 
+14=10 17=0 19=11 12=1  | 12=0 14=9 17=1 19=10 23=1 
+13=0 14=9 19=13 23=0  | 7=0 13=1 14=4 19=9 23=1 
+13=0 14=9 19=13  | 7=0 13=1 14=4 19=9 23=1 
+13=0 14=9 19=13 7=1 23=0  | 7=0 13=1 14=4 19=9 23=1 
+13=0 14=9 19=13 7=1  | 7=0 13=1 14=4 19=9 23=1 
+14=13 17=0 19=15 23=0  | 5=0 14=9 17=1 19=13 23=1 
+14=13 17=0 19=15  | 5=0 14=9 17=1 19=13 23=1 
+14=13 17=0 19=15 5=1 23=0  | 5=0 14=9 17=1 19=13 23=1 
+14=13 17=0 19=15 5=1  | 5=0 14=9 17=1 19=13 23=1 
+10=0 15=1 19=0 22=0  | 10=1 11=0 15=2 19=1 22=1 
+10=0 15=1 19=0  | 10=1 11=0 15=2 19=1 22=1 
+10=0 15=1 19=0 11=1 22=0  | 10=1 11=0 15=2 19=1 22=1 
+10=0 15=1 19=0 11=1  | 10=1 11=0 15=2 19=1 22=1 
+15=4 17=0 19=0 22=0  | 11=0 15=9 17=1 19=4 22=1 
+15=4 17=0 19=0  | 11=0 15=9 17=1 19=4 22=1 
+15=4 17=0 19=0 11=1 22=0  | 11=0 15=9 17=1 19=4 22=1 
+15=4 17=0 19=0 11=1  | 11=0 15=9 17=1 19=4 22=1 
+11=0 15=1 19=2 22=0  | 10=0 11=1 15=0 19=1 22=1 
+11=0 15=1 19=2  | 10=0 11=1 15=0 19=1 22=1 
+11=0 15=1 19=2 10=1 22=0  | 10=0 11=1 15=0 19=1 22=1 
+11=0 15=1 19=2 10=1  | 10=0 11=1 15=0 19=1 22=1 
+12=0 15=6 19=2 22=0  | 10=0 12=1 15=11 19=6 22=1 
+12=0 15=6 19=2  | 10=0 12=1 15=11 19=6 22=1 
+12=0 15=6 19=2 10=1 22=0  | 10=0 12=1 15=11 19=6 22=1 
+12=0 15=6 19=2 10=1  | 10=0 12=1 15=11 19=6 22=1 
+9=0 15=5 19=4 22=0  | 9=1 13=0 15=6 19=5 22=1 
+9=0 15=5 19=4  | 9=1 13=0 15=6 19=5 22=1 
+9=0 15=5 19=4 13=1 22=0  | 9=1 13=0 15=6 19=5 22=1 
+9=0 15=5 19=4 13=1  | 9=1 13=0 15=6 19=5 22=1 
+7=0 15=9 19=4 22=0  | 7=1 13=0 15=13 19=9 22=1 
+7=0 15=9 19=4  | 7=1 13=0 15=13 19=9 22=1 
+7=0 15=9 19=4 13=1 22=0  | 7=1 13=0 15=13 19=9 22=1 
+7=0 15=9 19=4 13=1  | 7=1 13=0 15=13 19=9 22=1 
+0=0 15=4 19=5 22=0  | 0=1 15=3 16=0 19=4 22=1 
+0=0 15=4 19=5  | 0=1 15=3 16=0 19=4 22=1 
+0=0 15=4 19=5 16=1 22=0  | 0=1 15=3 16=0 19=4 22=1 
+0=0 15=4 19=5 16=1  | 0=1 15=3 16=0 19=4 22=1 
+2=0 15=6 19=5 22=0  | 2=1 15=7 16=0 19=6 22=1 
+2=0 15=6 19=5  | 2=1 15=7 16=0 19=6 22=1 
+2=0 15=6 19=5 16=1 22=0  | 2=1 15=7 16=0 19=6 22=1 
+2=0 15=6 19=5 16=1  | 2=1 15=7 16=0 19=6 22=1 
+6=0 15=10 19=5 22=0  | 6=1 15=14 16=0 19=10 22=1 
+6=0 15=10 19=5  | 6=1 15=14 16=0 19=10 22=1 
+6=0 15=10 19=5 16=1 22=0  | 6=1 15=14 16=0 19=10 22=1 
+6=0 15=10 19=5 16=1  | 6=1 15=14 16=0 19=10 22=1 
+13=0 15=5 19=6 22=0  | 9=0 13=1 15=4 19=5 22=1 
+13=0 15=5 19=6  | 9=0 13=1 15=4 19=5 22=1 
+13=0 15=5 19=6 9=1 22=0  | 9=0 13=1 15=4 19=5 22=1 
+13=0 15=5 19=6 9=1  | 9=0 13=1 15=4 19=5 22=1 
+11=0 15=4 19=9 22=0  | 11=1 15=0 17=0 19=4 22=1 
+11=0 15=4 19=9  | 11=1 15=0 17=0 19=4 22=1 
+11=0 15=4 19=9 17=1 22=0  | 11=1 15=0 17=0 19=4 22=1 
+11=0 15=4 19=9 17=1  | 11=1 15=0 17=0 19=4 22=1 
+12=0 15=10 19=9 22=0  | 12=1 15=11 17=0 19=10 22=1 
+12=0 15=10 19=9  | 12=1 15=11 17=0 19=10 22=1 
+12=0 15=10 19=9 17=1 22=0  | 12=1 15=11 17=0 19=10 22=1 
+12=0 15=10 19=9 17=1  | 12=1 15=11 17=0 19=10 22=1 
+5=0 15=13 19=9 22=0  | 5=1 15=15 17=0 19=13 22=1 
+5=0 15=13 19=9  | 5=1 15=15 17=0 19=13 22=1 
+5=0 15=13 19=9 17=1 22=0  | 5=1 15=15 17=0 19=13 22=1 
+5=0 15=13 19=9 17=1  | 5=1 15=15 17=0 19=13 22=1 
+1=0 15=9 19=10 22=0  | 1=1 15=8 19=9 20=0 22=1 
+1=0 15=9 19=10  | 1=1 15=8 19=9 20=0 22=1 
+1=0 15=9 19=10 20=1 22=0  | 1=1 15=8 19=9 20=0 22=1 
+1=0 15=9 19=10 20=1  | 1=1 15=8 19=9 20=0 22=1 
+3=0 15=11 19=10 22=0  | 3=1 15=12 19=11 20=0 22=1 
+3=0 15=11 19=10  | 3=1 15=12 19=11 20=0 22=1 
+3=0 15=11 19=10 20=1 22=0  | 3=1 15=12 19=11 20=0 22=1 
+3=0 15=11 19=10 20=1  | 3=1 15=12 19=11 20=0 22=1 
+4=0 15=14 19=10 22=0  | 4=1 15=16 19=14 20=0 22=1 
+4=0 15=14 19=10  | 4=1 15=16 19=14 20=0 22=1 
+4=0 15=14 19=10 20=1 22=0  | 4=1 15=16 19=14 20=0 22=1 
+4=0 15=14 19=10 20=1  | 4=1 15=16 19=14 20=0 22=1 
+10=0 15=6 19=11 22=0  | 10=1 12=0 15=2 19=6 22=1 
+10=0 15=6 19=11  | 10=1 12=0 15=2 19=6 22=1 
+10=0 15=6 19=11 12=1 22=0  | 10=1 12=0 15=2 19=6 22=1 
+10=0 15=6 19=11 12=1  | 10=1 12=0 15=2 19=6 22=1 
+15=10 17=0 19=11 22=0  | 12=0 15=9 17=1 19=10 22=1 
+15=10 17=0 19=11  | 12=0 15=9 17=1 19=10 22=1 
+15=10 17=0 19=11 12=1 22=0  | 12=0 15=9 17=1 19=10 22=1 
+15=10 17=0 19=11 12=1  | 12=0 15=9 17=1 19=10 22=1 
+13=0 15=9 19=13 22=0  | 7=0 13=1 15=4 19=9 22=1 
+13=0 15=9 19=13  | 7=0 13=1 15=4 19=9 22=1 
+13=0 15=9 19=13 7=1 22=0  | 7=0 13=1 15=4 19=9 22=1 
+13=0 15=9 19=13 7=1  | 7=0 13=1 15=4 19=9 22=1 
+15=13 17=0 19=15 22=0  | 5=0 15=9 17=1 19=13 22=1 
+15=13 17=0 19=15  | 5=0 15=9 17=1 19=13 22=1 
+15=13 17=0 19=15 5=1 22=0  | 5=0 15=9 17=1 19=13 22=1 
+15=13 17=0 19=15 5=1  | 5=0 15=9 17=1 19=13 22=1 
+10=0 18=1 19=0 21=0  | 10=1 11=0 18=2 19=1 21=1 
+10=0 18=1 19=0  | 10=1 11=0 18=2 19=1 21=1 
+10=0 18=1 19=0 11=1 21=0  | 10=1 11=0 18=2 19=1 21=1 
+10=0 18=1 19=0 11=1  | 10=1 11=0 18=2 19=1 21=1 
+17=0 18=4 19=0 21=0  | 11=0 17=1 18=9 19=4 21=1 
+17=0 18=4 19=0  | 11=0 17=1 18=9 19=4 21=1 
+17=0 18=4 19=0 11=1 21=0  | 11=0 17=1 18=9 19=4 21=1 
+17=0 18=4 19=0 11=1  | 11=0 17=1 18=9 19=4 21=1 
+11=0 18=1 19=2 21=0  | 10=0 11=1 18=0 19=1 21=1 
+11=0 18=1 19=2  | 10=0 11=1 18=0 19=1 21=1 
+11=0 18=1 19=2 10=1 21=0  | 10=0 11=1 18=0 19=1 21=1 
+11=0 18=1 19=2 10=1  | 10=0 11=1 18=0 19=1 21=1 
+12=0 18=6 19=2 21=0  | 10=0 12=1 18=11 19=6 21=1 
+12=0 18=6 19=2  | 10=0 12=1 18=11 19=6 21=1 
+12=0 18=6 19=2 10=1 21=0  | 10=0 12=1 18=11 19=6 21=1 
+12=0 18=6 19=2 10=1  | 10=0 12=1 18=11 19=6 21=1 
+9=0 18=5 19=4 21=0  | 9=1 13=0 18=6 19=5 21=1 
+9=0 18=5 19=4  | 9=1 13=0 18=6 19=5 21=1 
+9=0 18=5 19=4 13=1 21=0  | 9=1 13=0 18=6 19=5 21=1 
+9=0 18=5 19=4 13=1  | 9=1 13=0 18=6 19=5 21=1 
+7=0 18=9 19=4 21=0  | 7=1 13=0 18=13 19=9 21=1 
+7=0 18=9 19=4  | 7=1 13=0 18=13 19=9 21=1 
+7=0 18=9 19=4 13=1 21=0  | 7=1 13=0 18=13 19=9 21=1 
+7=0 18=9 19=4 13=1  | 7=1 13=0 18=13 19=9 21=1 
+0=0 18=4 19=5 21=0  | 0=1 16=0 18=3 19=4 21=1 
+0=0 18=4 19=5  | 0=1 16=0 18=3 19=4 21=1 
+0=0 18=4 19=5 16=1 21=0  | 0=1 16=0 18=3 19=4 21=1 
+0=0 18=4 19=5 16=1  | 0=1 16=0 18=3 19=4 21=1 
+2=0 18=6 19=5 21=0  | 2=1 16=0 18=7 19=6 21=1 
+2=0 18=6 19=5  | 2=1 16=0 18=7 19=6 21=1 
+2=0 18=6 19=5 16=1 21=0  | 2=1 16=0 18=7 19=6 21=1 
+2=0 18=6 19=5 16=1  | 2=1 16=0 18=7 19=6 21=1 
+6=0 18=10 19=5 21=0  | 6=1 16=0 18=14 19=10 21=1 
+6=0 18=10 19=5  | 6=1 16=0 18=14 19=10 21=1 
+6=0 18=10 19=5 16=1 21=0  | 6=1 16=0 18=14 19=10 21=1 
+6=0 18=10 19=5 16=1  | 6=1 16=0 18=14 19=10 21=1 
+13=0 18=5 19=6 21=0  | 9=0 13=1 18=4 19=5 21=1 
+13=0 18=5 19=6  | 9=0 13=1 18=4 19=5 21=1 
+13=0 18=5 19=6 9=1 21=0  | 9=0 13=1 18=4 19=5 21=1 
+13=0 18=5 19=6 9=1  | 9=0 13=1 18=4 19=5 21=1 
+11=0 18=4 19=9 21=0  | 11=1 17=0 18=0 19=4 21=1 
+11=0 18=4 19=9  | 11=1 17=0 18=0 19=4 21=1 
+11=0 18=4 19=9 17=1 21=0  | 11=1 17=0 18=0 19=4 21=1 
+11=0 18=4 19=9 17=1  | 11=1 17=0 18=0 19=4 21=1 
+12=0 18=10 19=9 21=0  | 12=1 17=0 18=11 19=10 21=1 
+12=0 18=10 19=9  | 12=1 17=0 18=11 19=10 21=1 
+12=0 18=10 19=9 17=1 21=0  | 12=1 17=0 18=11 19=10 21=1 
+12=0 18=10 19=9 17=1  | 12=1 17=0 18=11 19=10 21=1 
+5=0 18=13 19=9 21=0  | 5=1 17=0 18=15 19=13 21=1 
+5=0 18=13 19=9  | 5=1 17=0 18=15 19=13 21=1 
+5=0 18=13 19=9 17=1 21=0  | 5=1 17=0 18=15 19=13 21=1 
+5=0 18=13 19=9 17=1  | 5=1 17=0 18=15 19=13 21=1 
+1=0 18=9 19=10 21=0  | 1=1 18=8 19=9 20=0 21=1 
+1=0 18=9 19=10  | 1=1 18=8 19=9 20=0 21=1 
+1=0 18=9 19=10 20=1 21=0  | 1=1 18=8 19=9 20=0 21=1 
+1=0 18=9 19=10 20=1  | 1=1 18=8 19=9 20=0 21=1 
+3=0 18=11 19=10 21=0  | 3=1 18=12 19=11 20=0 21=1 
+3=0 18=11 19=10  | 3=1 18=12 19=11 20=0 21=1 
+3=0 18=11 19=10 20=1 21=0  | 3=1 18=12 19=11 20=0 21=1 
+3=0 18=11 19=10 20=1  | 3=1 18=12 19=11 20=0 21=1 
+4=0 18=14 19=10 21=0  | 4=1 18=16 19=14 20=0 21=1 
+4=0 18=14 19=10  | 4=1 18=16 19=14 20=0 21=1 
+4=0 18=14 19=10 20=1 21=0  | 4=1 18=16 19=14 20=0 21=1 
+4=0 18=14 19=10 20=1  | 4=1 18=16 19=14 20=0 21=1 
+10=0 18=6 19=11 21=0  | 10=1 12=0 18=2 19=6 21=1 
+10=0 18=6 19=11  | 10=1 12=0 18=2 19=6 21=1 
+10=0 18=6 19=11 12=1 21=0  | 10=1 12=0 18=2 19=6 21=1 
+10=0 18=6 19=11 12=1  | 10=1 12=0 18=2 19=6 21=1 
+17=0 18=10 19=11 21=0  | 12=0 17=1 18=9 19=10 21=1 
+17=0 18=10 19=11  | 12=0 17=1 18=9 19=10 21=1 
+17=0 18=10 19=11 12=1 21=0  | 12=0 17=1 18=9 19=10 21=1 
+17=0 18=10 19=11 12=1  | 12=0 17=1 18=9 19=10 21=1 
+13=0 18=9 19=13 21=0  | 7=0 13=1 18=4 19=9 21=1 
+13=0 18=9 19=13  | 7=0 13=1 18=4 19=9 21=1 
+13=0 18=9 19=13 7=1 21=0  | 7=0 13=1 18=4 19=9 21=1 
+13=0 18=9 19=13 7=1  | 7=0 13=1 18=4 19=9 21=1 
+17=0 18=13 19=15 21=0  | 5=0 17=1 18=9 19=13 21=1 
+17=0 18=13 19=15  | 5=0 17=1 18=9 19=13 21=1 
+17=0 18=13 19=15 5=1 21=0  | 5=0 17=1 18=9 19=13 21=1 
+17=0 18=13 19=15 5=1  | 5=0 17=1 18=9 19=13 21=1 
+New best heuristic value for lmcut: 0
+[g=1, 1 evaluated, 1 expanded, t=0s, 0 KB]
+New best h: 1 (iteration 41)
+New best h: 2 (iteration 44)
+New best h: 3 (iteration 48)
+New best h: 4 (iteration 199)
+New best h: 5 (iteration 580)
+New best h: 6 (iteration 583)
+New best h: 7 (iteration 2768)
+New best h: 8 (iteration 3210)
+Converged to 8. 
+New best h: 9 (iteration 6369)
+Converged to 9. 
+Converged to 8. 
+New best h: 10 (iteration 59662)
+Converged to 10. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+New best h: 11 (iteration 125000)
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 11. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 10. 
+Converged to 6. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 10. 
+Converged to 9. 
+Converged to 10. 
+Converged to 6. 
+Converged to 9. 
+Converged to 8. 
+Converged to 6. 
+Converged to 9. 
+Converged to 6. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 6. 
+Converged to 6. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 10. 
+Converged to 6. 
+Converged to 6. 
+Converged to 8. 
+Converged to 6. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 10. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 6. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 11. 
+Converged to 9. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 10. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 10. 
+Converged to 6. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 10. 
+Converged to 6. 
+Converged to 9. 
+Converged to 6. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 7. 
+Converged to 10. 
+Converged to 10. 
+Converged to 7. 
+Converged to 8. 
+Converged to 6. 
+Converged to 10. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 11. 
+Converged to 7. 
+Converged to 6. 
+Converged to 10. 
+Converged to 10. 
+Converged to 6. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 8. 
+Converged to 8. 
+Converged to 6. 
+Converged to 6. 
+Converged to 7. 
+Converged to 11. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 11. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+New best h: 12 (iteration 2637729)
+Converged to 12. 
+Converged to 9. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 10. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 10. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 6. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 11. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 6. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 6. 
+Converged to 7. 
+Converged to 8. 
+Converged to 10. 
+Converged to 9. 
+Converged to 11. 
+Converged to 8. 
+Converged to 9. 
+Converged to 6. 
+Converged to 9. 
+Converged to 6. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 6. 
+Converged to 9. 
+Converged to 10. 
+Converged to 8. 
+Converged to 10. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 6. 
+Converged to 6. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 10. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 10. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 10. 
+Converged to 12. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 6. 
+Converged to 7. 
+Converged to 8. 
+Converged to 11. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 10. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 10. 
+Converged to 6. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 6. 
+Converged to 10. 
+Converged to 9. 
+Converged to 10. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 6. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 6. 
+Converged to 7. 
+Converged to 7. 
+Converged to 10. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 11. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 9. 
+Converged to 6. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 8. 
+Converged to 11. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 6. 
+Converged to 9. 
+Converged to 6. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 6. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 11. 
+Converged to 9. 
+Converged to 7. 
+Converged to 11. 
+Converged to 7. 
+Converged to 6. 
+Converged to 10. 
+Converged to 6. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 6. 
+Converged to 6. 
+Converged to 10. 
+Converged to 6. 
+Converged to 8. 
+Converged to 8. 
+Converged to 6. 
+Converged to 8. 
+Converged to 11. 
+Converged to 9. 
+Converged to 9. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 10. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 10. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 10. 
+Converged to 7. 
+Converged to 11. 
+Converged to 11. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 11. 
+Converged to 6. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 6. 
+Converged to 8. 
+Converged to 6. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 11. 
+Converged to 10. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 6. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 10. 
+Converged to 9. 
+Converged to 6. 
+Converged to 11. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 10. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 6. 
+Converged to 7. 
+Converged to 10. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 10. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 10. 
+Converged to 7. 
+Converged to 10. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 11. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 6. 
+Converged to 9. 
+Converged to 7. 
+Converged to 6. 
+Converged to 7. 
+Converged to 11. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 10. 
+Converged to 6. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 6. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 6. 
+Converged to 9. 
+Converged to 7. 
+Converged to 10. 
+Converged to 8. 
+Converged to 11. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 8. 
+Converged to 9. 
+Converged to 10. 
+Converged to 10. 
+Converged to 8. 
+Converged to 10. 
+Converged to 10. 
+Converged to 9. 
+Converged to 9. 
+Converged to 10. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 11. 
+Converged to 6. 
+Converged to 8. 
+Converged to 8. 
+Converged to 6. 
+Converged to 7. 
+Converged to 10. 
+Converged to 10. 
+Converged to 9. 
+Converged to 9. 
+Converged to 6. 
+Converged to 10. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 11. 
+Converged to 10. 
+Converged to 10. 
+Converged to 8. 
+Converged to 7. 
+Converged to 10. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 6. 
+Converged to 9. 
+Converged to 12. 
+Converged to 10. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 10. 
+Converged to 6. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 11. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 10. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 10. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 6. 
+Converged to 10. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 10. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 10. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 6. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 8. 
+Converged to 6. 
+Converged to 8. 
+Converged to 10. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 6. 
+Converged to 9. 
+Converged to 7. 
+Converged to 6. 
+Converged to 9. 
+Converged to 6. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 6. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 6. 
+Converged to 6. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 6. 
+Converged to 7. 
+Converged to 11. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 11. 
+Converged to 10. 
+Converged to 7. 
+Converged to 7. 
+Converged to 10. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 6. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 10. 
+Converged to 9. 
+Converged to 8. 
+Converged to 6. 
+Converged to 10. 
+Converged to 9. 
+Converged to 8. 
+Converged to 10. 
+Converged to 9. 
+Converged to 6. 
+Converged to 11. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 10. 
+Converged to 9. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 10. 
+Converged to 7. 
+Converged to 6. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 10. 
+Converged to 10. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 10. 
+Converged to 7. 
+Converged to 11. 
+Converged to 10. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 6. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 10. 
+Converged to 7. 
+Converged to 8. 
+Converged to 10. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 10. 
+Converged to 6. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 10. 
+Converged to 7. 
+Converged to 8. 
+Converged to 6. 
+Converged to 10. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 11. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 12. 
+Converged to 10. 
+Converged to 7. 
+Converged to 12. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 6. 
+Converged to 6. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 10. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 11. 
+Converged to 9. 
+Converged to 9. 
+Converged to 10. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 10. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 10. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 6. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 6. 
+Converged to 10. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 10. 
+Converged to 7. 
+Converged to 7. 
+Converged to 10. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 6. 
+Converged to 9. 
+Converged to 6. 
+Converged to 11. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 10. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 11. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 6. 
+Converged to 8. 
+Converged to 7. 
+Converged to 10. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 11. 
+Converged to 10. 
+Converged to 10. 
+Converged to 9. 
+Converged to 8. 
+Converged to 10. 
+Converged to 10. 
+Converged to 10. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 6. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 12. 
+Converged to 7. 
+Converged to 10. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 6. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 10. 
+Converged to 7. 
+Converged to 10. 
+Converged to 9. 
+Converged to 9. 
+Converged to 10. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 11. 
+Converged to 8. 
+Converged to 9. 
+Converged to 11. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 10. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 11. 
+Converged to 9. 
+Converged to 9. 
+Converged to 12. 
+Converged to 6. 
+Converged to 6. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 6. 
+Converged to 7. 
+Converged to 10. 
+Converged to 8. 
+Converged to 7. 
+Converged to 6. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 10. 
+Converged to 6. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 6. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 12. 
+Converged to 10. 
+Converged to 9. 
+Converged to 7. 
+Converged to 6. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 11. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 6. 
+Converged to 10. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 10. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 10. 
+Converged to 9. 
+Converged to 10. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 6. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 8. 
+Converged to 10. 
+Converged to 11. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 8. 
+Converged to 6. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 6. 
+Converged to 6. 
+Converged to 9. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 11. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 6. 
+Converged to 6. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 6. 
+Converged to 8. 
+Converged to 10. 
+Converged to 9. 
+Converged to 6. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 10. 
+Converged to 7. 
+Converged to 7. 
+Converged to 6. 
+Converged to 8. 
+Converged to 8. 
+Converged to 12. 
+Converged to 6. 
+Converged to 9. 
+Converged to 6. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 6. 
+Converged to 7. 
+Converged to 9. 
+Converged to 6. 
+Converged to 7. 
+Converged to 6. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 6. 
+Converged to 11. 
+Converged to 10. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 10. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 6. 
+Converged to 8. 
+Converged to 9. 
+Converged to 6. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 11. 
+Converged to 10. 
+Converged to 9. 
+Converged to 8. 
+Converged to 6. 
+Converged to 11. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 10. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 9. 
+Converged to 10. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 6. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 11. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 9. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+Converged to 8. 
+Converged to 6. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 10. 
+Converged to 6. 
+Converged to 7. 
+Converged to 7. 
+Converged to 11. 
+Converged to 8. 
+Converged to 7. 
+Converged to 6. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 10. 
+Converged to 7. 
+Converged to 7. 
+Converged to 7. 
+New best h: 13 (iteration 18177303)
+Converged to 13. 
+Converged to 9. 
+Converged to 7. 
+Converged to 5. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 8. 
+Converged to 11. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 6. 
+Converged to 10. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 9. 
+Converged to 6. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 11. 
+Converged to 7. 
+Converged to 6. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 10. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 6. 
+Converged to 8. 
+Converged to 8. 
+Converged to 6. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 10. 
+Converged to 10. 
+Converged to 9. 
+Converged to 10. 
+Converged to 8. 
+Converged to 7. 
+Converged to 11. 
+Converged to 6. 
+Converged to 8. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 6. 
+Converged to 8. 
+Converged to 6. 
+Converged to 9. 
+Converged to 10. 
+Converged to 9. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 7. 
+Converged to 8. 
+Converged to 6. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 8. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 9. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 6. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 9. 
+Converged to 10. 
+Converged to 9. 
+Converged to 7. 
+Converged to 6. 
+Converged to 9. 
+Converged to 7. 
+Converged to 7. 
+Converged to 6. 
+Converged to 6. 
+Converged to 10. 
+Converged to 7. 
+Converged to 11. 
+Converged to 9. 
+Converged to 6. 
+Converged to 9. 
+Converged to 8. 
+Converged to 8. 
+Converged to 10. 
+Converged to 11. 
+Converged to 8. 
+Converged to 9. 
+Converged to 6. 
+Converged to 9. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 10. 
+Converged to 8. 
+Converged to 9. 
+Converged to 8. 
+Converged to 9. 
+Converged to 12. 
+Converged to 7. 
+Converged to 6. 
+Converged to 9. 
+Converged to 9. 
+Converged to 7. 
+Converged to 8. 
+Converged to 7. 
+Converged to 7. 
+Converged to 9. 
+Converged to 10. 
+Converged to 6. 
+Converged to 7. 
+Converged to 8. 
+Converged to 8. 
+Converged to 7. 
+Converged to 10. 
+Converged to 6. 
+Converged to 9. 
+Converged to 9. 
+Converged to 10. 
+Converged to 6. 
+Reached iteration limit.
+Actual search time: 120.625s [t=120.625s]
+Original state h-value: 6
+New state h-value: 13
+Expanded 21015752 state(s).
+Reopened 0 state(s).
+Evaluated 1077550 state(s).
+Evaluations: 21077550
+Generated 44345503 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 21077551
+Int hash set load factor: 21077551/33554432 = 0.62816
+Int hash set resizes: 25
+Search time: 120.625s
+Total time: 120.625s
+Solution found.
+Peak memory: 0 KB
+search exit code: 0
+

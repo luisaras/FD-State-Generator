@@ -40,13 +40,13 @@ task()
         GEN_OUTPUT=${OUTPUT_DIR}/${i}_gen.txt
 
         # Generate $i_task.sas
-        ./fast-downward.py ${TRANSLATOR_TEMP} --internal-plan-file "${NEW_TASK}" --search "generator_abstract(abstract(${HEURISTIC}), max_it=20000000)" > ${GEN_OUTPUT}
+        ./fast-downward.py --search-time-limit 5m --search-memory-limit 2G ${TRANSLATOR_TEMP} --internal-plan-file ${NEW_TASK} --search "generator_random(${HEURISTIC}, max_it=20000000)" > ${GEN_OUTPUT}
 
         # Planner output files
         PLAN_OUTPUT=${OUTPUT_DIR}/${i}_plan.txt
 
         # Find plan for $i_task.sas
-        ./fast-downward.py "${NEW_TASK}" --internal-plan-file "${PLANNER_TEMP}" --search "astar(lmcut())" > ${PLAN_OUTPUT}
+        ./fast-downward.py ${NEW_TASK} --internal-plan-file ${PLANNER_TEMP} --search "astar(lmcut())" > ${PLAN_OUTPUT}
 
     done
 
@@ -58,11 +58,9 @@ task()
 
 #task sokoban lmcut "lmcut()"
 #task sokoban ipdb "ipdb()"
-#task sokoban max "max([lmcut(), ipdb()])"
 
 #task blocks lmcut "lmcut()"
 #task blocks ipdb "ipdb()"
-#task blocks max "max([lmcut(), ipdb()])"
 
 task airport lmcut "lmcut()"
-#task airport ipdb "ipdb()"
+task airport ipdb "ipdb()"

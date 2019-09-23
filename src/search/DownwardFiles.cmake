@@ -445,6 +445,7 @@ fast_downward_plugin(
         search_engines/generator_tnf
         search_engines/generator_random_goal
         search_engines/generator_abstract_goal
+        search_engines/generator_all_goals
         search_engines/plugin_generator
     DEPENDS SEARCH_COMMON
 )

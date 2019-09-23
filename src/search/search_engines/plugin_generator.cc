@@ -1,6 +1,7 @@
 #include "generator_tnf.h"
-#include "generator_abstract_goal.h"
 #include "generator_random_goal.h"
+#include "generator_abstract_goal.h"
+#include "generator_all_goals.h"
 
 #include "search_common.h"
 
@@ -11,7 +12,7 @@ using namespace std;
 
 namespace plugin_generator_tnf {
 static shared_ptr<SearchEngine> _parse(OptionParser &parser) {
-    parser.document_synopsis("State Generator","");
+    parser.document_synopsis("State Generator (TNF)","");
     state_generator::StateGenerator::add_options_to_parser(parser);
     Options opts = parser.parse();
     shared_ptr<state_generator::StateGenerator> engine;
@@ -26,7 +27,7 @@ static Plugin<SearchEngine> _plugin("generator_tnf", _parse);
 
 namespace plugin_generator_random_goal {
 static shared_ptr<SearchEngine> _parse(OptionParser &parser) {
-    parser.document_synopsis("State Generator","");
+    parser.document_synopsis("State Generator (Random Goal)","");
     state_generator::StateGenerator::add_options_to_parser(parser);
     state_generator::GeneratorRandomGoal::add_options_to_parser(parser);
     Options opts = parser.parse();
@@ -42,7 +43,7 @@ static Plugin<SearchEngine> _plugin("generator_random", _parse);
 
 namespace plugin_generator_abstract_goal {
 static shared_ptr<SearchEngine> _parse(OptionParser &parser) {
-    parser.document_synopsis("State Generator","");
+    parser.document_synopsis("State Generator (Abstract Goal)","");
     state_generator::StateGenerator::add_options_to_parser(parser);
     Options opts = parser.parse();
     opts.set("undef_value", true);
@@ -54,4 +55,19 @@ static shared_ptr<SearchEngine> _parse(OptionParser &parser) {
     return engine;
 }
 static Plugin<SearchEngine> _plugin("generator_abstract", _parse);
+}
+
+namespace plugin_generator_all_goals {
+static shared_ptr<SearchEngine> _parse(OptionParser &parser) {
+    parser.document_synopsis("State Generator (All Goals)","");
+    state_generator::StateGenerator::add_options_to_parser(parser);
+    Options opts = parser.parse();
+    shared_ptr<state_generator::StateGenerator> engine;
+    if (!parser.dry_run()) {
+        opts.set("open", search_common::create_reverse_open_list_factory(opts));
+        engine = make_shared<state_generator::GeneratorAllGoals>(opts);
+    }
+    return engine;
+}
+static Plugin<SearchEngine> _plugin("generator_all", _parse);
 }
