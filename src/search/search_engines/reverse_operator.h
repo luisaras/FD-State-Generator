@@ -47,6 +47,12 @@ public:
 
     void apply(std::vector<int>& state);
 
+    bool is_applicable(VariablesProxy &variables, std::vector<int>& state);
+
+    bool is_result(std::vector<int>& pred_state, std::vector<int>& state);
+
+    void dump();
+
 };
 
 /*

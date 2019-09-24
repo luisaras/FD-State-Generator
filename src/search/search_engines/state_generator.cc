@@ -28,6 +28,7 @@ StateGenerator::StateGenerator(const Options &opts)
       match_tree(task_proxy),
       best_state(task->get_num_variables()),
       best_state_h(-1) {
+    srand(0);
 }
 
 void StateGenerator::initialize() {
@@ -44,24 +45,33 @@ void StateGenerator::initialize() {
     EvaluationContext original_state_eval(original_state, 0, false, nullptr);
     original_state_h = original_state_eval.get_evaluator_value_or_infinity(h_evaluator.get());
     
-    cout << "Building match tree..." << endl;
+    cout << "Building reverse operators..." << endl;
     
     // Build reverse operators
+    vector<bool> mentioned(best_state.size(), false);
     VariablesProxy variables = task_proxy.get_variables();
-    for (const OperatorProxy &op : task_proxy.get_operators())
+    for (const OperatorProxy &op : task_proxy.get_operators()) {
         reverse_search::build_reverse_operators(op, variables, operators);
+        for (FactProxy pre : op.get_preconditions()) {
+            mentioned[pre.get_pair().var] = true;
+        }
+    }
+    for (uint var = 0; var < mentioned.size(); var++) {
+        if (!mentioned[var])
+            cout << "Variable " << var << " not mentioned in preconditions." << endl;
+    }
+
+    cout << "Created " << operators.size() << " reverse operators." << endl;
+
+    
 
     // Match Tree
     for (size_t op_id = 0; op_id < operators.size(); ++op_id) {
         match_tree.insert(op_id, operators[op_id].regression_preconditions);
-
-        for (const FactPair& effect : operators[op_id].regression_effects)
-            cout << effect << " ";
-        cout << " | ";
-        for (const FactPair& effect : operators[op_id].regression_preconditions)
-            cout << effect << " ";
-        cout << endl;
+        operators[op_id].dump();
     }
+
+    cout << "Built match tree." << endl;
     
 }
 
@@ -74,6 +84,15 @@ void StateGenerator::reward_progress() {
     // Boost the "preferred operator" open lists somewhat whenever
     // one of the heuristics finds a state with a new best h value.
     open_list->boost_preferred();
+}
+
+void StateGenerator::dump_state(vector<int>& state) {
+    for (uint var = 0; var < state.size(); var++) {
+        if (state[var] < task->get_variable_domain_size(var)) {
+            cout << var << "=" << state[var] << " ";
+        }
+    }
+    cout << endl;
 }
 
 void StateGenerator::dump_search_space() const {
