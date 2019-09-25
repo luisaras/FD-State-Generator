@@ -3,14 +3,6 @@
 
 #include "state_generator.h"
 
-class Evaluator;
-class PruningMethod;
-
-namespace options {
-class OptionParser;
-class Options;
-}
-
 namespace state_generator {
     
 class GeneratorAllGoals : public StateGenerator {

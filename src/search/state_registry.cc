@@ -41,7 +41,7 @@ StateID StateRegistry::insert_id_or_pop_state() {
     return StateID(result.first);
 }
 
-GlobalState StateRegistry::lookup_state(StateID id) const {
+GlobalState StateRegistry::lookup_state(StateID id) {
     return GlobalState(state_data_pool[id.value], *this, id);
 }
 

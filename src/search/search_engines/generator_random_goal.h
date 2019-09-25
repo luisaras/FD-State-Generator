@@ -21,11 +21,10 @@ protected:
     int current_best_state_h;
     int convergence_max;
     int convergence_count = 0;
-    
-    virtual bool next_goal_state();
 
     virtual void initialize() override;
     virtual SearchStatus step() override;
+    virtual bool on_list_empty() override;
 
 public:
     explicit GeneratorRandomGoal(const options::Options &opts);

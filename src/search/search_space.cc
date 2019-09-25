@@ -8,7 +8,7 @@
 
 using namespace std;
 
-SearchNode::SearchNode(const StateRegistry &state_registry,
+SearchNode::SearchNode(StateRegistry &state_registry,
                        StateID state_id,
                        SearchNodeInfo &info)
     : state_registry(state_registry),
@@ -17,7 +17,7 @@ SearchNode::SearchNode(const StateRegistry &state_registry,
     assert(state_id != StateID::no_state);
 }
 
-GlobalState SearchNode::get_state() const {
+GlobalState SearchNode::get_state() {
     return state_registry.lookup_state(state_id);
 }
 
@@ -104,7 +104,7 @@ void SearchNode::mark_as_dead_end() {
     info.status = SearchNodeInfo::DEAD_END;
 }
 
-void SearchNode::dump(const TaskProxy &task_proxy) const {
+void SearchNode::dump(const TaskProxy &task_proxy) {
     cout << state_id << ": ";
     get_state().dump_fdr();
     if (info.creating_operator != OperatorID::no_operator) {

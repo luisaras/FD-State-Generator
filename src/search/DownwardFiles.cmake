@@ -442,7 +442,6 @@ fast_downward_plugin(
         search_engines/match_tree
         search_engines/reverse_operator
         search_engines/state_generator
-        search_engines/generator_tnf
         search_engines/generator_random_goal
         search_engines/generator_abstract_goal
         search_engines/generator_all_goals
@@ -550,10 +549,18 @@ fast_downward_plugin(
 
 fast_downward_plugin(
     NAME ABSTRACT_HEURISTIC
-    HELP "Heuristic for states with undefined variables"
+    HELP "Heuristic for tasks with undefined variables"
     SOURCES
         heuristics/abstract_heuristic
-    DEPENDS PRIORITY_QUEUES RELAXATION_HEURISTIC
+    DEPENDS TASK_PROPERTIES
+)
+
+fast_downward_plugin(
+    NAME UNDEFS_HEURISTIC
+    HELP "Heuristic that counts undefined variables"
+    SOURCES
+        heuristics/undefs_heuristic
+    DEPENDS TASK_PROPERTIES
 )
 
 fast_downward_plugin(

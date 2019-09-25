@@ -3,17 +3,12 @@
 
 #include "../heuristic.h"
 
-namespace options {
-class Options;
-}
-
 namespace abstract_heuristic {
 class AbstractHeuristic : public Heuristic {
     int min_operator_cost;
     std::shared_ptr<Evaluator> concrete_evaluator;
 
     uint concrete_state_count = 0;
-    uint undef_variable_count = 0;
     
 protected:
     virtual int compute_heuristic(const GlobalState &global_state);

@@ -24,20 +24,18 @@ class GlobalState {
     const PackedStateBin *buffer;
 
     // registry isn't a reference because we want to support operator=
-    const StateRegistry *registry;
+    StateRegistry *registry;
     StateID id;
 
     // Only used by the state registry.
     GlobalState(
-        const PackedStateBin *buffer, const StateRegistry &registry, StateID id);
+        const PackedStateBin *buffer, StateRegistry &registry, StateID id);
 
     const PackedStateBin *get_packed_buffer() const {
         return buffer;
     }
 
-    const StateRegistry &get_registry() const {
-        return *registry;
-    }
+
 public:
     ~GlobalState() = default;
 
@@ -46,6 +44,10 @@ public:
     }
 
     int operator[](int var) const;
+
+    StateRegistry &get_registry() const {
+        return *registry;
+    }
 
     State unpack() const;
 

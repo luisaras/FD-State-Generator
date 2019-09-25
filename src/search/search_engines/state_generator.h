@@ -6,6 +6,7 @@
 #include "match_tree.h"
 #include "reverse_operator.h"
 
+#include <optional.hh>
 #include <memory>
 #include <vector>
 
@@ -40,8 +41,8 @@ protected:
     int original_state_h;
 
     virtual void initialize() override;
-    
-    virtual void reward_progress();
+    virtual bool pop_node(tl::optional<SearchNode> &node, std::vector<int> &state_values);
+    virtual bool on_list_empty() { return false; }
 
 public:
     explicit StateGenerator(const options::Options &opts);

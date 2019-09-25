@@ -12,7 +12,7 @@ using namespace std;
 
 
 GlobalState::GlobalState(
-    const PackedStateBin *buffer, const StateRegistry &registry, StateID id)
+    const PackedStateBin *buffer, StateRegistry &registry, StateID id)
     : buffer(buffer),
       registry(&registry),
       id(id) {

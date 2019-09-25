@@ -14,7 +14,6 @@
 #include <cstdlib>
 #include <fstream>
 #include <memory>
-#include <optional.hh>
 #include <set>
 
 using namespace std;
@@ -79,22 +78,8 @@ SearchStatus GeneratorAllGoals::step() {
     // Select next node
     vector<int> state_values;
     tl::optional<SearchNode> node;
-    while (true) {
-        if (open_list->empty()) {
-            cout << "Completely explored state space." << endl;
-            return SOLVED;
-        }
-        StateID id = open_list->remove_min();
-        GlobalState node_state = state_registry.lookup_state(id);
-        node.emplace(search_space.get_node(node_state));
-        state_values = node_state.unpack().get_values();
-        if (node->is_closed())
-            continue;
-        node->close();
-        assert(!node->is_dead_end());
-        statistics.inc_expanded();
-        break;
-    }
+    if (!pop_node(node, state_values))
+        return SOLVED;
     
     // Gets operators
     set<int> applicable_operator_ids;
@@ -144,10 +129,6 @@ SearchStatus GeneratorAllGoals::step() {
 
             // Insert node in list
             open_list->insert(eval_context, pred_state.get_id());
-            if (search_progress.check_progress(eval_context)) {
-                statistics.print_checkpoint_line(pred_node.get_g());
-                reward_progress();
-            }
             
         }
         

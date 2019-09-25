@@ -75,15 +75,31 @@ void StateGenerator::initialize() {
     
 }
 
+bool StateGenerator::pop_node(tl::optional<SearchNode>& node, vector<int>& state_values) {
+    while (true) {
+        if (open_list->empty()) {
+            if (!on_list_empty()) {
+                cout << "Completely explored state space." << endl;
+                return false;
+            }
+        }
+        StateID id = open_list->remove_min();
+        GlobalState node_state = state_registry.lookup_state(id);
+        node.emplace(search_space.get_node(node_state));
+        state_values = node_state.unpack().get_values();
+        if (node->is_closed())
+            continue;
+        node->close();
+        assert(!node->is_dead_end());
+        statistics.inc_expanded();
+        break;
+    }
+    return true;
+}
+
 void StateGenerator::print_statistics() const {
     statistics.print_detailed_statistics();
     search_space.print_statistics();
-}
-
-void StateGenerator::reward_progress() {
-    // Boost the "preferred operator" open lists somewhat whenever
-    // one of the heuristics finds a state with a new best h value.
-    open_list->boost_preferred();
 }
 
 void StateGenerator::dump_state(vector<int>& state) {
@@ -122,6 +138,7 @@ bool StateGenerator::found_solution() const {
 
 void StateGenerator::add_options_to_parser(OptionParser &parser) {
     parser.add_option<shared_ptr<Evaluator>>("eval", "evaluator for h-value");
+    parser.add_list_option<shared_ptr<Evaluator>>("tiebreakers", "tie-breaking evaluators", "[]");
     parser.add_option<int>("max_it", "maximum number of open-list insertions", "-1");
     SearchEngine::add_options_to_parser(parser);
 }

@@ -2,7 +2,7 @@ task()
 {
     # Parameters
     TASK=$1 # Problem name
-    FOLDER=generator-tests-abstract/$2 # Test folder where the output files will be written
+    FOLDER=generator-tests/$2 # Test folder where the output files will be written
     HEURISTIC=$3 # Heuristic method to guide generation
 
     # Create folders
@@ -17,7 +17,7 @@ task()
     OUTPUT_DIR=${FOLDER}/${TASK}
 
     # Input directory
-    PDDL_DIR="../pyperplan/benchmarks/${TASK}"
+    PDDL_DIR=../pyperplan/benchmarks/${TASK}
 
     # Temp files
     TRANSLATOR_TEMP=output.sas
@@ -27,7 +27,7 @@ task()
 
         # Input files
         DOMAIN_INPUT=${PDDL_DIR}/domain$i.pddl
-        if [ ! -f "${DOMAIN_INPUT}" ]; then
+        if [ ! -f ${DOMAIN_INPUT} ]; then
             DOMAIN_INPUT=${PDDL_DIR}/domain.pddl
         fi
         TASK_INPUT=${PDDL_DIR}/task$i.pddl
@@ -40,7 +40,7 @@ task()
         GEN_OUTPUT=${OUTPUT_DIR}/${i}_gen.txt
 
         # Generate $i_task.sas
-        ./fast-downward.py --search-time-limit 10m --search-memory-limit 8G ${TRANSLATOR_TEMP} --internal-plan-file ${NEW_TASK} --search "generator_abstract(abstract(${HEURISTIC}), max_it=20000000)" > ${GEN_OUTPUT}
+        ./fast-downward.py ${TRANSLATOR_TEMP} --internal-plan-file ${NEW_TASK} --search "generator_abstract(abstract(${HEURISTIC}), [undefs()], max_it=5000000)" > ${GEN_OUTPUT}
 
         # Planner output files
         PLAN_OUTPUT=${OUTPUT_DIR}/${i}_plan.txt

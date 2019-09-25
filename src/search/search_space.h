@@ -14,18 +14,18 @@ class TaskProxy;
 
 
 class SearchNode {
-    const StateRegistry &state_registry;
+    StateRegistry &state_registry;
     StateID state_id;
     SearchNodeInfo &info;
 public:
-    SearchNode(const StateRegistry &state_registry,
+    SearchNode(StateRegistry &state_registry,
                StateID state_id,
                SearchNodeInfo &info);
 
     StateID get_state_id() const {
         return state_id;
     }
-    GlobalState get_state() const;
+    GlobalState get_state();
 
     bool is_new() const;
     bool is_open() const;
@@ -48,7 +48,7 @@ public:
     void close();
     void mark_as_dead_end();
 
-    void dump(const TaskProxy &task_proxy) const;
+    void dump(const TaskProxy &task_proxy);
 };
 
 

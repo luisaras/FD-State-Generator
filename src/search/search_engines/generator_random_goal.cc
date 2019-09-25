@@ -30,32 +30,15 @@ GeneratorRandomGoal::GeneratorRandomGoal(const Options &opts)
 
 void GeneratorRandomGoal::initialize() {
     StateGenerator::initialize();
-    next_goal_state();
+    on_list_empty();
 }
 
 SearchStatus GeneratorRandomGoal::step() {
     // Select next node
     vector<int> state_values;
     tl::optional<SearchNode> node;
-    while (true) {
-        if (open_list->empty()) {
-            //cout << "Creating new goal state..." << endl;
-            if (!next_goal_state()) {
-                cout << "Completely explored state space." << endl;
-                return SOLVED;
-            }
-        }
-        StateID id = open_list->remove_min();
-        GlobalState node_state = state_registry.lookup_state(id);
-        node.emplace(search_space.get_node(node_state));
-        state_values = node_state.unpack().get_values();
-        if (node->is_closed())
-            continue;
-        node->close();
-        assert(!node->is_dead_end());
-        statistics.inc_expanded();
-        break;
-    }
+    if (!pop_node(node, state_values))
+        return SOLVED;
     
     // Gets operators
     set<int> applicable_operator_ids;
@@ -106,17 +89,13 @@ SearchStatus GeneratorRandomGoal::step() {
 
             // Insert node in list
             open_list->insert(eval_context, pred_state.get_id());
-            if (search_progress.check_progress(eval_context)) {
-                statistics.print_checkpoint_line(pred_node.get_g());
-                reward_progress();
-            }
             
         }
         
     }
 
     convergence_count++;
-    if (convergence_count > convergence_max) { // ass-pulled limit
+    if (convergence_count > convergence_max) {
         cout << "Converged to " << current_best_state_h << ". " << endl;
         open_list->clear();
     }
@@ -124,7 +103,9 @@ SearchStatus GeneratorRandomGoal::step() {
     return IN_PROGRESS;
 }
 
-bool GeneratorRandomGoal::next_goal_state() {
+bool GeneratorRandomGoal::on_list_empty() {
+    //cout << "Creating new goal state..." << endl;
+    
     VariablesProxy variables = task_proxy.get_variables();
 
     do {
