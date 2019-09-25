@@ -1,14 +1,14 @@
 INFO     Running search (release).
 INFO     search stdin: None
-INFO     search time limit: 300s
-INFO     search memory limit: 2048 MB
-INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/blocks/02_task.sas --search 'generator_random(lmcut(), max_it=20000000)'
-reading input... [t=0s]
-done reading input! [t=0s]
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/blocks/02_task.sas --search 'generator_abstract(abstract(lmcut()), max_it=20000000, max_time=600)'
+reading input... [t=0.0001186s]
+done reading input! [t=0.000899654s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0s]
+Building successor generator...done! [t=0.00683714s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0s
+time for successor generation creation: 0.000108703s
 Variables: 9
 FactPairs: 30
 Bytes per state: 4
@@ -106,34 +106,42 @@ Building match tree...
 4=0 5=0 8=2 1=1  | 1=0 4=1 5=1 8=0 
 4=0 5=0 8=3  | 3=0 4=1 5=1 8=0 
 4=0 5=0 8=3 3=1  | 3=0 4=1 5=1 8=0 
-New best heuristic value for lmcut: 0
-[g=1, 3 evaluated, 3 expanded, t=0s, 0 KB]
-New best h: 1 (iteration 4)
-New best h: 2 (iteration 8)
-New best h: 3 (iteration 45)
-New best h: 4 (iteration 116)
-New best h: 5 (iteration 204)
-New best h: 6 (iteration 486)
-Converged to 6. 
-Converged to 6. 
-New best h: 7 (iteration 2927)
-Converged to 6. 
-Converged to 7. 
-Converged to 7. 
-Converged to 7. 
-Converged to 7. 
-Converged to 7. 
-Converged to 6. 
-Converged to 7. 
-Converged to 7. 
-Converged to 7. 
-Converged to 7. 
-Converged to 7. 
-Converged to 7. 
-Converged to 6. 
-Converged to 7. 
-Converged to 6. 
-Converged to 7. 
-Converged to 7. 
-Peak memory: 0 KB
-caught signal 2 -- exiting
+6=1 7=1 8=3 
+Inserting initial (goal) state...
+New best h: 0 (iteration 0)
+New best heuristic value for abstract(lmcut): 0
+[g=1, 0 evaluated, 1 expanded, t=0.00970285s, 211820 KB]
+New undef count: 5
+New best h: 1 (iteration 5)
+New undef count: 4
+New undef count: 3
+New undef count: 2
+New undef count: 1
+Last undef var: 4
+New undef count: 0
+Found first concrete state.
+New best h: 2 (iteration 101)
+New best h: 3 (iteration 103)
+New best h: 4 (iteration 112)
+New best h: 5 (iteration 117)
+New best h: 6 (iteration 172)
+New best h: 7 (iteration 2142)
+Completely explored state space.
+Actual search time: 0.519269s [t=0.528894s]
+Original state h-value: 6
+New state h-value: 7
+Expanded 20974 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 20973
+Generated 119941 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 20974
+Int hash set load factor: 20974/32768 = 0.640076
+Int hash set resizes: 15
+Search time: 0.521508s
+Total time: 0.528901s
+Solution found.
+Peak memory: 216336 KB
+search exit code: 0
+

@@ -1,17 +1,17 @@
 INFO     Running search (release).
 INFO     search stdin: None
-INFO     search time limit: 300s
-INFO     search memory limit: 2048 MB
-INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/airport/10_task.sas --search 'generator_random(lmcut(), max_it=20000000)'
-reading input... [t=0s]
-done reading input! [t=0s]
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/airport/10_task.sas --search 'generator_abstract(abstract(lmcut()), max_it=20000000, max_time=600)'
+reading input... [t=0.000118662s]
+done reading input! [t=0.00203346s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0s]
+Building successor generator...done! [t=0.00850094s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0s
+time for successor generation creation: 0.00032281s
 Variables: 83
 FactPairs: 210
-Bytes per state: 12
+Bytes per state: 24
 Conducting best first search (real) bound = 2147483647
 Building match tree...
 36=0 47=0 81=2  | 36=1 47=1 48=0 55=0 69=1 81=41 82=0 
@@ -490,16 +490,99 @@ Building match tree...
 81=3 82=0 46=1 57=1  | 46=0 56=0 57=0 69=0 81=1 82=5 
 81=3 82=0 46=1 56=1  | 46=0 56=0 57=0 69=0 81=1 82=5 
 81=3 82=0 46=1 56=1 57=1  | 46=0 56=0 57=0 69=0 81=1 82=5 
+82=1 
+Inserting initial (goal) state...
 New best h: 1 (iteration 0)
-New best heuristic value for lmcut: 1
-[g=1, 138 evaluated, 138 expanded, t=0.015625s, 0 KB]
-New best h: 2 (iteration 61)
-New best h: 3 (iteration 6440)
-New best h: 4 (iteration 28931)
-New best h: 5 (iteration 224201)
-New best h: 6 (iteration 1065279)
-New best h: 7 (iteration 1065295)
-New best h: 8 (iteration 1065307)
-search exit code: -6
+New best heuristic value for abstract(lmcut): 1
+[g=1, 0 evaluated, 1 expanded, t=0.0253773s, 211952 KB]
+New undef count: 81
+New undef count: 79
+New undef count: 78
+New undef count: 77
+New undef count: 76
+New undef count: 75
+New undef count: 74
+New undef count: 73
+New undef count: 72
+New undef count: 71
+New undef count: 70
+New undef count: 69
+New undef count: 68
+New undef count: 67
+New undef count: 66
+New undef count: 65
+New undef count: 64
+New undef count: 63
+New undef count: 62
+New undef count: 61
+New undef count: 60
+New undef count: 59
+New undef count: 58
+New undef count: 57
+New undef count: 56
+New undef count: 55
+New undef count: 54
+New undef count: 53
+New undef count: 52
+New undef count: 51
+New undef count: 50
+New undef count: 49
+New undef count: 48
+New undef count: 47
+New undef count: 46
+New undef count: 45
+New undef count: 44
+New undef count: 43
+New undef count: 42
+New undef count: 41
+New undef count: 40
+New undef count: 39
+New undef count: 38
+New undef count: 37
+New undef count: 36
+New undef count: 35
+New undef count: 34
+New undef count: 33
+New undef count: 32
+New undef count: 31
+New undef count: 30
+New undef count: 29
+New undef count: 28
+New undef count: 27
+New undef count: 26
+New undef count: 25
+New undef count: 24
+New undef count: 23
+New undef count: 22
+New undef count: 21
+New undef count: 20
+New undef count: 19
+New undef count: 18
+New undef count: 17
+New undef count: 16
+New undef count: 15
+New undef count: 14
+New undef count: 13
+New undef count: 12
+New undef count: 11
+New undef count: 10
+New undef count: 9
+Completely explored state space.
+Actual search time: 4.31566s [t=4.3409s]
+Original state h-value: 18
+New state h-value: 1
+Expanded 398782 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 398782
+Generated 1822559 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 398783
+Int hash set load factor: 398783/524288 = 0.760618
+Int hash set resizes: 19
+Search time: 4.33184s
+Total time: 4.3409s
+Solution found.
+Peak memory: 290744 KB
+search exit code: 0
 
-Driver aborting after search

@@ -1,0 +1,164 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/ipdb/gripper/07_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0.000130817s]
+done reading input! [t=0.00257037s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00947383s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000302201s
+Variables: 19
+FactPairs: 84
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 31
+[g=0, 1 evaluated, 0 expanded, t=0.010639s, 211952 KB]
+f = 31 [1 evaluated, 0 expanded, t=0.0108346s, 211952 KB]
+Initial heuristic value for lmcut: 31
+pruning method: none
+New best heuristic value for lmcut: 30
+[g=1, 2 evaluated, 1 expanded, t=0.0114419s, 211952 KB]
+New best heuristic value for lmcut: 29
+[g=2, 5 evaluated, 2 expanded, t=0.012618s, 211952 KB]
+f = 32 [11 evaluated, 4 expanded, t=0.0146933s, 211952 KB]
+f = 33 [50 evaluated, 7 expanded, t=0.0270423s, 211952 KB]
+New best heuristic value for lmcut: 28
+[g=5, 51 evaluated, 8 expanded, t=0.0275975s, 211952 KB]
+New best heuristic value for lmcut: 27
+[g=6, 53 evaluated, 9 expanded, t=0.0284158s, 211952 KB]
+New best heuristic value for lmcut: 26
+[g=7, 400 evaluated, 91 expanded, t=0.128079s, 211952 KB]
+New best heuristic value for lmcut: 25
+[g=8, 401 evaluated, 92 expanded, t=0.128572s, 211952 KB]
+f = 34 [2494 evaluated, 1000 expanded, t=0.463632s, 211952 KB]
+f = 35 [6465 evaluated, 1590 expanded, t=0.740589s, 212120 KB]
+New best heuristic value for lmcut: 24
+[g=11, 6466 evaluated, 1591 expanded, t=0.740718s, 212120 KB]
+New best heuristic value for lmcut: 23
+[g=12, 6467 evaluated, 1592 expanded, t=0.740835s, 212120 KB]
+New best heuristic value for lmcut: 22
+[g=13, 6765 evaluated, 1662 expanded, t=0.759983s, 212120 KB]
+New best heuristic value for lmcut: 21
+[g=14, 6766 evaluated, 1663 expanded, t=0.760104s, 212120 KB]
+f = 36 [104858 evaluated, 62915 expanded, t=7.32031s, 215832 KB]
+f = 37 [188995 evaluated, 77726 expanded, t=12.8569s, 219540 KB]
+New best heuristic value for lmcut: 20
+[g=17, 188996 evaluated, 77727 expanded, t=12.8571s, 219540 KB]
+New best heuristic value for lmcut: 19
+[g=18, 188997 evaluated, 77728 expanded, t=12.8572s, 219540 KB]
+New best heuristic value for lmcut: 18
+[g=19, 189265 evaluated, 77786 expanded, t=12.8721s, 219540 KB]
+New best heuristic value for lmcut: 17
+[g=20, 189266 evaluated, 77787 expanded, t=12.8722s, 219540 KB]
+f = 38 [1088096 evaluated, 812016 expanded, t=69.0663s, 261732 KB]
+f = 39 [1568359 evaluated, 908098 expanded, t=98.184s, 275032 KB]
+New best heuristic value for lmcut: 16
+[g=23, 1568360 evaluated, 908099 expanded, t=98.1842s, 275032 KB]
+New best heuristic value for lmcut: 15
+[g=24, 1568361 evaluated, 908100 expanded, t=98.1843s, 275032 KB]
+New best heuristic value for lmcut: 14
+[g=25, 1568591 evaluated, 908146 expanded, t=98.195s, 275032 KB]
+New best heuristic value for lmcut: 13
+[g=26, 1568592 evaluated, 908147 expanded, t=98.1951s, 275032 KB]
+f = 40 [4254510 evaluated, 3648892 expanded, t=251.74s, 409024 KB]
+f = 41 [5177783 evaluated, 3864536 expanded, t=302.317s, 429160 KB]
+New best heuristic value for lmcut: 12
+[g=29, 5177784 evaluated, 3864537 expanded, t=302.317s, 429160 KB]
+New best heuristic value for lmcut: 11
+[g=30, 5177785 evaluated, 3864538 expanded, t=302.317s, 429160 KB]
+New best heuristic value for lmcut: 10
+[g=31, 5177969 evaluated, 3864572 expanded, t=302.324s, 429160 KB]
+New best heuristic value for lmcut: 9
+[g=32, 5177970 evaluated, 3864573 expanded, t=302.324s, 429160 KB]
+f = 42 [8223176 evaluated, 7718308 expanded, t=458.759s, 603296 KB]
+f = 43 [8946639 evaluated, 7927166 expanded, t=494.892s, 603296 KB]
+New best heuristic value for lmcut: 8
+[g=35, 8946640 evaluated, 7927167 expanded, t=494.892s, 603296 KB]
+New best heuristic value for lmcut: 7
+[g=36, 8946641 evaluated, 7927168 expanded, t=494.892s, 603296 KB]
+New best heuristic value for lmcut: 6
+[g=37, 8946771 evaluated, 7927190 expanded, t=494.899s, 603296 KB]
+New best heuristic value for lmcut: 5
+[g=38, 8946772 evaluated, 7927191 expanded, t=494.899s, 603296 KB]
+f = 44 [10404004 evaluated, 10215088 expanded, t=563.346s, 639584 KB]
+f = 45 [10811047 evaluated, 10372882 expanded, t=584.958s, 650708 KB]
+New best heuristic value for lmcut: 4
+[g=41, 10811048 evaluated, 10372883 expanded, t=584.958s, 650708 KB]
+New best heuristic value for lmcut: 3
+[g=42, 10811049 evaluated, 10372884 expanded, t=584.958s, 650708 KB]
+New best heuristic value for lmcut: 2
+[g=43, 10811117 evaluated, 10372894 expanded, t=584.959s, 650708 KB]
+New best heuristic value for lmcut: 1
+[g=44, 10811118 evaluated, 10372895 expanded, t=584.959s, 650708 KB]
+New best heuristic value for lmcut: 0
+[g=45, 10811135 evaluated, 10372896 expanded, t=584.959s, 650708 KB]
+Solution found!
+Actual search time: 584.949s [t=584.96s]
+move rooma roomb (1)
+drop ball9 roomb left (1)
+drop ball1 roomb right (1)
+move roomb rooma (1)
+pick ball10 rooma left (1)
+pick ball11 rooma right (1)
+move rooma roomb (1)
+drop ball10 roomb left (1)
+drop ball11 roomb right (1)
+move roomb rooma (1)
+pick ball12 rooma left (1)
+pick ball13 rooma right (1)
+move rooma roomb (1)
+drop ball12 roomb left (1)
+drop ball13 roomb right (1)
+move roomb rooma (1)
+pick ball14 rooma left (1)
+pick ball15 rooma right (1)
+move rooma roomb (1)
+drop ball14 roomb left (1)
+drop ball15 roomb right (1)
+move roomb rooma (1)
+pick ball16 rooma left (1)
+pick ball2 rooma right (1)
+move rooma roomb (1)
+drop ball16 roomb left (1)
+drop ball2 roomb right (1)
+move roomb rooma (1)
+pick ball3 rooma left (1)
+pick ball4 rooma right (1)
+move rooma roomb (1)
+drop ball3 roomb left (1)
+drop ball4 roomb right (1)
+move roomb rooma (1)
+pick ball5 rooma left (1)
+pick ball6 rooma right (1)
+move rooma roomb (1)
+drop ball5 roomb left (1)
+drop ball6 roomb right (1)
+move roomb rooma (1)
+pick ball7 rooma left (1)
+pick ball8 rooma right (1)
+move rooma roomb (1)
+drop ball7 roomb left (1)
+drop ball8 roomb right (1)
+Plan length: 45 step(s).
+Plan cost: 45
+Expanded 10372897 state(s).
+Reopened 0 state(s).
+Evaluated 10811135 state(s).
+Evaluations: 10811135
+Generated 46799131 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 10372882 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 10811047 state(s).
+Generated until last jump: 46799021 state(s).
+Number of registered states: 10811135
+Int hash set load factor: 10811135/16777216 = 0.644394
+Int hash set resizes: 24
+Search time: 584.949s
+Total time: 584.96s
+Solution found.
+Peak memory: 650708 KB
+search exit code: 0
+

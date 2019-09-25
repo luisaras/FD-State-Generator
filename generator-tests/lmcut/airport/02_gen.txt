@@ -1,14 +1,14 @@
 INFO     Running search (release).
 INFO     search stdin: None
-INFO     search time limit: 300s
-INFO     search memory limit: 2048 MB
-INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/airport/02_task.sas --search 'generator_random(lmcut(), max_it=20000000)'
-reading input... [t=0s]
-done reading input! [t=0s]
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/airport/02_task.sas --search 'generator_abstract(abstract(lmcut()), max_it=20000000, max_time=600)'
+reading input... [t=0.000118185s]
+done reading input! [t=0.00118843s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0s]
+Building successor generator...done! [t=0.00732371s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0s
+time for successor generation creation: 0.000180997s
 Variables: 29
 FactPairs: 73
 Bytes per state: 8
@@ -166,34 +166,58 @@ Building match tree...
 27=0 28=6 13=1 16=1  | 13=0 15=0 16=0 21=0 27=3 28=1 
 27=0 28=6 13=1 15=1  | 13=0 15=0 16=0 21=0 27=3 28=1 
 27=0 28=6 13=1 15=1 16=1  | 13=0 15=0 16=0 21=0 27=3 28=1 
+28=0 
+Inserting initial (goal) state...
+New undef count: 27
 New best h: 1 (iteration 0)
-New best heuristic value for lmcut: 1
-[g=1, 55 evaluated, 55 expanded, t=0.015625s, 0 KB]
-New best h: 2 (iteration 8)
-New best h: 3 (iteration 68)
-New best h: 4 (iteration 498)
-New best h: 5 (iteration 1346)
-New best h: 6 (iteration 3662)
-New best h: 7 (iteration 355532)
-New best h: 8 (iteration 355558)
-New best h: 9 (iteration 1330681)
-New best h: 10 (iteration 10225991)
-Reached iteration limit.
-Actual search time: 556.359s [t=556.375s]
+New best heuristic value for abstract(lmcut): 1
+[g=1, 0 evaluated, 1 expanded, t=0.0121108s, 211820 KB]
+New undef count: 26
+New undef count: 25
+New undef count: 24
+New undef count: 23
+New undef count: 22
+New undef count: 21
+New undef count: 20
+New undef count: 19
+New undef count: 18
+New undef count: 17
+New undef count: 16
+New undef count: 15
+New undef count: 14
+New undef count: 13
+New undef count: 12
+New undef count: 11
+New undef count: 10
+New undef count: 9
+New undef count: 8
+New undef count: 7
+New undef count: 6
+New undef count: 5
+New undef count: 4
+New undef count: 3
+New undef count: 2
+New undef count: 1
+Last undef var: 18
+Found first concrete state.
+New best h: 9 (iteration 283)
+New undef count: 0
+Completely explored state space.
+Actual search time: 0.022044s [t=0.0340812s]
 Original state h-value: 9
-New state h-value: 10
-Expanded 126950118 state(s).
+New state h-value: 9
+Expanded 957 state(s).
 Reopened 0 state(s).
-Evaluated 106950124 state(s).
-Evaluations: 126950124
-Generated 20016172 state(s).
+Evaluated 0 state(s).
+Evaluations: 956
+Generated 1944 state(s).
 Dead ends: 0 state(s).
-Number of registered states: 126950125
-Int hash set load factor: 126950125/268435456 = 0.472926
-Int hash set resizes: 28
-Search time: 556.359s
-Total time: 556.375s
+Number of registered states: 957
+Int hash set load factor: 957/1024 = 0.93457
+Int hash set resizes: 10
+Search time: 0.0262453s
+Total time: 0.0341157s
 Solution found.
-Peak memory: 0 KB
+Peak memory: 211820 KB
 search exit code: 0
 

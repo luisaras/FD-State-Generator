@@ -2,66 +2,35 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward generator-tests/lmcut/airport/07_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
-reading input... [t=0s]
-done reading input! [t=0.015625s]
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/lmcut/airport/07_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0.000120002s]
+done reading input! [t=0.00449957s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.015625s]
-peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0s
+Building successor generator...done! [t=0.0117677s]
+peak memory difference for successor generator creation: 132 KB
+time for successor generation creation: 0.000778002s
 Variables: 114
 FactPairs: 305
 Bytes per state: 16
 Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-New best heuristic value for lmcut: 8
-[g=0, 1 evaluated, 0 expanded, t=0.015625s, 0 KB]
-f = 8 [1 evaluated, 0 expanded, t=0.015625s, 0 KB]
-Initial heuristic value for lmcut: 8
+Initial state is a dead end.
+Initial heuristic value for lmcut: infinity
 pruning method: none
-New best heuristic value for lmcut: 7
-[g=1, 3 evaluated, 1 expanded, t=0.015625s, 0 KB]
-New best heuristic value for lmcut: 6
-[g=2, 4 evaluated, 2 expanded, t=0.015625s, 0 KB]
-New best heuristic value for lmcut: 5
-[g=3, 5 evaluated, 3 expanded, t=0.015625s, 0 KB]
-New best heuristic value for lmcut: 4
-[g=4, 6 evaluated, 4 expanded, t=0.015625s, 0 KB]
-New best heuristic value for lmcut: 3
-[g=5, 7 evaluated, 5 expanded, t=0.015625s, 0 KB]
-New best heuristic value for lmcut: 2
-[g=6, 8 evaluated, 6 expanded, t=0.015625s, 0 KB]
-New best heuristic value for lmcut: 1
-[g=7, 9 evaluated, 7 expanded, t=0.015625s, 0 KB]
-New best heuristic value for lmcut: 0
-[g=8, 10 evaluated, 8 expanded, t=0.015625s, 0 KB]
-Solution found!
-Actual search time: 0s [t=0.015625s]
-startup_seg_n2_n3_3_0_86_north_medium airplane_daewh (1)
-move_seg_n2_n3_3_0_86_seg_n2_n3_2_0_86_north_north_medium airplane_daewh (1)
-move_seg_n2_n3_2_0_86_seg_n2_n3_1_0_86_north_north_medium airplane_daewh (1)
-move_seg_n2_n3_1_0_86_seg_n1_n2_0_100_north_north_medium airplane_daewh (1)
-move_seg_n1_n2_0_100_seg_n1_a_0_100_north_south_medium airplane_daewh (1)
-move_seg_n1_a_0_100_seg_a_09_0_100_south_south_medium airplane_daewh (1)
-move_seg_a_09_0_100_seg_09_0_150_south_south_medium airplane_daewh (1)
-takeoff_seg_09_0_150_south airplane_daewh (1)
-Plan length: 8 step(s).
-Plan cost: 8
-Expanded 9 state(s).
+Completely explored state space -- no solution!
+Actual search time: 1.8164e-05s [t=0.0126359s]
+Expanded 0 state(s).
 Reopened 0 state(s).
-Evaluated 10 state(s).
-Evaluations: 10
-Generated 9 state(s).
-Dead ends: 1 state(s).
-Expanded until last jump: 0 state(s).
-Reopened until last jump: 0 state(s).
-Evaluated until last jump: 1 state(s).
-Generated until last jump: 0 state(s).
-Number of registered states: 10
-Int hash set load factor: 10/16 = 0.625
-Int hash set resizes: 4
-Search time: 0s
-Total time: 0.015625s
-Solution found.
-Peak memory: 0 KB
-search exit code: 0
+Evaluated 1 state(s).
+Evaluations: 1
+Generated 0 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 1
+Int hash set load factor: 1/1 = 1
+Int hash set resizes: 0
+Search time: 0.000315755s
+Total time: 0.0126629s
+Search stopped without finding a solution.
+Peak memory: 212084 KB
+search exit code: 12
 
+Driver aborting after search

@@ -1200,7 +1200,7 @@ begin_mutex_group
 20 18
 end_mutex_group
 begin_state
-1 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 12 0 0 2 11 1 1 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 11 0 0 2 11 1 1 
 end_state
 begin_goal
 2

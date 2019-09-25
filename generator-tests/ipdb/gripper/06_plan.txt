@@ -1,0 +1,146 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/ipdb/gripper/06_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0.000118008s]
+done reading input! [t=0.00246224s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00982325s]
+peak memory difference for successor generator creation: 132 KB
+time for successor generation creation: 0.000296299s
+Variables: 17
+FactPairs: 74
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 27
+[g=0, 1 evaluated, 0 expanded, t=0.0110918s, 211952 KB]
+f = 27 [1 evaluated, 0 expanded, t=0.0113051s, 211952 KB]
+Initial heuristic value for lmcut: 27
+pruning method: none
+New best heuristic value for lmcut: 26
+[g=1, 2 evaluated, 1 expanded, t=0.0118842s, 211952 KB]
+New best heuristic value for lmcut: 25
+[g=2, 5 evaluated, 2 expanded, t=0.0129641s, 211952 KB]
+f = 28 [11 evaluated, 4 expanded, t=0.014787s, 211952 KB]
+f = 29 [46 evaluated, 7 expanded, t=0.0244792s, 211952 KB]
+New best heuristic value for lmcut: 23
+[g=5, 47 evaluated, 8 expanded, t=0.0250063s, 211952 KB]
+New best heuristic value for lmcut: 22
+[g=7, 228 evaluated, 32 expanded, t=0.0694276s, 211952 KB]
+New best heuristic value for lmcut: 21
+[g=8, 229 evaluated, 33 expanded, t=0.0698577s, 211952 KB]
+f = 30 [1891 evaluated, 764 expanded, t=0.392622s, 211952 KB]
+f = 31 [4565 evaluated, 1211 expanded, t=0.537661s, 212096 KB]
+New best heuristic value for lmcut: 20
+[g=11, 4566 evaluated, 1212 expanded, t=0.537775s, 212096 KB]
+New best heuristic value for lmcut: 19
+[g=12, 4567 evaluated, 1213 expanded, t=0.537878s, 212096 KB]
+New best heuristic value for lmcut: 18
+[g=13, 4795 evaluated, 1271 expanded, t=0.54911s, 212096 KB]
+New best heuristic value for lmcut: 17
+[g=14, 4796 evaluated, 1272 expanded, t=0.549213s, 212096 KB]
+f = 32 [58735 evaluated, 35769 expanded, t=3.32583s, 213968 KB]
+f = 33 [98362 evaluated, 43895 expanded, t=5.32983s, 215696 KB]
+New best heuristic value for lmcut: 16
+[g=17, 98363 evaluated, 43896 expanded, t=5.32995s, 215696 KB]
+New best heuristic value for lmcut: 15
+[g=18, 98364 evaluated, 43897 expanded, t=5.3301s, 215696 KB]
+New best heuristic value for lmcut: 14
+[g=19, 98562 evaluated, 43943 expanded, t=5.34417s, 215696 KB]
+New best heuristic value for lmcut: 13
+[g=20, 98563 evaluated, 43944 expanded, t=5.34426s, 215696 KB]
+f = 34 [445147 evaluated, 341064 expanded, t=21.9148s, 236884 KB]
+f = 35 [599338 evaluated, 377849 expanded, t=29.0397s, 237756 KB]
+New best heuristic value for lmcut: 12
+[g=23, 599339 evaluated, 377850 expanded, t=29.0399s, 237756 KB]
+New best heuristic value for lmcut: 11
+[g=24, 599340 evaluated, 377851 expanded, t=29.0399s, 237756 KB]
+New best heuristic value for lmcut: 10
+[g=25, 599500 evaluated, 377885 expanded, t=29.0453s, 237756 KB]
+New best heuristic value for lmcut: 9
+[g=26, 599501 evaluated, 377886 expanded, t=29.0454s, 237756 KB]
+f = 36 [1280843 evaluated, 1134598 expanded, t=58.5869s, 265340 KB]
+f = 37 [1475059 evaluated, 1190599 expanded, t=66.6964s, 270972 KB]
+New best heuristic value for lmcut: 8
+[g=29, 1475060 evaluated, 1190600 expanded, t=66.6965s, 270972 KB]
+New best heuristic value for lmcut: 7
+[g=30, 1475061 evaluated, 1190601 expanded, t=66.6966s, 270972 KB]
+New best heuristic value for lmcut: 6
+[g=31, 1475175 evaluated, 1190623 expanded, t=66.6995s, 270972 KB]
+New best heuristic value for lmcut: 5
+[g=32, 1475176 evaluated, 1190624 expanded, t=66.6995s, 270972 KB]
+f = 38 [1952767 evaluated, 1878220 expanded, t=85.6061s, 310776 KB]
+f = 39 [2070577 evaluated, 1922561 expanded, t=90.4451s, 310776 KB]
+New best heuristic value for lmcut: 4
+[g=35, 2070578 evaluated, 1922562 expanded, t=90.4453s, 310776 KB]
+New best heuristic value for lmcut: 3
+[g=36, 2070579 evaluated, 1922563 expanded, t=90.4453s, 310776 KB]
+New best heuristic value for lmcut: 2
+[g=37, 2070639 evaluated, 1922573 expanded, t=90.4464s, 310776 KB]
+New best heuristic value for lmcut: 1
+[g=38, 2070640 evaluated, 1922574 expanded, t=90.4464s, 310776 KB]
+New best heuristic value for lmcut: 0
+[g=39, 2070655 evaluated, 1922575 expanded, t=90.4467s, 310776 KB]
+Solution found!
+Actual search time: 90.4352s [t=90.4467s]
+move rooma roomb (1)
+drop ball1 roomb left (1)
+drop ball9 roomb right (1)
+move roomb rooma (1)
+pick ball10 rooma left (1)
+pick ball11 rooma right (1)
+move rooma roomb (1)
+drop ball10 roomb left (1)
+drop ball11 roomb right (1)
+move roomb rooma (1)
+pick ball12 rooma left (1)
+pick ball13 rooma right (1)
+move rooma roomb (1)
+drop ball12 roomb left (1)
+drop ball13 roomb right (1)
+move roomb rooma (1)
+pick ball14 rooma left (1)
+pick ball2 rooma right (1)
+move rooma roomb (1)
+drop ball14 roomb left (1)
+drop ball2 roomb right (1)
+move roomb rooma (1)
+pick ball3 rooma left (1)
+pick ball4 rooma right (1)
+move rooma roomb (1)
+drop ball3 roomb left (1)
+drop ball4 roomb right (1)
+move roomb rooma (1)
+pick ball5 rooma left (1)
+pick ball6 rooma right (1)
+move rooma roomb (1)
+drop ball5 roomb left (1)
+drop ball6 roomb right (1)
+move roomb rooma (1)
+pick ball7 rooma left (1)
+pick ball8 rooma right (1)
+move rooma roomb (1)
+drop ball7 roomb left (1)
+drop ball8 roomb right (1)
+Plan length: 39 step(s).
+Plan cost: 39
+Expanded 1922576 state(s).
+Reopened 0 state(s).
+Evaluated 2070655 state(s).
+Evaluations: 2070655
+Generated 8607294 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 1922561 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 2070577 state(s).
+Generated until last jump: 8607194 state(s).
+Number of registered states: 2070655
+Int hash set load factor: 2070655/4194304 = 0.493683
+Int hash set resizes: 22
+Search time: 90.4362s
+Total time: 90.4467s
+Solution found.
+Peak memory: 310776 KB
+search exit code: 0
+

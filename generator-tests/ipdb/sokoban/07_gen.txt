@@ -1,15 +1,15 @@
 INFO     Running search (release).
 INFO     search stdin: None
-INFO     search time limit: 300s
-INFO     search memory limit: 2048 MB
-INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/ipdb/sokoban/07_task.sas --search 'generator_random(ipdb(), max_it=20000000)'
-reading input... [t=0s]
-done reading input! [t=0s]
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/ipdb/sokoban/07_task.sas --search 'generator_abstract(abstract(ipdb()), max_it=20000000, max_time=600)'
+reading input... [t=0.000130604s]
+done reading input! [t=0.00455066s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0s
+Done calculating initial pattern collection: 0.00118321s
 Average operator cost: 1
-building causal graph...done! [t=0s]
+building causal graph...done! [t=0.00325641s]
 Done calculating initial candidate PDBs
 current collection size is 6
 current initial h value: 3
@@ -21,7 +21,7 @@ pattern: [46, 52] - improvement: 276
 pattern: [49, 52] - improvement: 3
 found a better pattern with improvement 1000
 pattern: [48, 50]
-Hill climbing time so far: 0.03125s
+Hill climbing time so far: 0.173116s
 current collection size is 70
 current initial h value: 5
 pattern: [49, 50] - improvement: 7
@@ -32,7 +32,7 @@ pattern: [49, 52] - improvement: 7
 pattern: [48, 49, 50] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [47, 51]
-Hill climbing time so far: 0.0625s
+Hill climbing time so far: 0.365438s
 current collection size is 134
 current initial h value: 7
 pattern: [46, 52] - improvement: 526
@@ -40,7 +40,7 @@ pattern: [48, 49, 50] - improvement: 998
 pattern: [47, 49, 51] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [47, 49, 51]
-Hill climbing time so far: 0.171875s
+Hill climbing time so far: 0.518383s
 current collection size is 3078
 current initial h value: 17
 pattern: [46, 52] - improvement: 174
@@ -52,7 +52,7 @@ pattern: [47, 49, 50, 51] - improvement: 891
 pattern: [47, 49, 51, 52] - improvement: 879
 found a better pattern with improvement 891
 pattern: [47, 49, 50, 51]
-Hill climbing time so far: 0.453125s
+Hill climbing time so far: 0.832781s
 current collection size is 8966
 current initial h value: 17
 pattern: [46, 52] - improvement: 154
@@ -67,7 +67,7 @@ pattern: [47, 48, 49, 50, 51] - improvement: 1000
 pattern: [47, 49, 50, 51, 52] - improvement: 986
 found a better pattern with improvement 1000
 pattern: [47, 48, 49, 50, 51]
-Hill climbing time so far: 3.73438s
+Hill climbing time so far: 4.15017s
 current collection size is 197382
 current initial h value: 25
 pattern: [46, 52] - improvement: 180
@@ -81,7 +81,7 @@ pattern: [45, 47, 48, 49, 50, 51] - improvement: 10
 pattern: [47, 48, 49, 50, 51, 52] - improvement: 940
 found a better pattern with improvement 940
 pattern: [47, 48, 49, 50, 51, 52]
-Hill climbing time so far: 9.95312s
+Hill climbing time so far: 11.3058s
 current collection size is 574214
 current initial h value: 25
 pattern: [46, 52] - improvement: 198
@@ -103,7 +103,7 @@ pattern: [44, 47, 48, 49, 50, 51, 52] - improvement: 42
 pattern: [45, 47, 48, 49, 50, 51, 52] - improvement: 68
 found a better pattern with improvement 198
 pattern: [46, 52]
-Hill climbing time so far: 10.0938s
+Hill climbing time so far: 11.5298s
 current collection size is 574278
 current initial h value: 25
 pattern: [35, 47, 48, 49, 50, 51] - improvement: 1
@@ -123,7 +123,7 @@ pattern: [44, 47, 48, 49, 50, 51, 52] - improvement: 56
 pattern: [45, 47, 48, 49, 50, 51, 52] - improvement: 97
 found a better pattern with improvement 97
 pattern: [45, 47, 48, 49, 50, 51, 52]
-Hill climbing time so far: 25.3438s
+Hill climbing time so far: 28.8094s
 current collection size is 1327942
 current initial h value: 27
 pattern: [26, 47, 48, 49, 50, 51] - improvement: 1
@@ -143,7 +143,7 @@ pattern: [37, 45, 47, 48, 49, 50, 51, 52] - improvement: 2
 pattern: [44, 45, 47, 48, 49, 50, 51, 52] - improvement: 7
 found a better pattern with improvement 253
 pattern: [41, 45, 47, 48, 49, 50, 51, 52]
-Hill climbing time so far: 25.5s
+Hill climbing time so far: 29.0653s
 current collection size is 2835270
 current initial h value: 27
 pattern: [26, 47, 48, 49, 50, 51, 52] - improvement: 1
@@ -157,7 +157,7 @@ pattern: [34, 45, 47, 48, 49, 50, 51, 52] - improvement: 1
 pattern: [44, 45, 47, 48, 49, 50, 51, 52] - improvement: 1
 found a better pattern with improvement 225
 pattern: [40, 45, 47, 48, 49, 50, 51, 52]
-Hill climbing time so far: 25.6875s
+Hill climbing time so far: 29.3393s
 current collection size is 4342598
 current initial h value: 27
 pattern: [26, 47, 48, 49, 50, 51] - improvement: 2
@@ -170,7 +170,7 @@ pattern: [42, 45, 47, 48, 49, 50, 51, 52] - improvement: 1
 pattern: [44, 45, 47, 48, 49, 50, 51, 52] - improvement: 1
 found a better pattern with improvement 33
 pattern: [35, 45, 47, 48, 49, 50, 51, 52]
-Hill climbing time so far: 25.8594s
+Hill climbing time so far: 29.6182s
 current collection size is 5849926
 current initial h value: 27
 pattern: [42, 47, 48, 49, 50, 51] - improvement: 1
@@ -183,24 +183,24 @@ Hill climbing iterations: 12
 Hill climbing generated patterns: 438
 Hill climbing rejected patterns: 634
 Hill climbing maximum PDB size: 1507328
-Hill climbing time: 26.125s
+Hill climbing time: 29.9057s
 Hill climbing generator collection: [[50], [51], [52], [48, 50], [47, 51], [47, 49, 51], [47, 49, 50, 51], [47, 48, 49, 50, 51], [47, 48, 49, 50, 51, 52], [46, 52], [45, 47, 48, 49, 50, 51, 52], [41, 45, 47, 48, 49, 50, 51, 52], [40, 45, 47, 48, 49, 50, 51, 52], [35, 45, 47, 48, 49, 50, 51, 52]]
 Hill climbing generator number of patterns: 14
 Hill climbing generator total PDB size: 5849926
-Hill climbing generator computation time: 26.1719s
+Hill climbing generator computation time: 29.9279s
 Running dominance pruning...
 Pruned 12 of 16 pattern cliques
 Pruned 8 of 14 PDBs
-Dominance pruning took 0s
+Dominance pruning took 1.2322e-05s
 Canonical PDB heuristic number of patterns: 6
 Canonical PDB heuristic total PDB size: 4522176
-Canonical PDB heuristic computation time: 26.1719s
-Building successor generator...done! [t=26.1875s]
+Canonical PDB heuristic computation time: 29.9283s
+Building successor generator...done! [t=29.939s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0s
+time for successor generation creation: 0.00022207s
 Variables: 53
 FactPairs: 240
-Bytes per state: 12
+Bytes per state: 16
 Conducting best first search (real) bound = 2147483647
 Building match tree...
 11=0 49=0  | 11=1 12=0 49=1 
@@ -1103,663 +1103,100 @@ Building match tree...
 45=0 48=26 49=40  | 15=0 45=1 48=18 49=33 50=1 
 45=0 48=26 49=40 15=1 50=0  | 15=0 45=1 48=18 49=33 50=1 
 45=0 48=26 49=40 15=1  | 15=0 45=1 48=18 49=33 50=1 
-New best heuristic value for <missing>: 0
-[g=1, 3 evaluated, 3 expanded, t=26.2031s, 0 KB]
-New best h: 1 (iteration 1274)
-New best h: 2 (iteration 1277)
-New best h: 3 (iteration 1281)
-New best h: 4 (iteration 1284)
-New best h: 5 (iteration 1289)
-New best h: 6 (iteration 1292)
-New best h: 7 (iteration 1995)
-New best h: 8 (iteration 12079)
-New best h: 9 (iteration 26403)
-New best h: 10 (iteration 26682)
-New best h: 11 (iteration 26814)
-New best h: 12 (iteration 26817)
-New best h: 13 (iteration 26949)
-New best h: 14 (iteration 26952)
-Converged to 4. 
-Converged to 4. 
-Converged to 4. 
-New best h: 15 (iteration 76170)
-New best h: 16 (iteration 76173)
-New best h: 17 (iteration 76181)
-New best h: 18 (iteration 76184)
-New best h: 19 (iteration 76190)
-Converged to 19. 
-Converged to 4. 
-Converged to 4. 
-Converged to 6. 
-Converged to 6. 
-Converged to 14. 
-Converged to 4. 
-Converged to 6. 
-Converged to 6. 
-Converged to 11. 
-Converged to 4. 
-Converged to 4. 
-Converged to 4. 
-Converged to 15. 
-Converged to 4. 
-New best h: 20 (iteration 370083)
-Converged to 20. 
-Converged to 16. 
-Converged to 10. 
-Converged to 6. 
-Converged to 9. 
-Converged to 11. 
-Converged to 15. 
-Converged to 4. 
-Converged to 16. 
-Converged to 6. 
-Converged to 4. 
-Converged to 12. 
-Converged to 9. 
-Converged to 10. 
-Converged to 8. 
-Converged to 6. 
-Converged to 6. 
-Converged to 11. 
-Converged to 18. 
-Converged to 15. 
-Converged to 11. 
-Converged to 13. 
-Converged to 4. 
-Converged to 12. 
-Converged to 16. 
-Converged to 11. 
-Converged to 4. 
-Converged to 12. 
-Converged to 4. 
-Converged to 6. 
-Converged to 13. 
-Converged to 18. 
-Converged to 15. 
-Converged to 9. 
-Converged to 15. 
-Converged to 16. 
-Converged to 5. 
-Converged to 12. 
-Converged to 12. 
-Converged to 11. 
-Converged to 10. 
-Converged to 14. 
-Converged to 4. 
-Converged to 15. 
-Converged to 15. 
-Converged to 16. 
-Converged to 16. 
-Converged to 4. 
-Converged to 11. 
-Converged to 14. 
-Converged to 6. 
-Converged to 15. 
-Converged to 4. 
-Converged to 19. 
-Converged to 12. 
-Converged to 14. 
-Converged to 4. 
-Converged to 6. 
-Converged to 4. 
-Converged to 10. 
-Converged to 13. 
-Converged to 5. 
-Converged to 6. 
-Converged to 4. 
-Converged to 4. 
-Converged to 12. 
-Converged to 18. 
-Converged to 5. 
-Converged to 5. 
-Converged to 4. 
-Converged to 20. 
-Converged to 5. 
-Converged to 4. 
-Converged to 11. 
-Converged to 18. 
-Converged to 19. 
-Converged to 18. 
-Converged to 14. 
-Converged to 13. 
-Converged to 4. 
-Converged to 4. 
-Converged to 17. 
-Converged to 15. 
-Converged to 4. 
-Converged to 12. 
-Converged to 14. 
-Converged to 12. 
-Converged to 14. 
-Converged to 4. 
-Converged to 12. 
-Converged to 6. 
-Converged to 4. 
-Converged to 4. 
-Converged to 14. 
-Converged to 9. 
-Converged to 20. 
-Converged to 11. 
-Converged to 16. 
-Converged to 9. 
-Converged to 14. 
-Converged to 17. 
-Converged to 11. 
-Converged to 10. 
-Converged to 4. 
-Converged to 6. 
-Converged to 4. 
-Converged to 15. 
-Converged to 10. 
-Converged to 7. 
-Converged to 4. 
-Converged to 15. 
-Converged to 19. 
-Converged to 12. 
-Converged to 14. 
-Converged to 4. 
-Converged to 4. 
-Converged to 14. 
-Converged to 4. 
-Converged to 11. 
-Converged to 15. 
-Converged to 13. 
-Converged to 6. 
-Converged to 19. 
-Converged to 12. 
-Converged to 5. 
-Converged to 19. 
-Converged to 11. 
-Converged to 12. 
-Converged to 12. 
-Converged to 12. 
-Converged to 4. 
-Converged to 12. 
-Converged to 10. 
-Converged to 4. 
-Converged to 4. 
-Converged to 13. 
-Converged to 12. 
-Converged to 6. 
-Converged to 6. 
-Converged to 12. 
-Converged to 4. 
-Converged to 14. 
-Converged to 6. 
-Converged to 4. 
-Converged to 18. 
-Converged to 4. 
-Converged to 11. 
-Converged to 9. 
-Converged to 9. 
-Converged to 16. 
-Converged to 4. 
-Converged to 13. 
-Converged to 4. 
-Converged to 8. 
-Converged to 4. 
-Converged to 13. 
-Converged to 12. 
-Converged to 17. 
-Converged to 18. 
-Converged to 10. 
-Converged to 18. 
-Converged to 4. 
-Converged to 5. 
-Converged to 10. 
-Converged to 4. 
-Converged to 11. 
-Converged to 16. 
-Converged to 5. 
-Converged to 4. 
-Converged to 6. 
-Converged to 13. 
-Converged to 4. 
-Converged to 18. 
-Converged to 4. 
-Converged to 4. 
-Converged to 18. 
-Converged to 17. 
-Converged to 4. 
-Converged to 17. 
-Converged to 5. 
-Converged to 9. 
-Converged to 12. 
-Converged to 16. 
-Converged to 13. 
-Converged to 11. 
-Converged to 11. 
-Converged to 14. 
-Converged to 6. 
-Converged to 12. 
-Converged to 12. 
-Converged to 14. 
-Converged to 4. 
-Converged to 13. 
-Converged to 17. 
-Converged to 13. 
-Converged to 4. 
-Converged to 11. 
-Converged to 6. 
-Converged to 4. 
-Converged to 15. 
-Converged to 4. 
-Converged to 6. 
-Converged to 12. 
-Converged to 16. 
-Converged to 8. 
-Converged to 6. 
-Converged to 15. 
-Converged to 4. 
-Converged to 13. 
-Converged to 11. 
-Converged to 13. 
-Converged to 5. 
-Converged to 12. 
-Converged to 4. 
-Converged to 6. 
-Converged to 15. 
-Converged to 4. 
-Converged to 4. 
-Converged to 4. 
-Converged to 4. 
-Converged to 13. 
-Converged to 19. 
-Converged to 17. 
-Converged to 14. 
-Converged to 18. 
-Converged to 20. 
-Converged to 4. 
-Converged to 4. 
-Converged to 16. 
-Converged to 12. 
-Converged to 4. 
-Converged to 6. 
-Converged to 13. 
-Converged to 6. 
-Converged to 4. 
-Converged to 14. 
-Converged to 18. 
-Converged to 4. 
-Converged to 15. 
-Converged to 13. 
-Converged to 10. 
-Converged to 15. 
-Converged to 4. 
-Converged to 9. 
-Converged to 12. 
-Converged to 8. 
-Converged to 12. 
-Converged to 10. 
-Converged to 4. 
-Converged to 20. 
-Converged to 20. 
-Converged to 14. 
-Converged to 4. 
-Converged to 13. 
-Converged to 5. 
-Converged to 4. 
-Converged to 15. 
-Converged to 12. 
-Converged to 12. 
-Converged to 6. 
-Converged to 14. 
-Converged to 12. 
-Converged to 20. 
-Converged to 12. 
-Converged to 13. 
-Converged to 11. 
-Converged to 8. 
-Converged to 4. 
-Converged to 4. 
-Converged to 4. 
-Converged to 4. 
-Converged to 11. 
-Converged to 11. 
-Converged to 10. 
-Converged to 5. 
-Converged to 4. 
-Converged to 4. 
-Converged to 4. 
-Converged to 13. 
-Converged to 12. 
-Converged to 10. 
-Converged to 6. 
-Converged to 4. 
-Converged to 13. 
-Converged to 9. 
-Converged to 11. 
-Converged to 4. 
-Converged to 4. 
-Converged to 16. 
-Converged to 12. 
-Converged to 12. 
-Converged to 4. 
-Converged to 13. 
-Converged to 14. 
-Converged to 9. 
-Converged to 12. 
-Converged to 14. 
-Converged to 4. 
-Converged to 14. 
-Converged to 4. 
-Converged to 7. 
-Converged to 4. 
-Converged to 18. 
-Converged to 10. 
-Converged to 6. 
-Converged to 9. 
-Converged to 18. 
-Converged to 6. 
-Converged to 13. 
-Converged to 12. 
-Converged to 14. 
-Converged to 15. 
-Converged to 4. 
-Converged to 5. 
-Converged to 10. 
-Converged to 6. 
-Converged to 6. 
-Converged to 8. 
-Converged to 14. 
-Converged to 4. 
-Converged to 13. 
-Converged to 17. 
-Converged to 12. 
-Converged to 12. 
-Converged to 4. 
-Converged to 16. 
-Converged to 13. 
-Converged to 9. 
-Converged to 16. 
-Converged to 4. 
-Converged to 5. 
-Converged to 4. 
-Converged to 4. 
-Converged to 4. 
-Converged to 18. 
-Converged to 12. 
-Converged to 6. 
-Converged to 11. 
-Converged to 4. 
-Converged to 4. 
-Converged to 18. 
-Converged to 4. 
-Converged to 4. 
-Converged to 10. 
-Converged to 18. 
-Converged to 15. 
-Converged to 10. 
-Converged to 11. 
-Converged to 4. 
-Converged to 20. 
-Converged to 4. 
-Converged to 6. 
-Converged to 13. 
-Converged to 4. 
-Converged to 18. 
-Converged to 12. 
-Converged to 16. 
-Converged to 12. 
-Converged to 12. 
-Converged to 10. 
-Converged to 9. 
-Converged to 6. 
-Converged to 15. 
-Converged to 13. 
-Converged to 4. 
-Converged to 4. 
-Converged to 10. 
-Converged to 13. 
-Converged to 8. 
-Converged to 11. 
-Converged to 14. 
-Converged to 9. 
-Converged to 6. 
-Converged to 6. 
-Converged to 16. 
-Converged to 4. 
-Converged to 9. 
-Converged to 4. 
-Converged to 9. 
-Converged to 4. 
-Converged to 20. 
-Converged to 15. 
-Converged to 9. 
-Converged to 11. 
-Converged to 14. 
-Converged to 12. 
-Converged to 16. 
-Converged to 13. 
-Converged to 13. 
-Converged to 12. 
-Converged to 5. 
-Converged to 11. 
-Converged to 4. 
-Converged to 5. 
-Converged to 14. 
-Converged to 4. 
-Converged to 4. 
-Converged to 5. 
-Converged to 9. 
-Converged to 9. 
-Converged to 18. 
-Converged to 19. 
-Converged to 18. 
-Converged to 4. 
-Converged to 14. 
-Converged to 6. 
-Converged to 13. 
-Converged to 4. 
-Converged to 4. 
-Converged to 9. 
-Converged to 13. 
-Converged to 13. 
-Converged to 11. 
-Converged to 13. 
-Converged to 9. 
-Converged to 4. 
-Converged to 13. 
-Converged to 4. 
-Converged to 14. 
-Converged to 10. 
-Converged to 9. 
-Converged to 10. 
-Converged to 19. 
-Converged to 4. 
-Converged to 10. 
-Converged to 14. 
-Converged to 18. 
-Converged to 15. 
-Converged to 11. 
-Converged to 9. 
-Converged to 9. 
-Converged to 11. 
-Converged to 6. 
-Converged to 13. 
-Converged to 6. 
-Converged to 4. 
-Converged to 6. 
-Converged to 19. 
-Converged to 9. 
-Converged to 14. 
-Converged to 4. 
-Converged to 6. 
-Converged to 15. 
-Converged to 4. 
-Converged to 13. 
-Converged to 4. 
-Converged to 13. 
-Converged to 11. 
-Converged to 12. 
-Converged to 4. 
-Converged to 11. 
-Converged to 13. 
-Converged to 4. 
-Converged to 18. 
-Converged to 9. 
-Converged to 19. 
-Converged to 12. 
-Converged to 13. 
-Converged to 4. 
-Converged to 4. 
-Converged to 16. 
-Converged to 19. 
-Converged to 12. 
-Converged to 13. 
-Converged to 6. 
-Converged to 4. 
-Converged to 12. 
-Converged to 4. 
-Converged to 11. 
-Converged to 10. 
-Converged to 4. 
-Converged to 11. 
-Converged to 16. 
-Converged to 9. 
-Converged to 20. 
-Converged to 12. 
-Converged to 18. 
-Converged to 9. 
-Converged to 5. 
-Converged to 19. 
-Converged to 11. 
-Converged to 20. 
-Converged to 13. 
-Converged to 6. 
-Converged to 16. 
-Converged to 15. 
-Converged to 11. 
-Converged to 12. 
-Converged to 8. 
-Converged to 16. 
-Converged to 12. 
-Converged to 4. 
-Converged to 20. 
-Converged to 16. 
-Converged to 8. 
-Converged to 15. 
-Converged to 4. 
-Converged to 4. 
-Converged to 15. 
-Converged to 10. 
-Converged to 4. 
-Converged to 4. 
-Converged to 6. 
-Converged to 4. 
-Converged to 4. 
-Converged to 4. 
-Converged to 11. 
-Converged to 12. 
-Converged to 13. 
-Converged to 16. 
-Converged to 4. 
-Converged to 13. 
-Converged to 6. 
-Converged to 14. 
-Converged to 16. 
-Converged to 16. 
-Converged to 14. 
-Converged to 4. 
-Converged to 15. 
-Converged to 14. 
-Converged to 14. 
-Converged to 4. 
-Converged to 6. 
-Converged to 4. 
-Converged to 4. 
-Converged to 14. 
-Converged to 4. 
-Converged to 4. 
-Converged to 12. 
-Converged to 4. 
-Converged to 4. 
-Converged to 12. 
-Converged to 10. 
-Converged to 13. 
-Converged to 5. 
-Converged to 5. 
-Converged to 12. 
-Converged to 10. 
-Converged to 6. 
-Converged to 9. 
-Converged to 9. 
-Converged to 18. 
-Converged to 10. 
-Converged to 4. 
-Converged to 6. 
-Converged to 14. 
-Converged to 4. 
-Converged to 14. 
-Converged to 4. 
-Converged to 15. 
-Converged to 17. 
-Converged to 19. 
-Converged to 9. 
-Converged to 6. 
-Converged to 4. 
-Converged to 4. 
-Converged to 13. 
-Converged to 5. 
-Converged to 12. 
-Converged to 12. 
-Converged to 13. 
-Converged to 10. 
-Converged to 9. 
-Converged to 11. 
-Converged to 4. 
-Converged to 4. 
-Converged to 10. 
-Converged to 5. 
-Converged to 6. 
-Converged to 15. 
-Converged to 9. 
-Converged to 14. 
-Converged to 13. 
-Converged to 17. 
-Converged to 4. 
-Converged to 4. 
-Converged to 6. 
-Converged to 4. 
-Converged to 16. 
-Converged to 13. 
-Converged to 13. 
-Converged to 4. 
-Converged to 16. 
-Converged to 4. 
-Converged to 13. 
-Converged to 14. 
-Converged to 11. 
-Converged to 4. 
-Converged to 15. 
-Converged to 4. 
-Converged to 4. 
-Converged to 11. 
-Converged to 4. 
-Converged to 18. 
-Converged to 4. 
-Converged to 9. 
-Converged to 6. 
-Converged to 12. 
-Converged to 5. 
-Converged to 17. 
-Converged to 12. 
+50=0 51=0 52=0 
+Inserting initial (goal) state...
+New best h: 0 (iteration 0)
+New best heuristic value for abstract(ipdb): 0
+[g=1, 0 evaluated, 1 expanded, t=29.9446s, 699328 KB]
+New undef count: 47
+New best h: 1 (iteration 229)
+New undef count: 46
+New undef count: 45
+New undef count: 44
+New undef count: 43
+New undef count: 42
+New undef count: 41
+New undef count: 40
+New undef count: 39
+New undef count: 38
+New undef count: 37
+New undef count: 36
+New undef count: 35
+New undef count: 34
+New undef count: 33
+New undef count: 32
+New undef count: 31
+New undef count: 30
+New undef count: 29
+New undef count: 28
+New undef count: 27
+New undef count: 26
+New undef count: 25
+New undef count: 24
+New undef count: 23
+New undef count: 22
+New undef count: 21
+New undef count: 20
+New undef count: 19
+New undef count: 18
+New undef count: 17
+New undef count: 16
+New undef count: 15
+New undef count: 14
+New undef count: 13
+New undef count: 12
+New undef count: 11
+New undef count: 10
+New undef count: 9
+New undef count: 8
+New undef count: 7
+New undef count: 6
+New undef count: 5
+New undef count: 4
+New undef count: 3
+New undef count: 2
+New undef count: 1
+Last undef var: 48
+New undef count: 0
+Found first concrete state.
+New best h: 3 (iteration 45771)
+New best h: 4 (iteration 45774)
+New best h: 5 (iteration 45778)
+New best h: 6 (iteration 45782)
+New best h: 7 (iteration 45790)
+New best h: 8 (iteration 45794)
+New best h: 9 (iteration 45796)
+New best h: 10 (iteration 45798)
+New best h: 11 (iteration 45800)
+New best h: 12 (iteration 45802)
+New best h: 13 (iteration 45804)
+New best h: 14 (iteration 45806)
+New best h: 15 (iteration 45986)
+New best h: 16 (iteration 45988)
+New best h: 17 (iteration 45990)
+New best h: 18 (iteration 46628)
+New best h: 19 (iteration 46630)
+New best h: 20 (iteration 47078)
+New best h: 21 (iteration 47080)
+New best h: 22 (iteration 47082)
+New best h: 23 (iteration 47092)
+New best h: 24 (iteration 47096)
 Reached iteration limit.
-Actual search time: 101.375s [t=127.578s]
+Actual search time: 149.997s [t=179.941s]
 Original state h-value: 27
-New state h-value: 20
-Expanded 22618432 state(s).
+New state h-value: 24
+Expanded 19999390 state(s).
 Reopened 0 state(s).
-Evaluated 2644735 state(s).
-Evaluations: 22644735
-Generated 40981866 state(s).
+Evaluated 0 state(s).
+Evaluations: 20000001
+Generated 52190888 state(s).
 Dead ends: 0 state(s).
-Number of registered states: 22644736
-Int hash set load factor: 22644736/33554432 = 0.674866
+Number of registered states: 20000002
+Int hash set load factor: 20000002/33554432 = 0.596047
 Int hash set resizes: 25
-Search time: 101.391s
-Total time: 127.578s
+Search time: 150.002s
+Total time: 179.941s
 Solution found.
-Peak memory: 0 KB
+Peak memory: 2840552 KB
 search exit code: 0
 

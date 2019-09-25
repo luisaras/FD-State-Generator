@@ -1,0 +1,130 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/ipdb/logistics/05_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0.000130397s]
+done reading input! [t=0.000995153s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00686197s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000172043s
+Variables: 8
+FactPairs: 41
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 27
+[g=0, 1 evaluated, 0 expanded, t=0.00778851s, 211820 KB]
+f = 27 [1 evaluated, 0 expanded, t=0.00797051s, 211820 KB]
+Initial heuristic value for lmcut: 27
+pruning method: none
+New best heuristic value for lmcut: 26
+[g=1, 4 evaluated, 1 expanded, t=0.00864656s, 211820 KB]
+New best heuristic value for lmcut: 25
+[g=2, 9 evaluated, 2 expanded, t=0.00955105s, 211820 KB]
+f = 28 [16 evaluated, 4 expanded, t=0.0108381s, 211820 KB]
+New best heuristic value for lmcut: 24
+[g=4, 17 evaluated, 5 expanded, t=0.0112569s, 211820 KB]
+New best heuristic value for lmcut: 23
+[g=5, 23 evaluated, 6 expanded, t=0.012405s, 211820 KB]
+New best heuristic value for lmcut: 22
+[g=6, 30 evaluated, 7 expanded, t=0.0136785s, 211820 KB]
+New best heuristic value for lmcut: 21
+[g=7, 35 evaluated, 8 expanded, t=0.014662s, 211820 KB]
+New best heuristic value for lmcut: 20
+[g=8, 41 evaluated, 9 expanded, t=0.0157463s, 211820 KB]
+New best heuristic value for lmcut: 19
+[g=9, 49 evaluated, 10 expanded, t=0.0170194s, 211820 KB]
+New best heuristic value for lmcut: 18
+[g=10, 56 evaluated, 11 expanded, t=0.0181378s, 211820 KB]
+f = 29 [308 evaluated, 88 expanded, t=0.0530766s, 211820 KB]
+New best heuristic value for lmcut: 17
+[g=12, 311 evaluated, 90 expanded, t=0.0536358s, 211820 KB]
+New best heuristic value for lmcut: 16
+[g=13, 319 evaluated, 91 expanded, t=0.0546462s, 211820 KB]
+New best heuristic value for lmcut: 15
+[g=14, 328 evaluated, 92 expanded, t=0.0556963s, 211820 KB]
+New best heuristic value for lmcut: 14
+[g=15, 336 evaluated, 93 expanded, t=0.0566323s, 211820 KB]
+f = 30 [1750 evaluated, 597 expanded, t=0.216305s, 211820 KB]
+New best heuristic value for lmcut: 13
+[g=17, 1754 evaluated, 600 expanded, t=0.216892s, 211820 KB]
+New best heuristic value for lmcut: 12
+[g=18, 1764 evaluated, 601 expanded, t=0.217817s, 211820 KB]
+New best heuristic value for lmcut: 11
+[g=19, 1774 evaluated, 602 expanded, t=0.21876s, 211820 KB]
+New best heuristic value for lmcut: 10
+[g=20, 1785 evaluated, 603 expanded, t=0.219679s, 211820 KB]
+New best heuristic value for lmcut: 9
+[g=21, 1795 evaluated, 604 expanded, t=0.220489s, 211820 KB]
+New best heuristic value for lmcut: 8
+[g=22, 1800 evaluated, 605 expanded, t=0.220976s, 211820 KB]
+New best heuristic value for lmcut: 7
+[g=23, 1808 evaluated, 606 expanded, t=0.22161s, 211820 KB]
+New best heuristic value for lmcut: 6
+[g=24, 1815 evaluated, 607 expanded, t=0.222139s, 211820 KB]
+New best heuristic value for lmcut: 5
+[g=25, 1824 evaluated, 608 expanded, t=0.222742s, 211820 KB]
+New best heuristic value for lmcut: 4
+[g=26, 1832 evaluated, 609 expanded, t=0.223276s, 211820 KB]
+New best heuristic value for lmcut: 3
+[g=27, 1839 evaluated, 610 expanded, t=0.223729s, 211820 KB]
+New best heuristic value for lmcut: 2
+[g=28, 1844 evaluated, 611 expanded, t=0.224096s, 211820 KB]
+New best heuristic value for lmcut: 1
+[g=29, 1852 evaluated, 612 expanded, t=0.224541s, 211820 KB]
+New best heuristic value for lmcut: 0
+[g=30, 1860 evaluated, 613 expanded, t=0.224938s, 211820 KB]
+Solution found!
+Actual search time: 0.217033s [t=0.225216s]
+load-truck obj22 tru1 pos1 (1)
+load-truck obj21 tru1 pos1 (1)
+drive-truck tru2 apt2 pos2 cit2 (1)
+load-truck obj23 tru2 pos2 (1)
+load-truck obj12 tru2 pos2 (1)
+load-truck obj11 tru2 pos2 (1)
+drive-truck tru2 pos2 apt2 cit2 (1)
+unload-truck obj23 tru2 apt2 (1)
+unload-truck obj12 tru2 apt2 (1)
+unload-truck obj11 tru2 apt2 (1)
+drive-truck tru1 pos1 apt1 cit1 (1)
+unload-truck obj22 tru1 apt1 (1)
+unload-truck obj21 tru1 apt1 (1)
+load-airplane obj22 apn1 apt1 (1)
+load-airplane obj21 apn1 apt1 (1)
+fly-airplane apn1 apt1 apt2 (1)
+load-airplane obj23 apn1 apt2 (1)
+unload-airplane obj22 apn1 apt2 (1)
+unload-airplane obj21 apn1 apt2 (1)
+load-airplane obj12 apn1 apt2 (1)
+load-airplane obj11 apn1 apt2 (1)
+fly-airplane apn1 apt2 apt1 (1)
+unload-airplane obj23 apn1 apt1 (1)
+load-truck obj23 tru1 apt1 (1)
+unload-airplane obj12 apn1 apt1 (1)
+unload-airplane obj11 apn1 apt1 (1)
+load-truck obj11 tru1 apt1 (1)
+drive-truck tru1 apt1 pos1 cit1 (1)
+unload-truck obj23 tru1 pos1 (1)
+unload-truck obj11 tru1 pos1 (1)
+Plan length: 30 step(s).
+Plan cost: 30
+Expanded 614 state(s).
+Reopened 0 state(s).
+Evaluated 1862 state(s).
+Evaluations: 1862
+Generated 4740 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 597 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1750 state(s).
+Generated until last jump: 4593 state(s).
+Number of registered states: 1862
+Int hash set load factor: 1862/2048 = 0.90918
+Int hash set resizes: 11
+Search time: 0.217808s
+Total time: 0.225244s
+Solution found.
+Peak memory: 211820 KB
+search exit code: 0
+

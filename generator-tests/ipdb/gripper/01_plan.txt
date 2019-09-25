@@ -1,0 +1,68 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/ipdb/gripper/01_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0.000119952s]
+done reading input! [t=0.000935903s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00669171s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000121223s
+Variables: 7
+FactPairs: 24
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 7
+[g=0, 1 evaluated, 0 expanded, t=0.00750152s, 211820 KB]
+f = 7 [1 evaluated, 0 expanded, t=0.00768539s, 211820 KB]
+Initial heuristic value for lmcut: 7
+pruning method: none
+New best heuristic value for lmcut: 6
+[g=1, 2 evaluated, 1 expanded, t=0.00798451s, 211820 KB]
+New best heuristic value for lmcut: 5
+[g=2, 5 evaluated, 2 expanded, t=0.0083253s, 211820 KB]
+f = 8 [11 evaluated, 4 expanded, t=0.00876219s, 211820 KB]
+f = 9 [26 evaluated, 7 expanded, t=0.00955787s, 211820 KB]
+New best heuristic value for lmcut: 4
+[g=5, 27 evaluated, 8 expanded, t=0.00980652s, 211820 KB]
+New best heuristic value for lmcut: 3
+[g=6, 29 evaluated, 9 expanded, t=0.010102s, 211820 KB]
+New best heuristic value for lmcut: 2
+[g=7, 52 evaluated, 19 expanded, t=0.0111088s, 211820 KB]
+New best heuristic value for lmcut: 1
+[g=8, 53 evaluated, 20 expanded, t=0.0113436s, 211820 KB]
+New best heuristic value for lmcut: 0
+[g=9, 58 evaluated, 21 expanded, t=0.0116638s, 211820 KB]
+Solution found!
+Actual search time: 0.00397703s [t=0.0118757s]
+move rooma roomb (1)
+drop ball4 roomb left (1)
+drop ball1 roomb right (1)
+move roomb rooma (1)
+pick ball2 rooma left (1)
+pick ball3 rooma right (1)
+move rooma roomb (1)
+drop ball2 roomb left (1)
+drop ball3 roomb right (1)
+Plan length: 9 step(s).
+Plan cost: 9
+Expanded 22 state(s).
+Reopened 0 state(s).
+Evaluated 58 state(s).
+Evaluations: 58
+Generated 78 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 7 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 26 state(s).
+Generated until last jump: 28 state(s).
+Number of registered states: 58
+Int hash set load factor: 58/64 = 0.90625
+Int hash set resizes: 6
+Search time: 0.00464833s
+Total time: 0.0119029s
+Solution found.
+Peak memory: 211820 KB
+search exit code: 0
+

@@ -1,0 +1,78 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/lmcut/gripper/10_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0.000127649s]
+done reading input! [t=0.00366058s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.0113545s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000426269s
+Variables: 25
+FactPairs: 114
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 44
+[g=0, 1 evaluated, 0 expanded, t=0.012943s, 211952 KB]
+f = 44 [1 evaluated, 0 expanded, t=0.0131568s, 211952 KB]
+Initial heuristic value for lmcut: 44
+pruning method: none
+New best heuristic value for lmcut: 43
+[g=1, 3 evaluated, 1 expanded, t=0.0148063s, 211952 KB]
+f = 45 [8 evaluated, 3 expanded, t=0.0181537s, 211952 KB]
+New best heuristic value for lmcut: 42
+[g=3, 9 evaluated, 4 expanded, t=0.0190423s, 211952 KB]
+f = 46 [185 evaluated, 51 expanded, t=0.117919s, 211952 KB]
+New best heuristic value for lmcut: 41
+[g=5, 186 evaluated, 52 expanded, t=0.118705s, 211952 KB]
+New best heuristic value for lmcut: 40
+[g=6, 858 evaluated, 219 expanded, t=0.407521s, 211952 KB]
+New best heuristic value for lmcut: 39
+[g=7, 859 evaluated, 220 expanded, t=0.407708s, 211952 KB]
+f = 47 [4135 evaluated, 2031 expanded, t=0.852707s, 212088 KB]
+f = 48 [16712 evaluated, 4027 expanded, t=2.57879s, 212752 KB]
+New best heuristic value for lmcut: 38
+[g=10, 16713 evaluated, 4028 expanded, t=2.57898s, 212752 KB]
+New best heuristic value for lmcut: 37
+[g=11, 16714 evaluated, 4029 expanded, t=2.57916s, 212752 KB]
+New best heuristic value for lmcut: 36
+[g=12, 17282 evaluated, 4141 expanded, t=2.65283s, 212752 KB]
+New best heuristic value for lmcut: 35
+[g=13, 17283 evaluated, 4142 expanded, t=2.65301s, 212752 KB]
+f = 49 [348753 evaluated, 234232 expanded, t=46.4495s, 226256 KB]
+f = 50 [825978 evaluated, 297100 expanded, t=108.698s, 245076 KB]
+New best heuristic value for lmcut: 34
+[g=16, 825979 evaluated, 297101 expanded, t=108.698s, 245076 KB]
+New best heuristic value for lmcut: 33
+[g=17, 825980 evaluated, 297102 expanded, t=108.698s, 245076 KB]
+New best heuristic value for lmcut: 32
+[g=18, 826522 evaluated, 297202 expanded, t=108.762s, 245076 KB]
+New best heuristic value for lmcut: 31
+[g=19, 826523 evaluated, 297203 expanded, t=108.762s, 245076 KB]
+f = 51 [7472520 evaluated, 5767516 expanded, t=939.612s, 612208 KB]
+f = 52 [13342874 evaluated, 6573174 expanded, t=1655.94s, 982692 KB]
+New best heuristic value for lmcut: 30
+[g=22, 13342875 evaluated, 6573175 expanded, t=1655.94s, 982692 KB]
+New best heuristic value for lmcut: 29
+[g=23, 13342876 evaluated, 6573176 expanded, t=1655.94s, 982692 KB]
+New best heuristic value for lmcut: 28
+[g=24, 13343384 evaluated, 6573264 expanded, t=1655.99s, 982692 KB]
+New best heuristic value for lmcut: 27
+[g=25, 13343385 evaluated, 6573265 expanded, t=1655.99s, 982692 KB]
+f = 53 [62337452 evaluated, 52320652 expanded, t=7353.41s, 3275012 KB]
+f = 54 [91662470 evaluated, 56726771 expanded, t=10659.7s, 3995660 KB]
+New best heuristic value for lmcut: 26
+[g=28, 91662471 evaluated, 56726772 expanded, t=10659.7s, 3995660 KB]
+New best heuristic value for lmcut: 25
+[g=29, 91662472 evaluated, 56726773 expanded, t=10659.7s, 3995660 KB]
+New best heuristic value for lmcut: 24
+[g=30, 91662938 evaluated, 56726849 expanded, t=10659.8s, 3995660 KB]
+New best heuristic value for lmcut: 23
+[g=31, 91662939 evaluated, 56726850 expanded, t=10659.8s, 3995660 KB]
+Failed to allocate memory.
+Peak memory: 8392940 KB
+caught signal 6 -- exiting
+search exit code: -6
+
+Driver aborting after search

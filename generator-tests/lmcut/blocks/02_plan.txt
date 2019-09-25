@@ -1,0 +1,64 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/lmcut/blocks/02_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0.000121122s]
+done reading input! [t=0.00121746s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00691213s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000111473s
+Variables: 9
+FactPairs: 30
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 7
+[g=0, 1 evaluated, 0 expanded, t=0.00773421s, 211820 KB]
+f = 7 [1 evaluated, 0 expanded, t=0.00791636s, 211820 KB]
+Initial heuristic value for lmcut: 7
+pruning method: none
+New best heuristic value for lmcut: 6
+[g=1, 2 evaluated, 1 expanded, t=0.0082123s, 211820 KB]
+New best heuristic value for lmcut: 5
+[g=1, 7 evaluated, 1 expanded, t=0.00866131s, 211820 KB]
+New best heuristic value for lmcut: 4
+[g=2, 9 evaluated, 2 expanded, t=0.00896324s, 211820 KB]
+New best heuristic value for lmcut: 3
+[g=4, 25 evaluated, 5 expanded, t=0.00998737s, 211820 KB]
+New best heuristic value for lmcut: 2
+[g=5, 31 evaluated, 6 expanded, t=0.0104562s, 211820 KB]
+New best heuristic value for lmcut: 1
+[g=6, 36 evaluated, 7 expanded, t=0.0108566s, 211820 KB]
+New best heuristic value for lmcut: 0
+[g=7, 37 evaluated, 8 expanded, t=0.0110749s, 211820 KB]
+Solution found!
+Actual search time: 0.00319613s [t=0.0113249s]
+pick-up c (1)
+put-down b (1)
+unstack a c (1)
+stack a b (1)
+stack c a (1)
+unstack d a (1)
+stack d c (1)
+Plan length: 7 step(s).
+Plan cost: 7
+Expanded 9 state(s).
+Reopened 0 state(s).
+Evaluated 38 state(s).
+Evaluations: 38
+Generated 43 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 38
+Int hash set load factor: 38/64 = 0.59375
+Int hash set resizes: 6
+Search time: 0.00387503s
+Total time: 0.0113537s
+Solution found.
+Peak memory: 211820 KB
+search exit code: 0
+

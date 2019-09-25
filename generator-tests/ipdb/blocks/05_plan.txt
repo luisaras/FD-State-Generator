@@ -1,0 +1,67 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/ipdb/blocks/05_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0.00013682s]
+done reading input! [t=0.00201857s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.0088762s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000172694s
+Variables: 11
+FactPairs: 42
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 8
+[g=0, 1 evaluated, 0 expanded, t=0.00983047s, 211820 KB]
+f = 8 [1 evaluated, 0 expanded, t=0.0100356s, 211820 KB]
+Initial heuristic value for lmcut: 8
+pruning method: none
+New best heuristic value for lmcut: 7
+[g=1, 7 evaluated, 1 expanded, t=0.0108668s, 211820 KB]
+New best heuristic value for lmcut: 6
+[g=2, 15 evaluated, 2 expanded, t=0.0117897s, 211820 KB]
+New best heuristic value for lmcut: 5
+[g=3, 24 evaluated, 3 expanded, t=0.0127509s, 211820 KB]
+New best heuristic value for lmcut: 4
+[g=4, 28 evaluated, 4 expanded, t=0.0132617s, 211820 KB]
+New best heuristic value for lmcut: 3
+[g=5, 38 evaluated, 5 expanded, t=0.0142367s, 211820 KB]
+New best heuristic value for lmcut: 2
+[g=6, 58 evaluated, 8 expanded, t=0.0157549s, 211820 KB]
+New best heuristic value for lmcut: 1
+[g=7, 66 evaluated, 9 expanded, t=0.0164321s, 211820 KB]
+New best heuristic value for lmcut: 0
+[g=8, 71 evaluated, 10 expanded, t=0.0168494s, 211820 KB]
+Solution found!
+Actual search time: 0.00687397s [t=0.0171505s]
+pick-up a (1)
+stack a e (1)
+unstack b c (1)
+stack b a (1)
+unstack c a (1)
+stack c b (1)
+unstack d a (1)
+stack d c (1)
+Plan length: 8 step(s).
+Plan cost: 8
+Expanded 11 state(s).
+Reopened 0 state(s).
+Evaluated 72 state(s).
+Evaluations: 72
+Generated 78 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 72
+Int hash set load factor: 72/128 = 0.5625
+Int hash set resizes: 7
+Search time: 0.00767019s
+Total time: 0.017182s
+Solution found.
+Peak memory: 211820 KB
+search exit code: 0
+

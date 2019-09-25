@@ -2,78 +2,35 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward generator-tests/lmcut/airport/05_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
-reading input... [t=0s]
-done reading input! [t=0s]
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/lmcut/airport/05_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0.000133052s]
+done reading input! [t=0.00274452s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0s]
+Building successor generator...done! [t=0.0105404s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0s
+time for successor generation creation: 0.000598192s
 Variables: 75
 FactPairs: 189
 Bytes per state: 12
 Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-New best heuristic value for lmcut: 12
-[g=0, 1 evaluated, 0 expanded, t=0s, 0 KB]
-f = 12 [1 evaluated, 0 expanded, t=0s, 0 KB]
-Initial heuristic value for lmcut: 12
+Initial state is a dead end.
+Initial heuristic value for lmcut: infinity
 pruning method: none
-New best heuristic value for lmcut: 11
-[g=1, 3 evaluated, 1 expanded, t=0s, 0 KB]
-New best heuristic value for lmcut: 10
-[g=2, 4 evaluated, 2 expanded, t=0s, 0 KB]
-New best heuristic value for lmcut: 9
-[g=3, 5 evaluated, 3 expanded, t=0s, 0 KB]
-New best heuristic value for lmcut: 8
-[g=4, 6 evaluated, 4 expanded, t=0s, 0 KB]
-New best heuristic value for lmcut: 7
-[g=5, 7 evaluated, 5 expanded, t=0s, 0 KB]
-New best heuristic value for lmcut: 6
-[g=6, 8 evaluated, 6 expanded, t=0s, 0 KB]
-New best heuristic value for lmcut: 5
-[g=7, 9 evaluated, 7 expanded, t=0s, 0 KB]
-New best heuristic value for lmcut: 4
-[g=8, 10 evaluated, 8 expanded, t=0s, 0 KB]
-New best heuristic value for lmcut: 3
-[g=9, 11 evaluated, 9 expanded, t=0s, 0 KB]
-New best heuristic value for lmcut: 2
-[g=10, 12 evaluated, 10 expanded, t=0s, 0 KB]
-New best heuristic value for lmcut: 1
-[g=11, 13 evaluated, 11 expanded, t=0s, 0 KB]
-New best heuristic value for lmcut: 0
-[g=12, 15 evaluated, 12 expanded, t=0s, 0 KB]
-Solution found!
-Actual search time: 0s [t=0s]
-startup_seg_n2_n3_0_85_north_medium airplane_daewh (1)
-move_seg_n2_n3_0_85_seg_n2_n3_6_0_86_north_north_medium airplane_daewh (1)
-move_seg_n2_n3_6_0_86_seg_n2_n3_5_0_86_north_north_medium airplane_daewh (1)
-move_seg_n2_n3_5_0_86_seg_n2_n3_4_0_85_north_north_medium airplane_daewh (1)
-move_seg_n2_n3_4_0_85_seg_n2_n3_3_0_86_north_north_medium airplane_daewh (1)
-move_seg_n2_n3_3_0_86_seg_n2_n3_2_0_86_north_north_medium airplane_daewh (1)
-move_seg_n2_n3_2_0_86_seg_n2_n3_1_0_86_north_north_medium airplane_daewh (1)
-move_seg_n2_n3_1_0_86_seg_n1_n2_0_100_north_north_medium airplane_daewh (1)
-move_seg_n1_n2_0_100_seg_n1_a_0_100_north_south_medium airplane_daewh (1)
-move_seg_n1_a_0_100_seg_a_09_0_100_south_south_medium airplane_daewh (1)
-move_seg_a_09_0_100_seg_09_0_150_south_south_medium airplane_daewh (1)
-takeoff_seg_09_0_150_south airplane_daewh (1)
-Plan length: 12 step(s).
-Plan cost: 12
-Expanded 13 state(s).
+Completely explored state space -- no solution!
+Actual search time: 2.094e-05s [t=0.011552s]
+Expanded 0 state(s).
 Reopened 0 state(s).
-Evaluated 15 state(s).
-Evaluations: 15
-Generated 14 state(s).
-Dead ends: 2 state(s).
-Expanded until last jump: 0 state(s).
-Reopened until last jump: 0 state(s).
-Evaluated until last jump: 1 state(s).
-Generated until last jump: 0 state(s).
-Number of registered states: 15
-Int hash set load factor: 15/16 = 0.9375
-Int hash set resizes: 4
-Search time: 0s
-Total time: 0s
-Solution found.
-Peak memory: 0 KB
-search exit code: 0
+Evaluated 1 state(s).
+Evaluations: 1
+Generated 0 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 1
+Int hash set load factor: 1/1 = 1
+Int hash set resizes: 0
+Search time: 0.000360384s
+Total time: 0.0115849s
+Search stopped without finding a solution.
+Peak memory: 211952 KB
+search exit code: 12
 
+Driver aborting after search

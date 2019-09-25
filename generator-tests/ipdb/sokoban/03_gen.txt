@@ -1,22 +1,22 @@
 INFO     Running search (release).
 INFO     search stdin: None
-INFO     search time limit: 300s
-INFO     search memory limit: 2048 MB
-INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/ipdb/sokoban/03_task.sas --search 'generator_random(ipdb(), max_it=20000000)'
-reading input... [t=0s]
-done reading input! [t=0s]
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/ipdb/sokoban/03_task.sas --search 'generator_abstract(abstract(ipdb()), max_it=20000000, max_time=600)'
+reading input... [t=0.000117473s]
+done reading input! [t=0.00158785s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0s
+Done calculating initial pattern collection: 0.000331022s
 Average operator cost: 1
-building causal graph...done! [t=0s]
+building causal graph...done! [t=0.00101758s]
 Done calculating initial candidate PDBs
 current collection size is 4
 current initial h value: 1
 pattern: [16, 20] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [16, 20]
-Hill climbing time so far: 0.015625s
+Hill climbing time so far: 0.0282497s
 current collection size is 36
 current initial h value: 3
 pattern: [15, 19] - improvement: 1
@@ -25,20 +25,20 @@ pattern: [10, 16, 20] - improvement: 7
 pattern: [14, 16, 20] - improvement: 288
 found a better pattern with improvement 288
 pattern: [14, 16, 20]
-Hill climbing time so far: 0.03125s
+Hill climbing time so far: 0.0743986s
 current collection size is 484
 current initial h value: 3
 pattern: [10, 14, 16, 20] - improvement: 312
 found a better pattern with improvement 312
 pattern: [10, 14, 16, 20]
-Hill climbing time so far: 0.046875s
+Hill climbing time so far: 0.145853s
 current collection size is 1380
 current initial h value: 3
 pattern: [10, 14, 16, 18, 20] - improvement: 706
 pattern: [10, 14, 16, 19, 20] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [10, 14, 16, 19, 20]
-Hill climbing time so far: 0.078125s
+Hill climbing time so far: 0.25679s
 current collection size is 3172
 current initial h value: 4
 pattern: [10, 14, 16, 18, 20] - improvement: 658
@@ -46,7 +46,7 @@ pattern: [10, 14, 15, 16, 19, 20] - improvement: 202
 pattern: [10, 14, 16, 18, 19, 20] - improvement: 658
 found a better pattern with improvement 658
 pattern: [10, 14, 16, 18, 20]
-Hill climbing time so far: 0.109375s
+Hill climbing time so far: 0.37418s
 current collection size is 4964
 current initial h value: 9
 pattern: [10, 14, 15, 16, 19, 20] - improvement: 319
@@ -54,7 +54,7 @@ pattern: [10, 14, 16, 18, 19, 20] - improvement: 594
 pattern: [10, 14, 15, 16, 18, 20] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [10, 14, 15, 16, 18, 20]
-Hill climbing time so far: 0.328125s
+Hill climbing time so far: 0.56532s
 current collection size is 30052
 current initial h value: 24
 pattern: [15, 19] - improvement: 22
@@ -63,7 +63,7 @@ pattern: [10, 14, 15, 16, 18, 19, 20] - improvement: 1000
 pattern: [7, 10, 14, 15, 16, 18, 20] - improvement: 991
 found a better pattern with improvement 1000
 pattern: [10, 14, 15, 16, 18, 19, 20]
-Hill climbing time so far: 0.5625s
+Hill climbing time so far: 0.835362s
 current collection size is 80228
 current initial h value: 31
 pattern: [7, 10, 14, 15, 16, 18, 20] - improvement: 1
@@ -71,7 +71,7 @@ pattern: [10, 11, 14, 15, 16, 18, 19, 20] - improvement: 1000
 pattern: [7, 10, 14, 15, 16, 18, 19, 20] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [10, 11, 14, 15, 16, 18, 19, 20]
-Hill climbing time so far: 1.07812s
+Hill climbing time so far: 1.34901s
 current collection size is 180580
 current initial h value: 32
 pattern: [7, 10, 14, 15, 16, 18, 20] - improvement: 5
@@ -80,7 +80,7 @@ pattern: [10, 11, 13, 14, 15, 16, 18, 19, 20] - improvement: 1000
 pattern: [7, 10, 11, 14, 15, 16, 18, 19, 20] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [7, 10, 14, 15, 16, 18, 19, 20]
-Hill climbing time so far: 1.51562s
+Hill climbing time so far: 1.86232s
 current collection size is 280932
 current initial h value: 38
 pattern: [10, 13, 14, 15, 16, 18, 19, 20] - improvement: 1
@@ -88,21 +88,21 @@ pattern: [10, 11, 13, 14, 15, 16, 18, 19, 20] - improvement: 1000
 pattern: [7, 10, 13, 14, 15, 16, 18, 19, 20] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [10, 11, 13, 14, 15, 16, 18, 19, 20]
-Hill climbing time so far: 2.40625s
+Hill climbing time so far: 2.88665s
 current collection size is 481636
 current initial h value: 41
 pattern: [5, 10, 11, 13, 14, 15, 16, 18, 19, 20] - improvement: 1000
 pattern: [7, 10, 11, 13, 14, 15, 16, 18, 19, 20] - improvement: 983
 found a better pattern with improvement 1000
 pattern: [5, 10, 11, 13, 14, 15, 16, 18, 19, 20]
-Hill climbing time so far: 4.10938s
+Hill climbing time so far: 4.87343s
 current collection size is 883044
 current initial h value: 43
 pattern: [7, 10, 11, 13, 14, 15, 16, 18, 19, 20] - improvement: 982
 pattern: [5, 7, 10, 11, 13, 14, 15, 16, 18, 19, 20] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [5, 7, 10, 11, 13, 14, 15, 16, 18, 19, 20]
-Hill climbing time so far: 7.53125s
+Hill climbing time so far: 8.66089s
 current collection size is 1685860
 current initial h value: 51
 Improvement below threshold. Stop hill climbing.
@@ -110,24 +110,24 @@ Hill climbing iterations: 13
 Hill climbing generated patterns: 204
 Hill climbing rejected patterns: 0
 Hill climbing maximum PDB size: 1605632
-Hill climbing time: 7.59375s
+Hill climbing time: 8.79671s
 Hill climbing generator collection: [[19], [20], [16, 20], [14, 16, 20], [10, 14, 16, 20], [10, 14, 16, 19, 20], [10, 14, 16, 18, 20], [10, 14, 15, 16, 18, 20], [10, 14, 15, 16, 18, 19, 20], [10, 11, 14, 15, 16, 18, 19, 20], [7, 10, 14, 15, 16, 18, 19, 20], [10, 11, 13, 14, 15, 16, 18, 19, 20], [5, 10, 11, 13, 14, 15, 16, 18, 19, 20], [5, 7, 10, 11, 13, 14, 15, 16, 18, 19, 20]]
 Hill climbing generator number of patterns: 14
 Hill climbing generator total PDB size: 1685860
-Hill climbing generator computation time: 7.60938s
+Hill climbing generator computation time: 8.8044s
 Running dominance pruning...
 Pruned 12 of 13 pattern cliques
 Pruned 13 of 14 PDBs
-Dominance pruning took 0s
+Dominance pruning took 1.0133e-05s
 Canonical PDB heuristic number of patterns: 1
 Canonical PDB heuristic total PDB size: 802816
-Canonical PDB heuristic computation time: 7.60938s
-Building successor generator...done! [t=7.60938s]
+Canonical PDB heuristic computation time: 8.8047s
+Building successor generator...done! [t=8.81217s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0s
+time for successor generation creation: 6.274e-05s
 Variables: 21
 FactPairs: 80
-Bytes per state: 4
+Bytes per state: 8
 Conducting best first search (real) bound = 2147483647
 Building match tree...
 5=0 16=0  | 5=1 12=0 16=1 
@@ -366,199 +366,84 @@ Building match tree...
 15=11 16=15 18=0  | 3=0 15=8 16=12 18=1 19=1 
 15=11 16=15 18=0 3=1 19=0  | 3=0 15=8 16=12 18=1 19=1 
 15=11 16=15 18=0 3=1  | 3=0 15=8 16=12 18=1 19=1 
-New best heuristic value for <missing>: 0
-[g=1, 2 evaluated, 2 expanded, t=7.60938s, 0 KB]
-New best h: 1 (iteration 308)
-New best h: 2 (iteration 311)
-New best h: 3 (iteration 315)
-New best h: 4 (iteration 318)
-New best h: 5 (iteration 951)
-New best h: 6 (iteration 954)
-New best h: 7 (iteration 957)
-New best h: 8 (iteration 959)
-New best h: 9 (iteration 962)
-New best h: 10 (iteration 965)
-New best h: 11 (iteration 970)
-New best h: 12 (iteration 1411)
-New best h: 13 (iteration 1414)
-New best h: 14 (iteration 1417)
-New best h: 15 (iteration 49610)
-New best h: 16 (iteration 73688)
-New best h: 17 (iteration 73697)
-New best h: 18 (iteration 73702)
-Converged to 9. 
-New best h: 19 (iteration 86190)
-New best h: 20 (iteration 86195)
-Converged to 20. 
-New best h: 21 (iteration 196026)
-New best h: 22 (iteration 196028)
-New best h: 23 (iteration 196089)
-New best h: 24 (iteration 196095)
-New best h: 25 (iteration 196221)
-New best h: 26 (iteration 196223)
-Converged to 26. 
-New best h: 27 (iteration 371149)
-New best h: 28 (iteration 371177)
-New best h: 29 (iteration 371179)
-New best h: 30 (iteration 371183)
-New best h: 31 (iteration 371187)
-New best h: 32 (iteration 371190)
-New best h: 33 (iteration 371192)
-New best h: 34 (iteration 371227)
-New best h: 35 (iteration 371230)
-New best h: 36 (iteration 371233)
-Converged to 10. 
-Converged to 16. 
-Converged to 8. 
-Converged to 14. 
-Converged to 20. 
-Converged to 22. 
-Converged to 13. 
-Converged to 13. 
-Converged to 16. 
-Converged to 19. 
-Converged to 13. 
-Converged to 22. 
-Converged to 10. 
-Converged to 32. 
-Converged to 13. 
-Converged to 8. 
-Converged to 8. 
-Converged to 8. 
-Converged to 9. 
-Converged to 20. 
-Converged to 14. 
-Converged to 26. 
-Converged to 19. 
-Converged to 13. 
-Converged to 25. 
-Converged to 19. 
-Converged to 14. 
-Converged to 19. 
-Converged to 15. 
-Converged to 32. 
-Converged to 15. 
-Converged to 19. 
-Converged to 21. 
-Converged to 13. 
-Converged to 10. 
-Converged to 15. 
-Converged to 15. 
-Converged to 16. 
-Converged to 9. 
-Converged to 19. 
-Converged to 14. 
-Converged to 13. 
-Converged to 16. 
-Converged to 15. 
-Converged to 16. 
-Converged to 32. 
-Converged to 16. 
-Converged to 20. 
-Converged to 15. 
-Converged to 13. 
-Converged to 11. 
-Converged to 9. 
-Converged to 15. 
-Converged to 10. 
-Converged to 21. 
-Converged to 10. 
-Converged to 20. 
-Converged to 16. 
-Converged to 21. 
-Converged to 20. 
-Converged to 32. 
-Converged to 18. 
-Converged to 22. 
-Converged to 20. 
-Converged to 22. 
-Converged to 13. 
-Converged to 13. 
-Converged to 18. 
-Converged to 13. 
-Converged to 14. 
-Converged to 32. 
-Converged to 10. 
-Converged to 14. 
-Converged to 14. 
-Converged to 9. 
-Converged to 17. 
-Converged to 17. 
-Converged to 9. 
-Converged to 10. 
-Converged to 14. 
-Converged to 9. 
-Converged to 15. 
-Converged to 9. 
-Converged to 20. 
-Converged to 14. 
-Converged to 32. 
-Converged to 13. 
-Converged to 14. 
-Converged to 9. 
-Converged to 9. 
-Converged to 13. 
-Converged to 14. 
-Converged to 9. 
-Converged to 15. 
-Converged to 16. 
-Converged to 17. 
-New best h: 37 (iteration 14135428)
-Converged to 32. 
-Converged to 20. 
-Converged to 8. 
-Converged to 20. 
-Converged to 16. 
-Converged to 20. 
-Converged to 13. 
-Converged to 15. 
-Converged to 32. 
-Converged to 19. 
-Converged to 16. 
-Converged to 19. 
-Converged to 15. 
-Converged to 21. 
-Converged to 17. 
-Converged to 17. 
-Converged to 32. 
-Converged to 26. 
-Converged to 19. 
-Converged to 32. 
-Converged to 16. 
-Converged to 14. 
-Converged to 14. 
-Converged to 10. 
-Converged to 10. 
-Converged to 15. 
-Converged to 14. 
-Converged to 18. 
-Converged to 14. 
-Converged to 10. 
-Converged to 18. 
-Converged to 21. 
-Converged to 14. 
-Converged to 9. 
-Converged to 22. 
-Converged to 16. 
-Converged to 21. 
-Converged to 26. 
-Converged to 16. 
-Reached iteration limit.
-Actual search time: 58.1719s [t=65.7812s]
+19=0 20=0 
+Inserting initial (goal) state...
+New best h: 0 (iteration 0)
+New best heuristic value for abstract(ipdb): 0
+[g=1, 0 evaluated, 1 expanded, t=8.81378s, 365804 KB]
+New undef count: 16
+New best h: 1 (iteration 77)
+New undef count: 15
+New undef count: 14
+New undef count: 13
+New undef count: 12
+New undef count: 11
+New undef count: 10
+New undef count: 9
+New undef count: 8
+New undef count: 7
+New undef count: 6
+New undef count: 5
+New undef count: 3
+New undef count: 2
+New undef count: 1
+Last undef var: 3
+New undef count: 0
+Found first concrete state.
+New best h: 6 (iteration 432)
+New best h: 7 (iteration 435)
+New best h: 10 (iteration 768)
+New best h: 11 (iteration 769)
+New best h: 12 (iteration 1506)
+New best h: 13 (iteration 1507)
+New best h: 16 (iteration 2066)
+New best h: 17 (iteration 2069)
+New best h: 18 (iteration 2093)
+New best h: 19 (iteration 2469)
+New best h: 20 (iteration 2474)
+New best h: 21 (iteration 2626)
+New best h: 22 (iteration 2628)
+New best h: 23 (iteration 246519)
+New best h: 24 (iteration 247262)
+New best h: 29 (iteration 248695)
+New best h: 30 (iteration 248698)
+New best h: 31 (iteration 248700)
+New best h: 32 (iteration 249470)
+New best h: 33 (iteration 257045)
+New best h: 34 (iteration 257047)
+New best h: 35 (iteration 257131)
+New best h: 36 (iteration 257133)
+New best h: 37 (iteration 257195)
+New best h: 38 (iteration 257199)
+New best h: 39 (iteration 257977)
+New best h: 40 (iteration 257979)
+New best h: 41 (iteration 258187)
+New best h: 42 (iteration 258189)
+New best h: 43 (iteration 258194)
+New best h: 44 (iteration 258197)
+New best h: 45 (iteration 258201)
+New best h: 46 (iteration 258204)
+New best h: 47 (iteration 258206)
+New best h: 48 (iteration 258209)
+New best h: 49 (iteration 258219)
+New best h: 50 (iteration 258221)
+New best h: 51 (iteration 258224)
+Completely explored state space.
+Actual search time: 25.3694s [t=34.1832s]
 Original state h-value: 51
-New state h-value: 37
-Expanded 22682688 state(s).
+New state h-value: 51
+Expanded 4710579 state(s).
 Reopened 0 state(s).
-Evaluated 2686663 state(s).
-Evaluations: 22686663
-Generated 38691587 state(s).
+Evaluated 0 state(s).
+Evaluations: 4710578
+Generated 13353698 state(s).
 Dead ends: 0 state(s).
-Number of registered states: 22686664
-Int hash set load factor: 22686664/33554432 = 0.676115
-Int hash set resizes: 25
-Search time: 58.1719s
-Total time: 65.7812s
+Number of registered states: 4710579
+Int hash set load factor: 4710579/8388608 = 0.561545
+Int hash set resizes: 23
+Search time: 25.3708s
+Total time: 34.1832s
 Solution found.
-Peak memory: 0 KB
+Peak memory: 850480 KB
 search exit code: 0
 

@@ -1,17 +1,17 @@
 INFO     Running search (release).
 INFO     search stdin: None
-INFO     search time limit: 300s
-INFO     search memory limit: 2048 MB
-INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/airport/03_task.sas --search 'generator_random(lmcut(), max_it=20000000)'
-reading input... [t=0s]
-done reading input! [t=0s]
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/airport/03_task.sas --search 'generator_abstract(abstract(lmcut()), max_it=20000000, max_time=600)'
+reading input... [t=0.000117545s]
+done reading input! [t=0.00161375s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0s]
-peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0s
+Building successor generator...done! [t=0.00784525s]
+peak memory difference for successor generator creation: 136 KB
+time for successor generation creation: 0.000285393s
 Variables: 46
 FactPairs: 119
-Bytes per state: 8
+Bytes per state: 12
 Conducting best first search (real) bound = 2147483647
 Building match tree...
 29=0 33=2 41=0  | 0=0 24=0 29=1 33=3 35=0 41=1 42=0 
@@ -264,50 +264,72 @@ Building match tree...
 43=0 44=6 21=1 26=1  | 21=0 22=0 26=0 37=0 43=2 44=1 
 43=0 44=6 21=1 22=1  | 21=0 22=0 26=0 37=0 43=2 44=1 
 43=0 44=6 21=1 22=1 26=1  | 21=0 22=0 26=0 37=0 43=2 44=1 
-New best h: 1 (iteration 0)
-New best heuristic value for lmcut: 1
-[g=1, 16 evaluated, 16 expanded, t=0s, 0 KB]
-New best heuristic value for lmcut: 0
-[g=1, 21 evaluated, 29 expanded, t=0s, 0 KB]
-New best h: 2 (iteration 65)
-New best h: 3 (iteration 69)
-New best h: 4 (iteration 1334)
-New best h: 5 (iteration 1350)
-New best h: 6 (iteration 22999)
-New best h: 7 (iteration 119123)
-Converged to 7. 
-Converged to 7. 
-New best h: 8 (iteration 1125647)
-Converged to 5. 
-Converged to 6. 
-Converged to 6. 
-Converged to 7. 
-Converged to 5. 
-Converged to 6. 
-Converged to 6. 
-Converged to 6. 
-Converged to 5. 
-Converged to 5. 
-Converged to 6. 
-Converged to 6. 
-Converged to 5. 
-Converged to 6. 
-Reached iteration limit.
-Actual search time: 417.359s [t=417.359s]
+44=0 45=0 
+Inserting initial (goal) state...
+New best h: 0 (iteration 0)
+New best heuristic value for abstract(lmcut): 0
+[g=1, 0 evaluated, 1 expanded, t=0.0156005s, 211956 KB]
+New best h: 1 (iteration 80)
+New undef count: 43
+New undef count: 42
+New undef count: 41
+New undef count: 40
+New undef count: 39
+New undef count: 38
+New undef count: 37
+New undef count: 36
+New undef count: 35
+New undef count: 34
+New undef count: 33
+New undef count: 32
+New undef count: 31
+New undef count: 30
+New undef count: 29
+New undef count: 28
+New undef count: 27
+New undef count: 26
+New undef count: 25
+New undef count: 24
+New undef count: 23
+New undef count: 22
+New undef count: 21
+New undef count: 20
+New undef count: 19
+New undef count: 18
+New undef count: 17
+New undef count: 16
+New undef count: 15
+New undef count: 14
+New undef count: 13
+New undef count: 12
+New undef count: 11
+New undef count: 10
+New undef count: 9
+New undef count: 8
+New undef count: 7
+New undef count: 6
+New undef count: 5
+New undef count: 4
+New undef count: 3
+New undef count: 2
+New undef count: 1
+Last undef var: 0
+Completely explored state space.
+Actual search time: 40.567s [t=40.5824s]
 Original state h-value: 17
-New state h-value: 8
-Expanded 77466446 state(s).
+New state h-value: 1
+Expanded 5432698 state(s).
 Reopened 0 state(s).
-Evaluated 57466711 state(s).
-Evaluations: 77466711
-Generated 21430007 state(s).
+Evaluated 0 state(s).
+Evaluations: 5432698
+Generated 19248823 state(s).
 Dead ends: 0 state(s).
-Number of registered states: 77466712
-Int hash set load factor: 77466712/134217728 = 0.577172
-Int hash set resizes: 27
-Search time: 417.359s
-Total time: 417.359s
+Number of registered states: 5432699
+Int hash set load factor: 5432699/8388608 = 0.647628
+Int hash set resizes: 23
+Search time: 40.574s
+Total time: 40.5824s
 Solution found.
-Peak memory: 0 KB
+Peak memory: 1051124 KB
 search exit code: 0
 

@@ -1,0 +1,121 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/gripper/01_task.sas --search 'generator_abstract(abstract(lmcut()), max_it=20000000, max_time=600)'
+reading input... [t=0.000131642s]
+done reading input! [t=0.00082841s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00665691s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000112049s
+Variables: 7
+FactPairs: 24
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+Building match tree...
+1=0  | 0=0 1=4 3=0 
+1=0 3=1  | 0=0 1=4 3=0 
+1=0 3=2  | 0=0 1=4 3=0 
+2=0  | 0=0 2=4 3=0 
+2=0 3=1  | 0=0 2=4 3=0 
+2=0 3=2  | 0=0 2=4 3=0 
+1=0 3=0  | 0=1 1=4 3=1 
+1=0  | 0=1 1=4 3=1 
+1=0 3=2  | 0=1 1=4 3=1 
+2=0 3=0  | 0=1 2=4 3=1 
+2=0  | 0=1 2=4 3=1 
+2=0 3=2  | 0=1 2=4 3=1 
+1=1  | 0=0 1=4 4=0 
+1=1 4=1  | 0=0 1=4 4=0 
+1=1 4=2  | 0=0 1=4 4=0 
+2=1  | 0=0 2=4 4=0 
+2=1 4=1  | 0=0 2=4 4=0 
+2=1 4=2  | 0=0 2=4 4=0 
+1=1 4=0  | 0=1 1=4 4=1 
+1=1  | 0=1 1=4 4=1 
+1=1 4=2  | 0=1 1=4 4=1 
+2=1 4=0  | 0=1 2=4 4=1 
+2=1  | 0=1 2=4 4=1 
+2=1 4=2  | 0=1 2=4 4=1 
+1=2  | 0=0 1=4 5=0 
+1=2 5=1  | 0=0 1=4 5=0 
+1=2 5=2  | 0=0 1=4 5=0 
+2=2  | 0=0 2=4 5=0 
+2=2 5=1  | 0=0 2=4 5=0 
+2=2 5=2  | 0=0 2=4 5=0 
+1=2 5=0  | 0=1 1=4 5=1 
+1=2  | 0=1 1=4 5=1 
+1=2 5=2  | 0=1 1=4 5=1 
+2=2 5=0  | 0=1 2=4 5=1 
+2=2  | 0=1 2=4 5=1 
+2=2 5=2  | 0=1 2=4 5=1 
+1=3  | 0=0 1=4 6=0 
+1=3 6=1  | 0=0 1=4 6=0 
+1=3 6=2  | 0=0 1=4 6=0 
+2=3  | 0=0 2=4 6=0 
+2=3 6=1  | 0=0 2=4 6=0 
+2=3 6=2  | 0=0 2=4 6=0 
+1=3 6=0  | 0=1 1=4 6=1 
+1=3  | 0=1 1=4 6=1 
+1=3 6=2  | 0=1 1=4 6=1 
+2=3 6=0  | 0=1 2=4 6=1 
+2=3  | 0=1 2=4 6=1 
+2=3 6=2  | 0=1 2=4 6=1 
+0=0  | 0=1 
+0=1  | 0=0 
+1=4 3=0  | 0=0 1=0 3=2 
+2=4 3=0  | 0=0 2=0 3=2 
+1=4 3=1  | 0=1 1=0 3=2 
+2=4 3=1  | 0=1 2=0 3=2 
+1=4 4=0  | 0=0 1=1 4=2 
+2=4 4=0  | 0=0 2=1 4=2 
+1=4 4=1  | 0=1 1=1 4=2 
+2=4 4=1  | 0=1 2=1 4=2 
+1=4 5=0  | 0=0 1=2 5=2 
+2=4 5=0  | 0=0 2=2 5=2 
+1=4 5=1  | 0=1 1=2 5=2 
+2=4 5=1  | 0=1 2=2 5=2 
+1=4 6=0  | 0=0 1=3 6=2 
+2=4 6=0  | 0=0 2=3 6=2 
+1=4 6=1  | 0=1 1=3 6=2 
+2=4 6=1  | 0=1 2=3 6=2 
+3=1 4=1 5=1 6=1 
+Inserting initial (goal) state...
+New undef count: 2
+New best h: 1 (iteration 0)
+New best heuristic value for abstract(lmcut): 1
+[g=1, 0 evaluated, 1 expanded, t=0.0088547s, 211820 KB]
+New best heuristic value for abstract(lmcut): 0
+[g=1, 0 evaluated, 1 expanded, t=0.00906871s, 211820 KB]
+New undef count: 1
+Last undef var: 0
+New undef count: 0
+Found first concrete state.
+New best h: 2 (iteration 40)
+New best h: 3 (iteration 90)
+New best h: 4 (iteration 96)
+New best h: 5 (iteration 138)
+New best h: 6 (iteration 146)
+New best h: 7 (iteration 167)
+New best h: 8 (iteration 178)
+New best h: 9 (iteration 7023)
+Completely explored state space.
+Actual search time: 0.568141s [t=0.576917s]
+Original state h-value: 9
+New state h-value: 9
+Expanded 29292 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 29291
+Generated 136727 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 29292
+Int hash set load factor: 29292/32768 = 0.893921
+Int hash set resizes: 15
+Search time: 0.569714s
+Total time: 0.576924s
+Solution found.
+Peak memory: 217044 KB
+search exit code: 0
+

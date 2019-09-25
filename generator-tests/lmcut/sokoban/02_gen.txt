@@ -1,14 +1,14 @@
 INFO     Running search (release).
 INFO     search stdin: None
-INFO     search time limit: 300s
-INFO     search memory limit: 2048 MB
-INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/sokoban/02_task.sas --search 'generator_random(lmcut(), max_it=20000000)'
-reading input... [t=0s]
-done reading input! [t=0s]
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/sokoban/02_task.sas --search 'generator_abstract(abstract(lmcut()), max_it=20000000, max_time=600)'
+reading input... [t=0.000119071s]
+done reading input! [t=0.00189966s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0s]
+Building successor generator...done! [t=0.00823108s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0s
+time for successor generation creation: 0.000290078s
 Variables: 24
 FactPairs: 93
 Bytes per state: 8
@@ -318,289 +318,63 @@ Building match tree...
 18=0 20=18 21=13  | 6=0 18=1 20=14 21=10 22=1 
 18=0 20=18 21=13 6=1 22=0  | 6=0 18=1 20=14 21=10 22=1 
 18=0 20=18 21=13 6=1  | 6=0 18=1 20=14 21=10 22=1 
-New best heuristic value for lmcut: 0
-[g=1, 5 evaluated, 5 expanded, t=0s, 0 KB]
-New best h: 1 (iteration 221)
-New best h: 2 (iteration 224)
-New best h: 3 (iteration 230)
-New best h: 4 (iteration 234)
-New best h: 5 (iteration 285)
-New best h: 6 (iteration 289)
-New best h: 7 (iteration 301)
-New best h: 8 (iteration 1234)
-New best h: 9 (iteration 5024)
-New best h: 10 (iteration 5027)
-New best h: 11 (iteration 45444)
-New best h: 12 (iteration 57476)
-New best h: 13 (iteration 57484)
-New best h: 14 (iteration 57488)
-Converged to 10. 
-Converged to 8. 
-Converged to 10. 
-Converged to 10. 
-Converged to 13. 
-Converged to 8. 
-Converged to 13. 
-Converged to 11. 
-Converged to 11. 
-Converged to 10. 
-Converged to 11. 
-Converged to 9. 
-Converged to 10. 
-Converged to 8. 
-Converged to 13. 
-Converged to 10. 
-Converged to 10. 
-Converged to 10. 
-Converged to 8. 
-Converged to 11. 
-Converged to 10. 
-Converged to 9. 
-Converged to 11. 
-Converged to 8. 
-Converged to 10. 
-Converged to 11. 
-Converged to 11. 
-Converged to 12. 
-Converged to 12. 
-New best h: 15 (iteration 3132827)
-New best h: 16 (iteration 3132829)
-New best h: 17 (iteration 3132837)
-Converged to 17. 
-Converged to 10. 
-Converged to 13. 
-Converged to 9. 
-Converged to 11. 
-Converged to 9. 
-Converged to 10. 
-Converged to 11. 
-Converged to 10. 
-Converged to 10. 
-Converged to 10. 
-Converged to 9. 
-Converged to 10. 
-Converged to 10. 
-Converged to 11. 
-Converged to 10. 
-Converged to 8. 
-Converged to 12. 
-Converged to 9. 
-Converged to 11. 
-Converged to 13. 
-Converged to 9. 
-Converged to 10. 
-Converged to 8. 
-Converged to 10. 
-Converged to 13. 
-Converged to 10. 
-Converged to 12. 
-Converged to 10. 
-Converged to 9. 
-Converged to 10. 
-Converged to 11. 
-Converged to 10. 
-Converged to 13. 
-Converged to 11. 
-Converged to 12. 
-Converged to 10. 
-Converged to 10. 
-Converged to 9. 
-Converged to 10. 
-Converged to 13. 
-Converged to 9. 
-Converged to 12. 
-Converged to 10. 
-Converged to 9. 
-Converged to 10. 
-Converged to 9. 
-Converged to 10. 
-Converged to 10. 
-Converged to 11. 
-Converged to 10. 
-Converged to 11. 
-Converged to 10. 
-Converged to 10. 
-Converged to 9. 
-Converged to 10. 
-Converged to 11. 
-Converged to 9. 
-Converged to 10. 
-Converged to 8. 
-Converged to 11. 
-Converged to 10. 
-Converged to 9. 
-Converged to 10. 
-Converged to 10. 
-Converged to 11. 
-Converged to 14. 
-Converged to 12. 
-Converged to 13. 
-Converged to 10. 
-Converged to 11. 
-Converged to 11. 
-Converged to 10. 
-Converged to 10. 
-Converged to 14. 
-Converged to 10. 
-Converged to 10. 
-Converged to 11. 
-Converged to 9. 
-Converged to 11. 
-Converged to 13. 
-Converged to 13. 
-Converged to 10. 
-Converged to 10. 
-Converged to 11. 
-Converged to 10. 
-Converged to 14. 
-Converged to 14. 
-Converged to 10. 
-Converged to 9. 
-Converged to 9. 
-Converged to 10. 
-Converged to 8. 
-Converged to 10. 
-Converged to 10. 
-Converged to 14. 
-Converged to 11. 
-Converged to 11. 
-Converged to 10. 
-Converged to 10. 
-Converged to 10. 
-Converged to 10. 
-Converged to 14. 
-Converged to 9. 
-Converged to 11. 
-Converged to 11. 
-Converged to 10. 
-Converged to 14. 
-Converged to 13. 
-Converged to 10. 
-Converged to 11. 
-Converged to 14. 
-Converged to 13. 
-Converged to 10. 
-Converged to 11. 
-Converged to 10. 
-Converged to 11. 
-Converged to 14. 
-Converged to 10. 
-Converged to 8. 
-Converged to 13. 
-Converged to 12. 
-Converged to 10. 
-Converged to 10. 
-Converged to 11. 
-Converged to 10. 
-Converged to 11. 
-Converged to 11. 
-Converged to 11. 
-Converged to 10. 
-Converged to 9. 
-Converged to 10. 
-Converged to 11. 
-Converged to 11. 
-Converged to 12. 
-Converged to 11. 
-Converged to 11. 
-Converged to 14. 
-Converged to 10. 
-Converged to 10. 
-Converged to 10. 
-Converged to 11. 
-Converged to 14. 
-Converged to 10. 
-Converged to 12. 
-Converged to 11. 
-Converged to 9. 
-Converged to 12. 
-Converged to 9. 
-Converged to 9. 
-Converged to 10. 
-Converged to 10. 
-Converged to 11. 
-Converged to 10. 
-Converged to 11. 
-Converged to 10. 
-Converged to 13. 
-Converged to 13. 
-Converged to 11. 
-Converged to 12. 
-Converged to 11. 
-Converged to 10. 
-Converged to 12. 
-Converged to 10. 
-Converged to 10. 
-Converged to 10. 
-Converged to 10. 
-Converged to 9. 
-Converged to 11. 
-Converged to 12. 
-Converged to 14. 
-Converged to 10. 
-Converged to 10. 
-Converged to 10. 
-Converged to 14. 
-Converged to 17. 
-Converged to 11. 
-Converged to 10. 
-Converged to 10. 
-Converged to 9. 
-Converged to 14. 
-Converged to 10. 
-Converged to 14. 
-Converged to 9. 
-Converged to 10. 
-Converged to 12. 
-Converged to 10. 
-Converged to 13. 
-Converged to 10. 
-Converged to 11. 
-Converged to 14. 
-Converged to 9. 
-Converged to 9. 
-Converged to 9. 
-Converged to 13. 
-Converged to 11. 
-Converged to 14. 
-Converged to 9. 
-Converged to 10. 
-Converged to 10. 
-Converged to 10. 
-Converged to 11. 
-Converged to 10. 
-Converged to 11. 
-Converged to 9. 
-Converged to 8. 
-Converged to 13. 
-Converged to 11. 
-Converged to 14. 
-Converged to 11. 
-Converged to 9. 
-Converged to 13. 
-Converged to 11. 
-Converged to 10. 
-Converged to 14. 
-Converged to 9. 
-Converged to 10. 
-Converged to 11. 
-Converged to 11. 
-Reached iteration limit.
-Actual search time: 86.5469s [t=86.5469s]
+22=0 23=0 
+Inserting initial (goal) state...
+New best h: 0 (iteration 0)
+New best heuristic value for abstract(lmcut): 0
+[g=1, 0 evaluated, 1 expanded, t=0.0166252s, 211960 KB]
+New undef count: 19
+New best h: 1 (iteration 105)
+New undef count: 18
+New undef count: 17
+New undef count: 16
+New undef count: 15
+New undef count: 14
+New undef count: 13
+New undef count: 12
+New undef count: 11
+New undef count: 10
+New undef count: 9
+New undef count: 8
+New undef count: 7
+New undef count: 6
+New undef count: 5
+New undef count: 4
+New undef count: 3
+New undef count: 2
+New undef count: 1
+Last undef var: 5
+New undef count: 0
+Found first concrete state.
+New best h: 6 (iteration 422)
+New best h: 7 (iteration 1069)
+New best h: 8 (iteration 1071)
+New best h: 9 (iteration 1127)
+New best h: 10 (iteration 1145)
+New best h: 11 (iteration 1147)
+New best h: 12 (iteration 16120)
+New best h: 13 (iteration 68365)
+New best h: 14 (iteration 68367)
+New best h: 15 (iteration 98514)
+New best h: 16 (iteration 113140)
+New best h: 17 (iteration 113148)
+New best h: 18 (iteration 113154)
+Completely explored state space.
+Actual search time: 100.758s [t=100.775s]
 Original state h-value: 12
-New state h-value: 17
-Expanded 22136853 state(s).
+New state h-value: 18
+Expanded 16407261 state(s).
 Reopened 0 state(s).
-Evaluated 2145591 state(s).
-Evaluations: 22145591
-Generated 42235827 state(s).
+Evaluated 0 state(s).
+Evaluations: 16407260
+Generated 53673844 state(s).
 Dead ends: 0 state(s).
-Number of registered states: 22145592
-Int hash set load factor: 22145592/33554432 = 0.65999
+Number of registered states: 16407261
+Int hash set load factor: 16407261/33554432 = 0.488974
 Int hash set resizes: 25
-Search time: 86.5469s
-Total time: 86.5469s
+Search time: 100.766s
+Total time: 100.775s
 Solution found.
-Peak memory: 0 KB
+Peak memory: 2648356 KB
 search exit code: 0
 
