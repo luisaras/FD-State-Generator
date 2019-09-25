@@ -54,7 +54,7 @@ void GeneratorAbstractGoal::initialize() {
     EvaluationContext goal_state_eval(goal_state, 0, false, &statistics);
     search_space.get_node(goal_state).open_initial();
     open_list->insert(goal_state_eval, goal_state.get_id());
-    
+
 }
 
 SearchStatus GeneratorAbstractGoal::step() {
@@ -83,8 +83,15 @@ SearchStatus GeneratorAbstractGoal::step() {
     // Gets operators
     set<int> applicable_operator_ids;
     match_tree.get_applicable_operator_ids(state_values, applicable_operator_ids);
-    
-    //cout << "APPLICABLE OPERATORS: " << applicable_operator_ids.size() << endl;
+
+    /*VariablesProxy variables = task_proxy.get_variables();
+    for (int op_id = 0; op_id < operators.size(); op_id++) {
+        if (applicable_operator_ids.count(op_id)) {
+            assert(operators[op_id].is_applicable(variables, state_values));
+        } else {
+            assert(!operators[op_id].is_applicable(variables, state_values));
+        }
+    }*/
 
     // Expand
     for (int op_id : applicable_operator_ids) {
@@ -94,11 +101,18 @@ SearchStatus GeneratorAbstractGoal::step() {
         vector<int> pred_values(state_values);
         op.apply(pred_values);
         
+        /*if (!op.is_result(pred_values, state_values)) {
+            dump_state(pred_values);
+            op.dump();
+            dump_state(state_values);
+            assert(false);
+        }*/
+
         // Get search node of previous state
         GlobalState pred_state = state_registry.get_state(pred_values);
         statistics.inc_generated();
         SearchNode pred_node = search_space.get_node(pred_state);
-        
+
         if (pred_node.is_new()) {
             
             pred_node.open(*node, task_proxy.get_operators()[op.original_id], op.cost);

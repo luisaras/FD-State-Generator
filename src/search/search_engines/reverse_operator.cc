@@ -29,6 +29,49 @@ void ReverseOperator::apply(vector<int>& state) {
         state[effect.var] = effect.value;
 }
 
+bool ReverseOperator::is_applicable(VariablesProxy &variables, vector<int>& state) {
+    for (const FactPair& precond : regression_preconditions) {
+        VariableProxy variable = variables[precond.var];
+        if (state[precond.var] >= variable.get_domain_size())
+            continue;
+        if (state[precond.var] != precond.value)
+            return false;
+    }
+    return true;
+}
+
+bool ReverseOperator::is_result(vector<int>& pred_state, vector<int>& state) {
+    bool mentioned[pred_state.size()];
+    for (uint i = 0; i < pred_state.size(); i++)
+        mentioned[i] = false;
+    for (const FactPair& effect : regression_effects) {
+        if (pred_state[effect.var] != effect.value) {
+            cout << "Effect not applied" << endl;
+            return false;
+        }
+        mentioned[effect.var] = true;
+    }
+    for (uint i = 0; i < pred_state.size(); i++) {
+        if (!mentioned[i] && pred_state[i] != state[i]) {
+            cout << "Value not inherited." << endl;
+            return false;
+        }
+    }
+    return true;
+}
+
+void ReverseOperator::dump() {
+    // Print preconditions of original operator
+    cout << original_id << ") ";
+    for (const FactPair& effect : regression_effects)
+        cout << effect << " ";
+    cout << " | ";
+    // Print effects of original operator
+    for (const FactPair& precond : regression_preconditions)
+        cout << precond << " ";
+    cout << endl;
+}
+
 /*
   Recursive method; called by build_abstract_operators. In the case
   of a precondition with value = -1 in the concrete operator, all
