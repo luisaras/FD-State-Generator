@@ -25,6 +25,8 @@ ReverseOperator::ReverseOperator(const OperatorProxy& op,
 }
 
 void ReverseOperator::apply(vector<int>& state) {
+    for (const FactPair& precond : regression_preconditions)
+        state[precond.var] = precond.value;
     for (const FactPair& effect : regression_effects)
         state[effect.var] = effect.value;
 }
@@ -41,9 +43,7 @@ bool ReverseOperator::is_applicable(VariablesProxy &variables, vector<int>& stat
 }
 
 bool ReverseOperator::is_result(vector<int>& pred_state, vector<int>& state) {
-    bool mentioned[pred_state.size()];
-    for (uint i = 0; i < pred_state.size(); i++)
-        mentioned[i] = false;
+    vector<bool> mentioned(pred_state.size(), false);
     for (const FactPair& effect : regression_effects) {
         if (pred_state[effect.var] != effect.value) {
             cout << "Effect not applied" << endl;

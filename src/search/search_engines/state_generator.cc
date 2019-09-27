@@ -63,12 +63,10 @@ void StateGenerator::initialize() {
 
     cout << "Created " << operators.size() << " reverse operators." << endl;
 
-    
-
     // Match Tree
     for (size_t op_id = 0; op_id < operators.size(); ++op_id) {
         match_tree.insert(op_id, operators[op_id].regression_preconditions);
-        operators[op_id].dump();
+        //operators[op_id].dump();
     }
 
     cout << "Built match tree." << endl;
