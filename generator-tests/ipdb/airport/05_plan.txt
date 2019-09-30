@@ -3,34 +3,44 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/ipdb/airport/05_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
-reading input... [t=0.000120545s]
-done reading input! [t=0.00271434s]
+reading input... [t=0.000126628s]
+done reading input! [t=0.00270062s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.00926274s]
+Building successor generator...done! [t=0.00976138s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0.000488612s
+time for successor generation creation: 0.000587619s
 Variables: 75
 FactPairs: 189
 Bytes per state: 12
 Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-Initial state is a dead end.
-Initial heuristic value for lmcut: infinity
+New best heuristic value for lmcut: 1
+[g=0, 1 evaluated, 0 expanded, t=0.010792s, 211964 KB]
+f = 1 [1 evaluated, 0 expanded, t=0.0110075s, 211964 KB]
+Initial heuristic value for lmcut: 1
 pruning method: none
-Completely explored state space -- no solution!
-Actual search time: 1.7171e-05s [t=0.0101154s]
-Expanded 0 state(s).
+New best heuristic value for lmcut: 0
+[g=1, 3 evaluated, 1 expanded, t=0.0121419s, 211964 KB]
+Solution found!
+Actual search time: 0.00115255s [t=0.0124108s]
+op118) takeoff_seg_09_0_150_south airplane_daewh (1)
+Plan length: 1 step(s).
+Plan cost: 1
+Expanded 2 state(s).
 Reopened 0 state(s).
-Evaluated 1 state(s).
-Evaluations: 1
-Generated 0 state(s).
+Evaluated 3 state(s).
+Evaluations: 3
+Generated 2 state(s).
 Dead ends: 0 state(s).
-Number of registered states: 1
-Int hash set load factor: 1/1 = 1
-Int hash set resizes: 0
-Search time: 0.00030362s
-Total time: 0.010143s
-Search stopped without finding a solution.
-Peak memory: 211952 KB
-search exit code: 12
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 3
+Int hash set load factor: 3/4 = 0.75
+Int hash set resizes: 2
+Search time: 0.00199508s
+Total time: 0.0124426s
+Solution found.
+Peak memory: 211964 KB
+search exit code: 0
 
-Driver aborting after search

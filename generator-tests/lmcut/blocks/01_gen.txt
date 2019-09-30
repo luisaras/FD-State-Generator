@@ -2,145 +2,52 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/blocks/01_task.sas --search 'generator_abstract(abstract(lmcut()), max_it=20000000, max_time=600)'
-reading input... [t=0.000106506s]
-done reading input! [t=0.000881223s]
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/blocks/01_task.sas --search 'generator_abstract(lmcut(), max_it=20000000, max_time=600)'
+reading input... [t=0.000106826s]
+done reading input! [t=0.000855217s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.0068291s]
+Building successor generator...done! [t=0.006722s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0.000105469s
+time for successor generation creation: 0.00011544s
 Variables: 9
 FactPairs: 30
 Bytes per state: 4
 Conducting best first search (real) bound = 2147483647
-Building match tree...
-0=4 1=0 5=0  | 0=0 1=1 5=1 
-2=0 5=0 6=4  | 2=1 5=1 6=0 
-3=0 5=0 7=4  | 3=1 5=1 7=0 
-4=0 5=0 8=4  | 4=1 5=1 8=0 
-0=0  | 0=4 1=0 5=0 
-0=0 5=1  | 0=4 1=0 5=0 
-0=0 1=1  | 0=4 1=0 5=0 
-0=0 1=1 5=1  | 0=4 1=0 5=0 
-6=0  | 2=0 5=0 6=4 
-6=0 5=1  | 2=0 5=0 6=4 
-6=0 2=1  | 2=0 5=0 6=4 
-6=0 2=1 5=1  | 2=0 5=0 6=4 
-7=0  | 3=0 5=0 7=4 
-7=0 5=1  | 3=0 5=0 7=4 
-7=0 3=1  | 3=0 5=0 7=4 
-7=0 3=1 5=1  | 3=0 5=0 7=4 
-8=0  | 4=0 5=0 8=4 
-8=0 5=1  | 4=0 5=0 8=4 
-8=0 4=1  | 4=0 5=0 8=4 
-8=0 4=1 5=1  | 4=0 5=0 8=4 
-0=0 2=0  | 0=1 1=0 2=1 5=0 
-0=0 2=0 5=1  | 0=1 1=0 2=1 5=0 
-0=0 2=0 1=1  | 0=1 1=0 2=1 5=0 
-0=0 2=0 1=1 5=1  | 0=1 1=0 2=1 5=0 
-0=0 3=0  | 0=2 1=0 3=1 5=0 
-0=0 3=0 5=1  | 0=2 1=0 3=1 5=0 
-0=0 3=0 1=1  | 0=2 1=0 3=1 5=0 
-0=0 3=0 1=1 5=1  | 0=2 1=0 3=1 5=0 
-0=0 4=0  | 0=3 1=0 4=1 5=0 
-0=0 4=0 5=1  | 0=3 1=0 4=1 5=0 
-0=0 4=0 1=1  | 0=3 1=0 4=1 5=0 
-0=0 4=0 1=1 5=1  | 0=3 1=0 4=1 5=0 
-1=0 6=0  | 1=1 2=0 5=0 6=1 
-1=0 6=0 5=1  | 1=1 2=0 5=0 6=1 
-1=0 6=0 2=1  | 1=1 2=0 5=0 6=1 
-1=0 6=0 2=1 5=1  | 1=1 2=0 5=0 6=1 
-3=0 6=0  | 2=0 3=1 5=0 6=2 
-3=0 6=0 5=1  | 2=0 3=1 5=0 6=2 
-3=0 6=0 2=1  | 2=0 3=1 5=0 6=2 
-3=0 6=0 2=1 5=1  | 2=0 3=1 5=0 6=2 
-4=0 6=0  | 2=0 4=1 5=0 6=3 
-4=0 6=0 5=1  | 2=0 4=1 5=0 6=3 
-4=0 6=0 2=1  | 2=0 4=1 5=0 6=3 
-4=0 6=0 2=1 5=1  | 2=0 4=1 5=0 6=3 
-1=0 7=0  | 1=1 3=0 5=0 7=1 
-1=0 7=0 5=1  | 1=1 3=0 5=0 7=1 
-1=0 7=0 3=1  | 1=1 3=0 5=0 7=1 
-1=0 7=0 3=1 5=1  | 1=1 3=0 5=0 7=1 
-2=0 7=0  | 2=1 3=0 5=0 7=2 
-2=0 7=0 5=1  | 2=1 3=0 5=0 7=2 
-2=0 7=0 3=1  | 2=1 3=0 5=0 7=2 
-2=0 7=0 3=1 5=1  | 2=1 3=0 5=0 7=2 
-4=0 7=0  | 3=0 4=1 5=0 7=3 
-4=0 7=0 5=1  | 3=0 4=1 5=0 7=3 
-4=0 7=0 3=1  | 3=0 4=1 5=0 7=3 
-4=0 7=0 3=1 5=1  | 3=0 4=1 5=0 7=3 
-1=0 8=0  | 1=1 4=0 5=0 8=1 
-1=0 8=0 5=1  | 1=1 4=0 5=0 8=1 
-1=0 8=0 4=1  | 1=1 4=0 5=0 8=1 
-1=0 8=0 4=1 5=1  | 1=1 4=0 5=0 8=1 
-2=0 8=0  | 2=1 4=0 5=0 8=2 
-2=0 8=0 5=1  | 2=1 4=0 5=0 8=2 
-2=0 8=0 4=1  | 2=1 4=0 5=0 8=2 
-2=0 8=0 4=1 5=1  | 2=1 4=0 5=0 8=2 
-3=0 8=0  | 3=1 4=0 5=0 8=3 
-3=0 8=0 5=1  | 3=1 4=0 5=0 8=3 
-3=0 8=0 4=1  | 3=1 4=0 5=0 8=3 
-3=0 8=0 4=1 5=1  | 3=1 4=0 5=0 8=3 
-0=1 1=0 5=0  | 0=0 1=1 2=0 5=1 
-0=1 1=0 5=0 2=1  | 0=0 1=1 2=0 5=1 
-0=2 1=0 5=0  | 0=0 1=1 3=0 5=1 
-0=2 1=0 5=0 3=1  | 0=0 1=1 3=0 5=1 
-0=3 1=0 5=0  | 0=0 1=1 4=0 5=1 
-0=3 1=0 5=0 4=1  | 0=0 1=1 4=0 5=1 
-2=0 5=0 6=1  | 1=0 2=1 5=1 6=0 
-2=0 5=0 6=1 1=1  | 1=0 2=1 5=1 6=0 
-2=0 5=0 6=2  | 2=1 3=0 5=1 6=0 
-2=0 5=0 6=2 3=1  | 2=1 3=0 5=1 6=0 
-2=0 5=0 6=3  | 2=1 4=0 5=1 6=0 
-2=0 5=0 6=3 4=1  | 2=1 4=0 5=1 6=0 
-3=0 5=0 7=1  | 1=0 3=1 5=1 7=0 
-3=0 5=0 7=1 1=1  | 1=0 3=1 5=1 7=0 
-3=0 5=0 7=2  | 2=0 3=1 5=1 7=0 
-3=0 5=0 7=2 2=1  | 2=0 3=1 5=1 7=0 
-3=0 5=0 7=3  | 3=1 4=0 5=1 7=0 
-3=0 5=0 7=3 4=1  | 3=1 4=0 5=1 7=0 
-4=0 5=0 8=1  | 1=0 4=1 5=1 8=0 
-4=0 5=0 8=1 1=1  | 1=0 4=1 5=1 8=0 
-4=0 5=0 8=2  | 2=0 4=1 5=1 8=0 
-4=0 5=0 8=2 2=1  | 2=0 4=1 5=1 8=0 
-4=0 5=0 8=3  | 3=0 4=1 5=1 8=0 
-4=0 5=0 8=3 3=1  | 3=0 4=1 5=1 8=0 
+Building reverse operators...
+Created 92 reverse operators.
+Built match tree.
 6=1 7=2 8=3 
 Inserting initial (goal) state...
 New best h: 0 (iteration 0)
-New best heuristic value for abstract(lmcut): 0
-[g=1, 0 evaluated, 1 expanded, t=0.00969275s, 211820 KB]
-New undef count: 5
-New best h: 1 (iteration 17)
-New undef count: 4
 New undef count: 3
 New undef count: 2
+New best h: 1 (iteration 17)
 New undef count: 1
 Last undef var: 4
-New undef count: 0
 Found first concrete state.
-New best h: 3 (iteration 90)
-New best h: 4 (iteration 96)
-New best h: 5 (iteration 139)
-New best h: 6 (iteration 212)
-New best h: 7 (iteration 1871)
+New undef count: 0
+New best h: 2 (iteration 60)
+New best h: 3 (iteration 78)
+New best h: 4 (iteration 82)
+New best h: 5 (iteration 93)
+New best h: 6 (iteration 255)
+New best h: 7 (iteration 1341)
 Completely explored state space.
-Actual search time: 0.507084s [t=0.516699s]
+Actual search time: 0.506145s [t=0.514088s]
 Original state h-value: 6
 New state h-value: 7
-Expanded 19984 state(s).
+Expanded 17101 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 19983
-Generated 113765 state(s).
+Evaluations: 34201
+Generated 85749 state(s).
 Dead ends: 0 state(s).
-Number of registered states: 19984
-Int hash set load factor: 19984/32768 = 0.609863
+Number of registered states: 17101
+Int hash set load factor: 17101/32768 = 0.521881
 Int hash set resizes: 15
-Search time: 0.509321s
-Total time: 0.516706s
+Search time: 0.506821s
+Total time: 0.514095s
 Solution found.
-Peak memory: 216056 KB
+Peak memory: 215136 KB
 search exit code: 0
 

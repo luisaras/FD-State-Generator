@@ -3,34 +3,44 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/lmcut/airport/07_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
-reading input... [t=0.000120002s]
-done reading input! [t=0.00449957s]
+reading input... [t=0.000118765s]
+done reading input! [t=0.0044559s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.0117677s]
-peak memory difference for successor generator creation: 132 KB
-time for successor generation creation: 0.000778002s
+Building successor generator...done! [t=0.0116754s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000749364s
 Variables: 114
 FactPairs: 305
 Bytes per state: 16
 Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-Initial state is a dead end.
-Initial heuristic value for lmcut: infinity
+New best heuristic value for lmcut: 1
+[g=0, 1 evaluated, 0 expanded, t=0.0125622s, 212096 KB]
+f = 1 [1 evaluated, 0 expanded, t=0.0127424s, 212096 KB]
+Initial heuristic value for lmcut: 1
 pruning method: none
-Completely explored state space -- no solution!
-Actual search time: 1.8164e-05s [t=0.0126359s]
-Expanded 0 state(s).
+New best heuristic value for lmcut: 0
+[g=1, 3 evaluated, 1 expanded, t=0.0131993s, 212096 KB]
+Solution found!
+Actual search time: 0.00046847s [t=0.0134189s]
+op90) park_seg_a02_0_100_north airplane_cfbeg (1)
+Plan length: 1 step(s).
+Plan cost: 1
+Expanded 2 state(s).
 Reopened 0 state(s).
-Evaluated 1 state(s).
-Evaluations: 1
-Generated 0 state(s).
+Evaluated 3 state(s).
+Evaluations: 3
+Generated 2 state(s).
 Dead ends: 0 state(s).
-Number of registered states: 1
-Int hash set load factor: 1/1 = 1
-Int hash set resizes: 0
-Search time: 0.000315755s
-Total time: 0.0126629s
-Search stopped without finding a solution.
-Peak memory: 212084 KB
-search exit code: 12
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 3
+Int hash set load factor: 3/4 = 0.75
+Int hash set resizes: 2
+Search time: 0.00119319s
+Total time: 0.0134467s
+Solution found.
+Peak memory: 212096 KB
+search exit code: 0
 
-Driver aborting after search

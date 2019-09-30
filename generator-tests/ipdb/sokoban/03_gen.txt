@@ -2,21 +2,21 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/ipdb/sokoban/03_task.sas --search 'generator_abstract(abstract(ipdb()), max_it=20000000, max_time=600)'
-reading input... [t=0.000117473s]
-done reading input! [t=0.00158785s]
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/ipdb/sokoban/03_task.sas --search 'generator_abstract(ipdb(), max_it=20000000, max_time=600)'
+reading input... [t=0.000115452s]
+done reading input! [t=0.0015643s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0.000331022s
+Done calculating initial pattern collection: 0.000337248s
 Average operator cost: 1
-building causal graph...done! [t=0.00101758s]
+building causal graph...done! [t=0.00101927s]
 Done calculating initial candidate PDBs
 current collection size is 4
 current initial h value: 1
 pattern: [16, 20] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [16, 20]
-Hill climbing time so far: 0.0282497s
+Hill climbing time so far: 0.0266152s
 current collection size is 36
 current initial h value: 3
 pattern: [15, 19] - improvement: 1
@@ -25,20 +25,20 @@ pattern: [10, 16, 20] - improvement: 7
 pattern: [14, 16, 20] - improvement: 288
 found a better pattern with improvement 288
 pattern: [14, 16, 20]
-Hill climbing time so far: 0.0743986s
+Hill climbing time so far: 0.0744144s
 current collection size is 484
 current initial h value: 3
 pattern: [10, 14, 16, 20] - improvement: 312
 found a better pattern with improvement 312
 pattern: [10, 14, 16, 20]
-Hill climbing time so far: 0.145853s
+Hill climbing time so far: 0.146474s
 current collection size is 1380
 current initial h value: 3
 pattern: [10, 14, 16, 18, 20] - improvement: 706
 pattern: [10, 14, 16, 19, 20] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [10, 14, 16, 19, 20]
-Hill climbing time so far: 0.25679s
+Hill climbing time so far: 0.25789s
 current collection size is 3172
 current initial h value: 4
 pattern: [10, 14, 16, 18, 20] - improvement: 658
@@ -46,7 +46,7 @@ pattern: [10, 14, 15, 16, 19, 20] - improvement: 202
 pattern: [10, 14, 16, 18, 19, 20] - improvement: 658
 found a better pattern with improvement 658
 pattern: [10, 14, 16, 18, 20]
-Hill climbing time so far: 0.37418s
+Hill climbing time so far: 0.374948s
 current collection size is 4964
 current initial h value: 9
 pattern: [10, 14, 15, 16, 19, 20] - improvement: 319
@@ -54,7 +54,7 @@ pattern: [10, 14, 16, 18, 19, 20] - improvement: 594
 pattern: [10, 14, 15, 16, 18, 20] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [10, 14, 15, 16, 18, 20]
-Hill climbing time so far: 0.56532s
+Hill climbing time so far: 0.564544s
 current collection size is 30052
 current initial h value: 24
 pattern: [15, 19] - improvement: 22
@@ -63,7 +63,7 @@ pattern: [10, 14, 15, 16, 18, 19, 20] - improvement: 1000
 pattern: [7, 10, 14, 15, 16, 18, 20] - improvement: 991
 found a better pattern with improvement 1000
 pattern: [10, 14, 15, 16, 18, 19, 20]
-Hill climbing time so far: 0.835362s
+Hill climbing time so far: 0.833122s
 current collection size is 80228
 current initial h value: 31
 pattern: [7, 10, 14, 15, 16, 18, 20] - improvement: 1
@@ -71,7 +71,7 @@ pattern: [10, 11, 14, 15, 16, 18, 19, 20] - improvement: 1000
 pattern: [7, 10, 14, 15, 16, 18, 19, 20] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [10, 11, 14, 15, 16, 18, 19, 20]
-Hill climbing time so far: 1.34901s
+Hill climbing time so far: 1.34743s
 current collection size is 180580
 current initial h value: 32
 pattern: [7, 10, 14, 15, 16, 18, 20] - improvement: 5
@@ -80,7 +80,7 @@ pattern: [10, 11, 13, 14, 15, 16, 18, 19, 20] - improvement: 1000
 pattern: [7, 10, 11, 14, 15, 16, 18, 19, 20] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [7, 10, 14, 15, 16, 18, 19, 20]
-Hill climbing time so far: 1.86232s
+Hill climbing time so far: 1.86041s
 current collection size is 280932
 current initial h value: 38
 pattern: [10, 13, 14, 15, 16, 18, 19, 20] - improvement: 1
@@ -88,21 +88,21 @@ pattern: [10, 11, 13, 14, 15, 16, 18, 19, 20] - improvement: 1000
 pattern: [7, 10, 13, 14, 15, 16, 18, 19, 20] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [10, 11, 13, 14, 15, 16, 18, 19, 20]
-Hill climbing time so far: 2.88665s
+Hill climbing time so far: 2.87644s
 current collection size is 481636
 current initial h value: 41
 pattern: [5, 10, 11, 13, 14, 15, 16, 18, 19, 20] - improvement: 1000
 pattern: [7, 10, 11, 13, 14, 15, 16, 18, 19, 20] - improvement: 983
 found a better pattern with improvement 1000
 pattern: [5, 10, 11, 13, 14, 15, 16, 18, 19, 20]
-Hill climbing time so far: 4.87343s
+Hill climbing time so far: 4.80738s
 current collection size is 883044
 current initial h value: 43
 pattern: [7, 10, 11, 13, 14, 15, 16, 18, 19, 20] - improvement: 982
 pattern: [5, 7, 10, 11, 13, 14, 15, 16, 18, 19, 20] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [5, 7, 10, 11, 13, 14, 15, 16, 18, 19, 20]
-Hill climbing time so far: 8.66089s
+Hill climbing time so far: 8.48578s
 current collection size is 1685860
 current initial h value: 51
 Improvement below threshold. Stop hill climbing.
@@ -110,340 +110,111 @@ Hill climbing iterations: 13
 Hill climbing generated patterns: 204
 Hill climbing rejected patterns: 0
 Hill climbing maximum PDB size: 1605632
-Hill climbing time: 8.79671s
+Hill climbing time: 8.62676s
 Hill climbing generator collection: [[19], [20], [16, 20], [14, 16, 20], [10, 14, 16, 20], [10, 14, 16, 19, 20], [10, 14, 16, 18, 20], [10, 14, 15, 16, 18, 20], [10, 14, 15, 16, 18, 19, 20], [10, 11, 14, 15, 16, 18, 19, 20], [7, 10, 14, 15, 16, 18, 19, 20], [10, 11, 13, 14, 15, 16, 18, 19, 20], [5, 10, 11, 13, 14, 15, 16, 18, 19, 20], [5, 7, 10, 11, 13, 14, 15, 16, 18, 19, 20]]
 Hill climbing generator number of patterns: 14
 Hill climbing generator total PDB size: 1685860
-Hill climbing generator computation time: 8.8044s
+Hill climbing generator computation time: 8.6345s
 Running dominance pruning...
 Pruned 12 of 13 pattern cliques
 Pruned 13 of 14 PDBs
-Dominance pruning took 1.0133e-05s
+Dominance pruning took 1.0333e-05s
 Canonical PDB heuristic number of patterns: 1
 Canonical PDB heuristic total PDB size: 802816
-Canonical PDB heuristic computation time: 8.8047s
-Building successor generator...done! [t=8.81217s]
+Canonical PDB heuristic computation time: 8.63483s
+Building successor generator...done! [t=8.6423s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 6.274e-05s
+time for successor generation creation: 6.6305e-05s
 Variables: 21
 FactPairs: 80
 Bytes per state: 8
 Conducting best first search (real) bound = 2147483647
-Building match tree...
-5=0 16=0  | 5=1 12=0 16=1 
-5=0 16=0 12=1  | 5=1 12=0 16=1 
-9=0 16=0  | 9=1 12=0 16=4 
-9=0 16=0 12=1  | 9=1 12=0 16=4 
-12=0 16=1  | 5=0 12=1 16=0 
-12=0 16=1 5=1  | 5=0 12=1 16=0 
-13=0 16=1  | 5=0 13=1 16=2 
-13=0 16=1 5=1  | 5=0 13=1 16=2 
-5=0 16=2  | 5=1 13=0 16=1 
-5=0 16=2 13=1  | 5=1 13=0 16=1 
-4=0 16=2  | 4=1 13=0 16=3 
-4=0 16=2 13=1  | 4=1 13=0 16=3 
-11=0 16=2  | 11=1 13=0 16=5 
-11=0 16=2 13=1  | 11=1 13=0 16=5 
-13=0 16=3  | 4=0 13=1 16=2 
-13=0 16=3 4=1  | 4=0 13=1 16=2 
-1=0 16=3  | 1=1 4=0 16=6 
-1=0 16=3 4=1  | 1=1 4=0 16=6 
-12=0 16=4  | 9=0 12=1 16=0 
-12=0 16=4 9=1  | 9=0 12=1 16=0 
-16=4 17=0  | 9=0 16=7 17=1 
-16=4 17=0 9=1  | 9=0 16=7 17=1 
-13=0 16=5  | 11=0 13=1 16=2 
-13=0 16=5 11=1  | 11=0 13=1 16=2 
-1=0 16=5  | 1=1 11=0 16=6 
-1=0 16=5 11=1  | 1=1 11=0 16=6 
-16=5 18=0  | 11=0 16=9 18=1 
-16=5 18=0 11=1  | 11=0 16=9 18=1 
-4=0 16=6  | 1=0 4=1 16=3 
-4=0 16=6 1=1  | 1=0 4=1 16=3 
-11=0 16=6  | 1=0 11=1 16=5 
-11=0 16=6 1=1  | 1=0 11=1 16=5 
-6=0 16=6  | 1=0 6=1 16=10 
-6=0 16=6 1=1  | 1=0 6=1 16=10 
-9=0 16=7  | 9=1 16=4 17=0 
-9=0 16=7 17=1  | 9=1 16=4 17=0 
-7=0 16=7  | 7=1 16=8 17=0 
-7=0 16=7 17=1  | 7=1 16=8 17=0 
-8=0 16=7  | 8=1 16=11 17=0 
-8=0 16=7 17=1  | 8=1 16=11 17=0 
-16=8 17=0  | 7=0 16=7 17=1 
-16=8 17=0 7=1  | 7=0 16=7 17=1 
-16=8 18=0  | 7=0 16=9 18=1 
-16=8 18=0 7=1  | 7=0 16=9 18=1 
-11=0 16=9  | 11=1 16=5 18=0 
-11=0 16=9 18=1  | 11=1 16=5 18=0 
-7=0 16=9  | 7=1 16=8 18=0 
-7=0 16=9 18=1  | 7=1 16=8 18=0 
-6=0 16=9  | 6=1 16=10 18=0 
-6=0 16=9 18=1  | 6=1 16=10 18=0 
-10=0 16=9  | 10=1 16=12 18=0 
-10=0 16=9 18=1  | 10=1 16=12 18=0 
-1=0 16=10  | 1=1 6=0 16=6 
-1=0 16=10 6=1  | 1=1 6=0 16=6 
-16=10 18=0  | 6=0 16=9 18=1 
-16=10 18=0 6=1  | 6=0 16=9 18=1 
-16=11 17=0  | 8=0 16=7 17=1 
-16=11 17=0 8=1  | 8=0 16=7 17=1 
-2=0 16=11  | 2=1 8=0 16=13 
-2=0 16=11 8=1  | 2=1 8=0 16=13 
-16=12 18=0  | 10=0 16=9 18=1 
-16=12 18=0 10=1  | 10=0 16=9 18=1 
-3=0 16=12  | 3=1 10=0 16=15 
-3=0 16=12 10=1  | 3=1 10=0 16=15 
-8=0 16=13  | 2=0 8=1 16=11 
-8=0 16=13 2=1  | 2=0 8=1 16=11 
-0=0 16=13  | 0=1 2=0 16=14 
-0=0 16=13 2=1  | 0=1 2=0 16=14 
-2=0 16=14  | 0=0 2=1 16=13 
-2=0 16=14 0=1  | 0=0 2=1 16=13 
-3=0 16=14  | 0=0 3=1 16=15 
-3=0 16=14 0=1  | 0=0 3=1 16=15 
-10=0 16=15  | 3=0 10=1 16=12 
-10=0 16=15 3=1  | 3=0 10=1 16=12 
-0=0 16=15  | 0=1 3=0 16=14 
-0=0 16=15 3=1  | 0=1 3=0 16=14 
-13=0 14=1 16=0  | 12=0 13=1 14=2 16=1 20=0 
-13=0 14=1 16=0 20=1  | 12=0 13=1 14=2 16=1 20=0 
-13=0 14=1 16=0 12=1  | 12=0 13=1 14=2 16=1 20=0 
-13=0 14=1 16=0 12=1 20=1  | 12=0 13=1 14=2 16=1 20=0 
-10=0 14=8 16=5  | 10=1 11=0 14=11 16=9 20=0 
-10=0 14=8 16=5 20=1  | 10=1 11=0 14=11 16=9 20=0 
-10=0 14=8 16=5 11=1  | 10=1 11=0 14=11 16=9 20=0 
-10=0 14=8 16=5 11=1 20=1  | 10=1 11=0 14=11 16=9 20=0 
-13=0 14=5 16=9  | 13=1 14=2 16=5 18=0 20=0 
-13=0 14=5 16=9 20=1  | 13=1 14=2 16=5 18=0 20=0 
-13=0 14=5 16=9 18=1  | 13=1 14=2 16=5 18=0 20=0 
-13=0 14=5 16=9 18=1 20=1  | 13=1 14=2 16=5 18=0 20=0 
-13=0 15=1 16=0  | 12=0 13=1 15=2 16=1 19=0 
-13=0 15=1 16=0 19=1  | 12=0 13=1 15=2 16=1 19=0 
-13=0 15=1 16=0 12=1  | 12=0 13=1 15=2 16=1 19=0 
-13=0 15=1 16=0 12=1 19=1  | 12=0 13=1 15=2 16=1 19=0 
-10=0 15=8 16=5  | 10=1 11=0 15=11 16=9 19=0 
-10=0 15=8 16=5 19=1  | 10=1 11=0 15=11 16=9 19=0 
-10=0 15=8 16=5 11=1  | 10=1 11=0 15=11 16=9 19=0 
-10=0 15=8 16=5 11=1 19=1  | 10=1 11=0 15=11 16=9 19=0 
-13=0 15=5 16=9  | 13=1 15=2 16=5 18=0 19=0 
-13=0 15=5 16=9 19=1  | 13=1 15=2 16=5 18=0 19=0 
-13=0 15=5 16=9 18=1  | 13=1 15=2 16=5 18=0 19=0 
-13=0 15=5 16=9 18=1 19=1  | 13=1 15=2 16=5 18=0 19=0 
-14=4 16=0 17=0 20=0  | 12=0 14=6 16=4 17=1 20=1 
-14=4 16=0 17=0  | 12=0 14=6 16=4 17=1 20=1 
-14=4 16=0 17=0 12=1 20=0  | 12=0 14=6 16=4 17=1 20=1 
-14=4 16=0 17=0 12=1  | 12=0 14=6 16=4 17=1 20=1 
-4=0 14=2 16=1 20=0  | 4=1 5=0 14=3 16=2 20=1 
-4=0 14=2 16=1  | 4=1 5=0 14=3 16=2 20=1 
-4=0 14=2 16=1 5=1 20=0  | 4=1 5=0 14=3 16=2 20=1 
-4=0 14=2 16=1 5=1  | 4=1 5=0 14=3 16=2 20=1 
-12=0 14=1 16=2 20=0  | 12=1 13=0 14=0 16=1 20=1 
-12=0 14=1 16=2  | 12=1 13=0 14=0 16=1 20=1 
-12=0 14=1 16=2 13=1 20=0  | 12=1 13=0 14=0 16=1 20=1 
-12=0 14=1 16=2 13=1  | 12=1 13=0 14=0 16=1 20=1 
-14=5 16=2 18=0 20=0  | 13=0 14=8 16=5 18=1 20=1 
-14=5 16=2 18=0  | 13=0 14=8 16=5 18=1 20=1 
-14=5 16=2 18=0 13=1 20=0  | 13=0 14=8 16=5 18=1 20=1 
-14=5 16=2 18=0 13=1  | 13=0 14=8 16=5 18=1 20=1 
-5=0 14=2 16=3 20=0  | 4=0 5=1 14=1 16=2 20=1 
-5=0 14=2 16=3  | 4=0 5=1 14=1 16=2 20=1 
-5=0 14=2 16=3 4=1 20=0  | 4=0 5=1 14=1 16=2 20=1 
-5=0 14=2 16=3 4=1  | 4=0 5=1 14=1 16=2 20=1 
-8=0 14=6 16=4 20=0  | 8=1 9=0 14=10 16=7 20=1 
-8=0 14=6 16=4  | 8=1 9=0 14=10 16=7 20=1 
-8=0 14=6 16=4 9=1 20=0  | 8=1 9=0 14=10 16=7 20=1 
-8=0 14=6 16=4 9=1  | 8=1 9=0 14=10 16=7 20=1 
-12=0 14=4 16=7 20=0  | 12=1 14=0 16=4 17=0 20=1 
-12=0 14=4 16=7  | 12=1 14=0 16=4 17=0 20=1 
-12=0 14=4 16=7 17=1 20=0  | 12=1 14=0 16=4 17=0 20=1 
-12=0 14=4 16=7 17=1  | 12=1 14=0 16=4 17=0 20=1 
-14=7 16=7 18=0 20=0  | 14=8 16=8 17=0 18=1 20=1 
-14=7 16=7 18=0  | 14=8 16=8 17=0 18=1 20=1 
-14=7 16=7 18=0 17=1 20=0  | 14=8 16=8 17=0 18=1 20=1 
-14=7 16=7 18=0 17=1  | 14=8 16=8 17=0 18=1 20=1 
-2=0 14=10 16=7 20=0  | 2=1 14=12 16=11 17=0 20=1 
-2=0 14=10 16=7  | 2=1 14=12 16=11 17=0 20=1 
-2=0 14=10 16=7 17=1 20=0  | 2=1 14=12 16=11 17=0 20=1 
-2=0 14=10 16=7 17=1  | 2=1 14=12 16=11 17=0 20=1 
-6=0 14=8 16=8 20=0  | 6=1 7=0 14=9 16=9 20=1 
-6=0 14=8 16=8  | 6=1 7=0 14=9 16=9 20=1 
-6=0 14=8 16=8 7=1 20=0  | 6=1 7=0 14=9 16=9 20=1 
-6=0 14=8 16=8 7=1  | 6=1 7=0 14=9 16=9 20=1 
-14=7 16=9 17=0 20=0  | 14=6 16=8 17=1 18=0 20=1 
-14=7 16=9 17=0  | 14=6 16=8 17=1 18=0 20=1 
-14=7 16=9 17=0 18=1 20=0  | 14=6 16=8 17=1 18=0 20=1 
-14=7 16=9 17=0 18=1  | 14=6 16=8 17=1 18=0 20=1 
-3=0 14=11 16=9 20=0  | 3=1 14=13 16=12 18=0 20=1 
-3=0 14=11 16=9  | 3=1 14=13 16=12 18=0 20=1 
-3=0 14=11 16=9 18=1 20=0  | 3=1 14=13 16=12 18=0 20=1 
-3=0 14=11 16=9 18=1  | 3=1 14=13 16=12 18=0 20=1 
-7=0 14=8 16=10 20=0  | 6=0 7=1 14=7 16=9 20=1 
-7=0 14=8 16=10  | 6=0 7=1 14=7 16=9 20=1 
-7=0 14=8 16=10 6=1 20=0  | 6=0 7=1 14=7 16=9 20=1 
-7=0 14=8 16=10 6=1  | 6=0 7=1 14=7 16=9 20=1 
-9=0 14=6 16=11 20=0  | 8=0 9=1 14=4 16=7 20=1 
-9=0 14=6 16=11  | 8=0 9=1 14=4 16=7 20=1 
-9=0 14=6 16=11 8=1 20=0  | 8=0 9=1 14=4 16=7 20=1 
-9=0 14=6 16=11 8=1  | 8=0 9=1 14=4 16=7 20=1 
-11=0 14=8 16=12 20=0  | 10=0 11=1 14=5 16=9 20=1 
-11=0 14=8 16=12  | 10=0 11=1 14=5 16=9 20=1 
-11=0 14=8 16=12 10=1 20=0  | 10=0 11=1 14=5 16=9 20=1 
-11=0 14=8 16=12 10=1  | 10=0 11=1 14=5 16=9 20=1 
-14=10 16=13 17=0 20=0  | 2=0 14=6 16=11 17=1 20=1 
-14=10 16=13 17=0  | 2=0 14=6 16=11 17=1 20=1 
-14=10 16=13 17=0 2=1 20=0  | 2=0 14=6 16=11 17=1 20=1 
-14=10 16=13 17=0 2=1  | 2=0 14=6 16=11 17=1 20=1 
-14=11 16=15 18=0 20=0  | 3=0 14=8 16=12 18=1 20=1 
-14=11 16=15 18=0  | 3=0 14=8 16=12 18=1 20=1 
-14=11 16=15 18=0 3=1 20=0  | 3=0 14=8 16=12 18=1 20=1 
-14=11 16=15 18=0 3=1  | 3=0 14=8 16=12 18=1 20=1 
-15=4 16=0 17=0 19=0  | 12=0 15=6 16=4 17=1 19=1 
-15=4 16=0 17=0  | 12=0 15=6 16=4 17=1 19=1 
-15=4 16=0 17=0 12=1 19=0  | 12=0 15=6 16=4 17=1 19=1 
-15=4 16=0 17=0 12=1  | 12=0 15=6 16=4 17=1 19=1 
-4=0 15=2 16=1 19=0  | 4=1 5=0 15=3 16=2 19=1 
-4=0 15=2 16=1  | 4=1 5=0 15=3 16=2 19=1 
-4=0 15=2 16=1 5=1 19=0  | 4=1 5=0 15=3 16=2 19=1 
-4=0 15=2 16=1 5=1  | 4=1 5=0 15=3 16=2 19=1 
-12=0 15=1 16=2 19=0  | 12=1 13=0 15=0 16=1 19=1 
-12=0 15=1 16=2  | 12=1 13=0 15=0 16=1 19=1 
-12=0 15=1 16=2 13=1 19=0  | 12=1 13=0 15=0 16=1 19=1 
-12=0 15=1 16=2 13=1  | 12=1 13=0 15=0 16=1 19=1 
-15=5 16=2 18=0 19=0  | 13=0 15=8 16=5 18=1 19=1 
-15=5 16=2 18=0  | 13=0 15=8 16=5 18=1 19=1 
-15=5 16=2 18=0 13=1 19=0  | 13=0 15=8 16=5 18=1 19=1 
-15=5 16=2 18=0 13=1  | 13=0 15=8 16=5 18=1 19=1 
-5=0 15=2 16=3 19=0  | 4=0 5=1 15=1 16=2 19=1 
-5=0 15=2 16=3  | 4=0 5=1 15=1 16=2 19=1 
-5=0 15=2 16=3 4=1 19=0  | 4=0 5=1 15=1 16=2 19=1 
-5=0 15=2 16=3 4=1  | 4=0 5=1 15=1 16=2 19=1 
-8=0 15=6 16=4 19=0  | 8=1 9=0 15=10 16=7 19=1 
-8=0 15=6 16=4  | 8=1 9=0 15=10 16=7 19=1 
-8=0 15=6 16=4 9=1 19=0  | 8=1 9=0 15=10 16=7 19=1 
-8=0 15=6 16=4 9=1  | 8=1 9=0 15=10 16=7 19=1 
-12=0 15=4 16=7 19=0  | 12=1 15=0 16=4 17=0 19=1 
-12=0 15=4 16=7  | 12=1 15=0 16=4 17=0 19=1 
-12=0 15=4 16=7 17=1 19=0  | 12=1 15=0 16=4 17=0 19=1 
-12=0 15=4 16=7 17=1  | 12=1 15=0 16=4 17=0 19=1 
-15=7 16=7 18=0 19=0  | 15=8 16=8 17=0 18=1 19=1 
-15=7 16=7 18=0  | 15=8 16=8 17=0 18=1 19=1 
-15=7 16=7 18=0 17=1 19=0  | 15=8 16=8 17=0 18=1 19=1 
-15=7 16=7 18=0 17=1  | 15=8 16=8 17=0 18=1 19=1 
-2=0 15=10 16=7 19=0  | 2=1 15=12 16=11 17=0 19=1 
-2=0 15=10 16=7  | 2=1 15=12 16=11 17=0 19=1 
-2=0 15=10 16=7 17=1 19=0  | 2=1 15=12 16=11 17=0 19=1 
-2=0 15=10 16=7 17=1  | 2=1 15=12 16=11 17=0 19=1 
-6=0 15=8 16=8 19=0  | 6=1 7=0 15=9 16=9 19=1 
-6=0 15=8 16=8  | 6=1 7=0 15=9 16=9 19=1 
-6=0 15=8 16=8 7=1 19=0  | 6=1 7=0 15=9 16=9 19=1 
-6=0 15=8 16=8 7=1  | 6=1 7=0 15=9 16=9 19=1 
-15=7 16=9 17=0 19=0  | 15=6 16=8 17=1 18=0 19=1 
-15=7 16=9 17=0  | 15=6 16=8 17=1 18=0 19=1 
-15=7 16=9 17=0 18=1 19=0  | 15=6 16=8 17=1 18=0 19=1 
-15=7 16=9 17=0 18=1  | 15=6 16=8 17=1 18=0 19=1 
-3=0 15=11 16=9 19=0  | 3=1 15=13 16=12 18=0 19=1 
-3=0 15=11 16=9  | 3=1 15=13 16=12 18=0 19=1 
-3=0 15=11 16=9 18=1 19=0  | 3=1 15=13 16=12 18=0 19=1 
-3=0 15=11 16=9 18=1  | 3=1 15=13 16=12 18=0 19=1 
-7=0 15=8 16=10 19=0  | 6=0 7=1 15=7 16=9 19=1 
-7=0 15=8 16=10  | 6=0 7=1 15=7 16=9 19=1 
-7=0 15=8 16=10 6=1 19=0  | 6=0 7=1 15=7 16=9 19=1 
-7=0 15=8 16=10 6=1  | 6=0 7=1 15=7 16=9 19=1 
-9=0 15=6 16=11 19=0  | 8=0 9=1 15=4 16=7 19=1 
-9=0 15=6 16=11  | 8=0 9=1 15=4 16=7 19=1 
-9=0 15=6 16=11 8=1 19=0  | 8=0 9=1 15=4 16=7 19=1 
-9=0 15=6 16=11 8=1  | 8=0 9=1 15=4 16=7 19=1 
-11=0 15=8 16=12 19=0  | 10=0 11=1 15=5 16=9 19=1 
-11=0 15=8 16=12  | 10=0 11=1 15=5 16=9 19=1 
-11=0 15=8 16=12 10=1 19=0  | 10=0 11=1 15=5 16=9 19=1 
-11=0 15=8 16=12 10=1  | 10=0 11=1 15=5 16=9 19=1 
-15=10 16=13 17=0 19=0  | 2=0 15=6 16=11 17=1 19=1 
-15=10 16=13 17=0  | 2=0 15=6 16=11 17=1 19=1 
-15=10 16=13 17=0 2=1 19=0  | 2=0 15=6 16=11 17=1 19=1 
-15=10 16=13 17=0 2=1  | 2=0 15=6 16=11 17=1 19=1 
-15=11 16=15 18=0 19=0  | 3=0 15=8 16=12 18=1 19=1 
-15=11 16=15 18=0  | 3=0 15=8 16=12 18=1 19=1 
-15=11 16=15 18=0 3=1 19=0  | 3=0 15=8 16=12 18=1 19=1 
-15=11 16=15 18=0 3=1  | 3=0 15=8 16=12 18=1 19=1 
+Building reverse operators...
+Variable 19 not mentioned in preconditions.
+Variable 20 not mentioned in preconditions.
+Created 236 reverse operators.
+Built match tree.
 19=0 20=0 
 Inserting initial (goal) state...
 New best h: 0 (iteration 0)
-New best heuristic value for abstract(ipdb): 0
-[g=1, 0 evaluated, 1 expanded, t=8.81378s, 365804 KB]
 New undef count: 16
-New best h: 1 (iteration 77)
 New undef count: 15
+New best h: 1 (iteration 77)
 New undef count: 14
 New undef count: 13
 New undef count: 12
 New undef count: 11
 New undef count: 10
-New undef count: 9
-New undef count: 8
 New undef count: 7
 New undef count: 6
 New undef count: 5
+New undef count: 4
 New undef count: 3
 New undef count: 2
 New undef count: 1
-Last undef var: 3
-New undef count: 0
+Last undef var: 6
 Found first concrete state.
-New best h: 6 (iteration 432)
-New best h: 7 (iteration 435)
-New best h: 10 (iteration 768)
-New best h: 11 (iteration 769)
-New best h: 12 (iteration 1506)
-New best h: 13 (iteration 1507)
-New best h: 16 (iteration 2066)
-New best h: 17 (iteration 2069)
-New best h: 18 (iteration 2093)
-New best h: 19 (iteration 2469)
-New best h: 20 (iteration 2474)
-New best h: 21 (iteration 2626)
-New best h: 22 (iteration 2628)
-New best h: 23 (iteration 246519)
-New best h: 24 (iteration 247262)
-New best h: 29 (iteration 248695)
-New best h: 30 (iteration 248698)
-New best h: 31 (iteration 248700)
-New best h: 32 (iteration 249470)
-New best h: 33 (iteration 257045)
-New best h: 34 (iteration 257047)
-New best h: 35 (iteration 257131)
-New best h: 36 (iteration 257133)
-New best h: 37 (iteration 257195)
-New best h: 38 (iteration 257199)
-New best h: 39 (iteration 257977)
-New best h: 40 (iteration 257979)
-New best h: 41 (iteration 258187)
-New best h: 42 (iteration 258189)
-New best h: 43 (iteration 258194)
-New best h: 44 (iteration 258197)
-New best h: 45 (iteration 258201)
-New best h: 46 (iteration 258204)
-New best h: 47 (iteration 258206)
-New best h: 48 (iteration 258209)
-New best h: 49 (iteration 258219)
-New best h: 50 (iteration 258221)
-New best h: 51 (iteration 258224)
+New best h: 6 (iteration 180)
+New undef count: 0
+New best h: 7 (iteration 194)
+New best h: 8 (iteration 2410)
+New best h: 9 (iteration 2426)
+New best h: 10 (iteration 2432)
+New best h: 11 (iteration 2434)
+New best h: 12 (iteration 6886)
+New best h: 13 (iteration 6888)
+New best h: 16 (iteration 9826)
+New best h: 17 (iteration 9828)
+New best h: 18 (iteration 9832)
+New best h: 19 (iteration 9840)
+New best h: 20 (iteration 9994)
+New best h: 21 (iteration 10036)
+New best h: 22 (iteration 10038)
+New best h: 23 (iteration 137038)
+New best h: 24 (iteration 137084)
+New best h: 25 (iteration 137086)
+New best h: 26 (iteration 137088)
+New best h: 27 (iteration 137318)
+New best h: 28 (iteration 137320)
+New best h: 29 (iteration 137378)
+New best h: 30 (iteration 137380)
+New best h: 31 (iteration 137384)
+New best h: 32 (iteration 137386)
+New best h: 33 (iteration 137388)
+New best h: 34 (iteration 137390)
+New best h: 35 (iteration 137444)
+New best h: 36 (iteration 137446)
+New best h: 37 (iteration 137482)
+New best h: 38 (iteration 137484)
+New best h: 39 (iteration 137936)
+New best h: 40 (iteration 137938)
+New best h: 41 (iteration 138074)
+New best h: 42 (iteration 138076)
+New best h: 43 (iteration 138080)
+New best h: 44 (iteration 138082)
+New best h: 45 (iteration 138084)
+New best h: 46 (iteration 138086)
+New best h: 47 (iteration 138088)
+New best h: 48 (iteration 138090)
+New best h: 49 (iteration 138098)
+New best h: 50 (iteration 138100)
+New best h: 51 (iteration 138102)
 Completely explored state space.
-Actual search time: 25.3694s [t=34.1832s]
+Actual search time: 10.9491s [t=19.5919s]
 Original state h-value: 51
 New state h-value: 51
-Expanded 4710579 state(s).
+Expanded 1937015 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 4710578
-Generated 13353698 state(s).
+Evaluations: 3874029
+Generated 4839126 state(s).
 Dead ends: 0 state(s).
-Number of registered states: 4710579
-Int hash set load factor: 4710579/8388608 = 0.561545
-Int hash set resizes: 23
-Search time: 25.3708s
-Total time: 34.1832s
+Number of registered states: 1937015
+Int hash set load factor: 1937015/4194304 = 0.46182
+Int hash set resizes: 22
+Search time: 10.9494s
+Total time: 19.5919s
 Solution found.
-Peak memory: 850480 KB
+Peak memory: 464592 KB
 search exit code: 0
 

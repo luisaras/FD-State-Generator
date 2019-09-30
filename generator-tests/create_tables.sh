@@ -2,8 +2,12 @@
 table() 
 {
     TASK=$1
-    
+    if [ -f ${TASK}.dat ]; then
+        rm ${TASK}.dat
+    fi
+
     for i in $(seq -w 1 10); do
+
         GEN_OUTPUT=${TASK}/${i}_gen.txt
         PLAN_OUTPUT=${TASK}/${i}_plan.txt
 
@@ -14,17 +18,19 @@ table()
         H_NEW=$(cat ${GEN_OUTPUT} | grep "New state h\-value" | tr -d "New state h\-value: ")
         LENGTH=$(cat ${PLAN_OUTPUT} | grep "Plan length" | tr -d "Plan length: " | tr -d " step(s).")
 
-        if ! [[ -z "${LENGTH}" ]];
+        if ! [[ -z ${LENGTH} ]];
         then
-        	echo "$LENGTH	$H_OLD	$H_NEW	$EXPANDED	$SEARCH_TIME	$TOTAL_TIME" >> "${TASK}.dat"
+        	echo "$LENGTH	$H_OLD	$H_NEW	$EXPANDED	$SEARCH_TIME	$TOTAL_TIME" >> ${TASK}.dat
         else
-        	echo "-	$H_OLD	$H_NEW	$EXPANDED	$SEARCH_TIME	$TOTAL_TIME" >> "${TASK}.dat"
+        	echo "-	$H_OLD	$H_NEW	$EXPANDED	$SEARCH_TIME	$TOTAL_TIME" >> ${TASK}.dat
         fi
         
     done
 }
 
-rm *.dat
-table sokoban
-table blocks
-#table airport
+table lmcut/sokoban
+table lmcut/blocks
+table lmcut/airport
+table ipdb/sokoban
+table ipdb/blocks
+table ipdb/airport

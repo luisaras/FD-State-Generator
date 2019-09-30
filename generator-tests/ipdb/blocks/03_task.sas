@@ -582,7 +582,7 @@ begin_mutex_group
 7 3
 end_mutex_group
 begin_state
-0 0 0 0 0 0 2 4 4 
+0 0 0 0 0 0 3 1 4 
 end_state
 begin_goal
 3

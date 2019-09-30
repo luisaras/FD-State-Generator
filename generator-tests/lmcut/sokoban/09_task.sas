@@ -4830,7 +4830,7 @@ begin_mutex_group
 36 28
 end_mutex_group
 begin_state
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 6 0 11 0 0 8 16 31 1 1 0 1 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10 0 16 0 0 11 24 5 1 0 0 1 
 end_state
 begin_goal
 4
