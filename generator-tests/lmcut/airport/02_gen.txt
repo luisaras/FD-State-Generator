@@ -3,12 +3,12 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/airport/02_task.sas --search 'generator_abstract(lmcut(), max_it=20000000, max_time=600)'
-reading input... [t=0.000118669s]
-done reading input! [t=0.00118501s]
+reading input... [t=0.000117883s]
+done reading input! [t=0.00119458s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.00724869s]
+Building successor generator...done! [t=0.00718529s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0.000181403s
+time for successor generation creation: 0.00018494s
 Variables: 29
 FactPairs: 73
 Bytes per state: 8
@@ -20,43 +20,53 @@ Built match tree.
 Inserting initial (goal) state...
 New best h: 1 (iteration 0)
 New undef count: 23
+New best h: 2 (iteration 8)
 New undef count: 21
+New best h: 3 (iteration 12)
 New undef count: 20
 New undef count: 19
+New best h: 4 (iteration 26)
 New undef count: 18
 New undef count: 17
+New best h: 5 (iteration 42)
 New undef count: 16
 New undef count: 14
+New best h: 6 (iteration 62)
 New undef count: 12
 New undef count: 11
+New best h: 7 (iteration 92)
 New undef count: 10
 New undef count: 9
+New best h: 8 (iteration 116)
 New undef count: 8
 New undef count: 7
+New best h: 9 (iteration 144)
 New undef count: 6
 New undef count: 5
+New best h: 10 (iteration 160)
 New undef count: 4
 New undef count: 3
+New best h: 11 (iteration 190)
 New undef count: 2
+New best h: 11 (iteration 478)
 Found first concrete state.
-New best h: 9 (iteration 395)
 New undef count: 0
 Completely explored state space.
-Actual search time: 0.0134327s [t=0.0223329s]
+Actual search time: 0.0613976s [t=0.0703729s]
 Original state h-value: 9
-New state h-value: 9
-Expanded 606 state(s).
+New state h-value: 11
+Expanded 626 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 1212
-Generated 616 state(s).
+Evaluations: 1068
+Generated 652 state(s).
 Dead ends: 0 state(s).
-Number of registered states: 607
-Int hash set load factor: 607/1024 = 0.592773
-Int hash set resizes: 10
-Search time: 0.0145568s
-Total time: 0.0223609s
+Number of registered states: 1061
+Int hash set load factor: 1061/2048 = 0.518066
+Int hash set resizes: 11
+Search time: 0.0626488s
+Total time: 0.0704004s
 Solution found.
-Peak memory: 211832 KB
+Peak memory: 211968 KB
 search exit code: 0
 

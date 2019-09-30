@@ -3,12 +3,12 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/sokoban/01_task.sas --search 'generator_abstract(lmcut(), max_it=20000000, max_time=600)'
-reading input... [t=0.000118433s]
-done reading input! [t=0.00205241s]
+reading input... [t=0.000117244s]
+done reading input! [t=0.00208288s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.00844945s]
+Building successor generator...done! [t=0.00847576s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0.000328799s
+time for successor generation creation: 0.000331503s
 Variables: 28
 FactPairs: 111
 Bytes per state: 12
@@ -20,10 +20,9 @@ Created 336 reverse operators.
 Built match tree.
 26=0 27=0 
 Inserting initial (goal) state...
-New best h: 0 (iteration 0)
+New best h: 19 (iteration 0)
 New undef count: 23
 New undef count: 22
-New best h: 1 (iteration 121)
 New undef count: 21
 New undef count: 20
 New undef count: 19
@@ -34,7 +33,6 @@ New undef count: 15
 New undef count: 14
 New undef count: 13
 New undef count: 12
-New undef count: 11
 New undef count: 10
 New undef count: 9
 New undef count: 8
@@ -45,40 +43,25 @@ New undef count: 4
 New undef count: 3
 New undef count: 2
 New undef count: 1
-Last undef var: 21
-Found first concrete state.
-New best h: 6 (iteration 16340)
+Last undef var: 16
 New undef count: 0
-New best h: 7 (iteration 16346)
-New best h: 8 (iteration 16379)
-New best h: 9 (iteration 16385)
-New best h: 10 (iteration 16391)
-New best h: 11 (iteration 16397)
-New best h: 12 (iteration 16401)
-New best h: 13 (iteration 16407)
-New best h: 14 (iteration 36602)
-New best h: 15 (iteration 36606)
-New best h: 16 (iteration 38057)
-New best h: 17 (iteration 38059)
-New best h: 18 (iteration 38061)
-New best h: 19 (iteration 40875)
-New best h: 20 (iteration 40879)
+Found first concrete state.
 Reached iteration limit.
-Actual search time: 135.296s [t=135.307s]
+Actual search time: 157.408s [t=157.419s]
 Original state h-value: 19
-New state h-value: 20
-Expanded 19896689 state(s).
+New state h-value: 19
+Expanded 19999441 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 40000001
-Generated 51943029 state(s).
+Evaluations: 20636416
+Generated 52110107 state(s).
 Dead ends: 0 state(s).
-Number of registered states: 20000002
-Int hash set load factor: 20000002/33554432 = 0.596047
+Number of registered states: 20597709
+Int hash set load factor: 20597709/33554432 = 0.61386
 Int hash set resizes: 25
-Search time: 135.298s
-Total time: 135.307s
+Search time: 157.41s
+Total time: 157.419s
 Solution found.
-Peak memory: 2909716 KB
+Peak memory: 3560868 KB
 search exit code: 0
 

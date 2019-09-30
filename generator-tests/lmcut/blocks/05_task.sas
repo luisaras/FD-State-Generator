@@ -1004,7 +1004,7 @@ begin_mutex_group
 9 4
 end_mutex_group
 begin_state
-0 1 0 0 0 0 0 2 5 1 1 
+1 0 1 0 0 0 0 3 2 3 4 
 end_state
 begin_goal
 4

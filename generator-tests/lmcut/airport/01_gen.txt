@@ -3,12 +3,12 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/airport/01_task.sas --search 'generator_abstract(lmcut(), max_it=20000000, max_time=600)'
-reading input... [t=0.000120272s]
-done reading input! [t=0.00106753s]
+reading input... [t=0.000116652s]
+done reading input! [t=0.000956455s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.00783916s]
+Building successor generator...done! [t=0.00684898s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0.000125284s
+time for successor generation creation: 0.000112626s
 Variables: 29
 FactPairs: 72
 Bytes per state: 8
@@ -21,37 +21,48 @@ Inserting initial (goal) state...
 New best h: 1 (iteration 0)
 New undef count: 26
 New undef count: 25
+New best h: 2 (iteration 3)
 New undef count: 20
+New best h: 3 (iteration 19)
 New undef count: 17
+New best h: 4 (iteration 35)
 New undef count: 15
+New best h: 5 (iteration 47)
 New undef count: 13
+New best h: 6 (iteration 55)
 New undef count: 11
+New best h: 7 (iteration 63)
 New undef count: 8
+New best h: 8 (iteration 79)
 New undef count: 6
+New best h: 9 (iteration 85)
 New undef count: 5
+New best h: 10 (iteration 95)
 New undef count: 3
+New best h: 11 (iteration 103)
 New undef count: 1
 Last undef var: 2
 Found first concrete state.
 New best h: 12 (iteration 111)
 New undef count: 0
 New best h: 13 (iteration 119)
+New best h: 13 (iteration 215)
 New best h: 14 (iteration 223)
 Completely explored state space.
-Actual search time: 0.0272294s [t=0.0367238s]
+Actual search time: 0.0344717s [t=0.0427624s]
 Original state h-value: 8
 New state h-value: 14
 Expanded 372 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 743
+Evaluations: 662
 Generated 379 state(s).
 Dead ends: 0 state(s).
-Number of registered states: 372
-Int hash set load factor: 372/512 = 0.726562
+Number of registered states: 471
+Int hash set load factor: 471/512 = 0.919922
 Int hash set resizes: 9
-Search time: 0.0282682s
-Total time: 0.0367565s
+Search time: 0.0353761s
+Total time: 0.0427898s
 Solution found.
 Peak memory: 211832 KB
 search exit code: 0

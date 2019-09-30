@@ -1,5 +1,5 @@
-DOMAIN="../pyperplan/benchmarks/airport/domain03.pddl"
-TASK="../pyperplan/benchmarks/airport/task03.pddl"
+DOMAIN="../pyperplan/benchmarks/airport/domain04.pddl"
+TASK="../pyperplan/benchmarks/airport/task04.pddl"
 
 IPDB="ipdb(min_improvement=100, collection_max_size=200000)"
 CPDB="cpdbs(patterns=systematic(4))"

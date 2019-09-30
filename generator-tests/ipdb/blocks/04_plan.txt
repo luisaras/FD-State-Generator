@@ -3,64 +3,73 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/ipdb/blocks/04_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
-reading input... [t=0.000128527s]
-done reading input! [t=0.00168754s]
+reading input... [t=0.000105622s]
+done reading input! [t=0.00170402s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.00746278s]
+Building successor generator...done! [t=0.00757893s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0.000136463s
+time for successor generation creation: 0.000141093s
 Variables: 11
 FactPairs: 42
 Bytes per state: 4
 Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-New best heuristic value for lmcut: 8
-[g=0, 1 evaluated, 0 expanded, t=0.00828904s, 211832 KB]
-f = 8 [1 evaluated, 0 expanded, t=0.00846947s, 211832 KB]
-Initial heuristic value for lmcut: 8
+New best heuristic value for lmcut: 9
+[g=0, 1 evaluated, 0 expanded, t=0.00843021s, 211832 KB]
+f = 9 [1 evaluated, 0 expanded, t=0.00861057s, 211832 KB]
+Initial heuristic value for lmcut: 9
 pruning method: none
+New best heuristic value for lmcut: 8
+[g=1, 2 evaluated, 1 expanded, t=0.00894781s, 211832 KB]
+f = 10 [6 evaluated, 2 expanded, t=0.00957546s, 211832 KB]
+f = 11 [13 evaluated, 5 expanded, t=0.0105802s, 211832 KB]
+f = 12 [40 evaluated, 18 expanded, t=0.013716s, 211832 KB]
 New best heuristic value for lmcut: 7
-[g=1, 7 evaluated, 1 expanded, t=0.00917149s, 211832 KB]
+[g=5, 41 evaluated, 21 expanded, t=0.0140798s, 211832 KB]
 New best heuristic value for lmcut: 6
-[g=2, 20 evaluated, 3 expanded, t=0.0105514s, 211832 KB]
+[g=6, 67 evaluated, 35 expanded, t=0.017016s, 211832 KB]
 New best heuristic value for lmcut: 5
-[g=3, 30 evaluated, 4 expanded, t=0.0116887s, 211832 KB]
+[g=7, 71 evaluated, 36 expanded, t=0.0176098s, 211832 KB]
 New best heuristic value for lmcut: 4
-[g=4, 73 evaluated, 10 expanded, t=0.0155897s, 211832 KB]
+[g=8, 78 evaluated, 38 expanded, t=0.0183857s, 211832 KB]
 New best heuristic value for lmcut: 3
-[g=5, 81 evaluated, 11 expanded, t=0.0164352s, 211832 KB]
+[g=9, 80 evaluated, 39 expanded, t=0.0187784s, 211832 KB]
 New best heuristic value for lmcut: 2
-[g=6, 107 evaluated, 15 expanded, t=0.0183935s, 211832 KB]
+[g=10, 85 evaluated, 41 expanded, t=0.0193243s, 211832 KB]
 New best heuristic value for lmcut: 1
-[g=7, 112 evaluated, 16 expanded, t=0.0189208s, 211832 KB]
+[g=11, 87 evaluated, 42 expanded, t=0.0196801s, 211832 KB]
 New best heuristic value for lmcut: 0
-[g=8, 117 evaluated, 17 expanded, t=0.0193594s, 211832 KB]
+[g=12, 88 evaluated, 43 expanded, t=0.019944s, 211832 KB]
 Solution found!
-Actual search time: 0.0109912s [t=0.0196723s]
+Actual search time: 0.0113713s [t=0.0201946s]
+op48) unstack e c (1)
+op26) stack e a (1)
+op39) unstack c b (1)
+op7) put-down c (1)
 op42) unstack d a (1)
 op24) stack d c (1)
 op1) pick-up b (1)
 op16) stack b d (1)
-op48) unstack e c (1)
+op46) unstack e a (1)
 op27) stack e b (1)
-op30) unstack a b (1)
+op0) pick-up a (1)
 op13) stack a e (1)
-Plan length: 8 step(s).
-Plan cost: 8
-Expanded 18 state(s).
+Plan length: 12 step(s).
+Plan cost: 12
+Expanded 44 state(s).
 Reopened 0 state(s).
-Evaluated 118 state(s).
-Evaluations: 118
-Generated 136 state(s).
+Evaluated 88 state(s).
+Evaluations: 88
+Generated 131 state(s).
 Dead ends: 0 state(s).
-Expanded until last jump: 0 state(s).
+Expanded until last jump: 18 state(s).
 Reopened until last jump: 0 state(s).
-Evaluated until last jump: 1 state(s).
-Generated until last jump: 0 state(s).
-Number of registered states: 118
-Int hash set load factor: 118/128 = 0.921875
+Evaluated until last jump: 40 state(s).
+Generated until last jump: 54 state(s).
+Number of registered states: 88
+Int hash set load factor: 88/128 = 0.6875
 Int hash set resizes: 7
-Search time: 0.0116886s
-Total time: 0.0197062s
+Search time: 0.0120913s
+Total time: 0.020227s
 Solution found.
 Peak memory: 211832 KB
 search exit code: 0

@@ -37,10 +37,10 @@ EvaluationResult AbstractHeuristic::compute_result(
         concrete_state_count++;
         return concrete_evaluator->compute_result(eval_context);
     } else {
-        //StateRegistry &state_registry = eval_context.get_state().get_registry();
-        //EvaluationContext new_eval_context(state_registry.get_state(values), eval_context.get_g_value(), false, nullptr);
-        //return concrete_evaluator->compute_result(new_eval_context);
-        return result;
+        StateRegistry &state_registry = eval_context.get_state().get_registry();
+        EvaluationContext new_eval_context(state_registry.get_state(values), eval_context.get_g_value(), false, nullptr);
+        return concrete_evaluator->compute_result(new_eval_context);
+        //return result;
     }
 }
 

@@ -3,13 +3,13 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/ipdb/blocks/02_task.sas --search 'generator_abstract(ipdb(), max_it=20000000, max_time=600)'
-reading input... [t=0.000116805s]
-done reading input! [t=0.000899664s]
+reading input... [t=0.000119616s]
+done reading input! [t=0.000882246s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0.00023153s
+Done calculating initial pattern collection: 0.000222476s
 Average operator cost: 1
-building causal graph...done! [t=0.000348547s]
+building causal graph...done! [t=0.000332352s]
 Done calculating initial candidate PDBs
 current collection size is 15
 current initial h value: 4
@@ -19,21 +19,21 @@ Hill climbing iterations: 1
 Hill climbing generated patterns: 15
 Hill climbing rejected patterns: 0
 Hill climbing maximum PDB size: 10
-Hill climbing time: 0.016724s
+Hill climbing time: 0.0169788s
 Hill climbing generator collection: [[6], [7], [8]]
 Hill climbing generator number of patterns: 3
 Hill climbing generator total PDB size: 15
-Hill climbing generator computation time: 0.0171529s
+Hill climbing generator computation time: 0.0174258s
 Running dominance pruning...
 Pruned 0 of 1 pattern cliques
 Pruned 0 of 3 PDBs
-Dominance pruning took 3.5726e-05s
+Dominance pruning took 4.3994e-05s
 Canonical PDB heuristic number of patterns: 3
 Canonical PDB heuristic total PDB size: 15
-Canonical PDB heuristic computation time: 0.017344s
-Building successor generator...done! [t=0.0244683s]
+Canonical PDB heuristic computation time: 0.0176506s
+Building successor generator...done! [t=0.0249926s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 9.6294e-05s
+time for successor generation creation: 0.000116193s
 Variables: 9
 FactPairs: 30
 Bytes per state: 4
@@ -43,35 +43,58 @@ Created 92 reverse operators.
 Built match tree.
 6=1 7=1 8=3 
 Inserting initial (goal) state...
-New best h: 0 (iteration 0)
+New best h: 4 (iteration 0)
 New undef count: 3
-New best h: 1 (iteration 5)
 New undef count: 2
 New undef count: 1
 Last undef var: 4
 Found first concrete state.
 New undef count: 0
-New best h: 2 (iteration 78)
-New best h: 3 (iteration 82)
-New best h: 4 (iteration 86)
-New best h: 5 (iteration 157)
-New best h: 6 (iteration 915)
+New best h: 4 (iteration 96)
+New best h: 5 (iteration 100)
+New best h: 5 (iteration 112)
+New best h: 5 (iteration 117)
+New best h: 5 (iteration 182)
+New best h: 5 (iteration 185)
+New best h: 5 (iteration 433)
+New best h: 6 (iteration 633)
+New best h: 6 (iteration 645)
+New best h: 6 (iteration 654)
+New best h: 6 (iteration 710)
+New best h: 6 (iteration 717)
+New best h: 6 (iteration 1403)
+New best h: 6 (iteration 1606)
+New best h: 6 (iteration 1608)
+New best h: 6 (iteration 1612)
+New best h: 6 (iteration 1639)
+New best h: 6 (iteration 1649)
+New best h: 6 (iteration 1656)
+New best h: 6 (iteration 1663)
+New best h: 6 (iteration 1676)
+New best h: 6 (iteration 1691)
+New best h: 6 (iteration 1705)
+New best h: 6 (iteration 1707)
+New best h: 6 (iteration 1720)
+New best h: 6 (iteration 1741)
+New best h: 6 (iteration 1917)
+New best h: 6 (iteration 4663)
+New best h: 6 (iteration 4848)
 Completely explored state space.
-Actual search time: 0.299543s [t=0.325173s]
+Actual search time: 0.306051s [t=0.332444s]
 Original state h-value: 4
 New state h-value: 6
-Expanded 13198 state(s).
+Expanded 13337 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 26395
-Generated 68010 state(s).
+Evaluations: 24564
+Generated 68612 state(s).
 Dead ends: 0 state(s).
-Number of registered states: 13198
-Int hash set load factor: 13198/16384 = 0.805542
+Number of registered states: 13416
+Int hash set load factor: 13416/16384 = 0.818848
 Int hash set resizes: 14
-Search time: 0.300213s
-Total time: 0.325201s
+Search time: 0.306859s
+Total time: 0.332474s
 Solution found.
-Peak memory: 214348 KB
+Peak memory: 214496 KB
 search exit code: 0
 

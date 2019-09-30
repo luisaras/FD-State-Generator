@@ -3,13 +3,13 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/ipdb/airport/02_task.sas --search 'generator_abstract(ipdb(), max_it=20000000, max_time=600)'
-reading input... [t=0.00011797s]
-done reading input! [t=0.00118417s]
+reading input... [t=0.000107461s]
+done reading input! [t=0.00115481s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0.000217408s
+Done calculating initial pattern collection: 0.000215471s
 Average operator cost: 1
-building causal graph...done! [t=0.00120039s]
+building causal graph...done! [t=0.0012169s]
 Done calculating initial candidate PDBs
 current collection size is 15
 current initial h value: 8
@@ -18,7 +18,7 @@ pattern: [25, 28] - improvement: 55
 pattern: [27, 28] - improvement: 813
 found a better pattern with improvement 813
 pattern: [27, 28]
-Hill climbing time so far: 0.0341842s
+Hill climbing time so far: 0.0289898s
 current collection size is 75
 current initial h value: 9
 pattern: [23, 28] - improvement: 12
@@ -30,7 +30,7 @@ pattern: [25, 27, 28] - improvement: 768
 pattern: [26, 27, 28] - improvement: 50
 found a better pattern with improvement 768
 pattern: [25, 27, 28]
-Hill climbing time so far: 0.0890691s
+Hill climbing time so far: 0.0840698s
 current collection size is 195
 current initial h value: 9
 Improvement below threshold. Stop hill climbing.
@@ -38,21 +38,21 @@ Hill climbing iterations: 3
 Hill climbing generated patterns: 81
 Hill climbing rejected patterns: 0
 Hill climbing maximum PDB size: 240
-Hill climbing time: 0.159897s
+Hill climbing time: 0.155059s
 Hill climbing generator collection: [[28], [27, 28], [25, 27, 28]]
 Hill climbing generator number of patterns: 3
 Hill climbing generator total PDB size: 195
-Hill climbing generator computation time: 0.160371s
+Hill climbing generator computation time: 0.155528s
 Running dominance pruning...
 Pruned 2 of 3 pattern cliques
 Pruned 2 of 3 PDBs
-Dominance pruning took 3.6844e-05s
+Dominance pruning took 3.6451e-05s
 Canonical PDB heuristic number of patterns: 1
 Canonical PDB heuristic total PDB size: 120
-Canonical PDB heuristic computation time: 0.160575s
-Building successor generator...done! [t=0.16819s]
+Canonical PDB heuristic computation time: 0.155732s
+Building successor generator...done! [t=0.163248s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0.000172793s
+time for successor generation creation: 0.000167885s
 Variables: 29
 FactPairs: 73
 Bytes per state: 8
@@ -64,42 +64,52 @@ Built match tree.
 Inserting initial (goal) state...
 New best h: 1 (iteration 0)
 New undef count: 23
+New best h: 2 (iteration 8)
 New undef count: 21
+New best h: 3 (iteration 12)
 New undef count: 20
 New undef count: 19
+New best h: 4 (iteration 26)
 New undef count: 18
 New undef count: 17
+New best h: 5 (iteration 42)
 New undef count: 16
 New undef count: 14
+New best h: 6 (iteration 62)
 New undef count: 12
 New undef count: 11
+New best h: 7 (iteration 92)
 New undef count: 10
 New undef count: 9
+New best h: 8 (iteration 116)
 New undef count: 8
 New undef count: 7
+New best h: 9 (iteration 144)
 New undef count: 6
 New undef count: 5
+New best h: 10 (iteration 160)
 New undef count: 4
 New undef count: 3
+New best h: 11 (iteration 190)
 New undef count: 2
+New best h: 11 (iteration 478)
 Found first concrete state.
-New best h: 9 (iteration 395)
 New undef count: 0
 Completely explored state space.
-Actual search time: 0.0125634s [t=0.182232s]
+Actual search time: 0.0142855s [t=0.179013s]
 Original state h-value: 9
-New state h-value: 9
-Expanded 606 state(s).
+New state h-value: 11
+Expanded 609 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 1212
+Evaluations: 969
 Generated 616 state(s).
 Dead ends: 0 state(s).
-Number of registered states: 607
-Int hash set load factor: 607/1024 = 0.592773
+Number of registered states: 962
+Int hash set load factor: 962/1024 = 0.939453
 Int hash set resizes: 10
-Search time: 0.0135422s
-Total time: 0.182262s
+Search time: 0.015265s
+Total time: 0.179042s
 Solution found.
 Peak memory: 212096 KB
 search exit code: 0

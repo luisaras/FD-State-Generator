@@ -3,12 +3,12 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/blocks/03_task.sas --search 'generator_abstract(lmcut(), max_it=20000000, max_time=600)'
-reading input... [t=0.000117393s]
-done reading input! [t=0.000894423s]
+reading input... [t=0.0001045s]
+done reading input! [t=0.00091103s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.00709262s]
+Building successor generator...done! [t=0.00802379s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0.000142436s
+time for successor generation creation: 0.000138081s
 Variables: 9
 FactPairs: 30
 Bytes per state: 4
@@ -18,36 +18,65 @@ Created 92 reverse operators.
 Built match tree.
 6=1 7=2 8=3 
 Inserting initial (goal) state...
-New best h: 0 (iteration 0)
+New best h: 6 (iteration 0)
 New undef count: 3
-New best h: 1 (iteration 5)
 New undef count: 2
 New undef count: 1
 Last undef var: 4
 Found first concrete state.
 New undef count: 0
-New best h: 2 (iteration 51)
-New best h: 3 (iteration 55)
-New best h: 4 (iteration 59)
-New best h: 5 (iteration 133)
-New best h: 6 (iteration 544)
-New best h: 7 (iteration 1562)
+New best h: 6 (iteration 490)
+New best h: 6 (iteration 501)
+New best h: 6 (iteration 507)
+New best h: 6 (iteration 513)
+New best h: 6 (iteration 519)
+New best h: 6 (iteration 528)
+New best h: 6 (iteration 745)
+New best h: 6 (iteration 757)
+New best h: 6 (iteration 782)
+New best h: 6 (iteration 791)
+New best h: 6 (iteration 978)
+New best h: 6 (iteration 993)
+New best h: 7 (iteration 3185)
+New best h: 7 (iteration 3189)
+New best h: 7 (iteration 3194)
+New best h: 7 (iteration 3198)
+New best h: 7 (iteration 3213)
+New best h: 7 (iteration 3216)
+New best h: 7 (iteration 3227)
+New best h: 7 (iteration 3228)
+New best h: 7 (iteration 3560)
+New best h: 7 (iteration 3561)
+New best h: 7 (iteration 3566)
+New best h: 7 (iteration 3571)
+New best h: 7 (iteration 3575)
+New best h: 7 (iteration 4580)
+New best h: 7 (iteration 4583)
+New best h: 7 (iteration 4588)
+New best h: 7 (iteration 4590)
+New best h: 7 (iteration 4597)
+New best h: 7 (iteration 4598)
+New best h: 7 (iteration 4601)
+New best h: 7 (iteration 4605)
+New best h: 7 (iteration 4877)
+New best h: 7 (iteration 4883)
+New best h: 7 (iteration 4884)
 Completely explored state space.
-Actual search time: 0.497978s [t=0.506576s]
+Actual search time: 0.500229s [t=0.509799s]
 Original state h-value: 6
 New state h-value: 7
-Expanded 16420 state(s).
+Expanded 16367 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 32839
-Generated 82871 state(s).
+Evaluations: 30715
+Generated 82096 state(s).
 Dead ends: 0 state(s).
-Number of registered states: 16420
-Int hash set load factor: 16420/32768 = 0.501099
+Number of registered states: 16408
+Int hash set load factor: 16408/32768 = 0.500732
 Int hash set resizes: 15
-Search time: 0.498822s
-Total time: 0.506586s
+Search time: 0.501121s
+Total time: 0.509807s
 Solution found.
-Peak memory: 215144 KB
+Peak memory: 215136 KB
 search exit code: 0
 

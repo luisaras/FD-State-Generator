@@ -56,6 +56,8 @@ void GeneratorAbstractGoal::initialize() {
 
 }
 
+int best_state_g = 0;
+
 SearchStatus GeneratorAbstractGoal::step() {
     try {
 
@@ -111,9 +113,10 @@ SearchStatus GeneratorAbstractGoal::step() {
                 assert(h < 2147483647);
             }
             
-            if (h > best_state_h) {
+            if (h > best_state_h || (h == best_state_h && pred_node.get_g() > best_state_g)) {
                 best_state = pred_values;
                 best_state_h = h;
+		best_state_g = pred_node.get_g();
                 cout << "New best h: " << best_state_h << " (iteration " << it_count << ")" << endl;
                 if (h > bound) {
                     cout << "Reached h bound." << endl;

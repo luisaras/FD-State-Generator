@@ -2394,7 +2394,7 @@ begin_mutex_group
 13 0
 end_mutex_group
 begin_state
-5 0 0 0 0 0 1 0 0 0 4 3 3 2 3 
+7 0 0 0 0 0 0 0 0 6 2 5 2 5 4 
 end_state
 begin_goal
 6
