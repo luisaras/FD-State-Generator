@@ -2,74 +2,74 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/ipdb/sokoban/02_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
-reading input... [t=0.000118386s]
-done reading input! [t=0.00258058s]
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward generator-tests/ipdb/sokoban/02_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0s]
+done reading input! [t=0s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.00881679s]
+Building successor generator...done! [t=0s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0.000302967s
+time for successor generation creation: 0s
 Variables: 24
 FactPairs: 93
 Bytes per state: 8
 Conducting best first search with reopening closed nodes, (real) bound = 2147483647
 New best heuristic value for lmcut: 11
-[g=0, 1 evaluated, 0 expanded, t=0.00983004s, 211964 KB]
-f = 11 [1 evaluated, 0 expanded, t=0.0100109s, 211964 KB]
+[g=0, 1 evaluated, 0 expanded, t=0s, 0 KB]
+f = 11 [1 evaluated, 0 expanded, t=0s, 0 KB]
 Initial heuristic value for lmcut: 11
 pruning method: none
 New best heuristic value for lmcut: 10
-[g=1, 3 evaluated, 1 expanded, t=0.0107243s, 211964 KB]
+[g=1, 3 evaluated, 1 expanded, t=0s, 0 KB]
 New best heuristic value for lmcut: 9
-[g=2, 6 evaluated, 2 expanded, t=0.0115727s, 211964 KB]
-f = 12 [8 evaluated, 3 expanded, t=0.0121851s, 211964 KB]
-f = 13 [10 evaluated, 4 expanded, t=0.0126314s, 211964 KB]
-f = 14 [11 evaluated, 6 expanded, t=0.0130607s, 211964 KB]
+[g=2, 6 evaluated, 2 expanded, t=0s, 0 KB]
+f = 12 [8 evaluated, 3 expanded, t=0s, 0 KB]
+f = 13 [10 evaluated, 4 expanded, t=0s, 0 KB]
+f = 14 [11 evaluated, 6 expanded, t=0s, 0 KB]
 New best heuristic value for lmcut: 8
-[g=6, 12 evaluated, 7 expanded, t=0.0134722s, 211964 KB]
-f = 15 [17 evaluated, 11 expanded, t=0.0149258s, 211964 KB]
-f = 16 [18 evaluated, 12 expanded, t=0.0154267s, 211964 KB]
+[g=6, 12 evaluated, 7 expanded, t=0s, 0 KB]
+f = 15 [17 evaluated, 11 expanded, t=0s, 0 KB]
+f = 16 [18 evaluated, 12 expanded, t=0s, 0 KB]
 New best heuristic value for lmcut: 7
-[g=9, 19 evaluated, 13 expanded, t=0.0158916s, 211964 KB]
+[g=9, 19 evaluated, 13 expanded, t=0s, 0 KB]
 New best heuristic value for lmcut: 6
-[g=10, 22 evaluated, 14 expanded, t=0.0168253s, 211964 KB]
+[g=10, 22 evaluated, 14 expanded, t=0s, 0 KB]
 New best heuristic value for lmcut: 5
-[g=11, 23 evaluated, 15 expanded, t=0.0172426s, 211964 KB]
+[g=11, 23 evaluated, 15 expanded, t=0s, 0 KB]
 New best heuristic value for lmcut: 4
-[g=12, 26 evaluated, 16 expanded, t=0.0179967s, 211964 KB]
-f = 18 [31 evaluated, 21 expanded, t=0.0189487s, 211964 KB]
-f = 19 [38 evaluated, 28 expanded, t=0.0206994s, 211964 KB]
-f = 20 [45 evaluated, 31 expanded, t=0.0226167s, 211964 KB]
-f = 21 [57 evaluated, 40 expanded, t=0.025664s, 211964 KB]
-f = 22 [66 evaluated, 46 expanded, t=0.0279099s, 211964 KB]
-f = 23 [79 evaluated, 57 expanded, t=0.0311621s, 211964 KB]
-f = 24 [95 evaluated, 68 expanded, t=0.0344556s, 211964 KB]
-f = 25 [111 evaluated, 83 expanded, t=0.037374s, 211964 KB]
-f = 26 [123 evaluated, 94 expanded, t=0.0396902s, 211964 KB]
-f = 27 [138 evaluated, 106 expanded, t=0.0426925s, 211964 KB]
-f = 28 [156 evaluated, 119 expanded, t=0.0461425s, 211964 KB]
-f = 29 [166 evaluated, 131 expanded, t=0.0481952s, 211964 KB]
-f = 30 [179 evaluated, 145 expanded, t=0.0507185s, 211964 KB]
-f = 31 [188 evaluated, 155 expanded, t=0.0524736s, 211964 KB]
-f = 32 [206 evaluated, 168 expanded, t=0.0557438s, 211964 KB]
-f = 33 [223 evaluated, 179 expanded, t=0.0588957s, 211964 KB]
-f = 34 [243 evaluated, 197 expanded, t=0.0623111s, 211964 KB]
-f = 35 [258 evaluated, 211 expanded, t=0.0654388s, 211964 KB]
-f = 36 [266 evaluated, 227 expanded, t=0.0670775s, 211964 KB]
-f = 37 [273 evaluated, 237 expanded, t=0.0688855s, 211964 KB]
-f = 38 [277 evaluated, 243 expanded, t=0.0697684s, 211964 KB]
-f = 39 [282 evaluated, 254 expanded, t=0.0710088s, 211964 KB]
-f = 40 [287 evaluated, 257 expanded, t=0.0720395s, 211964 KB]
+[g=12, 26 evaluated, 16 expanded, t=0s, 0 KB]
+f = 18 [31 evaluated, 21 expanded, t=0s, 0 KB]
+f = 19 [38 evaluated, 28 expanded, t=0s, 0 KB]
+f = 20 [45 evaluated, 31 expanded, t=0s, 0 KB]
+f = 21 [57 evaluated, 40 expanded, t=0s, 0 KB]
+f = 22 [66 evaluated, 46 expanded, t=0.015625s, 0 KB]
+f = 23 [79 evaluated, 57 expanded, t=0.015625s, 0 KB]
+f = 24 [95 evaluated, 68 expanded, t=0.015625s, 0 KB]
+f = 25 [111 evaluated, 83 expanded, t=0.015625s, 0 KB]
+f = 26 [123 evaluated, 94 expanded, t=0.015625s, 0 KB]
+f = 27 [138 evaluated, 106 expanded, t=0.015625s, 0 KB]
+f = 28 [156 evaluated, 119 expanded, t=0.015625s, 0 KB]
+f = 29 [166 evaluated, 131 expanded, t=0.015625s, 0 KB]
+f = 30 [179 evaluated, 145 expanded, t=0.015625s, 0 KB]
+f = 31 [188 evaluated, 155 expanded, t=0.015625s, 0 KB]
+f = 32 [206 evaluated, 168 expanded, t=0.015625s, 0 KB]
+f = 33 [223 evaluated, 179 expanded, t=0.015625s, 0 KB]
+f = 34 [243 evaluated, 197 expanded, t=0.015625s, 0 KB]
+f = 35 [258 evaluated, 211 expanded, t=0.015625s, 0 KB]
+f = 36 [266 evaluated, 227 expanded, t=0.015625s, 0 KB]
+f = 37 [273 evaluated, 237 expanded, t=0.015625s, 0 KB]
+f = 38 [277 evaluated, 243 expanded, t=0.015625s, 0 KB]
+f = 39 [282 evaluated, 254 expanded, t=0.015625s, 0 KB]
+f = 40 [287 evaluated, 257 expanded, t=0.015625s, 0 KB]
 New best heuristic value for lmcut: 3
-[g=37, 289 evaluated, 258 expanded, t=0.0723846s, 211964 KB]
+[g=37, 289 evaluated, 258 expanded, t=0.015625s, 0 KB]
 New best heuristic value for lmcut: 2
-[g=38, 295 evaluated, 260 expanded, t=0.0732s, 211964 KB]
+[g=38, 295 evaluated, 260 expanded, t=0.015625s, 0 KB]
 New best heuristic value for lmcut: 1
-[g=39, 296 evaluated, 261 expanded, t=0.0734789s, 211964 KB]
+[g=39, 296 evaluated, 261 expanded, t=0.015625s, 0 KB]
 New best heuristic value for lmcut: 0
-[g=40, 299 evaluated, 262 expanded, t=0.0739077s, 211964 KB]
+[g=40, 299 evaluated, 262 expanded, t=0.015625s, 0 KB]
 Solution found!
-Actual search time: 0.0639065s [t=0.0741262s]
+Actual search time: 0.015625s [t=0.015625s]
 op1) move player-01 pos-2-4 pos-3-4 dir-right (1)
 op9) move player-01 pos-3-4 pos-4-4 dir-right (1)
 op24) move player-01 pos-4-4 pos-4-5 dir-down (1)
@@ -125,9 +125,9 @@ Generated until last jump: 674 state(s).
 Number of registered states: 299
 Int hash set load factor: 299/512 = 0.583984
 Int hash set resizes: 9
-Search time: 0.0647712s
-Total time: 0.0741544s
+Search time: 0.015625s
+Total time: 0.015625s
 Solution found.
-Peak memory: 211964 KB
+Peak memory: 0 KB
 search exit code: 0
 

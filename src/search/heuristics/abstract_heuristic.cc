@@ -31,17 +31,18 @@ EvaluationResult AbstractHeuristic::compute_result(
     EvaluationContext &eval_context) {
 
     EvaluationResult result = Heuristic::compute_result(eval_context);
-    if (result.get_evaluator_value() == EvaluationResult::INFTY) {
+    int flag = result.get_evaluator_value();
+    if (flag == 1) {
         if (concrete_state_count == 1)
             cout << "Found first concrete state." << endl;
         concrete_state_count++;
         return concrete_evaluator->compute_result(eval_context);
-    } else {
+    } else if (flag == 2) {
         StateRegistry &state_registry = eval_context.get_state().get_registry();
         EvaluationContext new_eval_context(state_registry.get_state(values), eval_context.get_g_value(), false, nullptr);
         return concrete_evaluator->compute_result(new_eval_context);
-        //return result;
     }
+    return result;
 }
 
 int AbstractHeuristic::compute_heuristic(const GlobalState &global_state) {
@@ -58,7 +59,7 @@ int AbstractHeuristic::compute_heuristic(const GlobalState &global_state) {
                 concrete = false;
             }
         }
-        return concrete ? DEAD_END : min_operator_cost;
+        return concrete ? 1 : 2;
     }
 }
 

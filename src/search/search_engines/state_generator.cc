@@ -48,19 +48,10 @@ void StateGenerator::initialize() {
     cout << "Building reverse operators..." << endl;
     
     // Build reverse operators
-    vector<bool> mentioned(best_state.size(), false);
     VariablesProxy variables = task_proxy.get_variables();
     for (const OperatorProxy &op : task_proxy.get_operators()) {
         reverse_search::build_reverse_operators(op, variables, operators);
-        for (FactProxy pre : op.get_preconditions()) {
-            mentioned[pre.get_pair().var] = true;
-        }
     }
-    for (uint var = 0; var < mentioned.size(); var++) {
-        if (!mentioned[var])
-            cout << "Variable " << var << " not mentioned in preconditions." << endl;
-    }
-
     cout << "Created " << operators.size() << " reverse operators." << endl;
 
     // Match Tree
@@ -68,7 +59,6 @@ void StateGenerator::initialize() {
         match_tree.insert(op_id, operators[op_id].regression_preconditions);
         //operators[op_id].dump();
     }
-
     cout << "Built match tree." << endl;
     
 }

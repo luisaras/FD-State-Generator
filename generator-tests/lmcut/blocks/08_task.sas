@@ -1598,7 +1598,7 @@ begin_mutex_group
 11 0
 end_mutex_group
 begin_state
-5 0 0 1 1 1 1 0 1 3 5 3 5 
+0 1 0 0 0 0 0 0 2 6 4 1 1 
 end_state
 begin_goal
 5

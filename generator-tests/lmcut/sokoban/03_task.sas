@@ -1052,7 +1052,7 @@ begin_mutex_group
 16 9
 end_mutex_group
 begin_state
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 11 2 7 0 0 1 1 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 11 7 0 0 1 1 
 end_state
 begin_goal
 2

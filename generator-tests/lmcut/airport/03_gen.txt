@@ -2,80 +2,86 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/airport/03_task.sas --search 'generator_abstract(lmcut(), max_it=20000000, max_time=600)'
-reading input... [t=0.000105142s]
-done reading input! [t=0.00157762s]
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/airport/03_task.sas --search 'generator_abstract(lmcut(), max_it=10000000, max_time=600)'
+reading input... [t=0s]
+done reading input! [t=0s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.00781349s]
-peak memory difference for successor generator creation: 136 KB
-time for successor generation creation: 0.000288976s
+Building successor generator...done! [t=0.015625s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
 Variables: 46
 FactPairs: 119
 Bytes per state: 12
 Conducting best first search (real) bound = 2147483647
 Building reverse operators...
-Variable 45 not mentioned in preconditions.
 Created 250 reverse operators.
 Built match tree.
 44=0 45=0 
 Inserting initial (goal) state...
-New best h: 17 (iteration 0)
+New best h: 0 (iteration 0) 
 New undef count: 37
 New undef count: 35
 New undef count: 34
+New best h: 1 (iteration 80) 
+New undef count: 32
+New undef count: 30
 New undef count: 29
-New undef count: 26
+New best h: 2 (iteration 184) 
+New best h: 3 (iteration 204) 
+New best h: 4 (iteration 220) 
 New undef count: 25
-New undef count: 23
+New best h: 5 (iteration 236) 
 New undef count: 22
-New undef count: 20
-New undef count: 18
-New undef count: 17
+New best h: 6 (iteration 248) 
+New undef count: 19
+New best h: 7 (iteration 256) 
 New undef count: 16
-New undef count: 15
-New undef count: 14
+New best h: 8 (iteration 264) 
 New undef count: 12
-New undef count: 11
-New undef count: 9
+New best h: 9 (iteration 280) 
+New undef count: 10
+New best h: 10 (iteration 286) 
 New undef count: 8
+New best h: 11 (iteration 296) 
 New undef count: 6
+New best h: 12 (iteration 304) 
 New undef count: 4
-New undef count: 3
+New best h: 13 (iteration 312) 
+New undef count: 2
+New best h: 14 (iteration 320) 
 New undef count: 1
-Last undef var: 34
+Last undef var: 38
 Found first concrete state.
 New undef count: 0
-New best h: 17 (iteration 28397)
-New best h: 18 (iteration 28407)
-New best h: 19 (iteration 28415)
-New best h: 20 (iteration 28423)
-New best h: 20 (iteration 136559)
-New best h: 21 (iteration 318286)
-New best h: 22 (iteration 318302)
-New best h: 23 (iteration 330085)
-New best h: 24 (iteration 331691)
-New best h: 25 (iteration 332326)
-New best h: 25 (iteration 344169)
-New best h: 25 (iteration 347421)
-New best h: 26 (iteration 347968)
-New best h: 26 (iteration 350110)
-New best h: 27 (iteration 354771)
+New best h: 15 (iteration 424) 
+New best h: 16 (iteration 5872) 
+New best h: 17 (iteration 6338) 
+New best h: 18 (iteration 20390) 
+New best h: 19 (iteration 20406) 
+New best h: 20 (iteration 20438) 
+New best h: 21 (iteration 20558) 
+New best h: 22 (iteration 20574) 
+New best h: 23 (iteration 36337) 
+New best h: 24 (iteration 37943) 
+New best h: 25 (iteration 38578) 
+New best h: 26 (iteration 54220) 
+New best h: 27 (iteration 61023) 
 Completely explored state space.
-Actual search time: 11.4822s [t=11.4923s]
+Actual search time: 5.3125s [t=5.32812s]
 Original state h-value: 17
 New state h-value: 27
 Expanded 470371 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 629772
+Evaluations: 632234
 Generated 902354 state(s).
 Dead ends: 0 state(s).
 Number of registered states: 482061
 Int hash set load factor: 482061/1048576 = 0.459729
 Int hash set resizes: 20
-Search time: 11.4839s
-Total time: 11.4923s
+Search time: 5.3125s
+Total time: 5.32812s
 Solution found.
-Peak memory: 277252 KB
+Peak memory: 0 KB
 search exit code: 0
 

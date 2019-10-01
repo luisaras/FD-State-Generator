@@ -2,21 +2,21 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/ipdb/airport/01_task.sas --search 'generator_abstract(ipdb(), max_it=20000000, max_time=600)'
-reading input... [t=0.000125049s]
-done reading input! [t=0.00101588s]
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/ipdb/airport/01_task.sas --search 'generator_abstract(ipdb(), max_it=10000000, max_time=600)'
+reading input... [t=0s]
+done reading input! [t=0.015625s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0.000139573s
+Done calculating initial pattern collection: 0s
 Average operator cost: 1
-building causal graph...done! [t=0.00116055s]
+building causal graph...done! [t=0s]
 Done calculating initial candidate PDBs
 current collection size is 3
 current initial h value: 1
 pattern: [27, 28] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [27, 28]
-Hill climbing time so far: 0.0108025s
+Hill climbing time so far: 0s
 current collection size is 48
 current initial h value: 8
 Improvement below threshold. Stop hill climbing.
@@ -24,21 +24,21 @@ Hill climbing iterations: 2
 Hill climbing generated patterns: 29
 Hill climbing rejected patterns: 0
 Hill climbing maximum PDB size: 90
-Hill climbing time: 0.0466102s
+Hill climbing time: 0s
 Hill climbing generator collection: [[28], [27, 28]]
 Hill climbing generator number of patterns: 2
 Hill climbing generator total PDB size: 48
-Hill climbing generator computation time: 0.0469703s
+Hill climbing generator computation time: 0s
 Running dominance pruning...
 Pruned 1 of 2 pattern cliques
 Pruned 1 of 2 PDBs
-Dominance pruning took 3.5335e-05s
+Dominance pruning took 0s
 Canonical PDB heuristic number of patterns: 1
 Canonical PDB heuristic total PDB size: 45
-Canonical PDB heuristic computation time: 0.0471722s
-Building successor generator...done! [t=0.0548318s]
+Canonical PDB heuristic computation time: 0s
+Building successor generator...done! [t=0.015625s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0.000104283s
+time for successor generation creation: 0s
 Variables: 29
 FactPairs: 72
 Bytes per state: 8
@@ -48,50 +48,50 @@ Created 99 reverse operators.
 Built match tree.
 28=1 
 Inserting initial (goal) state...
-New best h: 1 (iteration 0)
+New best h: 1 (iteration 0) 
 New undef count: 26
 New undef count: 25
-New best h: 2 (iteration 3)
+New best h: 2 (iteration 3) 
 New undef count: 20
-New best h: 3 (iteration 19)
+New best h: 3 (iteration 19) 
 New undef count: 17
-New best h: 4 (iteration 35)
+New best h: 4 (iteration 35) 
 New undef count: 15
-New best h: 5 (iteration 47)
+New best h: 5 (iteration 47) 
 New undef count: 13
-New best h: 6 (iteration 55)
+New best h: 6 (iteration 55) 
 New undef count: 11
-New best h: 7 (iteration 63)
+New best h: 7 (iteration 63) 
 New undef count: 8
-New best h: 8 (iteration 79)
+New best h: 8 (iteration 79) 
 New undef count: 6
-New best h: 9 (iteration 85)
+New best h: 9 (iteration 85) 
 New undef count: 5
-New best h: 10 (iteration 95)
+New best h: 10 (iteration 95) 
 New undef count: 3
-New best h: 11 (iteration 103)
+New best h: 11 (iteration 103) 
 New undef count: 1
 Last undef var: 2
 Found first concrete state.
-New best h: 12 (iteration 111)
+New best h: 12 (iteration 111) 
 New undef count: 0
-New best h: 13 (iteration 119)
+New best h: 13 (iteration 119) 
 Completely explored state space.
-Actual search time: 0.00755862s [t=0.0636191s]
+Actual search time: 0s [t=0.015625s]
 Original state h-value: 8
 New state h-value: 13
 Expanded 372 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 662
+Evaluations: 663
 Generated 379 state(s).
 Dead ends: 0 state(s).
 Number of registered states: 471
 Int hash set load factor: 471/512 = 0.919922
 Int hash set resizes: 9
-Search time: 0.00829275s
-Total time: 0.0636464s
+Search time: 0s
+Total time: 0.015625s
 Solution found.
-Peak memory: 212096 KB
+Peak memory: 0 KB
 search exit code: 0
 

@@ -2,79 +2,73 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/lmcut/blocks/07_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
-reading input... [t=0.000119967s]
-done reading input! [t=0.00241129s]
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/FD-State-Generator/builds/release/bin/downward generator-tests/lmcut/blocks/07_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0s]
+done reading input! [t=0s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.00833069s]
+Building successor generator...done! [t=0s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0.000188721s
+time for successor generation creation: 0s
 Variables: 13
 FactPairs: 56
 Bytes per state: 4
 Conducting best first search with reopening closed nodes, (real) bound = 2147483647
 New best heuristic value for lmcut: 11
-[g=0, 1 evaluated, 0 expanded, t=0.00922918s, 211832 KB]
-f = 11 [1 evaluated, 0 expanded, t=0.00940852s, 211832 KB]
+[g=0, 1 evaluated, 0 expanded, t=0s, 0 KB]
+f = 11 [1 evaluated, 0 expanded, t=0s, 0 KB]
 Initial heuristic value for lmcut: 11
 pruning method: none
 New best heuristic value for lmcut: 10
-[g=1, 3 evaluated, 1 expanded, t=0.00992627s, 211832 KB]
+[g=1, 2 evaluated, 1 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 9
+[g=1, 7 evaluated, 1 expanded, t=0s, 0 KB]
 New best heuristic value for lmcut: 8
-[g=2, 6 evaluated, 2 expanded, t=0.0105792s, 211832 KB]
+[g=2, 14 evaluated, 2 expanded, t=0s, 0 KB]
 New best heuristic value for lmcut: 7
-[g=4, 10 evaluated, 4 expanded, t=0.011239s, 211832 KB]
-f = 12 [21 evaluated, 7 expanded, t=0.0127111s, 211832 KB]
-New best heuristic value for lmcut: 6
-[g=6, 23 evaluated, 8 expanded, t=0.0131104s, 211832 KB]
+[g=3, 32 evaluated, 5 expanded, t=0s, 0 KB]
 New best heuristic value for lmcut: 5
-[g=7, 61 evaluated, 23 expanded, t=0.0175211s, 211832 KB]
-f = 13 [84 evaluated, 32 expanded, t=0.0201625s, 211832 KB]
+[g=5, 101 evaluated, 13 expanded, t=0s, 0 KB]
 New best heuristic value for lmcut: 4
-[g=9, 85 evaluated, 33 expanded, t=0.0204455s, 211832 KB]
+[g=7, 117 evaluated, 15 expanded, t=0s, 0 KB]
 New best heuristic value for lmcut: 3
-[g=10, 88 evaluated, 34 expanded, t=0.0208762s, 211832 KB]
-f = 14 [197 evaluated, 74 expanded, t=0.0333873s, 211832 KB]
+[g=8, 121 evaluated, 16 expanded, t=0s, 0 KB]
 New best heuristic value for lmcut: 2
-[g=12, 225 evaluated, 84 expanded, t=0.03602s, 211832 KB]
+[g=9, 127 evaluated, 17 expanded, t=0s, 0 KB]
 New best heuristic value for lmcut: 1
-[g=13, 229 evaluated, 85 expanded, t=0.0365425s, 211832 KB]
+[g=10, 136 evaluated, 18 expanded, t=0s, 0 KB]
 New best heuristic value for lmcut: 0
-[g=14, 231 evaluated, 86 expanded, t=0.0368796s, 211832 KB]
+[g=11, 140 evaluated, 19 expanded, t=0s, 0 KB]
 Solution found!
-Actual search time: 0.0275824s [t=0.0372025s]
-op58) unstack d b (1)
-op9) put-down d (1)
-op71) unstack f e (1)
-op40) stack f d (1)
-op64) unstack e c (1)
-op36) stack e f (1)
-op52) unstack c a (1)
-op8) put-down c (1)
-op46) unstack a f (1)
-op15) stack a e (1)
+Actual search time: 0s [t=0s]
+op62) unstack e a (1)
+op31) stack d f (1)
 op51) unstack b f (1)
 op17) stack b a (1)
-op2) pick-up c (1)
+op56) unstack c f (1)
 op23) stack c b (1)
-Plan length: 14 step(s).
-Plan cost: 14
-Expanded 87 state(s).
+op67) unstack f a (1)
+op40) stack f d (1)
+op0) pick-up a (1)
+op36) stack e f (1)
+op15) stack a e (1)
+Plan length: 11 step(s).
+Plan cost: 11
+Expanded 20 state(s).
 Reopened 0 state(s).
-Evaluated 232 state(s).
-Evaluations: 232
-Generated 318 state(s).
+Evaluated 140 state(s).
+Evaluations: 140
+Generated 159 state(s).
 Dead ends: 0 state(s).
-Expanded until last jump: 74 state(s).
+Expanded until last jump: 0 state(s).
 Reopened until last jump: 0 state(s).
-Evaluated until last jump: 197 state(s).
-Generated until last jump: 270 state(s).
-Number of registered states: 232
-Int hash set load factor: 232/256 = 0.90625
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 140
+Int hash set load factor: 140/256 = 0.546875
 Int hash set resizes: 8
-Search time: 0.0283443s
-Total time: 0.0372335s
+Search time: 0s
+Total time: 0s
 Solution found.
-Peak memory: 211832 KB
+Peak memory: 0 KB
 search exit code: 0
 

@@ -56,11 +56,7 @@ void GeneratorAbstractGoal::initialize() {
 
 }
 
-int best_state_g = 0;
-
 SearchStatus GeneratorAbstractGoal::step() {
-    try {
-
     // Select next node
     vector<int> state_values;
     tl::optional<SearchNode> node;
@@ -71,15 +67,6 @@ SearchStatus GeneratorAbstractGoal::step() {
     set<int> applicable_operator_ids;
     match_tree.get_applicable_operator_ids(state_values, applicable_operator_ids);
 
-    /*VariablesProxy variables = task_proxy.get_variables();
-    for (int op_id = 0; op_id < operators.size(); op_id++) {
-        if (applicable_operator_ids.count(op_id)) {
-            assert(operators[op_id].is_applicable(variables, state_values));
-        } else {
-            assert(!operators[op_id].is_applicable(variables, state_values));
-        }
-    }*/
-
     // Expand
     for (int op_id : applicable_operator_ids) {
         
@@ -87,13 +74,6 @@ SearchStatus GeneratorAbstractGoal::step() {
         ReverseOperator& op = operators[op_id];
         vector<int> pred_values(state_values);
         op.apply(pred_values);
-        
-        /*if (!op.is_result(pred_values, state_values)) {
-            dump_state(pred_values);
-            op.dump();
-            dump_state(state_values);
-            assert(false);
-        }*/
 
         // Get search node of previous state
         GlobalState pred_state = state_registry.get_state(pred_values);
@@ -113,11 +93,12 @@ SearchStatus GeneratorAbstractGoal::step() {
                 assert(h < 2147483647);
             }
             
-            if (h > best_state_h || (h == best_state_h && pred_node.get_g() > best_state_g)) {
+            if (h > best_state_h) {
+                cout << "New best h: " << h << " (iteration " << it_count << ") ";
+                cout << endl;
+                //dump_state(pred_values);
                 best_state = pred_values;
                 best_state_h = h;
-		best_state_g = pred_node.get_g();
-                cout << "New best h: " << best_state_h << " (iteration " << it_count << ")" << endl;
                 if (h > bound) {
                     cout << "Reached h bound." << endl;
                     return SOLVED;
@@ -136,11 +117,6 @@ SearchStatus GeneratorAbstractGoal::step() {
             
         }
         
-    }
-
-    } catch (const std::bad_alloc& e) {
-        open_list->clear();
-        return SOLVED;
     }
 
     return IN_PROGRESS;
