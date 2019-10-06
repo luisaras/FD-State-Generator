@@ -439,14 +439,45 @@ fast_downward_plugin(
     NAME STATE_GENERATOR
     HELP "Search engine to generate new initial states"
     SOURCES
-        search_engines/match_tree
-        search_engines/reverse_operator
-        search_engines/state_generator
-        search_engines/generator_random_goal
-        search_engines/generator_abstract_goal
-        search_engines/generator_all_goals
-        search_engines/plugin_generator
+        state_generators/match_tree
+        state_generators/reverse_operator
+        state_generators/state_generator
     DEPENDS SEARCH_COMMON
+)
+
+fast_downward_plugin(
+    NAME GENERATOR_ALL_GOALS
+    HELP "Search engine to generate new initial states"
+    SOURCES
+        state_generators/generator_all_goals
+        state_generators/plugin_generator_all_goals
+    DEPENDS STATE_GENERATOR
+)
+
+fast_downward_plugin(
+    NAME GENERATOR_ABSTRACT_GOALS
+    HELP "Search engine to generate new initial states"
+    SOURCES
+        state_generators/generator_abstract_goal
+        state_generators/plugin_generator_abstract_goal
+    DEPENDS STATE_GENERATOR 
+)
+
+fast_downward_plugin(
+    NAME GENERATOR_RANDOM_GOAL
+    HELP "Search engine to generate new initial states"
+    SOURCES
+        state_generators/generator_random_goal
+        state_generators/plugin_generator_random_goal
+    DEPENDS STATE_GENERATOR
+)
+
+fast_downward_plugin(
+    NAME GENERATOR_TNF
+    HELP "Search engine to generate new initial states"
+    SOURCES
+        state_generators/plugin_generator_tnf
+    DEPENDS STATE_GENERATOR 
 )
 
 fast_downward_plugin(
@@ -551,7 +582,7 @@ fast_downward_plugin(
     NAME ABSTRACT_HEURISTIC
     HELP "Heuristic for tasks with undefined variables"
     SOURCES
-        heuristics/abstract_heuristic
+        state_generators/abstract_heuristic
     DEPENDS TASK_PROPERTIES
 )
 
@@ -559,7 +590,7 @@ fast_downward_plugin(
     NAME UNDEFS_HEURISTIC
     HELP "Heuristic that counts undefined variables"
     SOURCES
-        heuristics/undefs_heuristic
+        state_generators/undefs_heuristic
     DEPENDS TASK_PROPERTIES
 )
 
@@ -784,6 +815,30 @@ fast_downward_plugin(
     SOURCES
         algorithms/sccs
     DEPENDENCY_ONLY
+)
+
+fast_downward_plugin(
+    NAME NOVELTY
+    HELP "Novelty record."
+    SOURCES
+        novelty/novelty_record
+)
+
+fast_downward_plugin(
+    NAME NOVELTY_HEURISTIC
+    HELP "Novelty heuristic."
+    SOURCES
+        novelty/novelty_heuristic
+    DEPENDS NOVELTY
+)
+
+fast_downward_plugin(
+    NAME NOVELTY_SEARCH
+    HELP "Novelty search."
+    SOURCES
+        novelty/novelty_search
+        novelty/plugin_novelty
+    DEPENDS NOVELTY
 )
 
 fast_downward_add_plugin_sources(PLANNER_SOURCES)
