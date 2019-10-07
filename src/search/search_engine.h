@@ -69,6 +69,7 @@ public:
     virtual bool found_solution() const;
     SearchStatus get_status() const;
     const Plan &get_plan() const;
+    StateRegistry& get_registry() { return state_registry; }
     void search();
     const SearchStatistics &get_statistics() const {return statistics;}
     void set_bound(int b) {bound = b;}

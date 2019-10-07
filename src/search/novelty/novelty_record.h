@@ -19,6 +19,7 @@ public:
     NoveltyRecord(const std::shared_ptr<AbstractTask>& task, int level = 1, bool use_h = false);
     virtual ~NoveltyRecord() = default;
     
+    virtual void clear();
     virtual int get_value(const std::vector<int>& state_values, int h = 0);
 };
 }

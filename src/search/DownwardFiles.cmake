@@ -819,26 +819,12 @@ fast_downward_plugin(
 
 fast_downward_plugin(
     NAME NOVELTY
-    HELP "Novelty record."
-    SOURCES
-        novelty/novelty_record
-)
-
-fast_downward_plugin(
-    NAME NOVELTY_HEURISTIC
-    HELP "Novelty heuristic."
-    SOURCES
-        novelty/novelty_heuristic
-    DEPENDS NOVELTY
-)
-
-fast_downward_plugin(
-    NAME NOVELTY_SEARCH
     HELP "Novelty search."
     SOURCES
-        novelty/novelty_search
+        novelty/novelty_record
+        novelty/novelty_heuristic
         novelty/plugin_novelty
-    DEPENDS NOVELTY
+        novelty/novelty_complexity
 )
 
 fast_downward_add_plugin_sources(PLANNER_SOURCES)

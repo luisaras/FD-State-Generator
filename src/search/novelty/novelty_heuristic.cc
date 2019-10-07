@@ -4,6 +4,7 @@
 #include "../option_parser.h"
 #include "../plugin.h"
 
+#include "../tasks/root_task.h"
 #include "../task_utils/task_properties.h"
 
 #include <cstddef>
@@ -13,21 +14,46 @@
 using namespace std;
 
 namespace novelty {
-NoveltyHeuristic::NoveltyHeuristic(const Options &opts)
+    
+options::Options get_default_opts(int level, bool use_h, bool prune) {
+    Options opts;
+    opts.set("level", level);
+    opts.set("use_h", use_h);
+    opts.set("prune", prune);
+    opts.set("transform", tasks::g_root_task);
+    opts.set("cache_estimates", true);
+    return opts;
+}
+
+NoveltyHeuristic::NoveltyHeuristic(const options::Options &opts)
     : Heuristic(opts),
       record(task, opts.get<int>("level", 1), opts.get<bool>("use_h", false)),
+      prune(opts.get<bool>("prune", true)),
       num_facts(0) {
     cout << "Initializing novelty heuristic..." << endl;
     for (int i = task->get_num_variables() - 1; i >= 0; i--)
         num_facts += task->get_variable_domain_size(i);
 }
 
-int NoveltyHeuristic::compute_heuristic(const GlobalState &global_state) {
-    State state = convert_global_state(global_state);
-    return num_facts - record.get_value(state.get_values());
+NoveltyHeuristic::NoveltyHeuristic(int level, bool use_h, bool prune) :
+    NoveltyHeuristic(get_default_opts(level, use_h, prune)) {
 }
 
-static shared_ptr<Heuristic> _parse(OptionParser &parser) {
+int NoveltyHeuristic::compute_heuristic(const GlobalState &global_state) {
+    State state = convert_global_state(global_state);
+    int value = record.get_value(state.get_values());
+    if (prune && value == 0)
+        return DEAD_END;
+    return num_facts - value;
+}
+
+void NoveltyHeuristic::add_options_to_parser(options::OptionParser &parser) {
+    parser.add_option<int>("level", "", "1");
+    parser.add_option<bool>("use_h", "", "false");
+    parser.add_option<bool>("prune", "", "true");
+}
+
+static shared_ptr<Heuristic> _parse(options::OptionParser &parser) {
     parser.document_synopsis("Novelty heuristic",
                              "Returns the total number of fact minus"
                              "the novelty value of given state");
@@ -39,9 +65,8 @@ static shared_ptr<Heuristic> _parse(OptionParser &parser) {
     parser.document_property("safe", "no");
     parser.document_property("preferred operators", "no");
 
+    NoveltyHeuristic::add_options_to_parser(parser);
     Heuristic::add_options_to_parser(parser);
-    parser.add_option<int>("level", "", "1");
-    parser.add_option<bool>("use_h", "", "false");
     
     Options opts = parser.parse();
     if (parser.dry_run())
@@ -50,5 +75,5 @@ static shared_ptr<Heuristic> _parse(OptionParser &parser) {
         return make_shared<NoveltyHeuristic>(opts);
 }
 
-static Plugin<Evaluator> _plugin("novelty", _parse);
+static Plugin<Evaluator> _plugin("novelty_h", _parse);
 }

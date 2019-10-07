@@ -1,5 +1,5 @@
-DOMAIN="../pyperplan/benchmarks/airport/domain04.pddl"
-TASK="../pyperplan/benchmarks/airport/task04.pddl"
+DOMAIN="../pyperplan/benchmarks/sokoban/domain.pddl"
+TASK="../pyperplan/benchmarks/sokoban/task02.pddl"
 
 IPDB="ipdb(min_improvement=100, collection_max_size=200000)"
 CPDB="cpdbs(patterns=systematic(4))"
@@ -41,7 +41,7 @@ test_abstract() {
     # Generate output.sas
     ./fast-downward.py --debug --translate --sas-file output.sas ${DOMAIN} ${TASK}
     # Generate new_output.sas
-    ./fast-downward.py --debug output.sas --internal-plan-file "new_output.sas" --search "generator_abstract(lmcut(), max_it = 1000000)"
+    ./fast-downward.py --debug output.sas --internal-plan-file "new_output.sas" --search "generator_abstract(lmcut(), [novelty_complexity()], max_it = 1000000)"
     # Find plan for new_output.sas
     ./fast-downward.py --debug "new_output.sas" --search "astar(lmcut())"
 }

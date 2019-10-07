@@ -32,9 +32,10 @@ StateGenerator::StateGenerator(const Options &opts)
 }
 
 void StateGenerator::initialize() {
-    cout << "Conducting best first search"
-         << " (real) bound = " << bound
-         << endl;
+    if (verbosity > utils::Verbosity::SILENT)
+        cout << "Conducting best first search"
+             << " (real) bound = " << bound
+             << endl;
     assert(open_list);
 
     set<Evaluator *> evals;
@@ -45,21 +46,25 @@ void StateGenerator::initialize() {
     EvaluationContext original_state_eval(original_state, 0, false, nullptr);
     original_state_h = original_state_eval.get_evaluator_value_or_infinity(h_evaluator.get());
     
-    cout << "Building reverse operators..." << endl;
+    if (verbosity > utils::Verbosity::SILENT)
+        cout << "Building reverse operators..." << endl;
     
     // Build reverse operators
     VariablesProxy variables = task_proxy.get_variables();
     for (const OperatorProxy &op : task_proxy.get_operators()) {
         reverse_search::build_reverse_operators(op, variables, operators);
     }
-    cout << "Created " << operators.size() << " reverse operators." << endl;
+    if (verbosity > utils::Verbosity::SILENT)
+        cout << "Created " << operators.size() << " reverse operators." << endl;
 
     // Match Tree
     for (size_t op_id = 0; op_id < operators.size(); ++op_id) {
         match_tree.insert(op_id, operators[op_id].regression_preconditions);
-        //operators[op_id].dump();
+        if (verbosity >= utils::Verbosity::VERBOSE)
+            operators[op_id].dump();
     }
-    cout << "Built match tree." << endl;
+    if (verbosity > utils::Verbosity::SILENT)
+        cout << "Built match tree." << endl;
     
 }
 
@@ -67,7 +72,8 @@ bool StateGenerator::pop_node(tl::optional<SearchNode>& node, vector<int>& state
     while (true) {
         if (open_list->empty()) {
             if (!on_list_empty()) {
-                cout << "Completely explored state space." << endl;
+                if (verbosity > utils::Verbosity::SILENT)
+                    cout << "Completely explored state space." << endl;
                 return false;
             }
         }
@@ -108,8 +114,10 @@ void StateGenerator::save_plan_if_necessary() {
 }
 
 void StateGenerator::save_task_if_necessary() {
-    cout << "Original state h-value: " << original_state_h << endl;
-    cout << "New state h-value: " << best_state_h << endl;
+    if (verbosity > utils::Verbosity::SILENT) {
+        cout << "Original state h-value: " << original_state_h << endl;
+        cout << "New state h-value: " << best_state_h << endl;
+    }
     for (uint i = 0; i < best_state.size(); i++) {
         if (best_state[i] == -1 or best_state[i] >= task->get_variable_domain_size(i))
             best_state[i] = 0;
@@ -128,6 +136,7 @@ void StateGenerator::add_options_to_parser(OptionParser &parser) {
     parser.add_option<shared_ptr<Evaluator>>("eval", "evaluator for h-value");
     parser.add_list_option<shared_ptr<Evaluator>>("tiebreakers", "tie-breaking evaluators", "[]");
     parser.add_option<int>("max_it", "maximum number of open-list insertions", "-1");
+    parser.add_option<shared_ptr<Evaluator>>("novelty", "novelty heuristic");
     SearchEngine::add_options_to_parser(parser);
 }
 

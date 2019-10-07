@@ -16,12 +16,16 @@ inline bool is_applicable(OperatorProxy op, const State &state) {
     return true;
 }
 
-inline bool is_goal_state(TaskProxy task, const State &state) {
+inline bool is_goal_state(TaskProxy &task, const std::vector<int>& values) {
     for (FactProxy goal : task.get_goals()) {
-        if (state[goal.get_variable()] != goal)
+        if (values[goal.get_pair().var] != goal.get_pair().value)
             return false;
     }
     return true;
+}
+
+inline bool is_goal_state(TaskProxy task, const State &state) {
+    return is_goal_state(task, state.get_values());
 }
 
 /*

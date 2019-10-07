@@ -133,9 +133,8 @@ shared_ptr<OpenListFactory> create_reverse_open_list_factory(const Options &opts
     evals.insert(evals.begin(), h);
 
     if (opts.contains("novelty")) {
-        // TODO
-        //shared_ptr<Evaluator> n = opts.get<shared_ptr<Evaluator>>("novelty");
-        //evals.insert(evals.begin(), n);
+        shared_ptr<Evaluator> n = opts.get<shared_ptr<Evaluator>>("novelty");
+        evals.insert(evals.begin(), n);
     }
 
     shared_ptr<GEval> g = make_shared<GEval>();

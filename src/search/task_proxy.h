@@ -643,6 +643,7 @@ inline void feed(HashState &hash_state, const State &state) {
 class TaskProxy {
     const AbstractTask *task;
     bool undef_value;
+    State* initial_state = nullptr;
 public:
     explicit TaskProxy(const AbstractTask &task, bool undef_value = false)
         : task(&task), undef_value(undef_value) {}
@@ -675,9 +676,16 @@ public:
     State create_state(std::vector<int> &&state_values) const {
         return State(*task, std::move(state_values));
     }
+    
+    void set_initial_state(State& state) {
+        initial_state = &state;
+    }
 
     State get_initial_state() const {
-        return create_state(task->get_initial_state_values());
+        if (initial_state)
+            return *initial_state;
+        else
+            return create_state(task->get_initial_state_values());
     }
 
     /*
