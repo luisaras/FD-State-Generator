@@ -42,8 +42,10 @@ int NoveltyComplexity::compute_heuristic(const GlobalState &global_state) {
     int improved;
     vector<int> values;
     do {
-        if (task_properties::is_goal_state(task_proxy, state))
+        if (task_properties::is_goal_state(task_proxy, state)) {
+            //cout << "Easy length of " << length << endl;
             return length;
+        }
         improved = false;
         vector<OperatorID> applicable_ops;
         for (OperatorID op_id : applicable_ops) {
@@ -57,7 +59,7 @@ int NoveltyComplexity::compute_heuristic(const GlobalState &global_state) {
             }
         }
     } while (improved);
-    return DEAD_END;
+    return 1;
 }
 
 static shared_ptr<Heuristic> _parse(OptionParser &parser) {
@@ -79,7 +81,7 @@ static shared_ptr<Heuristic> _parse(OptionParser &parser) {
     if (parser.dry_run())
         return nullptr;
     else
-        return make_shared<NoveltyHeuristic>(opts);
+        return make_shared<NoveltyComplexity>(opts);
 }
 
 static Plugin<Evaluator> _plugin("novelty_complexity", _parse);

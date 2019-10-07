@@ -136,7 +136,7 @@ void StateGenerator::add_options_to_parser(OptionParser &parser) {
     parser.add_option<shared_ptr<Evaluator>>("eval", "evaluator for h-value");
     parser.add_list_option<shared_ptr<Evaluator>>("tiebreakers", "tie-breaking evaluators", "[]");
     parser.add_option<int>("max_it", "maximum number of open-list insertions", "-1");
-    parser.add_option<shared_ptr<Evaluator>>("novelty", "novelty heuristic");
+    //parser.add_option<shared_ptr<Evaluator>>("novelty", "novelty heuristic");
     SearchEngine::add_options_to_parser(parser);
 }
 
