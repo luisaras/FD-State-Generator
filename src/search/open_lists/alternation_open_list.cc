@@ -32,6 +32,7 @@ public:
     virtual Entry remove_min() override;
     virtual bool empty() const override;
     virtual void clear() override;
+    virtual void clear_evaluators() override;
     virtual void boost_preferred() override;
     virtual void get_path_dependent_evaluators(
         set<Evaluator *> &evals) override;
@@ -89,6 +90,12 @@ template<class Entry>
 void AlternationOpenList<Entry>::clear() {
     for (const auto &sublist : open_lists)
         sublist->clear();
+}
+
+template<class Entry>
+void AlternationOpenList<Entry>::clear_evaluators() {
+    for (const auto &sublist : open_lists)
+        sublist->clear_evaluators();
 }
 
 template<class Entry>

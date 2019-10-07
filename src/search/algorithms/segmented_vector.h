@@ -197,17 +197,7 @@ public:
     }
 
     ~SegmentedArrayVector() {
-        // TODO Factor out common code with SegmentedVector. In particular
-        //      we could destroy the_size * elements_per_array elements here
-        //      wihtout looping over the arrays first.
-        for (size_t i = 0; i < the_size; ++i) {
-            for (size_t offset = 0; offset < elements_per_array; ++offset) {
-                element_allocator.destroy(operator[](i) + offset);
-            }
-        }
-        for (size_t i = 0; i < segments.size(); ++i) {
-            element_allocator.deallocate(segments[i], elements_per_segment);
-        }
+        clear();
     }
 
     Element *operator[](size_t index) {
@@ -226,6 +216,21 @@ public:
 
     size_t size() const {
         return the_size;
+    }
+
+    void clear () {
+        // TODO Factor out common code with SegmentedVector. In particular
+        //      we could destroy the_size * elements_per_array elements here
+        //      wihtout looping over the arrays first.
+        for (size_t i = 0; i < the_size; ++i) {
+            for (size_t offset = 0; offset < elements_per_array; ++offset) {
+                element_allocator.destroy(operator[](i) + offset);
+            }
+        }
+        for (size_t i = 0; i < segments.size(); ++i) {
+            element_allocator.deallocate(segments[i], elements_per_segment);
+        }
+        segments.clear();
     }
 
     void push_back(const Element *entry) {
@@ -263,6 +268,7 @@ public:
             push_back(entry);
         }
     }
+
 };
 }
 

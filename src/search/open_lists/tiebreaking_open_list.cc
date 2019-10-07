@@ -45,6 +45,7 @@ public:
     virtual Entry remove_min() override;
     virtual bool empty() const override;
     virtual void clear() override;
+    virtual void clear_evaluators() override;
     virtual void get_path_dependent_evaluators(set<Evaluator *> &evals) override;
     virtual bool is_dead_end(
         EvaluationContext &eval_context) const override;
@@ -96,6 +97,12 @@ template<class Entry, class Compare>
 void TieBreakingOpenList<Entry, Compare>::clear() {
     buckets.clear();
     size = 0;
+}
+
+template<class Entry, class Compare>
+void TieBreakingOpenList<Entry, Compare>::clear_evaluators() {
+    for(shared_ptr<Evaluator> &eval : evaluators)
+        eval->clear();
 }
 
 template<class Entry, class Compare>

@@ -459,6 +459,8 @@ fast_downward_plugin(
     HELP "Search engine to generate new initial states"
     SOURCES
         state_generators/generator_abstract_goal
+        state_generators/abstract_heuristic
+        state_generators/undefs_heuristic
         state_generators/plugin_generator_abstract_goal
     DEPENDS STATE_GENERATOR 
 )
@@ -477,7 +479,7 @@ fast_downward_plugin(
     HELP "Search engine to generate new initial states"
     SOURCES
         state_generators/plugin_generator_tnf
-    DEPENDS STATE_GENERATOR 
+    DEPENDS GENERATOR_ABSTRACT_GOALS 
 )
 
 fast_downward_plugin(
@@ -579,18 +581,10 @@ fast_downward_plugin(
 )
 
 fast_downward_plugin(
-    NAME ABSTRACT_HEURISTIC
-    HELP "Heuristic for tasks with undefined variables"
+    NAME COMPLEXITY_HEURISTIC
+    HELP "The Complexity heuristic"
     SOURCES
-        state_generators/abstract_heuristic
-    DEPENDS TASK_PROPERTIES
-)
-
-fast_downward_plugin(
-    NAME UNDEFS_HEURISTIC
-    HELP "Heuristic that counts undefined variables"
-    SOURCES
-        state_generators/undefs_heuristic
+        heuristics/complexity_heuristic
     DEPENDS TASK_PROPERTIES
 )
 
@@ -824,7 +818,6 @@ fast_downward_plugin(
         novelty/novelty_record
         novelty/novelty_heuristic
         novelty/plugin_novelty
-        novelty/novelty_complexity
 )
 
 fast_downward_add_plugin_sources(PLANNER_SOURCES)

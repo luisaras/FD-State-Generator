@@ -40,6 +40,7 @@ public:
     virtual Entry remove_min() override;
     virtual bool empty() const override;
     virtual void clear() override;
+    virtual void clear_evaluators() override;
     virtual bool is_dead_end(EvaluationContext &eval_context) const override;
     virtual bool is_reliable_dead_end(
         EvaluationContext &eval_context) const override;
@@ -100,6 +101,12 @@ template<class Entry>
 void TypeBasedOpenList<Entry>::clear() {
     keys_and_buckets.clear();
     key_to_bucket_index.clear();
+}
+
+template<class Entry>
+void TypeBasedOpenList<Entry>::clear_evaluators() {
+    for(shared_ptr<Evaluator> &eval : evaluators)
+        eval->clear();
 }
 
 template<class Entry>

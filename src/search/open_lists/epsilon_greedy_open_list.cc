@@ -57,6 +57,7 @@ public:
     virtual void get_path_dependent_evaluators(set<Evaluator *> &evals) override;
     virtual bool empty() const override;
     virtual void clear() override;
+    virtual void clear_evaluators() override;
 };
 
 template<class HeapNode>
@@ -134,6 +135,11 @@ void EpsilonGreedyOpenList<Entry>::clear() {
     heap.clear();
     size = 0;
     next_id = 0;
+}
+
+template<class Entry>
+void EpsilonGreedyOpenList<Entry>::clear_evaluators() {
+    evaluator->clear();
 }
 
 EpsilonGreedyOpenListFactory::EpsilonGreedyOpenListFactory(

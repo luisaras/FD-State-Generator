@@ -100,7 +100,6 @@ void SearchEngine::search() {
             break;
         }
     }
-    // TODO: Revise when and which search times are logged.
     if (verbosity > utils::Verbosity::SILENT)
         cout << "Actual search time: " << timer.get_elapsed_time()
              << " [t=" << utils::g_timer << "]" << endl;
@@ -126,6 +125,10 @@ void SearchEngine::save_plan_if_necessary() {
 
 void SearchEngine::save_task_if_necessary() {
     // Does not change task.
+}
+
+void SearchEngine::clear() {
+    state_registry.clear();
 }
 
 int SearchEngine::get_adjusted_cost(const OperatorProxy &op) const {

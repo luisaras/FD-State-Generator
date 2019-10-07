@@ -64,6 +64,8 @@ public:
     */
     virtual void clear() = 0;
 
+    virtual void clear_evaluators() = 0;
+    
     /*
       Called when the search algorithm wants to "boost" open lists
       using preferred successors.

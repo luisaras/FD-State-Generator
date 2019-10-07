@@ -67,6 +67,11 @@ SearchStatus GeneratorAbstractGoal::step() {
     set<int> applicable_operator_ids;
     match_tree.get_applicable_operator_ids(state_values, applicable_operator_ids);
 
+    if (applicable_operator_ids.size() == 0) {
+        statistics.inc_dead_ends();
+        return IN_PROGRESS;
+    }
+
     // Expand
     for (int op_id : applicable_operator_ids) {
         
@@ -95,8 +100,8 @@ SearchStatus GeneratorAbstractGoal::step() {
             
             if (h > best_state_h) {
                 cout << "New best h: " << h << " (iteration " << it_count << ") ";
-                cout << endl;
                 //dump_state(pred_values);
+                cout << endl;
                 best_state = pred_values;
                 best_state_h = h;
                 if (h > bound) {

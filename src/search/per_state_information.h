@@ -146,6 +146,16 @@ public:
             cached_entries = nullptr;
         }
     }
+
+    void clear() {
+        for (auto it : entries_by_registry) {
+            delete it.second;
+        }
+        entries_by_registry.clear();
+        cached_registry = nullptr;
+        cached_entries = nullptr;
+    }
+
 };
 
 #endif

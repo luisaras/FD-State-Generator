@@ -100,6 +100,15 @@ int StateRegistry::get_state_size_in_bytes() const {
     return get_bins_per_state() * sizeof(PackedStateBin);
 }
 
+void StateRegistry::clear() {
+    if (cached_initial_state) {
+        delete cached_initial_state;
+        cached_initial_state = nullptr;
+    }
+    state_data_pool.clear();
+    registered_states.clear();
+}
+
 void StateRegistry::print_statistics() const {
     cout << "Number of registered states: " << size() << endl;
     registered_states.print_statistics();

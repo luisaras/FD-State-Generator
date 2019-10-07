@@ -43,6 +43,8 @@ public:
     virtual void print_statistics() const override;
 
     void dump_search_space() const;
+
+    virtual void clear() override;
 };
 
 extern void add_options_to_parser(options::OptionParser &parser);

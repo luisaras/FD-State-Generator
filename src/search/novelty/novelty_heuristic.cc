@@ -47,6 +47,11 @@ int NoveltyHeuristic::compute_heuristic(const GlobalState &global_state) {
     return num_facts - value;
 }
 
+void NoveltyHeuristic::clear() {
+    Heuristic::clear();
+    record.clear();
+}
+
 void NoveltyHeuristic::add_options_to_parser(options::OptionParser &parser) {
     parser.add_option<int>("level", "", "1");
     parser.add_option<bool>("use_h", "", "false");

@@ -152,13 +152,14 @@ class StateRegistry : public subscriber::SubscriberService<StateRegistry> {
       i.e. the actual state data is compared, not the memory location.
     */
     using StateIDSet = int_hash_set::IntHashSet<StateIDSemanticHash, StateIDSemanticEqual>;
+    using StateDataPool = segmented_vector::SegmentedArrayVector<PackedStateBin>;
 
     TaskProxy task_proxy;
     const int_packer::IntPacker &state_packer;
     AxiomEvaluator &axiom_evaluator;
     const int num_variables;
 
-    segmented_vector::SegmentedArrayVector<PackedStateBin> state_data_pool;
+    StateDataPool state_data_pool;
     StateIDSet registered_states;
 
     GlobalState *cached_initial_state;
@@ -212,6 +213,8 @@ public:
     size_t size() const {
         return registered_states.size();
     }
+
+    void clear();
 
     int get_state_size_in_bytes() const;
 

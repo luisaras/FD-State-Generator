@@ -52,7 +52,7 @@ protected:
     OperatorCost cost_type;
     bool is_unit_cost;
     double max_time;
-    const utils::Verbosity verbosity;
+    utils::Verbosity verbosity;
 
     virtual void initialize() {}
     virtual SearchStatus step() = 0;
@@ -63,18 +63,25 @@ protected:
 public:
     SearchEngine(const options::Options &opts);
     virtual ~SearchEngine();
+
+    virtual void search();
     virtual void print_statistics() const = 0;
+    virtual bool found_solution() const;
     virtual void save_plan_if_necessary();
     virtual void save_task_if_necessary();
-    virtual bool found_solution() const;
+    virtual void clear();
+
+    PlanManager &get_plan_manager() {return plan_manager;}
+    StateRegistry &get_registry() {return state_registry;}
+    const SearchStatistics &get_statistics() const {return statistics;}
+
     SearchStatus get_status() const;
     const Plan &get_plan() const;
-    StateRegistry& get_registry() { return state_registry; }
-    void search();
-    const SearchStatistics &get_statistics() const {return statistics;}
+    
     void set_bound(int b) {bound = b;}
     int get_bound() {return bound;}
-    PlanManager &get_plan_manager() {return plan_manager;}
+    void set_verbosity(utils::Verbosity v) {verbosity = v;}
+    utils::Verbosity get_verbosity() {return verbosity;}
 
     /* The following three methods should become functions as they
        do not require access to private/protected class members. */

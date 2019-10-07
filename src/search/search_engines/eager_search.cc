@@ -296,6 +296,12 @@ void EagerSearch::dump_search_space() const {
     search_space.dump(task_proxy);
 }
 
+void EagerSearch::clear() {
+    SearchEngine::clear();
+    open_list->clear();
+    open_list->clear_evaluators();
+}
+
 void EagerSearch::start_f_value_statistics(EvaluationContext &eval_context) {
     if (f_evaluator) {
         int f_value = eval_context.get_evaluator_value(f_evaluator.get());

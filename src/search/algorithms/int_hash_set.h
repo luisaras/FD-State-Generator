@@ -279,6 +279,12 @@ public:
         return num_entries;
     }
 
+    void clear () {
+        buckets.clear();
+        buckets.resize(1);
+        num_entries = num_resizes = 0;
+    }
+
     /*
       Insert a key into the hash set.
 
@@ -318,6 +324,7 @@ public:
                   << std::endl;
         std::cout << "Int hash set resizes: " << num_resizes << std::endl;
     }
+
 };
 
 template<typename Hasher, typename Equal>
