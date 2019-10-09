@@ -19,6 +19,7 @@ public:
         EvaluationContext &eval_context) override;
 
     virtual void get_path_dependent_evaluators(std::set<Evaluator *> &) override {}
+    virtual bool dead_ends_are_reliable() const override {return false;}
 
 };
 }

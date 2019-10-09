@@ -24,10 +24,10 @@ StateGenerator::StateGenerator(const Options &opts)
     : SearchEngine(opts),
       max_it(opts.get<int>("max_it")),
       open_list(opts.get<shared_ptr<OpenListFactory>>("open")->create_state_open_list()),
-      h_evaluator(opts.get<shared_ptr<Evaluator>>("eval")),
+      evaluators(opts.get_list<shared_ptr<Evaluator>>("evals")),
       match_tree(task_proxy),
       best_state(task->get_num_variables()),
-      best_state_h(-1) {
+      best_state_eval(evaluators.size(), -1) {
     srand(0);
 }
 
@@ -43,8 +43,8 @@ void StateGenerator::initialize() {
     path_dependent_evaluators.assign(evals.begin(), evals.end());
 
     const GlobalState& original_state = state_registry.get_initial_state();
-    EvaluationContext original_state_eval(original_state, 0, false, nullptr);
-    original_state_h = original_state_eval.get_evaluator_value_or_infinity(h_evaluator.get());
+    EvaluationContext original_state_eval_context(original_state, 0, false, nullptr);
+    original_state_eval = evaluator_values(original_state_eval_context);
     
     if (verbosity > utils::Verbosity::SILENT)
         cout << "Building reverse operators..." << endl;
@@ -66,6 +66,28 @@ void StateGenerator::initialize() {
     if (verbosity > utils::Verbosity::SILENT)
         cout << "Built match tree." << endl;
     
+}
+
+bool StateGenerator::update_best_state(EvaluationContext& eval_context, const vector<int>& state) {
+    vector<int> eval = evaluator_values(eval_context);
+    if (eval > best_state_eval) {
+        if (verbosity > utils::Verbosity::SILENT) {
+            cout << "New best h: " << eval << " (iteration " << it_count << ") ";
+            //dump_state(pred_values);
+            cout << endl;
+        }
+        best_state = state;
+        best_state_eval = eval;
+    }
+    return false;
+}
+
+vector<int> StateGenerator::evaluator_values(EvaluationContext& eval_context) {
+    vector<int> values(evaluators.size());
+    for (uint i = 0; i < values.size(); i++) {
+        values[i] = eval_context.get_evaluator_value_or_infinity(evaluators[i].get());
+    }
+    return values;
 }
 
 bool StateGenerator::pop_node(tl::optional<SearchNode>& node, vector<int>& state_values) {
@@ -115,8 +137,8 @@ void StateGenerator::save_plan_if_necessary() {
 
 void StateGenerator::save_task_if_necessary() {
     if (verbosity > utils::Verbosity::SILENT) {
-        cout << "Original state h-value: " << original_state_h << endl;
-        cout << "New state h-value: " << best_state_h << endl;
+        cout << "Original state h-value: " << original_state_eval[0] << endl;
+        cout << "New state h-value: " << best_state_eval[0] << endl;
     }
     for (uint i = 0; i < best_state.size(); i++) {
         if (best_state[i] == -1 or best_state[i] >= task->get_variable_domain_size(i))
@@ -133,8 +155,7 @@ bool StateGenerator::found_solution() const {
 }
 
 void StateGenerator::add_options_to_parser(OptionParser &parser) {
-    parser.add_option<shared_ptr<Evaluator>>("eval", "evaluator for h-value");
-    parser.add_list_option<shared_ptr<Evaluator>>("tiebreakers", "tie-breaking evaluators", "[]");
+    parser.add_list_option<shared_ptr<Evaluator>>("evals", "evaluators", "[]");
     parser.add_option<int>("max_it", "maximum number of open-list insertions", "-1");
     //parser.add_option<shared_ptr<Evaluator>>("novelty", "novelty heuristic");
     SearchEngine::add_options_to_parser(parser);

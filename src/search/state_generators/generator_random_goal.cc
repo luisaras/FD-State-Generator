@@ -64,21 +64,8 @@ SearchStatus GeneratorRandomGoal::step() {
             
             EvaluationContext eval_context(pred_state, pred_node.get_g(), false, &statistics);
             // Update best state
-            int h = eval_context.get_evaluator_value_or_infinity(h_evaluator.get());
-            if (h > current_best_state_h) {
-                current_best_state = pred_values;
-                current_best_state_h = h;
-                convergence_count = 0;
-                if (h > best_state_h) {
-                    best_state = pred_values;
-                    best_state_h = h;
-                    cout << "New best h: " << best_state_h << " (iteration " << it_count << ")" << endl;
-                    if (h > bound) {
-                        cout << "Reached h bound." << endl;
-                        return SOLVED;
-                    }
-                }
-            }
+            if (update_best_state(eval_context, pred_values))
+                return SOLVED;
 
             // Check iteration limit
             it_count++;
@@ -96,11 +83,26 @@ SearchStatus GeneratorRandomGoal::step() {
 
     convergence_count++;
     if (convergence_count > convergence_max) {
-        cout << "Converged to " << current_best_state_h << ". " << endl;
+        cout << "Converged to " << current_best_state_eval << ". " << endl;
         open_list->clear();
     }
 
     return IN_PROGRESS;
+}
+
+bool GeneratorRandomGoal::update_best_state(EvaluationContext& eval_context, const vector<int>& state) {
+    vector<int> eval = evaluator_values(eval_context);
+    if (eval > current_best_state_eval) {
+        current_best_state = state;
+        current_best_state_eval = eval;
+        convergence_count = 0;
+        if (eval > best_state_eval) {
+            best_state = state;
+            best_state_eval = eval;
+            cout << "New best h: " << eval << " (iteration " << it_count << ")" << endl;
+        }
+    }
+    return false;
 }
 
 bool GeneratorRandomGoal::on_list_empty() {
@@ -140,10 +142,10 @@ bool GeneratorRandomGoal::on_list_empty() {
             open_list->insert(eval_context, goal_state.get_id());
     
             convergence_count = 0;
-            current_best_state_h = 0;
-            if (best_state_h == -1) {
-                best_state_h = 0;
+            current_best_state_eval = evaluator_values(eval_context);
+            if (best_state_eval.size() == 0) {
                 best_state = current_best_state;
+                best_state_eval = current_best_state_eval;
             }
 
             break;

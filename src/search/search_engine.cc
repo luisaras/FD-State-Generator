@@ -49,7 +49,7 @@ SearchEngine::SearchEngine(const Options &opts)
     : status(IN_PROGRESS),
       solution_found(false),
       task(tasks::g_root_task),
-      task_proxy(*task, opts.get<bool>("undef_value", false)),
+      task_proxy(*task, opts.get<bool>("undef_value")),
       state_registry(task_proxy),
       successor_generator(get_successor_generator(task_proxy, verbosity)),
       search_space(state_registry),
@@ -129,6 +129,7 @@ void SearchEngine::save_task_if_necessary() {
 
 void SearchEngine::clear() {
     state_registry.clear();
+    search_space.clear();
 }
 
 int SearchEngine::get_adjusted_cost(const OperatorProxy &op) const {
@@ -164,6 +165,10 @@ void SearchEngine::add_options_to_parser(OptionParser &parser) {
         "experiments. Timed-out searches are treated as failed searches, "
         "just like incomplete search algorithms that exhaust their search space.",
         "infinity");
+    parser.add_option<bool>(
+        "undef_value",
+        "true to support 'undefined' variable values",
+        "false");
     utils::add_verbosity_option_to_parser(parser);
 }
 

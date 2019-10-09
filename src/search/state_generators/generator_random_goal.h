@@ -18,13 +18,14 @@ protected:
 
     // Generation of candidate goal state
     std::vector<int> current_best_state;
-    int current_best_state_h;
+    std::vector<int> current_best_state_eval;
     int convergence_max;
     int convergence_count = 0;
 
     virtual void initialize() override;
     virtual SearchStatus step() override;
     virtual bool on_list_empty() override;
+    virtual bool update_best_state(EvaluationContext& eval_context, const std::vector<int>& state) override;
 
 public:
     explicit GeneratorRandomGoal(const options::Options &opts);

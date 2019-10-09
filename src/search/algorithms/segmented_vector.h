@@ -112,6 +112,17 @@ public:
         return the_size;
     }
 
+    void clear () {
+        for (size_t i = 0; i < the_size; ++i) {
+            entry_allocator.destroy(&operator[](i));
+        }
+        for (size_t segment = 0; segment < segments.size(); ++segment) {
+            entry_allocator.deallocate(segments[segment], SEGMENT_ELEMENTS);
+        }
+        segments.clear();
+        the_size = 0;
+    }
+
     void push_back(const Entry &entry) {
         size_t segment = get_segment(the_size);
         size_t offset = get_offset(the_size);
@@ -231,6 +242,7 @@ public:
             element_allocator.deallocate(segments[i], elements_per_segment);
         }
         segments.clear();
+        the_size = 0;
     }
 
     void push_back(const Element *entry) {

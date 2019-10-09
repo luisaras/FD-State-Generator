@@ -23,7 +23,8 @@ static shared_ptr<SearchEngine> _parse(OptionParser &parser) {
         shared_ptr<Evaluator> eval = make_shared<novelty::NoveltyHeuristic>(
             opts.get<int>("level"), 
             opts.get<bool>("use_h"),
-            opts.get<bool>("prune"));
+            opts.get<bool>("prune"),
+            opts.get<bool>("reverse"));
         vector<shared_ptr<Evaluator>> evals = {eval};
         opts.set("evals", evals);
         opts.set("open", search_common::create_standard_scalar_open_list_factory(eval, false));

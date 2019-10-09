@@ -35,8 +35,10 @@ int ComplexityHeuristic::compute_heuristic(const GlobalState &global_state) {
     engine->get_registry().get_task_proxy().set_initial_state(state);
     engine->search();
     engine->clear();
-    if (engine->found_solution())
+    if (engine->found_solution()) {
+        cout << "Plan length: " << engine->get_plan().size() << endl;
         return engine->get_plan().size();
+    }
     else
         return DEAD_END;
 }

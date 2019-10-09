@@ -15,11 +15,12 @@ using namespace std;
 
 namespace novelty {
     
-options::Options get_default_opts(int level, bool use_h, bool prune) {
+options::Options get_default_opts(int level, bool use_h, bool prune, bool reverse) {
     Options opts;
     opts.set("level", level);
     opts.set("use_h", use_h);
     opts.set("prune", prune);
+    opts.set("reverse", reverse);
     opts.set("transform", tasks::g_root_task);
     opts.set("cache_estimates", true);
     return opts;
@@ -29,14 +30,16 @@ NoveltyHeuristic::NoveltyHeuristic(const options::Options &opts)
     : Heuristic(opts),
       record(task, opts.get<int>("level", 1), opts.get<bool>("use_h", false)),
       prune(opts.get<bool>("prune", true)),
+      reverse(opts.get<bool>("reverse", false)),
       num_facts(0) {
     cout << "Initializing novelty heuristic..." << endl;
-    for (int i = task->get_num_variables() - 1; i >= 0; i--)
-        num_facts += task->get_variable_domain_size(i);
+    if (!reverse)
+        for (int i = task->get_num_variables() - 1; i >= 0; i--)
+            num_facts += task->get_variable_domain_size(i);
 }
 
-NoveltyHeuristic::NoveltyHeuristic(int level, bool use_h, bool prune) :
-    NoveltyHeuristic(get_default_opts(level, use_h, prune)) {
+NoveltyHeuristic::NoveltyHeuristic(int level, bool use_h, bool prune, bool reverse) :
+    NoveltyHeuristic(get_default_opts(level, use_h, prune, reverse)) {
 }
 
 int NoveltyHeuristic::compute_heuristic(const GlobalState &global_state) {
@@ -44,6 +47,8 @@ int NoveltyHeuristic::compute_heuristic(const GlobalState &global_state) {
     int value = record.get_value(state.get_values());
     if (prune && value == 0)
         return DEAD_END;
+    if (reverse)
+        value = -value;
     return num_facts - value;
 }
 
@@ -56,6 +61,7 @@ void NoveltyHeuristic::add_options_to_parser(options::OptionParser &parser) {
     parser.add_option<int>("level", "", "1");
     parser.add_option<bool>("use_h", "", "false");
     parser.add_option<bool>("prune", "", "true");
+    parser.add_option<bool>("reverse", "", "false");
 }
 
 static shared_ptr<Heuristic> _parse(options::OptionParser &parser) {

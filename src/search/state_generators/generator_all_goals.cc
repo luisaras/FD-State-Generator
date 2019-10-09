@@ -107,18 +107,8 @@ SearchStatus GeneratorAllGoals::step() {
             EvaluationContext eval_context(pred_state, pred_node.get_g(), false, &statistics);
 
             // Update best state
-            int h = eval_context.get_evaluator_value_or_infinity(h_evaluator.get());
-            assert(h < 2147483647);
-            
-            if (h > best_state_h) {
-                best_state = pred_values;
-                best_state_h = h;
-                cout << "New best h: " << best_state_h << " (iteration " << it_count << ")" << endl;
-                if (h > bound) {
-                    cout << "Reached h bound." << endl;
-                    return SOLVED;
-                }
-            }
+            if (update_best_state(eval_context, pred_values))
+                return SOLVED;
 
             // Check iteration limit
             it_count++;

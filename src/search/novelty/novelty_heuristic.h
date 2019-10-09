@@ -13,12 +13,13 @@ namespace novelty {
 class NoveltyHeuristic : public Heuristic {
     NoveltyRecord record;
     bool prune;
+    bool reverse;
     int num_facts;
 protected:
     virtual int compute_heuristic(const GlobalState &global_state);
 public:
     NoveltyHeuristic(const options::Options &opts);
-    NoveltyHeuristic(int level, bool use_h, bool prune);
+    NoveltyHeuristic(int level, bool use_h, bool prune, bool reverse);
     ~NoveltyHeuristic() = default;
 
     static void add_options_to_parser(options::OptionParser &parser);

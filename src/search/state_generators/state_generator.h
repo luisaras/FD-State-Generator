@@ -29,7 +29,7 @@ protected:
 
     std::unique_ptr<StateOpenList> open_list;
 
-    std::shared_ptr<Evaluator> h_evaluator;
+    std::vector<std::shared_ptr<Evaluator>> evaluators;
     std::vector<Evaluator*> path_dependent_evaluators;
     
     std::vector<reverse_search::ReverseOperator> operators;
@@ -37,12 +37,14 @@ protected:
     reverse_search::MatchTree match_tree;
 
     std::vector<int> best_state;
-    int best_state_h;
-    int original_state_h;
+    std::vector<int> best_state_eval;
+    std::vector<int> original_state_eval;
 
     virtual void initialize() override;
     virtual bool pop_node(tl::optional<SearchNode> &node, std::vector<int> &state_values);
     virtual bool on_list_empty() { return false; }
+    virtual std::vector<int> evaluator_values(EvaluationContext& eval_context);
+    virtual bool update_best_state(EvaluationContext& eval_context, const std::vector<int>& state);
 
 public:
     explicit StateGenerator(const options::Options &opts);

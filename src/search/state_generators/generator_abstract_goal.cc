@@ -42,11 +42,12 @@ void GeneratorAbstractGoal::initialize() {
     for (uint i = 0; i < goal_facts.size(); ++i) {
         FactPair fact = goal_facts[i].get_pair();
         best_state[fact.var] = fact.value;
-        cout << fact << " ";
+        if (verbosity > utils::Verbosity::SILENT)
+            cout << fact << " ";
     }
-    cout << endl;
     
-    cout << "Inserting initial (goal) state..." << endl;
+    if (verbosity > utils::Verbosity::SILENT)
+        cout << endl << "Inserting initial (goal) state..." << endl;
     
     // Insert goal state
     const GlobalState& goal_state = state_registry.get_state(best_state);
@@ -92,28 +93,14 @@ SearchStatus GeneratorAbstractGoal::step() {
             EvaluationContext eval_context(pred_state, pred_node.get_g(), false, &statistics);
 
             // Update best state
-            int h = eval_context.get_evaluator_value_or_infinity(h_evaluator.get());
-            if (h == 2147483647) {
-                dump_state(pred_values);
-                assert(h < 2147483647);
-            }
-            
-            if (h > best_state_h) {
-                cout << "New best h: " << h << " (iteration " << it_count << ") ";
-                //dump_state(pred_values);
-                cout << endl;
-                best_state = pred_values;
-                best_state_h = h;
-                if (h > bound) {
-                    cout << "Reached h bound." << endl;
-                    return SOLVED;
-                }
-            }
+            if (update_best_state(eval_context, pred_values))
+                return SOLVED;
 
             // Check iteration limit
             it_count++;
             if (max_it >= 0 && it_count >= max_it) {
-                cout << "Reached iteration limit." << endl;
+                if (verbosity > utils::Verbosity::SILENT)
+                    cout << "Reached iteration limit." << endl;
                 return SOLVED;
             }
 

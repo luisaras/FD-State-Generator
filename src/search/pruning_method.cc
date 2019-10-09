@@ -12,7 +12,7 @@ PruningMethod::PruningMethod()
 }
 
 void PruningMethod::initialize(const shared_ptr<AbstractTask> &task_) {
-    assert(!task);
+    //assert(!task);
     task = task_;
 }
 

@@ -127,16 +127,11 @@ create_astar_open_list_factory_and_f_eval(const Options &opts) {
 }
 
 shared_ptr<OpenListFactory> create_reverse_open_list_factory(const Options &opts) {
-    vector<shared_ptr<Evaluator>> evals = opts.get_list<shared_ptr<Evaluator>>("tiebreakers");
-
-    shared_ptr<Evaluator> h = opts.get<shared_ptr<Evaluator>>("eval");
-    evals.insert(evals.begin(), h);
-
+    vector<shared_ptr<Evaluator>> evals = opts.get_list<shared_ptr<Evaluator>>("evals");
     if (opts.contains("novelty")) {
         shared_ptr<Evaluator> n = opts.get<shared_ptr<Evaluator>>("novelty");
         evals.insert(evals.begin(), n);
     }
-
     shared_ptr<GEval> g = make_shared<GEval>();
     evals.push_back(g);
 

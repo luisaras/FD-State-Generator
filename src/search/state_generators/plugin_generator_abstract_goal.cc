@@ -24,13 +24,14 @@ static shared_ptr<SearchEngine> _parse(OptionParser &parser) {
         h_opts.set("transform", tasks::g_root_task);
         h_opts.set("cache_estimates", true);
         // Set tie-breaker
-        vector<shared_ptr<Evaluator>> tiebreakers = opts.get_list<shared_ptr<Evaluator>>("tiebreakers");
-        tiebreakers.push_back(make_shared<undefs_heuristic::UndefsHeuristic>(h_opts));
-        opts.set("tiebreakers", tiebreakers);
-        // Set evaluator to AbstractHeuristic
-        h_opts.set("eval", opts.get<shared_ptr<Evaluator>>("eval"));
-        shared_ptr<Evaluator> abstract_eval = make_shared<abstract_heuristic::AbstractHeuristic>(h_opts);
-        opts.set("eval", abstract_eval);
+        vector<shared_ptr<Evaluator>> evals = opts.get_list<shared_ptr<Evaluator>>("evals");
+        for (uint i = 0; i < evals.size(); i++) {
+            h_opts.set("eval", evals[i]);
+            shared_ptr<Evaluator> abstract_eval = make_shared<abstract_heuristic::AbstractHeuristic>(h_opts);
+            evals[i] = abstract_eval;
+        }
+        evals.push_back(make_shared<undefs_heuristic::UndefsHeuristic>(h_opts));
+        opts.set("evals", evals);
         // Set open list
         opts.set("open", search_common::create_reverse_open_list_factory(opts));
         engine = make_shared<state_generator::GeneratorAbstractGoal>(opts);
