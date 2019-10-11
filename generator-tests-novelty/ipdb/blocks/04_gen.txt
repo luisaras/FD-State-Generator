@@ -1,0 +1,88 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/ipdb/blocks/04_task.sas --search 'generator_abstract([ipdb(), complexity(novelty_search(undef_value=true,prune=false))], max_it=10000000, max_time=600)'
+reading input... [t=7.1274e-05s]
+done reading input! [t=0.000682538s]
+Initializing canonical PDB heuristic...
+Generating patterns using the hill climbing generator...
+Done calculating initial pattern collection: 0.000223381s
+Average operator cost: 1
+building causal graph...done! [t=0.00021156s]
+Done calculating initial candidate PDBs
+current collection size is 24
+current initial h value: 6
+Improvement below threshold. Stop hill climbing.
+Hill climbing iterations: 1
+Hill climbing generated patterns: 24
+Hill climbing rejected patterns: 0
+Hill climbing maximum PDB size: 12
+Hill climbing time: 0.00668952s
+Hill climbing generator collection: [[7], [8], [9], [10]]
+Hill climbing generator number of patterns: 4
+Hill climbing generator total PDB size: 24
+Hill climbing generator computation time: 0.00699263s
+Running dominance pruning...
+Pruned 0 of 1 pattern cliques
+Pruned 0 of 4 PDBs
+Dominance pruning took 7.357e-06s
+Canonical PDB heuristic number of patterns: 4
+Canonical PDB heuristic total PDB size: 24
+Canonical PDB heuristic computation time: 0.00704113s
+Initializing novelty heuristic...
+Building successor generator...done! [t=0.0118943s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 2.5997e-05s
+Variables: 11
+FactPairs: 42
+Bytes per state: 4
+Initializing complexity heuristic...
+Building successor generator...done! [t=0.0120075s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 5.73e-07s
+Variables: 11
+FactPairs: 42
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New best heuristic value for <missing>: 31
+[g=0, 1 evaluated, 0 expanded, t=0.0121382s, 56248 KB]
+New undef count: 0
+Building reverse operators...
+Created 145 reverse operators.
+Built match tree.
+7=4 8=3 9=3 10=2 
+Inserting initial (goal) state...
+New best h: [0, 0, 7] (iteration 0) 
+New best h: [1, 2147483647, 7] (iteration 5) 
+New best h: [1, 2147483647, 9] (iteration 45) 
+New best h: [2, 2147483647, 9] (iteration 49) 
+Found first concrete state.
+Found first concrete state.
+New best h: [2, 2147483647, 11] (iteration 69) 
+New best h: [3, 2147483647, 10] (iteration 73) 
+New best h: [3, 2147483647, 11] (iteration 77) 
+New best h: [4, 2147483647, 11] (iteration 94) 
+New best h: [5, 2147483647, 11] (iteration 98) 
+New best h: [6, 2147483647, 11] (iteration 132) 
+New best h: [7, 2147483647, 11] (iteration 343) 
+New best h: [8, 2147483647, 11] (iteration 6057) 
+Completely explored state space.
+Actual search time: 4.66621s [t=4.67853s]
+Original state h-value: 6
+New state h-value: 8
+Expanded 417095 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 1119958
+Generated 2723413 state(s).
+Dead ends: 76022 state(s).
+Number of registered states: 421621
+Int hash set load factor: 421621/1048576 = 0.402089
+Int hash set resizes: 20
+Search time: 4.66644s
+Total time: 4.67854s
+Solution found.
+Peak memory: 172824 KB
+search exit code: 0
+

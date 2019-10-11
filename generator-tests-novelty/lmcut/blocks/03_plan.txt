@@ -1,0 +1,63 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/lmcut/blocks/03_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=7.5056e-05s]
+done reading input! [t=0.000757703s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00461306s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 6.1218e-05s
+Variables: 9
+FactPairs: 30
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 7
+[g=0, 1 evaluated, 0 expanded, t=0.00503924s, 56096 KB]
+f = 7 [1 evaluated, 0 expanded, t=0.00511238s, 56096 KB]
+Initial heuristic value for lmcut: 7
+New best heuristic value for lmcut: 6
+[g=1, 2 evaluated, 1 expanded, t=0.00525393s, 56096 KB]
+New best heuristic value for lmcut: 5
+[g=1, 6 evaluated, 1 expanded, t=0.00548021s, 56096 KB]
+New best heuristic value for lmcut: 4
+[g=3, 21 evaluated, 4 expanded, t=0.00608098s, 56096 KB]
+New best heuristic value for lmcut: 3
+[g=3, 23 evaluated, 4 expanded, t=0.00622021s, 56096 KB]
+New best heuristic value for lmcut: 2
+[g=5, 32 evaluated, 6 expanded, t=0.00656588s, 56096 KB]
+New best heuristic value for lmcut: 1
+[g=6, 38 evaluated, 7 expanded, t=0.00680399s, 56096 KB]
+New best heuristic value for lmcut: 0
+[g=7, 40 evaluated, 8 expanded, t=0.00692747s, 56096 KB]
+Solution found!
+Actual search time: 0.0018663s [t=0.00706764s]
+op21) unstack a c (1)
+op7) put-down d (1)
+op26) unstack c a (1)
+op16) stack c d (1)
+op1) pick-up b (1)
+op12) stack b c (1)
+op8) stack a b (1)
+Plan length: 7 step(s).
+Plan cost: 7
+Expanded 9 state(s).
+Reopened 0 state(s).
+Evaluated 41 state(s).
+Evaluations: 41
+Generated 46 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 41
+Int hash set load factor: 41/64 = 0.640625
+Int hash set resizes: 6
+Search time: 0.00219249s
+Total time: 0.00708398s
+Solution found.
+Peak memory: 56096 KB
+search exit code: 0
+
