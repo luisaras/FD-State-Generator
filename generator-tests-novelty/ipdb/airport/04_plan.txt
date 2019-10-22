@@ -1,0 +1,124 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/ipdb/airport/04_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=4.8504e-05s]
+done reading input! [t=0.00083498s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00358226s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000101834s
+Variables: 75
+FactPairs: 188
+Bytes per state: 12
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 19
+[g=0, 1 evaluated, 0 expanded, t=0.00408726s, 56228 KB]
+f = 19 [1 evaluated, 0 expanded, t=0.0041369s, 56228 KB]
+Initial heuristic value for lmcut: 19
+New best heuristic value for lmcut: 18
+[g=1, 2 evaluated, 1 expanded, t=0.0044328s, 56228 KB]
+New best heuristic value for lmcut: 17
+[g=2, 3 evaluated, 2 expanded, t=0.00470523s, 56228 KB]
+f = 20 [4 evaluated, 3 expanded, t=0.00498902s, 56228 KB]
+f = 21 [5 evaluated, 4 expanded, t=0.00525261s, 56228 KB]
+f = 22 [6 evaluated, 5 expanded, t=0.00551341s, 56228 KB]
+f = 23 [7 evaluated, 6 expanded, t=0.00577283s, 56228 KB]
+f = 39 [8 evaluated, 7 expanded, t=0.00620923s, 56228 KB]
+New best heuristic value for lmcut: 16
+[g=23, 25 evaluated, 23 expanded, t=0.0100512s, 56228 KB]
+New best heuristic value for lmcut: 15
+[g=24, 26 evaluated, 24 expanded, t=0.0101848s, 56228 KB]
+New best heuristic value for lmcut: 14
+[g=25, 27 evaluated, 25 expanded, t=0.0103114s, 56228 KB]
+New best heuristic value for lmcut: 13
+[g=26, 28 evaluated, 26 expanded, t=0.0104215s, 56228 KB]
+New best heuristic value for lmcut: 12
+[g=27, 29 evaluated, 27 expanded, t=0.0105246s, 56228 KB]
+New best heuristic value for lmcut: 11
+[g=28, 30 evaluated, 28 expanded, t=0.0106212s, 56228 KB]
+New best heuristic value for lmcut: 10
+[g=29, 31 evaluated, 29 expanded, t=0.0107108s, 56228 KB]
+New best heuristic value for lmcut: 9
+[g=30, 32 evaluated, 30 expanded, t=0.0107941s, 56228 KB]
+New best heuristic value for lmcut: 8
+[g=31, 33 evaluated, 31 expanded, t=0.0108743s, 56228 KB]
+New best heuristic value for lmcut: 7
+[g=32, 34 evaluated, 32 expanded, t=0.0109281s, 56228 KB]
+New best heuristic value for lmcut: 6
+[g=33, 35 evaluated, 33 expanded, t=0.0109775s, 56228 KB]
+New best heuristic value for lmcut: 5
+[g=34, 36 evaluated, 34 expanded, t=0.0110238s, 56228 KB]
+New best heuristic value for lmcut: 4
+[g=35, 37 evaluated, 35 expanded, t=0.0110672s, 56228 KB]
+New best heuristic value for lmcut: 3
+[g=36, 38 evaluated, 36 expanded, t=0.0111081s, 56228 KB]
+New best heuristic value for lmcut: 2
+[g=37, 39 evaluated, 37 expanded, t=0.011146s, 56228 KB]
+New best heuristic value for lmcut: 1
+[g=38, 41 evaluated, 38 expanded, t=0.011187s, 56228 KB]
+New best heuristic value for lmcut: 0
+[g=39, 42 evaluated, 39 expanded, t=0.01122s, 56228 KB]
+Solution found!
+Actual search time: 0.00705433s [t=0.0112491s]
+op15) move_seg_c6_c7_0_100_seg_c5_c6_0_50_north_north_medium airplane_cfbeg (1)
+op9) move_seg_c5_c6_0_50_seg_c4_c5_0_50_north_north_medium airplane_cfbeg (1)
+op8) move_seg_c4_c5_0_50_seg_c_c2_0_84_north_north_medium airplane_cfbeg (1)
+op17) move_seg_c_c2_0_84_seg_c_c2_2_0_83_north_north_medium airplane_cfbeg (1)
+op21) move_seg_c_c2_2_0_83_seg_c_c2_1_0_83_north_north_medium airplane_cfbeg (1)
+op19) move_seg_c_c2_1_0_83_seg_n_c_0_100_north_north_medium airplane_cfbeg (1)
+op42) move_seg_n_c_0_100_seg_n3_n_0_100_north_north_medium airplane_cfbeg (1)
+op31) move_seg_n3_n_0_100_seg_n2_n3_0_85_north_north_medium airplane_cfbeg (1)
+op24) move_seg_n2_n3_0_85_seg_n2_n3_6_0_86_north_north_medium airplane_cfbeg (1)
+op30) move_seg_n2_n3_6_0_86_seg_n2_n3_5_0_86_north_north_medium airplane_cfbeg (1)
+op29) move_seg_n2_n3_5_0_86_seg_n2_n3_4_0_85_north_north_medium airplane_cfbeg (1)
+op28) move_seg_n2_n3_4_0_85_seg_n2_n3_3_0_86_north_north_medium airplane_cfbeg (1)
+op27) move_seg_n2_n3_3_0_86_seg_n2_n3_2_0_86_north_north_medium airplane_cfbeg (1)
+op26) move_seg_n2_n3_2_0_86_seg_n2_n3_1_0_86_north_north_medium airplane_cfbeg (1)
+op25) move_seg_n2_n3_1_0_86_seg_n1_n2_0_100_north_north_medium airplane_cfbeg (1)
+op23) move_seg_n1_n2_0_100_seg_n1_a_0_100_north_south_medium airplane_cfbeg (1)
+op22) move_seg_n1_a_0_100_seg_a_09_0_100_south_south_medium airplane_cfbeg (1)
+op3) move_seg_a_09_0_100_seg_09_0_150_south_south_medium airplane_cfbeg (1)
+op0) move_seg_09_0_150_seg_rwy_0_1300_south_south_medium airplane_cfbeg (1)
+op44) move_seg_rwy_0_1300_seg_27_0_150_south_south_medium airplane_cfbeg (1)
+op1) move_seg_27_0_150_seg_b_27_0_100_south_north_medium airplane_cfbeg (1)
+op5) move_seg_b_27_0_100_seg_n6_b_0_100_north_north_medium airplane_cfbeg (1)
+op40) move_seg_n6_b_0_100_seg_n5_n6_0_100_north_north_medium airplane_cfbeg (1)
+op39) move_seg_n5_n6_0_100_seg_n4_n5_0_86_north_north_medium airplane_cfbeg (1)
+op32) move_seg_n4_n5_0_86_seg_n4_n5_6_0_86_north_north_medium airplane_cfbeg (1)
+op38) move_seg_n4_n5_6_0_86_seg_n4_n5_5_0_86_north_north_medium airplane_cfbeg (1)
+op37) move_seg_n4_n5_5_0_86_seg_n4_n5_4_0_85_north_north_medium airplane_cfbeg (1)
+op36) move_seg_n4_n5_4_0_85_seg_n4_n5_3_0_86_north_north_medium airplane_cfbeg (1)
+op35) move_seg_n4_n5_3_0_86_seg_n4_n5_2_0_86_north_north_medium airplane_cfbeg (1)
+op34) move_seg_n4_n5_2_0_86_seg_n4_n5_1_0_85_north_north_medium airplane_cfbeg (1)
+op33) move_seg_n4_n5_1_0_85_seg_n_n4_0_100_north_north_medium airplane_cfbeg (1)
+op43) move_seg_n_n4_0_100_seg_n_c_0_100_north_south_medium airplane_cfbeg (1)
+op41) move_seg_n_c_0_100_seg_c_c2_1_0_83_south_south_medium airplane_cfbeg (1)
+op18) move_seg_c_c2_1_0_83_seg_c_c2_2_0_83_south_south_medium airplane_cfbeg (1)
+op20) move_seg_c_c2_2_0_83_seg_c_c2_0_84_south_south_medium airplane_cfbeg (1)
+op16) move_seg_c_c2_0_84_seg_c4_c5_0_50_south_south_medium airplane_cfbeg (1)
+op6) move_seg_c4_c5_0_50_seg_c5_c_a02_0_100_south_south_medium airplane_cfbeg (1)
+op11) move_seg_c5_c_a02_0_100_seg_a02_0_100_south_south_medium airplane_cfbeg (1)
+op46) park_seg_a02_0_100_south airplane_cfbeg (1)
+Plan length: 39 step(s).
+Plan cost: 39
+Expanded 40 state(s).
+Reopened 0 state(s).
+Evaluated 42 state(s).
+Evaluations: 42
+Generated 41 state(s).
+Dead ends: 2 state(s).
+Expanded until last jump: 7 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 8 state(s).
+Generated until last jump: 7 state(s).
+Number of registered states: 42
+Int hash set load factor: 42/64 = 0.65625
+Int hash set resizes: 6
+Search time: 0.00748483s
+Total time: 0.0112533s
+Solution found.
+Peak memory: 56228 KB
+search exit code: 0
+

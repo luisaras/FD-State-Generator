@@ -1,0 +1,66 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/lmcut/blocks/05_task.sas --search 'generator_abstract([lmcut(), complexity(novelty_search(undef_value=true,prune=false))], max_it=10000000, max_time=600)'
+reading input... [t=9.3601e-05s]
+done reading input! [t=0.000470909s]
+Initializing landmark cut heuristic...
+Initializing novelty heuristic...
+Building successor generator...done! [t=0.00262495s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 4.1669e-05s
+Variables: 11
+FactPairs: 42
+Bytes per state: 4
+Initializing complexity heuristic...
+Building successor generator...done! [t=0.00280783s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 9.83e-07s
+Variables: 11
+FactPairs: 42
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New best heuristic value for <missing>: 31
+[g=0, 1 evaluated, 0 expanded, t=0.00303939s, 56096 KB]
+New undef count: 0
+Building reverse operators...
+Created 145 reverse operators.
+Built match tree.
+7=4 8=1 9=2 10=3 
+Inserting initial (goal) state...
+New best h: [0, 0, 7] (iteration 0) 
+New best h: [1, 2147483647, 7] (iteration 5) 
+New best h: [1, 2147483647, 8] (iteration 45) 
+New best h: [2, 2147483647, 8] (iteration 47) 
+New best h: [2, 2147483647, 9] (iteration 49) 
+New best h: [2, 2147483647, 10] (iteration 69) 
+New best h: [3, 2147483647, 10] (iteration 71) 
+Found first concrete state.
+Found first concrete state.
+New best h: [3, 2147483647, 11] (iteration 75) 
+New best h: [4, 2147483647, 11] (iteration 103) 
+New best h: [5, 2147483647, 11] (iteration 111) 
+New best h: [6, 2147483647, 11] (iteration 116) 
+New best h: [7, 2147483647, 11] (iteration 127) 
+New best h: [8, 2147483647, 11] (iteration 388) 
+New best h: [9, 2147483647, 11] (iteration 1474) 
+Completely explored state space.
+Actual search time: 6.17408s [t=6.17739s]
+Original state h-value: 7
+New state h-value: 9
+Expanded 276970 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 716505
+Generated 1872949 state(s).
+Dead ends: 49197 state(s).
+Number of registered states: 283756
+Int hash set load factor: 283756/524288 = 0.541222
+Int hash set resizes: 19
+Search time: 6.17446s
+Total time: 6.1774s
+Solution found.
+Peak memory: 134132 KB
+search exit code: 0
+

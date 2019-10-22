@@ -1,0 +1,81 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests/ipdb/airport/01_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=7.1069e-05s]
+done reading input! [t=0.000651879s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00446797s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 7.0095e-05s
+Variables: 29
+FactPairs: 72
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 13
+[g=0, 1 evaluated, 0 expanded, t=0.00495139s, 56096 KB]
+f = 13 [1 evaluated, 0 expanded, t=0.00502672s, 56096 KB]
+Initial heuristic value for lmcut: 13
+New best heuristic value for lmcut: 12
+[g=1, 2 evaluated, 1 expanded, t=0.00521854s, 56096 KB]
+New best heuristic value for lmcut: 11
+[g=2, 3 evaluated, 2 expanded, t=0.00538211s, 56096 KB]
+New best heuristic value for lmcut: 10
+[g=3, 4 evaluated, 3 expanded, t=0.00553651s, 56096 KB]
+New best heuristic value for lmcut: 9
+[g=4, 5 evaluated, 4 expanded, t=0.00568675s, 56096 KB]
+New best heuristic value for lmcut: 8
+[g=5, 6 evaluated, 5 expanded, t=0.00583212s, 56096 KB]
+New best heuristic value for lmcut: 7
+[g=6, 8 evaluated, 6 expanded, t=0.0059777s, 56096 KB]
+New best heuristic value for lmcut: 6
+[g=7, 9 evaluated, 7 expanded, t=0.00611519s, 56096 KB]
+New best heuristic value for lmcut: 5
+[g=8, 10 evaluated, 8 expanded, t=0.00624346s, 56096 KB]
+New best heuristic value for lmcut: 4
+[g=9, 11 evaluated, 9 expanded, t=0.00636442s, 56096 KB]
+New best heuristic value for lmcut: 3
+[g=10, 12 evaluated, 10 expanded, t=0.00648175s, 56096 KB]
+New best heuristic value for lmcut: 2
+[g=11, 13 evaluated, 11 expanded, t=0.00658118s, 56096 KB]
+New best heuristic value for lmcut: 1
+[g=12, 15 evaluated, 12 expanded, t=0.00675918s, 56096 KB]
+New best heuristic value for lmcut: 0
+[g=13, 16 evaluated, 13 expanded, t=0.00685044s, 56096 KB]
+Solution found!
+Actual search time: 0.00182049s [t=0.00693716s]
+op6) move_seg_twe1_0_200_seg_twe2_0_50_south_south_medium airplane_cfbeg (1)
+op7) move_seg_twe2_0_50_seg_twe3_0_50_south_south_medium airplane_cfbeg (1)
+op8) move_seg_twe3_0_50_seg_twe4_0_50_south_south_medium airplane_cfbeg (1)
+op9) move_seg_twe4_0_50_seg_rwe_0_50_south_south_medium airplane_cfbeg (1)
+op4) move_seg_rwe_0_50_seg_rw_0_400_south_south_medium airplane_cfbeg (1)
+op3) move_seg_rw_0_400_seg_rww_0_50_south_south_medium airplane_cfbeg (1)
+op5) move_seg_rww_0_50_seg_tww4_0_50_south_north_medium airplane_cfbeg (1)
+op14) move_seg_tww4_0_50_seg_tww3_0_50_north_north_medium airplane_cfbeg (1)
+op13) move_seg_tww3_0_50_seg_tww2_0_50_north_north_medium airplane_cfbeg (1)
+op12) move_seg_tww2_0_50_seg_tww1_0_200_north_north_medium airplane_cfbeg (1)
+op10) move_seg_tww1_0_200_seg_ppdoor_0_40_north_south_medium airplane_cfbeg (1)
+op1) move_seg_ppdoor_0_40_seg_pp_0_60_south_south_medium airplane_cfbeg (1)
+op16) park_seg_pp_0_60_south airplane_cfbeg (1)
+Plan length: 13 step(s).
+Plan cost: 13
+Expanded 14 state(s).
+Reopened 0 state(s).
+Evaluated 16 state(s).
+Evaluations: 16
+Generated 15 state(s).
+Dead ends: 1 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 16
+Int hash set load factor: 16/16 = 1
+Int hash set resizes: 4
+Search time: 0.00220386s
+Total time: 0.00694964s
+Solution found.
+Peak memory: 56096 KB
+search exit code: 0
+
