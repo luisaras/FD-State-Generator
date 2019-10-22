@@ -2,7 +2,6 @@
 
 #include "evaluation_context.h"
 #include "evaluator.h"
-#include "option_parser.h"
 #include "plugin.h"
 
 #include "algorithms/ordered_set.h"
@@ -46,7 +45,8 @@ successor_generator::SuccessorGenerator &get_successor_generator(const TaskProxy
 }
 
 SearchEngine::SearchEngine(const Options &opts)
-    : status(IN_PROGRESS),
+    : opts(opts),
+      status(IN_PROGRESS),
       solution_found(false),
       task(tasks::g_root_task),
       task_proxy(*task, opts.get<bool>("undef_value")),
@@ -216,4 +216,8 @@ void collect_preferred_operators(
             preferred_operators.insert(op_id);
         }
     }
+}
+
+const options::Options& SearchEngine::get_options() const {
+    return opts;
 }

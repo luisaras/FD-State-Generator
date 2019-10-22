@@ -7,6 +7,7 @@
 #include "../utils/logging.h"
 
 #include "../task_utils/task_properties.h"
+#include "../search_engines/eager_search.h"
 
 #include <cstddef>
 #include <limits>
@@ -14,27 +15,36 @@
 
 using namespace std;
 
+int bound;
+
 namespace complexity_heuristic {
 ComplexityHeuristic::ComplexityHeuristic(const Options &opts)
     : Heuristic(opts),
       engine(opts.get<shared_ptr<SearchEngine>>("engine")) {
     cout << "Initializing complexity heuristic..." << endl;
-    engine->set_verbosity(utils::Verbosity::SILENT);
 }
 
 ComplexityHeuristic::~ComplexityHeuristic() {
 }
 
 EvaluationResult ComplexityHeuristic::compute_result(EvaluationContext &eval_context) {
-    engine->set_bound(eval_context.get_g_value());
+    bound = eval_context.get_g_value();
     return Heuristic::compute_result(eval_context);
 }
 
 int ComplexityHeuristic::compute_heuristic(const GlobalState &global_state) {
     State state = convert_global_state(global_state);
+
+    engine = make_shared<eager_search::EagerSearch>(engine->get_options());
     engine->get_registry().get_task_proxy().set_initial_state(state);
+    cout << "Initial state set." << endl;
+    engine->set_bound(bound);
+    engine->set_verbosity(utils::Verbosity::SILENT);
+    cout << "Ready to search." << endl;
     engine->search();
-    engine->clear();
+    cout << "Ended search." << endl;
+    //engine->clear();
+
     if (engine->found_solution()) {
         cout << "Plan length: " << engine->get_plan().size() << endl;
         return engine->get_plan().size();

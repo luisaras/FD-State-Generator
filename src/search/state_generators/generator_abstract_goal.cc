@@ -45,12 +45,14 @@ void GeneratorAbstractGoal::initialize() {
         if (verbosity > utils::Verbosity::SILENT)
             cout << fact << " ";
     }
+    cout << endl;
+
+    const GlobalState& goal_state = state_registry.get_state(best_state);
     
     if (verbosity > utils::Verbosity::SILENT)
-        cout << endl << "Inserting initial (goal) state..." << endl;
+        cout << "Inserting initial (goal) state..." << endl;
     
     // Insert goal state
-    const GlobalState& goal_state = state_registry.get_state(best_state);
     EvaluationContext goal_state_eval(goal_state, 0, false, &statistics);
     search_space.get_node(goal_state).open_initial();
     open_list->insert(goal_state_eval, goal_state.get_id());

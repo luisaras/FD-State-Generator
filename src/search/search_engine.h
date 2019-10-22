@@ -9,13 +9,9 @@
 #include "search_statistics.h"
 #include "state_registry.h"
 #include "task_proxy.h"
+#include "option_parser.h"
 
 #include <vector>
-
-namespace options {
-class OptionParser;
-class Options;
-}
 
 namespace ordered_set {
 template<typename T>
@@ -37,6 +33,9 @@ class SearchEngine {
     bool solution_found;
     Plan plan;
 protected:
+
+    const options::Options opts;
+
     // Hold a reference to the task implementation and pass it to objects that need it.
     const std::shared_ptr<AbstractTask> task;
     // Use task_proxy to access task information.
@@ -75,6 +74,7 @@ public:
     StateRegistry &get_registry() {return state_registry;}
     const SearchStatistics &get_statistics() const {return statistics;}
 
+    const options::Options& get_options() const;
     SearchStatus get_status() const;
     const Plan &get_plan() const;
     
@@ -82,6 +82,8 @@ public:
     int get_bound() {return bound;}
     void set_verbosity(utils::Verbosity v) {verbosity = v;}
     utils::Verbosity get_verbosity() {return verbosity;}
+
+
 
     /* The following three methods should become functions as they
        do not require access to private/protected class members. */
