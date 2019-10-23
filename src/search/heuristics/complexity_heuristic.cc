@@ -7,7 +7,6 @@
 #include "../utils/logging.h"
 
 #include "../task_utils/task_properties.h"
-#include "../search_engines/eager_search.h"
 
 #include <cstddef>
 #include <limits>
@@ -35,22 +34,24 @@ EvaluationResult ComplexityHeuristic::compute_result(EvaluationContext &eval_con
 int ComplexityHeuristic::compute_heuristic(const GlobalState &global_state) {
     State state = convert_global_state(global_state);
 
-    engine = make_shared<eager_search::EagerSearch>(engine->get_options());
+    engine->clear();
+    //engine = make_shared<eager_search::EagerSearch>(engine->get_options());
+    for (VariableProxy var : engine->get_registry().get_task_proxy().get_variables()) {
+        assert(state.get_values()[var.get_id()] < var.get_domain_size());
+    }
     engine->get_registry().get_task_proxy().set_initial_state(state);
-    cout << "Initial state set." << endl;
     engine->set_bound(bound);
-    engine->set_verbosity(utils::Verbosity::SILENT);
-    cout << "Ready to search." << endl;
     engine->search();
-    cout << "Ended search." << endl;
-    //engine->clear();
 
     if (engine->found_solution()) {
-        cout << "Plan length: " << engine->get_plan().size() << endl;
         return engine->get_plan().size();
-    }
-    else
+    } else {
+        cout << " Dead end: " << state.get_values() 
+            << " " << engine->get_statistics().get_expanded()
+            << " " << engine->get_statistics().get_generated()
+            << endl;
         return DEAD_END;
+    }
 }
 
 static shared_ptr<Heuristic> _parse(OptionParser &parser) {

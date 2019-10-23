@@ -53,7 +53,7 @@ int NoveltyHeuristic::compute_heuristic(const GlobalState &global_state) {
 }
 
 void NoveltyHeuristic::clear() {
-    Heuristic::clear();
+    heuristic_cache.clear();
     record.clear();
 }
 

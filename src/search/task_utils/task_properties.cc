@@ -214,6 +214,11 @@ PerTaskInformation<int_packer::IntPacker> g_state_packers(
         for (VariableProxy var : variables) {
             variable_ranges.push_back(var.get_domain_size() + task_proxy.has_undef_value());
         }
+        if (task_proxy.has_undef_value()) {
+            for (FactProxy fact : task_proxy.get_goals()) {
+                variable_ranges[fact.get_pair().var]--;
+            }
+        }
         return utils::make_unique_ptr<int_packer::IntPacker>(variable_ranges);
     }
     );

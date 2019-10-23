@@ -110,5 +110,5 @@ int Heuristic::get_cached_estimate(const GlobalState &state) const {
 }
 
 void Heuristic::clear() {
-    heuristic_cache.clear();
+    //heuristic_cache.clear();
 }

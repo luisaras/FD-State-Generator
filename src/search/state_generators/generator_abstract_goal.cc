@@ -45,7 +45,8 @@ void GeneratorAbstractGoal::initialize() {
         if (verbosity > utils::Verbosity::SILENT)
             cout << fact << " ";
     }
-    cout << endl;
+    if (verbosity > utils::Verbosity::SILENT)
+        cout << endl;
 
     const GlobalState& goal_state = state_registry.get_state(best_state);
     

@@ -43,7 +43,7 @@ void StateGenerator::initialize() {
     path_dependent_evaluators.assign(evals.begin(), evals.end());
 
     const GlobalState& original_state = state_registry.get_initial_state();
-    EvaluationContext original_state_eval_context(original_state, 0, false, nullptr);
+    EvaluationContext original_state_eval_context(original_state, 2147483647, false, nullptr);
     original_state_eval = evaluator_values(original_state_eval_context);
     
     if (verbosity > utils::Verbosity::SILENT)

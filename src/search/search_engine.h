@@ -29,13 +29,12 @@ enum class Verbosity;
 enum SearchStatus {IN_PROGRESS, TIMEOUT, FAILED, SOLVED};
 
 class SearchEngine {
+    const options::Options opts;
     SearchStatus status;
     bool solution_found;
     Plan plan;
 protected:
-
-    const options::Options opts;
-
+    utils::Verbosity verbosity;
     // Hold a reference to the task implementation and pass it to objects that need it.
     const std::shared_ptr<AbstractTask> task;
     // Use task_proxy to access task information.
@@ -51,7 +50,7 @@ protected:
     OperatorCost cost_type;
     bool is_unit_cost;
     double max_time;
-    utils::Verbosity verbosity;
+    
 
     virtual void initialize() {}
     virtual SearchStatus step() = 0;
@@ -80,9 +79,6 @@ public:
     
     void set_bound(int b) {bound = b;}
     int get_bound() {return bound;}
-    void set_verbosity(utils::Verbosity v) {verbosity = v;}
-    utils::Verbosity get_verbosity() {return verbosity;}
-
 
 
     /* The following three methods should become functions as they

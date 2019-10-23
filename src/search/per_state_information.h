@@ -149,10 +149,9 @@ public:
 
     void clear() {
         for (auto it : entries_by_registry) {
-            it.first->unsubscribe(this);
             delete it.second;
+            it.second = new segmented_vector::SegmentedVector<Entry>();
         }
-        entries_by_registry.clear();
         cached_registry = nullptr;
         cached_entries = nullptr;
     }
