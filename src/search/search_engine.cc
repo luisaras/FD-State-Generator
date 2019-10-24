@@ -129,9 +129,12 @@ void SearchEngine::save_task_if_necessary() {
 }
 
 void SearchEngine::clear() {
+    plan.clear();
     solution_found = false;
-    //state_registry.clear();
+    status = IN_PROGRESS;
+    search_progress.clear();
     search_space.clear();
+    statistics.clear();
 }
 
 int SearchEngine::get_adjusted_cost(const OperatorProxy &op) const {

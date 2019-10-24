@@ -38,6 +38,8 @@ public:
     explicit SearchStatistics(utils::Verbosity verbosity);
     ~SearchStatistics() = default;
 
+    void clear();
+
     // Methods that update statistics.
     void inc_expanded(int inc = 1) {expanded_states += inc;}
     void inc_evaluated_states(int inc = 1) {evaluated_states += inc;}

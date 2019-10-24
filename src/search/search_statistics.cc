@@ -11,6 +11,10 @@ using namespace std;
 
 SearchStatistics::SearchStatistics(utils::Verbosity verbosity)
     : verbosity(verbosity) {
+    clear();
+}
+
+void SearchStatistics::clear() {
     expanded_states = 0;
     reopened_states = 0;
     evaluated_states = 0;

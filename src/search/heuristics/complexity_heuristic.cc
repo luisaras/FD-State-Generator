@@ -40,16 +40,16 @@ int ComplexityHeuristic::compute_heuristic(const GlobalState &global_state) {
         assert(state.get_values()[var.get_id()] < var.get_domain_size());
     }
     engine->get_registry().get_task_proxy().set_initial_state(state);
-    engine->set_bound(bound);
+    //engine->set_bound(bound);
     engine->search();
 
     if (engine->found_solution()) {
         return engine->get_plan().size();
     } else {
-        cout << " Dead end: " << state.get_values() 
-            << " " << engine->get_statistics().get_expanded()
-            << " " << engine->get_statistics().get_generated()
-            << endl;
+        //cout << " Dead end: " << state.get_values() 
+        //    << " " << engine->get_statistics().get_expanded()
+        //    << " " << engine->get_statistics().get_generated()
+        //    << endl;
         return DEAD_END;
     }
 }

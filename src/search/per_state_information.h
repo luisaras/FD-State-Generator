@@ -138,6 +138,10 @@ public:
         return (*entries)[state_id];
     }
 
+    const segmented_vector::SegmentedVector<Entry> &operator[](const StateRegistry *registry) const {
+        return *(get_entries(registry));
+    }
+
     virtual void notify_service_destroyed(const StateRegistry *registry) override {
         delete entries_by_registry[registry];
         entries_by_registry.erase(registry);
@@ -149,11 +153,8 @@ public:
 
     void clear() {
         for (auto it : entries_by_registry) {
-            delete it.second;
-            it.second = new segmented_vector::SegmentedVector<Entry>();
+            it.second->clear();
         }
-        cached_registry = nullptr;
-        cached_entries = nullptr;
     }
 
 };

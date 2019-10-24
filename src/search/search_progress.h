@@ -43,6 +43,8 @@ public:
       state.
     */
     bool check_progress(const EvaluationContext &eval_context);
+
+    void clear() {min_values.clear();}
 };
 
 #endif

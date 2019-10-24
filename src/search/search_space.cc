@@ -163,6 +163,14 @@ void SearchSpace::dump(const TaskProxy &task_proxy) const {
 
 void SearchSpace::print_statistics() const {
     state_registry.print_statistics();
+    int closed = 0;
+    const segmented_vector::SegmentedVector<SearchNodeInfo> &v = search_node_infos[&state_registry];
+    for (int i = v.size() - 1; i >= 0; i--) {
+        const SearchNodeInfo &info = v[i];
+        if (info.status == SearchNodeInfo::CLOSED)
+            closed++;
+    }
+    cout << "Closed states: " << closed << endl;
 }
 
 void SearchSpace::clear() {
