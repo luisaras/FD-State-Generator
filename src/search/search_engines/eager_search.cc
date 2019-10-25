@@ -90,8 +90,7 @@ void EagerSearch::initialize() {
         if (verbosity > utils::Verbosity::SILENT)
             cout << "Initial state is a dead end." << endl;
     } else {
-        if (search_progress.check_progress(eval_context))
-            statistics.print_checkpoint_line(0);
+        statistics.print_checkpoint_line(0);
         start_f_value_statistics(eval_context);
         SearchNode node = search_space.get_node(initial_state);
         node.open_initial();
@@ -239,8 +238,7 @@ SearchStatus EagerSearch::step() {
 
             open_list->insert(succ_eval_context, succ_state.get_id());
             if (search_progress.check_progress(succ_eval_context)) {
-                if (verbosity > utils::Verbosity::SILENT)
-                    statistics.print_checkpoint_line(succ_node.get_g());
+                statistics.print_checkpoint_line(succ_node.get_g());
                 reward_progress();
             }
         } else if (succ_node.get_g() > node->get_g() + get_adjusted_cost(op)) {

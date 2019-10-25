@@ -14,8 +14,6 @@
 
 using namespace std;
 
-int bound;
-
 namespace complexity_heuristic {
 ComplexityHeuristic::ComplexityHeuristic(const Options &opts)
     : Heuristic(opts),
@@ -26,6 +24,8 @@ ComplexityHeuristic::ComplexityHeuristic(const Options &opts)
 ComplexityHeuristic::~ComplexityHeuristic() {
 }
 
+int bound;
+
 EvaluationResult ComplexityHeuristic::compute_result(EvaluationContext &eval_context) {
     bound = eval_context.get_g_value();
     return Heuristic::compute_result(eval_context);
@@ -35,21 +35,20 @@ int ComplexityHeuristic::compute_heuristic(const GlobalState &global_state) {
     State state = convert_global_state(global_state);
 
     engine->clear();
-    //engine = make_shared<eager_search::EagerSearch>(engine->get_options());
     for (VariableProxy var : engine->get_registry().get_task_proxy().get_variables()) {
         assert(state.get_values()[var.get_id()] < var.get_domain_size());
     }
     engine->get_registry().get_task_proxy().set_initial_state(state);
-    //engine->set_bound(bound);
+    //engine->set_bound(bound + 1);
     engine->search();
 
     if (engine->found_solution()) {
         return engine->get_plan().size();
     } else {
-        //cout << " Dead end: " << state.get_values() 
+        cout << "Dead end: " << state.get_values() 
         //    << " " << engine->get_statistics().get_expanded()
         //    << " " << engine->get_statistics().get_generated()
-        //    << endl;
+            << endl;
         return DEAD_END;
     }
 }

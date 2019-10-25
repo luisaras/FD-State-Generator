@@ -73,7 +73,7 @@ bool StateGenerator::update_best_state(EvaluationContext& eval_context, const ve
     if (eval > best_state_eval) {
         if (verbosity > utils::Verbosity::SILENT) {
             cout << "New best h: " << eval << " (iteration " << it_count << ") ";
-            //dump_state(pred_values);
+            dump_state(state);
             cout << endl;
         }
         best_state = state;
@@ -118,13 +118,12 @@ void StateGenerator::print_statistics() const {
     search_space.print_statistics();
 }
 
-void StateGenerator::dump_state(vector<int>& state) {
+void StateGenerator::dump_state(const vector<int>& state) {
     for (uint var = 0; var < state.size(); var++) {
         if (state[var] < task->get_variable_domain_size(var)) {
             cout << var << "=" << state[var] << " ";
         }
     }
-    cout << endl;
 }
 
 void StateGenerator::dump_search_space() const {
@@ -137,8 +136,8 @@ void StateGenerator::save_plan_if_necessary() {
 
 void StateGenerator::save_task_if_necessary() {
     if (verbosity > utils::Verbosity::SILENT) {
-        cout << "Original state h-value: " << original_state_eval[0] << endl;
-        cout << "New state h-value: " << best_state_eval[0] << endl;
+        cout << "Original state h-value: " << original_state_eval << endl;
+        cout << "New state h-value: " << best_state_eval << endl;
     }
     for (uint i = 0; i < best_state.size(); i++) {
         if (best_state[i] == -1 or best_state[i] >= task->get_variable_domain_size(i))

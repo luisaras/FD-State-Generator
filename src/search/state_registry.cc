@@ -21,7 +21,8 @@ StateRegistry::StateRegistry(const TaskProxy &task_proxy)
 
 
 StateRegistry::~StateRegistry() {
-    delete cached_initial_state;
+    if (cached_initial_state)
+        delete cached_initial_state;
 }
 
 StateID StateRegistry::insert_id_or_pop_state() {
@@ -50,7 +51,7 @@ const GlobalState &StateRegistry::get_initial_state() {
         PackedStateBin *buffer = new PackedStateBin[get_bins_per_state()];
         // Avoid garbage values in half-full bins.
         fill_n(buffer, get_bins_per_state(), 0);
-
+        
         State initial_state = task_proxy.get_initial_state();
         for (size_t i = 0; i < initial_state.size(); ++i) {
             state_packer.set(buffer, i, initial_state[i].get_value());
@@ -66,10 +67,15 @@ const GlobalState &StateRegistry::get_initial_state() {
 
 GlobalState StateRegistry::get_state(const vector<int>& values) {
     PackedStateBin *buffer = new PackedStateBin[get_bins_per_state()];
+    // Avoid garbage values in half-full bins.
+    fill_n(buffer, get_bins_per_state(), 0);
+    
     for (size_t i = 0; i < values.size(); ++i) {
         state_packer.set(buffer, i, values[i]);
     }
     state_data_pool.push_back(buffer);
+    // buffer is copied by push_back
+    delete[] buffer;
     StateID id = insert_id_or_pop_state();
     return lookup_state(id);
 }
@@ -105,8 +111,8 @@ void StateRegistry::clear() {
         delete cached_initial_state;
         cached_initial_state = nullptr;
     }
-    state_data_pool.clear();
-    registered_states.clear();
+    //state_data_pool.clear();
+    //registered_states.clear();
 }
 
 void StateRegistry::print_statistics() const {

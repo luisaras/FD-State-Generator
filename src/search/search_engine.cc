@@ -108,8 +108,10 @@ void SearchEngine::search() {
 
 bool SearchEngine::check_goal_and_set_plan(const GlobalState &state) {
     if (task_properties::is_goal_state(task_proxy, state)) {
-        if (verbosity > utils::Verbosity::SILENT)
-            cout << "Solution found!" << endl;
+        if (verbosity > utils::Verbosity::SILENT) {
+            SearchNode node = search_space.get_node(state);
+            cout << "Solution found! Node g-value: " << node.get_g() << endl;
+        }
         Plan plan;
         search_space.trace_path(state, plan);
         set_plan(plan);
@@ -129,11 +131,12 @@ void SearchEngine::save_task_if_necessary() {
 }
 
 void SearchEngine::clear() {
-    plan.clear();
     solution_found = false;
     status = IN_PROGRESS;
-    search_progress.clear();
+    plan.clear();
+    state_registry.clear();
     search_space.clear();
+    search_progress.clear();
     statistics.clear();
 }
 

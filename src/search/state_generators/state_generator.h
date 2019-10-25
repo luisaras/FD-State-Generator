@@ -56,7 +56,7 @@ public:
 
     virtual bool found_solution() const override;
 
-    void dump_state(std::vector<int>& state);
+    void dump_state(const std::vector<int>& state);
     void dump_search_space() const;
     
     static void add_options_to_parser(options::OptionParser &parser);
