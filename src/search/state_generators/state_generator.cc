@@ -136,8 +136,8 @@ void StateGenerator::save_plan_if_necessary() {
 
 void StateGenerator::save_task_if_necessary() {
     if (verbosity > utils::Verbosity::SILENT) {
-        cout << "Original state h-value: " << original_state_eval << endl;
-        cout << "New state h-value: " << best_state_eval << endl;
+        cout << "Original state h-value: " << original_state_eval[0] << endl;
+        cout << "New state h-value: " << best_state_eval[0] << endl;
     }
     for (uint i = 0; i < best_state.size(); i++) {
         if (best_state[i] == -1 or best_state[i] >= task->get_variable_domain_size(i))
