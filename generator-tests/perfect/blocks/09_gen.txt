@@ -1,0 +1,63 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/complexity/blocks/09_task.sas --search 'generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))], max_it=10000000, max_time=600)'
+reading input... [t=5.9238e-05s]
+done reading input! [t=0.000571698s]
+Initializing landmark cut heuristic...
+Initializing complexity heuristic...
+Building successor generator...done! [t=0.00347318s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 2.18e-06s
+Variables: 13
+FactPairs: 56
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 210 reverse operators.
+Built match tree.
+8=1 9=2 10=3 11=5 12=1 
+Inserting initial (goal) state...
+New best h: [0, 8] (iteration 0) 0=6 1=0 7=0 8=1 9=2 10=3 11=5 12=1 
+New best h: [1, 8] (iteration 5) 2=0 3=0 7=0 8=0 9=2 10=3 11=5 12=1 
+New best h: [1, 10] (iteration 55) 0=0 1=0 2=0 3=0 7=0 8=0 9=2 10=3 11=5 12=1 
+New best h: [2, 9] (iteration 59) 2=0 3=0 4=0 7=0 8=0 9=0 10=3 11=5 12=1 
+New best h: [2, 10] (iteration 63) 1=0 2=0 3=0 4=0 7=0 8=0 9=2 10=0 11=5 12=1 
+New best h: [2, 11] (iteration 83) 0=0 1=0 2=0 3=0 4=0 7=0 8=0 9=2 10=0 11=5 12=1 
+New best h: [3, 11] (iteration 85) 0=0 1=1 2=0 3=0 4=0 7=0 8=0 9=2 10=0 11=5 12=1 
+New best h: [3, 12] (iteration 89) 0=0 1=1 2=0 3=0 4=0 5=0 7=0 8=0 9=2 10=0 11=5 12=1 
+Found first concrete state.
+New best h: [4, 13] (iteration 99) 0=0 1=1 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=2 10=0 11=0 12=1 
+New best h: [5, 13] (iteration 107) 0=2 1=0 2=0 3=1 4=0 5=0 6=0 7=0 8=0 9=2 10=0 11=0 12=1 
+New best h: [6, 13] (iteration 136) 0=0 1=1 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=2 10=0 11=1 12=0 
+New best h: [7, 13] (iteration 144) 0=2 1=0 2=0 3=1 4=0 5=0 6=0 7=0 8=0 9=2 10=0 11=1 12=0 
+New best h: [8, 13] (iteration 171) 0=0 1=1 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 10=0 11=1 12=3 
+New best h: [9, 13] (iteration 183) 0=4 1=0 2=0 3=0 4=0 5=1 6=0 7=0 8=0 9=0 10=0 11=1 12=3 
+New best h: [10, 13] (iteration 652) 0=4 1=0 2=0 3=0 4=0 5=1 6=0 7=0 8=0 9=6 10=0 11=1 12=3 
+New best h: [11, 13] (iteration 689) 0=5 1=0 2=0 3=0 4=0 5=0 6=1 7=1 8=0 9=1 10=0 11=0 12=3 
+New best h: [12, 13] (iteration 6640) 0=2 1=1 2=0 3=1 4=0 5=0 6=0 7=0 8=3 9=1 10=0 11=1 12=0 
+New best h: [13, 13] (iteration 19920) 0=2 1=1 2=0 3=1 4=0 5=0 6=0 7=0 8=3 9=1 10=0 11=1 12=5 
+New best h: [14, 13] (iteration 34457) 0=5 1=1 2=0 3=1 4=0 5=0 6=1 7=1 8=0 9=0 10=3 11=1 12=3 
+New best h: [15, 13] (iteration 34461) 0=5 1=1 2=0 3=0 4=1 5=0 6=1 7=0 8=0 9=2 10=3 11=1 12=3 
+Time limit reached. Abort search.
+Actual search time: 600.003s [t=600.024s]
+Original state h-value: [20, 13]
+New state h-value: [15, 13]
+Expanded 264927 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 509627
+Generated 1800624 state(s).
+Dead ends: 43791 state(s).
+Number of registered states: 267669
+Int hash set load factor: 267669/524288 = 0.510538
+Int hash set resizes: 19
+Closed states: 264927
+Search time: 600.02s
+Total time: 600.024s
+Solution found.
+Peak memory: 111488 KB
+search exit code: 0
+

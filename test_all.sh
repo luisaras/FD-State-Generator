@@ -56,11 +56,14 @@ task()
 
 }
 
-task sokoban lmcut "lmcut()"
-task sokoban ipdb "ipdb()"
+#task sokoban lmcut "lmcut()"
+#task sokoban ipdb "ipdb()"
+task sokoban perfect "complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))"
 
-task blocks lmcut "lmcut()"
-task blocks ipdb "ipdb()"
+#task blocks lmcut "lmcut()"
+#task blocks ipdb "ipdb()"
+task blocks perfect "complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))"
 
-task airport lmcut "lmcut()"
-task airport ipdb "ipdb()"
+#task airport lmcut "lmcut()"
+#task airport ipdb "ipdb()"
+task airport perfect "complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))"

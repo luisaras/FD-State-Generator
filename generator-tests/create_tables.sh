@@ -28,9 +28,12 @@ table()
     done
 }
 
-table lmcut/sokoban
-table lmcut/blocks
-table lmcut/airport
-table ipdb/sokoban
-table ipdb/blocks
-table ipdb/airport
+#table lmcut/sokoban
+#table lmcut/blocks
+#table lmcut/airport
+#table ipdb/sokoban
+#table ipdb/blocks
+#table ipdb/airport
+table perfect/sokoban
+table perfect/blocks
+table perfect/airport
