@@ -2,47 +2,47 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward generator-tests/complexity/blocks/07_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
-reading input... [t=5.433e-05s]
-done reading input! [t=0.0010205s]
+INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward generator-tests/perfect/blocks/07_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=5.3939e-05s]
+done reading input! [t=0.00102795s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.0035692s]
+Building successor generator...done! [t=0.00355078s]
 peak memory difference for successor generator creation: 136 KB
-time for successor generation creation: 7.6141e-05s
+time for successor generation creation: 7.4846e-05s
 Variables: 13
 FactPairs: 56
 Bytes per state: 4
 Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[g=0, 1 evaluated, 0 expanded, t=0.0039308s, 56248 KB]
-f = 10 [1 evaluated, 0 expanded, t=0.00400451s, 56248 KB]
+[g=0, 1 evaluated, 0 expanded, t=0.00391844s, 56248 KB]
+f = 10 [1 evaluated, 0 expanded, t=0.00399194s, 56248 KB]
 Initial heuristic value for lmcut: 10
 New best heuristic value for lmcut: 9
-[g=1, 2 evaluated, 1 expanded, t=0.00415584s, 56248 KB]
-f = 11 [17 evaluated, 3 expanded, t=0.00508091s, 56248 KB]
+[g=1, 2 evaluated, 1 expanded, t=0.00414345s, 56248 KB]
+f = 11 [17 evaluated, 3 expanded, t=0.00507238s, 56248 KB]
 New best heuristic value for lmcut: 8
-[g=3, 18 evaluated, 4 expanded, t=0.00521369s, 56248 KB]
-f = 12 [32 evaluated, 7 expanded, t=0.00604517s, 56248 KB]
+[g=3, 18 evaluated, 4 expanded, t=0.00520497s, 56248 KB]
+f = 12 [32 evaluated, 7 expanded, t=0.00603558s, 56248 KB]
 New best heuristic value for lmcut: 7
-[g=5, 33 evaluated, 8 expanded, t=0.00619314s, 56248 KB]
-f = 13 [113 evaluated, 33 expanded, t=0.010551s, 56248 KB]
+[g=5, 33 evaluated, 8 expanded, t=0.00617191s, 56248 KB]
+f = 13 [113 evaluated, 33 expanded, t=0.00923302s, 56248 KB]
 New best heuristic value for lmcut: 6
-[g=7, 115 evaluated, 34 expanded, t=0.0106506s, 56248 KB]
-f = 14 [246 evaluated, 69 expanded, t=0.0141934s, 56248 KB]
+[g=7, 115 evaluated, 34 expanded, t=0.00933166s, 56248 KB]
+f = 14 [246 evaluated, 69 expanded, t=0.0128941s, 56248 KB]
 New best heuristic value for lmcut: 5
-[g=9, 300 evaluated, 82 expanded, t=0.0155621s, 56248 KB]
+[g=9, 300 evaluated, 82 expanded, t=0.0142412s, 56248 KB]
 New best heuristic value for lmcut: 4
-[g=10, 305 evaluated, 83 expanded, t=0.0157073s, 56248 KB]
+[g=10, 305 evaluated, 83 expanded, t=0.0143849s, 56248 KB]
 New best heuristic value for lmcut: 3
-[g=11, 487 evaluated, 111 expanded, t=0.0198139s, 56248 KB]
-f = 15 [1053 evaluated, 267 expanded, t=0.0349267s, 56248 KB]
+[g=11, 487 evaluated, 111 expanded, t=0.0184851s, 56248 KB]
+f = 15 [1053 evaluated, 267 expanded, t=0.033617s, 56248 KB]
 New best heuristic value for lmcut: 2
-[g=13, 1055 evaluated, 268 expanded, t=0.0350118s, 56248 KB]
+[g=13, 1055 evaluated, 268 expanded, t=0.033701s, 56248 KB]
 New best heuristic value for lmcut: 1
-[g=14, 1061 evaluated, 269 expanded, t=0.0351408s, 56248 KB]
+[g=14, 1061 evaluated, 269 expanded, t=0.0338285s, 56248 KB]
 New best heuristic value for lmcut: 0
-[g=15, 1066 evaluated, 270 expanded, t=0.0352438s, 56248 KB]
+[g=15, 1066 evaluated, 270 expanded, t=0.0339308s, 56248 KB]
 Solution found! Node g-value: 15
-Actual search time: 0.031224s [t=0.0353059s]
+Actual search time: 0.0299231s [t=0.0339924s]
 op64) unstack e c (1)
 op32) stack e a (1)
 op54) unstack c d (1)
@@ -74,8 +74,8 @@ Number of registered states: 1067
 Int hash set load factor: 1067/2048 = 0.520996
 Int hash set resizes: 11
 Closed states: 271
-Search time: 0.0315129s
-Total time: 0.0353119s
+Search time: 0.0302119s
+Total time: 0.0339983s
 Solution found.
 Peak memory: 56248 KB
 search exit code: 0

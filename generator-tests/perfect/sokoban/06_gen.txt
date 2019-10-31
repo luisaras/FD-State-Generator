@@ -2,14 +2,14 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/complexity/sokoban/06_task.sas --search 'generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))], max_it=10000000, max_time=600)'
-reading input... [t=5.4185e-05s]
-done reading input! [t=0.000976616s]
+INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/perfect/sokoban/06_task.sas --search 'generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))], max_it=20000000, max_time=600)'
+reading input... [t=4.5644e-05s]
+done reading input! [t=0.000965276s]
 Initializing landmark cut heuristic...
 Initializing complexity heuristic...
-Building successor generator...done! [t=0.00406626s]
+Building successor generator...done! [t=0.0040784s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 2.157e-06s
+time for successor generation creation: 2.242e-06s
 Variables: 24
 FactPairs: 108
 Bytes per state: 8
@@ -72,23 +72,29 @@ New best h: [26, 24] (iteration 6453290) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=1 8=0 9=0
 New best h: [27, 24] (iteration 6453308) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=1 8=0 9=0 10=0 11=0 12=0 13=0 14=13 15=4 16=0 17=1 18=9 19=2 20=0 21=0 22=1 23=1 
 New best h: [28, 24] (iteration 6453316) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=1 8=0 9=0 10=0 11=0 12=0 13=0 14=13 15=4 16=0 17=1 18=9 19=12 20=0 21=0 22=1 23=1 
 New best h: [29, 24] (iteration 6453324) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=1 8=0 9=0 10=0 11=0 12=0 13=0 14=13 15=4 16=0 17=1 18=9 19=15 20=0 21=0 22=1 23=1 
+New best h: [30, 24] (iteration 13827404) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=1 8=0 9=0 10=0 11=0 12=0 13=0 14=10 15=13 16=0 17=0 18=9 19=12 20=1 21=1 22=0 23=0 
+New best h: [31, 24] (iteration 13827436) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=1 8=0 9=0 10=0 11=0 12=0 13=0 14=9 15=13 16=0 17=1 18=9 19=2 20=0 21=1 22=0 23=1 
+New best h: [32, 24] (iteration 13827444) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=1 8=0 9=0 10=0 11=0 12=0 13=0 14=9 15=13 16=0 17=1 18=9 19=12 20=0 21=1 22=0 23=1 
+New best h: [33, 24] (iteration 13827466) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=1 8=0 9=0 10=0 11=0 12=0 13=0 14=9 15=13 16=0 17=1 18=9 19=15 20=0 21=1 22=0 23=1 
+New best h: [34, 24] (iteration 19401170) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=1 8=0 9=0 10=0 11=0 12=0 13=0 14=13 15=13 16=0 17=1 18=9 19=12 20=0 21=0 22=1 23=1 
+New best h: [35, 24] (iteration 19401178) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=1 8=0 9=0 10=0 11=0 12=0 13=0 14=13 15=13 16=0 17=1 18=9 19=15 20=0 21=0 22=1 23=1 
 Reached iteration limit.
-Actual search time: 158.035s [t=158.075s]
-Original state h-value: [35, 24]
-New state h-value: [29, 24]
-Expanded 9601381 state(s).
+Actual search time: 481.505s [t=481.544s]
+Original state h-value: 35
+New state h-value: 35
+Expanded 19265976 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 10196804
-Generated 29119900 state(s).
-Dead ends: 4507830 state(s).
-Number of registered states: 10006936
-Int hash set load factor: 10006936/16777216 = 0.59646
-Int hash set resizes: 24
-Closed states: 9601381
-Search time: 158.071s
-Total time: 158.075s
+Evaluations: 20463652
+Generated 58864098 state(s).
+Dead ends: 8999698 state(s).
+Number of registered states: 20012904
+Int hash set load factor: 20012904/33554432 = 0.596431
+Int hash set resizes: 25
+Closed states: 19265976
+Search time: 481.54s
+Total time: 481.544s
 Solution found.
-Peak memory: 554808 KB
+Peak memory: 1051392 KB
 search exit code: 0
 

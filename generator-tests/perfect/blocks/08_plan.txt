@@ -2,47 +2,47 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward generator-tests/complexity/blocks/08_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
-reading input... [t=4.9846e-05s]
-done reading input! [t=0.00102898s]
+INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward generator-tests/perfect/blocks/08_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=5.0163e-05s]
+done reading input! [t=0.000921316s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.00359825s]
+Building successor generator...done! [t=0.0028446s]
 peak memory difference for successor generator creation: 136 KB
-time for successor generation creation: 7.7208e-05s
+time for successor generation creation: 5.9591e-05s
 Variables: 13
 FactPairs: 56
 Bytes per state: 4
 Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[g=0, 1 evaluated, 0 expanded, t=0.00395881s, 56248 KB]
-f = 10 [1 evaluated, 0 expanded, t=0.00403206s, 56248 KB]
+[g=0, 1 evaluated, 0 expanded, t=0.00312336s, 56248 KB]
+f = 10 [1 evaluated, 0 expanded, t=0.00318077s, 56248 KB]
 Initial heuristic value for lmcut: 10
 New best heuristic value for lmcut: 9
-[g=1, 2 evaluated, 1 expanded, t=0.00418085s, 56248 KB]
-f = 11 [12 evaluated, 2 expanded, t=0.00482634s, 56248 KB]
+[g=1, 2 evaluated, 1 expanded, t=0.00329462s, 56248 KB]
+f = 11 [12 evaluated, 2 expanded, t=0.0037795s, 56248 KB]
 New best heuristic value for lmcut: 8
-[g=3, 13 evaluated, 3 expanded, t=0.00495946s, 56248 KB]
-f = 12 [27 evaluated, 5 expanded, t=0.00578505s, 56248 KB]
-f = 13 [108 evaluated, 28 expanded, t=0.0103844s, 56248 KB]
+[g=3, 13 evaluated, 3 expanded, t=0.00388056s, 56248 KB]
+f = 12 [27 evaluated, 5 expanded, t=0.00451222s, 56248 KB]
+f = 13 [108 evaluated, 28 expanded, t=0.00794327s, 56248 KB]
 New best heuristic value for lmcut: 7
-[g=6, 144 evaluated, 38 expanded, t=0.0117261s, 56248 KB]
-f = 14 [209 evaluated, 61 expanded, t=0.013569s, 56248 KB]
+[g=6, 144 evaluated, 38 expanded, t=0.00945042s, 56248 KB]
+f = 14 [209 evaluated, 61 expanded, t=0.0120905s, 56248 KB]
 New best heuristic value for lmcut: 6
-[g=7, 221 evaluated, 64 expanded, t=0.0139384s, 56248 KB]
+[g=7, 221 evaluated, 64 expanded, t=0.0126271s, 56248 KB]
 New best heuristic value for lmcut: 5
-[g=9, 233 evaluated, 66 expanded, t=0.0142712s, 56248 KB]
+[g=9, 233 evaluated, 66 expanded, t=0.0129607s, 56248 KB]
 New best heuristic value for lmcut: 4
-[g=10, 238 evaluated, 67 expanded, t=0.0144154s, 56248 KB]
+[g=10, 238 evaluated, 67 expanded, t=0.0131057s, 56248 KB]
 New best heuristic value for lmcut: 3
-[g=11, 244 evaluated, 68 expanded, t=0.0145761s, 56248 KB]
-f = 15 [1215 evaluated, 334 expanded, t=0.0388568s, 56248 KB]
+[g=11, 244 evaluated, 68 expanded, t=0.0132665s, 56248 KB]
+f = 15 [1215 evaluated, 334 expanded, t=0.0373718s, 56248 KB]
 New best heuristic value for lmcut: 2
-[g=13, 1218 evaluated, 336 expanded, t=0.0389639s, 56248 KB]
+[g=13, 1218 evaluated, 336 expanded, t=0.037473s, 56248 KB]
 New best heuristic value for lmcut: 1
-[g=14, 1221 evaluated, 337 expanded, t=0.0390488s, 56248 KB]
+[g=14, 1221 evaluated, 337 expanded, t=0.0375585s, 56248 KB]
 New best heuristic value for lmcut: 0
-[g=15, 1226 evaluated, 338 expanded, t=0.0391502s, 56248 KB]
+[g=15, 1226 evaluated, 338 expanded, t=0.0376599s, 56248 KB]
 Solution found! Node g-value: 15
-Actual search time: 0.0351024s [t=0.0392116s]
+Actual search time: 0.0344811s [t=0.0377218s]
 op64) unstack e c (1)
 op36) stack e f (1)
 op54) unstack c d (1)
@@ -74,8 +74,8 @@ Number of registered states: 1227
 Int hash set load factor: 1227/2048 = 0.599121
 Int hash set resizes: 11
 Closed states: 339
-Search time: 0.0353899s
-Total time: 0.0392176s
+Search time: 0.0347053s
+Total time: 0.0377279s
 Solution found.
 Peak memory: 56248 KB
 search exit code: 0

@@ -2,14 +2,14 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/complexity/blocks/10_task.sas --search 'generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))], max_it=10000000, max_time=600)'
-reading input... [t=4.8906e-05s]
-done reading input! [t=0.00072528s]
+INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/perfect/blocks/10_task.sas --search 'generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))], max_it=20000000, max_time=600)'
+reading input... [t=4.9133e-05s]
+done reading input! [t=0.000742934s]
 Initializing landmark cut heuristic...
 Initializing complexity heuristic...
-Building successor generator...done! [t=0.00297126s]
+Building successor generator...done! [t=0.00366131s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 1.724e-06s
+time for successor generation creation: 2.134e-06s
 Variables: 15
 FactPairs: 72
 Bytes per state: 8
@@ -42,22 +42,22 @@ New best h: [12, 15] (iteration 864) 0=4 1=0 2=0 3=0 4=0 5=1 6=0 7=1 8=1 9=0 10=
 New best h: [13, 15] (iteration 25512) 0=4 1=1 2=0 3=0 4=0 5=1 6=1 7=0 8=0 9=0 10=0 11=4 12=5 13=0 14=2 
 New best h: [14, 15] (iteration 73614) 0=4 1=1 2=0 3=0 4=0 5=1 6=0 7=0 8=0 9=0 10=0 11=2 12=5 13=5 14=6 
 Time limit reached. Abort search.
-Actual search time: 600.046s [t=600.058s]
-Original state h-value: [20, 15]
-New state h-value: [14, 15]
-Expanded 93491 state(s).
+Actual search time: 600.116s [t=600.129s]
+Original state h-value: 20
+New state h-value: 14
+Expanded 93432 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 197792
-Generated 505477 state(s).
-Dead ends: 25351 state(s).
-Number of registered states: 99887
-Int hash set load factor: 99887/131072 = 0.762077
+Evaluations: 197572
+Generated 505062 state(s).
+Dead ends: 25346 state(s).
+Number of registered states: 99777
+Int hash set load factor: 99777/131072 = 0.761238
 Int hash set resizes: 17
-Closed states: 93491
-Search time: 600.055s
-Total time: 600.058s
+Closed states: 93432
+Search time: 600.125s
+Total time: 600.129s
 Solution found.
-Peak memory: 169860 KB
+Peak memory: 169728 KB
 search exit code: 0
 

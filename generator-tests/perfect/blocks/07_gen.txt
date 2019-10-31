@@ -2,14 +2,14 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/complexity/blocks/07_task.sas --search 'generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))], max_it=10000000, max_time=600)'
-reading input... [t=5.7599e-05s]
-done reading input! [t=0.000625843s]
+INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/perfect/blocks/07_task.sas --search 'generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))], max_it=20000000, max_time=600)'
+reading input... [t=4.4841e-05s]
+done reading input! [t=0.000465054s]
 Initializing landmark cut heuristic...
 Initializing complexity heuristic...
-Building successor generator...done! [t=0.00351492s]
+Building successor generator...done! [t=0.00278739s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 2.173e-06s
+time for successor generation creation: 1.723e-06s
 Variables: 13
 FactPairs: 56
 Bytes per state: 4
@@ -43,22 +43,22 @@ New best h: [13, 13] (iteration 53583) 0=2 1=0 2=0 3=1 4=0 5=0 6=1 7=0 8=0 9=3 1
 New best h: [14, 13] (iteration 58413) 0=2 1=1 2=0 3=1 4=0 5=1 6=0 7=1 8=0 9=3 10=3 11=0 12=1 
 New best h: [15, 13] (iteration 58418) 0=2 1=1 2=0 3=1 4=1 5=0 6=0 7=0 8=0 9=3 10=3 11=3 12=1 
 Time limit reached. Abort search.
-Actual search time: 600.003s [t=600.008s]
-Original state h-value: [12, 13]
-New state h-value: [15, 13]
-Expanded 262895 state(s).
+Actual search time: 600.019s [t=600.023s]
+Original state h-value: 12
+New state h-value: 15
+Expanded 261142 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 516983
-Generated 1815685 state(s).
-Dead ends: 42161 state(s).
-Number of registered states: 271551
-Int hash set load factor: 271551/524288 = 0.517942
+Evaluations: 514313
+Generated 1805498 state(s).
+Dead ends: 41693 state(s).
+Number of registered states: 270216
+Int hash set load factor: 270216/524288 = 0.515396
 Int hash set resizes: 19
-Closed states: 262895
-Search time: 600.005s
-Total time: 600.008s
+Closed states: 261142
+Search time: 600.02s
+Total time: 600.023s
 Solution found.
-Peak memory: 111968 KB
+Peak memory: 111832 KB
 search exit code: 0
 

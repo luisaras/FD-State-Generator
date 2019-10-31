@@ -2,14 +2,14 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/complexity/sokoban/03_task.sas --search 'generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))], max_it=10000000, max_time=600)'
-reading input... [t=4.6556e-05s]
-done reading input! [t=0.000606053s]
+INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/perfect/sokoban/03_task.sas --search 'generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))], max_it=20000000, max_time=600)'
+reading input... [t=4.9407e-05s]
+done reading input! [t=0.000653138s]
 Initializing landmark cut heuristic...
 Initializing complexity heuristic...
-Building successor generator...done! [t=0.00333191s]
+Building successor generator...done! [t=0.00359729s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 2.009e-06s
+time for successor generation creation: 2.155e-06s
 Variables: 21
 FactPairs: 80
 Bytes per state: 8
@@ -84,9 +84,9 @@ New best h: [49, 21] (iteration 96890) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 1
 New best h: [50, 21] (iteration 96892) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 10=1 11=0 12=0 13=0 14=11 15=8 16=14 17=0 18=1 19=1 20=0 
 New best h: [51, 21] (iteration 96894) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 10=1 11=0 12=0 13=0 14=11 15=8 16=15 17=0 18=1 19=1 20=0 
 Completely explored state space.
-Actual search time: 12.356s [t=12.3683s]
-Original state h-value: [51, 21]
-New state h-value: [51, 21]
+Actual search time: 12.3725s [t=12.3847s]
+Original state h-value: 51
+New state h-value: 51
 Expanded 1937015 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
@@ -97,8 +97,8 @@ Number of registered states: 1937759
 Int hash set load factor: 1937759/4194304 = 0.461998
 Int hash set resizes: 22
 Closed states: 1937015
-Search time: 12.3648s
-Total time: 12.3683s
+Search time: 12.3809s
+Total time: 12.3847s
 Solution found.
 Peak memory: 166880 KB
 search exit code: 0

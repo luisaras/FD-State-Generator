@@ -2,14 +2,14 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/complexity/airport/04_task.sas --search 'generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))], max_it=10000000, max_time=600)'
-reading input... [t=5.4317e-05s]
-done reading input! [t=0.000736962s]
+INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/perfect/airport/04_task.sas --search 'generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))], max_it=20000000, max_time=600)'
+reading input... [t=3.9409e-05s]
+done reading input! [t=0.000569234s]
 Initializing landmark cut heuristic...
 Initializing complexity heuristic...
-Building successor generator...done! [t=0.00372129s]
+Building successor generator...done! [t=0.00280641s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 2.155e-06s
+time for successor generation creation: 1.652e-06s
 Variables: 75
 FactPairs: 188
 Bytes per state: 20
@@ -61,9 +61,9 @@ New best h: [37, 71] (iteration 387) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 10=
 New best h: [38, 72] (iteration 419) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 10=0 11=0 12=0 13=0 14=0 15=0 16=0 17=0 18=0 19=0 20=0 21=0 22=0 23=0 24=0 25=0 26=0 27=0 28=0 29=0 30=0 31=0 32=0 33=0 34=0 35=0 36=0 37=0 38=0 39=0 41=0 43=0 44=0 45=0 46=0 48=0 49=0 50=0 51=0 52=0 53=0 54=0 55=0 56=0 57=0 58=0 59=0 60=0 61=0 62=0 63=0 64=0 65=0 66=0 67=0 68=0 69=0 70=0 71=0 72=0 73=9 74=0 
 New best h: [39, 73] (iteration 451) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 10=0 11=0 12=0 13=0 14=0 15=0 16=0 17=0 18=0 19=0 20=0 21=0 22=0 23=0 24=0 25=0 26=0 27=0 28=0 29=0 30=0 31=0 32=0 33=0 34=0 35=0 36=0 37=0 38=0 39=0 41=0 42=0 43=0 44=0 45=0 46=0 48=0 49=0 50=0 51=0 52=0 53=0 54=0 55=0 56=0 57=0 58=0 59=0 60=0 61=0 62=0 63=0 64=0 65=0 66=0 67=0 68=0 69=0 70=0 71=0 72=0 73=12 74=0 
 Completely explored state space.
-Actual search time: 0.400356s [t=0.407264s]
-Original state h-value: [20, 75]
-New state h-value: [39, 73]
+Actual search time: 0.399587s [t=0.404763s]
+Original state h-value: 20
+New state h-value: 39
 Expanded 2276 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
@@ -74,8 +74,8 @@ Number of registered states: 4551
 Int hash set load factor: 4551/8192 = 0.555542
 Int hash set resizes: 13
 Closed states: 2276
-Search time: 0.403348s
-Total time: 0.407271s
+Search time: 0.401808s
+Total time: 0.404769s
 Solution found.
 Peak memory: 56644 KB
 search exit code: 0

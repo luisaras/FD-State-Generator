@@ -2,14 +2,14 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/complexity/airport/03_task.sas --search 'generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))], max_it=10000000, max_time=600)'
-reading input... [t=4.9552e-05s]
-done reading input! [t=0.000662558s]
+INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/perfect/airport/03_task.sas --search 'generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))], max_it=20000000, max_time=600)'
+reading input... [t=4.5318e-05s]
+done reading input! [t=0.000545038s]
 Initializing landmark cut heuristic...
 Initializing complexity heuristic...
-Building successor generator...done! [t=0.00363331s]
+Building successor generator...done! [t=0.00291004s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 2.239e-06s
+time for successor generation creation: 1.628e-06s
 Variables: 46
 FactPairs: 119
 Bytes per state: 12
@@ -70,9 +70,9 @@ New best h: [37, 46] (iteration 55026) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 1
 New best h: [38, 46] (iteration 56606) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 10=0 11=0 12=0 13=0 14=0 15=0 16=0 17=0 18=0 19=0 20=0 21=0 22=0 23=0 24=1 25=0 26=0 27=0 28=0 29=1 30=0 31=0 32=0 33=8 34=0 35=0 36=0 37=1 38=0 39=0 40=0 41=0 42=1 43=1 44=9 45=1 
 New best h: [39, 46] (iteration 72614) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 10=0 11=0 12=0 13=0 14=0 15=0 16=0 17=0 18=0 19=0 20=0 21=0 22=0 23=0 24=1 25=0 26=0 27=0 28=0 29=1 30=0 31=0 32=0 33=8 34=0 35=0 36=0 37=1 38=0 39=0 40=0 41=0 42=1 43=1 44=8 45=1 
 Completely explored state space.
-Actual search time: 76.0166s [t=76.024s]
-Original state h-value: [17, 46]
-New state h-value: [39, 46]
+Actual search time: 76.2215s [t=76.2274s]
+Original state h-value: 17
+New state h-value: 39
 Expanded 470371 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
@@ -83,8 +83,8 @@ Number of registered states: 482061
 Int hash set load factor: 482061/1048576 = 0.459729
 Int hash set resizes: 20
 Closed states: 470371
-Search time: 76.0201s
-Total time: 76.024s
+Search time: 76.2243s
+Total time: 76.2274s
 Solution found.
 Peak memory: 97788 KB
 search exit code: 0

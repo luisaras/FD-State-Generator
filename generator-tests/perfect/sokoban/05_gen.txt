@@ -2,14 +2,14 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/complexity/sokoban/05_task.sas --search 'generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))], max_it=10000000, max_time=600)'
-reading input... [t=4.9405e-05s]
-done reading input! [t=0.00567295s]
+INFO     search command line string: /home/lrasantos/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file generator-tests/perfect/sokoban/05_task.sas --search 'generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))], max_it=20000000, max_time=600)'
+reading input... [t=5.0063e-05s]
+done reading input! [t=0.00563814s]
 Initializing landmark cut heuristic...
 Initializing complexity heuristic...
-Building successor generator...done! [t=0.00971299s]
+Building successor generator...done! [t=0.0107736s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 1.246e-06s
+time for successor generation creation: 2.219e-06s
 Variables: 53
 FactPairs: 412
 Bytes per state: 20
@@ -67,22 +67,22 @@ New best h: [20, 53] (iteration 20430) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 1
 New best h: [21, 53] (iteration 20582) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 10=0 11=0 12=0 13=0 14=0 15=0 16=0 17=0 18=0 19=0 20=0 21=0 22=0 23=0 24=0 25=0 26=0 27=0 28=0 29=0 30=0 31=0 32=14 33=26 34=20 35=13 36=0 37=0 38=14 39=0 40=0 41=20 42=10 43=22 44=20 45=1 46=1 47=1 48=1 49=1 50=1 51=1 52=1 
 New best h: [22, 53] (iteration 20606) 0=0 1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 10=0 11=0 12=0 13=0 14=0 15=0 16=0 17=0 18=0 19=0 20=0 21=0 22=0 23=0 24=0 25=0 26=0 27=0 28=0 29=0 30=0 31=0 32=14 33=26 34=20 35=13 36=0 37=0 38=14 39=0 40=0 41=20 42=10 43=22 44=24 45=1 46=1 47=1 48=1 49=1 50=1 51=1 52=1 
 Time limit reached. Abort search.
-Actual search time: 600.269s [t=602.328s]
-Original state h-value: [25, 53]
-New state h-value: [22, 53]
-Expanded 17284 state(s).
+Actual search time: 673.678s [t=675.731s]
+Original state h-value: 25
+New state h-value: 22
+Expanded 17294 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 23370
-Generated 59062 state(s).
-Dead ends: 8625 state(s).
-Number of registered states: 22602
-Int hash set load factor: 22602/32768 = 0.689758
+Evaluations: 23382
+Generated 59090 state(s).
+Dead ends: 8630 state(s).
+Number of registered states: 22614
+Int hash set load factor: 22614/32768 = 0.690125
 Int hash set resizes: 15
-Closed states: 17284
-Search time: 602.318s
-Total time: 602.328s
+Closed states: 17294
+Search time: 675.72s
+Total time: 675.731s
 Solution found.
-Peak memory: 127684 KB
+Peak memory: 134208 KB
 search exit code: 0
 
