@@ -9,6 +9,7 @@
 namespace complexity_heuristic {
 class ComplexityHeuristic : public Heuristic {
     std::shared_ptr<SearchEngine> engine; 
+    bool bound_g;
 protected:
     virtual int compute_heuristic(const GlobalState &global_state);
 public:

@@ -17,7 +17,8 @@ using namespace std;
 namespace complexity_heuristic {
 ComplexityHeuristic::ComplexityHeuristic(const Options &opts)
     : Heuristic(opts),
-      engine(opts.get<shared_ptr<SearchEngine>>("engine")) {
+      engine(opts.get<shared_ptr<SearchEngine>>("engine")),
+      bound_g(opts.get<bool>("bound", false)) {
     cout << "Initializing complexity heuristic..." << endl;
 }
 
@@ -39,7 +40,8 @@ int ComplexityHeuristic::compute_heuristic(const GlobalState &global_state) {
         assert(state.get_values()[var.get_id()] < var.get_domain_size());
     }
     engine->get_registry().get_task_proxy().set_initial_state(state);
-    //engine->set_bound(bound + 1);
+    if (bound_g)
+        engine->set_bound(bound + 1);
     engine->search();
 
     if (engine->found_solution()) {
@@ -66,6 +68,7 @@ static shared_ptr<Heuristic> _parse(OptionParser &parser) {
     parser.document_property("preferred operators", "no");
 
     parser.add_option<shared_ptr<SearchEngine>>("engine", "search engine");
+    parser.add_option<bool>("bound", "bound by node's g-value", "false");
     Heuristic::add_options_to_parser(parser);
     Options opts = parser.parse();
     if (parser.dry_run())

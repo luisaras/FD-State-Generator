@@ -37,10 +37,14 @@ task()
 
         # Generator output files
         NEW_TASK=${OUTPUT_DIR}/${i}_task.sas
+        NEW_TASK_PDDL=${OUTPUT_DIR}/${i}_task.pddl
         GEN_OUTPUT=${OUTPUT_DIR}/${i}_gen.txt
 
         # Generate $i_task.sas
         ./fast-downward.py ${TRANSLATOR_TEMP} --internal-plan-file ${NEW_TASK} --search "generator_abstract([${HEURISTIC}], max_it=20000000, max_time=1200)" > ${GEN_OUTPUT}
+
+        # Generate PDDL file for new task
+        src/sas_to_pddl.py ${TASK_INPUT} ${NEW_TASK} ${NEW_TASK_PDDL}
 
         # Planner output files
         PLAN_OUTPUT=${OUTPUT_DIR}/${i}_plan.txt
@@ -56,17 +60,12 @@ task()
 
 }
 
-task sokoban lmcut "lmcut()"
-task sokoban ipdb "ipdb()"
-task sokoban perfect "complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))"
-task sokoban novelty_1 "complexity(novelty_search(undef_value=true, verbosity=SILENT))"
-
-task blocks lmcut "lmcut()"
-task blocks ipdb "ipdb()"
-task blocks perfect "complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))"
-task blocks novelty_1 "complexity(novelty_search(undef_value=true, verbosity=SILENT))"
-
-task airport lmcut "lmcut()"
-task airport ipdb "ipdb()"
-task airport perfect "complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))"
-task airport novelty_1 "complexity(novelty_search(undef_value=true, verbosity=SILENT))"
+for problem in sokoban blocks airport; do
+    task problem lmcut "lmcut()"
+    task problem ipdb "ipdb()"
+    #task problem perfect "complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))"
+    task problem novelty_1 "complexity(novelty_search(level=1, undef_value=true, verbosity=SILENT))"
+    task problem novelty_2 "complexity(novelty_search(level=2, undef_value=true, verbosity=SILENT))"
+    task problem width_1 "complexity(ehc(systematic(1), undef_value=true, verbosity=SILENT))"
+    task problem width_2 "complexity(ehc(systematic(2), undef_value=true, verbosity=SILENT))"
+done
