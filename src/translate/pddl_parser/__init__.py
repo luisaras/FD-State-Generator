@@ -1,1 +1,1 @@
-from .pddl_file import open, parse_pddl_file
+from .pddl_file import open

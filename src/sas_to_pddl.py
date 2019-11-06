@@ -157,11 +157,7 @@ def write_pddl(file, pddl):
     print(pddl)
     file.write(lisp_to_string(pddl))
 
-def main():
-    original_pddl_name = sys.argv[1]
-    sas_name = sys.argv[2]
-    new_pddl_name = sys.argv[3]
-
+def convert(original_pddl_name, sas_name, new_pddl_name):
     state_values = read_initial_state(sas_name)
     pddl = parse_pddl_file("task", original_pddl_name)
     replace_init_values(state_values, find_pddl_init(pddl))
@@ -170,5 +166,8 @@ def main():
     print("New PDDL file successfully written.")
 
 if __name__ == "__main__":
-    main()
+    original_pddl_name = sys.argv[1]
+    sas_name = sys.argv[2]
+    new_pddl_name = sys.argv[3]
+    convert(original_pddl_name, sas_name, new_pddl_name)
 

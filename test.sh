@@ -1,5 +1,5 @@
 DOMAIN="../pyperplan/benchmarks/blocks/domain.pddl"
-TASK="../pyperplan/benchmarks/blocks/task02.pddl"
+TASK="../pyperplan/benchmarks/blocks/task01.pddl"
 
 IPDB="ipdb(min_improvement=100, collection_max_size=200000)"
 CPDB="cpdbs(patterns=systematic(4))"
@@ -10,7 +10,8 @@ test_novelty() {
     # Generate output.sas
     ./fast-downward.py --debug --translate --sas-file output.sas ${DOMAIN} ${TASK}
     # Find plan for new_output.sas
-    ./fast-downward.py --debug output.sas --search "novelty_search(prune=true)"
+    #./fast-downward.py --debug output.sas --search "novelty_search(level=2, prune=true)"
+    ./fast-downward.py --debug output.sas --search "astar(lmcut())"
 }
 
 test_tnf_planner() {
@@ -50,8 +51,8 @@ test_abstract() {
     ./fast-downward.py --debug --translate --sas-file output.sas ${DOMAIN} ${TASK}
     # Generate new_output.sas
     #./fast-downward.py --debug output.sas --internal-plan-file new_output.sas --search "generator_abstract([lmcut(), complexity(novelty_search(undef_value=true, reverse=true, prune=false))], max_it = 1000000)"
-    #./fast-downward.py --debug output.sas --internal-plan-file new_output.sas --search "generator_abstract(lmcut(), [abstract(complexity(novelty_search(undef_value=true)))], max_it = 1000000)"
-    ./fast-downward.py --debug output.sas --internal-plan-file new_output.sas --search "generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT)), lmcut()], max_it=1000000)"
+    ./fast-downward.py --debug output.sas --internal-plan-file new_output.sas --search "generator_abstract([complexity(novelty_search(level=2, reverse=true, undef_value=true, verbosity=SILENT), bound=false)], max_it = 1000000)"
+    #./fast-downward.py --debug output.sas --internal-plan-file new_output.sas --search "generator_abstract([complexity(astar(lmcut(), undef_value=true, verbosity=SILENT)), lmcut()], max_it=1000000)"
     # Find plan for new_output.sas
     ./fast-downward.py --debug new_output.sas --search "astar(lmcut())"
 }
@@ -65,5 +66,8 @@ test_all_goals() {
     ./fast-downward.py --debug new_output.sas --search "astar(lmcut())"
 }
 
-#test_novelty
-test_abstract
+test_novelty
+#test_abstract
+
+#./fast-downward.py --debug "../pyperplan/benchmarks/blocks/domain.pddl" "../pyperplan/benchmarks/blocks/task01.pddl" --search "novelty_search(level=2, prune=true)"
+#src/sas_to_pddl.py ../pyperplan/benchmarks/blocks/task01.pddl generator-tests/ipdb/blocks/01_task.sas new_task.pddl
