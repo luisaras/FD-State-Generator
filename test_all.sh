@@ -40,7 +40,7 @@ task()
         GEN_OUTPUT=${OUTPUT_DIR}/${i}_gen.txt
 
         # Generate $i_task.sas
-        ./fast-downward.py ${TRANSLATOR_TEMP} --internal-plan-file ${NEW_TASK} --search "generator_abstract([${HEURISTIC}], max_it=20000000, max_time=600)" > ${GEN_OUTPUT}
+        ./fast-downward.py ${TRANSLATOR_TEMP} --internal-plan-file ${NEW_TASK} --search "generator_abstract([${HEURISTIC}], max_it=20000000, max_time=1200)" > ${GEN_OUTPUT}
 
         # Planner output files
         PLAN_OUTPUT=${OUTPUT_DIR}/${i}_plan.txt
@@ -56,14 +56,17 @@ task()
 
 }
 
-#task sokoban lmcut "lmcut()"
-#task sokoban ipdb "ipdb()"
+task sokoban lmcut "lmcut()"
+task sokoban ipdb "ipdb()"
 task sokoban perfect "complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))"
+task sokoban novelty_1 "complexity(novelty_search(undef_value=true, verbosity=SILENT))"
 
-#task blocks lmcut "lmcut()"
-#task blocks ipdb "ipdb()"
+task blocks lmcut "lmcut()"
+task blocks ipdb "ipdb()"
 task blocks perfect "complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))"
+task blocks novelty_1 "complexity(novelty_search(undef_value=true, verbosity=SILENT))"
 
-#task airport lmcut "lmcut()"
-#task airport ipdb "ipdb()"
+task airport lmcut "lmcut()"
+task airport ipdb "ipdb()"
 task airport perfect "complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))"
+task airport novelty_1 "complexity(novelty_search(undef_value=true, verbosity=SILENT))"

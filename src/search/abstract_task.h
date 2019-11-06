@@ -24,6 +24,8 @@ struct FactPair {
     int var;
     int value;
 
+    FactPair() = default;
+
     FactPair(int var, int value)
         : var(var), value(value) {
     }

@@ -45,13 +45,62 @@ int NoveltyRecord::get_value_1(set<vector<FactPair>>& reached_facts, const vecto
 
 int NoveltyRecord::get_value_2(set<vector<FactPair>>& reached_facts, const vector<int>& state_values) {
     int value = 0;
-    // TODO
+    for (uint i = 0; i < state_values.size(); i++) {
+        if (state_values[i] < 0 || state_values[i] >= task->get_variable_domain_size(i))
+            continue;
+        vector<FactPair> fact;
+        fact.emplace_back(i, state_values[i]);
+        if (reached_facts.count(fact) == 0) {
+            reached_facts.insert(fact);
+            value++;
+        }
+        fact.resize(2);
+        for (uint j = i + 1; j < state_values.size(); j++) {
+            if (state_values[j] < 0 || state_values[j] >= task->get_variable_domain_size(j))
+                continue;
+            fact[1] = FactPair(j, state_values[j]);
+            if (reached_facts.count(fact) == 0) {
+                reached_facts.insert(fact);
+                value++;
+            }
+        }
+    }
     return value;
 }
 
 int NoveltyRecord::get_value_3(set<vector<FactPair>>& reached_facts, const vector<int>& state_values) {
     int value = 0;
-    // TODO
+    for (uint i = 0; i < state_values.size(); i++) {
+        if (state_values[i] < 0 || state_values[i] >= task->get_variable_domain_size(i))
+            continue;
+        vector<FactPair> fact;
+        fact.emplace_back(i, state_values[i]);
+        if (reached_facts.count(fact) == 0) {
+            reached_facts.insert(fact);
+            value++;
+        }
+        fact.resize(2);
+        for (uint j = i + 1; j < state_values.size(); j++) {
+            if (state_values[j] < 0 || state_values[j] >= task->get_variable_domain_size(j))
+                continue;
+            fact[1] = FactPair(j, state_values[j]);
+            if (reached_facts.count(fact) == 0) {
+                reached_facts.insert(fact);
+                value++;
+            }
+            fact.resize(3);
+            for (uint k = j + 1; k < state_values.size(); k++) {
+                if (state_values[k] < 0 || state_values[k] >= task->get_variable_domain_size(k))
+                    continue;
+                fact[2] = FactPair(k, state_values[k]);
+                if (reached_facts.count(fact) == 0) {
+                    reached_facts.insert(fact);
+                    value++;
+                }
+            }
+        }
+    }
     return value;
 }
+
 }
