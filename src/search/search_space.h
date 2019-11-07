@@ -17,10 +17,12 @@ class SearchNode {
     StateRegistry &state_registry;
     StateID state_id;
     SearchNodeInfo &info;
+    bool solved;
 public:
     SearchNode(StateRegistry &state_registry,
                StateID state_id,
-               SearchNodeInfo &info);
+               SearchNodeInfo &info,
+               bool solved = false);
 
     StateID get_state_id() const {
         return state_id;
@@ -34,6 +36,8 @@ public:
 
     int get_g() const;
     int get_real_g() const;
+
+    bool is_solved() const;
 
     void open_initial();
     void open(const SearchNode &parent_node,
@@ -51,22 +55,37 @@ public:
     void dump(const TaskProxy &task_proxy);
 };
 
+struct PathNodeInfo {
+    StateID child_state_id;
+    OperatorID successor_operator;
+    PathNodeInfo()
+        : child_state_id(StateID::no_state),
+          successor_operator(-2) {
+    }
+    bool is_solved() const {
+        return successor_operator.get_index() != -2;
+    }
+};
 
 class SearchSpace {
     PerStateInformation<SearchNodeInfo> search_node_infos;
+
+    PerStateInformation<PathNodeInfo> path_node_infos;
 
     StateRegistry &state_registry;
 public:
     explicit SearchSpace(StateRegistry &state_registry);
 
     SearchNode get_node(const GlobalState &state);
+
     void trace_path(const GlobalState &goal_state,
-                    std::vector<OperatorID> &path) const;
+                    std::vector<OperatorID> &path);
 
     void dump(const TaskProxy &task_proxy) const;
     void print_statistics() const;
 
     void clear();
+
 };
 
 #endif

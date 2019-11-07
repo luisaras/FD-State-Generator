@@ -1,5 +1,5 @@
-DOMAIN="../pyperplan/benchmarks/blocks/domain.pddl"
-TASK="../pyperplan/benchmarks/blocks/task01.pddl"
+DOMAIN="../pyperplan/benchmarks/sokoban/domain.pddl"
+TASK="../pyperplan/benchmarks/sokoban/task01.pddl"
 
 test_novelty() {
     # Generate output.sas

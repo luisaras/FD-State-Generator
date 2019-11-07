@@ -10,10 +10,12 @@ using namespace std;
 
 SearchNode::SearchNode(StateRegistry &state_registry,
                        StateID state_id,
-                       SearchNodeInfo &info)
+                       SearchNodeInfo &info,
+                       bool solved)
     : state_registry(state_registry),
       state_id(state_id),
-      info(info) {
+      info(info),
+      solved(solved) {
     assert(state_id != StateID::no_state);
 }
 
@@ -44,6 +46,10 @@ int SearchNode::get_g() const {
 
 int SearchNode::get_real_g() const {
     return info.real_g;
+}
+
+bool SearchNode::is_solved() const {
+    return solved;
 }
 
 void SearchNode::open_initial() {
@@ -122,23 +128,43 @@ SearchSpace::SearchSpace(StateRegistry &state_registry)
 }
 
 SearchNode SearchSpace::get_node(const GlobalState &state) {
-    return SearchNode(state_registry, state.get_id(), search_node_infos[state]);
+    const PathNodeInfo &path_info = path_node_infos[state];
+    return SearchNode(state_registry, state.get_id(), search_node_infos[state], path_info.is_solved());
 }
 
 void SearchSpace::trace_path(const GlobalState &goal_state,
-                             vector<OperatorID> &path) const {
-    GlobalState current_state = goal_state;
+                             vector<OperatorID> &path) {
     assert(path.empty());
+    GlobalState current_state = goal_state;
+    StateID child_state(StateID::no_state);
+    OperatorID sucessor_op(-1);
     for (;;) {
         const SearchNodeInfo &info = search_node_infos[current_state];
+        PathNodeInfo &path_info = path_node_infos[current_state];
+        if (!path_info.is_solved()) {
+            path_info.child_state_id = child_state;
+            path_info.successor_operator = sucessor_op;
+        }
         if (info.creating_operator == OperatorID::no_operator) {
             assert(info.parent_state_id == StateID::no_state);
             break;
         }
-        path.push_back(info.creating_operator);
+        sucessor_op = info.creating_operator;
+        child_state = current_state.get_id();
         current_state = state_registry.lookup_state(info.parent_state_id);
+        path.push_back(sucessor_op);
     }
     reverse(path.begin(), path.end());
+    current_state = goal_state;
+    for (;;) {
+        const PathNodeInfo &info = path_node_infos[current_state];
+        if (info.successor_operator == OperatorID::no_operator) {
+            assert(info.child_state_id == StateID::no_state);
+            break;
+        }
+        path.push_back(info.successor_operator);
+        current_state = state_registry.lookup_state(info.child_state_id);
+    }
 }
 
 void SearchSpace::dump(const TaskProxy &task_proxy) const {
@@ -164,12 +190,16 @@ void SearchSpace::dump(const TaskProxy &task_proxy) const {
 void SearchSpace::print_statistics() const {
     state_registry.print_statistics();
     int closed = 0;
+    int open = 0;
     const segmented_vector::SegmentedVector<SearchNodeInfo> &v = search_node_infos[&state_registry];
     for (int i = v.size() - 1; i >= 0; i--) {
         const SearchNodeInfo &info = v[i];
         if (info.status == SearchNodeInfo::CLOSED)
             closed++;
+        else if (info.status == SearchNodeInfo::OPEN)
+            open++;
     }
+    cout << "Open nodes: " << open << endl;
     cout << "Closed states: " << closed << endl;
 }
 

@@ -73,7 +73,7 @@ bool StateGenerator::update_best_state(EvaluationContext& eval_context, const ve
     if (eval > best_state_eval) {
         if (verbosity > utils::Verbosity::SILENT) {
             cout << "New best h: " << eval << " (iteration " << it_count << ") ";
-            dump_state(state);
+            //dump_state(state);
             cout << endl;
         }
         best_state = state;

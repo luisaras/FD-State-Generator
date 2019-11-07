@@ -107,9 +107,9 @@ void SearchEngine::search() {
 }
 
 bool SearchEngine::check_goal_and_set_plan(const GlobalState &state) {
-    if (task_properties::is_goal_state(task_proxy, state)) {
+    SearchNode node = search_space.get_node(state);
+    if (node.is_solved() || task_properties::is_goal_state(task_proxy, state)) {
         if (verbosity > utils::Verbosity::SILENT) {
-            SearchNode node = search_space.get_node(state);
             cout << "Solution found! Node g-value: " << node.get_g() << endl;
         }
         Plan plan;
