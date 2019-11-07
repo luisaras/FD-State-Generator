@@ -43,7 +43,7 @@ void StateGenerator::initialize() {
     path_dependent_evaluators.assign(evals.begin(), evals.end());
 
     const GlobalState& original_state = state_registry.get_initial_state();
-    EvaluationContext original_state_eval_context(original_state, 2147483647, false, nullptr);
+    EvaluationContext original_state_eval_context(original_state, EvaluationResult::INFTY, false, nullptr);
     original_state_eval = evaluator_values(original_state_eval_context);
     
     if (verbosity > utils::Verbosity::SILENT)
@@ -156,7 +156,6 @@ bool StateGenerator::found_solution() const {
 void StateGenerator::add_options_to_parser(OptionParser &parser) {
     parser.add_list_option<shared_ptr<Evaluator>>("evals", "evaluators", "[]");
     parser.add_option<int>("max_it", "maximum number of open-list insertions", "-1");
-    //parser.add_option<shared_ptr<Evaluator>>("novelty", "novelty heuristic");
     SearchEngine::add_options_to_parser(parser);
 }
 

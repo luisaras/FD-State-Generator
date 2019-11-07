@@ -10,6 +10,7 @@
 #include "../open_lists/tiebreaking_open_list.h"
 #include "../task_utils/successor_generator.h"
 #include "../utils/system.h"
+#include "../utils/logging.h"
 
 using namespace std;
 using utils::ExitCode;
@@ -99,20 +100,24 @@ void EnforcedHillClimbingSearch::reach_state(
 
 void EnforcedHillClimbingSearch::initialize() {
     assert(evaluator);
-    cout << "Conducting enforced hill-climbing search, (real) bound = "
-         << bound << endl;
-    if (use_preferred) {
-        cout << "Using preferred operators for "
-             << (preferred_usage == PreferredUsage::RANK_PREFERRED_FIRST ?
-            "ranking successors" : "pruning") << endl;
+    if (verbosity > utils::Verbosity::SILENT) {
+        cout << "Conducting enforced hill-climbing search, (real) bound = "
+             << bound << endl;
+        if (use_preferred) {
+            cout << "Using preferred operators for "
+                 << (preferred_usage == PreferredUsage::RANK_PREFERRED_FIRST ?
+                "ranking successors" : "pruning") << endl;
+        }
     }
 
     bool dead_end = current_eval_context.is_evaluator_value_infinite(evaluator.get());
     statistics.inc_evaluated_states();
-    print_initial_evaluator_values(current_eval_context);
+    if (verbosity > utils::Verbosity::SILENT)
+        print_initial_evaluator_values(current_eval_context);
 
     if (dead_end) {
-        cout << "Initial state is a dead end, no solution" << endl;
+        if (verbosity > utils::Verbosity::SILENT)
+            cout << "Initial state is a dead end, no solution" << endl;
         if (evaluator->dead_ends_are_reliable())
             utils::exit_with(ExitCode::SEARCH_UNSOLVABLE);
         else
@@ -242,8 +247,23 @@ SearchStatus EnforcedHillClimbingSearch::ehc() {
             }
         }
     }
-    cout << "No solution - FAILED" << endl;
+    if (verbosity > utils::Verbosity::SILENT)
+        cout << "No solution - FAILED" << endl;
     return FAILED;
+}
+
+void EnforcedHillClimbingSearch::clear() {
+    SearchEngine::clear();
+    open_list->clear();
+    open_list->clear_evaluators();
+    d_counts.clear();
+    evaluator->clear();
+    for (shared_ptr<Evaluator>& e : preferred_operator_evaluators)
+        e->clear();
+    current_eval_context = EvaluationContext(state_registry.get_initial_state(), &statistics);
+    current_phase_start_g = -1;
+    num_ehc_phases = 0;
+    last_num_expanded = -1;
 }
 
 void EnforcedHillClimbingSearch::print_statistics() const {

@@ -60,12 +60,23 @@ task()
 
 }
 
-for problem in sokoban blocks airport; do
-    task problem lmcut "lmcut()"
-    task problem ipdb "ipdb()"
-    #task problem perfect "complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))"
-    task problem novelty_1 "complexity(novelty_search(level=1, undef_value=true, verbosity=SILENT))"
-    task problem novelty_2 "complexity(novelty_search(level=2, undef_value=true, verbosity=SILENT))"
-    task problem width_1 "complexity(ehc(systematic(1), undef_value=true, verbosity=SILENT))"
-    task problem width_2 "complexity(ehc(systematic(2), undef_value=true, verbosity=SILENT))"
+LMCUT="lmcut()"
+IPDB="ipdb()"
+ASTAR="complexity(astar(lmcut(), undef_value=true, verbosity=SILENT))"
+NOVELTY_1="complexity(novelty_search(level=1, undef_value=true, verbosity=SILENT))"
+NOVELTY_2="complexity(novelty_search(level=2, undef_value=true, verbosity=SILENT))"
+WIDTH_1="complexity(ehc(cpdbs(systematic(1)), undef_value=true, verbosity=SILENT))"
+WIDTH_2="complexity(ehc(cpdbs(systematic(2)), undef_value=true, verbosity=SILENT))"
+WIDTH_3="complexity(ehc(cpdbs(systematic(3)), undef_value=true, verbosity=SILENT))"
+
+for problem in blocks sokoban airport; do
+    task problem lmcut ${LMCUT}
+    task problem ipdb ${IPDB}
+    #task problem perfect ${ASTAR}
+    task problem novelty_1 ${NOVELTY_1}
+    task problem novelty_2 ${NOVELTY_2}
+    task problem width_1 ${WIDTH_1}
+    task problem width_2 ${WIDTH_2}
+    task problem width_3 ${WIDTH_3}
+    task problem all "${LMCUT}, ${IPDB}, ${NOVELTY_2}, ${WIDTH_2}"
 done

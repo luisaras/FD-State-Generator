@@ -64,6 +64,8 @@ public:
     explicit EnforcedHillClimbingSearch(const options::Options &opts);
     virtual ~EnforcedHillClimbingSearch() override;
 
+    virtual void clear() override;
+
     virtual void print_statistics() const override;
 };
 }

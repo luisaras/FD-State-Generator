@@ -35,11 +35,12 @@ EvaluationResult ComplexityHeuristic::compute_result(EvaluationContext &eval_con
 int ComplexityHeuristic::compute_heuristic(const GlobalState &global_state) {
     State state = convert_global_state(global_state);
 
+    engine->get_registry().get_task_proxy().set_initial_state(state);
     engine->clear();
     for (VariableProxy var : engine->get_registry().get_task_proxy().get_variables()) {
         assert(state.get_values()[var.get_id()] < var.get_domain_size());
     }
-    engine->get_registry().get_task_proxy().set_initial_state(state);
+    
     if (bound_g)
         engine->set_bound(bound + 1);
     engine->search();
@@ -47,10 +48,10 @@ int ComplexityHeuristic::compute_heuristic(const GlobalState &global_state) {
     if (engine->found_solution()) {
         return engine->get_plan().size();
     } else {
-        cout << "Dead end: " << state.get_values() 
+        //cout << "Dead end: " << state.get_values() 
         //    << " " << engine->get_statistics().get_expanded()
         //    << " " << engine->get_statistics().get_generated()
-            << endl;
+        //    << endl;
         return DEAD_END;
     }
 }
