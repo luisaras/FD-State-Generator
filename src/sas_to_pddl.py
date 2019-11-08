@@ -19,13 +19,11 @@ def read_initial_state(file_name):
     while line:
         if "begin_variable" in line:
             variable = []
-            print("name: %s" % new_sas.readline()) # name
-            print("axiom: %s" % new_sas.readline()) # axiom layer
+            new_sas.readline() # name
+            new_sas.readline() # axiom layer
             domain_size = int(new_sas.readline())
-            print("range: %s" % domain_size)
             for i in range(domain_size):
                 value = new_sas.readline()
-                print("value: %s" % value)
                 variable.append(value.replace('\n', '')) # value
             last_line = new_sas.readline()
             if not "end_variable" in last_line:
@@ -45,7 +43,6 @@ def read_initial_state(file_name):
     for var in range(len(state_values)):
         val = state_values[var]
         state_values[var] = variables[var][val]
-    print(state_values)
     return state_values
 
 
@@ -85,8 +82,7 @@ def lisp_to_string(node):
 def replace_init_values(state_values, pddl):
     if not pddl:
         sys.exit(":init not found in PDDL.")
-    print(pddl)
-    
+
     del pddl[:]
     pddl.append(":init")
 
@@ -98,8 +94,6 @@ def replace_init_values(state_values, pddl):
         else:
             value = value.replace("Atom ", '')
             pddl.append(value.split(','))
-
-    print(pddl)
 
 
 class ParseError(Exception):
@@ -154,7 +148,6 @@ def parse_pddl_file(type, filename):
 
 
 def write_pddl(file, pddl):
-    print(pddl)
     file.write(lisp_to_string(pddl))
 
 def convert(original_pddl_name, sas_name, new_pddl_name):
@@ -163,7 +156,7 @@ def convert(original_pddl_name, sas_name, new_pddl_name):
     replace_init_values(state_values, find_pddl_init(pddl))
     with file_open(new_pddl_name, "w") as new_pddl_file:
         write_pddl(new_pddl_file, pddl)
-    print("New PDDL file successfully written.")
+    print("New PDDL file successfully written: %s" % new_pddl_name)
 
 if __name__ == "__main__":
     original_pddl_name = sys.argv[1]
