@@ -216,14 +216,24 @@ SearchStatus EagerSearch::step() {
         if (succ_node.is_dead_end())
             continue;
 
-        if (succ_node.is_new()) {
-            // We have not seen this state before.
-            // Evaluate and create a new node.
+        // We have not seen this state before.
+        // Evaluate and create a new node.
 
-            // Careful: succ_node.get_g() is not available here yet,
-            // hence the stupid computation of succ_g.
-            // TODO: Make this less fragile.
-            int succ_g = node->get_g() + get_adjusted_cost(op);
+        // Careful: succ_node.get_g() is not available here yet,
+        // hence the stupid computation of succ_g.
+        // TODO: Make this less fragile.
+        int succ_g = node->get_g() + get_adjusted_cost(op);
+
+        if (succ_node.is_new()) {
+
+            // Check if already solved
+            if (succ_node.is_solved()) {
+                int succ_cost = node->get_real_g() + op.get_cost() + succ_node.get_cost();
+                if (succ_cost < best_solved_cost) {
+                    best_solved_cost = succ_cost;
+                    best_solved_state = succ_node.get_state_id();
+                }
+            }
 
             EvaluationContext succ_eval_context(
                 succ_state, succ_g, is_preferred, &statistics);
@@ -241,7 +251,7 @@ SearchStatus EagerSearch::step() {
                 statistics.print_checkpoint_line(succ_node.get_g());
                 reward_progress();
             }
-        } else if (succ_node.get_g() > node->get_g() + get_adjusted_cost(op)) {
+        } else if (succ_node.get_g() > succ_g) {
             // We found a new cheapest path to an open or closed state.
             if (reopen_closed_nodes) {
                 if (succ_node.is_closed()) {

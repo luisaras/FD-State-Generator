@@ -58,7 +58,9 @@ SearchEngine::SearchEngine(const Options &opts)
       statistics(static_cast<utils::Verbosity>(opts.get_enum("verbosity"))),
       cost_type(static_cast<OperatorCost>(opts.get_enum("cost_type"))),
       is_unit_cost(task_properties::is_unit_cost(task_proxy)),
-      max_time(opts.get<double>("max_time")) {
+      max_time(opts.get<double>("max_time")),
+      best_solved_state(StateID::no_state),
+      best_solved_cost(EvaluationResult::INFTY) {
     if (opts.get<int>("bound") < 0) {
         cerr << "error: negative cost bound " << opts.get<int>("bound") << endl;
         utils::exit_with(ExitCode::SEARCH_INPUT_ERROR);
@@ -108,12 +110,18 @@ void SearchEngine::search() {
 
 bool SearchEngine::check_goal_and_set_plan(const GlobalState &state) {
     SearchNode node = search_space.get_node(state);
-    if (node.is_solved() || task_properties::is_goal_state(task_proxy, state)) {
-        if (verbosity > utils::Verbosity::SILENT) {
-            cout << "Solution found! Node g-value: " << node.get_g() << endl;
-        }
+    int cost = node.get_real_g();
+    if (cost >= best_solved_cost || task_properties::is_goal_state(task_proxy, state)) {
         Plan plan;
-        search_space.trace_path(state, plan);
+        if (cost >= best_solved_cost) {
+            cost = best_solved_cost;
+            search_space.trace_path(state_registry.lookup_state(best_solved_state), plan);
+        } else {
+            search_space.trace_path(state, plan);
+        }
+        if (verbosity > utils::Verbosity::SILENT) {
+            cout << "Solution found! Cost: " << cost << endl;
+        }
         set_plan(plan);
         return true;
     }
@@ -131,6 +139,8 @@ void SearchEngine::save_task_if_necessary() {
 }
 
 void SearchEngine::clear() {
+    best_solved_state = StateID::no_state;
+    best_solved_cost = EvaluationResult::INFTY;
     solution_found = false;
     status = IN_PROGRESS;
     plan.clear();

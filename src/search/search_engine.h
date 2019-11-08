@@ -51,6 +51,8 @@ protected:
     bool is_unit_cost;
     double max_time;
     
+    StateID best_solved_state;
+    int best_solved_cost;
 
     virtual void initialize() {}
     virtual SearchStatus step() = 0;

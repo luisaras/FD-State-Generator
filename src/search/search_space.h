@@ -17,12 +17,12 @@ class SearchNode {
     StateRegistry &state_registry;
     StateID state_id;
     SearchNodeInfo &info;
-    bool solved;
+    int cost;
 public:
     SearchNode(StateRegistry &state_registry,
                StateID state_id,
                SearchNodeInfo &info,
-               bool solved = false);
+               int cost = -1);
 
     StateID get_state_id() const {
         return state_id;
@@ -36,6 +36,7 @@ public:
 
     int get_g() const;
     int get_real_g() const;
+    int get_cost() const;
 
     bool is_solved() const;
 
@@ -58,12 +59,14 @@ public:
 struct PathNodeInfo {
     StateID child_state_id;
     OperatorID successor_operator;
+    int cost;
     PathNodeInfo()
         : child_state_id(StateID::no_state),
-          successor_operator(-2) {
+          successor_operator(-1),
+          cost(-1) {
     }
     bool is_solved() const {
-        return successor_operator.get_index() != -2;
+        return cost >= 0;
     }
 };
 
