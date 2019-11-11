@@ -70,13 +70,13 @@ WIDTH_2="complexity(ehc(cpdbs(systematic(2)), undef_value=true, verbosity=SILENT
 WIDTH_3="complexity(ehc(cpdbs(systematic(3)), undef_value=true, verbosity=SILENT))"
 
 for p in blocks sokoban airport; do
-    task $p lmcut ${LMCUT}
-    task $p ipdb ${IPDB}
-    #task $p perfect ${ASTAR}
-    task $p novelty_1 ${NOVELTY_1}
-    task $p novelty_2 ${NOVELTY_2}
-    task $p width_1 ${WIDTH_1}
-    task $p width_2 ${WIDTH_2}
-    task $p width_3 ${WIDTH_3}
+    task $p lmcut "${LMCUT}"
+    task $p ipdb "${IPDB}"
+    task $p novelty_1 "${NOVELTY_1}"
+    task $p novelty_2 "${NOVELTY_2}"
+    task $p width_1 "${WIDTH_1}"
+    task $p width_2 "${WIDTH_2}"
+    task $p width_3 "${WIDTH_3}"
     task $p all "${LMCUT}, ${IPDB}, ${NOVELTY_2}, ${WIDTH_2}"
+    task $p perfect "${ASTAR}"
 done
