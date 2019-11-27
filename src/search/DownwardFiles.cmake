@@ -817,7 +817,7 @@ fast_downward_plugin(
     SOURCES
         novelty/novelty_record
         novelty/novelty_heuristic
-        novelty/plugin_novelty
+        novelty/novelty_search
 )
 
 fast_downward_add_plugin_sources(PLANNER_SOURCES)

@@ -76,8 +76,10 @@ class SearchSpace {
     PerStateInformation<PathNodeInfo> path_node_infos;
 
     StateRegistry &state_registry;
+
+    bool store_path;
 public:
-    explicit SearchSpace(StateRegistry &state_registry);
+    explicit SearchSpace(StateRegistry &state_registry, bool store_path = true);
 
     SearchNode get_node(const GlobalState &state);
 

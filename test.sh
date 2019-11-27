@@ -1,11 +1,13 @@
-DOMAIN="../pyperplan/benchmarks/sokoban/domain.pddl"
-TASK="../pyperplan/benchmarks/sokoban/task01.pddl"
+DOMAIN="../pyperplan/benchmarks/openstacks/domain04.pddl"
+TASK="../pyperplan/benchmarks/openstacks/task04.pddl"
 
+
+#"../pyperplan/benchmarks/openstacks/domain01.pddl" "../pyperplan/benchmarks/openstacks/task01.pddl" --search "novelty_search(level=2, prune=true)"
 test_novelty() {
     # Generate output.sas
     ./fast-downward.py --debug --translate --sas-file output.sas ${DOMAIN} ${TASK}
     # Find plan for new_output.sas
-    ./fast-downward.py --debug output.sas --search "novelty_search(level=2, prune=true)"
+    ./fast-downward.py --debug output.sas --search "novelty_search(level=2, prune=true, goal=2)"
     #./fast-downward.py --debug output.sas --search "astar(lmcut())"
 
     #./fast-downward.py --debug "../pyperplan/benchmarks/blocks/domain.pddl" "../pyperplan/benchmarks/blocks/task01.pddl" --search "novelty_search(level=2, prune=true)"
@@ -31,6 +33,6 @@ test_complexity() {
     test_abstract "complexity(astar(lmcut(), undef_value=true, verbosity=SILENT)), lmcut()"
 }
 
-test_complexity
+test_novelty
 
 #src/sas_to_pddl.py ../pyperplan/benchmarks/blocks/task01.pddl generator-tests/ipdb/blocks/01_task.sas new_task.pddl

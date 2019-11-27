@@ -128,13 +128,18 @@ void SearchNode::dump(const TaskProxy &task_proxy) {
     }
 }
 
-SearchSpace::SearchSpace(StateRegistry &state_registry)
-    : state_registry(state_registry) {
+SearchSpace::SearchSpace(StateRegistry &state_registry, bool store_path)
+    : state_registry(state_registry),
+    store_path(store_path) {
 }
 
 SearchNode SearchSpace::get_node(const GlobalState &state) {
-    const PathNodeInfo &path_info = path_node_infos[state];
-    return SearchNode(state_registry, state.get_id(), search_node_infos[state], path_info.cost);
+    int cost = -1;
+    if (store_path) {
+        const PathNodeInfo &path_info = path_node_infos[state];
+        cost = path_info.cost;
+    }
+    return SearchNode(state_registry, state.get_id(), search_node_infos[state], cost);
 }
 
 void SearchSpace::trace_path(const GlobalState &goal_state,
@@ -142,20 +147,21 @@ void SearchSpace::trace_path(const GlobalState &goal_state,
     assert(path.empty());
     // Construct path from found state to final state
     GlobalState current_state = goal_state;
-    for (;;) {
-        const PathNodeInfo &info = path_node_infos[current_state];
-        if (info.successor_operator == OperatorID::no_operator) {
-            assert(info.child_state_id == StateID::no_state);
-            break;
+    if (store_path) {
+        for (;;) {
+            const PathNodeInfo &info = path_node_infos[current_state];
+            if (info.successor_operator == OperatorID::no_operator) {
+                assert(info.child_state_id == StateID::no_state);
+                break;
+            }
+            GlobalState child_state = state_registry.lookup_state(info.child_state_id);
+            SearchNodeInfo &child_info = search_node_infos[child_state];
+            child_info.creating_operator = info.successor_operator;
+            child_info.parent_state_id = current_state.get_id();
+            current_state = child_state;
         }
-        //cout << "REUSED " << info.cost << endl;
-        GlobalState child_state = state_registry.lookup_state(info.child_state_id);
-        SearchNodeInfo &child_info = search_node_infos[child_state];
-        child_info.creating_operator = info.successor_operator;
-        child_info.parent_state_id = current_state.get_id();
-        current_state = child_state;
     }
-    assert(task_properties::is_goal_state(state_registry.get_task_proxy(), current_state));
+    //assert(task_properties::is_goal_state(state_registry.get_task_proxy(), current_state));
 
     // Construct path from initial state to final state
     StateID child_state(StateID::no_state);
@@ -164,13 +170,15 @@ void SearchSpace::trace_path(const GlobalState &goal_state,
     OperatorsProxy operators = state_registry.get_task_proxy().get_operators();
     for (;;) {
         // Update path info
-        PathNodeInfo &path_info = path_node_infos[current_state];
-        if (!path_info.is_solved()) {
-            path_info.child_state_id = child_state;
-            path_info.successor_operator = sucessor_op;
-            path_info.cost = cost;
-        } else {
-            assert(path_info.cost == cost);
+        if (store_path) {
+            PathNodeInfo &path_info = path_node_infos[current_state];
+            if (!path_info.is_solved()) {
+                path_info.child_state_id = child_state;
+                path_info.successor_operator = sucessor_op;
+                path_info.cost = cost;
+            } else {
+                assert(path_info.cost == cost);
+            }
         }
         // Reconstruct path
         const SearchNodeInfo &info = search_node_infos[current_state];

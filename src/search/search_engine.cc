@@ -53,7 +53,7 @@ SearchEngine::SearchEngine(const Options &opts)
       task_proxy(*task, opts.get<bool>("undef_value")),
       state_registry(task_proxy),
       successor_generator(get_successor_generator(task_proxy, verbosity)),
-      search_space(state_registry),
+      search_space(state_registry, opts.get<bool>("store_path", true)),
       search_progress(static_cast<utils::Verbosity>(opts.get_enum("verbosity"))),
       statistics(static_cast<utils::Verbosity>(opts.get_enum("verbosity"))),
       cost_type(static_cast<OperatorCost>(opts.get_enum("cost_type"))),
