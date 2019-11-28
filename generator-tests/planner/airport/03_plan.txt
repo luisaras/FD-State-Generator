@@ -1,0 +1,94 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/demorgan/Projetos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=5.1592e-05s]
+done reading input! [t=0.000599827s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00261356s]
+peak memory difference for successor generator creation: 136 KB
+time for successor generation creation: 7.8749e-05s
+Variables: 46
+FactPairs: 119
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00296457s, 22548 KB]
+f = 17 [1 evaluated, 0 expanded, t=0.00301431s, 22548 KB]
+Initial heuristic value for lmcut: 17
+New best heuristic value for lmcut: 16
+[g=1, 2 evaluated, 1 expanded, t=0.00318112s, 22548 KB]
+New best heuristic value for lmcut: 15
+[g=2, 6 evaluated, 2 expanded, t=0.00343112s, 22548 KB]
+New best heuristic value for lmcut: 14
+[g=3, 10 evaluated, 3 expanded, t=0.0036709s, 22548 KB]
+New best heuristic value for lmcut: 13
+[g=4, 14 evaluated, 4 expanded, t=0.0038999s, 22548 KB]
+New best heuristic value for lmcut: 12
+[g=5, 18 evaluated, 5 expanded, t=0.00412437s, 22548 KB]
+New best heuristic value for lmcut: 11
+[g=6, 27 evaluated, 7 expanded, t=0.00463153s, 22548 KB]
+New best heuristic value for lmcut: 10
+[g=7, 36 evaluated, 11 expanded, t=0.00494158s, 22548 KB]
+New best heuristic value for lmcut: 9
+[g=8, 37 evaluated, 12 expanded, t=0.00505555s, 22548 KB]
+New best heuristic value for lmcut: 8
+[g=9, 39 evaluated, 13 expanded, t=0.00521369s, 22548 KB]
+New best heuristic value for lmcut: 7
+[g=10, 40 evaluated, 14 expanded, t=0.00531673s, 22548 KB]
+New best heuristic value for lmcut: 6
+[g=11, 42 evaluated, 15 expanded, t=0.00544974s, 22548 KB]
+New best heuristic value for lmcut: 5
+[g=12, 44 evaluated, 16 expanded, t=0.00557145s, 22548 KB]
+New best heuristic value for lmcut: 4
+[g=13, 46 evaluated, 17 expanded, t=0.00567909s, 22548 KB]
+New best heuristic value for lmcut: 3
+[g=14, 48 evaluated, 18 expanded, t=0.00577826s, 22548 KB]
+New best heuristic value for lmcut: 2
+[g=15, 49 evaluated, 19 expanded, t=0.00585192s, 22548 KB]
+New best heuristic value for lmcut: 1
+[g=16, 50 evaluated, 20 expanded, t=0.00592131s, 22548 KB]
+New best heuristic value for lmcut: 0
+[g=17, 52 evaluated, 21 expanded, t=0.00602741s, 22548 KB]
+Solution found! Cost: 17
+Actual search time: 0.00301339s [t=0.00608533s]
+op6) move_seg_rw_0_400_seg_rww_0_50_south_south_medium airplane_cfbeg (1)
+op10) move_seg_rww_0_50_seg_tww4_0_50_south_north_medium airplane_cfbeg (1)
+op28) move_seg_tww4_0_50_seg_tww3_0_50_north_north_medium airplane_cfbeg (1)
+op33) pushback_seg_pp_0_60_seg_ppdoor_0_40_south_south_medium airplane_daewh (1)
+op34) pushback_seg_ppdoor_0_40_seg_tww1_0_200_south_north_medium airplane_daewh (1)
+op47) startup_seg_tww1_0_200_north_medium airplane_daewh (1)
+op23) move_seg_tww1_0_200_seg_twe1_0_200_north_south_medium airplane_daewh (1)
+op26) move_seg_tww3_0_50_seg_tww2_0_50_north_north_medium airplane_cfbeg (1)
+op13) move_seg_twe1_0_200_seg_twe2_0_50_south_south_medium airplane_daewh (1)
+op24) move_seg_tww2_0_50_seg_tww1_0_200_north_north_medium airplane_cfbeg (1)
+op20) move_seg_tww1_0_200_seg_ppdoor_0_40_north_south_medium airplane_cfbeg (1)
+op2) move_seg_ppdoor_0_40_seg_pp_0_60_south_south_medium airplane_cfbeg (1)
+op31) park_seg_pp_0_60_south airplane_cfbeg (1)
+op15) move_seg_twe2_0_50_seg_twe3_0_50_south_south_medium airplane_daewh (1)
+op17) move_seg_twe3_0_50_seg_twe4_0_50_south_south_medium airplane_daewh (1)
+op19) move_seg_twe4_0_50_seg_rwe_0_50_south_south_medium airplane_daewh (1)
+op56) takeoff_seg_rwe_0_50_south airplane_daewh (1)
+Plan length: 17 step(s).
+Plan cost: 17
+Expanded 22 state(s).
+Reopened 0 state(s).
+Evaluated 52 state(s).
+Evaluations: 52
+Generated 59 state(s).
+Dead ends: 19 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 52
+Int hash set load factor: 52/64 = 0.8125
+Int hash set resizes: 6
+Open nodes: 11
+Closed states: 22
+Search time: 0.00328059s
+Total time: 0.00609364s
+Solution found.
+Peak memory: 22548 KB
+search exit code: 0
+

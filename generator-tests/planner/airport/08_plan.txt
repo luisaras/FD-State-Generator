@@ -1,0 +1,229 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/demorgan/Projetos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=6.0313e-05s]
+done reading input! [t=0.00179379s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00453802s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000353506s
+Variables: 153
+FactPairs: 422
+Bytes per state: 24
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00620327s, 22812 KB]
+f = 62 [1 evaluated, 0 expanded, t=0.00626021s, 22812 KB]
+Initial heuristic value for lmcut: 62
+New best heuristic value for lmcut: 61
+[g=1, 2 evaluated, 1 expanded, t=0.00766686s, 22812 KB]
+New best heuristic value for lmcut: 60
+[g=1, 3 evaluated, 1 expanded, t=0.00902778s, 22812 KB]
+New best heuristic value for lmcut: 59
+[g=2, 9 evaluated, 2 expanded, t=0.0118639s, 22812 KB]
+New best heuristic value for lmcut: 58
+[g=3, 16 evaluated, 3 expanded, t=0.0159431s, 22812 KB]
+New best heuristic value for lmcut: 57
+[g=4, 23 evaluated, 4 expanded, t=0.0199447s, 22812 KB]
+New best heuristic value for lmcut: 56
+[g=5, 30 evaluated, 5 expanded, t=0.0238653s, 22812 KB]
+New best heuristic value for lmcut: 55
+[g=6, 37 evaluated, 6 expanded, t=0.0277178s, 22812 KB]
+New best heuristic value for lmcut: 54
+[g=7, 44 evaluated, 7 expanded, t=0.0315806s, 22812 KB]
+New best heuristic value for lmcut: 53
+[g=8, 51 evaluated, 8 expanded, t=0.0353516s, 22812 KB]
+New best heuristic value for lmcut: 52
+[g=9, 58 evaluated, 9 expanded, t=0.0390044s, 22812 KB]
+New best heuristic value for lmcut: 51
+[g=10, 65 evaluated, 10 expanded, t=0.0426748s, 22812 KB]
+New best heuristic value for lmcut: 50
+[g=11, 72 evaluated, 11 expanded, t=0.0462573s, 22812 KB]
+New best heuristic value for lmcut: 49
+[g=12, 79 evaluated, 12 expanded, t=0.0497934s, 22812 KB]
+New best heuristic value for lmcut: 48
+[g=13, 86 evaluated, 13 expanded, t=0.053198s, 22812 KB]
+New best heuristic value for lmcut: 47
+[g=14, 93 evaluated, 14 expanded, t=0.0563936s, 22812 KB]
+New best heuristic value for lmcut: 46
+[g=15, 100 evaluated, 15 expanded, t=0.0595464s, 22812 KB]
+New best heuristic value for lmcut: 45
+[g=16, 107 evaluated, 16 expanded, t=0.0624611s, 22812 KB]
+New best heuristic value for lmcut: 44
+[g=17, 114 evaluated, 17 expanded, t=0.0652669s, 22812 KB]
+New best heuristic value for lmcut: 43
+[g=19, 189 evaluated, 34 expanded, t=0.10644s, 22812 KB]
+New best heuristic value for lmcut: 42
+[g=20, 193 evaluated, 35 expanded, t=0.107479s, 22812 KB]
+New best heuristic value for lmcut: 41
+[g=21, 264 evaluated, 52 expanded, t=0.129554s, 22812 KB]
+New best heuristic value for lmcut: 40
+[g=22, 301 evaluated, 61 expanded, t=0.142102s, 22812 KB]
+New best heuristic value for lmcut: 39
+[g=23, 305 evaluated, 62 expanded, t=0.142957s, 22812 KB]
+New best heuristic value for lmcut: 38
+[g=24, 308 evaluated, 63 expanded, t=0.143769s, 22812 KB]
+New best heuristic value for lmcut: 37
+[g=25, 372 evaluated, 83 expanded, t=0.172573s, 22812 KB]
+New best heuristic value for lmcut: 36
+[g=26, 377 evaluated, 84 expanded, t=0.174972s, 22812 KB]
+New best heuristic value for lmcut: 35
+[g=27, 382 evaluated, 85 expanded, t=0.177319s, 22812 KB]
+New best heuristic value for lmcut: 34
+[g=28, 387 evaluated, 86 expanded, t=0.179605s, 22812 KB]
+New best heuristic value for lmcut: 33
+[g=29, 392 evaluated, 87 expanded, t=0.181848s, 22812 KB]
+New best heuristic value for lmcut: 32
+[g=30, 397 evaluated, 88 expanded, t=0.183974s, 22812 KB]
+New best heuristic value for lmcut: 31
+[g=31, 402 evaluated, 89 expanded, t=0.186061s, 22812 KB]
+New best heuristic value for lmcut: 30
+[g=32, 408 evaluated, 90 expanded, t=0.189192s, 22812 KB]
+New best heuristic value for lmcut: 29
+[g=33, 414 evaluated, 91 expanded, t=0.192092s, 22812 KB]
+New best heuristic value for lmcut: 28
+[g=34, 420 evaluated, 92 expanded, t=0.19483s, 22812 KB]
+New best heuristic value for lmcut: 27
+[g=35, 426 evaluated, 93 expanded, t=0.197401s, 22812 KB]
+New best heuristic value for lmcut: 26
+[g=36, 432 evaluated, 94 expanded, t=0.199839s, 22812 KB]
+New best heuristic value for lmcut: 25
+[g=37, 438 evaluated, 95 expanded, t=0.202195s, 22812 KB]
+New best heuristic value for lmcut: 24
+[g=38, 444 evaluated, 96 expanded, t=0.204459s, 22812 KB]
+New best heuristic value for lmcut: 23
+[g=39, 451 evaluated, 97 expanded, t=0.206664s, 22812 KB]
+New best heuristic value for lmcut: 22
+[g=40, 456 evaluated, 98 expanded, t=0.208323s, 22812 KB]
+New best heuristic value for lmcut: 21
+[g=41, 462 evaluated, 99 expanded, t=0.210239s, 22812 KB]
+New best heuristic value for lmcut: 20
+[g=42, 466 evaluated, 100 expanded, t=0.211012s, 22812 KB]
+New best heuristic value for lmcut: 19
+[g=43, 469 evaluated, 101 expanded, t=0.211401s, 22812 KB]
+New best heuristic value for lmcut: 18
+[g=44, 473 evaluated, 102 expanded, t=0.212035s, 22812 KB]
+New best heuristic value for lmcut: 17
+[g=45, 475 evaluated, 103 expanded, t=0.212356s, 22812 KB]
+New best heuristic value for lmcut: 16
+[g=46, 476 evaluated, 104 expanded, t=0.21263s, 22812 KB]
+New best heuristic value for lmcut: 15
+[g=47, 477 evaluated, 105 expanded, t=0.212895s, 22812 KB]
+New best heuristic value for lmcut: 14
+[g=48, 478 evaluated, 106 expanded, t=0.213144s, 22812 KB]
+New best heuristic value for lmcut: 13
+[g=49, 479 evaluated, 107 expanded, t=0.213381s, 22812 KB]
+New best heuristic value for lmcut: 12
+[g=50, 480 evaluated, 108 expanded, t=0.213608s, 22812 KB]
+New best heuristic value for lmcut: 11
+[g=51, 481 evaluated, 109 expanded, t=0.213824s, 22812 KB]
+New best heuristic value for lmcut: 10
+[g=52, 482 evaluated, 110 expanded, t=0.214027s, 22812 KB]
+New best heuristic value for lmcut: 9
+[g=53, 483 evaluated, 111 expanded, t=0.21422s, 22812 KB]
+New best heuristic value for lmcut: 8
+[g=54, 484 evaluated, 112 expanded, t=0.214402s, 22812 KB]
+New best heuristic value for lmcut: 7
+[g=55, 485 evaluated, 113 expanded, t=0.214573s, 22812 KB]
+New best heuristic value for lmcut: 6
+[g=56, 486 evaluated, 114 expanded, t=0.21473s, 22812 KB]
+New best heuristic value for lmcut: 5
+[g=57, 487 evaluated, 115 expanded, t=0.214876s, 22812 KB]
+New best heuristic value for lmcut: 4
+[g=58, 488 evaluated, 116 expanded, t=0.215008s, 22812 KB]
+New best heuristic value for lmcut: 3
+[g=59, 489 evaluated, 117 expanded, t=0.215128s, 22812 KB]
+New best heuristic value for lmcut: 2
+[g=60, 490 evaluated, 118 expanded, t=0.215235s, 22812 KB]
+New best heuristic value for lmcut: 1
+[g=61, 491 evaluated, 119 expanded, t=0.215329s, 22812 KB]
+New best heuristic value for lmcut: 0
+[g=62, 493 evaluated, 120 expanded, t=0.21571s, 22812 KB]
+Solution found! Cost: 62
+Actual search time: 0.20945s [t=0.215773s]
+op147) pushback_seg_a02_0_100_seg_c5_c_a02_0_100_south_south_medium airplane_daewh (1)
+op132) move_seg_rwy_0_1300_seg_27_0_150_south_south_medium airplane_cfbeg (1)
+op3) move_seg_27_0_150_seg_b_27_0_100_south_north_medium airplane_cfbeg (1)
+op15) move_seg_b_27_0_100_seg_n6_b_0_100_north_north_medium airplane_cfbeg (1)
+op120) move_seg_n6_b_0_100_seg_n5_n6_0_100_north_north_medium airplane_cfbeg (1)
+op117) move_seg_n5_n6_0_100_seg_n4_n5_0_86_north_north_medium airplane_cfbeg (1)
+op96) move_seg_n4_n5_0_86_seg_n4_n5_6_0_86_north_north_medium airplane_cfbeg (1)
+op114) move_seg_n4_n5_6_0_86_seg_n4_n5_5_0_86_north_north_medium airplane_cfbeg (1)
+op111) move_seg_n4_n5_5_0_86_seg_n4_n5_4_0_85_north_north_medium airplane_cfbeg (1)
+op108) move_seg_n4_n5_4_0_85_seg_n4_n5_3_0_86_north_north_medium airplane_cfbeg (1)
+op105) move_seg_n4_n5_3_0_86_seg_n4_n5_2_0_86_north_north_medium airplane_cfbeg (1)
+op102) move_seg_n4_n5_2_0_86_seg_n4_n5_1_0_85_north_north_medium airplane_cfbeg (1)
+op153) pushback_seg_c5_c_a02_0_100_seg_c5_c6_0_50_south_north_medium airplane_daewh (1)
+op177) startup_seg_c5_c6_0_50_north_medium airplane_daewh (1)
+op28) move_seg_c5_c6_0_50_seg_c4_c5_0_50_north_north_medium airplane_daewh (1)
+op25) move_seg_c4_c5_0_50_seg_c_c2_0_84_north_north_medium airplane_daewh (1)
+op52) move_seg_c_c2_0_84_seg_c_c2_2_0_83_north_north_medium airplane_daewh (1)
+op64) move_seg_c_c2_2_0_83_seg_c_c2_1_0_83_north_north_medium airplane_daewh (1)
+op58) move_seg_c_c2_1_0_83_seg_n_c_0_100_north_north_medium airplane_daewh (1)
+op127) move_seg_n_c_0_100_seg_n3_n_0_100_north_north_medium airplane_daewh (1)
+op94) move_seg_n3_n_0_100_seg_n2_n3_0_85_north_north_medium airplane_daewh (1)
+op73) move_seg_n2_n3_0_85_seg_n2_n3_6_0_86_north_north_medium airplane_daewh (1)
+op91) move_seg_n2_n3_6_0_86_seg_n2_n3_5_0_86_north_north_medium airplane_daewh (1)
+op88) move_seg_n2_n3_5_0_86_seg_n2_n3_4_0_85_north_north_medium airplane_daewh (1)
+op85) move_seg_n2_n3_4_0_85_seg_n2_n3_3_0_86_north_north_medium airplane_daewh (1)
+op82) move_seg_n2_n3_3_0_86_seg_n2_n3_2_0_86_north_north_medium airplane_daewh (1)
+op79) move_seg_n2_n3_2_0_86_seg_n2_n3_1_0_86_north_north_medium airplane_daewh (1)
+op76) move_seg_n2_n3_1_0_86_seg_n1_n2_0_100_north_north_medium airplane_daewh (1)
+op70) move_seg_n1_n2_0_100_seg_n1_a_0_100_north_south_medium airplane_daewh (1)
+op67) move_seg_n1_a_0_100_seg_a_09_0_100_south_south_medium airplane_daewh (1)
+op10) move_seg_a_09_0_100_seg_09_0_150_south_south_medium airplane_daewh (1)
+op99) move_seg_n4_n5_1_0_85_seg_n_n4_0_100_north_north_medium airplane_cfbeg (1)
+op129) move_seg_n_n4_0_100_seg_n_c_0_100_north_south_medium airplane_cfbeg (1)
+op123) move_seg_n_c_0_100_seg_c_c2_1_0_83_south_south_medium airplane_cfbeg (1)
+op54) move_seg_c_c2_1_0_83_seg_c_c2_2_0_83_south_south_medium airplane_cfbeg (1)
+op60) move_seg_c_c2_2_0_83_seg_c_c2_0_84_south_south_medium airplane_cfbeg (1)
+op48) move_seg_c_c2_0_84_seg_c4_c5_0_50_south_south_medium airplane_cfbeg (1)
+op18) move_seg_c4_c5_0_50_seg_c5_c_a02_0_100_south_south_medium airplane_cfbeg (1)
+op33) move_seg_c5_c_a02_0_100_seg_a02_0_100_south_south_medium airplane_cfbeg (1)
+op138) park_seg_a02_0_100_south airplane_cfbeg (1)
+op290) takeoff_seg_09_0_150_south airplane_daewh (1)
+op150) pushback_seg_b02_0_100_seg_c5_c_b02_0_100_south_south_medium airplane_dfboy (1)
+op156) pushback_seg_c5_c_b02_0_100_seg_c5_c6_0_50_south_north_medium airplane_dfboy (1)
+op178) startup_seg_c5_c6_0_50_north_medium airplane_dfboy (1)
+op29) move_seg_c5_c6_0_50_seg_c4_c5_0_50_north_north_medium airplane_dfboy (1)
+op26) move_seg_c4_c5_0_50_seg_c_c2_0_84_north_north_medium airplane_dfboy (1)
+op53) move_seg_c_c2_0_84_seg_c_c2_2_0_83_north_north_medium airplane_dfboy (1)
+op65) move_seg_c_c2_2_0_83_seg_c_c2_1_0_83_north_north_medium airplane_dfboy (1)
+op59) move_seg_c_c2_1_0_83_seg_n_c_0_100_north_north_medium airplane_dfboy (1)
+op128) move_seg_n_c_0_100_seg_n3_n_0_100_north_north_medium airplane_dfboy (1)
+op95) move_seg_n3_n_0_100_seg_n2_n3_0_85_north_north_medium airplane_dfboy (1)
+op74) move_seg_n2_n3_0_85_seg_n2_n3_6_0_86_north_north_medium airplane_dfboy (1)
+op92) move_seg_n2_n3_6_0_86_seg_n2_n3_5_0_86_north_north_medium airplane_dfboy (1)
+op89) move_seg_n2_n3_5_0_86_seg_n2_n3_4_0_85_north_north_medium airplane_dfboy (1)
+op86) move_seg_n2_n3_4_0_85_seg_n2_n3_3_0_86_north_north_medium airplane_dfboy (1)
+op83) move_seg_n2_n3_3_0_86_seg_n2_n3_2_0_86_north_north_medium airplane_dfboy (1)
+op80) move_seg_n2_n3_2_0_86_seg_n2_n3_1_0_86_north_north_medium airplane_dfboy (1)
+op77) move_seg_n2_n3_1_0_86_seg_n1_n2_0_100_north_north_medium airplane_dfboy (1)
+op71) move_seg_n1_n2_0_100_seg_n1_a_0_100_north_south_medium airplane_dfboy (1)
+op68) move_seg_n1_a_0_100_seg_a_09_0_100_south_south_medium airplane_dfboy (1)
+op11) move_seg_a_09_0_100_seg_09_0_150_south_south_medium airplane_dfboy (1)
+op291) takeoff_seg_09_0_150_south airplane_dfboy (1)
+Plan length: 62 step(s).
+Plan cost: 62
+Expanded 121 state(s).
+Reopened 0 state(s).
+Evaluated 493 state(s).
+Evaluations: 493
+Generated 551 state(s).
+Dead ends: 252 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 493
+Int hash set load factor: 493/512 = 0.962891
+Int hash set resizes: 9
+Open nodes: 120
+Closed states: 121
+Search time: 0.211025s
+Total time: 0.215782s
+Solution found.
+Peak memory: 22812 KB
+search exit code: 0
+
