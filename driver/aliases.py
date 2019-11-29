@@ -5,11 +5,95 @@ import os
 
 from .util import DRIVER_DIR
 
-
 PORTFOLIO_DIR = os.path.join(DRIVER_DIR, "portfolios")
 
 ALIASES = {}
 
+def add_gen_aliases(ALIASES):
+  GENERATOR = "generator_abstract([%s],max_it=20000000,max_time=1200)"
+  GENERATOR_H = GENERATOR % "h"
+  GENERATOR_NOVELTY = GENERATOR % "novelty_h(prune=false,eval=h,reverse=true),h"
+  GENERATOR_CONFLICTS = GENERATOR % "pho3,pho2,sum([weight(pho2,-1),pho3])"
+  LMCUT = "h=lmcut()"
+  IPDB = "h=ipdb()"
+  ASTAR = "h=complexity(astar(lmcut(),undef_value=true,verbosity=SILENT))"
+  FULLDB = "h=pdb(greedy(max_states=infinity))"
+  PHO3 = "pho3=operatorcounting([pho_constraints(systematic(3))])"
+  PHO2 = "pho2=operatorcounting([pho_constraints(systematic(2))])"
+
+  ALIASES["gen-lmcut"] = [
+    "--evaluator", LMCUT,
+    "--search", GENERATOR_H
+  ]
+    
+  ALIASES["gen-ipdb"] = [
+    "--evaluator", IPDB,
+    "--search", GENERATOR_H
+  ]
+
+  ALIASES["gen-fulldb"] = [
+    "--evaluator", FULLDB,
+    "--search", GENERATOR_H
+  ]
+
+  ALIASES["gen-astar"] = [
+    "--evaluator", ASTAR,
+    "--search", GENERATOR_H
+  ]
+
+  ALIASES["gen-novelty-lmcut"] = [
+    "--evaluator",  LMCUT,
+    "--search", GENERATOR_NOVELTY
+  ]
+
+  ALIASES["gen-novelty-ipdb"] = [
+    "--evaluator", IPDB,
+    "--search", GENERATOR_NOVELTY
+  ]
+
+  ALIASES["gen-novelty-fulldb"] = [
+    "--evaluator", FULLDB,
+    "--search", GENERATOR_NOVELTY
+  ]
+
+  ALIASES["gen-novelty-astar"] = [
+    "--evaluator", ASTAR,
+    "--search", GENERATOR_NOVELTY
+  ]
+
+  ALIASES["gen-conflicts"] = [
+    "--evaluator", PHO3,
+    "--evaluator", PHO2,
+    "--search", GENERATOR_CONFLICTS
+  ]
+
+  ALIASES["gen-conflicts-lmcut"] = [
+    "--evaluator", LMCUT,
+    "--evaluator", PHO3,
+    "--evaluator", PHO2,
+    "--search", GENERATOR_CONFLICTS
+  ]
+
+  ALIASES["gen-conflicts-ipdb"] = [
+    "--evaluator", IPDB,
+    "--evaluator", PHO3,
+    "--evaluator", PHO2,
+    "--search", GENERATOR_CONFLICTS
+  ]
+
+  ALIASES["gen-conflicts-fulldb"] = [
+    "--evaluator", FULLDB,
+    "--evaluator", PHO3,
+    "--evaluator", PHO2,
+    "--search", GENERATOR_CONFLICTS
+  ]
+
+  ALIASES["gen-conflicts-astar"] = [
+    "--evaluator", ASTAR,
+    "--evaluator", PHO3,
+    "--evaluator", PHO2,
+    "--search", GENERATOR_CONFLICTS
+  ]
 
 ALIASES["seq-sat-fd-autotune-1"] = [
     "--evaluator", "hff=ff(transform=adapt_costs(one))",
@@ -92,6 +176,8 @@ lazy(alt([single(sum([g(),weight(hff,2)])),
          boost=1000),
      preferred=[hcea,hgc],reopen_closed=true,cost_type=one)
 ],repeat_last=true,continue_on_fail=true)"""]
+
+add_gen_aliases(ALIASES)
 
 def _get_lama(**kwargs):
     return [

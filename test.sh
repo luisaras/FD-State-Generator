@@ -1,13 +1,11 @@
-DOMAIN="../pyperplan/benchmarks/openstacks/domain04.pddl"
-TASK="../pyperplan/benchmarks/openstacks/task04.pddl"
+DOMAIN="../pyperplan/benchmarks/openstacks/domain01.pddl"
+TASK="../pyperplan/benchmarks/openstacks/task01.pddl"
 
-
-#"../pyperplan/benchmarks/openstacks/domain01.pddl" "../pyperplan/benchmarks/openstacks/task01.pddl" --search "novelty_search(level=2, prune=true)"
 test_novelty() {
     # Generate output.sas
     ./fast-downward.py --debug --translate --sas-file output.sas ${DOMAIN} ${TASK}
     # Find plan for new_output.sas
-    ./fast-downward.py --debug output.sas --search "novelty_search(level=2, prune=true, goal=2)"
+    ./fast-downward.py --debug output.sas --search "novelty_search(level=2, prune=true)"
     #./fast-downward.py --debug output.sas --search "astar(lmcut())"
 
     #./fast-downward.py --debug "../pyperplan/benchmarks/blocks/domain.pddl" "../pyperplan/benchmarks/blocks/task01.pddl" --search "novelty_search(level=2, prune=true)"

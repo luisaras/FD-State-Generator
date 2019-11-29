@@ -3,19 +3,19 @@
 using namespace std;
 
 namespace novelty {
-NoveltyRecord::NoveltyRecord(const std::shared_ptr<AbstractTask>& task, int level, bool use_h) : 
-    task(task), level(level), use_h(use_h) {
+NoveltyRecord::NoveltyRecord(const std::shared_ptr<AbstractTask>& task, int level) : 
+    task(task), level(level) {
     clear();
 }
 
 void NoveltyRecord::clear() {
     reached_facts.clear();
-    set<vector<FactPair>> initial_set;
-    reached_facts.push_back(initial_set);
 }
 
-int NoveltyRecord::get_value(const std::vector<int>& state_values, int h) {
+int NoveltyRecord::get_value(const std::vector<int>& state_values, uint h) {
     vector<FactPair> tuple(level);
+    if (h >= reached_facts.size())
+        reached_facts.resize(h + 1);
     return get_value(tuple, 0, reached_facts[h], state_values);
     /*switch(level) {
         case 1:

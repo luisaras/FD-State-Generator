@@ -7,6 +7,8 @@
 #include "../tasks/root_task.h"
 #include "../task_utils/task_properties.h"
 
+#include "../evaluation_context.h"
+
 #include <cstddef>
 #include <limits>
 #include <utility>
@@ -15,10 +17,10 @@ using namespace std;
 
 namespace novelty {
     
-options::Options get_default_opts(int level, bool use_h, bool prune, bool reverse) {
+options::Options get_default_opts(int level, shared_ptr<Evaluator>& eval, bool prune, bool reverse) {
     Options opts;
     opts.set("level", level);
-    opts.set("use_h", use_h);
+    opts.set("eval", eval);
     opts.set("prune", prune);
     opts.set("reverse", reverse);
     opts.set("transform", tasks::g_root_task);
@@ -28,9 +30,10 @@ options::Options get_default_opts(int level, bool use_h, bool prune, bool revers
 
 NoveltyHeuristic::NoveltyHeuristic(const options::Options &opts)
     : Heuristic(opts),
-      record(task, opts.get<int>("level", 1), opts.get<bool>("use_h", false)),
+      record(task, opts.get<int>("level", 1)),
       prune(opts.get<bool>("prune", true)),
       reverse(opts.get<bool>("reverse", false)),
+      eval(opts.get<shared_ptr<Evaluator>>("eval")),
       num_facts(0) {
     cout << "Initializing novelty heuristic..." << endl;
     if (!reverse) {
@@ -41,13 +44,19 @@ NoveltyHeuristic::NoveltyHeuristic(const options::Options &opts)
     cout << "Number of facts: " << num_facts << endl;
 }
 
-NoveltyHeuristic::NoveltyHeuristic(int level, bool use_h, bool prune, bool reverse) :
-    NoveltyHeuristic(get_default_opts(level, use_h, prune, reverse)) {
+NoveltyHeuristic::NoveltyHeuristic(int level, shared_ptr<Evaluator>& eval, bool prune, bool reverse) :
+    NoveltyHeuristic(get_default_opts(level, eval, prune, reverse)) {
 }
 
 int NoveltyHeuristic::compute_heuristic(const GlobalState &global_state) {
     State state = convert_global_state(global_state);
-    int value = record.get_value(state.get_values());
+
+    EvaluationContext ec(global_state);
+    int h = eval->compute_result(ec).get_evaluator_value();
+    if (h == DEAD_END)
+        return DEAD_END;
+
+    int value = record.get_value(state.get_values(), h);
     if (prune && value == 0)
         return DEAD_END;
 
@@ -63,9 +72,10 @@ void NoveltyHeuristic::clear() {
 
 void NoveltyHeuristic::add_options_to_parser(options::OptionParser &parser) {
     parser.add_option<int>("level", "", "1");
-    parser.add_option<bool>("use_h", "", "false");
+    parser.add_option<shared_ptr<Evaluator>>("eval", "", "blind()");
     parser.add_option<bool>("prune", "", "true");
     parser.add_option<bool>("reverse", "", "false");
+    Heuristic::add_options_to_parser(parser);
 }
 
 static shared_ptr<Heuristic> _parse(options::OptionParser &parser) {

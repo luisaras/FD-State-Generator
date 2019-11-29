@@ -9,18 +9,17 @@ namespace novelty {
 class NoveltyRecord {
     const std::shared_ptr<AbstractTask> task;
     int level;
-    bool use_h;
     std::vector<std::set<std::vector<FactPair>>> reached_facts;
 protected:
     int get_value_1(std::set<std::vector<FactPair>>& reached_facts, const std::vector<int>& state_values);
     int get_value_2(std::set<std::vector<FactPair>>& reached_facts, const std::vector<int>& state_values);
     int get_value(std::vector<FactPair>& tuple, int l, std::set<std::vector<FactPair>>& reached_facts, const std::vector<int>& state_values);
 public:
-    NoveltyRecord(const std::shared_ptr<AbstractTask>& task, int level = 1, bool use_h = false);
+    NoveltyRecord(const std::shared_ptr<AbstractTask>& task, int level = 1);
     virtual ~NoveltyRecord() = default;
     
     virtual void clear();
-    virtual int get_value(const std::vector<int>& state_values, int h = 0);
+    virtual int get_value(const std::vector<int>& state_values, uint h = 0);
 
     virtual int get_num_reached_facts(int h) {return reached_facts[h].size();}
     virtual int get_num_reached_facts() {
@@ -31,7 +30,6 @@ public:
     }
 
     int get_level() {return level;}
-    bool uses_h() {return use_h;}
 
 };
 }

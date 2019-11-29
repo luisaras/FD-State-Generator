@@ -13,16 +13,18 @@
 #include "../utils/timer.h"
 
 #include <iostream>
+#include <limits>
 
 using namespace std;
 
 namespace pdbs {
 PatternGeneratorGreedy::PatternGeneratorGreedy(const Options &opts)
-    : PatternGeneratorGreedy(opts.get<int>("max_states")) {
+    : PatternGeneratorGreedy(opts.get<int>("max_states"), opts.get<int>("max_memory")) {
 }
 
-PatternGeneratorGreedy::PatternGeneratorGreedy(int max_states)
-    : max_states(max_states) {
+PatternGeneratorGreedy::PatternGeneratorGreedy(int max_states, int max_memory)
+    : max_states(max_states),
+    max_memory(max_memory == -1 ? numeric_limits<int>::max() : max_memory) {
 }
 
 PatternInformation PatternGeneratorGreedy::generate(const shared_ptr<AbstractTask> &task) {
@@ -44,6 +46,12 @@ PatternInformation PatternGeneratorGreedy::generate(const shared_ptr<AbstractTas
         if (!utils::is_product_within_limit(size, next_var_size, max_states))
             break;
 
+        if (!utils::is_product_within_limit(size, next_var_size, max_memory)) {
+            cerr << "Too many variables! (Overflow occured): " << endl;
+            cerr << pattern << endl;
+            utils::exit_with(utils::ExitCode::SEARCH_CRITICAL_ERROR);
+        }
+
         pattern.push_back(next_var_id);
         size *= next_var_size;
     }
@@ -59,6 +67,11 @@ static shared_ptr<PatternGenerator> _parse(OptionParser &parser) {
         "max_states",
         "maximal number of abstract states in the pattern database.",
         "1000000",
+        Bounds("1", "infinity"));
+    parser.add_option<int>(
+        "max_memory",
+        "maximal memory the generator is allowed to use.",
+        "infinity",
         Bounds("1", "infinity"));
 
     Options opts = parser.parse();
