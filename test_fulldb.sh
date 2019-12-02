@@ -20,7 +20,7 @@ for p in "${ALLDOMAINS[@]}"; do
 
         OUTPUT=$(
             ulimit -v 2000000
-            ulimit -t 300000
+            ulimit -t 300
             ./fast-downward.py --debug --translate --sas-file output.sas ${DOMAIN_INPUT} ${TASK_INPUT}
             ./fast-downward.py --debug output.sas --search "eager_greedy([pdb(greedy(max_states=infinity))])"
         )
