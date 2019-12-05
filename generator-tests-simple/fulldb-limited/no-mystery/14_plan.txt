@@ -1,0 +1,101 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/fulldb-limited/no-mystery/14_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=6.6431e-05s]
+done reading input! [t=0.00626788s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.0088124s]
+peak memory difference for successor generator creation: 116 KB
+time for successor generation creation: 0.000375735s
+Variables: 8
+FactPairs: 122
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00941574s, 68472 KB]
+f = 16 [1 evaluated, 0 expanded, t=0.00944349s, 68472 KB]
+Initial heuristic value for lmcut: 16
+New best heuristic value for lmcut: 16
+[g=1, 2 evaluated, 1 expanded, t=0.00994036s, 68472 KB]
+New best heuristic value for lmcut: 15
+[g=1, 5 evaluated, 1 expanded, t=0.0111211s, 68472 KB]
+New best heuristic value for lmcut: 14
+[g=2, 10 evaluated, 2 expanded, t=0.0130702s, 68472 KB]
+f = 17 [16 evaluated, 4 expanded, t=0.0152746s, 68472 KB]
+New best heuristic value for lmcut: 13
+[g=4, 22 evaluated, 5 expanded, t=0.0173918s, 68472 KB]
+New best heuristic value for lmcut: 12
+[g=5, 29 evaluated, 6 expanded, t=0.0197712s, 68472 KB]
+New best heuristic value for lmcut: 11
+[g=6, 80 evaluated, 16 expanded, t=0.0363513s, 68472 KB]
+f = 18 [116 evaluated, 24 expanded, t=0.0469707s, 68472 KB]
+New best heuristic value for lmcut: 10
+[g=8, 120 evaluated, 25 expanded, t=0.04749s, 68472 KB]
+New best heuristic value for lmcut: 9
+[g=9, 127 evaluated, 26 expanded, t=0.0484565s, 68472 KB]
+New best heuristic value for lmcut: 8
+[g=10, 193 evaluated, 37 expanded, t=0.0606194s, 68472 KB]
+New best heuristic value for lmcut: 7
+[g=11, 241 evaluated, 46 expanded, t=0.0671316s, 68472 KB]
+New best heuristic value for lmcut: 6
+[g=12, 326 evaluated, 59 expanded, t=0.0782531s, 68472 KB]
+New best heuristic value for lmcut: 5
+[g=13, 333 evaluated, 60 expanded, t=0.0786179s, 68472 KB]
+New best heuristic value for lmcut: 4
+[g=14, 339 evaluated, 61 expanded, t=0.0789013s, 68472 KB]
+f = 19 [1532 evaluated, 312 expanded, t=0.285781s, 68472 KB]
+f = 20 [5120 evaluated, 1105 expanded, t=0.752054s, 68656 KB]
+New best heuristic value for lmcut: 3
+[g=17, 5346 evaluated, 1173 expanded, t=0.761841s, 68656 KB]
+New best heuristic value for lmcut: 2
+[g=18, 5350 evaluated, 1174 expanded, t=0.761963s, 68656 KB]
+New best heuristic value for lmcut: 1
+[g=19, 5353 evaluated, 1175 expanded, t=0.762039s, 68656 KB]
+New best heuristic value for lmcut: 0
+[g=20, 5355 evaluated, 1176 expanded, t=0.762097s, 68656 KB]
+Solution found! Cost: 20
+Actual search time: 0.752653s [t=0.762132s]
+op1131) load p5 t0 l2 (1)
+op1117) load p3 t0 l2 (1)
+op386) drive t0 l2 l1 level63 level3 level66 (1)
+op1109) load p2 t0 l1 (1)
+op1102) load p1 t0 l1 (1)
+op274) drive t0 l1 l3 level51 level12 level63 (1)
+op1097) load p0 t0 l3 (1)
+op639) drive t0 l3 l4 level43 level8 level51 (1)
+op1126) load p4 t0 l4 (1)
+op734) drive t0 l4 l3 level35 level8 level43 (1)
+op1167) unload p4 t0 l3 (1)
+op562) drive t0 l3 l1 level23 level12 level35 (1)
+op177) drive t0 l1 l2 level20 level3 level23 (1)
+op1145) unload p1 t0 l2 (1)
+op1138) unload p0 t0 l2 (1)
+op443) drive t0 l2 l5 level7 level13 level20 (1)
+op820) drive t0 l5 l0 level1 level6 level7 (1)
+op1171) unload p5 t0 l0 (1)
+op1157) unload p3 t0 l0 (1)
+op1150) unload p2 t0 l0 (1)
+Plan length: 20 step(s).
+Plan cost: 20
+Expanded 1177 state(s).
+Reopened 0 state(s).
+Evaluated 5355 state(s).
+Evaluations: 5355
+Generated 6973 state(s).
+Dead ends: 784 state(s).
+Expanded until last jump: 1105 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 5120 state(s).
+Generated until last jump: 6587 state(s).
+Number of registered states: 5355
+Int hash set load factor: 5355/8192 = 0.653687
+Int hash set resizes: 13
+Open nodes: 3394
+Closed states: 1177
+Search time: 0.753198s
+Total time: 0.762136s
+Solution found.
+Peak memory: 68656 KB
+search exit code: 0
+

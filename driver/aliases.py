@@ -10,7 +10,7 @@ PORTFOLIO_DIR = os.path.join(DRIVER_DIR, "portfolios")
 ALIASES = {}
 
 def add_gen_aliases(ALIASES):
-  GENERATOR = "generator_abstract([%s],max_it=20000000,max_time=900)"
+  GENERATOR = "generator_abstract([%s],max_it=100000,max_time=300)"
   GENERATOR_H = GENERATOR % "h"
   GENERATOR_NOVELTY = GENERATOR % "novelty_h(prune=false,eval=h,reverse=true),h"
   GENERATOR_CONFLICTS = GENERATOR % "pho3,pho2,sum([weight(pho2,-1),pho3])"

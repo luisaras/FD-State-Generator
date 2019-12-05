@@ -1,0 +1,93 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/conflicts-lmcut-limited/transport/3_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=8.1234e-05s]
+done reading input! [t=0.00243011s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.0045849s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000262764s
+Variables: 7
+FactPairs: 56
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00489187s, 68028 KB]
+f = 10 [1 evaluated, 0 expanded, t=0.00492238s, 68028 KB]
+Initial heuristic value for lmcut: 10
+New best heuristic value for lmcut: 7
+[g=1, 2 evaluated, 1 expanded, t=0.00507904s, 68028 KB]
+New best heuristic value for lmcut: 6
+[g=3, 21 evaluated, 5 expanded, t=0.00741942s, 68028 KB]
+New best heuristic value for lmcut: 5
+[g=4, 26 evaluated, 6 expanded, t=0.0080042s, 68028 KB]
+f = 11 [96 evaluated, 35 expanded, 1 reopened, t=0.0162235s, 68028 KB]
+f = 12 [159 evaluated, 65 expanded, 1 reopened, t=0.0231277s, 68028 KB]
+f = 13 [301 evaluated, 132 expanded, 3 reopened, t=0.0387947s, 68028 KB]
+f = 14 [477 evaluated, 273 expanded, 11 reopened, t=0.0582463s, 68028 KB]
+f = 15 [755 evaluated, 443 expanded, 13 reopened, t=0.0881874s, 68028 KB]
+f = 16 [1336 evaluated, 698 expanded, 15 reopened, t=0.148293s, 68028 KB]
+f = 17 [2440 evaluated, 1229 expanded, 22 reopened, t=0.261584s, 68156 KB]
+New best heuristic value for lmcut: 4
+[g=13, 2467 evaluated, 1242 expanded, 22 reopened, t=0.264216s, 68156 KB]
+f = 18 [4012 evaluated, 2038 expanded, 37 reopened, t=0.424318s, 68156 KB]
+f = 19 [6114 evaluated, 3262 expanded, 55 reopened, t=0.642875s, 68284 KB]
+New best heuristic value for lmcut: 3
+[g=16, 6307 evaluated, 3328 expanded, 55 reopened, t=0.660056s, 68284 KB]
+f = 20 [8855 evaluated, 5019 expanded, 108 reopened, t=0.925089s, 68416 KB]
+f = 21 [12874 evaluated, 7544 expanded, 148 reopened, t=1.32179s, 68552 KB]
+f = 22 [18123 evaluated, 11147 expanded, 227 reopened, t=1.82313s, 68948 KB]
+New best heuristic value for lmcut: 2
+[g=20, 18481 evaluated, 11240 expanded, 227 reopened, t=1.84852s, 68952 KB]
+New best heuristic value for lmcut: 1
+[g=21, 18485 evaluated, 11241 expanded, 227 reopened, t=1.84876s, 68952 KB]
+New best heuristic value for lmcut: 0
+[g=22, 18490 evaluated, 11242 expanded, 227 reopened, t=1.84903s, 68952 KB]
+Solution found! Cost: 22
+Actual search time: 1.84421s [t=1.84917s]
+op35) drive truck-2 city-2-loc-3 city-2-loc-2 (1)
+op31) drive truck-2 city-2-loc-2 city-1-loc-1 (1)
+op20) drive truck-2 city-1-loc-1 city-1-loc-3 (1)
+op25) drive truck-2 city-1-loc-3 city-1-loc-2 (1)
+op340) pick-up truck-2 city-1-loc-2 package-1 capacity-0 capacity-1 (1)
+op23) drive truck-2 city-1-loc-2 city-1-loc-3 (1)
+op24) drive truck-2 city-1-loc-3 city-1-loc-1 (1)
+op22) drive truck-2 city-1-loc-1 city-2-loc-2 (1)
+op196) drop truck-2 city-2-loc-2 package-1 capacity-0 capacity-1 (1)
+op31) drive truck-2 city-2-loc-2 city-1-loc-1 (1)
+op20) drive truck-2 city-1-loc-1 city-1-loc-3 (1)
+op25) drive truck-2 city-1-loc-3 city-1-loc-2 (1)
+op344) pick-up truck-2 city-1-loc-2 package-2 capacity-0 capacity-1 (1)
+op23) drive truck-2 city-1-loc-2 city-1-loc-3 (1)
+op24) drive truck-2 city-1-loc-3 city-1-loc-1 (1)
+op22) drive truck-2 city-1-loc-1 city-2-loc-2 (1)
+op33) drive truck-2 city-2-loc-2 city-2-loc-3 (1)
+op212) drop truck-2 city-2-loc-3 package-2 capacity-0 capacity-1 (1)
+op408) pick-up truck-2 city-2-loc-3 package-3 capacity-0 capacity-1 (1)
+op35) drive truck-2 city-2-loc-3 city-2-loc-2 (1)
+op32) drive truck-2 city-2-loc-2 city-2-loc-1 (1)
+op192) drop truck-2 city-2-loc-1 package-3 capacity-0 capacity-1 (1)
+Plan length: 22 step(s).
+Plan cost: 22
+Expanded 11243 state(s).
+Reopened 227 state(s).
+Evaluated 18493 state(s).
+Evaluations: 18493
+Generated 71846 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 11147 state(s).
+Reopened until last jump: 227 state(s).
+Evaluated until last jump: 18123 state(s).
+Generated until last jump: 71066 state(s).
+Number of registered states: 18493
+Int hash set load factor: 18493/32768 = 0.564362
+Int hash set resizes: 15
+Open nodes: 7477
+Closed states: 11016
+Search time: 1.84447s
+Total time: 1.84917s
+Solution found.
+Peak memory: 68952 KB
+search exit code: 0
+

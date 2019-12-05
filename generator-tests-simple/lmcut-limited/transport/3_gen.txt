@@ -1,0 +1,62 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --search 'generator_abstract([h],max_it=100000,max_time=300)' --internal-plan-file sas_plan
+reading input... [t=7.3916e-05s]
+done reading input! [t=0.00152559s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00372403s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.00026112s
+Variables: 7
+FactPairs: 56
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 424 reverse operators.
+Built match tree.
+4=5 5=6 6=4 
+Inserting initial (goal) state...
+New best h: [0, 4] (iteration 0) 
+New best h: [1, 5] (iteration 16) 
+New best h: [36, 5] (iteration 40) 
+Found first concrete state.
+New best h: [175, 5] (iteration 59) 
+New best h: [218, 5] (iteration 78) 
+New best h: [261, 5] (iteration 97) 
+New best h: [261, 6] (iteration 115) 
+New best h: [262, 7] (iteration 123) 
+New best h: [263, 7] (iteration 133) 
+New best h: [295, 7] (iteration 134) 
+New best h: [296, 7] (iteration 139) 
+New best h: [297, 7] (iteration 143) 
+New best h: [303, 7] (iteration 145) 
+New best h: [304, 7] (iteration 157) 
+New best h: [305, 7] (iteration 164) 
+New best h: [306, 7] (iteration 173) 
+New best h: [307, 7] (iteration 178) 
+New best h: [335, 7] (iteration 181) 
+New best h: [340, 7] (iteration 233) 
+Reached iteration limit.
+Actual search time: 19.6161s [t=19.6206s]
+Original state h-value: 305
+New state h-value: 340
+Expanded 68065 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 199997
+Generated 394785 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 100072
+Int hash set load factor: 100072/131072 = 0.763489
+Int hash set resizes: 17
+Open nodes: 31936
+Closed states: 68065
+Search time: 19.6168s
+Total time: 19.6206s
+Solution found.
+Peak memory: 92344 KB
+search exit code: 0
+

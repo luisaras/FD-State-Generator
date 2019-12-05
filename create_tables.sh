@@ -1,7 +1,7 @@
 #!/bin/bash
 table() 
 {
-	TASK=$1/$2
+	TASK=$1-limited/$2
 	$i=$3 # Instance number
 
 	GEN_OUTPUT=${TASK}/${i}_gen.txt

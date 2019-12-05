@@ -5,6 +5,7 @@ SEARCH_TEMP=sas_plan
 
 PLANNER_TIME=300
 PLANNER_MEM=2000000
+GEN_TIME=600
 
 set_output_dir() {
     # Create folders
@@ -52,7 +53,7 @@ generate()  {
     local GENERATOR=gen-$3 # Generator alias
 
     set_files_$BENCHMARKS $TASK $i
-    set_output_dir $3 $TASK
+    set_output_dir $3-limited $TASK
 
     # Generator output files
     NEW_TASK=${OUTPUT_DIR}/${i}_task.sas
@@ -75,7 +76,7 @@ generate()  {
 
     # Generate $i_task.sas
     ulimit -S -v unlimited
-    ulimit -S -t unlimited
+    ulimit -S -t $GEN_TIME
     if [ -f $SEARCH_TEMP ]; then
         rm $SEARCH_TEMP
     fi
@@ -160,7 +161,7 @@ ALLGEN=("" "novelty-" "conflicts-")
 test() {
     local PROBLEM=$1
     local INST=$2
-    plan $1 $2 $PLANNER
+    #plan $1 $2 $PLANNER
     for h in "${ALLH[@]}"; do
         for g in "${ALLGEN[@]}"; do
             generate $PROBLEM $INST $g$h $BENCHMARKS
@@ -196,31 +197,31 @@ test_simple() {
     ALLH=(lmcut ipdb fulldb)
     BENCHMARKS=ipc11
     TEST_FOLDER=generator-tests-simple
-#    test elevator 1
-#    test no-mystery 1
-#    test no-mystery 2
-#    test no-mystery 3
-#    test no-mystery 11
-#    test no-mystery 12
-#    test no-mystery 13
-#    test no-mystery 14
-#    test parc-printer 5
-#    test parc-printer 8
-#    test scanalyzer-3d 1
-#    test scanalyzer-3d 2
-#    test scanalyzer-3d 3
-#    test sokoban 19
-#    test transport 1
-#    test transport 2
-#    test transport 3
-#    test visit-all 1
-#    test visit-all 2
-#    test visit-all 3
-#    test visit-all 4
-#    test visit-all 5
-#    test visit-all 6
-#    test visit-all 8
-#    test visit-all 10
+    test elevator 1
+    test no-mystery 1
+    test no-mystery 2
+    test no-mystery 3
+    test no-mystery 11
+    test no-mystery 12
+    test no-mystery 13
+    test no-mystery 14
+    test parc-printer 5
+    test parc-printer 8
+    test scanalyzer-3d 1
+    test scanalyzer-3d 2
+    test scanalyzer-3d 3
+    test sokoban 19
+    test transport 1
+    test transport 2
+    test transport 3
+    test visit-all 1
+    test visit-all 2
+    test visit-all 3
+    test visit-all 4
+    test visit-all 5
+    test visit-all 6
+    test visit-all 8
+    test visit-all 10
     test woodworking 11
 }
 

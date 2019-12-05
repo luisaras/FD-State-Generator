@@ -1,0 +1,58 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --search 'generator_abstract([h],max_it=100000,max_time=300)' --internal-plan-file sas_plan
+reading input... [t=6.653e-05s]
+done reading input! [t=0.0028913s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00533113s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000187919s
+Variables: 7
+FactPairs: 82
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 562 reverse operators.
+Built match tree.
+2=2 3=2 4=3 5=4 6=3 
+Inserting initial (goal) state...
+New best h: [0, 7] (iteration 0) 
+New best h: [1, 6] (iteration 201) 
+Found first concrete state.
+New best h: [2, 7] (iteration 206) 
+New best h: [3, 7] (iteration 244) 
+New best h: [4, 7] (iteration 252) 
+New best h: [5, 7] (iteration 253) 
+New best h: [6, 7] (iteration 259) 
+New best h: [7, 7] (iteration 263) 
+New best h: [8, 7] (iteration 266) 
+New best h: [9, 7] (iteration 273) 
+New best h: [10, 7] (iteration 276) 
+New best h: [11, 7] (iteration 594) 
+New best h: [12, 7] (iteration 596) 
+New best h: [13, 7] (iteration 4176) 
+New best h: [14, 7] (iteration 4191) 
+Reached iteration limit.
+Actual search time: 11.1666s [t=11.1727s]
+Original state h-value: 13
+New state h-value: 14
+Expanded 99674 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 200002
+Generated 303511 state(s).
+Dead ends: 3225 state(s).
+Number of registered states: 100009
+Int hash set load factor: 100009/131072 = 0.763008
+Int hash set resizes: 17
+Open nodes: 327
+Closed states: 99674
+Search time: 11.1673s
+Total time: 11.1727s
+Solution found.
+Peak memory: 73508 KB
+search exit code: 0
+

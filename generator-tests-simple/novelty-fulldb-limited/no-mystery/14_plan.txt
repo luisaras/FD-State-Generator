@@ -1,0 +1,101 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty-fulldb-limited/no-mystery/14_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=8.0551e-05s]
+done reading input! [t=0.00653085s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.0090596s]
+peak memory difference for successor generator creation: 116 KB
+time for successor generation creation: 0.000376906s
+Variables: 8
+FactPairs: 122
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00970034s, 68472 KB]
+f = 16 [1 evaluated, 0 expanded, t=0.00972912s, 68472 KB]
+Initial heuristic value for lmcut: 16
+New best heuristic value for lmcut: 16
+[g=1, 2 evaluated, 1 expanded, t=0.0102306s, 68472 KB]
+New best heuristic value for lmcut: 15
+[g=1, 3 evaluated, 1 expanded, t=0.0106206s, 68472 KB]
+New best heuristic value for lmcut: 14
+[g=2, 9 evaluated, 2 expanded, t=0.0126429s, 68472 KB]
+New best heuristic value for lmcut: 13
+[g=3, 14 evaluated, 3 expanded, t=0.0141666s, 68472 KB]
+New best heuristic value for lmcut: 12
+[g=4, 33 evaluated, 8 expanded, t=0.0197532s, 68472 KB]
+f = 17 [42 evaluated, 10 expanded, t=0.0222591s, 68472 KB]
+New best heuristic value for lmcut: 11
+[g=6, 46 evaluated, 11 expanded, t=0.0229436s, 68472 KB]
+New best heuristic value for lmcut: 10
+[g=7, 53 evaluated, 12 expanded, t=0.02416s, 68472 KB]
+New best heuristic value for lmcut: 9
+[g=8, 59 evaluated, 13 expanded, t=0.0251263s, 68472 KB]
+f = 18 [308 evaluated, 69 expanded, t=0.0761887s, 68472 KB]
+New best heuristic value for lmcut: 8
+[g=10, 359 evaluated, 78 expanded, t=0.0832264s, 68472 KB]
+New best heuristic value for lmcut: 7
+[g=11, 366 evaluated, 79 expanded, t=0.084004s, 68472 KB]
+New best heuristic value for lmcut: 6
+[g=12, 373 evaluated, 80 expanded, t=0.0847277s, 68472 KB]
+f = 19 [1494 evaluated, 347 expanded, t=0.232511s, 68472 KB]
+New best heuristic value for lmcut: 5
+[g=14, 2231 evaluated, 502 expanded, t=0.296959s, 68472 KB]
+New best heuristic value for lmcut: 4
+[g=15, 2236 evaluated, 503 expanded, t=0.297182s, 68472 KB]
+New best heuristic value for lmcut: 3
+[g=16, 2241 evaluated, 504 expanded, t=0.297385s, 68472 KB]
+f = 20 [5485 evaluated, 1332 expanded, t=0.684304s, 68656 KB]
+New best heuristic value for lmcut: 2
+[g=18, 5571 evaluated, 1357 expanded, t=0.688958s, 68656 KB]
+New best heuristic value for lmcut: 1
+[g=19, 5576 evaluated, 1358 expanded, t=0.689188s, 68656 KB]
+New best heuristic value for lmcut: 0
+[g=20, 5580 evaluated, 1359 expanded, t=0.689308s, 68656 KB]
+Solution found! Cost: 20
+Actual search time: 0.679596s [t=0.689361s]
+op1095) load p0 t0 l1 (1)
+op223) drive t0 l1 l2 level66 level3 level69 (1)
+op1124) load p4 t0 l2 (1)
+op1138) unload p0 t0 l2 (1)
+op386) drive t0 l2 l1 level63 level3 level66 (1)
+op274) drive t0 l1 l3 level51 level12 level63 (1)
+op1132) load p5 t0 l3 (1)
+op1167) unload p4 t0 l3 (1)
+op1118) load p3 t0 l3 (1)
+op639) drive t0 l3 l4 level43 level8 level51 (1)
+op1112) load p2 t0 l4 (1)
+op789) drive t0 l4 l5 level31 level12 level43 (1)
+op837) drive t0 l5 l0 level25 level6 level31 (1)
+op1171) unload p5 t0 l0 (1)
+op1157) unload p3 t0 l0 (1)
+op1150) unload p2 t0 l0 (1)
+op1101) load p1 t0 l0 (1)
+op60) drive t0 l0 l5 level19 level6 level25 (1)
+op930) drive t0 l5 l2 level6 level13 level19 (1)
+op1145) unload p1 t0 l2 (1)
+Plan length: 20 step(s).
+Plan cost: 20
+Expanded 1360 state(s).
+Reopened 0 state(s).
+Evaluated 5581 state(s).
+Evaluations: 5581
+Generated 7786 state(s).
+Dead ends: 1133 state(s).
+Expanded until last jump: 1332 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 5485 state(s).
+Generated until last jump: 7658 state(s).
+Number of registered states: 5581
+Int hash set load factor: 5581/8192 = 0.681274
+Int hash set resizes: 13
+Open nodes: 3088
+Closed states: 1360
+Search time: 0.680179s
+Total time: 0.689366s
+Solution found.
+Peak memory: 68656 KB
+search exit code: 0
+

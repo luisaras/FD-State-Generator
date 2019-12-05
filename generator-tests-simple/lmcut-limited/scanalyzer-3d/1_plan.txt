@@ -1,0 +1,55 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/lmcut-limited/scanalyzer-3d/1_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=8.0712e-05s]
+done reading input! [t=0.00423732s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00630258s]
+peak memory difference for successor generator creation: 144 KB
+time for successor generation creation: 0.000226835s
+Variables: 8
+FactPairs: 24
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00656249s, 68180 KB]
+f = 4 [1 evaluated, 0 expanded, t=0.00659085s, 68180 KB]
+Initial heuristic value for lmcut: 4
+New best heuristic value for lmcut: 3
+[g=1, 2 evaluated, 1 expanded, t=0.006724s, 68180 KB]
+New best heuristic value for lmcut: 2
+[g=2, 4 evaluated, 2 expanded, t=0.00693623s, 68180 KB]
+New best heuristic value for lmcut: 1
+[g=3, 6 evaluated, 3 expanded, t=0.00711275s, 68180 KB]
+New best heuristic value for lmcut: 0
+[g=4, 8 evaluated, 4 expanded, t=0.00727022s, 68180 KB]
+Solution found! Cost: 4
+Actual search time: 0.000783983s [t=0.0074116s]
+op108) analyze-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-in-1b car-out-1a car-out-1b car-in-1a (1)
+op177) analyze-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-out-1a car-out-1b car-in-1a car-in-1b (1)
+op198) analyze-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-out-1b car-in-1a car-in-1b car-out-1a (1)
+op27) analyze-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-in-1a car-in-1b car-out-1a car-out-1b (1)
+Plan length: 4 step(s).
+Plan cost: 4
+Expanded 5 state(s).
+Reopened 0 state(s).
+Evaluated 9 state(s).
+Evaluations: 9
+Generated 8 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 9
+Int hash set load factor: 9/16 = 0.5625
+Int hash set resizes: 4
+Open nodes: 4
+Closed states: 5
+Search time: 0.00100061s
+Total time: 0.00741657s
+Solution found.
+Peak memory: 68180 KB
+search exit code: 0
+

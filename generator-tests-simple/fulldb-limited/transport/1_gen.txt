@@ -1,0 +1,101 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([h],max_it=100000,max_time=300)' --internal-plan-file sas_plan
+reading input... [t=8.9054e-05s]
+done reading input! [t=0.0034451s]
+Generating a pattern using the greedy generator...
+building causal graph...done! [t=0.000180205s]
+Greedy generator pattern: [0, 1, 2, 3, 4, 5, 6, 7]
+Greedy generator number of variables: 8
+Greedy generator PDB size: 29648025
+Greedy generator computation time: 0.000204386s
+Building successor generator...done! [t=14.1705s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000308506s
+Variables: 8
+FactPairs: 72
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 616 reverse operators.
+Built match tree.
+4=0 5=4 6=2 7=2 
+Inserting initial (goal) state...
+New best h: [0, 5] (iteration 0) 
+New best h: [1, 6] (iteration 18) 
+New best h: [23, 6] (iteration 50) 
+New best h: [140, 6] (iteration 51) 
+New best h: [187, 6] (iteration 52) 
+Found first concrete state.
+New best h: [228, 6] (iteration 75) 
+New best h: [240, 6] (iteration 76) 
+New best h: [240, 7] (iteration 99) 
+New best h: [241, 8] (iteration 108) 
+New best h: [263, 8] (iteration 121) 
+New best h: [291, 8] (iteration 122) 
+New best h: [292, 8] (iteration 126) 
+New best h: [345, 8] (iteration 128) 
+New best h: [531, 8] (iteration 130) 
+New best h: [553, 8] (iteration 134) 
+New best h: [554, 8] (iteration 141) 
+New best h: [604, 8] (iteration 145) 
+New best h: [605, 8] (iteration 151) 
+New best h: [607, 8] (iteration 156) 
+New best h: [655, 8] (iteration 157) 
+New best h: [656, 8] (iteration 162) 
+New best h: [706, 8] (iteration 167) 
+New best h: [747, 8] (iteration 176) 
+New best h: [796, 8] (iteration 180) 
+New best h: [825, 8] (iteration 187) 
+New best h: [842, 8] (iteration 188) 
+New best h: [917, 8] (iteration 191) 
+New best h: [1028, 8] (iteration 192) 
+New best h: [1029, 8] (iteration 199) 
+New best h: [1215, 8] (iteration 200) 
+New best h: [1264, 8] (iteration 205) 
+New best h: [1275, 8] (iteration 315) 
+New best h: [1304, 8] (iteration 319) 
+New best h: [1328, 8] (iteration 320) 
+New best h: [1329, 8] (iteration 326) 
+New best h: [1382, 8] (iteration 327) 
+New best h: [1568, 8] (iteration 331) 
+New best h: [1590, 8] (iteration 335) 
+New best h: [1593, 8] (iteration 367) 
+New best h: [1642, 8] (iteration 369) 
+New best h: [1697, 8] (iteration 415) 
+New best h: [1724, 8] (iteration 418) 
+New best h: [1750, 8] (iteration 419) 
+New best h: [1751, 8] (iteration 423) 
+New best h: [1804, 8] (iteration 424) 
+New best h: [1990, 8] (iteration 428) 
+New best h: [2012, 8] (iteration 431) 
+New best h: [2062, 8] (iteration 434) 
+New best h: [2064, 8] (iteration 461) 
+New best h: [2096, 8] (iteration 530) 
+New best h: [2118, 8] (iteration 536) 
+New best h: [2137, 8] (iteration 537) 
+New best h: [2186, 8] (iteration 544) 
+Reached iteration limit.
+Actual search time: 0.432238s [t=14.6035s]
+Original state h-value: 630
+New state h-value: 2186
+Expanded 71370 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 199999
+Generated 378085 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 100065
+Int hash set load factor: 100065/131072 = 0.763435
+Int hash set resizes: 17
+Open nodes: 28631
+Closed states: 71370
+Search time: 0.432877s
+Total time: 14.6035s
+Solution found.
+Peak memory: 518052 KB
+search exit code: 0
+

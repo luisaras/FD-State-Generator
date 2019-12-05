@@ -1,0 +1,71 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty-ipdb-limited/scanalyzer-3d/2_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=8.7173e-05s]
+done reading input! [t=0.00278907s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00653421s]
+peak memory difference for successor generator creation: 140 KB
+time for successor generation creation: 0.000177904s
+Variables: 12
+FactPairs: 48
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00674337s, 68036 KB]
+f = 4 [1 evaluated, 0 expanded, t=0.00677171s, 68036 KB]
+Initial heuristic value for lmcut: 4
+New best heuristic value for lmcut: 6
+[g=1, 2 evaluated, 1 expanded, t=0.00689638s, 68036 KB]
+New best heuristic value for lmcut: 4
+[g=1, 4 evaluated, 1 expanded, t=0.00706714s, 68036 KB]
+New best heuristic value for lmcut: 3
+[g=1, 6 evaluated, 1 expanded, t=0.00719707s, 68036 KB]
+f = 5 [37 evaluated, 3 expanded, t=0.00879398s, 68036 KB]
+f = 6 [308 evaluated, 34 expanded, t=0.0237093s, 68036 KB]
+New best heuristic value for lmcut: 2
+[g=4, 319 evaluated, 36 expanded, t=0.0242624s, 68036 KB]
+f = 7 [1728 evaluated, 230 expanded, t=0.101095s, 68036 KB]
+f = 8 [7057 evaluated, 1254 expanded, 3 reopened, t=0.396599s, 68296 KB]
+f = 9 [18965 evaluated, 4640 expanded, 19 reopened, t=1.06643s, 68960 KB]
+f = 10 [33821 evaluated, 12167 expanded, 45 reopened, t=1.92419s, 69748 KB]
+New best heuristic value for lmcut: 1
+[g=9, 34468 evaluated, 12455 expanded, 45 reopened, t=1.95828s, 69748 KB]
+New best heuristic value for lmcut: 0
+[g=10, 34474 evaluated, 12456 expanded, 45 reopened, t=1.95856s, 69748 KB]
+Solution found! Cost: 10
+Actual search time: 1.95183s [t=1.95864s]
+op123) rotate-2 seg-in-1 seg-out-2 car-in-1 car-out-2 (1)
+op344) rotate-2 seg-in-3 seg-out-3 car-in-3 car-out-3 (1)
+op23) analyze-2 seg-in-1 seg-out-1 car-out-2 car-out-1 (1)
+op89) analyze-2 seg-in-3 seg-out-1 car-out-3 car-out-2 (1)
+op39) analyze-2 seg-in-2 seg-out-1 car-in-2 car-out-3 (1)
+op267) rotate-2 seg-in-2 seg-out-3 car-out-3 car-in-3 (1)
+op41) analyze-2 seg-in-2 seg-out-1 car-in-3 car-in-2 (1)
+op320) rotate-2 seg-in-3 seg-out-2 car-out-2 car-in-1 (1)
+op61) analyze-2 seg-in-3 seg-out-1 car-in-1 car-in-3 (1)
+op15) analyze-2 seg-in-1 seg-out-1 car-out-1 car-in-1 (1)
+Plan length: 10 step(s).
+Plan cost: 10
+Expanded 12457 state(s).
+Reopened 45 state(s).
+Evaluated 34475 state(s).
+Evaluations: 34475
+Generated 149472 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 12167 state(s).
+Reopened until last jump: 45 state(s).
+Evaluated until last jump: 33821 state(s).
+Generated until last jump: 146004 state(s).
+Number of registered states: 34475
+Int hash set load factor: 34475/65536 = 0.526047
+Int hash set resizes: 16
+Open nodes: 22063
+Closed states: 12412
+Search time: 1.95199s
+Total time: 1.95864s
+Solution found.
+Peak memory: 69748 KB
+search exit code: 0
+

@@ -1,0 +1,63 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([h],max_it=100000,max_time=300)' --internal-plan-file sas_plan
+reading input... [t=6.7386e-05s]
+done reading input! [t=0.00402437s]
+Generating a pattern using the greedy generator...
+building causal graph...done! [t=0.000155948s]
+Greedy generator pattern: [0, 1, 2, 3, 4, 5]
+Greedy generator number of variables: 6
+Greedy generator PDB size: 453600
+Greedy generator computation time: 0.000175663s
+Building successor generator...done! [t=0.0633768s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000224008s
+Variables: 6
+FactPairs: 99
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 818 reverse operators.
+Built match tree.
+2=3 3=2 4=1 5=2 
+Inserting initial (goal) state...
+New best h: [0, 6] (iteration 0) 
+New best h: [1, 5] (iteration 303) 
+Found first concrete state.
+New best h: [2, 6] (iteration 307) 
+New best h: [3, 6] (iteration 538) 
+New best h: [4, 6] (iteration 539) 
+New best h: [5, 6] (iteration 545) 
+New best h: [6, 6] (iteration 547) 
+New best h: [7, 6] (iteration 552) 
+New best h: [8, 6] (iteration 558) 
+New best h: [9, 6] (iteration 564) 
+New best h: [10, 6] (iteration 568) 
+New best h: [11, 6] (iteration 570) 
+New best h: [12, 6] (iteration 616) 
+New best h: [13, 6] (iteration 1543) 
+New best h: [14, 6] (iteration 29983) 
+Reached iteration limit.
+Actual search time: 0.405357s [t=0.4695s]
+Original state h-value: 14
+New state h-value: 14
+Expanded 99385 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 200002
+Generated 287319 state(s).
+Dead ends: 5283 state(s).
+Number of registered states: 100007
+Int hash set load factor: 100007/131072 = 0.762993
+Int hash set resizes: 17
+Open nodes: 616
+Closed states: 99385
+Search time: 0.405996s
+Total time: 0.469505s
+Solution found.
+Peak memory: 75236 KB
+search exit code: 0
+

@@ -1,0 +1,88 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty-lmcut-limited/transport/3_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=3.7232e-05s]
+done reading input! [t=0.00109389s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00309546s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000241071s
+Variables: 7
+FactPairs: 56
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00338565s, 68028 KB]
+f = 11 [1 evaluated, 0 expanded, t=0.00341449s, 68028 KB]
+Initial heuristic value for lmcut: 11
+New best heuristic value for lmcut: 9
+[g=1, 2 evaluated, 1 expanded, t=0.00358502s, 68028 KB]
+New best heuristic value for lmcut: 8
+[g=1, 3 evaluated, 1 expanded, t=0.0037527s, 68028 KB]
+New best heuristic value for lmcut: 5
+[g=2, 10 evaluated, 2 expanded, t=0.00463242s, 68028 KB]
+f = 12 [276 evaluated, 105 expanded, 2 reopened, t=0.0328545s, 68028 KB]
+f = 13 [432 evaluated, 199 expanded, 6 reopened, t=0.0498157s, 68028 KB]
+f = 14 [706 evaluated, 403 expanded, 41 reopened, t=0.0794606s, 68028 KB]
+New best heuristic value for lmcut: 4
+[g=10, 1119 evaluated, 549 expanded, 41 reopened, t=0.122038s, 68028 KB]
+f = 15 [1455 evaluated, 699 expanded, 53 reopened, t=0.155283s, 68028 KB]
+f = 16 [2643 evaluated, 1241 expanded, 63 reopened, t=0.275076s, 68156 KB]
+New best heuristic value for lmcut: 3
+[g=12, 3000 evaluated, 1348 expanded, 63 reopened, t=0.307291s, 68156 KB]
+f = 17 [4434 evaluated, 2162 expanded, 73 reopened, t=0.455042s, 68156 KB]
+f = 18 [7300 evaluated, 3723 expanded, 113 reopened, t=0.736207s, 68292 KB]
+f = 19 [11447 evaluated, 6260 expanded, 198 reopened, t=1.1354s, 68560 KB]
+f = 20 [16550 evaluated, 9562 expanded, 265 reopened, t=1.62322s, 68956 KB]
+New best heuristic value for lmcut: 2
+[g=18, 16921 evaluated, 9681 expanded, 265 reopened, t=1.64951s, 68956 KB]
+New best heuristic value for lmcut: 1
+[g=19, 16924 evaluated, 9682 expanded, 265 reopened, t=1.64967s, 68956 KB]
+New best heuristic value for lmcut: 0
+[g=20, 16931 evaluated, 9683 expanded, 265 reopened, t=1.64998s, 68956 KB]
+Solution found! Cost: 20
+Actual search time: 1.64657s [t=1.65002s]
+op38) drive truck-2 city-2-loc-4 city-2-loc-2 (1)
+op31) drive truck-2 city-2-loc-2 city-1-loc-1 (1)
+op316) pick-up truck-1 city-2-loc-4 package-1 capacity-0 capacity-1 (1)
+op20) drive truck-2 city-1-loc-1 city-1-loc-3 (1)
+op25) drive truck-2 city-1-loc-3 city-1-loc-2 (1)
+op344) pick-up truck-2 city-1-loc-2 package-2 capacity-0 capacity-1 (1)
+op23) drive truck-2 city-1-loc-2 city-1-loc-3 (1)
+op24) drive truck-2 city-1-loc-3 city-1-loc-1 (1)
+op22) drive truck-2 city-1-loc-1 city-2-loc-2 (1)
+op18) drive truck-1 city-2-loc-4 city-2-loc-2 (1)
+op100) drop truck-1 city-2-loc-2 package-1 capacity-0 capacity-1 (1)
+op11) drive truck-1 city-2-loc-2 city-1-loc-1 (1)
+op1) drive truck-1 city-1-loc-1 city-1-loc-4 (1)
+op276) pick-up truck-1 city-1-loc-4 package-3 capacity-0 capacity-1 (1)
+op7) drive truck-1 city-1-loc-4 city-1-loc-1 (1)
+op33) drive truck-2 city-2-loc-2 city-2-loc-3 (1)
+op212) drop truck-2 city-2-loc-3 package-2 capacity-0 capacity-1 (1)
+op2) drive truck-1 city-1-loc-1 city-2-loc-2 (1)
+op12) drive truck-1 city-2-loc-2 city-2-loc-1 (1)
+op96) drop truck-1 city-2-loc-1 package-3 capacity-0 capacity-1 (1)
+Plan length: 20 step(s).
+Plan cost: 20
+Expanded 9684 state(s).
+Reopened 265 state(s).
+Evaluated 16931 state(s).
+Evaluations: 16931
+Generated 63159 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 9562 state(s).
+Reopened until last jump: 265 state(s).
+Evaluated until last jump: 16550 state(s).
+Generated until last jump: 62186 state(s).
+Number of registered states: 16931
+Int hash set load factor: 16931/32768 = 0.516693
+Int hash set resizes: 15
+Open nodes: 7512
+Closed states: 9419
+Search time: 1.64681s
+Total time: 1.65002s
+Solution found.
+Peak memory: 68956 KB
+search exit code: 0
+

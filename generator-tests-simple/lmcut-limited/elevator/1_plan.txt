@@ -1,0 +1,87 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/lmcut-limited/elevator/1_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=7.2532e-05s]
+done reading input! [t=0.00223141s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00599859s]
+peak memory difference for successor generator creation: 132 KB
+time for successor generation creation: 0.000189569s
+Variables: 9
+FactPairs: 77
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.0062712s, 68028 KB]
+f = 12 [1 evaluated, 0 expanded, t=0.00629913s, 68028 KB]
+Initial heuristic value for lmcut: 12
+New best heuristic value for lmcut: 11
+[g=1, 2 evaluated, 1 expanded, t=0.00645438s, 68028 KB]
+New best heuristic value for lmcut: 10
+[g=2, 18 evaluated, 2 expanded, t=0.00831687s, 68028 KB]
+New best heuristic value for lmcut: 9
+[g=3, 29 evaluated, 3 expanded, t=0.0095339s, 68028 KB]
+New best heuristic value for lmcut: 8
+[g=4, 48 evaluated, 4 expanded, t=0.0113878s, 68028 KB]
+f = 13 [170 evaluated, 20 expanded, t=0.0234426s, 68028 KB]
+New best heuristic value for lmcut: 7
+[g=6, 594 evaluated, 119 expanded, t=0.0659778s, 68028 KB]
+f = 14 [897 evaluated, 202 expanded, t=0.0954814s, 68028 KB]
+New best heuristic value for lmcut: 6
+[g=8, 898 evaluated, 203 expanded, t=0.0955804s, 68028 KB]
+New best heuristic value for lmcut: 5
+[g=9, 959 evaluated, 207 expanded, t=0.100076s, 68028 KB]
+New best heuristic value for lmcut: 4
+[g=10, 966 evaluated, 208 expanded, t=0.100538s, 68028 KB]
+f = 15 [2762 evaluated, 861 expanded, 7 reopened, t=0.270795s, 68028 KB]
+New best heuristic value for lmcut: 3
+[g=12, 4313 evaluated, 1219 expanded, 7 reopened, t=0.390501s, 68212 KB]
+New best heuristic value for lmcut: 2
+[g=13, 4328 evaluated, 1220 expanded, 7 reopened, t=0.391279s, 68212 KB]
+f = 16 [6745 evaluated, 2230 expanded, 7 reopened, t=0.62645s, 68212 KB]
+New best heuristic value for lmcut: 1
+[g=15, 6748 evaluated, 2231 expanded, 7 reopened, t=0.626581s, 68212 KB]
+New best heuristic value for lmcut: 0
+[g=16, 6763 evaluated, 2232 expanded, 7 reopened, t=0.627071s, 68212 KB]
+Solution found! Cost: 16
+Actual search time: 0.621015s [t=0.62735s]
+op298) move-down-slow slow1-0 n12 n10 (1)
+op323) move-up-slow slow0-0 n0 n4 (1)
+op66) board p1 slow0-0 n4 n0 n1 (1)
+op339) move-up-slow slow0-0 n4 n6 (1)
+op115) board p2 slow1-0 n10 n0 n1 (1)
+op289) move-down-slow slow1-0 n10 n6 (1)
+op199) leave p1 slow0-0 n6 n1 n0 (1)
+op79) board p1 slow1-0 n6 n1 n2 (1)
+op347) move-up-slow slow1-0 n6 n7 (1)
+op288) move-down-slow slow0-0 n6 n5 (1)
+op25) board p0 slow0-0 n5 n0 n1 (1)
+op281) move-down-slow slow0-0 n5 n3 (1)
+op150) leave p0 slow0-0 n3 n1 n0 (1)
+op253) leave p2 slow1-0 n7 n2 n1 (1)
+op351) move-up-slow slow1-0 n7 n11 (1)
+op203) leave p1 slow1-0 n11 n1 n0 (1)
+Plan length: 16 step(s).
+Plan cost: 16
+Expanded 2233 state(s).
+Reopened 7 state(s).
+Evaluated 6774 state(s).
+Evaluations: 6774
+Generated 38815 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 2230 state(s).
+Reopened until last jump: 7 state(s).
+Evaluated until last jump: 6745 state(s).
+Generated until last jump: 38778 state(s).
+Number of registered states: 6774
+Int hash set load factor: 6774/8192 = 0.826904
+Int hash set resizes: 13
+Open nodes: 4548
+Closed states: 2226
+Search time: 0.621245s
+Total time: 0.627355s
+Solution found.
+Peak memory: 68212 KB
+search exit code: 0
+

@@ -1,0 +1,98 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty-lmcut-limited/no-mystery/14_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=5.4449e-05s]
+done reading input! [t=0.00453108s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00866276s]
+peak memory difference for successor generator creation: 116 KB
+time for successor generation creation: 0.000518934s
+Variables: 8
+FactPairs: 122
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.0092781s, 68472 KB]
+f = 17 [1 evaluated, 0 expanded, t=0.0093068s, 68472 KB]
+Initial heuristic value for lmcut: 17
+New best heuristic value for lmcut: 16
+[g=1, 2 evaluated, 1 expanded, t=0.00972892s, 68472 KB]
+New best heuristic value for lmcut: 15
+[g=2, 8 evaluated, 2 expanded, t=0.0116984s, 68472 KB]
+New best heuristic value for lmcut: 14
+[g=3, 19 evaluated, 6 expanded, t=0.0146456s, 68472 KB]
+New best heuristic value for lmcut: 13
+[g=4, 26 evaluated, 7 expanded, t=0.0157837s, 68472 KB]
+New best heuristic value for lmcut: 12
+[g=5, 41 evaluated, 10 expanded, t=0.0184918s, 68472 KB]
+New best heuristic value for lmcut: 11
+[g=6, 47 evaluated, 11 expanded, t=0.0196671s, 68472 KB]
+New best heuristic value for lmcut: 10
+[g=7, 53 evaluated, 12 expanded, t=0.0207926s, 68472 KB]
+f = 18 [93 evaluated, 24 expanded, t=0.0275038s, 68472 KB]
+New best heuristic value for lmcut: 9
+[g=9, 95 evaluated, 25 expanded, t=0.027636s, 68472 KB]
+New best heuristic value for lmcut: 8
+[g=10, 108 evaluated, 27 expanded, t=0.028602s, 68472 KB]
+New best heuristic value for lmcut: 7
+[g=11, 119 evaluated, 29 expanded, t=0.0292991s, 68472 KB]
+New best heuristic value for lmcut: 6
+[g=12, 128 evaluated, 31 expanded, t=0.0297716s, 68472 KB]
+New best heuristic value for lmcut: 5
+[g=13, 136 evaluated, 33 expanded, t=0.0301656s, 68472 KB]
+New best heuristic value for lmcut: 4
+[g=14, 141 evaluated, 34 expanded, t=0.0304672s, 68472 KB]
+New best heuristic value for lmcut: 3
+[g=15, 145 evaluated, 35 expanded, t=0.0306186s, 68472 KB]
+f = 19 [1002 evaluated, 225 expanded, t=0.115117s, 68472 KB]
+New best heuristic value for lmcut: 2
+[g=17, 1004 evaluated, 226 expanded, t=0.115183s, 68472 KB]
+New best heuristic value for lmcut: 1
+[g=18, 1005 evaluated, 227 expanded, t=0.115229s, 68472 KB]
+New best heuristic value for lmcut: 0
+[g=19, 1007 evaluated, 228 expanded, t=0.115287s, 68472 KB]
+Solution found! Cost: 19
+Actual search time: 0.105979s [t=0.115321s]
+op980) drive t0 l5 l4 level51 level12 level63 (1)
+op1126) load p4 t0 l4 (1)
+op743) drive t0 l4 l3 level43 level8 level51 (1)
+op1132) load p5 t0 l3 (1)
+op1167) unload p4 t0 l3 (1)
+op1118) load p3 t0 l3 (1)
+op1111) load p2 t0 l3 (1)
+op515) drive t0 l3 l0 level25 level18 level43 (1)
+op1171) unload p5 t0 l0 (1)
+op1157) unload p3 t0 l0 (1)
+op1150) unload p2 t0 l0 (1)
+op1101) load p1 t0 l0 (1)
+op60) drive t0 l0 l5 level19 level6 level25 (1)
+op930) drive t0 l5 l2 level6 level13 level19 (1)
+op1145) unload p1 t0 l2 (1)
+op351) drive t0 l2 l1 level3 level3 level6 (1)
+op1095) load p0 t0 l1 (1)
+op164) drive t0 l1 l2 level0 level3 level3 (1)
+op1138) unload p0 t0 l2 (1)
+Plan length: 19 step(s).
+Plan cost: 19
+Expanded 229 state(s).
+Reopened 0 state(s).
+Evaluated 1007 state(s).
+Evaluations: 1007
+Generated 1371 state(s).
+Dead ends: 285 state(s).
+Expanded until last jump: 225 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1002 state(s).
+Generated until last jump: 1365 state(s).
+Number of registered states: 1007
+Int hash set load factor: 1007/2048 = 0.491699
+Int hash set resizes: 11
+Open nodes: 493
+Closed states: 229
+Search time: 0.106534s
+Total time: 0.115326s
+Solution found.
+Peak memory: 68472 KB
+search exit code: 0
+

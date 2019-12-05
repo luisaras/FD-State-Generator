@@ -1,0 +1,71 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --search 'generator_abstract([h],max_it=100000,max_time=300)' --internal-plan-file sas_plan
+reading input... [t=2.9438e-05s]
+done reading input! [t=0.00139229s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00365881s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000356339s
+Variables: 8
+FactPairs: 72
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 628 reverse operators.
+Built match tree.
+4=8 5=2 6=0 7=7 
+Inserting initial (goal) state...
+New best h: [0, 5] (iteration 0) 
+New best h: [1, 6] (iteration 18) 
+New best h: [23, 6] (iteration 50) 
+New best h: [27, 6] (iteration 51) 
+New best h: [38, 6] (iteration 52) 
+Found first concrete state.
+New best h: [38, 7] (iteration 76) 
+New best h: [39, 8] (iteration 85) 
+New best h: [61, 8] (iteration 99) 
+New best h: [73, 8] (iteration 100) 
+New best h: [92, 8] (iteration 106) 
+New best h: [101, 8] (iteration 107) 
+New best h: [102, 8] (iteration 112) 
+New best h: [103, 8] (iteration 117) 
+New best h: [123, 8] (iteration 125) 
+New best h: [124, 8] (iteration 129) 
+New best h: [129, 8] (iteration 133) 
+New best h: [130, 8] (iteration 138) 
+New best h: [158, 8] (iteration 140) 
+New best h: [160, 8] (iteration 145) 
+New best h: [161, 8] (iteration 154) 
+New best h: [162, 8] (iteration 332) 
+New best h: [176, 8] (iteration 1060) 
+New best h: [182, 8] (iteration 1063) 
+New best h: [183, 8] (iteration 1072) 
+New best h: [184, 8] (iteration 1081) 
+New best h: [186, 8] (iteration 1170) 
+New best h: [187, 8] (iteration 1186) 
+New best h: [188, 8] (iteration 1963) 
+Reached iteration limit.
+Actual search time: 39.6756s [t=39.6805s]
+Original state h-value: 139
+New state h-value: 188
+Expanded 39871 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 200000
+Generated 293000 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 100055
+Int hash set load factor: 100055/131072 = 0.763359
+Int hash set resizes: 17
+Open nodes: 60130
+Closed states: 39871
+Search time: 39.6767s
+Total time: 39.6805s
+Solution found.
+Peak memory: 104520 KB
+search exit code: 0
+

@@ -1,0 +1,108 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/fulldb-limited/transport/3_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=5.4887e-05s]
+done reading input! [t=0.00188567s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00528492s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000412302s
+Variables: 7
+FactPairs: 56
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00574443s, 68028 KB]
+f = 9 [1 evaluated, 0 expanded, t=0.00579201s, 68028 KB]
+Initial heuristic value for lmcut: 9
+New best heuristic value for lmcut: 9
+[g=1, 2 evaluated, 1 expanded, t=0.00606506s, 68028 KB]
+f = 10 [5 evaluated, 1 expanded, t=0.00669927s, 68028 KB]
+f = 11 [13 evaluated, 5 expanded, t=0.00833158s, 68028 KB]
+New best heuristic value for lmcut: 7
+[g=3, 14 evaluated, 6 expanded, t=0.00856097s, 68028 KB]
+New best heuristic value for lmcut: 6
+[g=5, 23 evaluated, 8 expanded, t=0.0097667s, 68028 KB]
+f = 12 [50 evaluated, 22 expanded, t=0.0128108s, 68028 KB]
+f = 13 [69 evaluated, 39 expanded, t=0.0150423s, 68028 KB]
+f = 14 [99 evaluated, 60 expanded, t=0.0183531s, 68028 KB]
+New best heuristic value for lmcut: 5
+[g=9, 100 evaluated, 61 expanded, t=0.018466s, 68028 KB]
+f = 15 [241 evaluated, 119 expanded, 2 reopened, t=0.0330019s, 68028 KB]
+f = 16 [437 evaluated, 211 expanded, 2 reopened, t=0.0535509s, 68028 KB]
+f = 17 [708 evaluated, 356 expanded, 3 reopened, t=0.0829653s, 68028 KB]
+f = 18 [1082 evaluated, 555 expanded, 3 reopened, t=0.123559s, 68028 KB]
+f = 19 [1752 evaluated, 927 expanded, 8 reopened, t=0.195096s, 68028 KB]
+f = 20 [2621 evaluated, 1481 expanded, 22 reopened, t=0.28811s, 68156 KB]
+f = 21 [3864 evaluated, 2284 expanded, 35 reopened, t=0.419447s, 68156 KB]
+New best heuristic value for lmcut: 4
+[g=17, 5423 evaluated, 3008 expanded, 36 reopened, t=0.581025s, 68292 KB]
+f = 22 [5758 evaluated, 3401 expanded, 95 reopened, t=0.618453s, 68292 KB]
+f = 23 [7766 evaluated, 4797 expanded, 105 reopened, t=0.828749s, 68416 KB]
+f = 24 [10235 evaluated, 6654 expanded, 151 reopened, t=1.0872s, 68416 KB]
+f = 25 [13209 evaluated, 8870 expanded, 171 reopened, t=1.39033s, 68552 KB]
+New best heuristic value for lmcut: 3
+[g=22, 13756 evaluated, 9060 expanded, 171 reopened, t=1.43827s, 68552 KB]
+f = 26 [17447 evaluated, 11633 expanded, 194 reopened, t=1.81378s, 68948 KB]
+f = 27 [22100 evaluated, 15210 expanded, 253 reopened, t=2.27029s, 69088 KB]
+f = 28 [27321 evaluated, 19475 expanded, 288 reopened, t=2.76756s, 69224 KB]
+New best heuristic value for lmcut: 2
+[g=26, 27779 evaluated, 19629 expanded, 288 reopened, t=2.80155s, 69224 KB]
+New best heuristic value for lmcut: 1
+[g=27, 27788 evaluated, 19630 expanded, 288 reopened, t=2.80208s, 69224 KB]
+New best heuristic value for lmcut: 0
+[g=28, 27793 evaluated, 19631 expanded, 288 reopened, t=2.80229s, 69224 KB]
+Solution found! Cost: 28
+Actual search time: 2.79647s [t=2.80232s]
+op15) drive truck-1 city-2-loc-3 city-2-loc-2 (1)
+op11) drive truck-1 city-2-loc-2 city-1-loc-1 (1)
+op0) drive truck-1 city-1-loc-1 city-1-loc-3 (1)
+op5) drive truck-1 city-1-loc-3 city-1-loc-2 (1)
+op244) pick-up truck-1 city-1-loc-2 package-1 capacity-0 capacity-1 (1)
+op35) drive truck-2 city-2-loc-3 city-2-loc-2 (1)
+op3) drive truck-1 city-1-loc-2 city-1-loc-3 (1)
+op31) drive truck-2 city-2-loc-2 city-1-loc-1 (1)
+op20) drive truck-2 city-1-loc-1 city-1-loc-3 (1)
+op4) drive truck-1 city-1-loc-3 city-1-loc-1 (1)
+op2) drive truck-1 city-1-loc-1 city-2-loc-2 (1)
+op100) drop truck-1 city-2-loc-2 package-1 capacity-0 capacity-1 (1)
+op11) drive truck-1 city-2-loc-2 city-1-loc-1 (1)
+op0) drive truck-1 city-1-loc-1 city-1-loc-3 (1)
+op5) drive truck-1 city-1-loc-3 city-1-loc-2 (1)
+op248) pick-up truck-1 city-1-loc-2 package-2 capacity-0 capacity-1 (1)
+op3) drive truck-1 city-1-loc-2 city-1-loc-3 (1)
+op4) drive truck-1 city-1-loc-3 city-1-loc-1 (1)
+op2) drive truck-1 city-1-loc-1 city-2-loc-2 (1)
+op25) drive truck-2 city-1-loc-3 city-1-loc-2 (1)
+op348) pick-up truck-2 city-1-loc-2 package-3 capacity-0 capacity-1 (1)
+op23) drive truck-2 city-1-loc-2 city-1-loc-3 (1)
+op24) drive truck-2 city-1-loc-3 city-1-loc-1 (1)
+op22) drive truck-2 city-1-loc-1 city-2-loc-2 (1)
+op32) drive truck-2 city-2-loc-2 city-2-loc-1 (1)
+op192) drop truck-2 city-2-loc-1 package-3 capacity-0 capacity-1 (1)
+op13) drive truck-1 city-2-loc-2 city-2-loc-3 (1)
+op116) drop truck-1 city-2-loc-3 package-2 capacity-0 capacity-1 (1)
+Plan length: 28 step(s).
+Plan cost: 28
+Expanded 19632 state(s).
+Reopened 288 state(s).
+Evaluated 27793 state(s).
+Evaluations: 27793
+Generated 123099 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 19475 state(s).
+Reopened until last jump: 288 state(s).
+Evaluated until last jump: 27321 state(s).
+Generated until last jump: 121820 state(s).
+Number of registered states: 27793
+Int hash set load factor: 27793/32768 = 0.848175
+Int hash set resizes: 15
+Open nodes: 8449
+Closed states: 19344
+Search time: 2.79685s
+Total time: 2.80233s
+Solution found.
+Peak memory: 69224 KB
+search exit code: 0
+

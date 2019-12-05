@@ -1,0 +1,182 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --search 'generator_abstract([pho3,pho2,sum([weight(pho2,-1),pho3])],max_it=100000,max_time=300)' --internal-plan-file sas_plan
+reading input... [t=8.0432e-05s]
+done reading input! [t=0.00585167s]
+Initializing canonical PDB heuristic...
+Generating patterns using the hill climbing generator...
+Done calculating initial pattern collection: 0.00111553s
+Average operator cost: 1
+building causal graph...done! [t=0.0002038s]
+Done calculating initial candidate PDBs
+current collection size is 48
+current initial h value: 12
+pattern: [0, 2] - improvement: 929
+pattern: [0, 3] - improvement: 977
+pattern: [0, 4] - improvement: 983
+pattern: [0, 5] - improvement: 989
+pattern: [0, 6] - improvement: 986
+pattern: [0, 7] - improvement: 985
+found a better pattern with improvement 989
+pattern: [0, 5]
+Hill climbing time so far: 0.016948s
+current collection size is 104
+current initial h value: 15
+pattern: [0, 2] - improvement: 89
+pattern: [0, 3] - improvement: 240
+pattern: [0, 4] - improvement: 371
+pattern: [0, 6] - improvement: 349
+pattern: [0, 7] - improvement: 348
+pattern: [0, 1, 5] - improvement: 987
+pattern: [0, 2, 5] - improvement: 137
+pattern: [0, 3, 5] - improvement: 683
+pattern: [0, 4, 5] - improvement: 714
+pattern: [0, 5, 6] - improvement: 990
+pattern: [0, 5, 7] - improvement: 990
+found a better pattern with improvement 990
+pattern: [0, 5, 6]
+Hill climbing time so far: 0.0454301s
+current collection size is 552
+current initial h value: 17
+pattern: [0, 2] - improvement: 2
+pattern: [0, 3] - improvement: 4
+pattern: [0, 4] - improvement: 32
+pattern: [0, 7] - improvement: 6
+pattern: [0, 1, 5] - improvement: 986
+pattern: [0, 2, 5] - improvement: 3
+pattern: [0, 3, 5] - improvement: 21
+pattern: [0, 4, 5] - improvement: 44
+pattern: [0, 5, 7] - improvement: 21
+pattern: [0, 1, 5, 6] - improvement: 1000
+pattern: [0, 2, 5, 6] - improvement: 253
+pattern: [0, 3, 5, 6] - improvement: 628
+pattern: [0, 4, 5, 6] - improvement: 395
+pattern: [0, 5, 6, 7] - improvement: 21
+found a better pattern with improvement 1000
+pattern: [0, 1, 5, 6]
+Hill climbing time so far: 0.155589s
+current collection size is 30568
+current initial h value: 17
+pattern: [0, 2] - improvement: 1
+pattern: [0, 4] - improvement: 23
+pattern: [0, 2, 5] - improvement: 1
+pattern: [0, 4, 5] - improvement: 23
+pattern: [0, 2, 5, 6] - improvement: 142
+pattern: [0, 3, 5, 6] - improvement: 782
+pattern: [0, 4, 5, 6] - improvement: 720
+pattern: [0, 1, 2, 5, 6] - improvement: 144
+pattern: [0, 1, 3, 5, 6] - improvement: 798
+pattern: [0, 1, 4, 5, 6] - improvement: 935
+pattern: [0, 1, 5, 6, 7] - improvement: 4
+found a better pattern with improvement 935
+pattern: [0, 1, 4, 5, 6]
+Hill climbing time so far: 0.682899s
+current collection size is 270696
+current initial h value: 18
+pattern: [0, 3, 5, 6] - improvement: 57
+pattern: [0, 1, 3, 5, 6] - improvement: 148
+pattern: [0, 1, 5, 6, 7] - improvement: 1
+pattern: [0, 1, 3, 4, 5, 6] - improvement: 817
+pattern: [0, 1, 4, 5, 6, 7] - improvement: 1
+found a better pattern with improvement 817
+pattern: [0, 1, 3, 4, 5, 6]
+Hill climbing time so far: 0.703123s
+current collection size is 2191720
+current initial h value: 19
+Improvement below threshold. Stop hill climbing.
+Hill climbing iterations: 6
+Hill climbing generated patterns: 24
+Hill climbing rejected patterns: 2
+Hill climbing maximum PDB size: 1921024
+Hill climbing time: 0.725254s
+Hill climbing generator collection: [[2], [3], [4], [5], [6], [7], [0, 5], [0, 5, 6], [0, 1, 5, 6], [0, 1, 4, 5, 6], [0, 1, 3, 4, 5, 6]]
+Hill climbing generator number of patterns: 11
+Hill climbing generator total PDB size: 2191720
+Hill climbing generator computation time: 0.727363s
+Running dominance pruning...
+Pruned 5 of 6 pattern cliques
+Pruned 8 of 11 PDBs
+Dominance pruning took 2.3059e-05s
+Canonical PDB heuristic number of patterns: 3
+Canonical PDB heuristic total PDB size: 1921040
+Canonical PDB heuristic computation time: 0.727485s
+Generating patterns using the systematic generator...
+Found 18 SGA patterns.
+Found 33 interesting patterns.
+Systematic generator number of patterns: 33
+Systematic generator total PDB size: 29616
+Systematic generator computation time: 0.000187931s
+Computing PDBs for pattern collection...
+Done computing PDBs for pattern collection: 0.0345111s
+Generating patterns using the systematic generator...
+Found 12 SGA patterns.
+Found 12 interesting patterns.
+Systematic generator number of patterns: 12
+Systematic generator total PDB size: 384
+Systematic generator computation time: 3.8905e-05s
+Computing PDBs for pattern collection...
+Done computing PDBs for pattern collection: 0.00448594s
+Building successor generator...done! [t=0.781026s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000327805s
+Variables: 8
+FactPairs: 122
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 1178 reverse operators.
+Built match tree.
+2=0 3=3 4=0 5=0 6=2 7=2 
+Inserting initial (goal) state...
+New best h: [0, 0, 0, 8] (iteration 0) 
+New best h: [1, 1, 0, 7] (iteration 422) 
+Found first concrete state.
+Found first concrete state.
+Found first concrete state.
+New best h: [2, 2, 0, 8] (iteration 428) 
+New best h: [3, 3, 0, 8] (iteration 600) 
+New best h: [4, 3, 1, 8] (iteration 604) 
+New best h: [4, 4, 0, 8] (iteration 605) 
+New best h: [5, 5, 0, 8] (iteration 607) 
+New best h: [6, 6, 0, 8] (iteration 612) 
+New best h: [7, 7, 0, 8] (iteration 621) 
+New best h: [8, 8, 0, 8] (iteration 627) 
+New best h: [9, 7, 2, 8] (iteration 643) 
+New best h: [9, 8, 1, 8] (iteration 644) 
+New best h: [10, 9, 1, 8] (iteration 647) 
+New best h: [11, 9, 2, 8] (iteration 650) 
+New best h: [11, 10, 1, 8] (iteration 651) 
+New best h: [12, 10, 2, 8] (iteration 668) 
+New best h: [13, 11, 2, 8] (iteration 672) 
+New best h: [14, 12, 2, 8] (iteration 674) 
+New best h: [14, 13, 1, 8] (iteration 690) 
+New best h: [15, 13, 2, 8] (iteration 1390) 
+New best h: [15, 14, 1, 8] (iteration 1391) 
+New best h: [16, 15, 1, 8] (iteration 3047) 
+New best h: [17, 15, 2, 8] (iteration 3050) 
+New best h: [17, 16, 1, 8] (iteration 3051) 
+New best h: [18, 16, 2, 8] (iteration 31703) 
+Reached iteration limit.
+Actual search time: 67.5722s [t=68.3589s]
+Original state h-value: 18
+New state h-value: 18
+Expanded 99204 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 400004
+Generated 328349 state(s).
+Dead ends: 1222 state(s).
+Number of registered states: 100009
+Int hash set load factor: 100009/131072 = 0.763008
+Int hash set resizes: 17
+Open nodes: 797
+Closed states: 99204
+Search time: 67.5773s
+Total time: 68.359s
+Solution found.
+Peak memory: 99280 KB
+search exit code: 0
+

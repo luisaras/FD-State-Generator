@@ -1,0 +1,49 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/conflicts-ipdb-limited/visit-all/2_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=8.0537e-05s]
+done reading input! [t=0.000329128s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00397661s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 1.8502e-05s
+Variables: 2
+FactPairs: 6
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00431423s, 67756 KB]
+f = 2 [1 evaluated, 0 expanded, t=0.00434226s, 67756 KB]
+Initial heuristic value for lmcut: 2
+New best heuristic value for lmcut: 1
+[g=1, 2 evaluated, 1 expanded, t=0.00439056s, 67756 KB]
+New best heuristic value for lmcut: 0
+[g=2, 4 evaluated, 2 expanded, t=0.00442922s, 67756 KB]
+Solution found! Cost: 2
+Actual search time: 8.4175e-05s [t=0.00446262s]
+op2) move loc-x0-y1 loc-x0-y0 (1)
+op1) move loc-x0-y0 loc-x1-y0 (1)
+Plan length: 2 step(s).
+Plan cost: 2
+Expanded 3 state(s).
+Reopened 0 state(s).
+Evaluated 4 state(s).
+Evaluations: 4
+Generated 4 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 4
+Int hash set load factor: 4/4 = 1
+Int hash set resizes: 2
+Open nodes: 1
+Closed states: 3
+Search time: 0.000195491s
+Total time: 0.0044673s
+Solution found.
+Peak memory: 67756 KB
+search exit code: 0
+

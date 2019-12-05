@@ -1,0 +1,89 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --search 'generator_abstract([pho3,pho2,sum([weight(pho2,-1),pho3])],max_it=100000,max_time=300)' --internal-plan-file sas_plan
+reading input... [t=6.9448e-05s]
+done reading input! [t=0.000969532s]
+Generating a pattern using the greedy generator...
+building causal graph...done! [t=0.000183865s]
+Greedy generator pattern: [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34]
+Greedy generator number of variables: 24
+Greedy generator PDB size: 603979776
+Greedy generator computation time: 0.00022688s
+Generating patterns using the systematic generator...
+Found 439 SGA patterns.
+Found 542 interesting patterns.
+Systematic generator number of patterns: 542
+Systematic generator total PDB size: 17488
+Systematic generator computation time: 0.00405585s
+Computing PDBs for pattern collection...
+Done computing PDBs for pattern collection: 0.0263606s
+Generating patterns using the systematic generator...
+Found 83 SGA patterns.
+Found 83 interesting patterns.
+Systematic generator number of patterns: 83
+Systematic generator total PDB size: 696
+Systematic generator computation time: 0.000195419s
+Computing PDBs for pattern collection...
+Done computing PDBs for pattern collection: 0.00209371s
+Building successor generator...done! [t=32.2343s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 6.2388e-05s
+Variables: 35
+FactPairs: 100
+Bytes per state: 8
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 265 reverse operators.
+Built match tree.
+11=0 12=0 13=0 14=0 15=0 19=0 20=0 21=0 22=0 23=0 27=0 28=0 29=0 30=0 31=0 32=0 33=0 34=0 
+Inserting initial (goal) state...
+New best h: [0, 0, 0, 21] (iteration 0) 
+New best h: [0, 0, 0, 26] (iteration 15) 
+New best h: [9999, 9999, 0, 21] (iteration 147) 
+New best h: [212790, 212790, 0, 21] (iteration 162) 
+New best h: [212790, 212790, 0, 24] (iteration 195) 
+New best h: [212790, 212790, 0, 28] (iteration 205) 
+New best h: [222789, 222789, 0, 24] (iteration 336) 
+New best h: [425580, 425580, 0, 23] (iteration 349) 
+New best h: [425580, 425580, 0, 26] (iteration 370) 
+New best h: [425580, 425580, 0, 30] (iteration 375) 
+New best h: [435579, 435579, 0, 26] (iteration 505) 
+New best h: [638370, 638370, 0, 25] (iteration 516) 
+New best h: [638370, 638370, 0, 32] (iteration 525) 
+New best h: [643369, 643369, 0, 27] (iteration 653) 
+New best h: [648369, 646370, 1999, 27] (iteration 654) 
+New best h: [657368, 652368, 5000, 28] (iteration 662) 
+New best h: [658368, 651369, 6999, 28] (iteration 794) 
+New best h: [667367, 657367, 10000, 29] (iteration 799) 
+New best h: [668367, 656368, 11999, 29] (iteration 934) 
+New best h: [677366, 662366, 15000, 30] (iteration 936) 
+Found first concrete state.
+Found first concrete state.
+Found first concrete state.
+New best h: [677366, 662366, 15000, 35] (iteration 1079) 
+New best h: [682365, 667365, 15000, 30] (iteration 1207) 
+New best h: [682365, 667365, 15000, 35] (iteration 1216) 
+Reached iteration limit.
+Actual search time: 25.8969s [t=58.236s]
+Original state h-value: 514232
+New state h-value: 682365
+Expanded 29584 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 253163
+Generated 137525 state(s).
+Dead ends: 10472 state(s).
+Number of registered states: 120160
+Int hash set load factor: 120160/262144 = 0.458374
+Int hash set resizes: 18
+Open nodes: 70417
+Closed states: 29584
+Search time: 25.9001s
+Total time: 58.236s
+Solution found.
+Peak memory: 2429252 KB
+search exit code: 0
+
