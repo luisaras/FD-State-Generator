@@ -1,0 +1,60 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=20000000,max_time=900)' --internal-plan-file sas_plan
+reading input... [t=0.000116011s]
+done reading input! [t=0.000368015s]
+Generating a pattern using the greedy generator...
+building causal graph...done! [t=2.8526e-05s]
+Greedy generator pattern: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Greedy generator number of variables: 9
+Greedy generator PDB size: 2304
+Greedy generator computation time: 5.1423e-05s
+Initializing novelty heuristic...
+Number of facts: 0
+Building successor generator...done! [t=0.00258504s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 1.3143e-05s
+Variables: 9
+FactPairs: 25
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 44 reverse operators.
+Built match tree.
+1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 
+Inserting initial (goal) state...
+New best h: [0, 0, 9] (iteration 0) 
+Found first concrete state.
+Found first concrete state.
+New best h: [9, 1, 9] (iteration 1) 
+New best h: [9, 2, 9] (iteration 29) 
+New best h: [9, 3, 9] (iteration 37) 
+New best h: [9, 4, 9] (iteration 41) 
+New best h: [9, 5, 9] (iteration 50) 
+New best h: [9, 6, 9] (iteration 64) 
+New best h: [9, 7, 9] (iteration 70) 
+New best h: [9, 8, 9] (iteration 506) 
+Completely explored state space.
+Actual search time: 0.0125449s [t=0.0153624s]
+Original state h-value: 9
+New state h-value: 9
+Expanded 2305 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 4618
+Generated 6188 state(s).
+Dead ends: 1024 state(s).
+Number of registered states: 2305
+Int hash set load factor: 2305/4096 = 0.562744
+Int hash set resizes: 12
+Open nodes: 0
+Closed states: 2305
+Search time: 0.012671s
+Total time: 0.0153671s
+Solution found.
+Peak memory: 67924 KB
+search exit code: 0
+

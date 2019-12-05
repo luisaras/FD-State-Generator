@@ -1,0 +1,63 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/fulldb/parc-printer/5_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=7.3177e-05s]
+done reading input! [t=0.0010325s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00356294s]
+peak memory difference for successor generator creation: 132 KB
+time for successor generation creation: 6.5115e-05s
+Variables: 35
+FactPairs: 100
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00375155s, 67896 KB]
+f = 6 [1 evaluated, 0 expanded, t=0.00378028s, 67896 KB]
+Initial heuristic value for lmcut: 6
+New best heuristic value for lmcut: 6
+[g=1, 2 evaluated, 1 expanded, t=0.00386081s, 67896 KB]
+New best heuristic value for lmcut: 5
+[g=1, 3 evaluated, 1 expanded, t=0.00392351s, 67896 KB]
+New best heuristic value for lmcut: 4
+[g=2, 10 evaluated, 2 expanded, t=0.00418405s, 67896 KB]
+New best heuristic value for lmcut: 3
+[g=3, 19 evaluated, 3 expanded, t=0.00445096s, 67896 KB]
+New best heuristic value for lmcut: 2
+[g=4, 24 evaluated, 4 expanded, t=0.00459894s, 67896 KB]
+New best heuristic value for lmcut: 1
+[g=5, 36 evaluated, 5 expanded, t=0.00485795s, 67896 KB]
+New best heuristic value for lmcut: 0
+[g=6, 40 evaluated, 6 expanded, t=0.00494061s, 67896 KB]
+Solution found! Cost: 6
+Actual search time: 0.00123731s [t=0.00505438s]
+op40) lc1-inverttoime-letter sheet1 back front (1)
+op50) lime-simplex-letter sheet1 front image-1 (1)
+op42) lc1-inverttoime-letter sheet2 back front (1)
+op61) lime-simplexmono-letter sheet2 front image-2 (1)
+op44) lc1-inverttoime-letter sheet3 back front (1)
+op66) lime-simplexmono-letter sheet3 front image-3 (1)
+Plan length: 6 step(s).
+Plan cost: 6
+Expanded 7 state(s).
+Reopened 0 state(s).
+Evaluated 45 state(s).
+Evaluations: 45
+Generated 45 state(s).
+Dead ends: 5 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 45
+Int hash set load factor: 45/64 = 0.703125
+Int hash set resizes: 6
+Open nodes: 33
+Closed states: 7
+Search time: 0.00138614s
+Total time: 0.00505918s
+Solution found.
+Peak memory: 67896 KB
+search exit code: 0
+

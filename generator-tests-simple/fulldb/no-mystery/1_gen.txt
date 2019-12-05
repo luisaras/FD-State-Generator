@@ -1,0 +1,62 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([h],max_it=20000000,max_time=900)' --internal-plan-file sas_plan
+reading input... [t=4.9325e-05s]
+done reading input! [t=0.00128797s]
+Generating a pattern using the greedy generator...
+building causal graph...done! [t=0.000141177s]
+Greedy generator pattern: [0, 1, 2, 3, 4]
+Greedy generator number of variables: 5
+Greedy generator PDB size: 18000
+Greedy generator computation time: 0.000176449s
+Building successor generator...done! [t=0.00959804s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000105711s
+Variables: 5
+FactPairs: 55
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 350 reverse operators.
+Built match tree.
+2=0 3=0 4=1 
+Inserting initial (goal) state...
+New best h: [0, 5] (iteration 0) 
+New best h: [1, 4] (iteration 131) 
+Found first concrete state.
+New best h: [2, 5] (iteration 134) 
+New best h: [3, 5] (iteration 217) 
+New best h: [4, 5] (iteration 220) 
+New best h: [5, 5] (iteration 229) 
+New best h: [6, 5] (iteration 247) 
+New best h: [7, 5] (iteration 248) 
+New best h: [8, 5] (iteration 255) 
+New best h: [9, 5] (iteration 258) 
+New best h: [10, 5] (iteration 356) 
+New best h: [11, 5] (iteration 1542) 
+New best h: [12, 5] (iteration 1543) 
+New best h: [13, 5] (iteration 6468) 
+Completely explored state space.
+Actual search time: 0.0447811s [t=0.0548079s]
+Original state h-value: 11
+New state h-value: 13
+Expanded 11329 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 22656
+Generated 36239 state(s).
+Dead ends: 324 state(s).
+Number of registered states: 11333
+Int hash set load factor: 11333/16384 = 0.691711
+Int hash set resizes: 14
+Open nodes: 0
+Closed states: 11329
+Search time: 0.0451055s
+Total time: 0.0548127s
+Solution found.
+Peak memory: 68552 KB
+search exit code: 0
+

@@ -2,9 +2,6 @@
 table() 
 {
 	TASK=$1/$2
-	if [ -f ${TASK}.dat ]; then
-		rm ${TASK}.dat
-	fi
 	$i=$3 # Instance number
 
 	GEN_OUTPUT=${TASK}/${i}_gen.txt
@@ -76,25 +73,35 @@ instances_ipc11() {
 instances_simple() {
     ALLH=(lmcut ipdb fulldb)
 	cd generator-tests-simple
-	instance no-mystery 1
-	instance no-mystery 2
-	instance no-mystery 3
-	instance no-mystery 11
-	instance no-mystery 12
-	instance no-mystery 13
-	instance no-mystery 14
-	instance scanalyzer-3d 1
-	instance scanalyzer-3d 2
-	instance scanalyzer-3d 3
-	instance transport 3
-	instance visit-all 1
-	instance visit-all 2
-	instance visit-all 3
-	instance visit-all 4
-	instance visit-all 5
-	instance visit-all 6
-	instance visit-all 8
-	instance visit-all 10
+    instance elevator 1
+    instance no-mystery 1
+    instance no-mystery 2
+    instance no-mystery 3
+    instance no-mystery 11
+    instance no-mystery 12
+    instance no-mystery 13
+    instance no-mystery 14
+    instance parc-printer 5
+    instance parc-printer 8
+    instance scanalyzer-3d 1
+    instance scanalyzer-3d 2
+    instance scanalyzer-3d 3
+    instance sokoban 19
+    instance transport 1
+    instance transport 2
+    instance transport 3
+    instance visit-all 1
+    instance visit-all 2
+    instance visit-all 3
+    instance visit-all 4
+    instance visit-all 5
+    instance visit-all 6
+    instance visit-all 8
+    instance visit-all 10
+    instance woodworking 11
 	cd ..
 }
 
+find . -name "*.dat" -type f -delete
+
+instances_simple

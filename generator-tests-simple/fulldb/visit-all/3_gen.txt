@@ -1,0 +1,57 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([h],max_it=20000000,max_time=900)' --internal-plan-file sas_plan
+reading input... [t=8.5745e-05s]
+done reading input! [t=0.000433188s]
+Generating a pattern using the greedy generator...
+building causal graph...done! [t=2.3843e-05s]
+Greedy generator pattern: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+Greedy generator number of variables: 9
+Greedy generator PDB size: 2304
+Greedy generator computation time: 4.6693e-05s
+Building successor generator...done! [t=0.0031502s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 1.2278e-05s
+Variables: 9
+FactPairs: 25
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 44 reverse operators.
+Built match tree.
+1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 
+Inserting initial (goal) state...
+New best h: [0, 9] (iteration 0) 
+Found first concrete state.
+New best h: [1, 9] (iteration 1) 
+New best h: [2, 9] (iteration 29) 
+New best h: [3, 9] (iteration 33) 
+New best h: [4, 9] (iteration 37) 
+New best h: [5, 9] (iteration 44) 
+New best h: [6, 9] (iteration 48) 
+New best h: [7, 9] (iteration 54) 
+New best h: [8, 9] (iteration 58) 
+Completely explored state space.
+Actual search time: 0.00855322s [t=0.0119106s]
+Original state h-value: 8
+New state h-value: 8
+Expanded 2305 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 4608
+Generated 6188 state(s).
+Dead ends: 1024 state(s).
+Number of registered states: 2305
+Int hash set load factor: 2305/4096 = 0.562744
+Int hash set resizes: 12
+Open nodes: 0
+Closed states: 2305
+Search time: 0.00866217s
+Total time: 0.0119154s
+Solution found.
+Peak memory: 67912 KB
+search exit code: 0
+

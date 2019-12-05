@@ -1,0 +1,85 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty-lmcut/transport/2_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=5.884e-05s]
+done reading input! [t=0.00265719s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00588581s]
+peak memory difference for successor generator creation: 148 KB
+time for successor generation creation: 0.000356266s
+Variables: 8
+FactPairs: 72
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00625339s, 68212 KB]
+f = 12 [1 evaluated, 0 expanded, t=0.00628198s, 68212 KB]
+Initial heuristic value for lmcut: 12
+New best heuristic value for lmcut: 9
+[g=1, 2 evaluated, 1 expanded, t=0.00650493s, 68212 KB]
+New best heuristic value for lmcut: 6
+[g=2, 10 evaluated, 2 expanded, t=0.00809375s, 68212 KB]
+New best heuristic value for lmcut: 5
+[g=3, 18 evaluated, 3 expanded, t=0.00945624s, 68212 KB]
+f = 13 [513 evaluated, 156 expanded, 19 reopened, t=0.0892884s, 68212 KB]
+f = 14 [1328 evaluated, 475 expanded, 51 reopened, t=0.222728s, 68212 KB]
+New best heuristic value for lmcut: 4
+[g=7, 2680 evaluated, 931 expanded, 63 reopened, t=0.4395s, 68212 KB]
+f = 15 [2754 evaluated, 1010 expanded, 68 reopened, t=0.45347s, 68328 KB]
+f = 16 [5673 evaluated, 2200 expanded, 164 reopened, t=0.925793s, 68456 KB]
+New best heuristic value for lmcut: 3
+[g=13, 5683 evaluated, 2202 expanded, 164 reopened, t=0.926915s, 68456 KB]
+f = 17 [11271 evaluated, 4504 expanded, 261 reopened, t=1.81667s, 68724 KB]
+f = 18 [20310 evaluated, 8607 expanded, 414 reopened, t=3.23804s, 69124 KB]
+f = 19 [34174 evaluated, 15314 expanded, 584 reopened, t=5.39975s, 69924 KB]
+New best heuristic value for lmcut: 2
+[g=17, 34436 evaluated, 15376 expanded, 584 reopened, t=5.42665s, 69924 KB]
+New best heuristic value for lmcut: 1
+[g=18, 34442 evaluated, 15377 expanded, 584 reopened, t=5.42716s, 69924 KB]
+New best heuristic value for lmcut: 0
+[g=19, 34448 evaluated, 15378 expanded, 584 reopened, t=5.42759s, 69924 KB]
+Solution found! Cost: 19
+Actual search time: 5.42148s [t=5.4278s]
+op36) drive truck-2 city-loc-4 city-loc-5 (1)
+op11) drive truck-1 city-loc-4 city-loc-7 (1)
+op436) pick-up truck-1 city-loc-7 package-1 capacity-0 capacity-1 (1)
+op19) drive truck-1 city-loc-7 city-loc-3 (1)
+op7) drive truck-1 city-loc-3 city-loc-6 (1)
+op17) drive truck-1 city-loc-6 city-loc-9 (1)
+op180) drop truck-1 city-loc-9 package-1 capacity-0 capacity-1 (1)
+op24) drive truck-1 city-loc-9 city-loc-2 (1)
+op360) pick-up truck-1 city-loc-2 package-2 capacity-0 capacity-1 (1)
+op4) drive truck-1 city-loc-2 city-loc-6 (1)
+op16) drive truck-1 city-loc-6 city-loc-3 (1)
+op556) pick-up truck-2 city-loc-5 package-3 capacity-0 capacity-1 (1)
+op39) drive truck-2 city-loc-5 city-loc-1 (1)
+op204) drop truck-2 city-loc-1 package-3 capacity-0 capacity-1 (1)
+op88) drop truck-1 city-loc-3 package-2 capacity-0 capacity-1 (1)
+op496) pick-up truck-2 city-loc-1 package-4 capacity-0 capacity-1 (1)
+op27) drive truck-2 city-loc-1 city-loc-4 (1)
+op38) drive truck-2 city-loc-4 city-loc-8 (1)
+op320) drop truck-2 city-loc-8 package-4 capacity-0 capacity-1 (1)
+Plan length: 19 step(s).
+Plan cost: 19
+Expanded 15379 state(s).
+Reopened 584 state(s).
+Evaluated 34452 state(s).
+Evaluations: 34452
+Generated 114293 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 15314 state(s).
+Reopened until last jump: 584 state(s).
+Evaluated until last jump: 34174 state(s).
+Generated until last jump: 113743 state(s).
+Number of registered states: 34452
+Int hash set load factor: 34452/65536 = 0.525696
+Int hash set resizes: 16
+Open nodes: 19657
+Closed states: 14795
+Search time: 5.4218s
+Total time: 5.4278s
+Solution found.
+Peak memory: 69924 KB
+search exit code: 0
+

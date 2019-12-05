@@ -1,0 +1,63 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty-lmcut/scanalyzer-3d/2_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=9.6554e-05s]
+done reading input! [t=0.00277504s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00552267s]
+peak memory difference for successor generator creation: 140 KB
+time for successor generation creation: 0.000176405s
+Variables: 12
+FactPairs: 48
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00574717s, 68036 KB]
+f = 6 [1 evaluated, 0 expanded, t=0.00577541s, 68036 KB]
+Initial heuristic value for lmcut: 6
+New best heuristic value for lmcut: 3
+[g=1, 2 evaluated, 1 expanded, t=0.00587347s, 68036 KB]
+f = 7 [1133 evaluated, 138 expanded, t=0.0717779s, 68036 KB]
+New best heuristic value for lmcut: 2
+[g=5, 1846 evaluated, 239 expanded, t=0.111312s, 68036 KB]
+f = 8 [5984 evaluated, 936 expanded, 1 reopened, t=0.346692s, 68160 KB]
+f = 9 [18663 evaluated, 4138 expanded, 16 reopened, t=1.06757s, 68824 KB]
+New best heuristic value for lmcut: 1
+[g=8, 20374 evaluated, 4525 expanded, 16 reopened, t=1.15548s, 68960 KB]
+New best heuristic value for lmcut: 0
+[g=9, 20382 evaluated, 4526 expanded, 16 reopened, t=1.15581s, 68960 KB]
+Solution found! Cost: 9
+Actual search time: 1.15008s [t=1.15589s]
+op258) rotate-2 seg-in-2 seg-out-3 car-out-1 car-out-2 (1)
+op52) analyze-2 seg-in-2 seg-out-1 car-out-2 car-in-3 (1)
+op3) analyze-2 seg-in-1 seg-out-1 car-in-1 car-out-2 (1)
+op144) rotate-2 seg-in-1 seg-out-2 car-out-2 car-out-3 (1)
+op25) analyze-2 seg-in-1 seg-out-1 car-out-3 car-in-1 (1)
+op69) analyze-2 seg-in-3 seg-out-1 car-in-2 car-out-3 (1)
+op41) analyze-2 seg-in-2 seg-out-1 car-in-3 car-in-2 (1)
+op358) rotate-2 seg-in-3 seg-out-3 car-out-3 car-out-1 (1)
+op77) analyze-2 seg-in-3 seg-out-1 car-out-1 car-in-3 (1)
+Plan length: 9 step(s).
+Plan cost: 9
+Expanded 4527 state(s).
+Reopened 16 state(s).
+Evaluated 20383 state(s).
+Evaluations: 20383
+Generated 54312 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 4138 state(s).
+Reopened until last jump: 16 state(s).
+Evaluated until last jump: 18663 state(s).
+Generated until last jump: 49656 state(s).
+Number of registered states: 20383
+Int hash set load factor: 20383/32768 = 0.62204
+Int hash set resizes: 15
+Open nodes: 15872
+Closed states: 4511
+Search time: 1.15026s
+Total time: 1.1559s
+Solution found.
+Peak memory: 68960 KB
+search exit code: 0
+

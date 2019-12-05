@@ -1,0 +1,103 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=20000000,max_time=900)' --internal-plan-file sas_plan
+reading input... [t=5.8915e-05s]
+done reading input! [t=0.00236572s]
+Generating a pattern using the greedy generator...
+building causal graph...done! [t=0.000175736s]
+Greedy generator pattern: [0, 1, 2, 3, 4, 5, 6, 7]
+Greedy generator number of variables: 8
+Greedy generator PDB size: 29648025
+Greedy generator computation time: 0.000199638s
+Initializing novelty heuristic...
+Number of facts: 0
+Building successor generator...done! [t=14.4709s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000306885s
+Variables: 8
+FactPairs: 72
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 616 reverse operators.
+Built match tree.
+4=0 5=4 6=2 7=2 
+Inserting initial (goal) state...
+New best h: [0, 0, 5] (iteration 0) 
+New best h: [8, 1, 6] (iteration 18) 
+New best h: [8, 23, 6] (iteration 50) 
+New best h: [8, 140, 6] (iteration 51) 
+New best h: [8, 187, 6] (iteration 52) 
+Found first concrete state.
+Found first concrete state.
+New best h: [8, 228, 6] (iteration 75) 
+New best h: [8, 240, 6] (iteration 76) 
+New best h: [8, 240, 7] (iteration 99) 
+New best h: [8, 241, 8] (iteration 108) 
+New best h: [8, 263, 8] (iteration 121) 
+New best h: [8, 291, 8] (iteration 122) 
+New best h: [8, 292, 8] (iteration 126) 
+New best h: [8, 345, 8] (iteration 128) 
+New best h: [8, 531, 8] (iteration 130) 
+New best h: [8, 553, 8] (iteration 134) 
+New best h: [8, 554, 8] (iteration 140) 
+New best h: [8, 556, 8] (iteration 142) 
+New best h: [8, 604, 8] (iteration 143) 
+New best h: [8, 605, 8] (iteration 147) 
+New best h: [8, 655, 8] (iteration 149) 
+New best h: [8, 656, 8] (iteration 154) 
+New best h: [8, 706, 8] (iteration 156) 
+New best h: [8, 742, 8] (iteration 182) 
+New best h: [8, 783, 8] (iteration 186) 
+New best h: [8, 795, 8] (iteration 187) 
+New best h: [8, 796, 8] (iteration 193) 
+New best h: [8, 846, 8] (iteration 194) 
+New best h: [8, 898, 8] (iteration 199) 
+New best h: [8, 1084, 8] (iteration 202) 
+New best h: [8, 1106, 8] (iteration 206) 
+New best h: [8, 1166, 8] (iteration 227) 
+New best h: [8, 1213, 8] (iteration 228) 
+New best h: [8, 1254, 8] (iteration 232) 
+New best h: [8, 1266, 8] (iteration 233) 
+New best h: [8, 1267, 8] (iteration 239) 
+New best h: [8, 1320, 8] (iteration 240) 
+New best h: [8, 1506, 8] (iteration 245) 
+New best h: [8, 1528, 8] (iteration 249) 
+New best h: [8, 1536, 8] (iteration 283) 
+New best h: [8, 1675, 8] (iteration 286) 
+New best h: [8, 1722, 8] (iteration 287) 
+New best h: [8, 1763, 8] (iteration 291) 
+New best h: [8, 1816, 8] (iteration 295) 
+New best h: [8, 1817, 8] (iteration 301) 
+New best h: [8, 1870, 8] (iteration 302) 
+New best h: [8, 2056, 8] (iteration 307) 
+New best h: [8, 2078, 8] (iteration 311) 
+New best h: [8, 2096, 8] (iteration 356) 
+New best h: [8, 2118, 8] (iteration 360) 
+New best h: [8, 2137, 8] (iteration 58944) 
+New best h: [8, 2168, 8] (iteration 58947) 
+New best h: [8, 2186, 8] (iteration 58962) 
+Reached iteration limit.
+Actual search time: 182.244s [t=196.715s]
+Original state h-value: 8
+New state h-value: 8
+Expanded 19350612 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 39914823
+Generated 117302258 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 22611227
+Int hash set load factor: 22611227/33554432 = 0.673867
+Int hash set resizes: 25
+Open nodes: 649389
+Closed states: 19350612
+Search time: 182.244s
+Total time: 196.716s
+Solution found.
+Peak memory: 1857412 KB
+search exit code: 0
+

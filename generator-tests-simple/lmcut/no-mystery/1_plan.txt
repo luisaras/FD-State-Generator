@@ -1,0 +1,72 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/lmcut/no-mystery/1_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=5.8329e-05s]
+done reading input! [t=0.00148436s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00453722s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000205723s
+Variables: 5
+FactPairs: 55
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00488861s, 67896 KB]
+f = 9 [1 evaluated, 0 expanded, t=0.00493642s, 67896 KB]
+Initial heuristic value for lmcut: 9
+New best heuristic value for lmcut: 9
+[g=1, 2 evaluated, 1 expanded, t=0.00506239s, 67896 KB]
+New best heuristic value for lmcut: 8
+[g=1, 5 evaluated, 1 expanded, t=0.00535865s, 67896 KB]
+New best heuristic value for lmcut: 7
+[g=2, 6 evaluated, 2 expanded, t=0.00545556s, 67896 KB]
+New best heuristic value for lmcut: 6
+[g=3, 10 evaluated, 3 expanded, t=0.00570924s, 67896 KB]
+New best heuristic value for lmcut: 5
+[g=4, 13 evaluated, 4 expanded, t=0.00586721s, 67896 KB]
+New best heuristic value for lmcut: 4
+[g=5, 31 evaluated, 10 expanded, t=0.0067748s, 67896 KB]
+New best heuristic value for lmcut: 3
+[g=6, 36 evaluated, 11 expanded, t=0.00704122s, 67896 KB]
+New best heuristic value for lmcut: 2
+[g=7, 40 evaluated, 12 expanded, t=0.00723836s, 67896 KB]
+New best heuristic value for lmcut: 1
+[g=8, 41 evaluated, 13 expanded, t=0.00730795s, 67896 KB]
+New best heuristic value for lmcut: 0
+[g=9, 45 evaluated, 14 expanded, t=0.007454s, 67896 KB]
+Solution found! Cost: 9
+Actual search time: 0.00251411s [t=0.00751177s]
+op337) load p2 t0 l3 (1)
+op307) drive t0 l3 l2 level19 level6 level25 (1)
+op332) load p1 t0 l2 (1)
+op165) drive t0 l2 l0 level17 level2 level19 (1)
+op346) unload p2 t0 l0 (1)
+op342) unload p1 t0 l0 (1)
+op326) load p0 t0 l0 (1)
+op17) drive t0 l0 l1 level4 level13 level17 (1)
+op339) unload p0 t0 l1 (1)
+Plan length: 9 step(s).
+Plan cost: 9
+Expanded 15 state(s).
+Reopened 0 state(s).
+Evaluated 45 state(s).
+Evaluations: 45
+Generated 56 state(s).
+Dead ends: 3 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 45
+Int hash set load factor: 45/64 = 0.703125
+Int hash set resizes: 6
+Open nodes: 27
+Closed states: 15
+Search time: 0.00279989s
+Total time: 0.00751974s
+Solution found.
+Peak memory: 67896 KB
+search exit code: 0
+

@@ -1,0 +1,60 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=8.4101e-05s]
+done reading input! [t=0.000404989s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00320257s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 1.1936e-05s
+Variables: 5
+FactPairs: 17
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00335616s, 67764 KB]
+f = 5 [1 evaluated, 0 expanded, t=0.0033844s, 67764 KB]
+Initial heuristic value for lmcut: 5
+New best heuristic value for lmcut: 4
+[g=1, 2 evaluated, 1 expanded, t=0.00343733s, 67764 KB]
+f = 6 [7 evaluated, 2 expanded, t=0.00350956s, 67764 KB]
+New best heuristic value for lmcut: 3
+[g=3, 8 evaluated, 3 expanded, t=0.00354685s, 67764 KB]
+New best heuristic value for lmcut: 2
+[g=4, 23 evaluated, 12 expanded, t=0.00369315s, 67764 KB]
+New best heuristic value for lmcut: 1
+[g=5, 25 evaluated, 13 expanded, t=0.00373531s, 67764 KB]
+New best heuristic value for lmcut: 0
+[g=6, 27 evaluated, 14 expanded, t=0.00377597s, 67764 KB]
+Solution found! Cost: 6
+Actual search time: 0.000394964s [t=0.00381561s]
+op13) move loc-x1-y1 loc-x2-y1 (1)
+op20) move loc-x2-y1 loc-x2-y0 (1)
+op17) move loc-x2-y0 loc-x1-y0 (1)
+op7) move loc-x1-y0 loc-x0-y0 (1)
+op0) move loc-x0-y0 loc-x0-y1 (1)
+op3) move loc-x0-y1 loc-x0-y2 (1)
+Plan length: 6 step(s).
+Plan cost: 6
+Expanded 15 state(s).
+Reopened 0 state(s).
+Evaluated 28 state(s).
+Evaluations: 28
+Generated 39 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 2 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 7 state(s).
+Generated until last jump: 7 state(s).
+Number of registered states: 28
+Int hash set load factor: 28/32 = 0.875
+Int hash set resizes: 5
+Open nodes: 13
+Closed states: 15
+Search time: 0.000511966s
+Total time: 0.00382048s
+Solution found.
+Peak memory: 67764 KB
+search exit code: 0
+

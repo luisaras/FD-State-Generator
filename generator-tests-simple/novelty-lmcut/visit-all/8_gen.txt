@@ -1,0 +1,60 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=20000000,max_time=900)' --internal-plan-file sas_plan
+reading input... [t=4.7186e-05s]
+done reading input! [t=0.000364602s]
+Initializing landmark cut heuristic...
+Initializing novelty heuristic...
+Number of facts: 0
+Building successor generator...done! [t=0.00251021s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 3.2456e-05s
+Variables: 15
+FactPairs: 53
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 123 reverse operators.
+Built match tree.
+1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 10=0 11=0 12=0 13=0 14=0 
+Inserting initial (goal) state...
+New best h: [0, 0, 15] (iteration 0) 
+Found first concrete state.
+Found first concrete state.
+New best h: [15, 1, 15] (iteration 1) 
+New best h: [15, 2, 15] (iteration 68) 
+New best h: [15, 3, 15] (iteration 77) 
+New best h: [15, 4, 15] (iteration 81) 
+New best h: [15, 5, 15] (iteration 85) 
+New best h: [15, 6, 15] (iteration 118) 
+New best h: [15, 7, 15] (iteration 136) 
+New best h: [15, 8, 15] (iteration 141) 
+New best h: [15, 9, 15] (iteration 149) 
+New best h: [15, 10, 15] (iteration 209) 
+New best h: [15, 11, 15] (iteration 238) 
+New best h: [15, 13, 15] (iteration 299) 
+New best h: [15, 14, 15] (iteration 1115) 
+Completely explored state space.
+Actual search time: 14.3395s [t=14.3424s]
+Original state h-value: 15
+New state h-value: 15
+Expanded 409601 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 819226
+Generated 1310843 state(s).
+Dead ends: 114688 state(s).
+Number of registered states: 409601
+Int hash set load factor: 409601/524288 = 0.781252
+Int hash set resizes: 19
+Open nodes: 0
+Closed states: 409601
+Search time: 14.3398s
+Total time: 14.3424s
+Solution found.
+Peak memory: 92760 KB
+search exit code: 0
+

@@ -1,0 +1,62 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --search 'generator_abstract([h],max_it=20000000,max_time=900)' --internal-plan-file sas_plan
+reading input... [t=8.2692e-05s]
+done reading input! [t=0.00414664s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00674587s]
+peak memory difference for successor generator creation: 116 KB
+time for successor generation creation: 0.000381994s
+Variables: 8
+FactPairs: 122
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 1178 reverse operators.
+Built match tree.
+2=0 3=3 4=0 5=0 6=2 7=2 
+Inserting initial (goal) state...
+New best h: [0, 8] (iteration 0) 
+New best h: [1, 7] (iteration 422) 
+Found first concrete state.
+New best h: [2, 8] (iteration 428) 
+New best h: [3, 8] (iteration 600) 
+New best h: [4, 8] (iteration 605) 
+New best h: [5, 8] (iteration 607) 
+New best h: [6, 8] (iteration 614) 
+New best h: [7, 8] (iteration 620) 
+New best h: [8, 8] (iteration 625) 
+New best h: [9, 8] (iteration 632) 
+New best h: [10, 8] (iteration 638) 
+New best h: [11, 8] (iteration 641) 
+New best h: [12, 8] (iteration 643) 
+New best h: [13, 8] (iteration 670) 
+New best h: [14, 8] (iteration 674) 
+New best h: [15, 8] (iteration 683) 
+New best h: [16, 8] (iteration 22253) 
+New best h: [17, 8] (iteration 36710) 
+New best h: [18, 8] (iteration 396950) 
+Time limit reached. Abort search.
+Actual search time: 900.001s [t=900.009s]
+Original state h-value: 16
+New state h-value: 18
+Expanded 2631871 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 5265216
+Generated 7885096 state(s).
+Dead ends: 71039 state(s).
+Number of registered states: 2632616
+Int hash set load factor: 2632616/4194304 = 0.627665
+Int hash set resizes: 22
+Open nodes: 737
+Closed states: 2631871
+Search time: 900.002s
+Total time: 900.009s
+Solution found.
+Peak memory: 214772 KB
+search exit code: 0
+

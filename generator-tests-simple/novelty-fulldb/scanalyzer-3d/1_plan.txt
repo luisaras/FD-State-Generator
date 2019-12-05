@@ -1,0 +1,61 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty-fulldb/scanalyzer-3d/1_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=4.0043e-05s]
+done reading input! [t=0.00188657s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00414728s]
+peak memory difference for successor generator creation: 144 KB
+time for successor generation creation: 0.000253765s
+Variables: 8
+FactPairs: 24
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00443066s, 68180 KB]
+f = 4 [1 evaluated, 0 expanded, t=0.00446194s, 68180 KB]
+Initial heuristic value for lmcut: 4
+New best heuristic value for lmcut: 3
+[g=1, 2 evaluated, 1 expanded, t=0.00461404s, 68180 KB]
+New best heuristic value for lmcut: 2
+[g=2, 4 evaluated, 2 expanded, t=0.00484544s, 68180 KB]
+New best heuristic value for lmcut: 1
+[g=3, 6 evaluated, 3 expanded, t=0.00505638s, 68180 KB]
+f = 5 [9 evaluated, 4 expanded, t=0.00541097s, 68180 KB]
+f = 6 [15 evaluated, 7 expanded, t=0.00605741s, 68180 KB]
+f = 7 [23 evaluated, 11 expanded, t=0.00693246s, 68180 KB]
+New best heuristic value for lmcut: 0
+[g=7, 26 evaluated, 14 expanded, t=0.00711585s, 68180 KB]
+Solution found! Cost: 7
+Actual search time: 0.00265139s [t=0.00715357s]
+op177) analyze-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-out-1a car-out-1b car-in-1a car-in-1b (1)
+op198) analyze-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-out-1b car-in-1a car-in-1b car-out-1a (1)
+op27) analyze-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-in-1a car-in-1b car-out-1a car-out-1b (1)
+op108) analyze-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-in-1b car-out-1a car-out-1b car-in-1a (1)
+op177) analyze-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-out-1a car-out-1b car-in-1a car-in-1b (1)
+op198) analyze-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-out-1b car-in-1a car-in-1b car-out-1a (1)
+op27) analyze-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-in-1a car-in-1b car-out-1a car-out-1b (1)
+Plan length: 7 step(s).
+Plan cost: 7
+Expanded 15 state(s).
+Reopened 0 state(s).
+Evaluated 26 state(s).
+Evaluations: 26
+Generated 28 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 11 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 23 state(s).
+Generated until last jump: 22 state(s).
+Number of registered states: 26
+Int hash set load factor: 26/32 = 0.8125
+Int hash set resizes: 5
+Open nodes: 11
+Closed states: 15
+Search time: 0.00288775s
+Total time: 0.00715876s
+Solution found.
+Peak memory: 68180 KB
+search exit code: 0
+

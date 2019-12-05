@@ -1,0 +1,166 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([h],max_it=20000000,max_time=900)' --internal-plan-file sas_plan
+reading input... [t=8.7051e-05s]
+done reading input! [t=0.00376656s]
+Initializing canonical PDB heuristic...
+Generating patterns using the hill climbing generator...
+Done calculating initial pattern collection: 0.000521004s
+Average operator cost: 0.719577
+building causal graph...done! [t=0.00106038s]
+Done calculating initial candidate PDBs
+current collection size is 8
+current initial h value: 4
+pattern: [41, 43] - improvement: 1000
+pattern: [40, 44] - improvement: 1000
+pattern: [39, 45] - improvement: 1000
+pattern: [37, 46] - improvement: 1000
+found a better pattern with improvement 1000
+pattern: [41, 43]
+Hill climbing time so far: 0.0947549s
+current collection size is 84
+current initial h value: 9
+pattern: [40, 44] - improvement: 1000
+pattern: [39, 45] - improvement: 1000
+pattern: [37, 46] - improvement: 1000
+found a better pattern with improvement 1000
+pattern: [40, 44]
+Hill climbing time so far: 0.231267s
+current collection size is 160
+current initial h value: 16
+pattern: [39, 45] - improvement: 1000
+pattern: [37, 46] - improvement: 1000
+found a better pattern with improvement 1000
+pattern: [39, 45]
+Hill climbing time so far: 0.450362s
+current collection size is 236
+current initial h value: 23
+pattern: [37, 46] - improvement: 1000
+found a better pattern with improvement 1000
+pattern: [37, 46]
+Hill climbing time so far: 0.770307s
+current collection size is 312
+current initial h value: 30
+Improvement below threshold. Stop hill climbing.
+Hill climbing iterations: 5
+Hill climbing generated patterns: 316
+Hill climbing rejected patterns: 0
+Hill climbing maximum PDB size: 2888
+Hill climbing time: 1.19042s
+Hill climbing generator collection: [[43], [44], [45], [46], [41, 43], [40, 44], [39, 45], [37, 46]]
+Hill climbing generator number of patterns: 8
+Hill climbing generator total PDB size: 312
+Hill climbing generator computation time: 1.19105s
+Running dominance pruning...
+Pruned 15 of 16 pattern cliques
+Pruned 4 of 8 PDBs
+Dominance pruning took 8.596e-06s
+Canonical PDB heuristic number of patterns: 4
+Canonical PDB heuristic total PDB size: 304
+Canonical PDB heuristic computation time: 1.19109s
+Building successor generator...done! [t=1.19838s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000258263s
+Variables: 47
+FactPairs: 274
+Bytes per state: 16
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 1300 reverse operators.
+Built match tree.
+43=0 44=0 45=0 46=0 
+Inserting initial (goal) state...
+New best h: [0, 7] (iteration 0) 
+New best h: [0, 8] (iteration 212) 
+New best h: [1, 8] (iteration 213) 
+New best h: [2, 10] (iteration 357) 
+New best h: [2, 11] (iteration 360) 
+New best h: [2, 12] (iteration 368) 
+New best h: [2, 13] (iteration 374) 
+New best h: [2, 14] (iteration 380) 
+New best h: [2, 15] (iteration 394) 
+New best h: [2, 16] (iteration 396) 
+New best h: [2, 17] (iteration 400) 
+New best h: [2, 18] (iteration 404) 
+New best h: [2, 19] (iteration 408) 
+New best h: [2, 20] (iteration 416) 
+New best h: [2, 21] (iteration 422) 
+New best h: [2, 22] (iteration 428) 
+New best h: [2, 23] (iteration 432) 
+New best h: [2, 24] (iteration 440) 
+New best h: [2, 25] (iteration 444) 
+New best h: [2, 26] (iteration 454) 
+New best h: [2, 27] (iteration 458) 
+New best h: [2, 28] (iteration 472) 
+New best h: [2, 29] (iteration 476) 
+New best h: [2, 30] (iteration 488) 
+New best h: [2, 31] (iteration 494) 
+New best h: [2, 34] (iteration 496) 
+New best h: [3, 34] (iteration 497) 
+New best h: [3, 35] (iteration 522) 
+New best h: [3, 36] (iteration 534) 
+New best h: [3, 37] (iteration 540) 
+New best h: [3, 38] (iteration 548) 
+New best h: [3, 39] (iteration 556) 
+New best h: [3, 40] (iteration 558) 
+New best h: [3, 41] (iteration 588) 
+New best h: [3, 42] (iteration 592) 
+New best h: [3, 43] (iteration 614) 
+New best h: [3, 44] (iteration 622) 
+New best h: [3, 45] (iteration 632) 
+New best h: [4, 36] (iteration 484753) 
+New best h: [4, 37] (iteration 484770) 
+New best h: [4, 38] (iteration 484780) 
+New best h: [4, 39] (iteration 484824) 
+New best h: [4, 40] (iteration 484828) 
+New best h: [4, 41] (iteration 484834) 
+New best h: [4, 42] (iteration 484842) 
+New best h: [4, 43] (iteration 484850) 
+New best h: [4, 44] (iteration 484852) 
+New best h: [4, 45] (iteration 484882) 
+New best h: [4, 46] (iteration 484886) 
+New best h: [5, 39] (iteration 648699) 
+New best h: [5, 40] (iteration 648706) 
+New best h: [5, 41] (iteration 648710) 
+New best h: [5, 42] (iteration 648718) 
+New best h: [5, 43] (iteration 648730) 
+New best h: [5, 44] (iteration 648740) 
+New best h: [5, 45] (iteration 648746) 
+New best h: [5, 46] (iteration 648748) 
+Found first concrete state.
+New best h: [5, 47] (iteration 648790) 
+New best h: [6, 45] (iteration 713459) 
+New best h: [6, 46] (iteration 713462) 
+New best h: [6, 47] (iteration 713504) 
+New best h: [7, 47] (iteration 717029) 
+New best h: [8, 47] (iteration 717353) 
+New best h: [9, 47] (iteration 717435) 
+New best h: [10, 47] (iteration 717519) 
+New best h: [11, 47] (iteration 717603) 
+New best h: [12, 47] (iteration 717691) 
+New best h: [13, 47] (iteration 717787) 
+New best h: [14, 47] (iteration 718411) 
+Reached iteration limit.
+Actual search time: 174.468s [t=175.668s]
+Original state h-value: 30
+New state h-value: 14
+Expanded 19757022 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 20415558
+Generated 56381444 state(s).
+Dead ends: 9689061 state(s).
+Number of registered states: 20033192
+Int hash set load factor: 20033192/33554432 = 0.597036
+Int hash set resizes: 25
+Open nodes: 242979
+Closed states: 19757022
+Search time: 174.469s
+Total time: 175.668s
+Solution found.
+Peak memory: 1431240 KB
+search exit code: 0
+

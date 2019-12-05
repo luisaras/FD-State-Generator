@@ -196,25 +196,32 @@ test_simple() {
     ALLH=(lmcut ipdb fulldb)
     BENCHMARKS=ipc11
     TEST_FOLDER=generator-tests-simple
-    test no-mystery 1
-    test no-mystery 2
-    test no-mystery 3
-    test no-mystery 11
-    test no-mystery 12
-    test no-mystery 13
-    test no-mystery 14
-    test scanalyzer-3d 1
-    test scanalyzer-3d 2
-    test scanalyzer-3d 3
-    test transport 3
-    test visit-all 1
-    test visit-all 2
-    test visit-all 3
-    test visit-all 4
-    test visit-all 5
-    test visit-all 6
-    test visit-all 8
-    test visit-all 10
+#    test elevator 1
+#    test no-mystery 1
+#    test no-mystery 2
+#    test no-mystery 3
+#    test no-mystery 11
+#    test no-mystery 12
+#    test no-mystery 13
+#    test no-mystery 14
+#    test parc-printer 5
+#    test parc-printer 8
+#    test scanalyzer-3d 1
+#    test scanalyzer-3d 2
+#    test scanalyzer-3d 3
+#    test sokoban 19
+#    test transport 1
+#    test transport 2
+#    test transport 3
+#    test visit-all 1
+#    test visit-all 2
+#    test visit-all 3
+#    test visit-all 4
+#    test visit-all 5
+#    test visit-all 6
+#    test visit-all 8
+#    test visit-all 10
+    test woodworking 11
 }
 
 test_simple

@@ -1,0 +1,67 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=20000000,max_time=900)' --internal-plan-file sas_plan
+reading input... [t=8.5806e-05s]
+done reading input! [t=0.00476944s]
+Generating a pattern using the greedy generator...
+building causal graph...done! [t=0.000229114s]
+Greedy generator pattern: [0, 1, 2, 3, 4, 5]
+Greedy generator number of variables: 6
+Greedy generator PDB size: 635040
+Greedy generator computation time: 0.000249193s
+Initializing novelty heuristic...
+Number of facts: 0
+Building successor generator...done! [t=0.129448s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000324019s
+Variables: 6
+FactPairs: 127
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 1210 reverse operators.
+Built match tree.
+2=3 3=2 4=1 5=2 
+Inserting initial (goal) state...
+New best h: [0, 0, 6] (iteration 0) 
+New best h: [6, 1, 5] (iteration 443) 
+Found first concrete state.
+Found first concrete state.
+New best h: [6, 2, 6] (iteration 447) 
+New best h: [6, 3, 6] (iteration 790) 
+New best h: [6, 4, 6] (iteration 791) 
+New best h: [6, 5, 6] (iteration 797) 
+New best h: [6, 6, 6] (iteration 799) 
+New best h: [6, 7, 6] (iteration 804) 
+New best h: [6, 8, 6] (iteration 810) 
+New best h: [6, 9, 6] (iteration 1331) 
+New best h: [6, 10, 6] (iteration 1336) 
+New best h: [6, 11, 6] (iteration 1341) 
+New best h: [6, 12, 6] (iteration 1352) 
+New best h: [6, 13, 6] (iteration 1354) 
+New best h: [6, 14, 6] (iteration 15135) 
+New best h: [6, 15, 6] (iteration 19564) 
+Completely explored state space.
+Actual search time: 1.84435s [t=1.97488s]
+Original state h-value: 6
+New state h-value: 6
+Expanded 325521 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 651487
+Generated 1126468 state(s).
+Dead ends: 9728 state(s).
+Number of registered states: 325526
+Int hash set load factor: 325526/524288 = 0.620892
+Int hash set resizes: 19
+Open nodes: 0
+Closed states: 325521
+Search time: 1.84529s
+Total time: 1.97489s
+Solution found.
+Peak memory: 91588 KB
+search exit code: 0
+

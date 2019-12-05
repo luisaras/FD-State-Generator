@@ -1,0 +1,59 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=7.3082e-05s]
+done reading input! [t=0.00393246s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00609722s]
+peak memory difference for successor generator creation: 144 KB
+time for successor generation creation: 0.000227316s
+Variables: 8
+FactPairs: 24
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00637933s, 68180 KB]
+f = 12 [1 evaluated, 0 expanded, t=0.00640754s, 68180 KB]
+Initial heuristic value for lmcut: 12
+New best heuristic value for lmcut: 9
+[g=3, 2 evaluated, 1 expanded, t=0.00656606s, 68180 KB]
+New best heuristic value for lmcut: 7
+[g=6, 4 evaluated, 2 expanded, t=0.00683414s, 68180 KB]
+f = 13 [5 evaluated, 2 expanded, t=0.00698445s, 68180 KB]
+New best heuristic value for lmcut: 4
+[g=9, 6 evaluated, 3 expanded, t=0.00708884s, 68180 KB]
+New best heuristic value for lmcut: 1
+[g=12, 8 evaluated, 4 expanded, t=0.00728s, 68180 KB]
+New best heuristic value for lmcut: 0
+[g=15, 10 evaluated, 5 expanded, t=0.00743782s, 68180 KB]
+Solution found! Cost: 13
+Actual search time: 0.00102984s [t=0.00747417s]
+op27) analyze-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-in-1a car-in-1b car-out-1a car-out-1b (3)
+op108) analyze-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-in-1b car-out-1a car-out-1b car-in-1a (3)
+op177) analyze-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-out-1a car-out-1b car-in-1a car-in-1b (3)
+op198) analyze-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-out-1b car-in-1a car-in-1b car-out-1a (3)
+op282) rotate-4 seg-in-1a seg-in-1b seg-out-1a seg-out-1b car-in-1a car-in-1b car-out-1a car-out-1b (1)
+Plan length: 5 step(s).
+Plan cost: 13
+Expanded 6 state(s).
+Reopened 0 state(s).
+Evaluated 10 state(s).
+Evaluations: 10
+Generated 10 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 2 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 5 state(s).
+Generated until last jump: 4 state(s).
+Number of registered states: 10
+Int hash set load factor: 10/16 = 0.625
+Int hash set resizes: 4
+Open nodes: 4
+Closed states: 6
+Search time: 0.00126909s
+Total time: 0.00747887s
+Solution found.
+Peak memory: 68180 KB
+search exit code: 0
+

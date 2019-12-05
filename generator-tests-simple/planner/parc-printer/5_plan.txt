@@ -1,0 +1,109 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=4.6012e-05s]
+done reading input! [t=0.000522156s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00270288s]
+peak memory difference for successor generator creation: 132 KB
+time for successor generation creation: 8.6302e-05s
+Variables: 35
+FactPairs: 100
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00307517s, 67896 KB]
+f = 519232 [1 evaluated, 0 expanded, t=0.00311301s, 67896 KB]
+Initial heuristic value for lmcut: 519232
+New best heuristic value for lmcut: 519232
+[g=0, 2 evaluated, 1 expanded, t=0.00333222s, 67896 KB]
+New best heuristic value for lmcut: 519107
+[g=224, 3 evaluated, 2 expanded, t=0.0035369s, 67896 KB]
+New best heuristic value for lmcut: 517608
+[g=1624, 6 evaluated, 3 expanded, t=0.00402904s, 67896 KB]
+New best heuristic value for lmcut: 507609
+[g=11623, 10 evaluated, 4 expanded, t=0.00467466s, 67896 KB]
+New best heuristic value for lmcut: 294819
+[g=224413, 14 evaluated, 5 expanded, t=0.00524504s, 67896 KB]
+New best heuristic value for lmcut: 289820
+[g=229412, 18 evaluated, 6 expanded, t=0.00568277s, 67896 KB]
+New best heuristic value for lmcut: 288321
+[g=230911, 23 evaluated, 7 expanded, t=0.00636328s, 67896 KB]
+New best heuristic value for lmcut: 286822
+[g=232410, 27 evaluated, 8 expanded, t=0.00685528s, 67896 KB]
+New best heuristic value for lmcut: 286697
+[g=232634, 30 evaluated, 9 expanded, t=0.00716356s, 67896 KB]
+New best heuristic value for lmcut: 285198
+[g=234034, 33 evaluated, 10 expanded, t=0.00745462s, 67896 KB]
+New best heuristic value for lmcut: 277198
+[g=242034, 35 evaluated, 11 expanded, t=0.00764808s, 67896 KB]
+New best heuristic value for lmcut: 149408
+[g=369824, 38 evaluated, 12 expanded, t=0.00790095s, 67896 KB]
+New best heuristic value for lmcut: 146409
+[g=372823, 41 evaluated, 13 expanded, t=0.00808312s, 67896 KB]
+New best heuristic value for lmcut: 144910
+[g=374322, 45 evaluated, 14 expanded, t=0.0083923s, 67896 KB]
+New best heuristic value for lmcut: 143411
+[g=375821, 48 evaluated, 15 expanded, t=0.00860466s, 67896 KB]
+New best heuristic value for lmcut: 143286
+[g=376045, 50 evaluated, 16 expanded, t=0.00872644s, 67896 KB]
+New best heuristic value for lmcut: 141787
+[g=377445, 52 evaluated, 17 expanded, t=0.00883448s, 67896 KB]
+New best heuristic value for lmcut: 133787
+[g=385445, 53 evaluated, 18 expanded, t=0.00890265s, 67896 KB]
+New best heuristic value for lmcut: 5997
+[g=513235, 56 evaluated, 19 expanded, t=0.00900365s, 67896 KB]
+New best heuristic value for lmcut: 2998
+[g=516234, 57 evaluated, 20 expanded, t=0.00906371s, 67896 KB]
+New best heuristic value for lmcut: 1499
+[g=517733, 60 evaluated, 21 expanded, t=0.00917259s, 67896 KB]
+New best heuristic value for lmcut: 0
+[g=519232, 62 evaluated, 22 expanded, t=0.00925046s, 67896 KB]
+Solution found! Cost: 519232
+Actual search time: 0.00613535s [t=0.00929726s]
+op30) initialize  (0)
+op3) fe1-feedmsi-letter sheet1 (125)
+op15) hw1-leftentrytobottomleftexit-letter sheet1 (1499)
+op40) lc1-inverttoime-letter sheet1 back front (9999)
+op50) lime-simplex-letter sheet1 front image-1 (212790)
+op31) lc1-fromime-letter sheet1 (4999)
+op9) hw1-bottomrightentrytorightexit-letter sheet1 (1499)
+op67) sys-stack-letter sheet1 dummy-sheet (1499)
+op4) fe1-feedmsi-letter sheet2 (125)
+op19) hw1-leftentrytotopleftexit-letter sheet2 (1499)
+op81) uc1-inverttoime-letter sheet2 back front (8000)
+op94) uime-simplex-letter sheet2 front image-2 (127790)
+op71) uc1-fromime-letter sheet2 (2999)
+op25) hw1-toprightentrytorightexit-letter sheet2 (1499)
+op68) sys-stack-letter sheet2 sheet1 (1499)
+op5) fe1-feedmsi-letter sheet3 (125)
+op20) hw1-leftentrytotopleftexit-letter sheet3 (1499)
+op83) uc1-inverttoime-letter sheet3 back front (8000)
+op99) uime-simplex-letter sheet3 front image-3 (127790)
+op72) uc1-fromime-letter sheet3 (2999)
+op26) hw1-toprightentrytorightexit-letter sheet3 (1499)
+op69) sys-stack-letter sheet3 sheet2 (1499)
+Plan length: 22 step(s).
+Plan cost: 519232
+Expanded 23 state(s).
+Reopened 0 state(s).
+Evaluated 62 state(s).
+Evaluations: 62
+Generated 86 state(s).
+Dead ends: 3 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 62
+Int hash set load factor: 62/64 = 0.96875
+Int hash set resizes: 6
+Open nodes: 36
+Closed states: 23
+Search time: 0.00645575s
+Total time: 0.00930354s
+Solution found.
+Peak memory: 67896 KB
+search exit code: 0
+

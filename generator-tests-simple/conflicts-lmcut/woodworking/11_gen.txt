@@ -1,0 +1,120 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --search 'generator_abstract([pho3,pho2,sum([weight(pho2,-1),pho3])],max_it=20000000,max_time=900)' --internal-plan-file sas_plan
+reading input... [t=7.351e-05s]
+done reading input! [t=0.00684346s]
+Initializing landmark cut heuristic...
+Generating patterns using the systematic generator...
+building causal graph...done! [t=0.00401253s]
+Found 3590 SGA patterns.
+Found 5792 interesting patterns.
+Systematic generator number of patterns: 5792
+Systematic generator total PDB size: 119664
+Systematic generator computation time: 0.0375777s
+Computing PDBs for pattern collection...
+Done computing PDBs for pattern collection: 1.43241s
+Generating patterns using the systematic generator...
+Found 366 SGA patterns.
+Found 376 interesting patterns.
+Systematic generator number of patterns: 376
+Systematic generator total PDB size: 2834
+Systematic generator computation time: 0.00170655s
+Computing PDBs for pattern collection...
+Done computing PDBs for pattern collection: 0.0793621s
+Building successor generator...done! [t=1.89697s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000509694s
+Variables: 77
+FactPairs: 200
+Bytes per state: 20
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 13153 reverse operators.
+Built match tree.
+5=0 6=1 52=0 53=0 54=0 55=0 56=0 57=0 58=0 59=0 60=1 61=3 62=0 63=0 64=2 65=3 66=1 67=1 68=3 69=3 70=1 71=1 72=1 73=1 74=0 75=1 76=1 
+Inserting initial (goal) state...
+New best h: [10, 10, 0, 31] (iteration 0) 
+New best h: [10, 10, 0, 32] (iteration 48) 
+New best h: [15, 15, 0, 28] (iteration 440) 
+New best h: [15, 15, 0, 29] (iteration 444) 
+New best h: [30, 30, 0, 30] (iteration 464) 
+New best h: [30, 30, 0, 31] (iteration 765) 
+New best h: [30, 30, 0, 32] (iteration 813) 
+New best h: [45, 45, 0, 33] (iteration 1206) 
+New best h: [45, 45, 0, 34] (iteration 1210) 
+New best h: [60, 60, 0, 35] (iteration 1230) 
+New best h: [75, 75, 0, 36] (iteration 1458) 
+New best h: [75, 75, 0, 37] (iteration 1462) 
+New best h: [75, 75, 0, 40] (iteration 2129) 
+New best h: [80, 80, 0, 39] (iteration 2134) 
+New best h: [80, 80, 0, 40] (iteration 2149) 
+New best h: [85, 85, 0, 40] (iteration 2177) 
+New best h: [95, 95, 0, 37] (iteration 2225) 
+New best h: [95, 95, 0, 38] (iteration 2229) 
+New best h: [95, 95, 0, 41] (iteration 2827) 
+New best h: [100, 100, 0, 40] (iteration 2832) 
+New best h: [100, 100, 0, 41] (iteration 2847) 
+New best h: [105, 105, 0, 41] (iteration 2875) 
+New best h: [105, 105, 0, 44] (iteration 3010) 
+New best h: [110, 110, 0, 43] (iteration 3015) 
+New best h: [110, 110, 0, 44] (iteration 3030) 
+New best h: [115, 115, 0, 43] (iteration 3058) 
+New best h: [115, 115, 0, 44] (iteration 3066) 
+New best h: [135, 135, 0, 41] (iteration 3161) 
+New best h: [135, 135, 0, 42] (iteration 3165) 
+New best h: [135, 135, 0, 45] (iteration 3227) 
+New best h: [140, 140, 0, 44] (iteration 3232) 
+New best h: [140, 140, 0, 45] (iteration 3247) 
+New best h: [145, 145, 0, 44] (iteration 3275) 
+New best h: [145, 145, 0, 45] (iteration 3283) 
+New best h: [145, 145, 0, 48] (iteration 3546) 
+New best h: [150, 150, 0, 47] (iteration 3551) 
+New best h: [150, 150, 0, 48] (iteration 3566) 
+New best h: [155, 155, 0, 48] (iteration 3594) 
+New best h: [165, 165, 0, 45] (iteration 3673) 
+New best h: [165, 165, 0, 46] (iteration 3677) 
+New best h: [165, 165, 0, 49] (iteration 3875) 
+New best h: [170, 170, 0, 48] (iteration 3880) 
+New best h: [170, 170, 0, 49] (iteration 3895) 
+New best h: [175, 175, 0, 49] (iteration 3923) 
+New best h: [180, 180, 0, 51] (iteration 4010) 
+New best h: [180, 180, 0, 52] (iteration 4022) 
+New best h: [185, 185, 0, 54] (iteration 4678) 
+New best h: [190, 190, 0, 52] (iteration 4690) 
+New best h: [190, 190, 0, 53] (iteration 4694) 
+New best h: [200, 190, 10, 52] (iteration 4724) 
+New best h: [200, 190, 10, 53] (iteration 4772) 
+New best h: [200, 190, 10, 54] (iteration 4868) 
+New best h: [205, 195, 10, 56] (iteration 5356) 
+New best h: [215, 205, 10, 56] (iteration 5855) 
+New best h: [215, 205, 10, 57] (iteration 5859) 
+New best h: [215, 205, 10, 58] (iteration 6202) 
+New best h: [215, 205, 10, 60] (iteration 6402) 
+New best h: [220, 205, 15, 60] (iteration 6407) 
+New best h: [220, 205, 15, 61] (iteration 6411) 
+New best h: [220, 205, 15, 62] (iteration 11665) 
+New best h: [220, 205, 15, 63] (iteration 11713) 
+Time limit reached. Abort search.
+Actual search time: 900.014s [t=902.023s]
+Original state h-value: 220
+New state h-value: 220
+Expanded 521324 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 1085271
+Generated 1882686 state(s).
+Dead ends: 164705 state(s).
+Number of registered states: 926605
+Int hash set load factor: 926605/2097152 = 0.44184
+Int hash set resizes: 21
+Open nodes: 326164
+Closed states: 521324
+Search time: 900.126s
+Total time: 902.023s
+Solution found.
+Peak memory: 197548 KB
+search exit code: 0
+

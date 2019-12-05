@@ -1,0 +1,102 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=20000000,max_time=900)' --internal-plan-file sas_plan
+reading input... [t=8.5622e-05s]
+done reading input! [t=0.00366731s]
+Initializing canonical PDB heuristic...
+Generating patterns using the hill climbing generator...
+Done calculating initial pattern collection: 0.000527807s
+Average operator cost: 0.719577
+building causal graph...done! [t=0.00106042s]
+Done calculating initial candidate PDBs
+current collection size is 8
+current initial h value: 4
+pattern: [41, 43] - improvement: 1000
+pattern: [40, 44] - improvement: 1000
+pattern: [39, 45] - improvement: 1000
+pattern: [37, 46] - improvement: 1000
+found a better pattern with improvement 1000
+pattern: [41, 43]
+Hill climbing time so far: 0.095126s
+current collection size is 84
+current initial h value: 9
+pattern: [40, 44] - improvement: 1000
+pattern: [39, 45] - improvement: 1000
+pattern: [37, 46] - improvement: 1000
+found a better pattern with improvement 1000
+pattern: [40, 44]
+Hill climbing time so far: 0.234207s
+current collection size is 160
+current initial h value: 16
+pattern: [39, 45] - improvement: 1000
+pattern: [37, 46] - improvement: 1000
+found a better pattern with improvement 1000
+pattern: [39, 45]
+Hill climbing time so far: 0.459666s
+current collection size is 236
+current initial h value: 23
+pattern: [37, 46] - improvement: 1000
+found a better pattern with improvement 1000
+pattern: [37, 46]
+Hill climbing time so far: 0.786402s
+current collection size is 312
+current initial h value: 30
+Improvement below threshold. Stop hill climbing.
+Hill climbing iterations: 5
+Hill climbing generated patterns: 316
+Hill climbing rejected patterns: 0
+Hill climbing maximum PDB size: 2888
+Hill climbing time: 1.21553s
+Hill climbing generator collection: [[43], [44], [45], [46], [41, 43], [40, 44], [39, 45], [37, 46]]
+Hill climbing generator number of patterns: 8
+Hill climbing generator total PDB size: 312
+Hill climbing generator computation time: 1.21617s
+Running dominance pruning...
+Pruned 15 of 16 pattern cliques
+Pruned 4 of 8 PDBs
+Dominance pruning took 8.799e-06s
+Canonical PDB heuristic number of patterns: 4
+Canonical PDB heuristic total PDB size: 304
+Canonical PDB heuristic computation time: 1.21621s
+Initializing novelty heuristic...
+Number of facts: 0
+Building successor generator...done! [t=1.22418s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000258169s
+Variables: 47
+FactPairs: 274
+Bytes per state: 16
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 1300 reverse operators.
+Built match tree.
+43=0 44=0 45=0 46=0 
+Inserting initial (goal) state...
+New best h: [0, 0, 7] (iteration 0) 
+New best h: [0, 0, 8] (iteration 212) 
+New best h: [47, 1, 8] (iteration 213) 
+New best h: [47, 2, 10] (iteration 357) 
+Reached iteration limit.
+Actual search time: 276.871s [t=278.097s]
+Original state h-value: 47
+New state h-value: 47
+Expanded 17910038 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 20000777
+Generated 52042628 state(s).
+Dead ends: 8955021 state(s).
+Number of registered states: 20000192
+Int hash set load factor: 20000192/33554432 = 0.596052
+Int hash set resizes: 25
+Open nodes: 2089963
+Closed states: 17910038
+Search time: 276.873s
+Total time: 278.097s
+Solution found.
+Peak memory: 1593572 KB
+search exit code: 0
+

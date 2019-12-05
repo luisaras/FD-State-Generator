@@ -1,0 +1,117 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=20000000,max_time=900)' --internal-plan-file sas_plan
+reading input... [t=9.4358e-05s]
+done reading input! [t=0.000404669s]
+Initializing canonical PDB heuristic...
+Generating patterns using the hill climbing generator...
+Done calculating initial pattern collection: 0.000104302s
+Average operator cost: 1
+building causal graph...done! [t=3.5359e-05s]
+Done calculating initial candidate PDBs
+current collection size is 8
+current initial h value: 4
+pattern: [0, 1] - improvement: 62
+pattern: [0, 2] - improvement: 145
+pattern: [0, 3] - improvement: 235
+pattern: [0, 4] - improvement: 203
+found a better pattern with improvement 235
+pattern: [0, 3]
+Hill climbing time so far: 0.00303798s
+current collection size is 26
+current initial h value: 4
+pattern: [0, 1] - improvement: 50
+pattern: [0, 2] - improvement: 174
+pattern: [0, 4] - improvement: 142
+pattern: [0, 1, 3] - improvement: 150
+pattern: [0, 2, 3] - improvement: 406
+pattern: [0, 3, 4] - improvement: 265
+found a better pattern with improvement 406
+pattern: [0, 2, 3]
+Hill climbing time so far: 0.00568512s
+current collection size is 62
+current initial h value: 6
+pattern: [0, 1] - improvement: 30
+pattern: [0, 4] - improvement: 140
+pattern: [0, 1, 3] - improvement: 42
+pattern: [0, 3, 4] - improvement: 218
+pattern: [0, 1, 2, 3] - improvement: 42
+pattern: [0, 2, 3, 4] - improvement: 276
+found a better pattern with improvement 276
+pattern: [0, 2, 3, 4]
+Hill climbing time so far: 0.00940093s
+current collection size is 134
+current initial h value: 6
+pattern: [0, 1] - improvement: 43
+pattern: [0, 1, 3] - improvement: 62
+pattern: [0, 1, 2, 3] - improvement: 62
+pattern: [0, 1, 2, 3, 4] - improvement: 95
+found a better pattern with improvement 95
+pattern: [0, 1, 2, 3, 4]
+Hill climbing time so far: 0.0132228s
+current collection size is 278
+current initial h value: 6
+Improvement below threshold. Stop hill climbing.
+Hill climbing iterations: 5
+Hill climbing generated patterns: 10
+Hill climbing rejected patterns: 0
+Hill climbing maximum PDB size: 144
+Hill climbing time: 0.0171241s
+Hill climbing generator collection: [[1], [2], [3], [4], [0, 3], [0, 2, 3], [0, 2, 3, 4], [0, 1, 2, 3, 4]]
+Hill climbing generator number of patterns: 8
+Hill climbing generator total PDB size: 278
+Hill climbing generator computation time: 0.0172703s
+Running dominance pruning...
+Pruned 4 of 5 pattern cliques
+Pruned 7 of 8 PDBs
+Dominance pruning took 8.852e-06s
+Canonical PDB heuristic number of patterns: 1
+Canonical PDB heuristic total PDB size: 144
+Canonical PDB heuristic computation time: 0.0173246s
+Initializing novelty heuristic...
+Number of facts: 0
+Building successor generator...done! [t=0.021766s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 9.491e-06s
+Variables: 5
+FactPairs: 17
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 33 reverse operators.
+Built match tree.
+1=0 2=0 3=0 4=0 
+Inserting initial (goal) state...
+New best h: [0, 0, 5] (iteration 0) 
+Found first concrete state.
+Found first concrete state.
+New best h: [5, 1, 5] (iteration 2) 
+New best h: [5, 2, 5] (iteration 18) 
+New best h: [5, 3, 5] (iteration 24) 
+New best h: [5, 4, 5] (iteration 27) 
+New best h: [5, 5, 5] (iteration 31) 
+New best h: [5, 7, 5] (iteration 63) 
+Completely explored state space.
+Actual search time: 0.000753785s [t=0.0227252s]
+Original state h-value: 5
+New state h-value: 5
+Expanded 145 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 298
+Generated 417 state(s).
+Dead ends: 32 state(s).
+Number of registered states: 145
+Int hash set load factor: 145/256 = 0.566406
+Int hash set resizes: 8
+Open nodes: 0
+Closed states: 145
+Search time: 0.000862103s
+Total time: 0.0227297s
+Solution found.
+Peak memory: 67896 KB
+search exit code: 0
+

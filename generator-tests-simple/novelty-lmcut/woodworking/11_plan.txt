@@ -1,0 +1,70 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty-lmcut/woodworking/11_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=7.8729e-05s]
+done reading input! [t=0.00492988s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00762436s]
+peak memory difference for successor generator creation: 132 KB
+time for successor generation creation: 0.000485203s
+Variables: 77
+FactPairs: 200
+Bytes per state: 16
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00805015s, 68440 KB]
+f = 9 [1 evaluated, 0 expanded, t=0.00807842s, 68440 KB]
+Initial heuristic value for lmcut: 9
+New best heuristic value for lmcut: 8
+[g=1, 2 evaluated, 1 expanded, t=0.00836072s, 68440 KB]
+New best heuristic value for lmcut: 7
+[g=2, 55 evaluated, 2 expanded, t=0.0213707s, 68440 KB]
+New best heuristic value for lmcut: 6
+[g=3, 104 evaluated, 3 expanded, t=0.032018s, 68440 KB]
+New best heuristic value for lmcut: 5
+[g=4, 161 evaluated, 4 expanded, t=0.0428767s, 68440 KB]
+New best heuristic value for lmcut: 4
+[g=5, 218 evaluated, 5 expanded, t=0.0524362s, 68440 KB]
+New best heuristic value for lmcut: 3
+[g=6, 279 evaluated, 6 expanded, t=0.0613574s, 68440 KB]
+New best heuristic value for lmcut: 2
+[g=7, 362 evaluated, 7 expanded, t=0.0714525s, 68440 KB]
+New best heuristic value for lmcut: 1
+[g=8, 427 evaluated, 8 expanded, t=0.0778743s, 68440 KB]
+New best heuristic value for lmcut: 0
+[g=9, 501 evaluated, 9 expanded, t=0.0836825s, 68440 KB]
+Solution found! Cost: 9
+Actual search time: 0.0756046s [t=0.0837201s]
+op589) do-plane p4 planer0 rough green colourfragments (1)
+op805) do-saw-medium b0 p3 saw0 teak smooth s6 s5 s4 (1)
+op405) do-plane p0 planer0 rough red colourfragments (1)
+op652) do-plane p5 planer0 rough red colourfragments (1)
+op295) do-grind p6 grinder0 smooth red colourfragments untreated (1)
+op746) do-plane p7 planer0 rough red colourfragments (1)
+op379) do-immersion-varnish p5 immersion-varnisher0 blue smooth (1)
+op391) do-immersion-varnish p7 immersion-varnisher0 blue smooth (1)
+op83) do-glaze p3 glazer0 blue (1)
+Plan length: 9 step(s).
+Plan cost: 9
+Expanded 10 state(s).
+Reopened 0 state(s).
+Evaluated 501 state(s).
+Evaluations: 501
+Generated 686 state(s).
+Dead ends: 2 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 501
+Int hash set load factor: 501/512 = 0.978516
+Int hash set resizes: 9
+Open nodes: 489
+Closed states: 10
+Search time: 0.0759782s
+Total time: 0.0837248s
+Solution found.
+Peak memory: 68440 KB
+search exit code: 0
+

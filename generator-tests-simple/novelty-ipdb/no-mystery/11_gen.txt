@@ -1,0 +1,121 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=20000000,max_time=900)' --internal-plan-file sas_plan
+reading input... [t=7.324e-05s]
+done reading input! [t=0.00133899s]
+Initializing canonical PDB heuristic...
+Generating patterns using the hill climbing generator...
+Done calculating initial pattern collection: 0.000139812s
+Average operator cost: 1
+building causal graph...done! [t=4.8108e-05s]
+Done calculating initial candidate PDBs
+current collection size is 15
+current initial h value: 6
+pattern: [0, 2] - improvement: 965
+pattern: [0, 3] - improvement: 949
+pattern: [0, 4] - improvement: 974
+found a better pattern with improvement 974
+pattern: [0, 4]
+Hill climbing time so far: 0.00418799s
+current collection size is 35
+current initial h value: 8
+pattern: [0, 2] - improvement: 295
+pattern: [0, 3] - improvement: 308
+pattern: [0, 1, 4] - improvement: 968
+pattern: [0, 2, 4] - improvement: 697
+pattern: [0, 3, 4] - improvement: 771
+found a better pattern with improvement 968
+pattern: [0, 1, 4]
+Hill climbing time so far: 0.0094092s
+current collection size is 555
+current initial h value: 8
+pattern: [0, 2] - improvement: 262
+pattern: [0, 3] - improvement: 250
+pattern: [0, 2, 4] - improvement: 638
+pattern: [0, 3, 4] - improvement: 516
+pattern: [0, 1, 2, 4] - improvement: 858
+pattern: [0, 1, 3, 4] - improvement: 797
+found a better pattern with improvement 858
+pattern: [0, 1, 2, 4]
+Hill climbing time so far: 0.0170185s
+current collection size is 3155
+current initial h value: 11
+pattern: [0, 3] - improvement: 2
+pattern: [0, 3, 4] - improvement: 2
+pattern: [0, 1, 3, 4] - improvement: 233
+pattern: [0, 1, 2, 3, 4] - improvement: 657
+found a better pattern with improvement 657
+pattern: [0, 1, 2, 3, 4]
+Hill climbing time so far: 0.0247519s
+current collection size is 16155
+current initial h value: 12
+Improvement below threshold. Stop hill climbing.
+Hill climbing iterations: 5
+Hill climbing generated patterns: 9
+Hill climbing rejected patterns: 0
+Hill climbing maximum PDB size: 13000
+Hill climbing time: 0.0337104s
+Hill climbing generator collection: [[2], [3], [4], [0, 4], [0, 1, 4], [0, 1, 2, 4], [0, 1, 2, 3, 4]]
+Hill climbing generator number of patterns: 7
+Hill climbing generator total PDB size: 16155
+Hill climbing generator computation time: 0.0338859s
+Running dominance pruning...
+Pruned 4 of 5 pattern cliques
+Pruned 6 of 7 PDBs
+Dominance pruning took 8.301e-06s
+Canonical PDB heuristic number of patterns: 1
+Canonical PDB heuristic total PDB size: 13000
+Canonical PDB heuristic computation time: 0.0339273s
+Initializing novelty heuristic...
+Number of facts: 0
+Building successor generator...done! [t=0.037653s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 7.5218e-05s
+Variables: 5
+FactPairs: 45
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 230 reverse operators.
+Built match tree.
+2=0 3=0 4=1 
+Inserting initial (goal) state...
+New best h: [0, 0, 5] (iteration 0) 
+New best h: [5, 1, 4] (iteration 91) 
+Found first concrete state.
+Found first concrete state.
+New best h: [5, 2, 5] (iteration 94) 
+New best h: [5, 3, 5] (iteration 147) 
+New best h: [5, 4, 5] (iteration 150) 
+New best h: [5, 5, 5] (iteration 154) 
+New best h: [5, 6, 5] (iteration 157) 
+New best h: [5, 7, 5] (iteration 215) 
+New best h: [5, 8, 5] (iteration 217) 
+New best h: [5, 9, 5] (iteration 230) 
+New best h: [5, 10, 5] (iteration 330) 
+New best h: [5, 11, 5] (iteration 386) 
+New best h: [5, 13, 5] (iteration 1643) 
+Completely explored state space.
+Actual search time: 0.0319482s [t=0.069965s]
+Original state h-value: 5
+New state h-value: 5
+Expanded 6329 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 12750
+Generated 17518 state(s).
+Dead ends: 324 state(s).
+Number of registered states: 6333
+Int hash set load factor: 6333/8192 = 0.773071
+Int hash set resizes: 13
+Open nodes: 0
+Closed states: 6329
+Search time: 0.0322071s
+Total time: 0.0699697s
+Solution found.
+Peak memory: 68296 KB
+search exit code: 0
+

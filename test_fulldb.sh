@@ -19,8 +19,8 @@ for p in "${ALLDOMAINS[@]}"; do
         TASK_INPUT=${PDDL_DIR}/instances/instance-$i.pddl
 
         OUTPUT=$(
-            ulimit -v 2000000
-            ulimit -t 300
+            ulimit -S -v 4000000
+            ulimit -S -t 600
             ./fast-downward.py --debug --translate --sas-file output.sas ${DOMAIN_INPUT} ${TASK_INPUT}
             ./fast-downward.py --debug output.sas --search "eager_greedy([pdb(greedy(max_states=infinity))])"
         )

@@ -1,0 +1,61 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=20000000,max_time=900)' --internal-plan-file sas_plan
+reading input... [t=8.5633e-05s]
+done reading input! [t=0.00204548s]
+Generating a pattern using the greedy generator...
+building causal graph...done! [t=0.000398837s]
+Greedy generator pattern: [0, 1, 2, 3, 4, 5, 6, 7]
+Greedy generator number of variables: 8
+Greedy generator PDB size: 4096
+Greedy generator computation time: 0.000422567s
+Initializing novelty heuristic...
+Number of facts: 0
+Building successor generator...done! [t=0.00510934s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000183023s
+Variables: 8
+FactPairs: 24
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+Building reverse operators...
+Created 760 reverse operators.
+Built match tree.
+0=1 1=2 2=3 3=0 4=0 5=0 6=0 7=0 
+Inserting initial (goal) state...
+Found first concrete state.
+Found first concrete state.
+New best h: [8, 1, 8] (iteration 0) 
+New best h: [8, 3, 8] (iteration 1) 
+New best h: [8, 4, 8] (iteration 2) 
+New best h: [8, 6, 8] (iteration 3) 
+New best h: [8, 7, 8] (iteration 4) 
+New best h: [8, 9, 8] (iteration 5) 
+New best h: [8, 10, 8] (iteration 6) 
+New best h: [8, 12, 8] (iteration 7) 
+New best h: [8, 13, 8] (iteration 8) 
+New best h: [8, 14, 8] (iteration 9) 
+New best h: [8, 15, 8] (iteration 10) 
+Completely explored state space.
+Actual search time: 0.000399208s [t=0.00641737s]
+Original state h-value: 8
+New state h-value: 8
+Expanded 64 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 127
+Generated 128 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 64
+Int hash set load factor: 64/64 = 1
+Int hash set resizes: 6
+Open nodes: 0
+Closed states: 64
+Search time: 0.00120327s
+Total time: 0.00642213s
+Solution found.
+Peak memory: 68164 KB
+search exit code: 0
+

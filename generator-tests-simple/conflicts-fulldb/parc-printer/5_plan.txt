@@ -1,0 +1,69 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/conflicts-fulldb/parc-printer/5_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=4.0572e-05s]
+done reading input! [t=0.00054723s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00269777s]
+peak memory difference for successor generator creation: 132 KB
+time for successor generation creation: 8.7581e-05s
+Variables: 35
+FactPairs: 100
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.0029507s, 67896 KB]
+f = 8 [1 evaluated, 0 expanded, t=0.00298835s, 67896 KB]
+Initial heuristic value for lmcut: 8
+New best heuristic value for lmcut: 8
+[g=1, 2 evaluated, 1 expanded, t=0.00310256s, 67896 KB]
+New best heuristic value for lmcut: 7
+[g=1, 3 evaluated, 1 expanded, t=0.00319756s, 67896 KB]
+New best heuristic value for lmcut: 6
+[g=2, 10 evaluated, 2 expanded, t=0.00361282s, 67896 KB]
+New best heuristic value for lmcut: 5
+[g=3, 18 evaluated, 3 expanded, t=0.0040237s, 67896 KB]
+New best heuristic value for lmcut: 4
+[g=4, 29 evaluated, 4 expanded, t=0.00445179s, 67896 KB]
+New best heuristic value for lmcut: 3
+[g=5, 36 evaluated, 5 expanded, t=0.00474227s, 67896 KB]
+New best heuristic value for lmcut: 2
+[g=6, 48 evaluated, 6 expanded, t=0.00514512s, 67896 KB]
+New best heuristic value for lmcut: 1
+[g=7, 52 evaluated, 7 expanded, t=0.0052815s, 67896 KB]
+New best heuristic value for lmcut: 0
+[g=8, 59 evaluated, 8 expanded, t=0.00549628s, 67896 KB]
+Solution found! Cost: 8
+Actual search time: 0.00261146s [t=0.00564733s]
+op34) lc1-invertfromime-letter sheet1 back front (1)
+op42) lc1-inverttoime-letter sheet2 back front (1)
+op61) lime-simplexmono-letter sheet2 front image-2 (1)
+op44) lc1-inverttoime-letter sheet3 back front (1)
+op66) lime-simplexmono-letter sheet3 front image-3 (1)
+op6) hw1-bottomrightentrytobottomleftexit-letter sheet1 (1)
+op46) lc1-toime-letter sheet1 (1)
+op50) lime-simplex-letter sheet1 front image-1 (1)
+Plan length: 8 step(s).
+Plan cost: 8
+Expanded 9 state(s).
+Reopened 0 state(s).
+Evaluated 64 state(s).
+Evaluations: 64
+Generated 64 state(s).
+Dead ends: 10 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 64
+Int hash set load factor: 64/64 = 1
+Int hash set resizes: 6
+Open nodes: 45
+Closed states: 9
+Search time: 0.00281532s
+Total time: 0.0056536s
+Solution found.
+Peak memory: 67896 KB
+search exit code: 0
+
