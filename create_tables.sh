@@ -2,11 +2,10 @@
 table() 
 {
 	TASK=$1-limited/$2
-	$i=$3 # Instance number
 
-	GEN_OUTPUT=${TASK}/${i}_gen.txt
-	PLAN_OUTPUT=${TASK}/${i}_plan.txt
-	PLAN_OUTPUT_OLD=planner/$2/${i}_plan.txt
+	GEN_OUTPUT=${TASK}/${3}_gen.txt
+	PLAN_OUTPUT=${TASK}/${3}_plan.txt
+	PLAN_OUTPUT_OLD=planner/$2/${3}_plan.txt
 
 	EXPANDED=$(grep "Expanded" ${GEN_OUTPUT} | tr -d "Expanded " | tr -d " state(s).")
 	SEARCH_TIME=$(grep "Search time" ${GEN_OUTPUT} | tr -d "Search time: " | tr -d " s")
@@ -30,7 +29,8 @@ table()
 		NODES_OLD="-"
 	fi
 
-	echo "$2$i	$LENGTH_OLD	$LENGTH_NEW	$NODES_OLD	$NODES_NEW	$H_OLD	$H_NEW		$EXPANDED	$SEARCH_TIME	$TOTAL_TIME" >> ${TASK}.dat
+	echo "$2$3	$LENGTH_OLD	$LENGTH_NEW	$NODES_OLD	$NODES_NEW	$H_OLD	$H_NEW		$EXPANDED	$SEARCH_TIME	$TOTAL_TIME" >> ${TASK}.dat
+    echo "$2$3	$LENGTH_OLD	$LENGTH_NEW	$NODES_OLD	$NODES_NEW	$H_OLD	$H_NEW		$EXPANDED	$SEARCH_TIME	$TOTAL_TIME" >> $1/all_tasks.dat
 
 }
 
@@ -99,6 +99,7 @@ instances_simple() {
     instance visit-all 8
     instance visit-all 10
     instance woodworking 11
+    
 	cd ..
 }
 
