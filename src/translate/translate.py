@@ -599,6 +599,10 @@ def pddl_to_sas(task):
             variable_order.find_and_apply_variable_order(
                 sas_task, options.reorder_variables,
                 options.filter_unimportant_vars)
+    
+    if options.unit_costs:
+        for op in sas_task.operators:
+            op.cost = 1
 
     if options.tnf:
         sas_task.transform_to_tnf()

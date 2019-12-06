@@ -57,6 +57,9 @@ def parse_args():
     argparser.add_argument(
         "--tnf", action="store_true",
         help="translate to TNF")
+    argparser.add_argument(
+        "--unit-costs", action="store_true",
+        help="set all action costs as 1")
     return argparser.parse_args()
 
 

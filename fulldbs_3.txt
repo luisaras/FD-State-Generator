@@ -1,0 +1,15 @@
+blocks probBLOCKS-4-0
+blocks probBLOCKS-6-0
+blocks probBLOCKS-7-2
+elevators-opt08-strips p01
+elevators-opt08-strips p03
+elevators-opt08-strips p11
+gripper prob01
+gripper prob03
+gripper prob05
+visitall-opt11-strips problem02-full
+visitall-opt11-strips problem04-full
+visitall-opt11-strips problem06-half
+miconic s1-0
+miconic s5-2
+miconic s11-4

@@ -11,8 +11,6 @@ class NoveltyRecord {
     int level;
     std::vector<std::set<std::vector<FactPair>>> reached_facts;
 protected:
-    int get_value_1(std::set<std::vector<FactPair>>& reached_facts, const std::vector<int>& state_values);
-    int get_value_2(std::set<std::vector<FactPair>>& reached_facts, const std::vector<int>& state_values);
     int get_value(std::vector<FactPair>& tuple, int l, std::set<std::vector<FactPair>>& reached_facts, const std::vector<int>& state_values);
 public:
     NoveltyRecord(const std::shared_ptr<AbstractTask>& task, int level = 1);

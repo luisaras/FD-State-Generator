@@ -12,8 +12,8 @@ ALIASES = {}
 def add_gen_aliases(ALIASES):
 
   GENERATORS = {}
-  GENERATORS[""] = "generator_abstract([%s],max_it=20000000,max_time=900)"
-  GENERATORS["-limited"] = "generator_abstract([%s],max_it=20000,max_time=300)"
+  GENERATORS[""] = "generator_abstract([%s],max_it=50000000,max_time=900)"
+  GENERATORS["-limited"] = "generator_abstract([%s],max_it=50000,max_time=300)"
   H = "h"
   NOVELTY = "novelty_h(prune=false,eval=h,reverse=true),h"
   CONFLICTS = "sum([weight(pho2,-1),pho3]),pho3,h"
@@ -26,7 +26,7 @@ def add_gen_aliases(ALIASES):
   HEURISTICS["pho3"] = "pho3=operatorcounting([pho_constraints(systematic(3))])"
   HEURISTICS["pho2"] = "pho2=operatorcounting([pho_constraints(systematic(2))])"
 
-  for h in ["lmcut", "fulldb", "astar"]:
+  for h in ["lmcut", "ipdb", "fulldb", "astar"]:
     for l in ["", "-limited"]:
       ALIASES["gen-" + h + l] = [
         "--evaluator", HEURISTICS[h],

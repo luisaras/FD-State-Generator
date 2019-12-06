@@ -3,8 +3,8 @@ PLANNER="astar(lmcut())" # Five minutes
 TRANSLATOR_TEMP=output.sas
 SEARCH_TEMP=sas_plan
 
-PLANNER_TIME=300
-PLANNER_MEM=2000000
+PLANNER_TIME=300 # 5 minutes
+PLANNER_MEM=2000000 # 2GB
 
 set_output_dir() {
     # Create folders
@@ -21,6 +21,14 @@ set_output_dir() {
     fi
     # Output directory 
     OUTPUT_DIR=$TEST_FOLDER/$METHOD/$TASK
+}
+
+set_files_ipc() {
+    # Input directory
+    local PDDL_DIR=../ipc/$1
+    # Input files
+    DOMAIN_INPUT=${PDDL_DIR}/domain.pddl
+    TASK_INPUT=${PDDL_DIR}/$2.pddl
 }
 
 set_files_ipc11() {
@@ -66,7 +74,7 @@ generate()  {
         rm $TRANSLATOR_TEMP
     fi
     local TRANSLATOR_MSG=$(
-        ./fast-downward.py --translate --sas-file $TRANSLATOR_TEMP $DOMAIN_INPUT $TASK_INPUT
+        ./fast-downward.py --translate --sas-file $TRANSLATOR_TEMP $DOMAIN_INPUT $TASK_INPUT --translator-options --unit-costs
     )
     if [ ! -f $TRANSLATOR_TEMP ]; then
         echo $TRANSLATOR_MSG
@@ -126,7 +134,7 @@ plan() {
         rm $TRANSLATOR_TEMP
     fi
     TRANSLATOR_MSG=$(
-        ./fast-downward.py --translate --sas-file $TRANSLATOR_TEMP $DOMAIN_INPUT $TASK_INPUT
+        ./fast-downward.py --translate --sas-file $TRANSLATOR_TEMP $DOMAIN_INPUT $TASK_INPUT --translator-options --unit-costs
     )
     if [ ! -f $TRANSLATOR_TEMP ]; then
         echo $TRANSLATOR_MSG
@@ -160,7 +168,7 @@ ALLGEN=("" "novelty-" "conflicts-")
 test() {
     local PROBLEM=$1
     local INST=$2
-    #plan $1 $2 $PLANNER
+    plan $1 $2 $PLANNER
     for h in "${ALLH[@]}"; do
         for g in "${ALLGEN[@]}"; do
             generate $PROBLEM $INST $g$h$LIMIT $BENCHMARKS
@@ -194,8 +202,30 @@ test_ipc11() {
 
 test_simple() {
     ALLH=(lmcut ipdb fulldb)
-    BENCHMARKS=ipc11
+    BENCHMARKS=ipc
     TEST_FOLDER=generator-tests-simple
+    test blocks probBLOCKS-4-0
+    test blocks probBLOCKS-6-0
+    test blocks probBLOCKS-7-2
+    test elevators-opt08-strips p01
+    test elevators-opt08-strips p03
+    test elevators-opt08-strips p11
+    test gripper prob01
+    test gripper prob03
+    test gripper prob05
+    test visitall-opt11-strips problem02-full
+    test visitall-opt11-strips problem04-full
+    test visitall-opt11-strips problem06-half
+    test miconic s1-0
+    test miconic s5-2
+    test miconic s11-4
+    cd ..
+}
+
+test_simple_old() {
+    ALLH=(lmcut ipdb fulldb)
+    BENCHMARKS=ipc11
+    TEST_FOLDER=generator-tests-simple-old
     test elevator 1
     test no-mystery 1
     test no-mystery 2

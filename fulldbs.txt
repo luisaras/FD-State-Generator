@@ -1,300 +1,282 @@
-barman1
-barman2
-barman3
-barman4
-barman5
-barman6
-barman7
-barman8
-barman9
-barman10
-barman11
-barman12
-barman13
-barman14
-barman15
-barman16
-barman17
-barman18
-barman19
-barman20
-elevator1 Solution found! Cost: 60
-elevator2
-elevator3
-elevator4
-elevator5
-elevator6
-elevator7
-elevator8
-elevator9
-elevator10
-elevator11
-elevator12
-elevator13
-elevator14
-elevator15
-elevator16
-elevator17
-elevator18
-elevator19
-elevator20
-floor-tile1
-floor-tile2
-floor-tile3
-floor-tile4
-floor-tile5
-floor-tile6
-floor-tile7
-floor-tile8
-floor-tile9
-floor-tile10
-floor-tile11
-floor-tile12
-floor-tile13
-floor-tile14
-floor-tile15
-floor-tile16
-floor-tile17
-floor-tile18
-floor-tile19
-floor-tile20
-no-mystery1 Solution found! Cost: 11
-no-mystery2 Solution found! Cost: 14
-no-mystery3 Solution found! Cost: 15
-no-mystery4
-no-mystery5
-no-mystery6
-no-mystery7
-no-mystery8
-no-mystery9
-no-mystery10
-no-mystery11 Solution found! Cost: 12
-no-mystery12 Solution found! Cost: 14
-no-mystery13 Solution found! Cost: 15
-no-mystery14 Solution found! Cost: 19
-no-mystery15
-no-mystery16
-no-mystery17
-no-mystery18
-no-mystery19
-no-mystery20
-openstacks1
-openstacks2
-openstacks3
-openstacks4
-openstacks5
-openstacks6
-openstacks7
-openstacks8
-openstacks9
-openstacks10
-openstacks11
-openstacks12
-openstacks13
-openstacks14
-openstacks15
-openstacks16
-openstacks17
-openstacks18
-openstacks19
-openstacks20
-parc-printer1
-parc-printer2
-parc-printer3
-parc-printer4
-parc-printer5 Solution found! Cost: 519232
-parc-printer6
-parc-printer7
-parc-printer8 Solution found! Cost: 929640
-parc-printer9
-parc-printer10
-parc-printer11
-parc-printer12
-parc-printer13
-parc-printer14
-parc-printer15
-parc-printer16
-parc-printer17
-parc-printer18
-parc-printer19
-parc-printer20
-parking1
-parking2
-parking3
-parking4
-parking5
-parking6
-parking7
-parking8
-parking9
-parking10
-parking11
-parking12
-parking13
-parking14
-parking15
-parking16
-parking17
-parking18
-parking19
-parking20
-peg-solitaire1
-peg-solitaire2
-peg-solitaire3
-peg-solitaire4
-peg-solitaire5
-peg-solitaire6
-peg-solitaire7
-peg-solitaire8
-peg-solitaire9
-peg-solitaire10
-peg-solitaire11
-peg-solitaire12
-peg-solitaire13
-peg-solitaire14
-peg-solitaire15
-peg-solitaire16
-peg-solitaire17
-peg-solitaire18
-peg-solitaire19
-peg-solitaire20
-scanalyzer-3d1 Solution found! Cost: 13
-scanalyzer-3d2 Solution found! Cost: 22
-scanalyzer-3d3 Solution found! Cost: 26
-scanalyzer-3d4
-scanalyzer-3d5
-scanalyzer-3d6
-scanalyzer-3d7
-scanalyzer-3d8
-scanalyzer-3d9
-scanalyzer-3d10
-scanalyzer-3d11
-scanalyzer-3d12
-scanalyzer-3d13
-scanalyzer-3d14
-scanalyzer-3d15
-scanalyzer-3d16
-scanalyzer-3d17
-scanalyzer-3d18
-scanalyzer-3d19
-scanalyzer-3d20
-sokoban1
-sokoban2
-sokoban3
-sokoban4
-sokoban5
-sokoban6
-sokoban7
-sokoban8
-sokoban9
-sokoban10
-sokoban11
-sokoban12
-sokoban13
-sokoban14
-sokoban15
-sokoban16
-sokoban17
-sokoban18
-sokoban19 Solution found! Cost: 74
-sokoban20
-storage1
-storage2
-storage3
-storage4
-storage5
-storage6
-storage7
-storage8
-storage9
-storage10
-storage11
-storage12
-storage13
-storage14
-storage15
-storage16
-storage17
-storage18
-storage19
-storage20
-tidybot1
-tidybot2
-tidybot3
-tidybot4
-tidybot5
-tidybot6
-tidybot7
-tidybot8
-tidybot9
-tidybot10
-tidybot11
-tidybot12
-tidybot13
-tidybot14
-tidybot15
-tidybot16
-tidybot17
-tidybot18
-tidybot19
-tidybot20
-transport1 Solution found! Cost: 632
-transport2 Solution found! Cost: 262
-transport3 Solution found! Cost: 643
-transport4
-transport5
-transport6
-transport7
-transport8
-transport9
-transport10
-transport11
-transport12
-transport13
-transport14
-transport15
-transport16
-transport17
-transport18
-transport19
-transport20
-visit-all1 Solution found! Cost: 3
-visit-all2 Solution found! Cost: 1
-visit-all3 Solution found! Cost: 8
-visit-all4 Solution found! Cost: 6
-visit-all5 Solution found! Cost: 15
-visit-all6 Solution found! Cost: 11
-visit-all7
-visit-all8 Solution found! Cost: 18
-visit-all9
-visit-all10 Solution found! Cost: 23
-visit-all11
-visit-all12
-visit-all13
-visit-all14
-visit-all15
-visit-all16
-visit-all17
-visit-all18
-visit-all19
-visit-all20
-woodworking1
-woodworking2
-woodworking3
-woodworking4
-woodworking5
-woodworking6
-woodworking7
-woodworking8
-woodworking9
-woodworking10
-woodworking11 Solution found! Cost: 350
-woodworking12
-woodworking13
-woodworking14
-woodworking15
-woodworking16
-woodworking17
-woodworking18
-woodworking19
-woodworking20
+blocks probBLOCKS-4-0
+blocks probBLOCKS-4-1
+blocks probBLOCKS-4-2
+blocks probBLOCKS-5-0
+blocks probBLOCKS-5-1
+blocks probBLOCKS-5-2
+blocks probBLOCKS-6-0
+blocks probBLOCKS-6-1
+blocks probBLOCKS-6-2
+blocks probBLOCKS-7-0
+blocks probBLOCKS-7-1
+blocks probBLOCKS-7-2
+depot p01
+driverlog p01
+driverlog p02
+driverlog p03
+driverlog p04
+driverlog p05
+elevators-opt08-strips p01
+elevators-opt08-strips p02
+elevators-opt08-strips p03
+elevators-opt08-strips p11
+elevators-opt11-strips p01
+elevators-opt11-strips p04
+ged-opt14-strips d-1-2
+ged-opt14-strips d-1-4
+ged-opt14-strips d-2-1
+ged-opt14-strips d-2-4
+ged-opt14-strips d-4-2
+gripper prob01
+gripper prob02
+gripper prob03
+gripper prob04
+gripper prob05
+hiking-opt14-strips ptesting-1-2-3
+hiking-opt14-strips ptesting-1-2-4
+hiking-opt14-strips ptesting-1-2-7
+hiking-opt14-strips ptesting-1-2-8
+hiking-opt14-strips ptesting-2-2-3
+hiking-opt14-strips ptesting-2-2-4
+hiking-opt14-strips ptesting-2-2-5
+hiking-opt14-strips ptesting-2-2-6
+hiking-opt14-strips ptesting-2-3-4
+hiking-opt14-strips ptesting-2-3-5
+hiking-opt14-strips ptesting-2-4-3
+hiking-opt14-strips ptesting-2-4-4
+logistics00 probLOGISTICS-4-0
+logistics00 probLOGISTICS-4-1
+logistics00 probLOGISTICS-4-2
+logistics00 probLOGISTICS-5-0
+logistics00 probLOGISTICS-5-1
+logistics00 probLOGISTICS-5-2
+logistics00 probLOGISTICS-6-0
+logistics00 probLOGISTICS-6-1
+logistics00 probLOGISTICS-6-2
+logistics00 probLOGISTICS-6-9
+logistics00 probLOGISTICS-7-0
+logistics00 probLOGISTICS-7-1
+logistics98 prob31
+logistics98 prob32
+miconic s1-0
+miconic s1-1
+miconic s1-2
+miconic s1-3
+miconic s1-4
+miconic s10-0
+miconic s10-1
+miconic s10-2
+miconic s10-3
+miconic s10-4
+miconic s11-0
+miconic s11-1
+miconic s11-2
+miconic s11-3
+miconic s11-4
+miconic s2-0
+miconic s2-1
+miconic s2-2
+miconic s2-3
+miconic s2-4
+miconic s3-0
+miconic s3-1
+miconic s3-2
+miconic s3-3
+miconic s3-4
+miconic s4-0
+miconic s4-1
+miconic s4-2
+miconic s4-3
+miconic s4-4
+miconic s5-0
+miconic s5-1
+miconic s5-2
+miconic s5-3
+miconic s5-4
+miconic s6-0
+miconic s6-1
+miconic s6-2
+miconic s6-3
+miconic s6-4
+miconic s7-0
+miconic s7-1
+miconic s7-2
+miconic s7-3
+miconic s7-4
+miconic s8-0
+miconic s8-1
+miconic s8-2
+miconic s8-3
+miconic s8-4
+miconic s9-0
+miconic s9-1
+miconic s9-2
+miconic s9-3
+miconic s9-4
+movie prob01
+movie prob02
+movie prob03
+movie prob04
+movie prob05
+movie prob06
+movie prob07
+movie prob08
+movie prob09
+movie prob10
+movie prob11
+movie prob12
+movie prob13
+movie prob14
+movie prob15
+movie prob16
+movie prob17
+movie prob18
+movie prob19
+movie prob20
+movie prob21
+movie prob22
+movie prob23
+movie prob24
+movie prob25
+movie prob26
+movie prob27
+movie prob28
+movie prob29
+movie prob30
+mprime prob25
+mystery prob01
+mystery prob07
+mystery prob18
+mystery prob25
+nomystery-opt11-strips p01
+nomystery-opt11-strips p02
+nomystery-opt11-strips p03
+nomystery-opt11-strips p04
+nomystery-opt11-strips p11
+nomystery-opt11-strips p12
+nomystery-opt11-strips p13
+nomystery-opt11-strips p14
+openstacks-opt08-strips p01
+openstacks-opt08-strips p02
+openstacks-opt08-strips p03
+openstacks-opt08-strips p04
+openstacks-opt08-strips p05
+openstacks-strips p01
+openstacks-strips p02
+openstacks-strips p03
+openstacks-strips p04
+openstacks-strips p05
+parcprinter-08-strips p01
+parcprinter-08-strips p11
+parcprinter-08-strips p21
+pathways-noneg p01
+pegsol-08-strips p01
+pegsol-08-strips p05
+psr-small p01-s2-n1-l2-f50
+psr-small p02-s5-n1-l3-f30
+psr-small p03-s7-n1-l3-f70
+psr-small p04-s8-n1-l4-f10
+psr-small p05-s9-n1-l4-f30
+psr-small p06-s10-n1-l4-f50
+psr-small p07-s11-n1-l4-f70
+psr-small p08-s12-n1-l5-f10
+psr-small p09-s13-n1-l5-f30
+psr-small p10-s17-n2-l2-f30
+psr-small p11-s18-n2-l2-f50
+psr-small p12-s21-n2-l3-f30
+psr-small p13-s22-n2-l3-f50
+psr-small p14-s23-n2-l3-f70
+psr-small p15-s24-n2-l4-f10
+psr-small p16-s29-n2-l5-f30
+psr-small p17-s30-n2-l5-f50
+psr-small p18-s31-n2-l5-f70
+psr-small p19-s33-n3-l2-f30
+psr-small p20-s34-n3-l2-f50
+psr-small p21-s35-n3-l2-f70
+psr-small p22-s37-n3-l3-f30
+psr-small p23-s38-n3-l3-f50
+psr-small p24-s39-n3-l3-f70
+psr-small p26-s41-n3-l4-f30
+psr-small p27-s42-n3-l4-f50
+psr-small p28-s43-n3-l4-f70
+psr-small p29-s45-n3-l5-f30
+psr-small p30-s46-n3-l5-f50
+psr-small p32-s50-n4-l2-f50
+psr-small p33-s51-n4-l2-f70
+psr-small p34-s55-n4-l3-f70
+psr-small p37-s67-n6-l2-f70
+psr-small p38-s78-n3-l3-f50
+psr-small p39-s79-n3-l3-f70
+psr-small p41-s81-n3-l4-f30
+psr-small p42-s82-n3-l4-f50
+psr-small p43-s83-n3-l4-f70
+psr-small p44-s89-n4-l2-f30
+psr-small p45-s94-n4-l3-f50
+psr-small p47-s98-n5-l2-f50
+psr-small p50-s107-n6-l2-f70
+rovers p01
+rovers p02
+rovers p03
+rovers p04
+rovers p05
+satellite p01-pfile1
+satellite p02-pfile2
+satellite p03-pfile3
+satellite p04-pfile4
+scanalyzer-08-strips p01
+scanalyzer-08-strips p02
+scanalyzer-08-strips p03
+scanalyzer-08-strips p22
+scanalyzer-08-strips p23
+scanalyzer-08-strips p24
+scanalyzer-opt11-strips p01
+scanalyzer-opt11-strips p02
+scanalyzer-opt11-strips p03
+storage p01
+storage p02
+storage p03
+storage p04
+storage p05
+storage p06
+storage p07
+tpp p01
+tpp p02
+tpp p03
+tpp p04
+tpp p05
+transport-opt08-strips p01
+transport-opt08-strips p02
+transport-opt08-strips p03
+transport-opt08-strips p11
+transport-opt08-strips p12
+transport-opt08-strips p13
+transport-opt08-strips p21
+transport-opt08-strips p22
+transport-opt08-strips p23
+transport-opt11-strips p01
+transport-opt11-strips p03
+transport-opt11-strips p04
+transport-opt14-strips p01
+transport-opt14-strips p07
+trucks-strips p01
+trucks-strips p02
+trucks-strips p03
+visitall-opt11-strips problem02-full
+visitall-opt11-strips problem02-half
+visitall-opt11-strips problem03-full
+visitall-opt11-strips problem03-half
+visitall-opt11-strips problem04-full
+visitall-opt11-strips problem04-half
+visitall-opt11-strips problem05-half
+visitall-opt11-strips problem06-half
+visitall-opt14-strips p-05-5
+visitall-opt14-strips p-05-6
+woodworking-opt08-strips p01
+woodworking-opt08-strips p21
+zenotravel p01
+zenotravel p02
+zenotravel p03
+zenotravel p04
+zenotravel p05
+zenotravel p06
+zenotravel p07
