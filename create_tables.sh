@@ -1,7 +1,7 @@
 #!/bin/bash
 table() 
 {
-	TASK=$1-limited/$2
+	TASK=$1/$2
 
 	GEN_OUTPUT=${TASK}/${3}_gen.txt
 	PLAN_OUTPUT=${TASK}/${3}_plan.txt
@@ -42,6 +42,7 @@ instance() {
     for h in "${ALLH[@]}"; do
         for g in "${ALLGEN[@]}"; do
         	table $g$h $1 $2
+        	table $g$h-limited $1 $2
         done
     done
 }
@@ -49,6 +50,7 @@ instance() {
 instances_pyperplan() {
 	ALLH=(lmcut ipdb astar)
     cd generator-tests-pyperplan
+    find . -name "*.dat" -type f -delete
     local DOMAINS=(blocks sokoban airport)
 	for p in "${DOMAINS[@]}"; do
 	 	for i in $(seq -w 1 10); do
@@ -61,6 +63,7 @@ instances_pyperplan() {
 instances_ipc11() {
 	ALLH=(lmcut ipdb astar)
     cd generator-tests-ipc11
+    find . -name "*.dat" -type f -delete
     local DOMAINS=(blocks sokoban airport)
 	for p in "${DOMAINS[@]}"; do
 	 	for i in $(seq 1 20); do
@@ -73,6 +76,7 @@ instances_ipc11() {
 instances_simple() {
     ALLH=(lmcut ipdb fulldb)
 	cd generator-tests-simple
+	find . -name "*.dat" -type f -delete
     instance elevator 1
     instance no-mystery 1
     instance no-mystery 2
@@ -103,6 +107,4 @@ instances_simple() {
 	cd ..
 }
 
-find . -name "*.dat" -type f -delete
-
-instances_simple
+instances_$1

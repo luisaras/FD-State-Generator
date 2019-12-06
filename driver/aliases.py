@@ -10,90 +10,39 @@ PORTFOLIO_DIR = os.path.join(DRIVER_DIR, "portfolios")
 ALIASES = {}
 
 def add_gen_aliases(ALIASES):
-  GENERATOR = "generator_abstract([%s],max_it=100000,max_time=300)"
-  GENERATOR_H = GENERATOR % "h"
-  GENERATOR_NOVELTY = GENERATOR % "novelty_h(prune=false,eval=h,reverse=true),h"
-  GENERATOR_CONFLICTS = GENERATOR % "pho3,pho2,sum([weight(pho2,-1),pho3])"
-  LMCUT = "h=lmcut()"
-  IPDB = "h=ipdb()"
-  ASTAR = "h=complexity(astar(lmcut(),undef_value=true,verbosity=SILENT))"
-  FULLDB = "h=pdb(greedy(max_states=infinity))"
-  PHO3 = "pho3=operatorcounting([pho_constraints(systematic(3))])"
-  PHO2 = "pho2=operatorcounting([pho_constraints(systematic(2))])"
 
-  ALIASES["gen-lmcut"] = [
-    "--evaluator", LMCUT,
-    "--search", GENERATOR_H
-  ]
-    
-  ALIASES["gen-ipdb"] = [
-    "--evaluator", IPDB,
-    "--search", GENERATOR_H
-  ]
+  GENERATORS = {}
+  GENERATORS[""] = "generator_abstract([%s],max_it=20000000,max_time=900)"
+  GENERATORS["-limited"] = "generator_abstract([%s],max_it=20000,max_time=300)"
+  H = "h"
+  NOVELTY = "novelty_h(prune=false,eval=h,reverse=true),h"
+  CONFLICTS = "sum([weight(pho2,-1),pho3]),pho3,h"
 
-  ALIASES["gen-fulldb"] = [
-    "--evaluator", FULLDB,
-    "--search", GENERATOR_H
-  ]
+  HEURISTICS = {}
+  HEURISTICS["lmcut"] = "h=lmcut()"
+  HEURISTICS["ipdb"] = "h=ipdb()"
+  HEURISTICS["astar"] = "h=complexity(astar(lmcut(),undef_value=true,verbosity=SILENT))"
+  HEURISTICS["fulldb"] = "h=pdb(greedy(max_states=infinity))"
+  HEURISTICS["pho3"] = "pho3=operatorcounting([pho_constraints(systematic(3))])"
+  HEURISTICS["pho2"] = "pho2=operatorcounting([pho_constraints(systematic(2))])"
 
-  ALIASES["gen-astar"] = [
-    "--evaluator", ASTAR,
-    "--search", GENERATOR_H
-  ]
+  for h in ["lmcut", "fulldb", "astar"]:
+    for l in ["", "-limited"]:
+      ALIASES["gen-" + h + l] = [
+        "--evaluator", HEURISTICS[h],
+        "--search", GENERATORS[l] % H
+      ]
+      ALIASES["gen-novelty-" + h + l] = [
+        "--evaluator",  HEURISTICS[h],
+        "--search", GENERATORS[l] % NOVELTY
+      ]
+      ALIASES["gen-conflicts-" + h + l] = [
+        "--evaluator", HEURISTICS[h],
+        "--evaluator", HEURISTICS["pho2"],
+        "--evaluator", HEURISTICS["pho3"],
+        "--search", GENERATORS[l] % CONFLICTS
+      ]
 
-  ALIASES["gen-novelty-lmcut"] = [
-    "--evaluator",  LMCUT,
-    "--search", GENERATOR_NOVELTY
-  ]
-
-  ALIASES["gen-novelty-ipdb"] = [
-    "--evaluator", IPDB,
-    "--search", GENERATOR_NOVELTY
-  ]
-
-  ALIASES["gen-novelty-fulldb"] = [
-    "--evaluator", FULLDB,
-    "--search", GENERATOR_NOVELTY
-  ]
-
-  ALIASES["gen-novelty-astar"] = [
-    "--evaluator", ASTAR,
-    "--search", GENERATOR_NOVELTY
-  ]
-
-  ALIASES["gen-conflicts"] = [
-    "--evaluator", PHO3,
-    "--evaluator", PHO2,
-    "--search", GENERATOR_CONFLICTS
-  ]
-
-  ALIASES["gen-conflicts-lmcut"] = [
-    "--evaluator", LMCUT,
-    "--evaluator", PHO3,
-    "--evaluator", PHO2,
-    "--search", GENERATOR_CONFLICTS
-  ]
-
-  ALIASES["gen-conflicts-ipdb"] = [
-    "--evaluator", IPDB,
-    "--evaluator", PHO3,
-    "--evaluator", PHO2,
-    "--search", GENERATOR_CONFLICTS
-  ]
-
-  ALIASES["gen-conflicts-fulldb"] = [
-    "--evaluator", FULLDB,
-    "--evaluator", PHO3,
-    "--evaluator", PHO2,
-    "--search", GENERATOR_CONFLICTS
-  ]
-
-  ALIASES["gen-conflicts-astar"] = [
-    "--evaluator", ASTAR,
-    "--evaluator", PHO3,
-    "--evaluator", PHO2,
-    "--search", GENERATOR_CONFLICTS
-  ]
 
 ALIASES["seq-sat-fd-autotune-1"] = [
     "--evaluator", "hff=ff(transform=adapt_costs(one))",

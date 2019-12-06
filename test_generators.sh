@@ -5,7 +5,6 @@ SEARCH_TEMP=sas_plan
 
 PLANNER_TIME=300
 PLANNER_MEM=2000000
-GEN_TIME=600
 
 set_output_dir() {
     # Create folders
@@ -164,7 +163,7 @@ test() {
     #plan $1 $2 $PLANNER
     for h in "${ALLH[@]}"; do
         for g in "${ALLGEN[@]}"; do
-            generate $PROBLEM $INST $g$h $BENCHMARKS
+            generate $PROBLEM $INST $g$h$LIMIT $BENCHMARKS
         done
     done
 }
@@ -225,4 +224,14 @@ test_simple() {
     test woodworking 11
 }
 
-test_simple
+LIMIT=$2
+if [ -z "$2" ]
+then
+    GEN_TIME=910
+else
+    GEN_TIME=310
+fi
+
+test_$1
+
+#./test_generators.sh simple -limited ; ./test_generators.sh simple
