@@ -15,7 +15,6 @@ class NoveltyHeuristic : public Heuristic {
     bool prune;
     bool reverse;
     std::shared_ptr<Evaluator> eval;
-    int num_facts;
 protected:
     virtual int compute_heuristic(const GlobalState &global_state);
 public:

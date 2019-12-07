@@ -13,3 +13,6 @@ visitall-opt11-strips problem06-half
 miconic s1-0
 miconic s5-2
 miconic s11-4
+parcprinter-08-strips p01
+parcprinter-08-strips p11
+parcprinter-08-strips p21

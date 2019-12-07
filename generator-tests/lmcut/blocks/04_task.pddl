@@ -1,1 +1,0 @@
-(define (problem blocks-5-0) (:domain blocks) (:objects b e a c d - block) (:init (holding c) (not (clear c)) (clear a) (clear b) (clear d) (clear e) (handempty) (ontable a) (on b  a) (on d  b) (on e  a)) (:goal (and (on a e) (on e b) (on b d) (on d c))))

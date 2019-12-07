@@ -33,15 +33,8 @@ NoveltyHeuristic::NoveltyHeuristic(const options::Options &opts)
       record(task, opts.get<int>("level", 1)),
       prune(opts.get<bool>("prune", true)),
       reverse(opts.get<bool>("reverse", false)),
-      eval(opts.get<shared_ptr<Evaluator>>("eval")),
-      num_facts(0) {
+      eval(opts.get<shared_ptr<Evaluator>>("eval")) {
     cout << "Initializing novelty heuristic..." << endl;
-    if (!reverse) {
-        for (int i = task->get_num_variables() - 1; i >= 0; i--)
-            num_facts += task->get_variable_domain_size(i);
-        num_facts = pow(num_facts, record.get_level());
-    }
-    cout << "Number of facts: " << num_facts << endl;
 }
 
 NoveltyHeuristic::NoveltyHeuristic(int level, shared_ptr<Evaluator>& eval, bool prune, bool reverse) :
@@ -60,9 +53,11 @@ int NoveltyHeuristic::compute_heuristic(const GlobalState &global_state) {
     if (prune && value == 0)
         return DEAD_END;
 
-    if (reverse)
-        value = -value;
-    return num_facts - value;
+    if (reverse) {
+        return value;
+    } else {
+        return record.get_level() - value;
+    }
 }
 
 void NoveltyHeuristic::clear() {

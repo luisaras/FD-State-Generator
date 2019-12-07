@@ -60,7 +60,7 @@ generate()  {
     local GENERATOR=gen-$3 # Generator alias
 
     set_files_$BENCHMARKS $TASK $i
-    set_output_dir $3-limited $TASK
+    set_output_dir $3 $TASK
 
     # Generator output files
     NEW_TASK=${OUTPUT_DIR}/${i}_task.sas
@@ -168,7 +168,9 @@ ALLGEN=("" "novelty-" "conflicts-")
 test() {
     local PROBLEM=$1
     local INST=$2
-    plan $1 $2 $PLANNER
+    if [ -z "$PLAN" ]
+        plan $1 $2 $PLANNER
+    fi
     for h in "${ALLH[@]}"; do
         for g in "${ALLGEN[@]}"; do
             generate $PROBLEM $INST $g$h$LIMIT $BENCHMARKS
@@ -198,28 +200,6 @@ test_ipc11() {
             test $p $i
         done
     done
-}
-
-test_simple() {
-    ALLH=(lmcut ipdb fulldb)
-    BENCHMARKS=ipc
-    TEST_FOLDER=generator-tests-simple
-    test blocks probBLOCKS-4-0
-    test blocks probBLOCKS-6-0
-    test blocks probBLOCKS-7-2
-    test elevators-opt08-strips p01
-    test elevators-opt08-strips p03
-    test elevators-opt08-strips p11
-    test gripper prob01
-    test gripper prob03
-    test gripper prob05
-    test visitall-opt11-strips problem02-full
-    test visitall-opt11-strips problem04-full
-    test visitall-opt11-strips problem06-half
-    test miconic s1-0
-    test miconic s5-2
-    test miconic s11-4
-    cd ..
 }
 
 test_simple_old() {
@@ -254,6 +234,31 @@ test_simple_old() {
     test woodworking 11
 }
 
+test_simple() {
+    ALLH=(lmcut ipdb fulldb)
+    BENCHMARKS=ipc
+    TEST_FOLDER=generator-tests-simple
+    test blocks probBLOCKS-4-0
+    test blocks probBLOCKS-6-0
+    test blocks probBLOCKS-7-2
+    test elevators-opt08-strips p01
+    test elevators-opt08-strips p03
+    test elevators-opt08-strips p11
+    test gripper prob01
+    test gripper prob03
+    test gripper prob05
+    test visitall-opt11-strips problem02-full
+    test visitall-opt11-strips problem04-full
+    test visitall-opt11-strips problem06-half
+    test miconic s1-0
+    test miconic s5-2
+    test miconic s11-4
+    test parcprinter-08-strips p01
+    test parcprinter-08-strips p11
+    test parcprinter-08-strips p21
+    cd ..
+}
+
 LIMIT=$2
 if [ -z "$2" ]
 then
@@ -262,6 +267,8 @@ else
     GEN_TIME=310
 fi
 
+PLAN=$3
+
 test_$1
 
-#./test_generators.sh simple -limited ; ./test_generators.sh simple
+#./test_generators.sh simple -limited plan ; ./test_generators.sh simple

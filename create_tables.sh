@@ -73,7 +73,7 @@ instances_ipc11() {
 	cd ..
 }
 
-instances_simple() {
+instances_simple_old() {
     ALLH=(lmcut ipdb fulldb)
 	cd generator-tests-simple
 	find . -name "*.dat" -type f -delete
@@ -105,6 +105,31 @@ instances_simple() {
     instance woodworking 11
     
 	cd ..
+}
+
+instances_simple() {
+    ALLH=(lmcut ipdb fulldb)
+	cd generator-tests-simple
+	find . -name "*.dat" -type f -delete
+    instance blocks probBLOCKS-4-0
+    instance blocks probBLOCKS-6-0
+    instance blocks probBLOCKS-7-2
+    instance elevators-opt08-strips p01
+    instance elevators-opt08-strips p03
+    instance elevators-opt08-strips p11
+    instance gripper prob01
+    instance gripper prob03
+    instance gripper prob05
+    instance visitall-opt11-strips problem02-full
+    instance visitall-opt11-strips problem04-full
+    instance visitall-opt11-strips problem06-half
+    instance miconic s1-0
+    instance miconic s5-2
+    instance miconic s11-4
+    instance parcprinter-08-strips p01
+    instance parcprinter-08-strips p11
+    instance parcprinter-08-strips p21
+    cd ..
 }
 
 instances_$1

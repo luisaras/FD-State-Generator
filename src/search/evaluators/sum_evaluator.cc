@@ -23,9 +23,9 @@ SumEvaluator::~SumEvaluator() {
 int SumEvaluator::combine_values(const vector<int> &values) {
     int result = 0;
     for (int value : values) {
-        assert(value >= 0);
+        //assert(value >= 0);
         result += value;
-        assert(result >= 0); // Check against overflow.
+        //assert(result >= 0); // Check against overflow.
     }
     return result;
 }
