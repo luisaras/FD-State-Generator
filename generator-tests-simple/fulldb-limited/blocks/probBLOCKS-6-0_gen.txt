@@ -1,0 +1,10 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([h],max_it=10000,max_time=60)' --internal-plan-file sas_plan
+reading input... [t=3.9435e-05s]
+Peak memory: 67364 KB
+search exit code: 33
+
+Driver aborting after search

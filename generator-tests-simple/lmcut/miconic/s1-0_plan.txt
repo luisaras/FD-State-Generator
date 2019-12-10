@@ -1,0 +1,52 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/lmcut/miconic/s1-0_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=8.2368e-05s]
+done reading input! [t=0.000317542s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00364067s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 8.237e-06s
+Variables: 3
+FactPairs: 6
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00379021s, 67752 KB]
+f = 3 [1 evaluated, 0 expanded, t=0.00381848s, 67752 KB]
+Initial heuristic value for lmcut: 3
+New best heuristic value for lmcut: 2
+[g=1, 2 evaluated, 1 expanded, t=0.00386657s, 67752 KB]
+New best heuristic value for lmcut: 1
+[g=2, 4 evaluated, 2 expanded, t=0.00390646s, 67752 KB]
+New best heuristic value for lmcut: 0
+[g=3, 5 evaluated, 3 expanded, t=0.00394108s, 67752 KB]
+Solution found! Cost: 3
+Actual search time: 0.000119241s [t=0.00397394s]
+op0) board f1 p0 (1)
+op2) down f1 f0 (1)
+op1) depart f0 p0 (1)
+Plan length: 3 step(s).
+Plan cost: 3
+Expanded 4 state(s).
+Reopened 0 state(s).
+Evaluated 5 state(s).
+Evaluations: 5
+Generated 6 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 5
+Int hash set load factor: 5/8 = 0.625
+Int hash set resizes: 3
+Open nodes: 1
+Closed states: 4
+Search time: 0.000231801s
+Total time: 0.00397848s
+Solution found.
+Peak memory: 67752 KB
+search exit code: 0
+

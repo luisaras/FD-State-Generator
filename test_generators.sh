@@ -168,7 +168,7 @@ ALLGEN=("" "novelty-" "conflicts-")
 test() {
     local PROBLEM=$1
     local INST=$2
-    if [ -z "$PLAN" ]
+    if [ ! -z "$PLAN" ]; then
         plan $1 $2 $PLANNER
     fi
     for h in "${ALLH[@]}"; do

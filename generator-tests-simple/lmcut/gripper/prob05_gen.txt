@@ -1,0 +1,68 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --search 'generator_abstract([h],max_it=10000000,max_time=600)' --internal-plan-file sas_plan
+reading input... [t=9.2134e-05s]
+done reading input! [t=0.000935773s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00303654s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 5.4832e-05s
+Variables: 15
+FactPairs: 64
+Bytes per state: 8
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 194 reverse operators.
+Built match tree.
+3=1 4=1 5=1 6=1 7=1 8=1 9=1 10=1 11=1 12=1 13=1 14=1 
+Inserting initial (goal) state...
+New best h: [1, 14] (iteration 0) 
+Found first concrete state.
+New best h: [2, 15] (iteration 74) 
+New best h: [3, 15] (iteration 108) 
+New best h: [4, 15] (iteration 112) 
+New best h: [5, 15] (iteration 157) 
+New best h: [6, 15] (iteration 162) 
+New best h: [7, 15] (iteration 201) 
+New best h: [8, 15] (iteration 209) 
+New best h: [9, 15] (iteration 245) 
+New best h: [10, 15] (iteration 256) 
+New best h: [11, 15] (iteration 289) 
+New best h: [12, 15] (iteration 303) 
+New best h: [13, 15] (iteration 333) 
+New best h: [14, 15] (iteration 350) 
+New best h: [15, 15] (iteration 377) 
+New best h: [16, 15] (iteration 397) 
+New best h: [17, 15] (iteration 421) 
+New best h: [18, 15] (iteration 444) 
+New best h: [19, 15] (iteration 465) 
+New best h: [20, 15] (iteration 491) 
+New best h: [21, 15] (iteration 509) 
+New best h: [22, 15] (iteration 538) 
+New best h: [23, 15] (iteration 553) 
+New best h: [24, 15] (iteration 585) 
+New best h: [25, 15] (iteration 1692000) 
+Completely explored state space.
+Actual search time: 135.811s [t=135.815s]
+Original state h-value: 25
+New state h-value: 25
+Expanded 3194883 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 6078520
+Generated 16416916 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 3194883
+Int hash set load factor: 3194883/4194304 = 0.761719
+Int hash set resizes: 22
+Open nodes: 0
+Closed states: 3194883
+Search time: 135.812s
+Total time: 135.815s
+Solution found.
+Peak memory: 251396 KB
+search exit code: 0
+

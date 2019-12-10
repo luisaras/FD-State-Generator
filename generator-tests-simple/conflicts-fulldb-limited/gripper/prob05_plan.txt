@@ -1,0 +1,59 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/conflicts-fulldb-limited/gripper/prob05_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=4.7739e-05s]
+done reading input! [t=0.000780508s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00341442s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 9.045e-05s
+Variables: 15
+FactPairs: 64
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00370276s, 67760 KB]
+f = 4 [1 evaluated, 0 expanded, t=0.00375316s, 67760 KB]
+Initial heuristic value for lmcut: 4
+New best heuristic value for lmcut: 4
+[g=1, 2 evaluated, 1 expanded, t=0.00386224s, 67760 KB]
+New best heuristic value for lmcut: 3
+[g=1, 3 evaluated, 1 expanded, t=0.00394448s, 67760 KB]
+f = 5 [28 evaluated, 3 expanded, t=0.00480536s, 67760 KB]
+New best heuristic value for lmcut: 2
+[g=3, 29 evaluated, 4 expanded, t=0.00488494s, 67760 KB]
+New best heuristic value for lmcut: 1
+[g=4, 31 evaluated, 5 expanded, t=0.00499742s, 67760 KB]
+New best heuristic value for lmcut: 0
+[g=5, 33 evaluated, 6 expanded, t=0.00510607s, 67760 KB]
+Solution found! Cost: 5
+Actual search time: 0.00137081s [t=0.00518519s]
+op2) drop ball1 roomb left (1)
+op49) move roomb rooma (1)
+op54) pick ball10 rooma left (1)
+op48) move rooma roomb (1)
+op6) drop ball10 roomb left (1)
+Plan length: 5 step(s).
+Plan cost: 5
+Expanded 7 state(s).
+Reopened 0 state(s).
+Evaluated 34 state(s).
+Evaluations: 34
+Generated 38 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 3 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 28 state(s).
+Generated until last jump: 29 state(s).
+Number of registered states: 34
+Int hash set load factor: 34/64 = 0.53125
+Int hash set resizes: 6
+Open nodes: 27
+Closed states: 7
+Search time: 0.00159536s
+Total time: 0.00519368s
+Solution found.
+Peak memory: 67760 KB
+search exit code: 0
+

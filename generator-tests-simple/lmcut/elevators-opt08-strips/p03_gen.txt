@@ -1,0 +1,59 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --search 'generator_abstract([h],max_it=10000000,max_time=600)' --internal-plan-file sas_plan
+reading input... [t=8.3066e-05s]
+done reading input! [t=0.00201506s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.0050417s]
+peak memory difference for successor generator creation: 132 KB
+time for successor generation creation: 0.000188215s
+Variables: 10
+FactPairs: 73
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 340 reverse operators.
+Built match tree.
+6=3 7=10 8=4 9=8 
+Inserting initial (goal) state...
+New best h: [0, 6] (iteration 0) 
+New best h: [0, 8] (iteration 27) 
+New best h: [7, 6] (iteration 33) 
+New best h: [9, 6] (iteration 34) 
+New best h: [15, 6] (iteration 35) 
+New best h: [17, 6] (iteration 36) 
+New best h: [20, 8] (iteration 48) 
+New best h: [23, 8] (iteration 50) 
+Found first concrete state.
+New best h: [25, 10] (iteration 66) 
+New best h: [28, 8] (iteration 70) 
+New best h: [32, 10] (iteration 84) 
+New best h: [33, 10] (iteration 101) 
+New best h: [38, 10] (iteration 109) 
+New best h: [39, 10] (iteration 183) 
+New best h: [43, 10] (iteration 201) 
+New best h: [48, 10] (iteration 1561) 
+Time limit reached. Abort search.
+Actual search time: 600.001s [t=600.006s]
+Original state h-value: 26
+New state h-value: 48
+Expanded 5098855 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 13983083
+Generated 71151852 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 6994820
+Int hash set load factor: 6994820/16777216 = 0.416924
+Int hash set resizes: 24
+Open nodes: 1895924
+Closed states: 5098855
+Search time: 600.001s
+Total time: 600.006s
+Solution found.
+Peak memory: 950888 KB
+search exit code: 0
+

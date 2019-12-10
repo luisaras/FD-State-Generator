@@ -1,0 +1,871 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000,max_time=60)' --internal-plan-file sas_plan
+reading input... [t=4.1527e-05s]
+done reading input! [t=0.00029173s]
+Initializing canonical PDB heuristic...
+Generating patterns using the hill climbing generator...
+Done calculating initial pattern collection: 0.00025024s
+Average operator cost: 1
+building causal graph...done! [t=5.0202e-05s]
+Done calculating initial candidate PDBs
+current collection size is 30
+current initial h value: 15
+pattern: [0, 1] - improvement: 57
+pattern: [0, 2] - improvement: 11
+pattern: [0, 3] - improvement: 15
+pattern: [0, 4] - improvement: 78
+pattern: [0, 5] - improvement: 13
+pattern: [0, 6] - improvement: 8
+pattern: [0, 7] - improvement: 29
+pattern: [0, 8] - improvement: 19
+pattern: [0, 9] - improvement: 2
+pattern: [0, 10] - improvement: 5
+pattern: [0, 11] - improvement: 16
+pattern: [0, 12] - improvement: 72
+pattern: [0, 13] - improvement: 18
+pattern: [0, 14] - improvement: 8
+pattern: [0, 15] - improvement: 63
+found a better pattern with improvement 78
+pattern: [0, 4]
+Hill climbing time so far: 0.0149126s
+current collection size is 62
+current initial h value: 15
+pattern: [0, 1] - improvement: 67
+pattern: [0, 2] - improvement: 6
+pattern: [0, 3] - improvement: 5
+pattern: [0, 5] - improvement: 12
+pattern: [0, 6] - improvement: 2
+pattern: [0, 8] - improvement: 21
+pattern: [0, 9] - improvement: 4
+pattern: [0, 10] - improvement: 2
+pattern: [0, 11] - improvement: 19
+pattern: [0, 12] - improvement: 70
+pattern: [0, 13] - improvement: 22
+pattern: [0, 14] - improvement: 17
+pattern: [0, 15] - improvement: 65
+pattern: [0, 1, 4] - improvement: 101
+pattern: [0, 2, 4] - improvement: 12
+pattern: [0, 3, 4] - improvement: 5
+pattern: [0, 4, 5] - improvement: 45
+pattern: [0, 4, 6] - improvement: 2
+pattern: [0, 4, 8] - improvement: 61
+pattern: [0, 4, 9] - improvement: 15
+pattern: [0, 4, 10] - improvement: 4
+pattern: [0, 4, 11] - improvement: 27
+pattern: [0, 4, 12] - improvement: 179
+pattern: [0, 4, 13] - improvement: 62
+pattern: [0, 4, 14] - improvement: 54
+pattern: [0, 4, 15] - improvement: 108
+found a better pattern with improvement 179
+pattern: [0, 4, 12]
+Hill climbing time so far: 0.0302117s
+current collection size is 126
+current initial h value: 15
+pattern: [0, 1] - improvement: 60
+pattern: [0, 2] - improvement: 5
+pattern: [0, 3] - improvement: 12
+pattern: [0, 5] - improvement: 11
+pattern: [0, 6] - improvement: 2
+pattern: [0, 7] - improvement: 10
+pattern: [0, 8] - improvement: 5
+pattern: [0, 9] - improvement: 7
+pattern: [0, 10] - improvement: 3
+pattern: [0, 11] - improvement: 15
+pattern: [0, 13] - improvement: 6
+pattern: [0, 14] - improvement: 12
+pattern: [0, 15] - improvement: 61
+pattern: [0, 1, 4] - improvement: 92
+pattern: [0, 2, 4] - improvement: 10
+pattern: [0, 3, 4] - improvement: 12
+pattern: [0, 4, 5] - improvement: 25
+pattern: [0, 4, 6] - improvement: 3
+pattern: [0, 4, 7] - improvement: 10
+pattern: [0, 4, 8] - improvement: 10
+pattern: [0, 4, 9] - improvement: 10
+pattern: [0, 4, 10] - improvement: 6
+pattern: [0, 4, 11] - improvement: 24
+pattern: [0, 4, 13] - improvement: 18
+pattern: [0, 4, 14] - improvement: 36
+pattern: [0, 4, 15] - improvement: 101
+pattern: [0, 1, 4, 12] - improvement: 123
+pattern: [0, 2, 4, 12] - improvement: 25
+pattern: [0, 3, 4, 12] - improvement: 24
+pattern: [0, 4, 5, 12] - improvement: 33
+pattern: [0, 4, 6, 12] - improvement: 7
+pattern: [0, 4, 7, 12] - improvement: 28
+pattern: [0, 4, 8, 12] - improvement: 10
+pattern: [0, 4, 9, 12] - improvement: 12
+pattern: [0, 4, 10, 12] - improvement: 9
+pattern: [0, 4, 11, 12] - improvement: 53
+pattern: [0, 4, 12, 13] - improvement: 18
+pattern: [0, 4, 12, 14] - improvement: 43
+pattern: [0, 4, 12, 15] - improvement: 138
+found a better pattern with improvement 138
+pattern: [0, 4, 12, 15]
+Hill climbing time so far: 0.0493136s
+current collection size is 254
+current initial h value: 15
+pattern: [0, 1] - improvement: 62
+pattern: [0, 2] - improvement: 9
+pattern: [0, 3] - improvement: 6
+pattern: [0, 5] - improvement: 11
+pattern: [0, 7] - improvement: 9
+pattern: [0, 8] - improvement: 6
+pattern: [0, 9] - improvement: 3
+pattern: [0, 10] - improvement: 1
+pattern: [0, 11] - improvement: 12
+pattern: [0, 13] - improvement: 3
+pattern: [0, 14] - improvement: 3
+pattern: [0, 1, 4] - improvement: 102
+pattern: [0, 2, 4] - improvement: 15
+pattern: [0, 3, 4] - improvement: 6
+pattern: [0, 4, 5] - improvement: 37
+pattern: [0, 4, 6] - improvement: 2
+pattern: [0, 4, 7] - improvement: 9
+pattern: [0, 4, 8] - improvement: 21
+pattern: [0, 4, 9] - improvement: 6
+pattern: [0, 4, 10] - improvement: 2
+pattern: [0, 4, 11] - improvement: 12
+pattern: [0, 4, 13] - improvement: 15
+pattern: [0, 4, 14] - improvement: 25
+pattern: [0, 1, 4, 12] - improvement: 133
+pattern: [0, 2, 4, 12] - improvement: 39
+pattern: [0, 3, 4, 12] - improvement: 18
+pattern: [0, 4, 5, 12] - improvement: 46
+pattern: [0, 4, 6, 12] - improvement: 5
+pattern: [0, 4, 7, 12] - improvement: 21
+pattern: [0, 4, 8, 12] - improvement: 21
+pattern: [0, 4, 9, 12] - improvement: 9
+pattern: [0, 4, 10, 12] - improvement: 6
+pattern: [0, 4, 11, 12] - improvement: 33
+pattern: [0, 4, 12, 13] - improvement: 15
+pattern: [0, 4, 12, 14] - improvement: 27
+pattern: [0, 1, 4, 12, 15] - improvement: 231
+pattern: [0, 2, 4, 12, 15] - improvement: 77
+pattern: [0, 3, 4, 12, 15] - improvement: 54
+pattern: [0, 4, 5, 12, 15] - improvement: 77
+pattern: [0, 4, 6, 12, 15] - improvement: 23
+pattern: [0, 4, 7, 12, 15] - improvement: 22
+pattern: [0, 4, 8, 12, 15] - improvement: 48
+pattern: [0, 4, 9, 12, 15] - improvement: 22
+pattern: [0, 4, 10, 12, 15] - improvement: 45
+pattern: [0, 4, 11, 12, 15] - improvement: 33
+pattern: [0, 4, 12, 13, 15] - improvement: 18
+pattern: [0, 4, 12, 14, 15] - improvement: 27
+found a better pattern with improvement 231
+pattern: [0, 1, 4, 12, 15]
+Hill climbing time so far: 0.0727788s
+current collection size is 510
+current initial h value: 15
+pattern: [0, 2] - improvement: 4
+pattern: [0, 3] - improvement: 4
+pattern: [0, 5] - improvement: 7
+pattern: [0, 6] - improvement: 2
+pattern: [0, 7] - improvement: 6
+pattern: [0, 8] - improvement: 9
+pattern: [0, 9] - improvement: 6
+pattern: [0, 10] - improvement: 4
+pattern: [0, 11] - improvement: 4
+pattern: [0, 13] - improvement: 1
+pattern: [0, 14] - improvement: 7
+pattern: [0, 2, 4] - improvement: 7
+pattern: [0, 3, 4] - improvement: 4
+pattern: [0, 4, 5] - improvement: 20
+pattern: [0, 4, 6] - improvement: 5
+pattern: [0, 4, 7] - improvement: 6
+pattern: [0, 4, 8] - improvement: 20
+pattern: [0, 4, 9] - improvement: 11
+pattern: [0, 4, 10] - improvement: 4
+pattern: [0, 4, 11] - improvement: 6
+pattern: [0, 4, 13] - improvement: 12
+pattern: [0, 4, 14] - improvement: 24
+pattern: [0, 2, 4, 12] - improvement: 21
+pattern: [0, 3, 4, 12] - improvement: 13
+pattern: [0, 4, 5, 12] - improvement: 22
+pattern: [0, 4, 6, 12] - improvement: 5
+pattern: [0, 4, 7, 12] - improvement: 13
+pattern: [0, 4, 8, 12] - improvement: 20
+pattern: [0, 4, 9, 12] - improvement: 13
+pattern: [0, 4, 10, 12] - improvement: 5
+pattern: [0, 4, 11, 12] - improvement: 26
+pattern: [0, 4, 12, 13] - improvement: 12
+pattern: [0, 4, 12, 14] - improvement: 27
+pattern: [0, 2, 4, 12, 15] - improvement: 28
+pattern: [0, 3, 4, 12, 15] - improvement: 44
+pattern: [0, 4, 5, 12, 15] - improvement: 30
+pattern: [0, 4, 6, 12, 15] - improvement: 19
+pattern: [0, 4, 7, 12, 15] - improvement: 15
+pattern: [0, 4, 8, 12, 15] - improvement: 48
+pattern: [0, 4, 9, 12, 15] - improvement: 31
+pattern: [0, 4, 10, 12, 15] - improvement: 55
+pattern: [0, 4, 11, 12, 15] - improvement: 26
+pattern: [0, 4, 12, 13, 15] - improvement: 15
+pattern: [0, 4, 12, 14, 15] - improvement: 27
+pattern: [0, 1, 2, 4, 12, 15] - improvement: 28
+pattern: [0, 1, 3, 4, 12, 15] - improvement: 44
+pattern: [0, 1, 4, 5, 12, 15] - improvement: 30
+pattern: [0, 1, 4, 6, 12, 15] - improvement: 43
+pattern: [0, 1, 4, 7, 12, 15] - improvement: 39
+pattern: [0, 1, 4, 8, 12, 15] - improvement: 49
+pattern: [0, 1, 4, 9, 12, 15] - improvement: 58
+pattern: [0, 1, 4, 10, 12, 15] - improvement: 61
+pattern: [0, 1, 4, 11, 12, 15] - improvement: 36
+pattern: [0, 1, 4, 12, 13, 15] - improvement: 32
+pattern: [0, 1, 4, 12, 14, 15] - improvement: 39
+found a better pattern with improvement 61
+pattern: [0, 1, 4, 10, 12, 15]
+Hill climbing time so far: 0.10355s
+current collection size is 1022
+current initial h value: 15
+pattern: [0, 2] - improvement: 6
+pattern: [0, 3] - improvement: 5
+pattern: [0, 5] - improvement: 5
+pattern: [0, 6] - improvement: 3
+pattern: [0, 7] - improvement: 3
+pattern: [0, 8] - improvement: 10
+pattern: [0, 9] - improvement: 1
+pattern: [0, 11] - improvement: 5
+pattern: [0, 13] - improvement: 4
+pattern: [0, 14] - improvement: 6
+pattern: [0, 2, 4] - improvement: 7
+pattern: [0, 3, 4] - improvement: 5
+pattern: [0, 4, 5] - improvement: 18
+pattern: [0, 4, 6] - improvement: 4
+pattern: [0, 4, 7] - improvement: 3
+pattern: [0, 4, 8] - improvement: 19
+pattern: [0, 4, 9] - improvement: 5
+pattern: [0, 4, 11] - improvement: 7
+pattern: [0, 4, 13] - improvement: 14
+pattern: [0, 4, 14] - improvement: 24
+pattern: [0, 2, 4, 12] - improvement: 31
+pattern: [0, 3, 4, 12] - improvement: 15
+pattern: [0, 4, 5, 12] - improvement: 20
+pattern: [0, 4, 6, 12] - improvement: 5
+pattern: [0, 4, 7, 12] - improvement: 14
+pattern: [0, 4, 8, 12] - improvement: 19
+pattern: [0, 4, 9, 12] - improvement: 7
+pattern: [0, 4, 11, 12] - improvement: 26
+pattern: [0, 4, 12, 13] - improvement: 14
+pattern: [0, 4, 12, 14] - improvement: 24
+pattern: [0, 2, 4, 12, 15] - improvement: 41
+pattern: [0, 3, 4, 12, 15] - improvement: 33
+pattern: [0, 4, 5, 12, 15] - improvement: 32
+pattern: [0, 4, 6, 12, 15] - improvement: 27
+pattern: [0, 4, 7, 12, 15] - improvement: 18
+pattern: [0, 4, 8, 12, 15] - improvement: 39
+pattern: [0, 4, 9, 12, 15] - improvement: 16
+pattern: [0, 4, 11, 12, 15] - improvement: 26
+pattern: [0, 4, 12, 13, 15] - improvement: 16
+pattern: [0, 4, 12, 14, 15] - improvement: 24
+pattern: [0, 1, 2, 4, 12, 15] - improvement: 41
+pattern: [0, 1, 3, 4, 12, 15] - improvement: 35
+pattern: [0, 1, 4, 5, 12, 15] - improvement: 32
+pattern: [0, 1, 4, 6, 12, 15] - improvement: 39
+pattern: [0, 1, 4, 7, 12, 15] - improvement: 32
+pattern: [0, 1, 4, 8, 12, 15] - improvement: 39
+pattern: [0, 1, 4, 9, 12, 15] - improvement: 32
+pattern: [0, 1, 4, 11, 12, 15] - improvement: 34
+pattern: [0, 1, 4, 12, 13, 15] - improvement: 41
+pattern: [0, 1, 4, 12, 14, 15] - improvement: 37
+pattern: [0, 1, 2, 4, 10, 12, 15] - improvement: 41
+pattern: [0, 1, 3, 4, 10, 12, 15] - improvement: 37
+pattern: [0, 1, 4, 5, 10, 12, 15] - improvement: 34
+pattern: [0, 1, 4, 6, 10, 12, 15] - improvement: 39
+pattern: [0, 1, 4, 7, 10, 12, 15] - improvement: 38
+pattern: [0, 1, 4, 8, 10, 12, 15] - improvement: 45
+pattern: [0, 1, 4, 9, 10, 12, 15] - improvement: 32
+pattern: [0, 1, 4, 10, 11, 12, 15] - improvement: 34
+pattern: [0, 1, 4, 10, 12, 13, 15] - improvement: 52
+pattern: [0, 1, 4, 10, 12, 14, 15] - improvement: 37
+found a better pattern with improvement 52
+pattern: [0, 1, 4, 10, 12, 13, 15]
+Hill climbing time so far: 0.141802s
+current collection size is 2046
+current initial h value: 15
+pattern: [0, 2] - improvement: 9
+pattern: [0, 3] - improvement: 4
+pattern: [0, 5] - improvement: 4
+pattern: [0, 6] - improvement: 3
+pattern: [0, 7] - improvement: 3
+pattern: [0, 8] - improvement: 7
+pattern: [0, 9] - improvement: 3
+pattern: [0, 11] - improvement: 5
+pattern: [0, 14] - improvement: 6
+pattern: [0, 2, 4] - improvement: 13
+pattern: [0, 3, 4] - improvement: 4
+pattern: [0, 4, 5] - improvement: 20
+pattern: [0, 4, 6] - improvement: 6
+pattern: [0, 4, 7] - improvement: 3
+pattern: [0, 4, 8] - improvement: 20
+pattern: [0, 4, 9] - improvement: 3
+pattern: [0, 4, 11] - improvement: 9
+pattern: [0, 4, 14] - improvement: 19
+pattern: [0, 2, 4, 12] - improvement: 29
+pattern: [0, 3, 4, 12] - improvement: 8
+pattern: [0, 4, 5, 12] - improvement: 22
+pattern: [0, 4, 6, 12] - improvement: 8
+pattern: [0, 4, 7, 12] - improvement: 13
+pattern: [0, 4, 8, 12] - improvement: 20
+pattern: [0, 4, 9, 12] - improvement: 7
+pattern: [0, 4, 11, 12] - improvement: 31
+pattern: [0, 4, 12, 14] - improvement: 23
+pattern: [0, 2, 4, 12, 15] - improvement: 40
+pattern: [0, 3, 4, 12, 15] - improvement: 35
+pattern: [0, 4, 5, 12, 15] - improvement: 34
+pattern: [0, 4, 6, 12, 15] - improvement: 20
+pattern: [0, 4, 7, 12, 15] - improvement: 14
+pattern: [0, 4, 8, 12, 15] - improvement: 47
+pattern: [0, 4, 9, 12, 15] - improvement: 20
+pattern: [0, 4, 11, 12, 15] - improvement: 31
+pattern: [0, 4, 12, 14, 15] - improvement: 23
+pattern: [0, 1, 2, 4, 12, 15] - improvement: 40
+pattern: [0, 1, 3, 4, 12, 15] - improvement: 38
+pattern: [0, 1, 4, 5, 12, 15] - improvement: 34
+pattern: [0, 1, 4, 6, 12, 15] - improvement: 35
+pattern: [0, 1, 4, 7, 12, 15] - improvement: 31
+pattern: [0, 1, 4, 8, 12, 15] - improvement: 50
+pattern: [0, 1, 4, 9, 12, 15] - improvement: 28
+pattern: [0, 1, 4, 11, 12, 15] - improvement: 37
+pattern: [0, 1, 4, 12, 14, 15] - improvement: 32
+pattern: [0, 1, 2, 4, 10, 12, 15] - improvement: 41
+pattern: [0, 1, 3, 4, 10, 12, 15] - improvement: 41
+pattern: [0, 1, 4, 5, 10, 12, 15] - improvement: 36
+pattern: [0, 1, 4, 6, 10, 12, 15] - improvement: 35
+pattern: [0, 1, 4, 7, 10, 12, 15] - improvement: 38
+pattern: [0, 1, 4, 8, 10, 12, 15] - improvement: 57
+pattern: [0, 1, 4, 9, 10, 12, 15] - improvement: 28
+pattern: [0, 1, 4, 10, 11, 12, 15] - improvement: 37
+pattern: [0, 1, 4, 10, 12, 14, 15] - improvement: 32
+pattern: [0, 1, 2, 4, 10, 12, 13, 15] - improvement: 41
+pattern: [0, 1, 3, 4, 10, 12, 13, 15] - improvement: 42
+pattern: [0, 1, 4, 5, 10, 12, 13, 15] - improvement: 38
+pattern: [0, 1, 4, 6, 10, 12, 13, 15] - improvement: 37
+pattern: [0, 1, 4, 7, 10, 12, 13, 15] - improvement: 42
+pattern: [0, 1, 4, 8, 10, 12, 13, 15] - improvement: 75
+pattern: [0, 1, 4, 9, 10, 12, 13, 15] - improvement: 28
+pattern: [0, 1, 4, 10, 11, 12, 13, 15] - improvement: 42
+pattern: [0, 1, 4, 10, 12, 13, 14, 15] - improvement: 32
+found a better pattern with improvement 75
+pattern: [0, 1, 4, 8, 10, 12, 13, 15]
+Hill climbing time so far: 0.188591s
+current collection size is 4094
+current initial h value: 15
+pattern: [0, 2] - improvement: 4
+pattern: [0, 3] - improvement: 6
+pattern: [0, 5] - improvement: 4
+pattern: [0, 6] - improvement: 3
+pattern: [0, 7] - improvement: 3
+pattern: [0, 9] - improvement: 4
+pattern: [0, 11] - improvement: 5
+pattern: [0, 14] - improvement: 6
+pattern: [0, 2, 4] - improvement: 6
+pattern: [0, 3, 4] - improvement: 6
+pattern: [0, 4, 5] - improvement: 17
+pattern: [0, 4, 6] - improvement: 3
+pattern: [0, 4, 7] - improvement: 3
+pattern: [0, 4, 9] - improvement: 4
+pattern: [0, 4, 11] - improvement: 6
+pattern: [0, 4, 14] - improvement: 15
+pattern: [0, 2, 4, 12] - improvement: 23
+pattern: [0, 3, 4, 12] - improvement: 15
+pattern: [0, 4, 5, 12] - improvement: 21
+pattern: [0, 4, 6, 12] - improvement: 9
+pattern: [0, 4, 7, 12] - improvement: 17
+pattern: [0, 4, 9, 12] - improvement: 4
+pattern: [0, 4, 11, 12] - improvement: 19
+pattern: [0, 4, 12, 14] - improvement: 17
+pattern: [0, 2, 4, 12, 15] - improvement: 33
+pattern: [0, 3, 4, 12, 15] - improvement: 51
+pattern: [0, 4, 5, 12, 15] - improvement: 34
+pattern: [0, 4, 6, 12, 15] - improvement: 29
+pattern: [0, 4, 7, 12, 15] - improvement: 18
+pattern: [0, 4, 9, 12, 15] - improvement: 14
+pattern: [0, 4, 11, 12, 15] - improvement: 19
+pattern: [0, 4, 12, 14, 15] - improvement: 17
+pattern: [0, 1, 2, 4, 12, 15] - improvement: 33
+pattern: [0, 1, 3, 4, 12, 15] - improvement: 51
+pattern: [0, 1, 4, 5, 12, 15] - improvement: 34
+pattern: [0, 1, 4, 6, 12, 15] - improvement: 47
+pattern: [0, 1, 4, 7, 12, 15] - improvement: 39
+pattern: [0, 1, 4, 9, 12, 15] - improvement: 23
+pattern: [0, 1, 4, 11, 12, 15] - improvement: 29
+pattern: [0, 1, 4, 12, 14, 15] - improvement: 22
+pattern: [0, 1, 2, 4, 10, 12, 15] - improvement: 37
+pattern: [0, 1, 3, 4, 10, 12, 15] - improvement: 55
+pattern: [0, 1, 4, 5, 10, 12, 15] - improvement: 35
+pattern: [0, 1, 4, 6, 10, 12, 15] - improvement: 47
+pattern: [0, 1, 4, 7, 10, 12, 15] - improvement: 49
+pattern: [0, 1, 4, 9, 10, 12, 15] - improvement: 23
+pattern: [0, 1, 4, 10, 11, 12, 15] - improvement: 29
+pattern: [0, 1, 4, 10, 12, 14, 15] - improvement: 22
+pattern: [0, 1, 2, 4, 10, 12, 13, 15] - improvement: 38
+pattern: [0, 1, 3, 4, 10, 12, 13, 15] - improvement: 58
+pattern: [0, 1, 4, 5, 10, 12, 13, 15] - improvement: 35
+pattern: [0, 1, 4, 6, 10, 12, 13, 15] - improvement: 48
+pattern: [0, 1, 4, 7, 10, 12, 13, 15] - improvement: 51
+pattern: [0, 1, 4, 9, 10, 12, 13, 15] - improvement: 23
+pattern: [0, 1, 4, 10, 11, 12, 13, 15] - improvement: 33
+pattern: [0, 1, 4, 10, 12, 13, 14, 15] - improvement: 22
+pattern: [0, 1, 2, 4, 8, 10, 12, 13, 15] - improvement: 39
+pattern: [0, 1, 3, 4, 8, 10, 12, 13, 15] - improvement: 59
+pattern: [0, 1, 4, 5, 8, 10, 12, 13, 15] - improvement: 36
+pattern: [0, 1, 4, 6, 8, 10, 12, 13, 15] - improvement: 49
+pattern: [0, 1, 4, 7, 8, 10, 12, 13, 15] - improvement: 54
+pattern: [0, 1, 4, 8, 9, 10, 12, 13, 15] - improvement: 23
+pattern: [0, 1, 4, 8, 10, 11, 12, 13, 15] - improvement: 34
+pattern: [0, 1, 4, 8, 10, 12, 13, 14, 15] - improvement: 23
+found a better pattern with improvement 59
+pattern: [0, 1, 3, 4, 8, 10, 12, 13, 15]
+Hill climbing time so far: 0.246093s
+current collection size is 8190
+current initial h value: 15
+pattern: [0, 2] - improvement: 2
+pattern: [0, 5] - improvement: 8
+pattern: [0, 7] - improvement: 9
+pattern: [0, 9] - improvement: 1
+pattern: [0, 11] - improvement: 3
+pattern: [0, 14] - improvement: 7
+pattern: [0, 2, 4] - improvement: 5
+pattern: [0, 4, 5] - improvement: 14
+pattern: [0, 4, 6] - improvement: 1
+pattern: [0, 4, 7] - improvement: 9
+pattern: [0, 4, 9] - improvement: 3
+pattern: [0, 4, 11] - improvement: 4
+pattern: [0, 4, 14] - improvement: 24
+pattern: [0, 2, 4, 12] - improvement: 12
+pattern: [0, 4, 5, 12] - improvement: 14
+pattern: [0, 4, 6, 12] - improvement: 3
+pattern: [0, 4, 7, 12] - improvement: 23
+pattern: [0, 4, 9, 12] - improvement: 4
+pattern: [0, 4, 11, 12] - improvement: 22
+pattern: [0, 4, 12, 14] - improvement: 27
+pattern: [0, 2, 4, 12, 15] - improvement: 18
+pattern: [0, 4, 5, 12, 15] - improvement: 20
+pattern: [0, 4, 6, 12, 15] - improvement: 16
+pattern: [0, 4, 7, 12, 15] - improvement: 25
+pattern: [0, 4, 9, 12, 15] - improvement: 16
+pattern: [0, 4, 11, 12, 15] - improvement: 22
+pattern: [0, 4, 12, 14, 15] - improvement: 27
+pattern: [0, 1, 2, 4, 12, 15] - improvement: 18
+pattern: [0, 1, 4, 5, 12, 15] - improvement: 20
+pattern: [0, 1, 4, 6, 12, 15] - improvement: 30
+pattern: [0, 1, 4, 7, 12, 15] - improvement: 43
+pattern: [0, 1, 4, 9, 12, 15] - improvement: 32
+pattern: [0, 1, 4, 11, 12, 15] - improvement: 34
+pattern: [0, 1, 4, 12, 14, 15] - improvement: 34
+pattern: [0, 1, 2, 4, 10, 12, 15] - improvement: 18
+pattern: [0, 1, 4, 5, 10, 12, 15] - improvement: 23
+pattern: [0, 1, 4, 6, 10, 12, 15] - improvement: 30
+pattern: [0, 1, 4, 7, 10, 12, 15] - improvement: 50
+pattern: [0, 1, 4, 9, 10, 12, 15] - improvement: 32
+pattern: [0, 1, 4, 10, 11, 12, 15] - improvement: 34
+pattern: [0, 1, 4, 10, 12, 14, 15] - improvement: 34
+pattern: [0, 1, 2, 4, 10, 12, 13, 15] - improvement: 18
+pattern: [0, 1, 4, 5, 10, 12, 13, 15] - improvement: 23
+pattern: [0, 1, 4, 6, 10, 12, 13, 15] - improvement: 31
+pattern: [0, 1, 4, 7, 10, 12, 13, 15] - improvement: 53
+pattern: [0, 1, 4, 9, 10, 12, 13, 15] - improvement: 32
+pattern: [0, 1, 4, 10, 11, 12, 13, 15] - improvement: 35
+pattern: [0, 1, 4, 10, 12, 13, 14, 15] - improvement: 34
+pattern: [0, 1, 2, 4, 8, 10, 12, 13, 15] - improvement: 18
+pattern: [0, 1, 4, 5, 8, 10, 12, 13, 15] - improvement: 23
+pattern: [0, 1, 4, 6, 8, 10, 12, 13, 15] - improvement: 31
+pattern: [0, 1, 4, 7, 8, 10, 12, 13, 15] - improvement: 57
+pattern: [0, 1, 4, 8, 9, 10, 12, 13, 15] - improvement: 32
+pattern: [0, 1, 4, 8, 10, 11, 12, 13, 15] - improvement: 35
+pattern: [0, 1, 4, 8, 10, 12, 13, 14, 15] - improvement: 34
+pattern: [0, 1, 2, 3, 4, 8, 10, 12, 13, 15] - improvement: 18
+pattern: [0, 1, 3, 4, 5, 8, 10, 12, 13, 15] - improvement: 25
+pattern: [0, 1, 3, 4, 6, 8, 10, 12, 13, 15] - improvement: 31
+pattern: [0, 1, 3, 4, 7, 8, 10, 12, 13, 15] - improvement: 74
+pattern: [0, 1, 3, 4, 8, 9, 10, 12, 13, 15] - improvement: 34
+pattern: [0, 1, 3, 4, 8, 10, 11, 12, 13, 15] - improvement: 40
+pattern: [0, 1, 3, 4, 8, 10, 12, 13, 14, 15] - improvement: 34
+found a better pattern with improvement 74
+pattern: [0, 1, 3, 4, 7, 8, 10, 12, 13, 15]
+Hill climbing time so far: 0.315611s
+current collection size is 16382
+current initial h value: 15
+pattern: [0, 2] - improvement: 3
+pattern: [0, 5] - improvement: 6
+pattern: [0, 6] - improvement: 2
+pattern: [0, 9] - improvement: 2
+pattern: [0, 11] - improvement: 10
+pattern: [0, 14] - improvement: 3
+pattern: [0, 2, 4] - improvement: 4
+pattern: [0, 4, 5] - improvement: 17
+pattern: [0, 4, 6] - improvement: 2
+pattern: [0, 4, 9] - improvement: 5
+pattern: [0, 4, 11] - improvement: 13
+pattern: [0, 4, 14] - improvement: 15
+pattern: [0, 2, 4, 12] - improvement: 15
+pattern: [0, 4, 5, 12] - improvement: 21
+pattern: [0, 4, 6, 12] - improvement: 5
+pattern: [0, 4, 9, 12] - improvement: 6
+pattern: [0, 4, 11, 12] - improvement: 27
+pattern: [0, 4, 12, 14] - improvement: 16
+pattern: [0, 2, 4, 12, 15] - improvement: 26
+pattern: [0, 4, 5, 12, 15] - improvement: 30
+pattern: [0, 4, 6, 12, 15] - improvement: 11
+pattern: [0, 4, 9, 12, 15] - improvement: 16
+pattern: [0, 4, 11, 12, 15] - improvement: 27
+pattern: [0, 4, 12, 14, 15] - improvement: 16
+pattern: [0, 1, 2, 4, 12, 15] - improvement: 26
+pattern: [0, 1, 4, 5, 12, 15] - improvement: 30
+pattern: [0, 1, 4, 6, 12, 15] - improvement: 25
+pattern: [0, 1, 4, 9, 12, 15] - improvement: 25
+pattern: [0, 1, 4, 11, 12, 15] - improvement: 37
+pattern: [0, 1, 4, 12, 14, 15] - improvement: 22
+pattern: [0, 1, 2, 4, 10, 12, 15] - improvement: 28
+pattern: [0, 1, 4, 5, 10, 12, 15] - improvement: 33
+pattern: [0, 1, 4, 6, 10, 12, 15] - improvement: 25
+pattern: [0, 1, 4, 9, 10, 12, 15] - improvement: 25
+pattern: [0, 1, 4, 10, 11, 12, 15] - improvement: 37
+pattern: [0, 1, 4, 10, 12, 14, 15] - improvement: 22
+pattern: [0, 1, 2, 4, 10, 12, 13, 15] - improvement: 29
+pattern: [0, 1, 4, 5, 10, 12, 13, 15] - improvement: 34
+pattern: [0, 1, 4, 6, 10, 12, 13, 15] - improvement: 25
+pattern: [0, 1, 4, 9, 10, 12, 13, 15] - improvement: 25
+pattern: [0, 1, 4, 10, 11, 12, 13, 15] - improvement: 37
+pattern: [0, 1, 4, 10, 12, 13, 14, 15] - improvement: 22
+pattern: [0, 1, 2, 4, 8, 10, 12, 13, 15] - improvement: 32
+pattern: [0, 1, 4, 5, 8, 10, 12, 13, 15] - improvement: 35
+pattern: [0, 1, 4, 6, 8, 10, 12, 13, 15] - improvement: 27
+pattern: [0, 1, 4, 8, 9, 10, 12, 13, 15] - improvement: 25
+pattern: [0, 1, 4, 8, 10, 11, 12, 13, 15] - improvement: 37
+pattern: [0, 1, 4, 8, 10, 12, 13, 14, 15] - improvement: 22
+pattern: [0, 1, 2, 3, 4, 8, 10, 12, 13, 15] - improvement: 33
+pattern: [0, 1, 3, 4, 5, 8, 10, 12, 13, 15] - improvement: 36
+pattern: [0, 1, 3, 4, 6, 8, 10, 12, 13, 15] - improvement: 27
+pattern: [0, 1, 3, 4, 8, 9, 10, 12, 13, 15] - improvement: 27
+pattern: [0, 1, 3, 4, 8, 10, 11, 12, 13, 15] - improvement: 38
+pattern: [0, 1, 3, 4, 8, 10, 12, 13, 14, 15] - improvement: 22
+pattern: [0, 1, 2, 3, 4, 7, 8, 10, 12, 13, 15] - improvement: 34
+pattern: [0, 1, 3, 4, 5, 7, 8, 10, 12, 13, 15] - improvement: 37
+pattern: [0, 1, 3, 4, 6, 7, 8, 10, 12, 13, 15] - improvement: 27
+pattern: [0, 1, 3, 4, 7, 8, 9, 10, 12, 13, 15] - improvement: 28
+pattern: [0, 1, 3, 4, 7, 8, 10, 11, 12, 13, 15] - improvement: 38
+pattern: [0, 1, 3, 4, 7, 8, 10, 12, 13, 14, 15] - improvement: 24
+found a better pattern with improvement 38
+pattern: [0, 1, 3, 4, 8, 10, 11, 12, 13, 15]
+Hill climbing time so far: 0.390307s
+current collection size is 24574
+current initial h value: 15
+pattern: [0, 2] - improvement: 10
+pattern: [0, 5] - improvement: 4
+pattern: [0, 6] - improvement: 4
+pattern: [0, 9] - improvement: 1
+pattern: [0, 14] - improvement: 4
+pattern: [0, 2, 4] - improvement: 13
+pattern: [0, 4, 5] - improvement: 21
+pattern: [0, 4, 6] - improvement: 6
+pattern: [0, 4, 9] - improvement: 5
+pattern: [0, 4, 14] - improvement: 12
+pattern: [0, 2, 4, 12] - improvement: 24
+pattern: [0, 4, 5, 12] - improvement: 22
+pattern: [0, 4, 6, 12] - improvement: 7
+pattern: [0, 4, 9, 12] - improvement: 6
+pattern: [0, 4, 12, 14] - improvement: 15
+pattern: [0, 2, 4, 12, 15] - improvement: 33
+pattern: [0, 4, 5, 12, 15] - improvement: 26
+pattern: [0, 4, 6, 12, 15] - improvement: 17
+pattern: [0, 4, 9, 12, 15] - improvement: 12
+pattern: [0, 4, 12, 14, 15] - improvement: 15
+pattern: [0, 1, 2, 4, 12, 15] - improvement: 33
+pattern: [0, 1, 4, 5, 12, 15] - improvement: 26
+pattern: [0, 1, 4, 6, 12, 15] - improvement: 27
+pattern: [0, 1, 4, 9, 12, 15] - improvement: 26
+pattern: [0, 1, 4, 12, 14, 15] - improvement: 26
+pattern: [0, 1, 2, 4, 10, 12, 15] - improvement: 34
+pattern: [0, 1, 4, 5, 10, 12, 15] - improvement: 29
+pattern: [0, 1, 4, 6, 10, 12, 15] - improvement: 27
+pattern: [0, 1, 4, 9, 10, 12, 15] - improvement: 26
+pattern: [0, 1, 4, 10, 12, 14, 15] - improvement: 26
+pattern: [0, 1, 2, 4, 10, 12, 13, 15] - improvement: 35
+pattern: [0, 1, 4, 5, 10, 12, 13, 15] - improvement: 30
+pattern: [0, 1, 4, 6, 10, 12, 13, 15] - improvement: 28
+pattern: [0, 1, 4, 9, 10, 12, 13, 15] - improvement: 26
+pattern: [0, 1, 4, 10, 12, 13, 14, 15] - improvement: 26
+pattern: [0, 1, 2, 4, 8, 10, 12, 13, 15] - improvement: 36
+pattern: [0, 1, 4, 5, 8, 10, 12, 13, 15] - improvement: 30
+pattern: [0, 1, 4, 6, 8, 10, 12, 13, 15] - improvement: 29
+pattern: [0, 1, 4, 8, 9, 10, 12, 13, 15] - improvement: 26
+pattern: [0, 1, 4, 8, 10, 12, 13, 14, 15] - improvement: 27
+pattern: [0, 1, 2, 3, 4, 8, 10, 12, 13, 15] - improvement: 36
+pattern: [0, 1, 3, 4, 5, 8, 10, 12, 13, 15] - improvement: 31
+pattern: [0, 1, 3, 4, 6, 8, 10, 12, 13, 15] - improvement: 29
+pattern: [0, 1, 3, 4, 8, 9, 10, 12, 13, 15] - improvement: 26
+pattern: [0, 1, 3, 4, 8, 10, 12, 13, 14, 15] - improvement: 28
+pattern: [0, 1, 2, 3, 4, 7, 8, 10, 12, 13, 15] - improvement: 36
+pattern: [0, 1, 3, 4, 5, 7, 8, 10, 12, 13, 15] - improvement: 33
+pattern: [0, 1, 3, 4, 6, 7, 8, 10, 12, 13, 15] - improvement: 29
+pattern: [0, 1, 3, 4, 7, 8, 9, 10, 12, 13, 15] - improvement: 28
+pattern: [0, 1, 3, 4, 7, 8, 10, 12, 13, 14, 15] - improvement: 30
+pattern: [0, 1, 2, 3, 4, 8, 10, 11, 12, 13, 15] - improvement: 37
+pattern: [0, 1, 3, 4, 5, 8, 10, 11, 12, 13, 15] - improvement: 32
+pattern: [0, 1, 3, 4, 6, 8, 10, 11, 12, 13, 15] - improvement: 34
+pattern: [0, 1, 3, 4, 8, 9, 10, 11, 12, 13, 15] - improvement: 28
+pattern: [0, 1, 3, 4, 8, 10, 11, 12, 13, 14, 15] - improvement: 38
+found a better pattern with improvement 38
+pattern: [0, 1, 3, 4, 8, 10, 11, 12, 13, 14, 15]
+Hill climbing time so far: 0.484999s
+current collection size is 40958
+current initial h value: 15
+pattern: [0, 2] - improvement: 4
+pattern: [0, 5] - improvement: 5
+pattern: [0, 6] - improvement: 3
+pattern: [0, 9] - improvement: 6
+pattern: [0, 2, 4] - improvement: 4
+pattern: [0, 4, 5] - improvement: 15
+pattern: [0, 4, 6] - improvement: 7
+pattern: [0, 4, 9] - improvement: 10
+pattern: [0, 2, 4, 12] - improvement: 15
+pattern: [0, 4, 5, 12] - improvement: 19
+pattern: [0, 4, 6, 12] - improvement: 11
+pattern: [0, 4, 9, 12] - improvement: 11
+pattern: [0, 2, 4, 12, 15] - improvement: 21
+pattern: [0, 4, 5, 12, 15] - improvement: 32
+pattern: [0, 4, 6, 12, 15] - improvement: 22
+pattern: [0, 4, 9, 12, 15] - improvement: 23
+pattern: [0, 1, 2, 4, 12, 15] - improvement: 21
+pattern: [0, 1, 4, 5, 12, 15] - improvement: 32
+pattern: [0, 1, 4, 6, 12, 15] - improvement: 36
+pattern: [0, 1, 4, 9, 12, 15] - improvement: 39
+pattern: [0, 1, 2, 4, 10, 12, 15] - improvement: 22
+pattern: [0, 1, 4, 5, 10, 12, 15] - improvement: 35
+pattern: [0, 1, 4, 6, 10, 12, 15] - improvement: 36
+pattern: [0, 1, 4, 9, 10, 12, 15] - improvement: 39
+pattern: [0, 1, 2, 4, 10, 12, 13, 15] - improvement: 22
+pattern: [0, 1, 4, 5, 10, 12, 13, 15] - improvement: 35
+pattern: [0, 1, 4, 6, 10, 12, 13, 15] - improvement: 36
+pattern: [0, 1, 4, 9, 10, 12, 13, 15] - improvement: 39
+pattern: [0, 1, 2, 4, 8, 10, 12, 13, 15] - improvement: 25
+pattern: [0, 1, 4, 5, 8, 10, 12, 13, 15] - improvement: 35
+pattern: [0, 1, 4, 6, 8, 10, 12, 13, 15] - improvement: 39
+pattern: [0, 1, 4, 8, 9, 10, 12, 13, 15] - improvement: 39
+pattern: [0, 1, 2, 3, 4, 8, 10, 12, 13, 15] - improvement: 25
+pattern: [0, 1, 3, 4, 5, 8, 10, 12, 13, 15] - improvement: 36
+pattern: [0, 1, 3, 4, 6, 8, 10, 12, 13, 15] - improvement: 39
+pattern: [0, 1, 3, 4, 8, 9, 10, 12, 13, 15] - improvement: 41
+pattern: [0, 1, 2, 3, 4, 7, 8, 10, 12, 13, 15] - improvement: 25
+pattern: [0, 1, 3, 4, 5, 7, 8, 10, 12, 13, 15] - improvement: 36
+pattern: [0, 1, 3, 4, 6, 7, 8, 10, 12, 13, 15] - improvement: 39
+pattern: [0, 1, 3, 4, 7, 8, 9, 10, 12, 13, 15] - improvement: 42
+pattern: [0, 1, 3, 4, 7, 8, 10, 12, 13, 14, 15] - improvement: 1
+pattern: [0, 1, 2, 3, 4, 8, 10, 11, 12, 13, 15] - improvement: 25
+pattern: [0, 1, 3, 4, 5, 8, 10, 11, 12, 13, 15] - improvement: 38
+pattern: [0, 1, 3, 4, 6, 8, 10, 11, 12, 13, 15] - improvement: 44
+pattern: [0, 1, 3, 4, 8, 9, 10, 11, 12, 13, 15] - improvement: 45
+pattern: [0, 1, 2, 3, 4, 8, 10, 11, 12, 13, 14, 15] - improvement: 27
+pattern: [0, 1, 3, 4, 5, 8, 10, 11, 12, 13, 14, 15] - improvement: 39
+pattern: [0, 1, 3, 4, 6, 8, 10, 11, 12, 13, 14, 15] - improvement: 50
+pattern: [0, 1, 3, 4, 7, 8, 10, 11, 12, 13, 14, 15] - improvement: 1
+pattern: [0, 1, 3, 4, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 56
+found a better pattern with improvement 56
+pattern: [0, 1, 3, 4, 8, 9, 10, 11, 12, 13, 14, 15]
+Hill climbing time so far: 0.602777s
+current collection size is 73726
+current initial h value: 15
+pattern: [0, 2] - improvement: 3
+pattern: [0, 5] - improvement: 4
+pattern: [0, 6] - improvement: 1
+pattern: [0, 2, 4] - improvement: 6
+pattern: [0, 4, 5] - improvement: 17
+pattern: [0, 4, 6] - improvement: 4
+pattern: [0, 2, 4, 12] - improvement: 18
+pattern: [0, 4, 5, 12] - improvement: 17
+pattern: [0, 4, 6, 12] - improvement: 7
+pattern: [0, 2, 4, 12, 15] - improvement: 28
+pattern: [0, 4, 5, 12, 15] - improvement: 25
+pattern: [0, 4, 6, 12, 15] - improvement: 12
+pattern: [0, 1, 2, 4, 12, 15] - improvement: 28
+pattern: [0, 1, 4, 5, 12, 15] - improvement: 25
+pattern: [0, 1, 4, 6, 12, 15] - improvement: 33
+pattern: [0, 1, 2, 4, 10, 12, 15] - improvement: 29
+pattern: [0, 1, 4, 5, 10, 12, 15] - improvement: 26
+pattern: [0, 1, 4, 6, 10, 12, 15] - improvement: 33
+pattern: [0, 1, 2, 4, 10, 12, 13, 15] - improvement: 30
+pattern: [0, 1, 4, 5, 10, 12, 13, 15] - improvement: 26
+pattern: [0, 1, 4, 6, 10, 12, 13, 15] - improvement: 34
+pattern: [0, 1, 2, 4, 8, 10, 12, 13, 15] - improvement: 30
+pattern: [0, 1, 4, 5, 8, 10, 12, 13, 15] - improvement: 26
+pattern: [0, 1, 4, 6, 8, 10, 12, 13, 15] - improvement: 34
+pattern: [0, 1, 2, 3, 4, 8, 10, 12, 13, 15] - improvement: 31
+pattern: [0, 1, 3, 4, 5, 8, 10, 12, 13, 15] - improvement: 28
+pattern: [0, 1, 3, 4, 6, 8, 10, 12, 13, 15] - improvement: 34
+pattern: [0, 1, 2, 3, 4, 7, 8, 10, 12, 13, 15] - improvement: 33
+pattern: [0, 1, 3, 4, 5, 7, 8, 10, 12, 13, 15] - improvement: 28
+pattern: [0, 1, 3, 4, 6, 7, 8, 10, 12, 13, 15] - improvement: 34
+pattern: [0, 1, 3, 4, 7, 8, 10, 12, 13, 14, 15] - improvement: 1
+pattern: [0, 1, 2, 3, 4, 8, 10, 11, 12, 13, 15] - improvement: 36
+pattern: [0, 1, 3, 4, 5, 8, 10, 11, 12, 13, 15] - improvement: 31
+pattern: [0, 1, 3, 4, 6, 8, 10, 11, 12, 13, 15] - improvement: 45
+pattern: [0, 1, 2, 3, 4, 8, 10, 11, 12, 13, 14, 15] - improvement: 37
+pattern: [0, 1, 3, 4, 5, 8, 10, 11, 12, 13, 14, 15] - improvement: 31
+pattern: [0, 1, 3, 4, 6, 8, 10, 11, 12, 13, 14, 15] - improvement: 46
+pattern: [0, 1, 3, 4, 7, 8, 10, 11, 12, 13, 14, 15] - improvement: 1
+pattern: [0, 1, 2, 3, 4, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 39
+pattern: [0, 1, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 34
+pattern: [0, 1, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 49
+pattern: [0, 1, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 1
+found a better pattern with improvement 49
+pattern: [0, 1, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15]
+Hill climbing time so far: 0.751351s
+current collection size is 139262
+current initial h value: 15
+pattern: [0, 2] - improvement: 6
+pattern: [0, 5] - improvement: 3
+pattern: [0, 2, 4] - improvement: 7
+pattern: [0, 4, 5] - improvement: 10
+pattern: [0, 2, 4, 12] - improvement: 16
+pattern: [0, 4, 5, 12] - improvement: 11
+pattern: [0, 2, 4, 12, 15] - improvement: 26
+pattern: [0, 4, 5, 12, 15] - improvement: 20
+pattern: [0, 1, 2, 4, 12, 15] - improvement: 26
+pattern: [0, 1, 4, 5, 12, 15] - improvement: 20
+pattern: [0, 1, 2, 4, 10, 12, 15] - improvement: 28
+pattern: [0, 1, 4, 5, 10, 12, 15] - improvement: 20
+pattern: [0, 1, 2, 4, 10, 12, 13, 15] - improvement: 28
+pattern: [0, 1, 4, 5, 10, 12, 13, 15] - improvement: 20
+pattern: [0, 1, 2, 4, 8, 10, 12, 13, 15] - improvement: 31
+pattern: [0, 1, 4, 5, 8, 10, 12, 13, 15] - improvement: 20
+pattern: [0, 1, 2, 3, 4, 8, 10, 12, 13, 15] - improvement: 32
+pattern: [0, 1, 3, 4, 5, 8, 10, 12, 13, 15] - improvement: 23
+pattern: [0, 1, 2, 3, 4, 7, 8, 10, 12, 13, 15] - improvement: 32
+pattern: [0, 1, 3, 4, 5, 7, 8, 10, 12, 13, 15] - improvement: 23
+pattern: [0, 1, 3, 4, 7, 8, 10, 12, 13, 14, 15] - improvement: 1
+pattern: [0, 1, 2, 3, 4, 8, 10, 11, 12, 13, 15] - improvement: 35
+pattern: [0, 1, 3, 4, 5, 8, 10, 11, 12, 13, 15] - improvement: 23
+pattern: [0, 1, 2, 3, 4, 8, 10, 11, 12, 13, 14, 15] - improvement: 40
+pattern: [0, 1, 3, 4, 5, 8, 10, 11, 12, 13, 14, 15] - improvement: 25
+pattern: [0, 1, 3, 4, 7, 8, 10, 11, 12, 13, 14, 15] - improvement: 1
+pattern: [0, 1, 2, 3, 4, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 42
+pattern: [0, 1, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 36
+pattern: [0, 1, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 2
+pattern: [0, 1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 45
+pattern: [0, 1, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 38
+pattern: [0, 1, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 2
+found a better pattern with improvement 45
+pattern: [0, 1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15]
+Hill climbing time so far: 0.927126s
+current collection size is 270334
+current initial h value: 15
+pattern: [0, 5] - improvement: 6
+pattern: [0, 4, 5] - improvement: 24
+pattern: [0, 4, 5, 12] - improvement: 24
+pattern: [0, 4, 5, 12, 15] - improvement: 36
+pattern: [0, 1, 4, 5, 12, 15] - improvement: 36
+pattern: [0, 1, 4, 5, 10, 12, 15] - improvement: 37
+pattern: [0, 1, 4, 5, 10, 12, 13, 15] - improvement: 37
+pattern: [0, 1, 4, 5, 8, 10, 12, 13, 15] - improvement: 38
+pattern: [0, 1, 3, 4, 5, 8, 10, 12, 13, 15] - improvement: 40
+pattern: [0, 1, 3, 4, 5, 7, 8, 10, 12, 13, 15] - improvement: 40
+pattern: [0, 1, 3, 4, 7, 8, 9, 10, 12, 13, 15] - improvement: 3
+pattern: [0, 1, 3, 4, 7, 8, 10, 12, 13, 14, 15] - improvement: 1
+pattern: [0, 1, 3, 4, 5, 8, 10, 11, 12, 13, 15] - improvement: 41
+pattern: [0, 1, 3, 4, 5, 8, 10, 11, 12, 13, 14, 15] - improvement: 42
+pattern: [0, 1, 3, 4, 7, 8, 10, 11, 12, 13, 14, 15] - improvement: 1
+pattern: [0, 1, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 46
+pattern: [0, 1, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 4
+pattern: [0, 1, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 48
+pattern: [0, 1, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 4
+pattern: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 56
+pattern: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 4
+found a better pattern with improvement 56
+pattern: [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15]
+Hill climbing time so far: 1.11252s
+current collection size is 532478
+current initial h value: 15
+pattern: [0, 1, 3, 4, 5, 7, 8, 10, 12, 13, 15] - improvement: 1
+pattern: [0, 1, 3, 4, 7, 8, 9, 10, 12, 13, 15] - improvement: 4
+pattern: [0, 1, 3, 4, 7, 8, 10, 12, 13, 14, 15] - improvement: 1
+pattern: [0, 1, 3, 4, 7, 8, 10, 11, 12, 13, 14, 15] - improvement: 1
+pattern: [0, 1, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 5
+pattern: [0, 1, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 5
+pattern: [0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 5
+pattern: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] - improvement: 6
+Improvement below threshold. Stop hill climbing.
+Hill climbing iterations: 16
+Hill climbing generated patterns: 125
+Hill climbing rejected patterns: 0
+Hill climbing maximum PDB size: 524288
+Hill climbing time: 1.22486s
+Hill climbing generator collection: [[1], [2], [3], [4], [5], [6], [7], [8], [9], [10], [11], [12], [13], [14], [15], [0, 4], [0, 4, 12], [0, 4, 12, 15], [0, 1, 4, 12, 15], [0, 1, 4, 10, 12, 15], [0, 1, 4, 10, 12, 13, 15], [0, 1, 4, 8, 10, 12, 13, 15], [0, 1, 3, 4, 8, 10, 12, 13, 15], [0, 1, 3, 4, 7, 8, 10, 12, 13, 15], [0, 1, 3, 4, 8, 10, 11, 12, 13, 15], [0, 1, 3, 4, 8, 10, 11, 12, 13, 14, 15], [0, 1, 3, 4, 8, 9, 10, 11, 12, 13, 14, 15], [0, 1, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15], [0, 1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 15], [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15]]
+Hill climbing generator number of patterns: 30
+Hill climbing generator total PDB size: 532478
+Hill climbing generator computation time: 1.22567s
+Running dominance pruning...
+Pruned 13 of 16 pattern cliques
+Pruned 13 of 30 PDBs
+Dominance pruning took 1.1551e-05s
+Canonical PDB heuristic number of patterns: 17
+Canonical PDB heuristic total PDB size: 270366
+Canonical PDB heuristic computation time: 1.22584s
+Generating patterns using the systematic generator...
+Found 30 SGA patterns.
+Found 30 interesting patterns.
+Systematic generator number of patterns: 30
+Systematic generator total PDB size: 510
+Systematic generator computation time: 0.000183963s
+Computing PDBs for pattern collection...
+Done computing PDBs for pattern collection: 0.00167772s
+Generating patterns using the systematic generator...
+Found 30 SGA patterns.
+Found 135 interesting patterns.
+Systematic generator number of patterns: 135
+Systematic generator total PDB size: 7230
+Systematic generator computation time: 0.000788711s
+Computing PDBs for pattern collection...
+Done computing PDBs for pattern collection: 0.00971671s
+Building successor generator...done! [t=1.24371s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 1.586e-05s
+Variables: 16
+FactPairs: 46
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 92 reverse operators.
+Built match tree.
+1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 10=0 11=0 12=0 13=0 14=0 15=0 
+Inserting initial (goal) state...
+New best h: [0, 0, 0, 16] (iteration 0) 
+Found first concrete state.
+Found first concrete state.
+Found first concrete state.
+New best h: [0, 1, 1, 16] (iteration 1) 
+New best h: [0, 2, 2, 16] (iteration 60) 
+New best h: [1, 3, 3, 16] (iteration 64) 
+New best h: [2, 4, 4, 16] (iteration 68) 
+New best h: [2, 5, 5, 16] (iteration 81) 
+New best h: [2, 6, 6, 16] (iteration 88) 
+New best h: [2, 7, 7, 16] (iteration 92) 
+New best h: [4, 7, 9, 16] (iteration 101) 
+New best h: [4, 8, 9, 16] (iteration 107) 
+New best h: [4, 8, 10, 16] (iteration 113) 
+New best h: [4, 9, 11, 16] (iteration 867) 
+Reached iteration limit.
+Actual search time: 4.15301s [t=5.39824s]
+Original state h-value: 0
+New state h-value: 4
+Expanded 4525 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 49843
+Generated 15219 state(s).
+Dead ends: 1817 state(s).
+Number of registered states: 10002
+Int hash set load factor: 10002/16384 = 0.610474
+Int hash set resizes: 14
+Open nodes: 5476
+Closed states: 4525
+Search time: 4.15439s
+Total time: 5.39824s
+Solution found.
+Peak memory: 82688 KB
+search exit code: 0
+

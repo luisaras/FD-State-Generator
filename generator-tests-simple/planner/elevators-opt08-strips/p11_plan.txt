@@ -1,0 +1,105 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=6.1184e-05s]
+done reading input! [t=0.00137402s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00453201s]
+peak memory difference for successor generator creation: 132 KB
+time for successor generation creation: 0.000323006s
+Variables: 9
+FactPairs: 77
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00502094s, 68024 KB]
+f = 38 [1 evaluated, 0 expanded, t=0.00507625s, 68024 KB]
+Initial heuristic value for lmcut: 38
+New best heuristic value for lmcut: 34
+[g=7, 2 evaluated, 1 expanded, t=0.00534097s, 68024 KB]
+New best heuristic value for lmcut: 33
+[g=6, 3 evaluated, 1 expanded, t=0.00559916s, 68024 KB]
+New best heuristic value for lmcut: 30
+[g=11, 8 evaluated, 1 expanded, t=0.00666312s, 68024 KB]
+New best heuristic value for lmcut: 28
+[g=10, 9 evaluated, 1 expanded, t=0.00689557s, 68024 KB]
+New best heuristic value for lmcut: 27
+[g=8, 11 evaluated, 1 expanded, t=0.00729733s, 68024 KB]
+New best heuristic value for lmcut: 21
+[g=15, 18 evaluated, 2 expanded, t=0.00872329s, 68024 KB]
+f = 39 [61 evaluated, 6 expanded, t=0.013578s, 68024 KB]
+f = 41 [65 evaluated, 7 expanded, t=0.0140832s, 68024 KB]
+f = 42 [134 evaluated, 13 expanded, t=0.0222912s, 68024 KB]
+f = 43 [150 evaluated, 16 expanded, t=0.0242965s, 68024 KB]
+f = 44 [175 evaluated, 22 expanded, t=0.0271249s, 68024 KB]
+f = 45 [179 evaluated, 23 expanded, t=0.0276215s, 68024 KB]
+New best heuristic value for lmcut: 20
+[g=27, 418 evaluated, 46 expanded, t=0.0539825s, 68024 KB]
+f = 46 [483 evaluated, 52 expanded, t=0.0607472s, 68024 KB]
+f = 47 [746 evaluated, 86 expanded, t=0.0884514s, 68024 KB]
+f = 48 [929 evaluated, 106 expanded, t=0.107186s, 68024 KB]
+f = 49 [1056 evaluated, 129 expanded, t=0.121622s, 68024 KB]
+f = 50 [1283 evaluated, 153 expanded, t=0.144585s, 68024 KB]
+f = 51 [2118 evaluated, 231 expanded, t=0.234615s, 68164 KB]
+f = 52 [2503 evaluated, 283 expanded, t=0.27605s, 68164 KB]
+New best heuristic value for lmcut: 19
+[g=33, 2785 evaluated, 306 expanded, t=0.301496s, 68164 KB]
+f = 53 [3903 evaluated, 428 expanded, t=0.419469s, 68164 KB]
+New best heuristic value for lmcut: 15
+[g=41, 3966 evaluated, 435 expanded, t=0.424823s, 68296 KB]
+f = 54 [4694 evaluated, 528 expanded, t=0.503499s, 68296 KB]
+New best heuristic value for lmcut: 14
+[g=40, 4712 evaluated, 532 expanded, t=0.505089s, 68296 KB]
+New best heuristic value for lmcut: 13
+[g=44, 4945 evaluated, 549 expanded, t=0.52053s, 68296 KB]
+f = 55 [6620 evaluated, 729 expanded, t=0.698106s, 68424 KB]
+f = 56 [7989 evaluated, 919 expanded, t=0.843397s, 68556 KB]
+New best heuristic value for lmcut: 9
+[g=51, 8178 evaluated, 935 expanded, t=0.85562s, 68556 KB]
+New best heuristic value for lmcut: 6
+[g=55, 8223 evaluated, 938 expanded, t=0.857949s, 68556 KB]
+New best heuristic value for lmcut: 0
+[g=56, 8224 evaluated, 938 expanded, t=0.858002s, 68556 KB]
+Solution found! Cost: 56
+Actual search time: 0.853636s [t=0.858773s]
+op283) move-down-slow slow0-0 n6 n0 (11)
+op15) board p0 slow0-0 n0 n0 n1 (0)
+op59) board p1 slow0-0 n0 n1 n2 (0)
+op322) move-up-slow slow0-0 n0 n3 (8)
+op151) leave p0 slow0-0 n3 n2 n1 (0)
+op273) move-down-slow slow0-0 n3 n2 (6)
+op106) board p2 slow0-0 n2 n1 n2 (0)
+op334) move-up-slow slow0-0 n2 n6 (9)
+op200) leave p1 slow0-0 n6 n2 n1 (0)
+op242) leave p2 slow0-0 n6 n1 n0 (0)
+op305) move-down-slow slow1-0 n8 n6 (7)
+op78) board p1 slow1-0 n6 n0 n1 (0)
+op122) board p2 slow1-0 n6 n1 n2 (0)
+op347) move-up-slow slow1-0 n6 n7 (6)
+op253) leave p2 slow1-0 n7 n2 n1 (0)
+op351) move-up-slow slow1-0 n7 n11 (9)
+op203) leave p1 slow1-0 n11 n1 n0 (0)
+Plan length: 17 step(s).
+Plan cost: 56
+Expanded 940 state(s).
+Reopened 0 state(s).
+Evaluated 8248 state(s).
+Evaluations: 8248
+Generated 16451 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 919 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 7989 state(s).
+Generated until last jump: 16076 state(s).
+Number of registered states: 8248
+Int hash set load factor: 8248/16384 = 0.503418
+Int hash set resizes: 14
+Open nodes: 7308
+Closed states: 940
+Search time: 0.854061s
+Total time: 0.858778s
+Solution found.
+Peak memory: 68692 KB
+search exit code: 0
+

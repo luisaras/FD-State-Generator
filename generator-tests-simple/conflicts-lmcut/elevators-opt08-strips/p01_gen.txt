@@ -1,0 +1,87 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000000,max_time=600)' --internal-plan-file sas_plan
+reading input... [t=8.2472e-05s]
+done reading input! [t=0.00160646s]
+Initializing landmark cut heuristic...
+Generating patterns using the systematic generator...
+building causal graph...done! [t=0.000217997s]
+Found 21 SGA patterns.
+Found 21 interesting patterns.
+Systematic generator number of patterns: 21
+Systematic generator total PDB size: 936
+Systematic generator computation time: 0.000394489s
+Computing PDBs for pattern collection...
+Done computing PDBs for pattern collection: 0.0052288s
+Generating patterns using the systematic generator...
+Found 75 SGA patterns.
+Found 84 interesting patterns.
+Systematic generator number of patterns: 84
+Systematic generator total PDB size: 21024
+Systematic generator computation time: 0.000474171s
+Computing PDBs for pattern collection...
+Done computing PDBs for pattern collection: 0.0185287s
+Building successor generator...done! [t=0.034105s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000134127s
+Variables: 9
+FactPairs: 61
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 270 reverse operators.
+Built match tree.
+6=7 7=9 8=4 
+Inserting initial (goal) state...
+New best h: [0, 0, 0, 5] (iteration 0) 
+New best h: [0, 0, 0, 7] (iteration 30) 
+New best h: [7, 7, 7, 5] (iteration 34) 
+New best h: [13, 13, 9, 5] (iteration 35) 
+New best h: [13, 13, 13, 7] (iteration 49) 
+Found first concrete state.
+Found first concrete state.
+Found first concrete state.
+New best h: [13, 13, 13, 9] (iteration 65) 
+New best h: [13, 19, 19, 9] (iteration 82) 
+New best h: [13, 20, 20, 9] (iteration 83) 
+New best h: [13, 21, 20, 9] (iteration 84) 
+New best h: [16, 24, 21, 9] (iteration 109) 
+New best h: [18, 26, 22, 9] (iteration 126) 
+New best h: [18, 30, 19, 9] (iteration 181) 
+New best h: [18, 30, 22, 9] (iteration 183) 
+New best h: [18, 30, 26, 9] (iteration 186) 
+New best h: [18, 30, 27, 9] (iteration 223) 
+New best h: [18, 30, 29, 9] (iteration 2166) 
+New best h: [24, 36, 30, 9] (iteration 2180) 
+New best h: [24, 37, 21, 9] (iteration 2186) 
+New best h: [24, 37, 22, 9] (iteration 2188) 
+New best h: [24, 37, 23, 9] (iteration 2204) 
+New best h: [24, 37, 31, 9] (iteration 2959) 
+New best h: [24, 39, 31, 9] (iteration 2966) 
+New best h: [25, 37, 25, 9] (iteration 3783) 
+New best h: [25, 37, 26, 9] (iteration 3793) 
+New best h: [25, 37, 32, 9] (iteration 10604) 
+Time limit reached. Abort search.
+Actual search time: 600s [t=600.035s]
+Original state h-value: 24
+New state h-value: 25
+Expanded 2222332 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 9845977
+Generated 31458317 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 2268916
+Int hash set load factor: 2268916/4194304 = 0.540952
+Int hash set resizes: 22
+Open nodes: 46544
+Closed states: 2222332
+Search time: 600.001s
+Total time: 600.035s
+Solution found.
+Peak memory: 355028 KB
+search exit code: 0
+

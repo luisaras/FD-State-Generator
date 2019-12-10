@@ -12,8 +12,8 @@ ALIASES = {}
 def add_gen_aliases(ALIASES):
 
   GENERATORS = {}
-  GENERATORS[""] = "generator_abstract([%s],max_it=50000000,max_time=900)"
-  GENERATORS["-limited"] = "generator_abstract([%s],max_it=50000,max_time=300)"
+  GENERATORS[""] = "generator_abstract([%s],max_it=10000000,max_time=600)"
+  GENERATORS["-limited"] = "generator_abstract([%s],max_it=10000,max_time=60)"
   H = "h"
   NOVELTY = "novelty_h(prune=false,eval=h,reverse=true),h"
   CONFLICTS = "sum([weight(pho2,-1),pho3]),pho3,h"

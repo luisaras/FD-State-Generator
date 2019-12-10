@@ -1,0 +1,56 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/fulldb/miconic/s1-0_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=6.9225e-05s]
+done reading input! [t=0.000299157s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00331089s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 1.1086e-05s
+Variables: 3
+FactPairs: 6
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00345705s, 67752 KB]
+f = 3 [1 evaluated, 0 expanded, t=0.00348499s, 67752 KB]
+Initial heuristic value for lmcut: 3
+New best heuristic value for lmcut: 3
+[g=1, 2 evaluated, 1 expanded, t=0.00353391s, 67752 KB]
+f = 4 [2 evaluated, 1 expanded, t=0.00356204s, 67752 KB]
+New best heuristic value for lmcut: 2
+[g=2, 3 evaluated, 2 expanded, t=0.00359644s, 67752 KB]
+New best heuristic value for lmcut: 1
+[g=3, 4 evaluated, 3 expanded, t=0.00363103s, 67752 KB]
+New best heuristic value for lmcut: 0
+[g=4, 5 evaluated, 4 expanded, t=0.00366532s, 67752 KB]
+Solution found! Cost: 4
+Actual search time: 0.000176805s [t=0.00369856s]
+op3) up f0 f1 (1)
+op0) board f1 p0 (1)
+op2) down f1 f0 (1)
+op1) depart f0 p0 (1)
+Plan length: 4 step(s).
+Plan cost: 4
+Expanded 5 state(s).
+Reopened 0 state(s).
+Evaluated 5 state(s).
+Evaluations: 5
+Generated 7 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 1 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 2 state(s).
+Generated until last jump: 1 state(s).
+Number of registered states: 5
+Int hash set load factor: 5/8 = 0.625
+Int hash set resizes: 3
+Open nodes: 0
+Closed states: 5
+Search time: 0.000289128s
+Total time: 0.00370339s
+Solution found.
+Peak memory: 67752 KB
+search exit code: 0
+

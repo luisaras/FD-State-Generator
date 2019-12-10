@@ -1,0 +1,57 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --search 'generator_abstract([h],max_it=10000,max_time=60)' --internal-plan-file sas_plan
+reading input... [t=4.6637e-05s]
+done reading input! [t=0.000371269s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00297406s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 2.6945e-05s
+Variables: 16
+FactPairs: 46
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 92 reverse operators.
+Built match tree.
+1=0 2=0 3=0 4=0 5=0 6=0 7=0 8=0 9=0 10=0 11=0 12=0 13=0 14=0 15=0 
+Inserting initial (goal) state...
+New best h: [0, 16] (iteration 0) 
+Found first concrete state.
+New best h: [1, 16] (iteration 1) 
+New best h: [2, 16] (iteration 60) 
+New best h: [3, 16] (iteration 66) 
+New best h: [4, 16] (iteration 71) 
+New best h: [5, 16] (iteration 80) 
+New best h: [6, 16] (iteration 105) 
+New best h: [7, 16] (iteration 112) 
+New best h: [8, 16] (iteration 122) 
+New best h: [9, 16] (iteration 134) 
+New best h: [10, 16] (iteration 212) 
+New best h: [11, 16] (iteration 476) 
+New best h: [12, 16] (iteration 936) 
+New best h: [13, 16] (iteration 937) 
+Reached iteration limit.
+Actual search time: 0.208229s [t=0.211666s]
+Original state h-value: 11
+New state h-value: 13
+Expanded 9739 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 20000
+Generated 19463 state(s).
+Dead ends: 6429 state(s).
+Number of registered states: 10001
+Int hash set load factor: 10001/16384 = 0.610413
+Int hash set resizes: 14
+Open nodes: 262
+Closed states: 9739
+Search time: 0.208509s
+Total time: 0.211671s
+Solution found.
+Peak memory: 68328 KB
+search exit code: 0
+
