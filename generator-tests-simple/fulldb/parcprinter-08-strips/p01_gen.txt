@@ -1,0 +1,63 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([h],max_it=10000000,max_time=600)' --internal-plan-file sas_plan
+reading input... [t=6.9896e-05s]
+done reading input! [t=0.000500719s]
+Generating a pattern using the greedy generator...
+building causal graph...done! [t=0.000135244s]
+Greedy generator pattern: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+Greedy generator number of variables: 21
+Greedy generator PDB size: 18874368
+Greedy generator computation time: 0.000175233s
+Building successor generator...done! [t=2.03458s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 2.7053e-05s
+Variables: 21
+FactPairs: 58
+Bytes per state: 8
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 8225 reverse operators.
+Built match tree.
+17=0 18=0 19=0 20=0 
+Inserting initial (goal) state...
+New best h: [0, 6] (iteration 0) 
+New best h: [8000, 6] (iteration 3) 
+New best h: [113013, 7] (iteration 5) 
+New best h: [224040, 7] (iteration 11) 
+New best h: [232040, 8] (iteration 8214) 
+New best h: [235039, 9] (iteration 16407) 
+New best h: [242039, 9] (iteration 16408) 
+New best h: [260038, 10] (iteration 24601) 
+New best h: [262038, 11] (iteration 32794) 
+New best h: [264038, 12] (iteration 40987) 
+New best h: [264038, 20] (iteration 49180) 
+New best h: [268038, 11] (iteration 176173) 
+New best h: [286037, 12] (iteration 184366) 
+New best h: [288037, 13] (iteration 192559) 
+New best h: [290037, 14] (iteration 200752) 
+New best h: [290037, 20] (iteration 208945) 
+Completely explored state space.
+Actual search time: 3.22162s [t=5.26313s]
+Original state h-value: 169009
+New state h-value: 290037
+Expanded 565493 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 1089899
+Generated 2416891 state(s).
+Dead ends: 335873 state(s).
+Number of registered states: 884982
+Int hash set load factor: 884982/1048576 = 0.843985
+Int hash set resizes: 20
+Open nodes: 0
+Closed states: 565493
+Search time: 3.22839s
+Total time: 5.26313s
+Solution found.
+Peak memory: 194384 KB
+search exit code: 0
+

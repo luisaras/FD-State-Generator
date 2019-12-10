@@ -1,0 +1,72 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty-lmcut/parcprinter-08-strips/p01_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=7.1097e-05s]
+done reading input! [t=0.00051597s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00383518s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 2.2841e-05s
+Variables: 21
+FactPairs: 58
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00400185s, 67760 KB]
+f = 9 [1 evaluated, 0 expanded, t=0.00403084s, 67760 KB]
+Initial heuristic value for lmcut: 9
+New best heuristic value for lmcut: 9
+[g=1, 2 evaluated, 1 expanded, t=0.00409288s, 67760 KB]
+New best heuristic value for lmcut: 8
+[g=1, 3 evaluated, 1 expanded, t=0.00414033s, 67760 KB]
+New best heuristic value for lmcut: 7
+[g=2, 5 evaluated, 2 expanded, t=0.00420188s, 67760 KB]
+New best heuristic value for lmcut: 6
+[g=3, 7 evaluated, 3 expanded, t=0.00425818s, 67760 KB]
+New best heuristic value for lmcut: 5
+[g=4, 9 evaluated, 4 expanded, t=0.00431248s, 67760 KB]
+New best heuristic value for lmcut: 4
+[g=5, 12 evaluated, 5 expanded, t=0.00436721s, 67760 KB]
+New best heuristic value for lmcut: 3
+[g=6, 15 evaluated, 6 expanded, t=0.0044188s, 67760 KB]
+New best heuristic value for lmcut: 2
+[g=7, 17 evaluated, 7 expanded, t=0.00446616s, 67760 KB]
+New best heuristic value for lmcut: 1
+[g=8, 19 evaluated, 8 expanded, t=0.00451052s, 67760 KB]
+New best heuristic value for lmcut: 0
+[g=9, 22 evaluated, 9 expanded, t=0.00455462s, 67760 KB]
+Solution found! Cost: 9
+Actual search time: 0.000521964s [t=0.00458922s]
+op0) blackcontainer-fromime-letter sheet1 (1)
+op15) endcap-move-letter sheet1 (1)
+op20) htmoverblack-move-letter sheet1 (1)
+op13) down-movedown-letter sheet1 (1)
+op8) colorcontainer-toime-letter sheet1 (1)
+op11) colorprinter-simplexmono-letter sheet1 front image-1 (1)
+op7) colorcontainer-fromime-letter sheet1 (1)
+op24) up-moveup-letter sheet1 (1)
+op17) finisher1-stack-letter sheet1 dummy-sheet (1)
+Plan length: 9 step(s).
+Plan cost: 9
+Expanded 10 state(s).
+Reopened 0 state(s).
+Evaluated 22 state(s).
+Evaluations: 22
+Generated 21 state(s).
+Dead ends: 3 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 22
+Int hash set load factor: 22/32 = 0.6875
+Int hash set resizes: 5
+Open nodes: 9
+Closed states: 10
+Search time: 0.000651226s
+Total time: 0.00459405s
+Solution found.
+Peak memory: 67760 KB
+search exit code: 0
+

@@ -1,0 +1,87 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([h],max_it=10000,max_time=60)' --internal-plan-file sas_plan
+reading input... [t=6.8404e-05s]
+done reading input! [t=0.000490075s]
+Initializing canonical PDB heuristic...
+Generating patterns using the hill climbing generator...
+Done calculating initial pattern collection: 5.4601e-05s
+Average operator cost: 41885
+building causal graph...done! [t=0.000140432s]
+Done calculating initial candidate PDBs
+current collection size is 8
+current initial h value: 121013
+pattern: [16, 18] - improvement: 232
+pattern: [18, 20] - improvement: 7
+pattern: [16, 19] - improvement: 850
+pattern: [16, 20] - improvement: 108
+found a better pattern with improvement 850
+pattern: [16, 19]
+Hill climbing time so far: 0.00594012s
+current collection size is 44
+current initial h value: 169009
+pattern: [16, 18] - improvement: 201
+pattern: [16, 18, 19] - improvement: 201
+found a better pattern with improvement 201
+pattern: [16, 18]
+Hill climbing time so far: 0.0140808s
+current collection size is 80
+current initial h value: 169009
+Improvement below threshold. Stop hill climbing.
+Hill climbing iterations: 3
+Hill climbing generated patterns: 53
+Hill climbing rejected patterns: 0
+Hill climbing maximum PDB size: 72
+Hill climbing time: 0.0238023s
+Hill climbing generator collection: [[17], [18], [19], [20], [16, 19], [16, 18]]
+Hill climbing generator number of patterns: 6
+Hill climbing generator total PDB size: 80
+Hill climbing generator computation time: 0.0238968s
+Running dominance pruning...
+Pruned 0 of 4 pattern cliques
+Pruned 0 of 6 PDBs
+Dominance pruning took 9.173e-06s
+Canonical PDB heuristic number of patterns: 6
+Canonical PDB heuristic total PDB size: 80
+Canonical PDB heuristic computation time: 0.0239374s
+Building successor generator...done! [t=0.0263794s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 2.0789e-05s
+Variables: 21
+FactPairs: 58
+Bytes per state: 8
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 8225 reverse operators.
+Built match tree.
+17=0 18=0 19=0 20=0 
+Inserting initial (goal) state...
+New best h: [0, 6] (iteration 0) 
+New best h: [8000, 6] (iteration 3) 
+New best h: [113013, 7] (iteration 5) 
+New best h: [113013, 8] (iteration 8214) 
+New best h: [113013, 20] (iteration 8215) 
+Reached iteration limit.
+Actual search time: 0.0251581s [t=0.060534s]
+Original state h-value: 169009
+New state h-value: 113013
+Expanded 2 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 20000
+Generated 10003 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 11791
+Int hash set load factor: 11791/16384 = 0.719666
+Int hash set resizes: 14
+Open nodes: 9999
+Closed states: 2
+Search time: 0.0340579s
+Total time: 0.0605403s
+Solution found.
+Peak memory: 72104 KB
+search exit code: 0
+

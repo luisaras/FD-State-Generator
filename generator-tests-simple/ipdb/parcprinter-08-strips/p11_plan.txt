@@ -1,0 +1,57 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/ipdb/parcprinter-08-strips/p11_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=7.0282e-05s]
+done reading input! [t=0.000647609s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.0037888s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 3.6502e-05s
+Variables: 22
+FactPairs: 63
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00395234s, 67760 KB]
+f = 4 [1 evaluated, 0 expanded, t=0.00398096s, 67760 KB]
+Initial heuristic value for lmcut: 4
+New best heuristic value for lmcut: 4
+[g=1, 2 evaluated, 1 expanded, t=0.00404112s, 67760 KB]
+New best heuristic value for lmcut: 3
+[g=1, 3 evaluated, 1 expanded, t=0.00408463s, 67760 KB]
+New best heuristic value for lmcut: 2
+[g=2, 6 evaluated, 2 expanded, t=0.00414443s, 67760 KB]
+New best heuristic value for lmcut: 1
+[g=3, 10 evaluated, 3 expanded, t=0.00422439s, 67760 KB]
+New best heuristic value for lmcut: 0
+[g=4, 13 evaluated, 4 expanded, t=0.0042885s, 67760 KB]
+Solution found! Cost: 4
+Actual search time: 0.0003053s [t=0.00432299s]
+op45) ure-simplexmono-letter sheet1 front image-1 (1)
+op41) uc2-merge-letter sheet1 back front (1)
+op25) om-upperout-letter sheet1 (1)
+op29) sys-stack-letter sheet1 dummy-sheet (1)
+Plan length: 4 step(s).
+Plan cost: 4
+Expanded 5 state(s).
+Reopened 0 state(s).
+Evaluated 13 state(s).
+Evaluations: 13
+Generated 12 state(s).
+Dead ends: 1 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 13
+Int hash set load factor: 13/16 = 0.8125
+Int hash set resizes: 4
+Open nodes: 7
+Closed states: 5
+Search time: 0.000431594s
+Total time: 0.00432779s
+Solution found.
+Peak memory: 67760 KB
+search exit code: 0
+

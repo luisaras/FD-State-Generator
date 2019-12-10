@@ -1,0 +1,43 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/fulldb-limited/parcprinter-08-strips/p11_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=7.8807e-05s]
+done reading input! [t=0.000675231s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00461886s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 8.8184e-05s
+Variables: 22
+FactPairs: 63
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00477322s, 67760 KB]
+f = 0 [1 evaluated, 0 expanded, t=0.00480174s, 67760 KB]
+Initial heuristic value for lmcut: 0
+Solution found! Cost: 0
+Actual search time: 7.773e-06s [t=0.00484595s]
+Plan length: 0 step(s).
+Plan cost: 0
+Expanded 1 state(s).
+Reopened 0 state(s).
+Evaluated 1 state(s).
+Evaluations: 1
+Generated 0 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 1
+Int hash set load factor: 1/1 = 1
+Int hash set resizes: 0
+Open nodes: 0
+Closed states: 1
+Search time: 0.00012265s
+Total time: 0.00485072s
+Solution found.
+Peak memory: 67760 KB
+search exit code: 0
+

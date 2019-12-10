@@ -1,0 +1,48 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty-ipdb-limited/parcprinter-08-strips/p01_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=8.2262e-05s]
+done reading input! [t=0.000516537s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00428386s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 5.3757e-05s
+Variables: 21
+FactPairs: 58
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00465859s, 67760 KB]
+f = 1 [1 evaluated, 0 expanded, t=0.00472853s, 67760 KB]
+Initial heuristic value for lmcut: 1
+New best heuristic value for lmcut: 1
+[g=1, 2 evaluated, 1 expanded, t=0.00485467s, 67760 KB]
+New best heuristic value for lmcut: 0
+[g=1, 4 evaluated, 1 expanded, t=0.00495205s, 67760 KB]
+Solution found! Cost: 1
+Actual search time: 0.000218813s [t=0.00503618s]
+op11) colorprinter-simplexmono-letter sheet1 front image-1 (1)
+Plan length: 1 step(s).
+Plan cost: 1
+Expanded 2 state(s).
+Reopened 0 state(s).
+Evaluated 4 state(s).
+Evaluations: 4
+Generated 3 state(s).
+Dead ends: 1 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 4
+Int hash set load factor: 4/4 = 1
+Int hash set resizes: 2
+Open nodes: 1
+Closed states: 2
+Search time: 0.000499345s
+Total time: 0.00504824s
+Solution found.
+Peak memory: 67760 KB
+search exit code: 0
+
