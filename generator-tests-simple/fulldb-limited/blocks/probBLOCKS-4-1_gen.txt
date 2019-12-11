@@ -2,18 +2,18 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /mnt/d/luisa/Projects/Programs/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([h],max_it=10000,print_h=0,max_time=60)' --internal-plan-file sas_plan
-reading input... [t=0s]
-done reading input! [t=0s]
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([h],max_it=10000,print_h=0,max_time=60)' --internal-plan-file sas_plan
+reading input... [t=4.9292e-05s]
+done reading input! [t=0.000368241s]
 Generating a pattern using the greedy generator...
-building causal graph...done! [t=0s]
+building causal graph...done! [t=0.000130546s]
 Greedy generator pattern: [0, 1, 2, 3, 4, 5, 6, 7, 8]
 Greedy generator number of variables: 9
 Greedy generator PDB size: 20000
-Greedy generator computation time: 0s
-Building successor generator...done! [t=0.015625s]
+Greedy generator computation time: 0.000173459s
+Building successor generator...done! [t=0.00986334s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0s
+time for successor generation creation: 2.6641e-05s
 Variables: 9
 FactPairs: 30
 Bytes per state: 4
@@ -41,9 +41,23 @@ New best h: [10, 9] (iteration 1922)
 New best h: [11, 9] (iteration 2252) 
 New best h: [12, 9] (iteration 2255) 
 Completely explored state space.
-Actual search time: 0.015625s [t=0.03125s]
-Peak memory: 0 KB
-caught signal 11 -- exiting
-search exit code: -11
+Actual search time: 0.0362274s [t=0.0463476s]
+Original state h-value: 10
+New state h-value: 12
+Expanded 7051 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 12724
+Generated 37785 state(s).
+Dead ends: 1454 state(s).
+Number of registered states: 7051
+Int hash set load factor: 7051/8192 = 0.860718
+Int hash set resizes: 13
+Open nodes: 0
+Closed states: 7051
+Search time: 0.0363857s
+Total time: 0.0463525s
+Solution found.
+Peak memory: 68192 KB
+search exit code: 0
 
-Driver aborting after search

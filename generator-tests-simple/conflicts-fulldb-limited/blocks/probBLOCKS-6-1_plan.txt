@@ -1,0 +1,10 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/conflicts-fulldb-limited/blocks/probBLOCKS-6-1_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=4.8816e-05s]
+Peak memory: 67500 KB
+search exit code: 33
+
+Driver aborting after search

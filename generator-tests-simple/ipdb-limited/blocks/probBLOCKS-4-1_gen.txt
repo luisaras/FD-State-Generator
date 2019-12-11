@@ -2,14 +2,14 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /mnt/d/luisa/Projects/Programs/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([h],max_it=10000,print_h=0,max_time=60)' --internal-plan-file sas_plan
-reading input... [t=0s]
-done reading input! [t=0s]
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([h],max_it=10000,print_h=0,max_time=60)' --internal-plan-file sas_plan
+reading input... [t=5.6535e-05s]
+done reading input! [t=0.000386736s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0s
+Done calculating initial pattern collection: 9.4334e-05s
 Average operator cost: 1
-building causal graph...done! [t=0s]
+building causal graph...done! [t=0.000154321s]
 Done calculating initial candidate PDBs
 current collection size is 15
 current initial h value: 4
@@ -19,21 +19,21 @@ Hill climbing iterations: 1
 Hill climbing generated patterns: 15
 Hill climbing rejected patterns: 0
 Hill climbing maximum PDB size: 10
-Hill climbing time: 0s
+Hill climbing time: 0.00651706s
 Hill climbing generator collection: [[6], [7], [8]]
 Hill climbing generator number of patterns: 3
 Hill climbing generator total PDB size: 15
-Hill climbing generator computation time: 0s
+Hill climbing generator computation time: 0.00665406s
 Running dominance pruning...
 Pruned 0 of 1 pattern cliques
 Pruned 0 of 3 PDBs
-Dominance pruning took 0s
+Dominance pruning took 8.446e-06s
 Canonical PDB heuristic number of patterns: 3
 Canonical PDB heuristic total PDB size: 15
-Canonical PDB heuristic computation time: 0s
-Building successor generator...done! [t=0s]
+Canonical PDB heuristic computation time: 0.00669707s
+Building successor generator...done! [t=0.00984857s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0s
+time for successor generation creation: 2.3681e-05s
 Variables: 9
 FactPairs: 30
 Bytes per state: 4
@@ -56,9 +56,9 @@ New best h: [4, 9] (iteration 66)
 New best h: [5, 9] (iteration 86) 
 New best h: [6, 9] (iteration 600) 
 Completely explored state space.
-Actual search time: 0.015625s [t=0.015625s]
-Original state h-value: 0
-New state h-value: -970908160
+Actual search time: 0.0370885s [t=0.0471966s]
+Original state h-value: 4
+New state h-value: 6
 Expanded 7051 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
@@ -70,9 +70,9 @@ Int hash set load factor: 7051/8192 = 0.860718
 Int hash set resizes: 13
 Open nodes: 0
 Closed states: 7051
-Search time: 0.015625s
-Total time: 0.015625s
+Search time: 0.0372486s
+Total time: 0.0472016s
 Solution found.
-Peak memory: 0 KB
+Peak memory: 68064 KB
 search exit code: 0
 

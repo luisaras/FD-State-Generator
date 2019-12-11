@@ -263,7 +263,7 @@ test_simple() {
 }
 
 test_blocks_simple() {
-    ALLH=(lmcut)
+    ALLH=(lmcut ipdb fulldb)
     BENCHMARKS=ipc
     TEST_FOLDER=generator-tests-simple
     test blocks probBLOCKS-4-0
@@ -282,7 +282,7 @@ test_blocks_simple() {
 }
 
 test_blocks() {
-    ALLH=(lmcut)
+    ALLH=(lmcut ipdb fulldb)
     BENCHMARKS=ipc
     TEST_FOLDER=generator-tests-simple
     test blocks probBLOCKS-4-0

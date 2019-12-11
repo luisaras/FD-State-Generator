@@ -2,14 +2,14 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /mnt/d/luisa/Projects/Programs/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=10000000,max_time=600)' --internal-plan-file sas_plan
-reading input... [t=0s]
-done reading input! [t=0s]
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=10000000,print_h=1,max_time=600)' --internal-plan-file sas_plan
+reading input... [t=5.4796e-05s]
+done reading input! [t=0.000380453s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0s
+Done calculating initial pattern collection: 9.3399e-05s
 Average operator cost: 1
-building causal graph...done! [t=0s]
+building causal graph...done! [t=0.000124274s]
 Done calculating initial candidate PDBs
 current collection size is 15
 current initial h value: 6
@@ -21,22 +21,22 @@ Hill climbing iterations: 1
 Hill climbing generated patterns: 15
 Hill climbing rejected patterns: 0
 Hill climbing maximum PDB size: 10
-Hill climbing time: 0s
+Hill climbing time: 0.00841279s
 Hill climbing generator collection: [[6], [7], [8]]
 Hill climbing generator number of patterns: 3
 Hill climbing generator total PDB size: 15
-Hill climbing generator computation time: 0s
+Hill climbing generator computation time: 0.00854404s
 Running dominance pruning...
 Pruned 0 of 1 pattern cliques
 Pruned 0 of 3 PDBs
-Dominance pruning took 0s
+Dominance pruning took 8.113e-06s
 Canonical PDB heuristic number of patterns: 3
 Canonical PDB heuristic total PDB size: 15
-Canonical PDB heuristic computation time: 0s
+Canonical PDB heuristic computation time: 0.00858661s
 Initializing novelty heuristic...
-Building successor generator...done! [t=0s]
+Building successor generator...done! [t=0.011766s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0s
+time for successor generation creation: 4.3254e-05s
 Variables: 9
 FactPairs: 30
 Bytes per state: 4
@@ -61,9 +61,9 @@ New best h: [1, 4, 9] (iteration 200)
 New best h: [1, 5, 9] (iteration 267) 
 New best h: [1, 6, 9] (iteration 610) 
 Completely explored state space.
-Actual search time: 0.03125s [t=0.03125s]
-Original state h-value: 1
-New state h-value: 1
+Actual search time: 0.045924s [t=0.0579639s]
+Original state h-value: 6
+New state h-value: 6
 Expanded 7051 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
@@ -75,9 +75,9 @@ Int hash set load factor: 7051/8192 = 0.860718
 Int hash set resizes: 13
 Open nodes: 0
 Closed states: 7051
-Search time: 0.03125s
-Total time: 0.03125s
+Search time: 0.0460936s
+Total time: 0.057969s
 Solution found.
-Peak memory: 0 KB
+Peak memory: 68164 KB
 search exit code: 0
 

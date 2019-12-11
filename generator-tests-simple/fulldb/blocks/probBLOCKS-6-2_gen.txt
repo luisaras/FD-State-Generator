@@ -1,0 +1,73 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([h],max_it=10000000,print_h=0,max_time=600)' --internal-plan-file sas_plan
+reading input... [t=6.989e-05s]
+done reading input! [t=0.000860937s]
+Generating a pattern using the greedy generator...
+building causal graph...done! [t=0.000148394s]
+Greedy generator pattern: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+Greedy generator number of variables: 13
+Greedy generator PDB size: 15059072
+Greedy generator computation time: 0.000183201s
+Building successor generator...done! [t=4.62162s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 4.7067e-05s
+Variables: 13
+FactPairs: 56
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 210 reverse operators.
+Built match tree.
+8=1 9=2 10=3 11=5 12=1 
+Inserting initial (goal) state...
+New best h: [0, 8] (iteration 0) 
+New best h: [1, 8] (iteration 5) 
+New best h: [1, 10] (iteration 55) 
+New best h: [2, 9] (iteration 59) 
+New best h: [2, 10] (iteration 63) 
+New best h: [2, 11] (iteration 83) 
+New best h: [3, 11] (iteration 85) 
+New best h: [3, 12] (iteration 89) 
+Found first concrete state.
+New best h: [4, 13] (iteration 99) 
+New best h: [5, 13] (iteration 107) 
+New best h: [6, 13] (iteration 136) 
+New best h: [7, 13] (iteration 144) 
+New best h: [8, 13] (iteration 171) 
+New best h: [9, 13] (iteration 183) 
+New best h: [10, 13] (iteration 652) 
+New best h: [11, 13] (iteration 689) 
+New best h: [12, 13] (iteration 6640) 
+New best h: [13, 13] (iteration 19920) 
+New best h: [14, 13] (iteration 34457) 
+New best h: [15, 13] (iteration 34461) 
+New best h: [16, 13] (iteration 341148) 
+New best h: [17, 13] (iteration 341150) 
+New best h: [18, 13] (iteration 799034) 
+New best h: [19, 13] (iteration 1268284) 
+New best h: [20, 13] (iteration 1268286) 
+Completely explored state space.
+Actual search time: 23.9609s [t=28.583s]
+Original state h-value: 20
+New state h-value: 20
+Expanded 3133889 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 5785089
+Generated 24210183 state(s).
+Dead ends: 530705 state(s).
+Number of registered states: 3133889
+Int hash set load factor: 3133889/4194304 = 0.747177
+Int hash set resizes: 22
+Open nodes: 0
+Closed states: 3133889
+Search time: 23.9612s
+Total time: 28.583s
+Solution found.
+Peak memory: 295180 KB
+search exit code: 0
+

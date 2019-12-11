@@ -133,7 +133,7 @@ instances_simple() {
 }
 
 instances_blocks_simple() {
-    ALLH=(lmcut)
+    ALLH=(lmcut ipdb fulldb)
     cd generator-tests-simple
     find . -name "*.dat" -type f -delete
     instance blocks probBLOCKS-4-0

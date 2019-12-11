@@ -2,14 +2,14 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /mnt/d/luisa/Projects/Programs/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000,print_h=2,max_time=60)' --internal-plan-file sas_plan
-reading input... [t=0s]
-done reading input! [t=0s]
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000,print_h=2,max_time=60)' --internal-plan-file sas_plan
+reading input... [t=8.022e-05s]
+done reading input! [t=0.000886689s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0s
+Done calculating initial pattern collection: 0.000137247s
 Average operator cost: 1
-building causal graph...done! [t=0s]
+building causal graph...done! [t=0.000152859s]
 Done calculating initial candidate PDBs
 current collection size is 35
 current initial h value: 10
@@ -18,37 +18,37 @@ Hill climbing iterations: 1
 Hill climbing generated patterns: 35
 Hill climbing rejected patterns: 0
 Hill climbing maximum PDB size: 14
-Hill climbing time: 0s
+Hill climbing time: 0.0131415s
 Hill climbing generator collection: [[8], [9], [10], [11], [12]]
 Hill climbing generator number of patterns: 5
 Hill climbing generator total PDB size: 35
-Hill climbing generator computation time: 0s
+Hill climbing generator computation time: 0.0133161s
 Running dominance pruning...
 Pruned 0 of 1 pattern cliques
 Pruned 0 of 5 PDBs
-Dominance pruning took 0s
+Dominance pruning took 8.098e-06s
 Canonical PDB heuristic number of patterns: 5
 Canonical PDB heuristic total PDB size: 35
-Canonical PDB heuristic computation time: 0s
+Canonical PDB heuristic computation time: 0.0133609s
 Generating patterns using the systematic generator...
 Found 40 SGA patterns.
 Found 40 interesting patterns.
 Systematic generator number of patterns: 40
 Systematic generator total PDB size: 525
-Systematic generator computation time: 0s
+Systematic generator computation time: 0.000288999s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0s
+Done computing PDBs for pattern collection: 0.00383645s
 Generating patterns using the systematic generator...
 Found 250 SGA patterns.
 Found 250 interesting patterns.
 Systematic generator number of patterns: 250
 Systematic generator total PDB size: 13755
-Systematic generator computation time: 0s
+Systematic generator computation time: 0.00158307s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.015625s
-Building successor generator...done! [t=0.015625s]
+Done computing PDBs for pattern collection: 0.0180693s
+Building successor generator...done! [t=0.0472068s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0s
+time for successor generation creation: 4.2641e-05s
 Variables: 13
 FactPairs: 56
 Bytes per state: 4
@@ -73,9 +73,23 @@ Found first concrete state.
 New best h: [1, 3, 2, 13] (iteration 221) 
 New best h: [1, 6, 5, 13] (iteration 2185) 
 Reached iteration limit.
-Actual search time: 3.0625s [t=3.07812s]
-Peak memory: 0 KB
-caught signal 11 -- exiting
-search exit code: -11
+Actual search time: 4.87795s [t=4.92987s]
+Original state h-value: 10
+New state h-value: 5
+Expanded 9466 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 48959
+Generated 43239 state(s).
+Dead ends: 3004 state(s).
+Number of registered states: 10034
+Int hash set load factor: 10034/16384 = 0.612427
+Int hash set resizes: 14
+Open nodes: 535
+Closed states: 9466
+Search time: 4.88254s
+Total time: 4.92987s
+Solution found.
+Peak memory: 71880 KB
+search exit code: 0
 
-Driver aborting after search

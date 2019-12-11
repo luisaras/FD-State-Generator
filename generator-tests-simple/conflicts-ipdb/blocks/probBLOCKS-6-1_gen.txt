@@ -1,0 +1,96 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000000,print_h=2,max_time=600)' --internal-plan-file sas_plan
+reading input... [t=6.8761e-05s]
+done reading input! [t=0.00086536s]
+Initializing canonical PDB heuristic...
+Generating patterns using the hill climbing generator...
+Done calculating initial pattern collection: 0.000329203s
+Average operator cost: 1
+building causal graph...done! [t=0.000417574s]
+Done calculating initial candidate PDBs
+current collection size is 35
+current initial h value: 10
+Improvement below threshold. Stop hill climbing.
+Hill climbing iterations: 1
+Hill climbing generated patterns: 35
+Hill climbing rejected patterns: 0
+Hill climbing maximum PDB size: 14
+Hill climbing time: 0.015225s
+Hill climbing generator collection: [[8], [9], [10], [11], [12]]
+Hill climbing generator number of patterns: 5
+Hill climbing generator total PDB size: 35
+Hill climbing generator computation time: 0.0156013s
+Running dominance pruning...
+Pruned 0 of 1 pattern cliques
+Pruned 0 of 5 PDBs
+Dominance pruning took 8.474e-06s
+Canonical PDB heuristic number of patterns: 5
+Canonical PDB heuristic total PDB size: 35
+Canonical PDB heuristic computation time: 0.0156535s
+Generating patterns using the systematic generator...
+Found 40 SGA patterns.
+Found 40 interesting patterns.
+Systematic generator number of patterns: 40
+Systematic generator total PDB size: 525
+Systematic generator computation time: 0.000288294s
+Computing PDBs for pattern collection...
+Done computing PDBs for pattern collection: 0.00378937s
+Generating patterns using the systematic generator...
+Found 250 SGA patterns.
+Found 250 interesting patterns.
+Systematic generator number of patterns: 250
+Systematic generator total PDB size: 13755
+Systematic generator computation time: 0.00171941s
+Computing PDBs for pattern collection...
+Done computing PDBs for pattern collection: 0.017316s
+Building successor generator...done! [t=0.0489557s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 4.2727e-05s
+Variables: 13
+FactPairs: 56
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 210 reverse operators.
+Built match tree.
+8=3 9=1 10=2 11=5 12=3 
+Inserting initial (goal) state...
+New best h: [0, 0, 0, 8] (iteration 0) 
+New best h: [0, 1, 1, 8] (iteration 5) 
+New best h: [0, 1, 1, 9] (iteration 55) 
+New best h: [0, 2, 1, 9] (iteration 57) 
+New best h: [0, 2, 2, 10] (iteration 59) 
+New best h: [0, 2, 2, 11] (iteration 87) 
+New best h: [1, 3, 2, 11] (iteration 89) 
+New best h: [1, 3, 2, 12] (iteration 93) 
+Found first concrete state.
+Found first concrete state.
+Found first concrete state.
+New best h: [1, 3, 2, 13] (iteration 225) 
+New best h: [1, 6, 5, 13] (iteration 2129) 
+New best h: [2, 5, 3, 13] (iteration 49712) 
+Time limit reached. Abort search.
+Actual search time: 600.001s [t=600.054s]
+Original state h-value: 10
+New state h-value: 3
+Expanded 1263924 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 5855295
+Generated 9354525 state(s).
+Dead ends: 224298 state(s).
+Number of registered states: 1270484
+Int hash set load factor: 1270484/2097152 = 0.605814
+Int hash set resizes: 21
+Open nodes: 6555
+Closed states: 1263924
+Search time: 600.005s
+Total time: 600.054s
+Solution found.
+Peak memory: 175624 KB
+search exit code: 0
+

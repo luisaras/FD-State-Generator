@@ -2,14 +2,14 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /mnt/d/luisa/Projects/Programs/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000000,max_time=600)' --internal-plan-file sas_plan
-reading input... [t=0s]
-done reading input! [t=0s]
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000000,print_h=2,max_time=600)' --internal-plan-file sas_plan
+reading input... [t=8.0649e-05s]
+done reading input! [t=0.000709181s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0s
+Done calculating initial pattern collection: 0.000220579s
 Average operator cost: 1
-building causal graph...done! [t=0s]
+building causal graph...done! [t=0.000266144s]
 Done calculating initial candidate PDBs
 current collection size is 24
 current initial h value: 6
@@ -18,37 +18,37 @@ Hill climbing iterations: 1
 Hill climbing generated patterns: 24
 Hill climbing rejected patterns: 0
 Hill climbing maximum PDB size: 12
-Hill climbing time: 0.015625s
+Hill climbing time: 0.00860459s
 Hill climbing generator collection: [[7], [8], [9], [10]]
 Hill climbing generator number of patterns: 4
 Hill climbing generator total PDB size: 24
-Hill climbing generator computation time: 0.015625s
+Hill climbing generator computation time: 0.00887192s
 Running dominance pruning...
 Pruned 0 of 1 pattern cliques
 Pruned 0 of 4 PDBs
-Dominance pruning took 0s
+Dominance pruning took 8.713e-06s
 Canonical PDB heuristic number of patterns: 4
 Canonical PDB heuristic total PDB size: 24
-Canonical PDB heuristic computation time: 0.015625s
+Canonical PDB heuristic computation time: 0.00892483s
 Generating patterns using the systematic generator...
 Found 28 SGA patterns.
 Found 28 interesting patterns.
 Systematic generator number of patterns: 28
 Systematic generator total PDB size: 312
-Systematic generator computation time: 0s
+Systematic generator computation time: 0.000202077s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0s
+Done computing PDBs for pattern collection: 0.00197224s
 Generating patterns using the systematic generator...
 Found 148 SGA patterns.
 Found 148 interesting patterns.
 Systematic generator number of patterns: 148
 Systematic generator total PDB size: 6072
-Systematic generator computation time: 0s
+Systematic generator computation time: 0.0010005s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0s
-Building successor generator...done! [t=0.015625s]
+Done computing PDBs for pattern collection: 0.0111224s
+Building successor generator...done! [t=0.0315885s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0s
+time for successor generation creation: 3.2925e-05s
 Variables: 11
 FactPairs: 42
 Bytes per state: 4
@@ -76,13 +76,13 @@ New best h: [0, 7, 7, 11] (iteration 293)
 New best h: [1, 6, 5, 11] (iteration 330) 
 New best h: [2, 5, 3, 11] (iteration 4913) 
 Completely explored state space.
-Actual search time: 37.9375s [t=37.9531s]
-Original state h-value: 0
-New state h-value: 2
+Actual search time: 43.724s [t=43.7581s]
+Original state h-value: 6
+New state h-value: 3
 Expanded 134100 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 596773
+Evaluations: 598110
 Generated 876999 state(s).
 Dead ends: 24588 state(s).
 Number of registered states: 134100
@@ -90,9 +90,9 @@ Int hash set load factor: 134100/262144 = 0.511551
 Int hash set resizes: 18
 Open nodes: 0
 Closed states: 134100
-Search time: 37.9375s
-Total time: 37.9531s
+Search time: 43.7264s
+Total time: 43.7581s
 Solution found.
-Peak memory: 0 KB
+Peak memory: 81516 KB
 search exit code: 0
 
