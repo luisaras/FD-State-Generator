@@ -28,6 +28,9 @@ set_files_ipc() {
     local PDDL_DIR=../ipc/$1
     # Input files
     DOMAIN_INPUT=${PDDL_DIR}/domain.pddl
+    if [ ! -f $DOMAIN_INPUT ]; then
+        DOMAIN_INPUT=${PDDL_DIR}/$2-domain.pddl
+    fi
     TASK_INPUT=${PDDL_DIR}/$2.pddl
 }
 
@@ -202,7 +205,7 @@ test_ipc11() {
     done
 }
 
-test_simple_old() {
+test_simple_ipc11() {
     ALLH=(lmcut ipdb fulldb)
     BENCHMARKS=ipc11
     TEST_FOLDER=generator-tests-simple-old
@@ -256,6 +259,67 @@ test_simple() {
     test parcprinter-08-strips p01
     test parcprinter-08-strips p11
     test parcprinter-08-strips p21
+    cd ..
+}
+
+test_blocks_simple() {
+    ALLH=(lmcut)
+    BENCHMARKS=ipc
+    TEST_FOLDER=generator-tests-simple
+    test blocks probBLOCKS-4-0
+    test blocks probBLOCKS-4-1
+    test blocks probBLOCKS-4-2
+    test blocks probBLOCKS-5-0
+    test blocks probBLOCKS-5-1
+    test blocks probBLOCKS-5-2
+    test blocks probBLOCKS-6-0
+    test blocks probBLOCKS-6-1
+    test blocks probBLOCKS-6-2
+    test blocks probBLOCKS-7-0
+    test blocks probBLOCKS-7-1
+    test blocks probBLOCKS-7-2
+    cd ..
+}
+
+test_blocks() {
+    ALLH=(lmcut)
+    BENCHMARKS=ipc
+    TEST_FOLDER=generator-tests-simple
+    test blocks probBLOCKS-4-0
+    test blocks probBLOCKS-4-1
+    test blocks probBLOCKS-4-2
+    test blocks probBLOCKS-5-0
+    test blocks probBLOCKS-5-1
+    test blocks probBLOCKS-5-2
+    test blocks probBLOCKS-6-0
+    test blocks probBLOCKS-6-1
+    test blocks probBLOCKS-6-2
+    test blocks probBLOCKS-7-0
+    test blocks probBLOCKS-7-1
+    test blocks probBLOCKS-7-2
+    test blocks probBLOCKS-8-0
+    test blocks probBLOCKS-8-1
+    test blocks probBLOCKS-8-2
+    test blocks probBLOCKS-9-0
+    test blocks probBLOCKS-9-1
+    test blocks probBLOCKS-9-2
+    test blocks probBLOCKS-10-0
+    test blocks probBLOCKS-10-1
+    test blocks probBLOCKS-10-2
+    test blocks probBLOCKS-11-0
+    test blocks probBLOCKS-11-1
+    test blocks probBLOCKS-11-2
+    test blocks probBLOCKS-12-0
+    test blocks probBLOCKS-12-1
+    test blocks probBLOCKS-13-0
+    test blocks probBLOCKS-13-1
+    test blocks probBLOCKS-14-0
+    test blocks probBLOCKS-14-1
+    test blocks probBLOCKS-15-0
+    test blocks probBLOCKS-15-1
+    test blocks probBLOCKS-16-0
+    test blocks probBLOCKS-16-1
+    test blocks probBLOCKS-17-0
     cd ..
 }
 

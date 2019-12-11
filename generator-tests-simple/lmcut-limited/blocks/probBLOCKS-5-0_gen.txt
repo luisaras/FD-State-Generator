@@ -1,0 +1,56 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --search 'generator_abstract([h],max_it=10000,print_h=0,max_time=60)' --internal-plan-file sas_plan
+reading input... [t=0s]
+done reading input! [t=0s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.015625s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 11
+FactPairs: 42
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 145 reverse operators.
+Built match tree.
+7=4 8=3 9=3 10=2 
+Inserting initial (goal) state...
+New best h: [0, 7] (iteration 0) 
+New best h: [1, 7] (iteration 5) 
+New best h: [1, 9] (iteration 45) 
+New best h: [2, 9] (iteration 49) 
+Found first concrete state.
+New best h: [2, 11] (iteration 69) 
+New best h: [3, 10] (iteration 73) 
+New best h: [3, 11] (iteration 77) 
+New best h: [4, 11] (iteration 79) 
+New best h: [5, 11] (iteration 94) 
+New best h: [6, 11] (iteration 119) 
+New best h: [7, 11] (iteration 124) 
+New best h: [8, 11] (iteration 351) 
+New best h: [9, 11] (iteration 5668) 
+Reached iteration limit.
+Actual search time: 0.078125s [t=0.09375s]
+Original state h-value: 8
+New state h-value: 9
+Expanded 9544 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 19362
+Generated 53044 state(s).
+Dead ends: 2001 state(s).
+Number of registered states: 10022
+Int hash set load factor: 10022/16384 = 0.611694
+Int hash set resizes: 14
+Open nodes: 457
+Closed states: 9544
+Search time: 0.078125s
+Total time: 0.09375s
+Solution found.
+Peak memory: 0 KB
+search exit code: 0
+

@@ -1,0 +1,84 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([h],max_it=10000,print_h=0,max_time=60)' --internal-plan-file sas_plan
+reading input... [t=0s]
+done reading input! [t=0s]
+Initializing canonical PDB heuristic...
+Generating patterns using the hill climbing generator...
+Done calculating initial pattern collection: 0s
+Average operator cost: 1
+building causal graph...done! [t=0s]
+Done calculating initial candidate PDBs
+current collection size is 48
+current initial h value: 12
+Improvement below threshold. Stop hill climbing.
+Hill climbing iterations: 1
+Hill climbing generated patterns: 48
+Hill climbing rejected patterns: 0
+Hill climbing maximum PDB size: 16
+Hill climbing time: 0s
+Hill climbing generator collection: [[9], [10], [11], [12], [13], [14]]
+Hill climbing generator number of patterns: 6
+Hill climbing generator total PDB size: 48
+Hill climbing generator computation time: 0s
+Running dominance pruning...
+Pruned 0 of 1 pattern cliques
+Pruned 0 of 6 PDBs
+Dominance pruning took 0s
+Canonical PDB heuristic number of patterns: 6
+Canonical PDB heuristic total PDB size: 48
+Canonical PDB heuristic computation time: 0s
+Building successor generator...done! [t=0s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 15
+FactPairs: 72
+Bytes per state: 8
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 287 reverse operators.
+Built match tree.
+9=6 10=2 11=5 12=2 13=5 14=4 
+Inserting initial (goal) state...
+New best h: [0, 9] (iteration 0) 
+New best h: [1, 9] (iteration 5) 
+New best h: [1, 11] (iteration 65) 
+New best h: [2, 11] (iteration 69) 
+New best h: [2, 13] (iteration 105) 
+New best h: [3, 12] (iteration 109) 
+New best h: [3, 13] (iteration 121) 
+New best h: [3, 14] (iteration 129) 
+Found first concrete state.
+New best h: [3, 15] (iteration 133) 
+New best h: [4, 14] (iteration 137) 
+New best h: [4, 15] (iteration 141) 
+New best h: [5, 15] (iteration 158) 
+New best h: [6, 15] (iteration 162) 
+New best h: [7, 15] (iteration 173) 
+New best h: [8, 15] (iteration 177) 
+New best h: [9, 15] (iteration 266) 
+New best h: [10, 15] (iteration 884) 
+Reached iteration limit.
+Actual search time: 0.03125s [t=0.03125s]
+Original state h-value: 1321428051
+New state h-value: 1918987620
+Expanded 9157 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 19803
+Generated 38883 state(s).
+Dead ends: 3338 state(s).
+Number of registered states: 10063
+Int hash set load factor: 10063/16384 = 0.614197
+Int hash set resizes: 14
+Open nodes: 844
+Closed states: 9157
+Search time: 0.03125s
+Total time: 0.03125s
+Solution found.
+Peak memory: 0 KB
+search exit code: 0
+

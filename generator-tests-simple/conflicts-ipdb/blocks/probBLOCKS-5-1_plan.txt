@@ -1,0 +1,61 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/conflicts-ipdb/blocks/probBLOCKS-5-1_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0s]
+done reading input! [t=0s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 11
+FactPairs: 42
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0s, 0 KB]
+f = 4 [1 evaluated, 0 expanded, t=0s, 0 KB]
+Initial heuristic value for lmcut: 4
+New best heuristic value for lmcut: 4
+[g=1, 2 evaluated, 1 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 3
+[g=1, 6 evaluated, 1 expanded, t=0s, 0 KB]
+f = 5 [16 evaluated, 2 expanded, t=0s, 0 KB]
+f = 6 [62 evaluated, 11 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 2
+[g=4, 72 evaluated, 14 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 1
+[g=5, 77 evaluated, 15 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 0
+[g=6, 85 evaluated, 16 expanded, t=0s, 0 KB]
+Solution found! Cost: 6
+Actual search time: 0s [t=0s]
+op13) stack a e (1)
+op44) unstack d c (1)
+op9) put-down e (1)
+op38) unstack c a (1)
+op19) stack c b (1)
+op24) stack d c (1)
+Plan length: 6 step(s).
+Plan cost: 6
+Expanded 17 state(s).
+Reopened 0 state(s).
+Evaluated 86 state(s).
+Evaluations: 86
+Generated 100 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 11 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 62 state(s).
+Generated until last jump: 67 state(s).
+Number of registered states: 86
+Int hash set load factor: 86/128 = 0.671875
+Int hash set resizes: 7
+Open nodes: 69
+Closed states: 17
+Search time: 0s
+Total time: 0s
+Solution found.
+Peak memory: 0 KB
+search exit code: 0
+

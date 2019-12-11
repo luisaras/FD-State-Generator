@@ -2,34 +2,34 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000000,max_time=600)' --internal-plan-file sas_plan
-reading input... [t=7.0454e-05s]
-done reading input! [t=0.000884102s]
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000000,max_time=600)' --internal-plan-file sas_plan
+reading input... [t=0s]
+done reading input! [t=0s]
 Generating a pattern using the greedy generator...
-building causal graph...done! [t=0.000150078s]
+building causal graph...done! [t=0s]
 Greedy generator pattern: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 Greedy generator number of variables: 13
 Greedy generator PDB size: 15059072
-Greedy generator computation time: 0.000184779s
+Greedy generator computation time: 0s
 Generating patterns using the systematic generator...
 Found 40 SGA patterns.
 Found 40 interesting patterns.
 Systematic generator number of patterns: 40
 Systematic generator total PDB size: 525
-Systematic generator computation time: 0.000299813s
+Systematic generator computation time: 0s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.00377964s
+Done computing PDBs for pattern collection: 0s
 Generating patterns using the systematic generator...
 Found 250 SGA patterns.
 Found 250 interesting patterns.
 Systematic generator number of patterns: 250
 Systematic generator total PDB size: 13755
-Systematic generator computation time: 0.00168431s
+Systematic generator computation time: 0s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.0180268s
-Building successor generator...done! [t=4.74602s]
+Done computing PDBs for pattern collection: 0.015625s
+Building successor generator...done! [t=2.53125s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 6.3831e-05s
+time for successor generation creation: 0s
 Variables: 13
 FactPairs: 56
 Bytes per state: 4
@@ -70,24 +70,25 @@ New best h: [2, 5, 12, 13] (iteration 287749)
 New best h: [2, 5, 14, 13] (iteration 376891) 
 New best h: [2, 5, 15, 13] (iteration 905095) 
 New best h: [2, 5, 17, 13] (iteration 906463) 
+New best h: [2, 5, 19, 13] (iteration 1288054) 
 Time limit reached. Abort search.
-Actual search time: 600s [t=604.751s]
+Actual search time: 600s [t=602.531s]
 Original state h-value: 0
 New state h-value: 2
-Expanded 1275564 state(s).
+Expanded 2323476 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 5921793
-Generated 9464983 state(s).
-Dead ends: 227195 state(s).
-Number of registered states: 1285490
-Int hash set load factor: 1285490/2097152 = 0.612969
-Int hash set resizes: 21
-Open nodes: 9921
-Closed states: 1275564
-Search time: 600.005s
-Total time: 604.751s
+Evaluations: 10552655
+Generated 17634971 state(s).
+Dead ends: 395266 state(s).
+Number of registered states: 2326028
+Int hash set load factor: 2326028/4194304 = 0.554568
+Int hash set resizes: 22
+Open nodes: 2551
+Closed states: 2323476
+Search time: 600s
+Total time: 602.531s
 Solution found.
-Peak memory: 236652 KB
+Peak memory: 0 KB
 search exit code: 0
 

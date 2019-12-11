@@ -26,6 +26,7 @@ protected:
 
     int max_it;
     int it_count = 0;
+    int print_h;
 
     std::unique_ptr<StateOpenList> open_list;
 

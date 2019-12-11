@@ -23,6 +23,7 @@ namespace state_generator {
 StateGenerator::StateGenerator(const Options &opts)
     : SearchEngine(opts),
       max_it(opts.get<int>("max_it")),
+      print_h(opts.get<int>("print_h")),
       open_list(opts.get<shared_ptr<OpenListFactory>>("open")->create_state_open_list()),
       evaluators(opts.get_list<shared_ptr<Evaluator>>("evals")),
       match_tree(task_proxy),
@@ -136,11 +137,12 @@ void StateGenerator::save_plan_if_necessary() {
 
 void StateGenerator::save_task_if_necessary() {
     if (verbosity > utils::Verbosity::SILENT) {
-        cout << "Original state h-value: " << original_state_eval[0] << endl;
-        cout << "New state h-value: " << best_state_eval[0] << endl;
+        assert(print_h < original_state_eval.size());
+        cout << "Original state h-value: " << original_state_eval[print_h] << endl;
+        cout << "New state h-value: " << best_state_eval[print_h] << endl;
     }
     for (uint i = 0; i < best_state.size(); i++) {
-        if (best_state[i] == -1 or best_state[i] >= task->get_variable_domain_size(i))
+        if (best_state[i] == -1 || best_state[i] >= task->get_variable_domain_size(i))
             best_state[i] = 0;
     }
     shared_ptr<AbstractTask> new_task = make_shared<extra_tasks::ModifiedInitTask>(task, best_state);
@@ -156,6 +158,7 @@ bool StateGenerator::found_solution() const {
 void StateGenerator::add_options_to_parser(OptionParser &parser) {
     parser.add_list_option<shared_ptr<Evaluator>>("evals", "evaluators", "[]");
     parser.add_option<int>("max_it", "maximum number of open-list insertions", "-1");
+    parser.add_option<int>("print_h", "evaluator to be printed", "0");
     SearchEngine::add_options_to_parser(parser);
 }
 

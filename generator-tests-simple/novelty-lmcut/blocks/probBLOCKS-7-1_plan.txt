@@ -1,0 +1,75 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty-lmcut/blocks/probBLOCKS-7-1_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=0s]
+done reading input! [t=0s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 15
+FactPairs: 72
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0s, 0 KB]
+f = 12 [1 evaluated, 0 expanded, t=0s, 0 KB]
+Initial heuristic value for lmcut: 12
+New best heuristic value for lmcut: 11
+[g=1, 2 evaluated, 1 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 9
+[g=1, 9 evaluated, 1 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 8
+[g=2, 72 evaluated, 5 expanded, t=0s, 0 KB]
+New best heuristic value for lmcut: 7
+[g=3, 92 evaluated, 6 expanded, t=0.015625s, 0 KB]
+New best heuristic value for lmcut: 6
+[g=4, 207 evaluated, 14 expanded, t=0.015625s, 0 KB]
+New best heuristic value for lmcut: 5
+[g=5, 220 evaluated, 15 expanded, t=0.015625s, 0 KB]
+New best heuristic value for lmcut: 3
+[g=7, 286 evaluated, 20 expanded, t=0.015625s, 0 KB]
+New best heuristic value for lmcut: 2
+[g=10, 556 evaluated, 42 expanded, t=0.015625s, 0 KB]
+New best heuristic value for lmcut: 1
+[g=11, 564 evaluated, 43 expanded, t=0.015625s, 0 KB]
+New best heuristic value for lmcut: 0
+[g=12, 569 evaluated, 44 expanded, t=0.015625s, 0 KB]
+Solution found! Cost: 12
+Actual search time: 0.015625s [t=0.015625s]
+op2) pick-up c (1)
+op10) put-down d (1)
+op4) pick-up e (1)
+op39) stack e b (1)
+op93) unstack g b (1)
+op17) stack a e (1)
+op63) unstack b c (1)
+op28) stack c d (1)
+op52) stack g c (1)
+op87) unstack f b (1)
+op49) stack f g (1)
+op24) stack b f (1)
+Plan length: 12 step(s).
+Plan cost: 12
+Expanded 45 state(s).
+Reopened 0 state(s).
+Evaluated 570 state(s).
+Evaluations: 570
+Generated 621 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 570
+Int hash set load factor: 570/1024 = 0.556641
+Int hash set resizes: 10
+Open nodes: 525
+Closed states: 45
+Search time: 0.015625s
+Total time: 0.015625s
+Solution found.
+Peak memory: 0 KB
+search exit code: 0
+

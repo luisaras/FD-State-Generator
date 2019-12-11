@@ -2,19 +2,19 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=10000000,max_time=600)' --internal-plan-file sas_plan
-reading input... [t=6.9143e-05s]
-done reading input! [t=0.000790706s]
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=10000000,max_time=600)' --internal-plan-file sas_plan
+reading input... [t=0s]
+done reading input! [t=0s]
 Generating a pattern using the greedy generator...
-building causal graph...done! [t=0.000158805s]
+building causal graph...done! [t=0s]
 Greedy generator pattern: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 Greedy generator number of variables: 13
 Greedy generator PDB size: 15059072
-Greedy generator computation time: 0.000197655s
+Greedy generator computation time: 0s
 Initializing novelty heuristic...
-Building successor generator...done! [t=4.59721s]
+Building successor generator...done! [t=2.60938s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 4.6381e-05s
+time for successor generation creation: 0s
 Variables: 13
 FactPairs: 56
 Bytes per state: 4
@@ -54,7 +54,7 @@ New best h: [1, 18, 13] (iteration 1775061)
 New best h: [1, 19, 13] (iteration 2089166) 
 New best h: [1, 20, 13] (iteration 2089169) 
 Completely explored state space.
-Actual search time: 29.1313s [t=33.7289s]
+Actual search time: 13.4531s [t=16.0625s]
 Original state h-value: 1
 New state h-value: 1
 Expanded 3133889 state(s).
@@ -68,9 +68,9 @@ Int hash set load factor: 3133889/4194304 = 0.747177
 Int hash set resizes: 22
 Open nodes: 0
 Closed states: 3133889
-Search time: 29.1316s
-Total time: 33.7289s
+Search time: 13.4531s
+Total time: 16.0625s
 Solution found.
-Peak memory: 319796 KB
+Peak memory: 0 KB
 search exit code: 0
 

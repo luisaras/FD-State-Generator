@@ -1,0 +1,61 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /mnt/d/luisa/Projects/Programs/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=10000000,print_h=1,max_time=600)' --internal-plan-file sas_plan
+reading input... [t=0.015625s]
+done reading input! [t=0.015625s]
+Initializing landmark cut heuristic...
+Initializing novelty heuristic...
+Building successor generator...done! [t=0.015625s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 13
+FactPairs: 56
+Bytes per state: 4
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 210 reverse operators.
+Built match tree.
+8=3 9=1 10=2 11=5 12=3 
+Inserting initial (goal) state...
+New best h: [0, 0, 8] (iteration 0) 
+New best h: [1, 1, 8] (iteration 5) 
+New best h: [1, 1, 9] (iteration 55) 
+New best h: [1, 2, 9] (iteration 57) 
+New best h: [1, 2, 10] (iteration 59) 
+New best h: [1, 2, 11] (iteration 87) 
+New best h: [1, 3, 11] (iteration 89) 
+New best h: [1, 3, 12] (iteration 93) 
+Found first concrete state.
+Found first concrete state.
+New best h: [1, 4, 13] (iteration 103) 
+New best h: [1, 5, 13] (iteration 270) 
+New best h: [1, 6, 13] (iteration 1050) 
+New best h: [1, 7, 13] (iteration 1074) 
+New best h: [1, 8, 13] (iteration 1093) 
+New best h: [1, 9, 13] (iteration 1408) 
+New best h: [1, 10, 13] (iteration 7007) 
+New best h: [1, 11, 13] (iteration 160796) 
+Completely explored state space.
+Actual search time: 46.4844s [t=46.5s]
+Original state h-value: 10
+New state h-value: 11
+Expanded 3133889 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 5786490
+Generated 24210183 state(s).
+Dead ends: 530705 state(s).
+Number of registered states: 3133889
+Int hash set load factor: 3133889/4194304 = 0.747177
+Int hash set resizes: 22
+Open nodes: 0
+Closed states: 3133889
+Search time: 46.4844s
+Total time: 46.5s
+Solution found.
+Peak memory: 0 KB
+search exit code: 0
+
