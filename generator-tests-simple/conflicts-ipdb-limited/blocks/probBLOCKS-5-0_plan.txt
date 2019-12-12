@@ -3,68 +3,58 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/conflicts-ipdb-limited/blocks/probBLOCKS-5-0_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
-reading input... [t=3.7106e-05s]
-done reading input! [t=0.000408686s]
+reading input... [t=4.7632e-05s]
+done reading input! [t=0.000750221s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.00242568s]
+Building successor generator...done! [t=0.0033693s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 3.4651e-05s
-Variables: 9
-FactPairs: 30
+time for successor generation creation: 5.4798e-05s
+Variables: 11
+FactPairs: 42
 Bytes per state: 4
 Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[g=0, 1 evaluated, 0 expanded, t=0.00266213s, 67764 KB]
-f = 5 [1 evaluated, 0 expanded, t=0.00270148s, 67764 KB]
-Initial heuristic value for lmcut: 5
-New best heuristic value for lmcut: 5
-[g=1, 2 evaluated, 1 expanded, t=0.00278023s, 67764 KB]
-f = 6 [3 evaluated, 1 expanded, t=0.00283756s, 67764 KB]
-f = 7 [5 evaluated, 3 expanded, t=0.00291507s, 67764 KB]
-f = 9 [7 evaluated, 5 expanded, t=0.00299455s, 67764 KB]
-f = 10 [13 evaluated, 8 expanded, t=0.00314367s, 67764 KB]
+[g=0, 1 evaluated, 0 expanded, t=0.00364945s, 67764 KB]
+f = 4 [1 evaluated, 0 expanded, t=0.00369752s, 67764 KB]
+Initial heuristic value for lmcut: 4
 New best heuristic value for lmcut: 4
-[g=6, 15 evaluated, 9 expanded, t=0.00321891s, 67764 KB]
+[g=1, 2 evaluated, 1 expanded, t=0.00379889s, 67764 KB]
 New best heuristic value for lmcut: 3
-[g=7, 17 evaluated, 10 expanded, t=0.00329474s, 67764 KB]
-f = 11 [22 evaluated, 13 expanded, t=0.00342483s, 67764 KB]
+[g=1, 8 evaluated, 1 expanded, t=0.00401229s, 67764 KB]
+f = 5 [14 evaluated, 2 expanded, t=0.00421068s, 67764 KB]
+f = 6 [52 evaluated, 10 expanded, t=0.00528049s, 67764 KB]
 New best heuristic value for lmcut: 2
-[g=9, 23 evaluated, 14 expanded, t=0.00347708s, 67764 KB]
+[g=4, 60 evaluated, 13 expanded, t=0.00553656s, 67764 KB]
 New best heuristic value for lmcut: 1
-[g=10, 25 evaluated, 15 expanded, t=0.00353962s, 67764 KB]
+[g=5, 62 evaluated, 14 expanded, t=0.00563066s, 67764 KB]
 New best heuristic value for lmcut: 0
-[g=11, 27 evaluated, 16 expanded, t=0.00360142s, 67764 KB]
-Solution found! Cost: 11
-Actual search time: 0.000910229s [t=0.00366004s]
-op5) put-down b (1)
-op31) unstack d c (1)
-op7) put-down d (1)
-op26) unstack c a (1)
-op15) stack c b (1)
-op3) pick-up d (1)
-op19) stack d c (1)
-op20) unstack a b (1)
-op4) put-down a (1)
-op1) pick-up b (1)
-op11) stack b a (1)
-Plan length: 11 step(s).
-Plan cost: 11
-Expanded 17 state(s).
+[g=6, 69 evaluated, 15 expanded, t=0.00583143s, 67764 KB]
+Solution found! Cost: 6
+Actual search time: 0.00215122s [t=0.00590958s]
+op13) stack a e (1)
+op36) unstack b d (1)
+op7) put-down c (1)
+op42) unstack d a (1)
+op24) stack d c (1)
+op16) stack b d (1)
+Plan length: 6 step(s).
+Plan cost: 6
+Expanded 16 state(s).
 Reopened 0 state(s).
-Evaluated 28 state(s).
-Evaluations: 28
-Generated 42 state(s).
+Evaluated 70 state(s).
+Evaluations: 70
+Generated 84 state(s).
 Dead ends: 0 state(s).
-Expanded until last jump: 13 state(s).
+Expanded until last jump: 10 state(s).
 Reopened until last jump: 0 state(s).
-Evaluated until last jump: 22 state(s).
-Generated until last jump: 33 state(s).
-Number of registered states: 28
-Int hash set load factor: 28/32 = 0.875
-Int hash set resizes: 5
-Open nodes: 11
-Closed states: 17
-Search time: 0.00107843s
-Total time: 0.00366639s
+Evaluated until last jump: 52 state(s).
+Generated until last jump: 59 state(s).
+Number of registered states: 70
+Int hash set load factor: 70/128 = 0.546875
+Int hash set resizes: 7
+Open nodes: 54
+Closed states: 16
+Search time: 0.0023631s
+Total time: 0.00591775s
 Solution found.
 Peak memory: 67764 KB
 search exit code: 0

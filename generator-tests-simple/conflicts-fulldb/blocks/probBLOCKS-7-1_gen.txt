@@ -3,33 +3,33 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000000,print_h=2,max_time=600)' --internal-plan-file sas_plan
-reading input... [t=8.4027e-05s]
-done reading input! [t=0.00110267s]
+reading input... [t=5.6927e-05s]
+done reading input! [t=0.000734406s]
 Generating a pattern using the greedy generator...
-building causal graph...done! [t=0.000510538s]
+building causal graph...done! [t=0.000371472s]
 Greedy generator pattern: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 Greedy generator number of variables: 15
 Greedy generator PDB size: 536870912
-Greedy generator computation time: 0.000605897s
+Greedy generator computation time: 0.000435658s
 Generating patterns using the systematic generator...
 Found 54 SGA patterns.
 Found 54 interesting patterns.
 Systematic generator number of patterns: 54
 Systematic generator total PDB size: 816
-Systematic generator computation time: 0.000406283s
+Systematic generator computation time: 0.000398077s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.00497417s
+Done computing PDBs for pattern collection: 0.00607197s
 Generating patterns using the systematic generator...
 Found 390 SGA patterns.
 Found 390 interesting patterns.
 Systematic generator number of patterns: 390
 Systematic generator total PDB size: 27696
-Systematic generator computation time: 0.00190996s
+Systematic generator computation time: 0.00285973s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.032581s
-Building successor generator...done! [t=194.466s]
+Done computing PDBs for pattern collection: 0.0297948s
+Building successor generator...done! [t=196.176s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 5.5279e-05s
+time for successor generation creation: 5.5687e-05s
 Variables: 15
 FactPairs: 72
 Bytes per state: 8
@@ -73,22 +73,22 @@ New best h: [1, 6, 10, 15] (iteration 300057)
 New best h: [1, 7, 11, 15] (iteration 324945) 
 New best h: [1, 8, 12, 15] (iteration 531947) 
 Time limit reached. Abort search.
-Actual search time: 600.002s [t=794.475s]
+Actual search time: 600.002s [t=796.186s]
 Original state h-value: 22
 New state h-value: 12
-Expanded 879884 state(s).
+Expanded 884329 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 4268997
-Generated 6356499 state(s).
-Dead ends: 135993 state(s).
-Number of registered states: 881276
-Int hash set load factor: 881276/1048576 = 0.84045
+Evaluations: 4085660
+Generated 6381898 state(s).
+Dead ends: 137041 state(s).
+Number of registered states: 886599
+Int hash set load factor: 886599/1048576 = 0.845527
 Int hash set resizes: 20
-Open nodes: 1348
-Closed states: 879884
+Open nodes: 2226
+Closed states: 884329
 Search time: 600.009s
-Total time: 794.475s
+Total time: 796.186s
 Solution found.
 Peak memory: 3143420 KB
 search exit code: 0

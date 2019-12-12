@@ -3,13 +3,13 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000,print_h=2,max_time=60)' --internal-plan-file sas_plan
-reading input... [t=6.8377e-05s]
-done reading input! [t=0.000862215s]
+reading input... [t=4.8206e-05s]
+done reading input! [t=0.000607395s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0.000336046s
+Done calculating initial pattern collection: 0.000217584s
 Average operator cost: 1
-building causal graph...done! [t=0.000388785s]
+building causal graph...done! [t=0.000260498s]
 Done calculating initial candidate PDBs
 current collection size is 35
 current initial h value: 10
@@ -18,37 +18,37 @@ Hill climbing iterations: 1
 Hill climbing generated patterns: 35
 Hill climbing rejected patterns: 0
 Hill climbing maximum PDB size: 14
-Hill climbing time: 0.0159498s
+Hill climbing time: 0.0163195s
 Hill climbing generator collection: [[8], [9], [10], [11], [12]]
 Hill climbing generator number of patterns: 5
 Hill climbing generator total PDB size: 35
-Hill climbing generator computation time: 0.016334s
+Hill climbing generator computation time: 0.0165789s
 Running dominance pruning...
 Pruned 0 of 1 pattern cliques
 Pruned 0 of 5 PDBs
-Dominance pruning took 8.59e-06s
+Dominance pruning took 8.127e-06s
 Canonical PDB heuristic number of patterns: 5
 Canonical PDB heuristic total PDB size: 35
-Canonical PDB heuristic computation time: 0.0163866s
+Canonical PDB heuristic computation time: 0.0166214s
 Generating patterns using the systematic generator...
 Found 40 SGA patterns.
 Found 40 interesting patterns.
 Systematic generator number of patterns: 40
 Systematic generator total PDB size: 525
-Systematic generator computation time: 0.000289583s
+Systematic generator computation time: 0.000286345s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.00379324s
+Done computing PDBs for pattern collection: 0.00392948s
 Generating patterns using the systematic generator...
 Found 250 SGA patterns.
 Found 250 interesting patterns.
 Systematic generator number of patterns: 250
 Systematic generator total PDB size: 13755
-Systematic generator computation time: 0.00174741s
+Systematic generator computation time: 0.0015929s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.0196033s
-Building successor generator...done! [t=0.0519822s]
+Done computing PDBs for pattern collection: 0.0180302s
+Building successor generator...done! [t=0.0488637s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 4.3794e-05s
+time for successor generation creation: 4.2687e-05s
 Variables: 13
 FactPairs: 56
 Bytes per state: 4
@@ -73,7 +73,7 @@ Found first concrete state.
 New best h: [1, 3, 2, 13] (iteration 225) 
 New best h: [1, 6, 5, 13] (iteration 2129) 
 Reached iteration limit.
-Actual search time: 4.91237s [t=4.96899s]
+Actual search time: 4.88797s [t=4.94136s]
 Original state h-value: 10
 New state h-value: 5
 Expanded 9441 state(s).
@@ -87,8 +87,8 @@ Int hash set load factor: 10033/16384 = 0.612366
 Int hash set resizes: 14
 Open nodes: 560
 Closed states: 9441
-Search time: 4.91687s
-Total time: 4.96899s
+Search time: 4.89238s
+Total time: 4.94136s
 Solution found.
 Peak memory: 71648 KB
 search exit code: 0

@@ -3,13 +3,13 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=10000000,print_h=1,max_time=600)' --internal-plan-file sas_plan
-reading input... [t=4.4649e-05s]
-done reading input! [t=0.000377642s]
+reading input... [t=4.2081e-05s]
+done reading input! [t=0.000518201s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0.00011526s
+Done calculating initial pattern collection: 0.00014786s
 Average operator cost: 1
-building causal graph...done! [t=0.000138221s]
+building causal graph...done! [t=0.000176586s]
 Done calculating initial candidate PDBs
 current collection size is 24
 current initial h value: 6
@@ -18,22 +18,22 @@ Hill climbing iterations: 1
 Hill climbing generated patterns: 24
 Hill climbing rejected patterns: 0
 Hill climbing maximum PDB size: 12
-Hill climbing time: 0.0100765s
+Hill climbing time: 0.0101729s
 Hill climbing generator collection: [[7], [8], [9], [10]]
 Hill climbing generator number of patterns: 4
 Hill climbing generator total PDB size: 24
-Hill climbing generator computation time: 0.0102286s
+Hill climbing generator computation time: 0.0103598s
 Running dominance pruning...
 Pruned 0 of 1 pattern cliques
 Pruned 0 of 4 PDBs
-Dominance pruning took 8.315e-06s
+Dominance pruning took 7.989e-06s
 Canonical PDB heuristic number of patterns: 4
 Canonical PDB heuristic total PDB size: 24
-Canonical PDB heuristic computation time: 0.0102689s
+Canonical PDB heuristic computation time: 0.0104015s
 Initializing novelty heuristic...
-Building successor generator...done! [t=0.0128962s]
+Building successor generator...done! [t=0.0136951s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 3.1298e-05s
+time for successor generation creation: 3.1851e-05s
 Variables: 11
 FactPairs: 42
 Bytes per state: 4
@@ -60,7 +60,7 @@ New best h: [1, 6, 11] (iteration 538)
 New best h: [1, 7, 11] (iteration 1554) 
 New best h: [1, 8, 11] (iteration 9827) 
 Completely explored state space.
-Actual search time: 1.03112s [t=1.04434s]
+Actual search time: 1.03315s [t=1.04717s]
 Original state h-value: 6
 New state h-value: 8
 Expanded 134100 state(s).
@@ -74,8 +74,8 @@ Int hash set load factor: 134100/262144 = 0.511551
 Int hash set resizes: 18
 Open nodes: 0
 Closed states: 134100
-Search time: 1.03135s
-Total time: 1.04435s
+Search time: 1.03338s
+Total time: 1.04718s
 Solution found.
 Peak memory: 76720 KB
 search exit code: 0

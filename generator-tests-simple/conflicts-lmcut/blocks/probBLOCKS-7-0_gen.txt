@@ -3,29 +3,29 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000000,print_h=2,max_time=600)' --internal-plan-file sas_plan
-reading input... [t=6.4549e-05s]
-done reading input! [t=0.000746083s]
+reading input... [t=9.3147e-05s]
+done reading input! [t=0.00112627s]
 Initializing landmark cut heuristic...
 Generating patterns using the systematic generator...
-building causal graph...done! [t=0.000486923s]
+building causal graph...done! [t=0.00048867s]
 Found 54 SGA patterns.
 Found 54 interesting patterns.
 Systematic generator number of patterns: 54
 Systematic generator total PDB size: 816
-Systematic generator computation time: 0.000966418s
+Systematic generator computation time: 0.000969148s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.00593686s
+Done computing PDBs for pattern collection: 0.00590385s
 Generating patterns using the systematic generator...
 Found 390 SGA patterns.
 Found 390 interesting patterns.
 Systematic generator number of patterns: 390
 Systematic generator total PDB size: 27696
-Systematic generator computation time: 0.00146081s
+Systematic generator computation time: 0.00147102s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.0324711s
-Building successor generator...done! [t=0.0510582s]
+Done computing PDBs for pattern collection: 0.0321214s
+Building successor generator...done! [t=0.0515755s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 5.4936e-05s
+time for successor generation creation: 5.557e-05s
 Variables: 15
 FactPairs: 72
 Bytes per state: 8
@@ -64,23 +64,23 @@ New best h: [1, 6, 7, 15] (iteration 71383)
 New best h: [1, 6, 8, 15] (iteration 170432) 
 New best h: [1, 7, 9, 15] (iteration 202226) 
 Time limit reached. Abort search.
-Actual search time: 600.005s [t=600.064s]
+Actual search time: 600.001s [t=600.06s]
 Original state h-value: 13
 New state h-value: 9
-Expanded 808871 state(s).
+Expanded 808074 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 3929286
-Generated 5751156 state(s).
-Dead ends: 130981 state(s).
-Number of registered states: 812646
-Int hash set load factor: 812646/1048576 = 0.775
+Evaluations: 3924317
+Generated 5744181 state(s).
+Dead ends: 130861 state(s).
+Number of registered states: 811651
+Int hash set load factor: 811651/1048576 = 0.774051
 Int hash set resizes: 20
-Open nodes: 3721
-Closed states: 808871
-Search time: 600.013s
-Total time: 600.064s
+Open nodes: 3523
+Closed states: 808074
+Search time: 600.008s
+Total time: 600.06s
 Solution found.
-Peak memory: 142660 KB
+Peak memory: 142492 KB
 search exit code: 0
 

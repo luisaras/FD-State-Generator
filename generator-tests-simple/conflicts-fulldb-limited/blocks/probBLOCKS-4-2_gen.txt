@@ -3,33 +3,33 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000,print_h=2,max_time=60)' --internal-plan-file sas_plan
-reading input... [t=7.076e-05s]
-done reading input! [t=0.000546495s]
+reading input... [t=3.8265e-05s]
+done reading input! [t=0.000288149s]
 Generating a pattern using the greedy generator...
-building causal graph...done! [t=0.00018948s]
+building causal graph...done! [t=0.000102133s]
 Greedy generator pattern: [0, 1, 2, 3, 4, 5, 6, 7, 8]
 Greedy generator number of variables: 9
 Greedy generator PDB size: 20000
-Greedy generator computation time: 0.00025834s
+Greedy generator computation time: 0.000138913s
 Generating patterns using the systematic generator...
 Found 18 SGA patterns.
 Found 18 interesting patterns.
 Systematic generator number of patterns: 18
 Systematic generator total PDB size: 165
-Systematic generator computation time: 0.000145609s
+Systematic generator computation time: 0.000147437s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.000975084s
+Done computing PDBs for pattern collection: 0.000988336s
 Generating patterns using the systematic generator...
 Found 78 SGA patterns.
 Found 78 interesting patterns.
 Systematic generator number of patterns: 78
 Systematic generator total PDB size: 2265
-Systematic generator computation time: 0.000490508s
+Systematic generator computation time: 0.000491666s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.00471695s
-Building successor generator...done! [t=0.0205419s]
+Done computing PDBs for pattern collection: 0.00685048s
+Building successor generator...done! [t=0.0209546s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 4.2221e-05s
+time for successor generation creation: 6.1691e-05s
 Variables: 9
 FactPairs: 30
 Bytes per state: 4
@@ -59,7 +59,7 @@ New best h: [2, 5, 6, 9] (iteration 388)
 New best h: [2, 5, 8, 9] (iteration 870) 
 New best h: [2, 5, 11, 9] (iteration 3809) 
 Completely explored state space.
-Actual search time: 1.56191s [t=1.58525s]
+Actual search time: 1.56657s [t=1.58958s]
 Original state h-value: 6
 New state h-value: 11
 Expanded 7051 state(s).
@@ -73,8 +73,8 @@ Int hash set load factor: 7051/8192 = 0.860718
 Int hash set resizes: 13
 Open nodes: 0
 Closed states: 7051
-Search time: 1.56453s
-Total time: 1.58526s
+Search time: 1.56835s
+Total time: 1.58959s
 Solution found.
 Peak memory: 70456 KB
 search exit code: 0

@@ -3,47 +3,47 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/fulldb/blocks/probBLOCKS-5-1_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
-reading input... [t=7.625e-05s]
-done reading input! [t=0.00114769s]
+reading input... [t=4.733e-05s]
+done reading input! [t=0.000761047s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.00465667s]
+Building successor generator...done! [t=0.00332904s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 3.532e-05s
+time for successor generation creation: 5.3948e-05s
 Variables: 11
 FactPairs: 42
 Bytes per state: 4
 Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[g=0, 1 evaluated, 0 expanded, t=0.00483114s, 67764 KB]
-f = 8 [1 evaluated, 0 expanded, t=0.00485951s, 67764 KB]
+[g=0, 1 evaluated, 0 expanded, t=0.00363153s, 67764 KB]
+f = 8 [1 evaluated, 0 expanded, t=0.00368031s, 67764 KB]
 Initial heuristic value for lmcut: 8
 New best heuristic value for lmcut: 8
-[g=1, 2 evaluated, 1 expanded, t=0.00493072s, 67764 KB]
-f = 9 [2 evaluated, 1 expanded, t=0.00495937s, 67764 KB]
-f = 10 [3 evaluated, 2 expanded, t=0.00501245s, 67764 KB]
+[g=1, 2 evaluated, 1 expanded, t=0.0037995s, 67764 KB]
+f = 9 [2 evaluated, 1 expanded, t=0.00384808s, 67764 KB]
+f = 10 [3 evaluated, 2 expanded, t=0.00393812s, 67764 KB]
 New best heuristic value for lmcut: 7
-[g=3, 4 evaluated, 3 expanded, t=0.00506609s, 67764 KB]
-f = 11 [6 evaluated, 4 expanded, t=0.00514098s, 67764 KB]
-f = 12 [7 evaluated, 5 expanded, t=0.00519309s, 67764 KB]
-f = 13 [11 evaluated, 7 expanded, t=0.00531267s, 67764 KB]
+[g=3, 4 evaluated, 3 expanded, t=0.00402927s, 67764 KB]
+f = 11 [6 evaluated, 4 expanded, t=0.00415554s, 67764 KB]
+f = 12 [7 evaluated, 5 expanded, t=0.00424258s, 67764 KB]
+f = 13 [11 evaluated, 7 expanded, t=0.00445902s, 67764 KB]
 New best heuristic value for lmcut: 6
-[g=7, 12 evaluated, 8 expanded, t=0.00536492s, 67764 KB]
-f = 14 [24 evaluated, 13 expanded, t=0.00564704s, 67764 KB]
-f = 15 [53 evaluated, 27 expanded, t=0.00629506s, 67764 KB]
+[g=7, 12 evaluated, 8 expanded, t=0.00455161s, 67764 KB]
+f = 14 [24 evaluated, 13 expanded, t=0.00502879s, 67764 KB]
+f = 15 [53 evaluated, 27 expanded, t=0.00613322s, 67764 KB]
 New best heuristic value for lmcut: 5
-[g=10, 54 evaluated, 28 expanded, t=0.0063449s, 67764 KB]
+[g=10, 54 evaluated, 28 expanded, t=0.00621758s, 67764 KB]
 New best heuristic value for lmcut: 4
-[g=11, 56 evaluated, 29 expanded, t=0.00641198s, 67764 KB]
+[g=11, 56 evaluated, 29 expanded, t=0.00633143s, 67764 KB]
 New best heuristic value for lmcut: 3
-[g=12, 58 evaluated, 30 expanded, t=0.00647641s, 67764 KB]
-f = 16 [106 evaluated, 58 expanded, t=0.00742989s, 67764 KB]
+[g=12, 58 evaluated, 30 expanded, t=0.00644104s, 67764 KB]
+f = 16 [106 evaluated, 58 expanded, t=0.00806465s, 67764 KB]
 New best heuristic value for lmcut: 2
-[g=14, 112 evaluated, 61 expanded, t=0.00754452s, 67764 KB]
+[g=14, 112 evaluated, 61 expanded, t=0.00826199s, 67764 KB]
 New best heuristic value for lmcut: 1
-[g=15, 114 evaluated, 62 expanded, t=0.00759816s, 67764 KB]
+[g=15, 114 evaluated, 62 expanded, t=0.00835134s, 67764 KB]
 New best heuristic value for lmcut: 0
-[g=16, 116 evaluated, 63 expanded, t=0.00764937s, 67764 KB]
+[g=16, 116 evaluated, 63 expanded, t=0.0084762s, 67764 KB]
 Solution found! Cost: 16
-Actual search time: 0.00280095s [t=0.00769714s]
+Actual search time: 0.004818s [t=0.00856129s]
 op40) unstack c d (1)
 op7) put-down c (1)
 op42) unstack d a (1)
@@ -77,8 +77,8 @@ Int hash set load factor: 117/128 = 0.914062
 Int hash set resizes: 7
 Open nodes: 53
 Closed states: 64
-Search time: 0.0029373s
-Total time: 0.007702s
+Search time: 0.00505044s
+Total time: 0.00856942s
 Solution found.
 Peak memory: 67764 KB
 search exit code: 0

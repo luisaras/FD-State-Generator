@@ -3,29 +3,29 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000,print_h=2,max_time=60)' --internal-plan-file sas_plan
-reading input... [t=8.3199e-05s]
-done reading input! [t=0.000709997s]
+reading input... [t=8.2512e-05s]
+done reading input! [t=0.000712257s]
 Initializing landmark cut heuristic...
 Generating patterns using the systematic generator...
-building causal graph...done! [t=0.000268498s]
+building causal graph...done! [t=0.000266198s]
 Found 28 SGA patterns.
 Found 28 interesting patterns.
 Systematic generator number of patterns: 28
 Systematic generator total PDB size: 312
-Systematic generator computation time: 0.000530935s
+Systematic generator computation time: 0.000527429s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.0019484s
+Done computing PDBs for pattern collection: 0.00190671s
 Generating patterns using the systematic generator...
 Found 148 SGA patterns.
 Found 148 interesting patterns.
 Systematic generator number of patterns: 148
 Systematic generator total PDB size: 6072
-Systematic generator computation time: 0.000964847s
+Systematic generator computation time: 0.000966387s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.010697s
-Building successor generator...done! [t=0.0226898s]
+Done computing PDBs for pattern collection: 0.0102574s
+Building successor generator...done! [t=0.0218698s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 3.2936e-05s
+time for successor generation creation: 4.3187e-05s
 Variables: 11
 FactPairs: 42
 Bytes per state: 4
@@ -58,7 +58,7 @@ New best h: [0, 7, 8, 11] (iteration 305)
 New best h: [1, 6, 7, 11] (iteration 315) 
 New best h: [2, 5, 4, 11] (iteration 2782) 
 Reached iteration limit.
-Actual search time: 3.33663s [t=3.36211s]
+Actual search time: 3.32534s [t=3.35065s]
 Original state h-value: 9
 New state h-value: 4
 Expanded 9866 state(s).
@@ -72,8 +72,8 @@ Int hash set load factor: 10027/16384 = 0.612
 Int hash set resizes: 14
 Open nodes: 135
 Closed states: 9866
-Search time: 3.33931s
-Total time: 3.36211s
+Search time: 3.32863s
+Total time: 3.35065s
 Solution found.
 Peak memory: 71156 KB
 search exit code: 0

@@ -3,13 +3,13 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000000,print_h=2,max_time=600)' --internal-plan-file sas_plan
-reading input... [t=6.8761e-05s]
-done reading input! [t=0.00086536s]
+reading input... [t=8.3092e-05s]
+done reading input! [t=0.000882164s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0.000329203s
+Done calculating initial pattern collection: 0.000330141s
 Average operator cost: 1
-building causal graph...done! [t=0.000417574s]
+building causal graph...done! [t=0.000386341s]
 Done calculating initial candidate PDBs
 current collection size is 35
 current initial h value: 10
@@ -18,37 +18,37 @@ Hill climbing iterations: 1
 Hill climbing generated patterns: 35
 Hill climbing rejected patterns: 0
 Hill climbing maximum PDB size: 14
-Hill climbing time: 0.015225s
+Hill climbing time: 0.0159648s
 Hill climbing generator collection: [[8], [9], [10], [11], [12]]
 Hill climbing generator number of patterns: 5
 Hill climbing generator total PDB size: 35
-Hill climbing generator computation time: 0.0156013s
+Hill climbing generator computation time: 0.0163427s
 Running dominance pruning...
 Pruned 0 of 1 pattern cliques
 Pruned 0 of 5 PDBs
-Dominance pruning took 8.474e-06s
+Dominance pruning took 8.321e-06s
 Canonical PDB heuristic number of patterns: 5
 Canonical PDB heuristic total PDB size: 35
-Canonical PDB heuristic computation time: 0.0156535s
+Canonical PDB heuristic computation time: 0.0163949s
 Generating patterns using the systematic generator...
 Found 40 SGA patterns.
 Found 40 interesting patterns.
 Systematic generator number of patterns: 40
 Systematic generator total PDB size: 525
-Systematic generator computation time: 0.000288294s
+Systematic generator computation time: 0.000288349s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.00378937s
+Done computing PDBs for pattern collection: 0.00347872s
 Generating patterns using the systematic generator...
 Found 250 SGA patterns.
 Found 250 interesting patterns.
 Systematic generator number of patterns: 250
 Systematic generator total PDB size: 13755
-Systematic generator computation time: 0.00171941s
+Systematic generator computation time: 0.00113087s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.017316s
-Building successor generator...done! [t=0.0489557s]
+Done computing PDBs for pattern collection: 0.0171189s
+Building successor generator...done! [t=0.0480094s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 4.2727e-05s
+time for successor generation creation: 4.2928e-05s
 Variables: 13
 FactPairs: 56
 Bytes per state: 4
@@ -74,23 +74,23 @@ New best h: [1, 3, 2, 13] (iteration 225)
 New best h: [1, 6, 5, 13] (iteration 2129) 
 New best h: [2, 5, 3, 13] (iteration 49712) 
 Time limit reached. Abort search.
-Actual search time: 600.001s [t=600.054s]
+Actual search time: 600s [t=600.053s]
 Original state h-value: 10
 New state h-value: 3
-Expanded 1263924 state(s).
+Expanded 1260306 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 5855295
-Generated 9354525 state(s).
-Dead ends: 224298 state(s).
-Number of registered states: 1270484
-Int hash set load factor: 1270484/2097152 = 0.605814
+Evaluations: 5835859
+Generated 9331370 state(s).
+Dead ends: 223319 state(s).
+Number of registered states: 1266588
+Int hash set load factor: 1266588/2097152 = 0.603956
 Int hash set resizes: 21
-Open nodes: 6555
-Closed states: 1263924
+Open nodes: 6277
+Closed states: 1260306
 Search time: 600.005s
-Total time: 600.054s
+Total time: 600.053s
 Solution found.
-Peak memory: 175624 KB
+Peak memory: 175316 KB
 search exit code: 0
 
