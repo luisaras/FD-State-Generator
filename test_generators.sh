@@ -323,6 +323,19 @@ test_blocks() {
     cd ..
 }
 
+test_sokoban() {
+    ALLH=(lmcut ipdb)
+    BENCHMARKS=ipc
+    TEST_FOLDER=generator-tests-simple
+    test sokoban-opt11-strips p01
+    test sokoban-opt11-strips p02
+    test sokoban-opt11-strips p03
+    test sokoban-opt11-strips p04
+    test sokoban-opt11-strips p05
+    cd ..
+}
+
+
 LIMIT=$2
 if [ -z "$2" ]
 then
