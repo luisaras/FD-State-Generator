@@ -2877,7 +2877,7 @@ begin_mutex_group
 30 24
 end_mutex_group
 begin_state
-0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17 6 19 7 1 1 1 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17 0 0 3 0 0 1 
 end_state
 begin_goal
 3
@@ -2898,7 +2898,7 @@ move player-01 pos-02-02 pos-02-03 dir-down
 22 -1 1
 0
 31 -1 1
-0
+1
 end_operator
 begin_operator
 move player-01 pos-02-02 pos-03-02 dir-right
@@ -2912,7 +2912,7 @@ move player-01 pos-02-02 pos-03-02 dir-right
 21 -1 0
 0
 31 -1 4
-0
+1
 end_operator
 begin_operator
 move player-01 pos-02-03 pos-02-02 dir-up
@@ -2926,7 +2926,7 @@ move player-01 pos-02-03 pos-02-02 dir-up
 22 -1 0
 0
 31 -1 0
-0
+1
 end_operator
 begin_operator
 move player-01 pos-02-03 pos-02-04 dir-down
@@ -2940,7 +2940,7 @@ move player-01 pos-02-03 pos-02-04 dir-down
 23 -1 1
 0
 31 -1 2
-0
+1
 end_operator
 begin_operator
 move player-01 pos-02-03 pos-03-03 dir-right
@@ -2954,7 +2954,7 @@ move player-01 pos-02-03 pos-03-03 dir-right
 22 -1 0
 0
 31 -1 5
-0
+1
 end_operator
 begin_operator
 move player-01 pos-02-04 pos-02-03 dir-up
@@ -2968,7 +2968,7 @@ move player-01 pos-02-04 pos-02-03 dir-up
 23 -1 0
 0
 31 -1 1
-0
+1
 end_operator
 begin_operator
 move player-01 pos-02-04 pos-02-05 dir-down
@@ -2982,7 +2982,7 @@ move player-01 pos-02-04 pos-02-05 dir-down
 23 -1 0
 0
 31 -1 3
-0
+1
 end_operator
 begin_operator
 move player-01 pos-02-04 pos-03-04 dir-right
@@ -2996,7 +2996,7 @@ move player-01 pos-02-04 pos-03-04 dir-right
 23 -1 0
 0
 31 -1 6
-0
+1
 end_operator
 begin_operator
 move player-01 pos-02-05 pos-02-04 dir-up
@@ -3010,7 +3010,7 @@ move player-01 pos-02-05 pos-02-04 dir-up
 23 -1 1
 0
 31 -1 2
-0
+1
 end_operator
 begin_operator
 move player-01 pos-02-05 pos-03-05 dir-right
@@ -3024,7 +3024,7 @@ move player-01 pos-02-05 pos-03-05 dir-right
 19 -1 0
 0
 31 -1 7
-0
+1
 end_operator
 begin_operator
 move player-01 pos-03-02 pos-02-02 dir-left
@@ -3038,7 +3038,7 @@ move player-01 pos-03-02 pos-02-02 dir-left
 21 -1 1
 0
 31 -1 0
-0
+1
 end_operator
 begin_operator
 move player-01 pos-03-02 pos-03-03 dir-down
@@ -3052,7 +3052,7 @@ move player-01 pos-03-02 pos-03-03 dir-down
 18 -1 1
 0
 31 -1 5
-0
+1
 end_operator
 begin_operator
 move player-01 pos-03-02 pos-04-02 dir-right
@@ -3066,7 +3066,7 @@ move player-01 pos-03-02 pos-04-02 dir-right
 24 -1 1
 0
 31 -1 8
-0
+1
 end_operator
 begin_operator
 move player-01 pos-03-03 pos-02-03 dir-left
@@ -3080,7 +3080,7 @@ move player-01 pos-03-03 pos-02-03 dir-left
 22 -1 1
 0
 31 -1 1
-0
+1
 end_operator
 begin_operator
 move player-01 pos-03-03 pos-03-02 dir-up
@@ -3094,7 +3094,7 @@ move player-01 pos-03-03 pos-03-02 dir-up
 18 -1 0
 0
 31 -1 4
-0
+1
 end_operator
 begin_operator
 move player-01 pos-03-03 pos-03-04 dir-down
@@ -3108,7 +3108,7 @@ move player-01 pos-03-03 pos-03-04 dir-down
 18 -1 0
 0
 31 -1 6
-0
+1
 end_operator
 begin_operator
 move player-01 pos-03-03 pos-04-03 dir-right
@@ -3122,7 +3122,7 @@ move player-01 pos-03-03 pos-04-03 dir-right
 27 -1 1
 0
 31 -1 9
-0
+1
 end_operator
 begin_operator
 move player-01 pos-03-04 pos-02-04 dir-left
@@ -3136,7 +3136,7 @@ move player-01 pos-03-04 pos-02-04 dir-left
 23 -1 1
 0
 31 -1 2
-0
+1
 end_operator
 begin_operator
 move player-01 pos-03-04 pos-03-03 dir-up
@@ -3150,7 +3150,7 @@ move player-01 pos-03-04 pos-03-03 dir-up
 18 -1 1
 0
 31 -1 5
-0
+1
 end_operator
 begin_operator
 move player-01 pos-03-04 pos-03-05 dir-down
@@ -3164,7 +3164,7 @@ move player-01 pos-03-04 pos-03-05 dir-down
 12 -1 0
 0
 31 -1 7
-0
+1
 end_operator
 begin_operator
 move player-01 pos-03-04 pos-04-04 dir-right
@@ -3178,7 +3178,7 @@ move player-01 pos-03-04 pos-04-04 dir-right
 25 -1 1
 0
 31 -1 10
-0
+1
 end_operator
 begin_operator
 move player-01 pos-03-05 pos-02-05 dir-left
@@ -3192,7 +3192,7 @@ move player-01 pos-03-05 pos-02-05 dir-left
 19 -1 1
 0
 31 -1 3
-0
+1
 end_operator
 begin_operator
 move player-01 pos-03-05 pos-03-04 dir-up
@@ -3206,7 +3206,7 @@ move player-01 pos-03-05 pos-03-04 dir-up
 12 -1 1
 0
 31 -1 6
-0
+1
 end_operator
 begin_operator
 move player-01 pos-03-05 pos-04-05 dir-right
@@ -3220,7 +3220,7 @@ move player-01 pos-03-05 pos-04-05 dir-right
 20 -1 1
 0
 31 -1 11
-0
+1
 end_operator
 begin_operator
 move player-01 pos-04-02 pos-03-02 dir-left
@@ -3234,7 +3234,7 @@ move player-01 pos-04-02 pos-03-02 dir-left
 24 -1 0
 0
 31 -1 4
-0
+1
 end_operator
 begin_operator
 move player-01 pos-04-02 pos-04-03 dir-down
@@ -3248,7 +3248,7 @@ move player-01 pos-04-02 pos-04-03 dir-down
 27 -1 1
 0
 31 -1 9
-0
+1
 end_operator
 begin_operator
 move player-01 pos-04-02 pos-05-02 dir-right
@@ -3262,7 +3262,7 @@ move player-01 pos-04-02 pos-05-02 dir-right
 24 -1 0
 0
 31 -1 12
-0
+1
 end_operator
 begin_operator
 move player-01 pos-04-03 pos-03-03 dir-left
@@ -3276,7 +3276,7 @@ move player-01 pos-04-03 pos-03-03 dir-left
 27 -1 0
 0
 31 -1 5
-0
+1
 end_operator
 begin_operator
 move player-01 pos-04-03 pos-04-02 dir-up
@@ -3290,7 +3290,7 @@ move player-01 pos-04-03 pos-04-02 dir-up
 27 -1 0
 0
 31 -1 8
-0
+1
 end_operator
 begin_operator
 move player-01 pos-04-03 pos-04-04 dir-down
@@ -3304,7 +3304,7 @@ move player-01 pos-04-03 pos-04-04 dir-down
 27 -1 0
 0
 31 -1 10
-0
+1
 end_operator
 begin_operator
 move player-01 pos-04-03 pos-05-03 dir-right
@@ -3318,7 +3318,7 @@ move player-01 pos-04-03 pos-05-03 dir-right
 27 -1 0
 0
 31 -1 13
-0
+1
 end_operator
 begin_operator
 move player-01 pos-04-04 pos-03-04 dir-left
@@ -3332,7 +3332,7 @@ move player-01 pos-04-04 pos-03-04 dir-left
 25 -1 0
 0
 31 -1 6
-0
+1
 end_operator
 begin_operator
 move player-01 pos-04-04 pos-04-03 dir-up
@@ -3346,7 +3346,7 @@ move player-01 pos-04-04 pos-04-03 dir-up
 27 -1 1
 0
 31 -1 9
-0
+1
 end_operator
 begin_operator
 move player-01 pos-04-04 pos-04-05 dir-down
@@ -3360,7 +3360,7 @@ move player-01 pos-04-04 pos-04-05 dir-down
 25 -1 0
 0
 31 -1 11
-0
+1
 end_operator
 begin_operator
 move player-01 pos-04-05 pos-03-05 dir-left
@@ -3374,7 +3374,7 @@ move player-01 pos-04-05 pos-03-05 dir-left
 20 -1 0
 0
 31 -1 7
-0
+1
 end_operator
 begin_operator
 move player-01 pos-04-05 pos-04-04 dir-up
@@ -3388,7 +3388,7 @@ move player-01 pos-04-05 pos-04-04 dir-up
 25 -1 1
 0
 31 -1 10
-0
+1
 end_operator
 begin_operator
 move player-01 pos-05-02 pos-04-02 dir-left
@@ -3402,7 +3402,7 @@ move player-01 pos-05-02 pos-04-02 dir-left
 24 -1 1
 0
 31 -1 8
-0
+1
 end_operator
 begin_operator
 move player-01 pos-05-02 pos-05-03 dir-down
@@ -3416,7 +3416,7 @@ move player-01 pos-05-02 pos-05-03 dir-down
 17 -1 1
 0
 31 -1 13
-0
+1
 end_operator
 begin_operator
 move player-01 pos-05-03 pos-04-03 dir-left
@@ -3430,7 +3430,7 @@ move player-01 pos-05-03 pos-04-03 dir-left
 27 -1 1
 0
 31 -1 9
-0
+1
 end_operator
 begin_operator
 move player-01 pos-05-03 pos-05-02 dir-up
@@ -3444,7 +3444,7 @@ move player-01 pos-05-03 pos-05-02 dir-up
 17 -1 0
 0
 31 -1 12
-0
+1
 end_operator
 begin_operator
 move player-01 pos-05-03 pos-06-03 dir-right
@@ -3458,7 +3458,7 @@ move player-01 pos-05-03 pos-06-03 dir-right
 17 -1 0
 0
 31 -1 14
-0
+1
 end_operator
 begin_operator
 move player-01 pos-06-03 pos-05-03 dir-left
@@ -3472,7 +3472,7 @@ move player-01 pos-06-03 pos-05-03 dir-left
 17 -1 1
 0
 31 -1 13
-0
+1
 end_operator
 begin_operator
 move player-01 pos-06-03 pos-06-04 dir-down
@@ -3486,7 +3486,7 @@ move player-01 pos-06-03 pos-06-04 dir-down
 16 -1 0
 0
 31 -1 15
-0
+1
 end_operator
 begin_operator
 move player-01 pos-06-03 pos-07-03 dir-right
@@ -3500,7 +3500,7 @@ move player-01 pos-06-03 pos-07-03 dir-right
 16 -1 0
 0
 31 -1 16
-0
+1
 end_operator
 begin_operator
 move player-01 pos-06-04 pos-06-03 dir-up
@@ -3514,7 +3514,7 @@ move player-01 pos-06-04 pos-06-03 dir-up
 16 -1 1
 0
 31 -1 14
-0
+1
 end_operator
 begin_operator
 move player-01 pos-06-04 pos-07-04 dir-right
@@ -3528,7 +3528,7 @@ move player-01 pos-06-04 pos-07-04 dir-right
 9 -1 1
 0
 31 -1 17
-0
+1
 end_operator
 begin_operator
 move player-01 pos-07-03 pos-06-03 dir-left
@@ -3542,7 +3542,7 @@ move player-01 pos-07-03 pos-06-03 dir-left
 16 -1 1
 0
 31 -1 14
-0
+1
 end_operator
 begin_operator
 move player-01 pos-07-03 pos-07-04 dir-down
@@ -3556,7 +3556,7 @@ move player-01 pos-07-03 pos-07-04 dir-down
 15 -1 0
 0
 31 -1 17
-0
+1
 end_operator
 begin_operator
 move player-01 pos-07-03 pos-08-03 dir-right
@@ -3570,7 +3570,7 @@ move player-01 pos-07-03 pos-08-03 dir-right
 15 -1 0
 0
 31 -1 18
-0
+1
 end_operator
 begin_operator
 move player-01 pos-07-04 pos-06-04 dir-left
@@ -3584,7 +3584,7 @@ move player-01 pos-07-04 pos-06-04 dir-left
 9 -1 0
 0
 31 -1 15
-0
+1
 end_operator
 begin_operator
 move player-01 pos-07-04 pos-07-03 dir-up
@@ -3598,7 +3598,7 @@ move player-01 pos-07-04 pos-07-03 dir-up
 15 -1 1
 0
 31 -1 16
-0
+1
 end_operator
 begin_operator
 move player-01 pos-07-04 pos-08-04 dir-right
@@ -3612,7 +3612,7 @@ move player-01 pos-07-04 pos-08-04 dir-right
 13 -1 1
 0
 31 -1 19
-0
+1
 end_operator
 begin_operator
 move player-01 pos-08-03 pos-07-03 dir-left
@@ -3626,7 +3626,7 @@ move player-01 pos-08-03 pos-07-03 dir-left
 15 -1 1
 0
 31 -1 16
-0
+1
 end_operator
 begin_operator
 move player-01 pos-08-03 pos-08-04 dir-down
@@ -3640,7 +3640,7 @@ move player-01 pos-08-03 pos-08-04 dir-down
 13 -1 1
 0
 31 -1 19
-0
+1
 end_operator
 begin_operator
 move player-01 pos-08-03 pos-09-03 dir-right
@@ -3654,7 +3654,7 @@ move player-01 pos-08-03 pos-09-03 dir-right
 10 -1 0
 0
 31 -1 21
-0
+1
 end_operator
 begin_operator
 move player-01 pos-08-04 pos-07-04 dir-left
@@ -3668,7 +3668,7 @@ move player-01 pos-08-04 pos-07-04 dir-left
 13 -1 0
 0
 31 -1 17
-0
+1
 end_operator
 begin_operator
 move player-01 pos-08-04 pos-08-03 dir-up
@@ -3682,7 +3682,7 @@ move player-01 pos-08-04 pos-08-03 dir-up
 13 -1 0
 0
 31 -1 18
-0
+1
 end_operator
 begin_operator
 move player-01 pos-08-04 pos-09-04 dir-right
@@ -3696,7 +3696,7 @@ move player-01 pos-08-04 pos-09-04 dir-right
 26 -1 1
 0
 31 -1 22
-0
+1
 end_operator
 begin_operator
 move player-01 pos-09-02 pos-09-03 dir-down
@@ -3710,7 +3710,7 @@ move player-01 pos-09-02 pos-09-03 dir-down
 8 -1 1
 0
 31 -1 21
-0
+1
 end_operator
 begin_operator
 move player-01 pos-09-02 pos-10-02 dir-right
@@ -3724,7 +3724,7 @@ move player-01 pos-09-02 pos-10-02 dir-right
 3 -1 0
 0
 31 -1 23
-0
+1
 end_operator
 begin_operator
 move player-01 pos-09-03 pos-08-03 dir-left
@@ -3738,7 +3738,7 @@ move player-01 pos-09-03 pos-08-03 dir-left
 10 -1 1
 0
 31 -1 18
-0
+1
 end_operator
 begin_operator
 move player-01 pos-09-03 pos-09-02 dir-up
@@ -3752,7 +3752,7 @@ move player-01 pos-09-03 pos-09-02 dir-up
 8 -1 0
 0
 31 -1 20
-0
+1
 end_operator
 begin_operator
 move player-01 pos-09-03 pos-09-04 dir-down
@@ -3766,7 +3766,7 @@ move player-01 pos-09-03 pos-09-04 dir-down
 26 -1 1
 0
 31 -1 22
-0
+1
 end_operator
 begin_operator
 move player-01 pos-09-04 pos-08-04 dir-left
@@ -3780,7 +3780,7 @@ move player-01 pos-09-04 pos-08-04 dir-left
 26 -1 0
 0
 31 -1 19
-0
+1
 end_operator
 begin_operator
 move player-01 pos-09-04 pos-09-03 dir-up
@@ -3794,7 +3794,7 @@ move player-01 pos-09-04 pos-09-03 dir-up
 26 -1 0
 0
 31 -1 21
-0
+1
 end_operator
 begin_operator
 move player-01 pos-09-04 pos-10-04 dir-right
@@ -3808,7 +3808,7 @@ move player-01 pos-09-04 pos-10-04 dir-right
 26 -1 0
 0
 31 -1 24
-0
+1
 end_operator
 begin_operator
 move player-01 pos-10-02 pos-09-02 dir-left
@@ -3822,7 +3822,7 @@ move player-01 pos-10-02 pos-09-02 dir-left
 3 -1 1
 0
 31 -1 20
-0
+1
 end_operator
 begin_operator
 move player-01 pos-10-02 pos-11-02 dir-right
@@ -3836,7 +3836,7 @@ move player-01 pos-10-02 pos-11-02 dir-right
 1 -1 1
 0
 31 -1 25
-0
+1
 end_operator
 begin_operator
 move player-01 pos-10-04 pos-09-04 dir-left
@@ -3850,7 +3850,7 @@ move player-01 pos-10-04 pos-09-04 dir-left
 26 -1 1
 0
 31 -1 22
-0
+1
 end_operator
 begin_operator
 move player-01 pos-10-04 pos-11-04 dir-right
@@ -3864,7 +3864,7 @@ move player-01 pos-10-04 pos-11-04 dir-right
 5 -1 0
 0
 31 -1 27
-0
+1
 end_operator
 begin_operator
 move player-01 pos-11-02 pos-10-02 dir-left
@@ -3878,7 +3878,7 @@ move player-01 pos-11-02 pos-10-02 dir-left
 1 -1 0
 0
 31 -1 23
-0
+1
 end_operator
 begin_operator
 move player-01 pos-11-02 pos-11-03 dir-down
@@ -3892,7 +3892,7 @@ move player-01 pos-11-02 pos-11-03 dir-down
 2 -1 1
 0
 31 -1 26
-0
+1
 end_operator
 begin_operator
 move player-01 pos-11-03 pos-11-02 dir-up
@@ -3906,7 +3906,7 @@ move player-01 pos-11-03 pos-11-02 dir-up
 2 -1 0
 0
 31 -1 25
-0
+1
 end_operator
 begin_operator
 move player-01 pos-11-03 pos-11-04 dir-down
@@ -3920,7 +3920,7 @@ move player-01 pos-11-03 pos-11-04 dir-down
 4 -1 1
 0
 31 -1 27
-0
+1
 end_operator
 begin_operator
 move player-01 pos-11-04 pos-10-04 dir-left
@@ -3934,7 +3934,7 @@ move player-01 pos-11-04 pos-10-04 dir-left
 5 -1 1
 0
 31 -1 24
-0
+1
 end_operator
 begin_operator
 move player-01 pos-11-04 pos-11-03 dir-up
@@ -3948,7 +3948,7 @@ move player-01 pos-11-04 pos-11-03 dir-up
 4 -1 0
 0
 31 -1 26
-0
+1
 end_operator
 begin_operator
 push-to-goal player-01 stone-01 pos-06-04 pos-07-04 pos-08-04 dir-right

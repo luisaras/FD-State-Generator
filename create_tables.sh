@@ -133,7 +133,7 @@ instances_simple() {
 }
 
 instances_blocks_sokoban_simple() {
-    ALLH=(lmcut ipdb)
+    ALLH=(lmcut ipdb fulldb)
     cd generator-tests-simple
     find . -name "*.dat" -type f -delete
     instance blocks probBLOCKS-4-0
@@ -148,7 +148,7 @@ instances_blocks_sokoban_simple() {
     instance blocks probBLOCKS-7-0
     instance blocks probBLOCKS-7-1
     instance blocks probBLOCKS-7-2
-    ALLH=(lmcut ipdb astar)
+    ALLH=(lmcut ipdb)
     instance sokoban-opt11-strips p01
     instance sokoban-opt11-strips p02
     instance sokoban-opt11-strips p03

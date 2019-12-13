@@ -3,86 +3,71 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/conflicts-lmcut/sokoban-opt11-strips/p01_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
-reading input... [t=7.8095e-05s]
-done reading input! [t=0.00223239s]
+reading input... [t=4.3113e-05s]
+done reading input! [t=0.00120031s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.00628563s]
+Building successor generator...done! [t=0.00342721s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 9.8743e-05s
+time for successor generation creation: 0.000125153s
 Variables: 24
 FactPairs: 108
 Bytes per state: 8
 Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[g=0, 1 evaluated, 0 expanded, t=0.00650955s, 67896 KB]
-f = 7 [1 evaluated, 0 expanded, t=0.0065378s, 67896 KB]
-Initial heuristic value for lmcut: 7
+[g=0, 1 evaluated, 0 expanded, t=0.00374251s, 67896 KB]
+f = 9 [1 evaluated, 0 expanded, t=0.00378042s, 67896 KB]
+Initial heuristic value for lmcut: 9
 New best heuristic value for lmcut: 8
-[g=1, 2 evaluated, 1 expanded, t=0.0066603s, 67896 KB]
-f = 9 [5 evaluated, 1 expanded, t=0.00691186s, 67896 KB]
+[g=1, 2 evaluated, 1 expanded, t=0.00393963s, 67896 KB]
 New best heuristic value for lmcut: 7
-[g=2, 6 evaluated, 2 expanded, t=0.00701127s, 67896 KB]
-f = 10 [14 evaluated, 6 expanded, t=0.00766542s, 67896 KB]
-f = 11 [30 evaluated, 11 expanded, t=0.00850797s, 67896 KB]
+[g=2, 5 evaluated, 2 expanded, t=0.00427831s, 67896 KB]
 New best heuristic value for lmcut: 6
-[g=4, 31 evaluated, 13 expanded, t=0.00860318s, 67896 KB]
-f = 12 [52 evaluated, 24 expanded, t=0.0100487s, 67896 KB]
-f = 13 [64 evaluated, 32 expanded, t=0.010911s, 67896 KB]
+[g=3, 8 evaluated, 3 expanded, t=0.00456982s, 67896 KB]
 New best heuristic value for lmcut: 5
-[g=8, 107 evaluated, 47 expanded, t=0.0138552s, 67896 KB]
-f = 14 [131 evaluated, 58 expanded, t=0.0155972s, 67896 KB]
-f = 15 [215 evaluated, 98 expanded, t=0.0207086s, 67896 KB]
-f = 16 [334 evaluated, 156 expanded, t=0.0279445s, 67896 KB]
+[g=4, 12 evaluated, 4 expanded, t=0.004961s, 67896 KB]
+f = 10 [28 evaluated, 11 expanded, t=0.00622991s, 67896 KB]
 New best heuristic value for lmcut: 4
-[g=12, 351 evaluated, 164 expanded, t=0.0290541s, 67896 KB]
+[g=6, 30 evaluated, 13 expanded, t=0.00642267s, 67896 KB]
 New best heuristic value for lmcut: 3
-[g=13, 352 evaluated, 165 expanded, t=0.0291286s, 67896 KB]
+[g=7, 32 evaluated, 14 expanded, t=0.00660551s, 67896 KB]
+f = 11 [48 evaluated, 20 expanded, t=0.00783913s, 67896 KB]
 New best heuristic value for lmcut: 2
-[g=14, 357 evaluated, 166 expanded, t=0.0293373s, 67896 KB]
-f = 17 [483 evaluated, 241 expanded, t=0.0368073s, 67896 KB]
-f = 18 [809 evaluated, 402 expanded, 2 reopened, t=0.0549532s, 67896 KB]
+[g=9, 49 evaluated, 21 expanded, t=0.00793226s, 67896 KB]
 New best heuristic value for lmcut: 1
-[g=17, 831 evaluated, 409 expanded, 2 reopened, t=0.0560235s, 67896 KB]
+[g=10, 53 evaluated, 22 expanded, t=0.00814478s, 67896 KB]
 New best heuristic value for lmcut: 0
-[g=18, 833 evaluated, 410 expanded, 2 reopened, t=0.056101s, 67896 KB]
-Solution found! Cost: 18
-Actual search time: 0.0495615s [t=0.0561359s]
-op91) push-to-nongoal player-01 stone-01 pos-6-3 pos-5-3 pos-4-3 dir-left (1)
-op90) push-to-nongoal player-01 stone-01 pos-5-3 pos-4-3 pos-3-3 dir-left (1)
-op26) move player-01 pos-4-3 pos-4-2 dir-up (1)
-op23) move player-01 pos-4-2 pos-3-2 dir-left (1)
-op49) push-to-goal player-01 stone-01 pos-3-2 pos-3-3 pos-3-4 dir-down (1)
+[g=11, 55 evaluated, 23 expanded, t=0.00825546s, 67896 KB]
+Solution found! Cost: 11
+Actual search time: 0.00447231s [t=0.00830125s]
+op5) move player-01 pos-2-5 pos-2-4 dir-up (1)
+op2) move player-01 pos-2-4 pos-2-3 dir-up (1)
+op1) move player-01 pos-2-3 pos-3-3 dir-right (1)
 op12) move player-01 pos-3-3 pos-4-3 dir-right (1)
 op28) move player-01 pos-4-3 pos-5-3 dir-right (1)
 op40) move player-01 pos-5-3 pos-6-3 dir-right (1)
 op111) push-to-nongoal player-01 stone-02 pos-6-3 pos-5-3 pos-4-3 dir-left (1)
-op39) move player-01 pos-5-3 pos-5-4 dir-down (1)
-op41) move player-01 pos-5-4 pos-4-4 dir-left (1)
-op52) push-to-goal player-01 stone-01 pos-4-4 pos-3-4 pos-2-4 dir-left (1)
-op14) move player-01 pos-3-4 pos-3-3 dir-up (1)
-op10) move player-01 pos-3-3 pos-3-2 dir-up (1)
-op65) push-to-goal player-01 stone-03 pos-3-2 pos-3-3 pos-3-4 dir-down (1)
-op10) move player-01 pos-3-3 pos-3-2 dir-up (1)
-op8) move player-01 pos-3-2 pos-4-2 dir-right (1)
-op59) push-to-goal player-01 stone-02 pos-4-2 pos-4-3 pos-4-4 dir-down (1)
-Plan length: 18 step(s).
-Plan cost: 18
-Expanded 411 state(s).
-Reopened 2 state(s).
-Evaluated 833 state(s).
-Evaluations: 833
-Generated 1364 state(s).
-Dead ends: 119 state(s).
-Expanded until last jump: 402 state(s).
-Reopened until last jump: 2 state(s).
-Evaluated until last jump: 809 state(s).
-Generated until last jump: 1338 state(s).
-Number of registered states: 833
-Int hash set load factor: 833/1024 = 0.813477
-Int hash set resizes: 10
-Open nodes: 305
-Closed states: 409
-Search time: 0.0497426s
-Total time: 0.0561406s
+op110) push-to-nongoal player-01 stone-02 pos-5-3 pos-4-3 pos-3-3 dir-left (1)
+op26) move player-01 pos-4-3 pos-4-2 dir-up (1)
+op23) move player-01 pos-4-2 pos-3-2 dir-left (1)
+op57) push-to-goal player-01 stone-02 pos-3-2 pos-3-3 pos-3-4 dir-down (1)
+Plan length: 11 step(s).
+Plan cost: 11
+Expanded 24 state(s).
+Reopened 0 state(s).
+Evaluated 55 state(s).
+Evaluations: 55
+Generated 85 state(s).
+Dead ends: 4 state(s).
+Expanded until last jump: 20 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 48 state(s).
+Generated until last jump: 76 state(s).
+Number of registered states: 55
+Int hash set load factor: 55/64 = 0.859375
+Int hash set resizes: 6
+Open nodes: 27
+Closed states: 24
+Search time: 0.0047286s
+Total time: 0.00830774s
 Solution found.
 Peak memory: 67896 KB
 search exit code: 0

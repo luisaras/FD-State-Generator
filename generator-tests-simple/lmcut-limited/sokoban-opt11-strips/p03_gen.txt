@@ -3,12 +3,12 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --search 'generator_abstract([h],max_it=10000,print_h=0,max_time=60)' --internal-plan-file sas_plan
-reading input... [t=5.3009e-05s]
-done reading input! [t=0.00148182s]
+reading input... [t=4.7406e-05s]
+done reading input! [t=0.00149226s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.00459784s]
+Building successor generator...done! [t=0.00463941s]
 peak memory difference for successor generator creation: 132 KB
-time for successor generation creation: 0.000289537s
+time for successor generation creation: 0.000293242s
 Variables: 37
 FactPairs: 186
 Bytes per state: 12
@@ -22,61 +22,53 @@ Inserting initial (goal) state...
 New best h: [0, 6] (iteration 0) 
 New best h: [0, 7] (iteration 156) 
 New best h: [1, 7] (iteration 157) 
-New best h: [1, 8] (iteration 228) 
-New best h: [1, 9] (iteration 234) 
-New best h: [1, 10] (iteration 238) 
-New best h: [1, 11] (iteration 244) 
-New best h: [1, 12] (iteration 250) 
-New best h: [1, 13] (iteration 254) 
-New best h: [1, 14] (iteration 262) 
-New best h: [1, 15] (iteration 268) 
-New best h: [1, 16] (iteration 274) 
-New best h: [1, 17] (iteration 278) 
-New best h: [1, 18] (iteration 284) 
-New best h: [1, 19] (iteration 288) 
-New best h: [1, 20] (iteration 292) 
-New best h: [1, 21] (iteration 298) 
-New best h: [1, 22] (iteration 302) 
-New best h: [1, 23] (iteration 310) 
-New best h: [1, 24] (iteration 316) 
-New best h: [1, 27] (iteration 318) 
-New best h: [2, 27] (iteration 319) 
-New best h: [2, 28] (iteration 328) 
-New best h: [2, 29] (iteration 330) 
-New best h: [2, 30] (iteration 336) 
-New best h: [2, 31] (iteration 350) 
-New best h: [2, 32] (iteration 360) 
-New best h: [2, 34] (iteration 368) 
-New best h: [3, 34] (iteration 369) 
-New best h: [3, 35] (iteration 396) 
-New best h: [3, 36] (iteration 400) 
+New best h: [2, 8] (iteration 228) 
+New best h: [3, 9] (iteration 234) 
+New best h: [4, 10] (iteration 240) 
+New best h: [4, 14] (iteration 264) 
+New best h: [5, 15] (iteration 270) 
+New best h: [6, 16] (iteration 274) 
+New best h: [7, 17] (iteration 282) 
+New best h: [7, 18] (iteration 290) 
+New best h: [7, 19] (iteration 294) 
+New best h: [7, 20] (iteration 304) 
+New best h: [7, 21] (iteration 306) 
+New best h: [8, 22] (iteration 310) 
+New best h: [9, 23] (iteration 314) 
+New best h: [10, 24] (iteration 320) 
+New best h: [11, 25] (iteration 326) 
+New best h: [11, 26] (iteration 334) 
+New best h: [11, 27] (iteration 354) 
+New best h: [11, 28] (iteration 466) 
 Found first concrete state.
-New best h: [3, 37] (iteration 452) 
-New best h: [4, 34] (iteration 1763) 
-New best h: [4, 35] (iteration 1816) 
-New best h: [4, 36] (iteration 1820) 
-New best h: [4, 37] (iteration 1872) 
-New best h: [5, 37] (iteration 3781) 
-New best h: [6, 37] (iteration 3861) 
-New best h: [7, 37] (iteration 3929) 
+New best h: [11, 35] (iteration 782) 
+New best h: [11, 36] (iteration 790) 
+New best h: [11, 37] (iteration 806) 
+New best h: [12, 37] (iteration 852) 
+New best h: [13, 37] (iteration 858) 
+New best h: [14, 36] (iteration 2552) 
+New best h: [15, 36] (iteration 2556) 
+New best h: [16, 36] (iteration 2562) 
+New best h: [16, 37] (iteration 2674) 
+New best h: [17, 37] (iteration 3150) 
 Reached iteration limit.
-Actual search time: 0.45916s [t=0.465414s]
-Original state h-value: 10
-New state h-value: 7
-Expanded 9185 state(s).
+Actual search time: 0.314786s [t=0.321277s]
+Original state h-value: 15
+New state h-value: 17
+Expanded 9078 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 17108
-Generated 24582 state(s).
-Dead ends: 4491 state(s).
-Number of registered states: 10136
-Int hash set load factor: 10136/16384 = 0.618652
+Evaluations: 11950
+Generated 24346 state(s).
+Dead ends: 4442 state(s).
+Number of registered states: 10110
+Int hash set load factor: 10110/16384 = 0.617065
 Int hash set resizes: 14
-Open nodes: 816
-Closed states: 9185
-Search time: 0.460623s
-Total time: 0.465419s
+Open nodes: 923
+Closed states: 9078
+Search time: 0.316442s
+Total time: 0.321282s
 Solution found.
-Peak memory: 68700 KB
+Peak memory: 68844 KB
 search exit code: 0
 

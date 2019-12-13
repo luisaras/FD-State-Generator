@@ -77,7 +77,7 @@ generate()  {
         rm $TRANSLATOR_TEMP
     fi
     local TRANSLATOR_MSG=$(
-        ./fast-downward.py --translate --sas-file $TRANSLATOR_TEMP $DOMAIN_INPUT $TASK_INPUT --translator-options --unit-costs
+        ./fast-downward.py --translate --sas-file $TRANSLATOR_TEMP $DOMAIN_INPUT $TASK_INPUT --translate-options --unit-costs
     )
     if [ ! -f $TRANSLATOR_TEMP ]; then
         echo $TRANSLATOR_MSG
@@ -137,7 +137,7 @@ plan() {
         rm $TRANSLATOR_TEMP
     fi
     TRANSLATOR_MSG=$(
-        ./fast-downward.py --translate --sas-file $TRANSLATOR_TEMP $DOMAIN_INPUT $TASK_INPUT --translator-options --unit-costs
+        ./fast-downward.py --translate --sas-file $TRANSLATOR_TEMP $DOMAIN_INPUT $TASK_INPUT --translate-options --unit-costs
     )
     if [ ! -f $TRANSLATOR_TEMP ]; then
         echo $TRANSLATOR_MSG

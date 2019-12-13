@@ -3,29 +3,29 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000000,print_h=2,max_time=600)' --internal-plan-file sas_plan
-reading input... [t=6.2492e-05s]
-done reading input! [t=0.0014746s]
+reading input... [t=6.9705e-05s]
+done reading input! [t=0.0011504s]
 Initializing landmark cut heuristic...
 Generating patterns using the systematic generator...
-building causal graph...done! [t=0.00154797s]
+building causal graph...done! [t=0.0015385s]
 Found 99 SGA patterns.
 Found 99 interesting patterns.
 Systematic generator number of patterns: 99
 Systematic generator total PDB size: 726
-Systematic generator computation time: 0.00284008s
+Systematic generator computation time: 0.0028181s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.0116963s
+Done computing PDBs for pattern collection: 0.0117486s
 Generating patterns using the systematic generator...
 Found 1773 SGA patterns.
 Found 1866 interesting patterns.
 Systematic generator number of patterns: 1866
 Systematic generator total PDB size: 71646
-Systematic generator computation time: 0.00914851s
+Systematic generator computation time: 0.00865594s
 Computing PDBs for pattern collection...
-Done computing PDBs for pattern collection: 0.193936s
-Building successor generator...done! [t=0.262933s]
+Done computing PDBs for pattern collection: 0.197801s
+Building successor generator...done! [t=0.264361s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0.000153701s
+time for successor generation creation: 0.000158555s
 Variables: 37
 FactPairs: 186
 Bytes per state: 12
@@ -39,67 +39,52 @@ Inserting initial (goal) state...
 New best h: [0, 0, 0, 6] (iteration 0) 
 New best h: [0, 0, 0, 7] (iteration 156) 
 New best h: [0, 1, 1, 7] (iteration 157) 
-New best h: [0, 1, 1, 8] (iteration 228) 
-New best h: [0, 1, 1, 9] (iteration 234) 
-New best h: [0, 1, 1, 10] (iteration 238) 
-New best h: [0, 1, 1, 11] (iteration 244) 
-New best h: [0, 1, 1, 12] (iteration 250) 
-New best h: [0, 1, 1, 13] (iteration 254) 
-New best h: [0, 1, 1, 14] (iteration 262) 
-New best h: [0, 1, 1, 15] (iteration 268) 
-New best h: [0, 1, 1, 16] (iteration 274) 
-New best h: [0, 1, 1, 17] (iteration 278) 
-New best h: [0, 1, 1, 18] (iteration 284) 
-New best h: [0, 1, 1, 19] (iteration 288) 
-New best h: [0, 1, 1, 20] (iteration 292) 
-New best h: [0, 1, 1, 21] (iteration 298) 
-New best h: [0, 1, 1, 22] (iteration 302) 
-New best h: [0, 1, 1, 23] (iteration 310) 
-New best h: [0, 1, 1, 24] (iteration 316) 
-New best h: [0, 1, 1, 27] (iteration 318) 
-New best h: [0, 2, 2, 27] (iteration 319) 
-New best h: [0, 2, 2, 28] (iteration 328) 
-New best h: [0, 2, 2, 29] (iteration 330) 
-New best h: [0, 2, 2, 30] (iteration 336) 
-New best h: [0, 2, 2, 31] (iteration 350) 
-New best h: [0, 2, 2, 32] (iteration 360) 
-New best h: [0, 2, 2, 34] (iteration 368) 
-New best h: [0, 3, 3, 34] (iteration 369) 
-New best h: [0, 3, 3, 35] (iteration 396) 
-New best h: [0, 3, 3, 36] (iteration 400) 
-Found first concrete state.
-Found first concrete state.
-Found first concrete state.
-New best h: [0, 3, 3, 37] (iteration 452) 
-New best h: [0, 4, 4, 34] (iteration 2201) 
-New best h: [0, 4, 4, 35] (iteration 2254) 
-New best h: [0, 4, 4, 36] (iteration 2258) 
-New best h: [0, 4, 4, 37] (iteration 2310) 
-New best h: [0, 5, 5, 37] (iteration 4219) 
-New best h: [0, 6, 6, 37] (iteration 4299) 
-New best h: [0, 7, 7, 37] (iteration 4367) 
-New best h: [0, 8, 8, 37] (iteration 3440347) 
-New best h: [0, 9, 9, 37] (iteration 3955979) 
-New best h: [0, 10, 10, 37] (iteration 3958137) 
-New best h: [0, 11, 11, 37] (iteration 3960161) 
-Time limit reached. Abort search.
-Actual search time: 600.009s [t=600.296s]
-Original state h-value: 10
-New state h-value: 11
-Expanded 4048325 state(s).
+New best h: [0, 2, 2, 8] (iteration 228) 
+New best h: [1, 2, 2, 8] (iteration 230) 
+New best h: [1, 3, 3, 9] (iteration 234) 
+New best h: [2, 3, 3, 8] (iteration 238) 
+New best h: [2, 4, 4, 9] (iteration 248) 
+New best h: [4, 5, 5, 10] (iteration 274) 
+New best h: [4, 6, 6, 11] (iteration 286) 
+New best h: [5, 6, 6, 11] (iteration 288) 
+New best h: [5, 7, 7, 12] (iteration 292) 
+New best h: [6, 7, 7, 12] (iteration 296) 
+New best h: [6, 8, 8, 13] (iteration 300) 
+New best h: [6, 9, 9, 14] (iteration 306) 
+New best h: [6, 9, 9, 15] (iteration 322) 
+New best h: [6, 9, 9, 16] (iteration 340) 
+New best h: [6, 9, 9, 19] (iteration 536) 
+New best h: [6, 9, 9, 20] (iteration 552) 
+New best h: [6, 9, 9, 21] (iteration 570) 
+New best h: [6, 9, 9, 22] (iteration 3596) 
+New best h: [6, 9, 9, 23] (iteration 7562) 
+New best h: [6, 9, 9, 24] (iteration 10996) 
+New best h: [6, 9, 9, 25] (iteration 25392) 
+New best h: [6, 9, 9, 26] (iteration 83864) 
+New best h: [6, 9, 9, 27] (iteration 175866) 
+New best h: [6, 9, 9, 28] (iteration 273938) 
+New best h: [6, 9, 9, 32] (iteration 274002) 
+New best h: [6, 9, 9, 33] (iteration 885558) 
+New best h: [6, 9, 9, 34] (iteration 3079652) 
+New best h: [6, 9, 9, 36] (iteration 3354232) 
+Reached iteration limit.
+Actual search time: 119.74s [t=120.033s]
+Original state h-value: 15
+New state h-value: 9
+Expanded 9303489 state(s).
 Reopened 0 state(s).
 Evaluated 0 state(s).
-Evaluations: 8937210
-Generated 10798480 state(s).
-Dead ends: 1980617 state(s).
-Number of registered states: 4087904
-Int hash set load factor: 4087904/8388608 = 0.487316
-Int hash set resizes: 23
-Open nodes: 38900
-Closed states: 4048325
-Search time: 600.032s
-Total time: 600.296s
+Evaluations: 19819143
+Generated 25081394 state(s).
+Dead ends: 4651728 state(s).
+Number of registered states: 10000420
+Int hash set load factor: 10000420/16777216 = 0.596071
+Int hash set resizes: 24
+Open nodes: 696512
+Closed states: 9303489
+Search time: 119.768s
+Total time: 120.033s
 Solution found.
-Peak memory: 417992 KB
+Peak memory: 876304 KB
 search exit code: 0
 
