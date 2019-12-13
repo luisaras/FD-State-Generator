@@ -1,0 +1,70 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty-ipdb/sokoban-opt11-strips/p01_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=5.6806e-05s]
+done reading input! [t=0.00153772s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00435799s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000162202s
+Variables: 24
+FactPairs: 108
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00471739s, 67896 KB]
+f = 5 [1 evaluated, 0 expanded, t=0.00476579s, 67896 KB]
+Initial heuristic value for lmcut: 5
+New best heuristic value for lmcut: 5
+[g=1, 2 evaluated, 1 expanded, t=0.0049649s, 67896 KB]
+f = 6 [3 evaluated, 1 expanded, t=0.0051236s, 67896 KB]
+New best heuristic value for lmcut: 4
+[g=2, 6 evaluated, 2 expanded, t=0.00545418s, 67896 KB]
+New best heuristic value for lmcut: 3
+[g=3, 11 evaluated, 3 expanded, t=0.0059528s, 67896 KB]
+New best heuristic value for lmcut: 2
+[g=4, 13 evaluated, 4 expanded, t=0.00613421s, 67896 KB]
+f = 7 [26 evaluated, 7 expanded, t=0.00708168s, 67896 KB]
+f = 8 [42 evaluated, 12 expanded, t=0.00833189s, 67896 KB]
+f = 9 [104 evaluated, 35 expanded, t=0.0114393s, 67896 KB]
+f = 10 [220 evaluated, 74 expanded, t=0.0161413s, 67896 KB]
+New best heuristic value for lmcut: 1
+[g=9, 277 evaluated, 98 expanded, t=0.0187009s, 67896 KB]
+New best heuristic value for lmcut: 0
+[g=10, 278 evaluated, 99 expanded, t=0.0187474s, 67896 KB]
+Solution found! Cost: 10
+Actual search time: 0.0139339s [t=0.0187821s]
+op23) move player-01 pos-4-2 pos-3-2 dir-left (1)
+op65) push-to-goal player-01 stone-03 pos-3-2 pos-3-3 pos-3-4 dir-down (1)
+op76) push-to-nongoal player-01 stone-01 pos-3-3 pos-3-4 pos-3-5 dir-down (1)
+op16) move player-01 pos-3-4 pos-4-4 dir-right (1)
+op60) push-to-goal player-01 stone-02 pos-4-4 pos-3-4 pos-2-4 dir-left (1)
+op16) move player-01 pos-3-4 pos-4-4 dir-right (1)
+op31) move player-01 pos-4-4 pos-4-5 dir-down (1)
+op35) move player-01 pos-4-5 pos-4-6 dir-down (1)
+op36) move player-01 pos-4-6 pos-3-6 dir-left (1)
+op50) push-to-goal player-01 stone-01 pos-3-6 pos-3-5 pos-3-4 dir-up (1)
+Plan length: 10 step(s).
+Plan cost: 10
+Expanded 100 state(s).
+Reopened 0 state(s).
+Evaluated 278 state(s).
+Evaluations: 278
+Generated 391 state(s).
+Dead ends: 28 state(s).
+Expanded until last jump: 74 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 220 state(s).
+Generated until last jump: 299 state(s).
+Number of registered states: 278
+Int hash set load factor: 278/512 = 0.542969
+Int hash set resizes: 9
+Open nodes: 150
+Closed states: 100
+Search time: 0.0142428s
+Total time: 0.0187868s
+Solution found.
+Peak memory: 67896 KB
+search exit code: 0
+

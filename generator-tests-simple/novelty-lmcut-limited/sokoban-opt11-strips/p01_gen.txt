@@ -1,0 +1,60 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=10000,print_h=1,max_time=60)' --internal-plan-file sas_plan
+reading input... [t=8.1618e-05s]
+done reading input! [t=0.00155736s]
+Initializing landmark cut heuristic...
+Initializing novelty heuristic...
+Building successor generator...done! [t=0.00570129s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 9.5032e-05s
+Variables: 24
+FactPairs: 108
+Bytes per state: 8
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 432 reverse operators.
+Built match tree.
+21=0 22=0 23=0 
+Inserting initial (goal) state...
+New best h: [0, 0, 6] (iteration 0) 
+New best h: [0, 0, 7] (iteration 96) 
+New best h: [1, 1, 7] (iteration 97) 
+New best h: [1, 1, 8] (iteration 192) 
+New best h: [1, 1, 9] (iteration 200) 
+New best h: [1, 2, 12] (iteration 203) 
+New best h: [1, 2, 13] (iteration 212) 
+New best h: [1, 2, 14] (iteration 216) 
+New best h: [1, 2, 15] (iteration 224) 
+New best h: [1, 2, 16] (iteration 228) 
+New best h: [1, 2, 17] (iteration 238) 
+New best h: [1, 2, 18] (iteration 258) 
+New best h: [1, 2, 19] (iteration 264) 
+New best h: [1, 2, 20] (iteration 270) 
+New best h: [1, 2, 21] (iteration 274) 
+New best h: [1, 2, 22] (iteration 302) 
+New best h: [1, 2, 23] (iteration 8382) 
+Reached iteration limit.
+Actual search time: 0.075417s [t=0.0817401s]
+Original state h-value: 2
+New state h-value: 2
+Expanded 6426 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 10507
+Generated 20590 state(s).
+Dead ends: 3297 state(s).
+Number of registered states: 10218
+Int hash set load factor: 10218/16384 = 0.623657
+Int hash set resizes: 14
+Open nodes: 3575
+Closed states: 6426
+Search time: 0.0759305s
+Total time: 0.081745s
+Solution found.
+Peak memory: 68572 KB
+search exit code: 0
+

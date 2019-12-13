@@ -1,0 +1,84 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/conflicts-lmcut/sokoban-opt11-strips/p05_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=8.3869e-05s]
+done reading input! [t=0.00420989s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00715157s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000206096s
+Variables: 49
+FactPairs: 233
+Bytes per state: 12
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00737306s, 68064 KB]
+f = 3 [1 evaluated, 0 expanded, t=0.00740178s, 68064 KB]
+Initial heuristic value for lmcut: 3
+New best heuristic value for lmcut: 4
+[g=1, 2 evaluated, 1 expanded, t=0.00752498s, 68064 KB]
+New best heuristic value for lmcut: 3
+[g=1, 3 evaluated, 1 expanded, t=0.00762361s, 68064 KB]
+f = 4 [3 evaluated, 1 expanded, t=0.00765242s, 68064 KB]
+New best heuristic value for lmcut: 2
+[g=2, 6 evaluated, 2 expanded, t=0.00789678s, 68064 KB]
+f = 5 [10 evaluated, 3 expanded, t=0.00816642s, 68064 KB]
+f = 6 [15 evaluated, 6 expanded, t=0.00859114s, 68064 KB]
+f = 7 [25 evaluated, 11 expanded, t=0.00946169s, 68064 KB]
+f = 8 [28 evaluated, 13 expanded, t=0.00977901s, 68064 KB]
+f = 9 [40 evaluated, 21 expanded, t=0.0109247s, 68064 KB]
+f = 10 [54 evaluated, 30 expanded, t=0.0121887s, 68064 KB]
+f = 11 [95 evaluated, 54 expanded, t=0.0157198s, 68064 KB]
+f = 12 [125 evaluated, 72 expanded, t=0.018719s, 68064 KB]
+f = 13 [167 evaluated, 95 expanded, t=0.0227311s, 68064 KB]
+f = 14 [288 evaluated, 157 expanded, t=0.0327033s, 68064 KB]
+f = 15 [333 evaluated, 195 expanded, t=0.0382199s, 68064 KB]
+f = 16 [464 evaluated, 284 expanded, t=0.052624s, 68064 KB]
+f = 17 [568 evaluated, 337 expanded, t=0.064896s, 68064 KB]
+New best heuristic value for lmcut: 1
+[g=16, 570 evaluated, 338 expanded, t=0.0650223s, 68064 KB]
+New best heuristic value for lmcut: 0
+[g=17, 572 evaluated, 339 expanded, t=0.0651214s, 68064 KB]
+Solution found! Cost: 17
+Actual search time: 0.0577634s [t=0.0652018s]
+op122) push-to-nongoal player-01 stone-01 pos-02-03 pos-03-03 pos-04-03 dir-right (1)
+op124) push-to-nongoal player-01 stone-01 pos-03-03 pos-04-03 pos-05-03 dir-right (1)
+op111) push-to-goal player-01 stone-01 pos-04-03 pos-05-03 pos-06-03 dir-right (1)
+op133) push-to-nongoal player-01 stone-01 pos-05-03 pos-06-03 pos-07-03 dir-right (1)
+op136) push-to-nongoal player-01 stone-01 pos-06-03 pos-07-03 pos-08-03 dir-right (1)
+op61) move player-01 pos-07-03 pos-07-04 dir-down (1)
+op64) move player-01 pos-07-04 pos-08-04 dir-right (1)
+op78) move player-01 pos-08-04 pos-09-04 dir-right (1)
+op87) move player-01 pos-09-04 pos-09-03 dir-up (1)
+op146) push-to-nongoal player-01 stone-01 pos-09-03 pos-08-03 pos-07-03 dir-left (1)
+op112) push-to-goal player-01 stone-01 pos-08-03 pos-07-03 pos-06-03 dir-left (1)
+op138) push-to-nongoal player-01 stone-01 pos-07-03 pos-06-03 pos-05-03 dir-left (1)
+op135) push-to-nongoal player-01 stone-01 pos-06-03 pos-05-03 pos-04-03 dir-left (1)
+op132) push-to-nongoal player-01 stone-01 pos-05-03 pos-04-03 pos-03-03 dir-left (1)
+op110) push-to-goal player-01 stone-01 pos-04-03 pos-03-03 pos-02-03 dir-left (1)
+op6) move player-01 pos-03-03 pos-04-03 dir-right (1)
+op119) push-to-goal player-01 stone-03 pos-04-03 pos-05-03 pos-06-03 dir-right (1)
+Plan length: 17 step(s).
+Plan cost: 17
+Expanded 340 state(s).
+Reopened 0 state(s).
+Evaluated 573 state(s).
+Evaluations: 573
+Generated 897 state(s).
+Dead ends: 35 state(s).
+Expanded until last jump: 337 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 568 state(s).
+Generated until last jump: 891 state(s).
+Number of registered states: 573
+Int hash set load factor: 573/1024 = 0.55957
+Int hash set resizes: 10
+Open nodes: 198
+Closed states: 340
+Search time: 0.0579431s
+Total time: 0.0652066s
+Solution found.
+Peak memory: 68064 KB
+search exit code: 0
+

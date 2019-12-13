@@ -1,0 +1,91 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=8.1685e-05s]
+done reading input! [t=0.00150556s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00377376s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 9.6822e-05s
+Variables: 24
+FactPairs: 108
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00395343s, 67896 KB]
+f = 2 [1 evaluated, 0 expanded, t=0.00398195s, 67896 KB]
+Initial heuristic value for lmcut: 2
+New best heuristic value for lmcut: 2
+[g=0, 2 evaluated, 1 expanded, t=0.00405663s, 67896 KB]
+f = 3 [18 evaluated, 14 expanded, t=0.0045713s, 67896 KB]
+f = 4 [55 evaluated, 39 expanded, t=0.00561748s, 67896 KB]
+f = 5 [113 evaluated, 83 expanded, t=0.00720852s, 67896 KB]
+f = 6 [193 evaluated, 150 expanded, t=0.00955948s, 67896 KB]
+f = 7 [314 evaluated, 251 expanded, t=0.0136783s, 67896 KB]
+f = 8 [378 evaluated, 306 expanded, t=0.0156346s, 67896 KB]
+f = 9 [495 evaluated, 404 expanded, t=0.0196027s, 67896 KB]
+New best heuristic value for lmcut: 1
+[g=8, 511 evaluated, 415 expanded, t=0.0199689s, 67896 KB]
+New best heuristic value for lmcut: 0
+[g=9, 526 evaluated, 425 expanded, t=0.0202995s, 67896 KB]
+Solution found! Cost: 9
+Actual search time: 0.0163168s [t=0.0203354s]
+op47) move player-01 pos-6-4 pos-6-3 dir-up (0)
+op44) move player-01 pos-6-3 pos-5-3 dir-left (0)
+op38) move player-01 pos-5-3 pos-4-3 dir-left (0)
+op103) push-to-nongoal player-01 stone-02 pos-4-3 pos-4-4 pos-4-5 dir-down (1)
+op30) move player-01 pos-4-4 pos-4-3 dir-up (0)
+op25) move player-01 pos-4-3 pos-3-3 dir-left (0)
+op9) move player-01 pos-3-3 pos-2-3 dir-left (0)
+op0) move player-01 pos-2-3 pos-2-4 dir-down (0)
+op3) move player-01 pos-2-4 pos-2-5 dir-down (0)
+op6) move player-01 pos-2-5 pos-3-5 dir-right (0)
+op81) push-to-nongoal player-01 stone-01 pos-3-5 pos-3-4 pos-3-3 dir-up (1)
+op16) move player-01 pos-3-4 pos-4-4 dir-right (0)
+op30) move player-01 pos-4-4 pos-4-3 dir-up (0)
+op28) move player-01 pos-4-3 pos-5-3 dir-right (0)
+op40) move player-01 pos-5-3 pos-6-3 dir-right (0)
+op45) move player-01 pos-6-3 pos-6-4 dir-down (0)
+op71) push-to-goal player-01 stone-03 pos-6-4 pos-5-4 pos-4-4 dir-left (1)
+op70) push-to-goal player-01 stone-03 pos-5-4 pos-4-4 pos-3-4 dir-left (1)
+op68) push-to-goal player-01 stone-03 pos-4-4 pos-3-4 pos-2-4 dir-left (1)
+op15) move player-01 pos-3-4 pos-3-5 dir-down (0)
+op19) move player-01 pos-3-5 pos-3-6 dir-down (0)
+op22) move player-01 pos-3-6 pos-4-6 dir-right (0)
+op61) push-to-goal player-01 stone-02 pos-4-6 pos-4-5 pos-4-4 dir-up (1)
+op33) move player-01 pos-4-5 pos-3-5 dir-left (0)
+op18) move player-01 pos-3-5 pos-3-4 dir-up (0)
+op100) push-to-nongoal player-01 stone-02 pos-3-4 pos-4-4 pos-5-4 dir-right (1)
+op30) move player-01 pos-4-4 pos-4-3 dir-up (0)
+op26) move player-01 pos-4-3 pos-4-2 dir-up (0)
+op23) move player-01 pos-4-2 pos-3-2 dir-left (0)
+op49) push-to-goal player-01 stone-01 pos-3-2 pos-3-3 pos-3-4 dir-down (1)
+op12) move player-01 pos-3-3 pos-4-3 dir-right (0)
+op28) move player-01 pos-4-3 pos-5-3 dir-right (0)
+op40) move player-01 pos-5-3 pos-6-3 dir-right (0)
+op45) move player-01 pos-6-3 pos-6-4 dir-down (0)
+op63) push-to-goal player-01 stone-02 pos-6-4 pos-5-4 pos-4-4 dir-left (1)
+Plan length: 35 step(s).
+Plan cost: 9
+Expanded 426 state(s).
+Reopened 0 state(s).
+Evaluated 526 state(s).
+Evaluations: 526
+Generated 1116 state(s).
+Dead ends: 86 state(s).
+Expanded until last jump: 404 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 495 state(s).
+Generated until last jump: 1060 state(s).
+Number of registered states: 526
+Int hash set load factor: 526/1024 = 0.513672
+Int hash set resizes: 10
+Open nodes: 14
+Closed states: 426
+Search time: 0.0164569s
+Total time: 0.0203402s
+Solution found.
+Peak memory: 67896 KB
+search exit code: 0
+
