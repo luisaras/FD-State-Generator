@@ -166,7 +166,7 @@ plan() {
 
 #       <h> <w(h),h>   <c,h>        <w(h),c,h>           <c,w(h),h>
 #ALLGEN=("" "novelty-" "conflicts-" "novelty-conflicts-" "conflicts-novelty-")
-ALLGEN=("novelty-")
+ALLGEN=("novelty-" "novelty2-")
 
 test() {
     local PROBLEM=$1
