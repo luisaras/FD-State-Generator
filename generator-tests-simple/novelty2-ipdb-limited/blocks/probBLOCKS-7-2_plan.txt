@@ -1,0 +1,68 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty2-ipdb-limited/blocks/probBLOCKS-7-2_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=4.9339e-05s]
+done reading input! [t=0.00143641s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00416917s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 9.8317e-05s
+Variables: 15
+FactPairs: 72
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.004495s, 67896 KB]
+f = 9 [1 evaluated, 0 expanded, t=0.00454436s, 67896 KB]
+Initial heuristic value for lmcut: 9
+New best heuristic value for lmcut: 9
+[g=1, 2 evaluated, 1 expanded, t=0.00469632s, 67896 KB]
+New best heuristic value for lmcut: 8
+[g=1, 10 evaluated, 1 expanded, t=0.00534828s, 67896 KB]
+New best heuristic value for lmcut: 6
+[g=1, 14 evaluated, 1 expanded, t=0.00569312s, 67896 KB]
+New best heuristic value for lmcut: 5
+[g=1, 20 evaluated, 1 expanded, t=0.00615367s, 67896 KB]
+New best heuristic value for lmcut: 3
+[g=4, 248 evaluated, 11 expanded, t=0.0161195s, 67896 KB]
+New best heuristic value for lmcut: 2
+[g=7, 314 evaluated, 15 expanded, t=0.0180651s, 67896 KB]
+New best heuristic value for lmcut: 1
+[g=8, 327 evaluated, 16 expanded, t=0.0183687s, 67896 KB]
+New best heuristic value for lmcut: 0
+[g=9, 337 evaluated, 17 expanded, t=0.0185654s, 67896 KB]
+Solution found! Cost: 9
+Actual search time: 0.0140131s [t=0.0186182s]
+op75) unstack d b (1)
+op31) stack c g (1)
+op32) stack d a (1)
+op86) unstack f a (1)
+op15) stack a c (1)
+op1) pick-up b (1)
+op47) stack f d (1)
+op24) stack b f (1)
+op39) stack e b (1)
+Plan length: 9 step(s).
+Plan cost: 9
+Expanded 18 state(s).
+Reopened 0 state(s).
+Evaluated 338 state(s).
+Evaluations: 338
+Generated 377 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 338
+Int hash set load factor: 338/512 = 0.660156
+Int hash set resizes: 9
+Open nodes: 320
+Closed states: 18
+Search time: 0.0142719s
+Total time: 0.018623s
+Solution found.
+Peak memory: 67896 KB
+search exit code: 0
+

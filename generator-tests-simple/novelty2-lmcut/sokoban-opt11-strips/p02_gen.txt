@@ -1,0 +1,80 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true,level=2),h],max_it=10000000,print_h=1,max_time=600)' --internal-plan-file sas_plan
+reading input... [t=7.0019e-05s]
+done reading input! [t=0.00238131s]
+Initializing landmark cut heuristic...
+Initializing novelty heuristic...
+Building successor generator...done! [t=0.00547674s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000181345s
+Variables: 44
+FactPairs: 207
+Bytes per state: 16
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 740 reverse operators.
+Built match tree.
+41=0 42=0 43=0 
+Inserting initial (goal) state...
+New best h: [0, 0, 6] (iteration 0) 
+New best h: [0, 0, 7] (iteration 188) 
+New best h: [2, 1, 7] (iteration 189) 
+New best h: [2, 2, 9] (iteration 249) 
+New best h: [2, 3, 10] (iteration 252) 
+New best h: [2, 4, 11] (iteration 258) 
+New best h: [2, 5, 12] (iteration 264) 
+New best h: [2, 5, 13] (iteration 272) 
+New best h: [2, 5, 15] (iteration 304) 
+New best h: [2, 6, 16] (iteration 314) 
+New best h: [2, 6, 18] (iteration 317) 
+New best h: [2, 7, 18] (iteration 326) 
+New best h: [2, 8, 19] (iteration 328) 
+New best h: [2, 9, 20] (iteration 334) 
+New best h: [2, 10, 21] (iteration 338) 
+New best h: [2, 11, 22] (iteration 344) 
+New best h: [2, 12, 23] (iteration 350) 
+New best h: [2, 12, 24] (iteration 358) 
+New best h: [2, 12, 25] (iteration 384) 
+New best h: [2, 12, 26] (iteration 604) 
+New best h: [2, 12, 27] (iteration 612) 
+New best h: [2, 12, 28] (iteration 716) 
+New best h: [2, 12, 32] (iteration 754) 
+New best h: [2, 12, 33] (iteration 776) 
+New best h: [2, 12, 34] (iteration 2364) 
+New best h: [2, 12, 35] (iteration 6630) 
+New best h: [2, 12, 40] (iteration 11602) 
+New best h: [2, 12, 41] (iteration 11610) 
+New best h: [2, 12, 42] (iteration 11636) 
+New best h: [2, 12, 43] (iteration 517560) 
+New best h: [2, 13, 43] (iteration 517566) 
+New best h: [2, 14, 43] (iteration 517574) 
+New best h: [2, 15, 43] (iteration 517580) 
+New best h: [2, 16, 43] (iteration 517606) 
+Found first concrete state.
+Found first concrete state.
+New best h: [2, 16, 44] (iteration 517658) 
+Reached iteration limit.
+Actual search time: 96.1991s [t=96.2057s]
+Original state h-value: 13
+New state h-value: 16
+Expanded 9648946 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 10000699
+Generated 25179360 state(s).
+Dead ends: 4824268 state(s).
+Number of registered states: 10000178
+Int hash set load factor: 10000178/16777216 = 0.596057
+Int hash set resizes: 24
+Open nodes: 351055
+Closed states: 9648946
+Search time: 96.2001s
+Total time: 96.2057s
+Solution found.
+Peak memory: 829020 KB
+search exit code: 0
+

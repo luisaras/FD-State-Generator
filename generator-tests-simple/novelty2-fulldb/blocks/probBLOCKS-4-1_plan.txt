@@ -1,0 +1,73 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty2-fulldb/blocks/probBLOCKS-4-1_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=7.4878e-05s]
+done reading input! [t=0.000760424s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00457235s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 7.0074e-05s
+Variables: 9
+FactPairs: 30
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00497417s, 67760 KB]
+f = 5 [1 evaluated, 0 expanded, t=0.00504572s, 67760 KB]
+Initial heuristic value for lmcut: 5
+New best heuristic value for lmcut: 5
+[g=1, 2 evaluated, 1 expanded, t=0.00519072s, 67760 KB]
+f = 6 [2 evaluated, 1 expanded, t=0.0052626s, 67760 KB]
+f = 8 [3 evaluated, 2 expanded, t=0.00537578s, 67760 KB]
+f = 9 [4 evaluated, 3 expanded, t=0.00548583s, 67760 KB]
+New best heuristic value for lmcut: 4
+[g=5, 7 evaluated, 5 expanded, t=0.00570286s, 67760 KB]
+New best heuristic value for lmcut: 3
+[g=6, 9 evaluated, 6 expanded, t=0.00580952s, 67760 KB]
+f = 10 [11 evaluated, 7 expanded, t=0.00586311s, 67760 KB]
+f = 11 [17 evaluated, 10 expanded, t=0.00597018s, 67760 KB]
+f = 12 [20 evaluated, 12 expanded, t=0.00604393s, 67760 KB]
+New best heuristic value for lmcut: 2
+[g=10, 24 evaluated, 15 expanded, t=0.00611931s, 67760 KB]
+New best heuristic value for lmcut: 1
+[g=11, 28 evaluated, 16 expanded, t=0.00618986s, 67760 KB]
+New best heuristic value for lmcut: 0
+[g=12, 30 evaluated, 17 expanded, t=0.00623534s, 67760 KB]
+Solution found! Cost: 12
+Actual search time: 0.0011372s [t=0.00626975s]
+op20) unstack a b (1)
+op4) put-down a (1)
+op25) unstack b d (1)
+op5) put-down b (1)
+op0) pick-up a (1)
+op8) stack a b (1)
+op31) unstack d c (1)
+op7) put-down d (1)
+op27) unstack c b (1)
+op14) stack c a (1)
+op3) pick-up d (1)
+op19) stack d c (1)
+Plan length: 12 step(s).
+Plan cost: 12
+Expanded 18 state(s).
+Reopened 0 state(s).
+Evaluated 30 state(s).
+Evaluations: 30
+Generated 45 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 12 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 20 state(s).
+Generated until last jump: 30 state(s).
+Number of registered states: 30
+Int hash set load factor: 30/32 = 0.9375
+Int hash set resizes: 5
+Open nodes: 12
+Closed states: 18
+Search time: 0.00143553s
+Total time: 0.00627438s
+Solution found.
+Peak memory: 67760 KB
+search exit code: 0
+

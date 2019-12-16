@@ -15,7 +15,7 @@ def add_gen_aliases(ALIASES):
   GENERATORS[""] = "generator_abstract([%s],max_it=10000000,print_h=%s,max_time=600)"
   GENERATORS["-limited"] = "generator_abstract([%s],max_it=10000,print_h=%s,max_time=60)"
   H = "h"
-  NOVELTY = "novelty_h(prune=false,eval=h,reverse=true),h"
+  NOVELTY = "novelty_h(prune=false,eval=h,reverse=true,level=%s),h"
   CONFLICTS = "sum([weight(pho2,-1),pho3]),pho3,h"
 
   HEURISTICS = {}
@@ -34,7 +34,11 @@ def add_gen_aliases(ALIASES):
       ]
       ALIASES["gen-novelty-" + h + l] = [
         "--evaluator",  HEURISTICS[h],
-        "--search", GENERATORS[l] % (NOVELTY, 1)
+        "--search", GENERATORS[l] % (NOVELTY % 1, 1)
+      ]
+      ALIASES["gen-novelty2-" + h + l] = [
+        "--evaluator",  HEURISTICS[h],
+        "--search", GENERATORS[l] % (NOVELTY % 2, 1)
       ]
       ALIASES["gen-conflicts-" + h + l] = [
         "--evaluator", HEURISTICS[h],

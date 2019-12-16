@@ -1,0 +1,71 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty2-lmcut-limited/blocks/probBLOCKS-6-1_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=6.9947e-05s]
+done reading input! [t=0.0015072s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00544262s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000111291s
+Variables: 13
+FactPairs: 56
+Bytes per state: 4
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00592314s, 67760 KB]
+f = 10 [1 evaluated, 0 expanded, t=0.00599728s, 67760 KB]
+Initial heuristic value for lmcut: 10
+New best heuristic value for lmcut: 9
+[g=1, 2 evaluated, 1 expanded, t=0.0062347s, 67760 KB]
+New best heuristic value for lmcut: 8
+[g=1, 5 evaluated, 1 expanded, t=0.00640548s, 67760 KB]
+New best heuristic value for lmcut: 7
+[g=1, 12 evaluated, 1 expanded, t=0.00667686s, 67760 KB]
+New best heuristic value for lmcut: 5
+[g=3, 46 evaluated, 4 expanded, t=0.00787608s, 67760 KB]
+New best heuristic value for lmcut: 4
+[g=6, 209 evaluated, 22 expanded, t=0.0129772s, 67760 KB]
+New best heuristic value for lmcut: 3
+[g=7, 219 evaluated, 23 expanded, t=0.0132535s, 67760 KB]
+New best heuristic value for lmcut: 2
+[g=8, 229 evaluated, 24 expanded, t=0.0135011s, 67760 KB]
+New best heuristic value for lmcut: 1
+[g=9, 234 evaluated, 25 expanded, t=0.0136218s, 67760 KB]
+New best heuristic value for lmcut: 0
+[g=10, 239 evaluated, 26 expanded, t=0.0137267s, 67760 KB]
+Solution found! Cost: 10
+Actual search time: 0.00765365s [t=0.013777s]
+op62) unstack e a (1)
+op29) stack d c (1)
+op0) pick-up a (1)
+op14) stack a d (1)
+op48) unstack b c (1)
+op17) stack b a (1)
+op23) stack c b (1)
+op67) unstack f a (1)
+op39) stack f c (1)
+op36) stack e f (1)
+Plan length: 10 step(s).
+Plan cost: 10
+Expanded 27 state(s).
+Reopened 0 state(s).
+Evaluated 240 state(s).
+Evaluations: 240
+Generated 299 state(s).
+Dead ends: 0 state(s).
+Expanded until last jump: 0 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 1 state(s).
+Generated until last jump: 0 state(s).
+Number of registered states: 240
+Int hash set load factor: 240/256 = 0.9375
+Int hash set resizes: 8
+Open nodes: 213
+Closed states: 27
+Search time: 0.00805514s
+Total time: 0.0137819s
+Solution found.
+Peak memory: 67760 KB
+search exit code: 0
+

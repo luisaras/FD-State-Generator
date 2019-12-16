@@ -1,0 +1,62 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true,level=2),h],max_it=10000,print_h=1,max_time=60)' --internal-plan-file sas_plan
+reading input... [t=6.916e-05s]
+done reading input! [t=0.00107772s]
+Initializing landmark cut heuristic...
+Initializing novelty heuristic...
+Building successor generator...done! [t=0.00406406s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 5.6629e-05s
+Variables: 15
+FactPairs: 72
+Bytes per state: 8
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 287 reverse operators.
+Built match tree.
+9=6 10=2 11=5 12=2 13=5 14=4 
+Inserting initial (goal) state...
+New best h: [0, 0, 9] (iteration 0) 
+New best h: [2, 1, 9] (iteration 5) 
+New best h: [2, 1, 11] (iteration 65) 
+New best h: [2, 2, 11] (iteration 69) 
+New best h: [2, 2, 13] (iteration 105) 
+New best h: [2, 3, 12] (iteration 109) 
+New best h: [2, 3, 13] (iteration 121) 
+New best h: [2, 3, 14] (iteration 129) 
+New best h: [2, 4, 14] (iteration 131) 
+Found first concrete state.
+Found first concrete state.
+New best h: [2, 4, 15] (iteration 135) 
+New best h: [2, 5, 15] (iteration 154) 
+New best h: [2, 6, 15] (iteration 257) 
+New best h: [2, 7, 15] (iteration 1641) 
+New best h: [2, 8, 15] (iteration 1673) 
+New best h: [2, 9, 15] (iteration 1694) 
+New best h: [2, 10, 15] (iteration 1962) 
+New best h: [2, 11, 15] (iteration 1997) 
+Reached iteration limit.
+Actual search time: 0.496797s [t=0.501403s]
+Original state h-value: 13
+New state h-value: 11
+Expanded 4209 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 18971
+Generated 20345 state(s).
+Dead ends: 1596 state(s).
+Number of registered states: 10396
+Int hash set load factor: 10396/16384 = 0.634521
+Int hash set resizes: 14
+Open nodes: 5792
+Closed states: 4209
+Search time: 0.497234s
+Total time: 0.501409s
+Solution found.
+Peak memory: 70012 KB
+search exit code: 0
+
