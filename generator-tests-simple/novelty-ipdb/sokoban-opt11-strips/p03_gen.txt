@@ -3,13 +3,13 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=10000000,print_h=1,max_time=600)' --internal-plan-file sas_plan
-reading input... [t=8.3405e-05s]
-done reading input! [t=0.00228427s]
+reading input... [t=0.000118924s]
+done reading input! [t=0.00111817s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0.000248963s
+Done calculating initial pattern collection: 0.000269342s
 Average operator cost: 1
-building causal graph...done! [t=0.000598364s]
+building causal graph...done! [t=0.000652757s]
 Done calculating initial candidate PDBs
 current collection size is 6
 current initial h value: 3
@@ -21,7 +21,7 @@ pattern: [30, 36] - improvement: 1000
 pattern: [33, 36] - improvement: 783
 found a better pattern with improvement 1000
 pattern: [30, 36]
-Hill climbing time so far: 0.0336267s
+Hill climbing time so far: 0.0345087s
 current collection size is 66
 current initial h value: 5
 pattern: [32, 34] - improvement: 904
@@ -29,7 +29,7 @@ pattern: [31, 35] - improvement: 1000
 pattern: [30, 33, 36] - improvement: 869
 found a better pattern with improvement 1000
 pattern: [31, 35]
-Hill climbing time so far: 0.0719797s
+Hill climbing time so far: 0.0734454s
 current collection size is 126
 current initial h value: 9
 pattern: [32, 34] - improvement: 865
@@ -37,7 +37,7 @@ pattern: [30, 33, 36] - improvement: 506
 pattern: [31, 33, 35] - improvement: 755
 found a better pattern with improvement 865
 pattern: [32, 34]
-Hill climbing time so far: 0.132864s
+Hill climbing time so far: 0.13544s
 current collection size is 186
 current initial h value: 10
 pattern: [30, 33, 36] - improvement: 205
@@ -45,7 +45,7 @@ pattern: [31, 33, 35] - improvement: 471
 pattern: [32, 33, 34] - improvement: 31
 found a better pattern with improvement 471
 pattern: [31, 33, 35]
-Hill climbing time so far: 0.246234s
+Hill climbing time so far: 0.250345s
 current collection size is 1986
 current initial h value: 11
 pattern: [30, 33, 36] - improvement: 53
@@ -57,7 +57,7 @@ pattern: [31, 33, 34, 35] - improvement: 782
 pattern: [31, 33, 35, 36] - improvement: 782
 found a better pattern with improvement 782
 pattern: [31, 33, 34, 35]
-Hill climbing time so far: 0.431601s
+Hill climbing time so far: 0.439265s
 current collection size is 5586
 current initial h value: 12
 pattern: [30, 33, 36] - improvement: 62
@@ -72,7 +72,7 @@ pattern: [31, 32, 33, 34, 35] - improvement: 1000
 pattern: [31, 33, 34, 35, 36] - improvement: 968
 found a better pattern with improvement 1000
 pattern: [31, 32, 33, 34, 35]
-Hill climbing time so far: 1.77163s
+Hill climbing time so far: 1.8084s
 current collection size is 113586
 current initial h value: 17
 pattern: [26, 31, 33, 34, 35] - improvement: 2
@@ -83,7 +83,7 @@ pattern: [27, 31, 32, 33, 34, 35] - improvement: 370
 pattern: [31, 32, 33, 34, 35, 36] - improvement: 915
 found a better pattern with improvement 915
 pattern: [31, 32, 33, 34, 35, 36]
-Hill climbing time so far: 4.6403s
+Hill climbing time so far: 4.75341s
 current collection size is 329586
 current initial h value: 18
 pattern: [20, 31, 32, 33, 34, 35] - improvement: 36
@@ -101,7 +101,7 @@ pattern: [28, 31, 32, 33, 34, 35, 36] - improvement: 19
 pattern: [29, 31, 32, 33, 34, 35, 36] - improvement: 21
 found a better pattern with improvement 404
 pattern: [27, 31, 32, 33, 34, 35, 36]
-Hill climbing time so far: 11.9352s
+Hill climbing time so far: 12.1601s
 current collection size is 761586
 current initial h value: 18
 pattern: [26, 31, 32, 33, 34, 35] - improvement: 13
@@ -121,7 +121,7 @@ pattern: [27, 28, 31, 32, 33, 34, 35, 36] - improvement: 23
 pattern: [27, 29, 31, 32, 33, 34, 35, 36] - improvement: 33
 found a better pattern with improvement 33
 pattern: [27, 29, 31, 32, 33, 34, 35, 36]
-Hill climbing time so far: 29.3614s
+Hill climbing time so far: 29.8025s
 current collection size is 1625586
 current initial h value: 18
 pattern: [26, 31, 32, 33, 34, 35] - improvement: 12
@@ -142,7 +142,7 @@ pattern: [19, 27, 29, 31, 32, 33, 34, 35, 36] - improvement: 2
 pattern: [20, 27, 29, 31, 32, 33, 34, 35, 36] - improvement: 15
 found a better pattern with improvement 15
 pattern: [3, 27, 31, 32, 33, 34, 35, 36]
-Hill climbing time so far: 47.5346s
+Hill climbing time so far: 48.2976s
 current collection size is 2489586
 current initial h value: 18
 pattern: [26, 31, 32, 33, 34, 35] - improvement: 14
@@ -166,7 +166,7 @@ pattern: [3, 16, 27, 31, 32, 33, 34, 35, 36] - improvement: 5
 pattern: [3, 20, 27, 31, 32, 33, 34, 35, 36] - improvement: 15
 found a better pattern with improvement 15
 pattern: [20, 27, 31, 32, 33, 34, 35, 36]
-Hill climbing time so far: 63.9042s
+Hill climbing time so far: 64.8435s
 current collection size is 3353586
 current initial h value: 18
 pattern: [30, 33, 36] - improvement: 1
@@ -193,7 +193,7 @@ pattern: [20, 23, 27, 31, 32, 33, 34, 35, 36] - improvement: 18
 pattern: [16, 20, 27, 31, 32, 33, 34, 35, 36] - improvement: 5
 found a better pattern with improvement 466
 pattern: [20, 22, 27, 31, 32, 33, 34, 35, 36]
-Hill climbing time so far: 64.1724s
+Hill climbing time so far: 65.1124s
 current collection size is 5081586
 current initial h value: 18
 pattern: [26, 31, 32, 33, 34, 35] - improvement: 23
@@ -218,7 +218,7 @@ pattern: [20, 23, 27, 31, 32, 33, 34, 35, 36] - improvement: 23
 pattern: [16, 20, 27, 31, 32, 33, 34, 35, 36] - improvement: 9
 found a better pattern with improvement 23
 pattern: [26, 31, 32, 33, 34, 35]
-Hill climbing time so far: 67.9012s
+Hill climbing time so far: 68.8629s
 current collection size is 5297586
 current initial h value: 18
 pattern: [16, 31, 32, 33, 34, 35, 36] - improvement: 1
@@ -242,7 +242,7 @@ pattern: [26, 27, 31, 32, 33, 34, 35] - improvement: 23
 pattern: [23, 26, 31, 32, 33, 34, 35] - improvement: 23
 found a better pattern with improvement 246
 pattern: [17, 26, 31, 32, 33, 34, 35]
-Hill climbing time so far: 77.2661s
+Hill climbing time so far: 78.2978s
 current collection size is 5729586
 current initial h value: 19
 pattern: [16, 31, 32, 33, 34, 35, 36] - improvement: 1
@@ -269,7 +269,7 @@ pattern: [17, 20, 26, 31, 32, 33, 34, 35] - improvement: 33
 pattern: [17, 23, 26, 31, 32, 33, 34, 35] - improvement: 33
 found a better pattern with improvement 284
 pattern: [17, 26, 31, 32, 33, 34, 35, 36]
-Hill climbing time so far: 96.7114s
+Hill climbing time so far: 97.9965s
 current collection size is 6593586
 current initial h value: 20
 pattern: [16, 31, 32, 33, 34, 35, 36] - improvement: 2
@@ -302,7 +302,7 @@ pattern: [17, 26, 28, 31, 32, 33, 34, 35, 36] - improvement: 4
 pattern: [17, 26, 29, 31, 32, 33, 34, 35, 36] - improvement: 4
 found a better pattern with improvement 29
 pattern: [17, 26, 27, 31, 32, 33, 34, 35]
-Hill climbing time so far: 119.885s
+Hill climbing time so far: 121.629s
 current collection size is 7457586
 current initial h value: 20
 pattern: [16, 31, 32, 33, 34, 35, 36] - improvement: 1
@@ -330,7 +330,7 @@ pattern: [17, 20, 26, 27, 31, 32, 33, 34, 35] - improvement: 6
 pattern: [17, 21, 26, 27, 31, 32, 33, 34, 35] - improvement: 4
 found a better pattern with improvement 16
 pattern: [17, 26, 27, 31, 32, 33, 34, 35, 36]
-Hill climbing time so far: 120.296s
+Hill climbing time so far: 122.039s
 current collection size is 9185586
 current initial h value: 20
 pattern: [16, 31, 32, 33, 34, 35, 36] - improvement: 3
@@ -349,7 +349,7 @@ pattern: [17, 20, 26, 27, 31, 32, 33, 34, 35] - improvement: 11
 pattern: [17, 21, 26, 27, 31, 32, 33, 34, 35] - improvement: 1
 found a better pattern with improvement 11
 pattern: [17, 20, 26, 31, 32, 33, 34, 35]
-Hill climbing time so far: 140.499s
+Hill climbing time so far: 142.55s
 current collection size is 10049586
 current initial h value: 20
 pattern: [30, 33, 36] - improvement: 1
@@ -366,7 +366,7 @@ pattern: [17, 26, 29, 31, 32, 33, 34, 35, 36] - improvement: 5
 pattern: [17, 20, 22, 26, 31, 32, 33, 34, 35] - improvement: 263
 found a better pattern with improvement 263
 pattern: [17, 20, 22, 26, 31, 32, 33, 34, 35]
-Hill climbing time so far: 140.978s
+Hill climbing time so far: 143.025s
 current collection size is 11777586
 current initial h value: 20
 pattern: [16, 27, 31, 32, 33, 34, 35, 36] - improvement: 4
@@ -382,22 +382,22 @@ Hill climbing iterations: 20
 Hill climbing generated patterns: 566
 Hill climbing rejected patterns: 543
 Hill climbing maximum PDB size: 1728000
-Hill climbing time: 141.469s
+Hill climbing time: 143.512s
 Hill climbing generator collection: [[34], [35], [36], [30, 36], [31, 35], [32, 34], [31, 33, 35], [31, 33, 34, 35], [31, 32, 33, 34, 35], [31, 32, 33, 34, 35, 36], [27, 31, 32, 33, 34, 35, 36], [27, 29, 31, 32, 33, 34, 35, 36], [3, 27, 31, 32, 33, 34, 35, 36], [20, 27, 31, 32, 33, 34, 35, 36], [20, 22, 27, 31, 32, 33, 34, 35, 36], [26, 31, 32, 33, 34, 35], [17, 26, 31, 32, 33, 34, 35], [17, 26, 31, 32, 33, 34, 35, 36], [17, 26, 27, 31, 32, 33, 34, 35], [17, 26, 27, 31, 32, 33, 34, 35, 36], [17, 20, 26, 31, 32, 33, 34, 35], [17, 20, 22, 26, 31, 32, 33, 34, 35]]
 Hill climbing generator number of patterns: 22
 Hill climbing generator total PDB size: 11777586
-Hill climbing generator computation time: 141.539s
+Hill climbing generator computation time: 143.581s
 Running dominance pruning...
 Pruned 18 of 24 pattern cliques
 Pruned 14 of 22 PDBs
-Dominance pruning took 1.5503e-05s
+Dominance pruning took 1.512e-05s
 Canonical PDB heuristic number of patterns: 8
 Canonical PDB heuristic total PDB size: 6912180
-Canonical PDB heuristic computation time: 141.54s
+Canonical PDB heuristic computation time: 143.582s
 Initializing novelty heuristic...
-Building successor generator...done! [t=141.546s]
+Building successor generator...done! [t=143.585s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0.00015067s
+time for successor generation creation: 0.000151051s
 Variables: 37
 FactPairs: 186
 Bytes per state: 12
@@ -438,7 +438,7 @@ Found first concrete state.
 New best h: [1, 10, 36] (iteration 2506) 
 New best h: [1, 10, 37] (iteration 400158) 
 Reached iteration limit.
-Actual search time: 91.938s [t=233.485s]
+Actual search time: 90.3774s [t=233.964s]
 Original state h-value: 20
 New state h-value: 10
 Expanded 9849463 state(s).
@@ -452,9 +452,9 @@ Int hash set load factor: 10000110/16777216 = 0.596053
 Int hash set resizes: 24
 Open nodes: 150538
 Closed states: 9849463
-Search time: 91.9388s
-Total time: 233.485s
+Search time: 90.3782s
+Total time: 233.964s
 Solution found.
-Peak memory: 1495124 KB
+Peak memory: 1495120 KB
 search exit code: 0
 
