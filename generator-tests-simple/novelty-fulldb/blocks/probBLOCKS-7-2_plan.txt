@@ -3,49 +3,49 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/novelty-fulldb/blocks/probBLOCKS-7-2_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
-reading input... [t=9.2092e-05s]
-done reading input! [t=0.00214311s]
+reading input... [t=7.0693e-05s]
+done reading input! [t=0.00215303s]
 Initializing landmark cut heuristic...
-Building successor generator...done! [t=0.00531724s]
+Building successor generator...done! [t=0.00566173s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 5.6687e-05s
+time for successor generation creation: 5.8127e-05s
 Variables: 15
 FactPairs: 72
 Bytes per state: 4
 Conducting best first search with reopening closed nodes, (real) bound = 2147483647
-[g=0, 1 evaluated, 0 expanded, t=0.00552664s, 67900 KB]
-f = 11 [1 evaluated, 0 expanded, t=0.00555506s, 67900 KB]
+[g=0, 1 evaluated, 0 expanded, t=0.00587063s, 67900 KB]
+f = 11 [1 evaluated, 0 expanded, t=0.00589917s, 67900 KB]
 Initial heuristic value for lmcut: 11
 New best heuristic value for lmcut: 10
-[g=1, 2 evaluated, 1 expanded, t=0.00565347s, 67900 KB]
-f = 12 [12 evaluated, 2 expanded, t=0.00623577s, 67900 KB]
+[g=1, 2 evaluated, 1 expanded, t=0.00599558s, 67900 KB]
+f = 12 [12 evaluated, 2 expanded, t=0.00657619s, 67900 KB]
 New best heuristic value for lmcut: 8
-[g=3, 14 evaluated, 3 expanded, t=0.00636418s, 67900 KB]
-f = 13 [27 evaluated, 5 expanded, t=0.00705626s, 67900 KB]
-f = 14 [99 evaluated, 27 expanded, t=0.0109637s, 67900 KB]
-f = 15 [237 evaluated, 68 expanded, t=0.0180854s, 67900 KB]
-f = 16 [569 evaluated, 188 expanded, t=0.0361132s, 67900 KB]
+[g=3, 14 evaluated, 3 expanded, t=0.00670426s, 67900 KB]
+f = 13 [27 evaluated, 5 expanded, t=0.00739156s, 67900 KB]
+f = 14 [99 evaluated, 27 expanded, t=0.0112951s, 67900 KB]
+f = 15 [237 evaluated, 68 expanded, t=0.0184197s, 67900 KB]
+f = 16 [569 evaluated, 188 expanded, t=0.0364485s, 67900 KB]
 New best heuristic value for lmcut: 7
-[g=8, 601 evaluated, 199 expanded, t=0.0377574s, 67900 KB]
-f = 17 [961 evaluated, 343 expanded, t=0.0568054s, 67900 KB]
+[g=8, 601 evaluated, 199 expanded, t=0.0380809s, 67900 KB]
+f = 17 [961 evaluated, 343 expanded, t=0.0571776s, 67900 KB]
 New best heuristic value for lmcut: 6
-[g=11, 968 evaluated, 345 expanded, t=0.0571405s, 67900 KB]
+[g=11, 968 evaluated, 345 expanded, t=0.0575155s, 67900 KB]
 New best heuristic value for lmcut: 5
-[g=11, 969 evaluated, 345 expanded, t=0.0572018s, 67900 KB]
+[g=11, 969 evaluated, 345 expanded, t=0.0575774s, 67900 KB]
 New best heuristic value for lmcut: 4
-[g=13, 985 evaluated, 347 expanded, t=0.0578011s, 67900 KB]
-f = 18 [2373 evaluated, 806 expanded, t=0.127901s, 67900 KB]
+[g=13, 985 evaluated, 347 expanded, t=0.0581768s, 67900 KB]
+f = 18 [2373 evaluated, 806 expanded, t=0.128531s, 67900 KB]
 New best heuristic value for lmcut: 3
-[g=15, 2721 evaluated, 914 expanded, t=0.142352s, 67900 KB]
-f = 19 [7969 evaluated, 2164 expanded, t=0.389885s, 68292 KB]
+[g=15, 2721 evaluated, 914 expanded, t=0.143027s, 67900 KB]
+f = 19 [7969 evaluated, 2164 expanded, t=0.391491s, 68292 KB]
 New best heuristic value for lmcut: 2
-[g=17, 7974 evaluated, 2166 expanded, t=0.39005s, 68292 KB]
+[g=17, 7974 evaluated, 2166 expanded, t=0.391656s, 68292 KB]
 New best heuristic value for lmcut: 1
-[g=18, 7978 evaluated, 2167 expanded, t=0.390164s, 68292 KB]
+[g=18, 7978 evaluated, 2167 expanded, t=0.391769s, 68292 KB]
 New best heuristic value for lmcut: 0
-[g=19, 7985 evaluated, 2168 expanded, t=0.390319s, 68292 KB]
+[g=19, 7985 evaluated, 2168 expanded, t=0.391922s, 68292 KB]
 Solution found! Cost: 19
-Actual search time: 0.38478s [t=0.390371s]
+Actual search time: 0.38604s [t=0.391975s]
 op65) unstack b e (1)
 op20) stack b a (1)
 op82) unstack e c (1)
@@ -82,8 +82,8 @@ Int hash set load factor: 7986/16384 = 0.487427
 Int hash set resizes: 14
 Open nodes: 5817
 Closed states: 2169
-Search time: 0.38495s
-Total time: 0.390376s
+Search time: 0.386208s
+Total time: 0.39198s
 Solution found.
 Peak memory: 68292 KB
 search exit code: 0
