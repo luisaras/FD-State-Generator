@@ -1,0 +1,111 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward generator-tests-simple/astar/sokoban-opt11-strips/p01_task.sas --internal-plan-file sas_plan --search 'astar(lmcut())'
+reading input... [t=8.1995e-05s]
+done reading input! [t=0.0022559s]
+Initializing landmark cut heuristic...
+Building successor generator...done! [t=0.00654036s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000275982s
+Variables: 24
+FactPairs: 108
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+[g=0, 1 evaluated, 0 expanded, t=0.00693224s, 67896 KB]
+f = 9 [1 evaluated, 0 expanded, t=0.0069606s, 67896 KB]
+Initial heuristic value for lmcut: 9
+New best heuristic value for lmcut: 9
+[g=1, 2 evaluated, 1 expanded, t=0.00708885s, 67896 KB]
+f = 10 [2 evaluated, 1 expanded, t=0.00711756s, 67896 KB]
+New best heuristic value for lmcut: 8
+[g=2, 4 evaluated, 2 expanded, t=0.00730437s, 67896 KB]
+f = 11 [5 evaluated, 3 expanded, t=0.00740604s, 67896 KB]
+f = 13 [8 evaluated, 5 expanded, t=0.00760615s, 67896 KB]
+New best heuristic value for lmcut: 7
+[g=6, 14 evaluated, 8 expanded, t=0.00805854s, 67896 KB]
+f = 14 [17 evaluated, 9 expanded, t=0.00836308s, 67896 KB]
+New best heuristic value for lmcut: 6
+[g=8, 19 evaluated, 11 expanded, t=0.00852506s, 67896 KB]
+New best heuristic value for lmcut: 5
+[g=9, 22 evaluated, 12 expanded, t=0.00877754s, 67896 KB]
+f = 15 [24 evaluated, 13 expanded, t=0.00892927s, 67896 KB]
+f = 16 [38 evaluated, 21 expanded, t=0.00982976s, 67896 KB]
+f = 17 [39 evaluated, 23 expanded, t=0.00993763s, 67896 KB]
+f = 18 [49 evaluated, 30 expanded, t=0.0107291s, 67896 KB]
+f = 19 [57 evaluated, 33 expanded, t=0.0112073s, 67896 KB]
+f = 20 [79 evaluated, 44 expanded, t=0.0127297s, 67896 KB]
+f = 21 [114 evaluated, 61 expanded, t=0.0154475s, 67896 KB]
+f = 22 [151 evaluated, 84 expanded, t=0.0179199s, 67896 KB]
+f = 23 [236 evaluated, 136 expanded, t=0.0240077s, 67896 KB]
+f = 24 [310 evaluated, 180 expanded, t=0.0289401s, 67896 KB]
+f = 25 [371 evaluated, 237 expanded, t=0.0335286s, 67896 KB]
+f = 26 [457 evaluated, 295 expanded, t=0.0389412s, 67896 KB]
+New best heuristic value for lmcut: 4
+[g=22, 462 evaluated, 297 expanded, t=0.0392107s, 67896 KB]
+New best heuristic value for lmcut: 3
+[g=23, 465 evaluated, 298 expanded, t=0.0393643s, 67896 KB]
+f = 27 [578 evaluated, 384 expanded, t=0.0472735s, 67896 KB]
+f = 28 [685 evaluated, 453 expanded, t=0.0540018s, 67896 KB]
+f = 29 [847 evaluated, 564 expanded, t=0.0635405s, 67896 KB]
+New best heuristic value for lmcut: 2
+[g=27, 876 evaluated, 578 expanded, t=0.0649202s, 67896 KB]
+New best heuristic value for lmcut: 1
+[g=28, 877 evaluated, 579 expanded, t=0.0649764s, 67896 KB]
+New best heuristic value for lmcut: 0
+[g=29, 881 evaluated, 580 expanded, t=0.0651137s, 67896 KB]
+Solution found! Cost: 29
+Actual search time: 0.0581518s [t=0.0651487s]
+op45) move player-01 pos-6-3 pos-6-4 dir-down (1)
+op46) move player-01 pos-6-4 pos-5-4 dir-left (1)
+op41) move player-01 pos-5-4 pos-4-4 dir-left (1)
+op29) move player-01 pos-4-4 pos-3-4 dir-left (1)
+op14) move player-01 pos-3-4 pos-3-3 dir-up (1)
+op10) move player-01 pos-3-3 pos-3-2 dir-up (1)
+op8) move player-01 pos-3-2 pos-4-2 dir-right (1)
+op67) push-to-goal player-01 stone-03 pos-4-2 pos-4-3 pos-4-4 dir-down (1)
+op123) push-to-nongoal player-01 stone-03 pos-4-3 pos-4-4 pos-4-5 dir-down (1)
+op32) move player-01 pos-4-4 pos-5-4 dir-right (1)
+op43) move player-01 pos-5-4 pos-6-4 dir-right (1)
+op47) move player-01 pos-6-4 pos-6-3 dir-up (1)
+op91) push-to-nongoal player-01 stone-01 pos-6-3 pos-5-3 pos-4-3 dir-left (1)
+op90) push-to-nongoal player-01 stone-01 pos-5-3 pos-4-3 pos-3-3 dir-left (1)
+op26) move player-01 pos-4-3 pos-4-2 dir-up (1)
+op23) move player-01 pos-4-2 pos-3-2 dir-left (1)
+op49) push-to-goal player-01 stone-01 pos-3-2 pos-3-3 pos-3-4 dir-down (1)
+op12) move player-01 pos-3-3 pos-4-3 dir-right (1)
+op27) move player-01 pos-4-3 pos-4-4 dir-down (1)
+op52) push-to-goal player-01 stone-01 pos-4-4 pos-3-4 pos-2-4 dir-left (1)
+op15) move player-01 pos-3-4 pos-3-5 dir-down (1)
+op19) move player-01 pos-3-5 pos-3-6 dir-down (1)
+op22) move player-01 pos-3-6 pos-4-6 dir-right (1)
+op69) push-to-goal player-01 stone-03 pos-4-6 pos-4-5 pos-4-4 dir-up (1)
+op33) move player-01 pos-4-5 pos-3-5 dir-left (1)
+op18) move player-01 pos-3-5 pos-3-4 dir-up (1)
+op14) move player-01 pos-3-4 pos-3-3 dir-up (1)
+op10) move player-01 pos-3-3 pos-3-2 dir-up (1)
+op57) push-to-goal player-01 stone-02 pos-3-2 pos-3-3 pos-3-4 dir-down (1)
+Plan length: 29 step(s).
+Plan cost: 29
+Expanded 581 state(s).
+Reopened 0 state(s).
+Evaluated 881 state(s).
+Evaluations: 881
+Generated 1662 state(s).
+Dead ends: 129 state(s).
+Expanded until last jump: 564 state(s).
+Reopened until last jump: 0 state(s).
+Evaluated until last jump: 847 state(s).
+Generated until last jump: 1611 state(s).
+Number of registered states: 881
+Int hash set load factor: 881/1024 = 0.860352
+Int hash set resizes: 10
+Open nodes: 171
+Closed states: 581
+Search time: 0.0583523s
+Total time: 0.0651533s
+Solution found.
+Peak memory: 67896 KB
+search exit code: 0
+

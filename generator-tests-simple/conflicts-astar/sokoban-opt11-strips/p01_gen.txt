@@ -1,0 +1,112 @@
+INFO     Running search (release).
+INFO     search stdin: None
+INFO     search time limit: None
+INFO     search memory limit: None
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=complexity(astar(lmcut(),undef_value=true,verbosity=SILENT))' --evaluator 'pho2=operatorcounting([pho_constraints(systematic(2))])' --evaluator 'pho3=operatorcounting([pho_constraints(systematic(3))])' --search 'generator_abstract([sum([weight(pho2,-1),pho3]),pho3,h],max_it=10000000,print_h=2,max_time=600)' --internal-plan-file sas_plan
+reading input... [t=6.0831e-05s]
+done reading input! [t=0.000942938s]
+Initializing landmark cut heuristic...
+Initializing complexity heuristic...
+Generating patterns using the systematic generator...
+building causal graph...done! [t=0.000965339s]
+Found 60 SGA patterns.
+Found 60 interesting patterns.
+Systematic generator number of patterns: 60
+Systematic generator total PDB size: 414
+Systematic generator computation time: 0.00165943s
+Computing PDBs for pattern collection...
+Done computing PDBs for pattern collection: 0.00805144s
+Generating patterns using the systematic generator...
+Found 681 SGA patterns.
+Found 735 interesting patterns.
+Systematic generator number of patterns: 735
+Systematic generator total PDB size: 23364
+Systematic generator computation time: 0.00275929s
+Computing PDBs for pattern collection...
+Done computing PDBs for pattern collection: 0.057699s
+Building successor generator...done! [t=0.0861732s]
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 1.238e-06s
+Variables: 24
+FactPairs: 108
+Bytes per state: 8
+Conducting best first search (real) bound = 2147483647
+New undef count: 0
+Building reverse operators...
+Created 432 reverse operators.
+Built match tree.
+21=0 22=0 23=0 
+Inserting initial (goal) state...
+New best h: [0, 0, 0, 6] (iteration 0) 
+New best h: [0, 0, 0, 7] (iteration 96) 
+New best h: [0, 1, 1, 7] (iteration 97) 
+New best h: [0, 2, 2, 8] (iteration 192) 
+New best h: [1, 3, 3, 9] (iteration 200) 
+New best h: [3, 4, 4, 12] (iteration 202) 
+New best h: [2, 4, 5, 12] (iteration 218) 
+New best h: [1, 3, 5, 13] (iteration 220) 
+New best h: [1, 3, 5, 14] (iteration 230) 
+New best h: [2, 4, 6, 14] (iteration 234) 
+New best h: [3, 5, 7, 15] (iteration 240) 
+New best h: [3, 5, 7, 16] (iteration 248) 
+New best h: [3, 5, 7, 17] (iteration 258) 
+New best h: [3, 5, 7, 19] (iteration 310) 
+New best h: [3, 5, 7, 20] (iteration 318) 
+New best h: [3, 5, 7, 21] (iteration 330) 
+New best h: [3, 5, 7, 22] (iteration 358) 
+New best h: [3, 5, 7, 23] (iteration 21090) 
+New best h: [3, 5, 8, 16] (iteration 40342) 
+New best h: [4, 6, 8, 17] (iteration 40346) 
+New best h: [4, 6, 8, 18] (iteration 40358) 
+New best h: [2, 4, 8, 20] (iteration 40408) 
+New best h: [3, 5, 9, 21] (iteration 40414) 
+New best h: [3, 5, 9, 23] (iteration 40430) 
+New best h: [1, 3, 10, 23] (iteration 40540) 
+Found first concrete state.
+Found first concrete state.
+Found first concrete state.
+New best h: [1, 3, 10, 24] (iteration 40568) 
+New best h: [1, 4, 11, 24] (iteration 55066) 
+New best h: [1, 4, 12, 24] (iteration 55074) 
+New best h: [2, 5, 13, 24] (iteration 55080) 
+New best h: [1, 4, 14, 24] (iteration 192718) 
+New best h: [2, 5, 15, 24] (iteration 192722) 
+New best h: [0, 3, 16, 24] (iteration 192750) 
+New best h: [1, 4, 17, 24] (iteration 192816) 
+New best h: [5, 9, 18, 24] (iteration 192966) 
+New best h: [4, 8, 19, 24] (iteration 192972) 
+New best h: [3, 6, 20, 24] (iteration 2202024) 
+New best h: [4, 8, 21, 24] (iteration 2203658) 
+New best h: [6, 10, 22, 24] (iteration 2205510) 
+New best h: [6, 10, 23, 24] (iteration 2205538) 
+New best h: [5, 9, 24, 24] (iteration 2205542) 
+New best h: [4, 8, 25, 24] (iteration 2900220) 
+New best h: [5, 9, 26, 24] (iteration 2900228) 
+New best h: [4, 8, 27, 24] (iteration 2900234) 
+New best h: [5, 9, 28, 24] (iteration 2900240) 
+New best h: [7, 10, 29, 24] (iteration 2900322) 
+New best h: [6, 9, 30, 24] (iteration 2900330) 
+New best h: [6, 10, 31, 24] (iteration 2901106) 
+New best h: [5, 9, 32, 24] (iteration 2901114) 
+New best h: [0, 4, 33, 24] (iteration 2916654) 
+Time limit reached. Abort search.
+Actual search time: 600.002s [t=600.13s]
+Original state h-value: 35
+New state h-value: 33
+Expanded 9168641 state(s).
+Reopened 0 state(s).
+Evaluated 0 state(s).
+Evaluations: 19722816
+Generated 27971582 state(s).
+Dead ends: 4285553 state(s).
+Number of registered states: 9769446
+Int hash set load factor: 9769446/16777216 = 0.582304
+Int hash set resizes: 24
+Open nodes: 591440
+Closed states: 9168641
+Search time: 600.044s
+Total time: 600.13s
+Solution found.
+Peak memory: 845976 KB
+search exit code: 0
+
