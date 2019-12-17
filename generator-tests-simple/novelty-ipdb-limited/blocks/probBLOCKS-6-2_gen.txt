@@ -2,14 +2,14 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=10000,print_h=1,max_time=60)' --internal-plan-file sas_plan
-reading input... [t=7.6541e-05s]
-done reading input! [t=0.000886026s]
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true,level=1),h],max_it=10000,print_h=1,max_time=60)' --internal-plan-file sas_plan
+reading input... [t=3.6447e-05s]
+done reading input! [t=0.000386204s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0.000191564s
+Done calculating initial pattern collection: 0.000143763s
 Average operator cost: 1
-building causal graph...done! [t=0.000150778s]
+building causal graph...done! [t=0.000159197s]
 Done calculating initial candidate PDBs
 current collection size is 35
 current initial h value: 10
@@ -18,22 +18,22 @@ Hill climbing iterations: 1
 Hill climbing generated patterns: 35
 Hill climbing rejected patterns: 0
 Hill climbing maximum PDB size: 14
-Hill climbing time: 0.0131674s
+Hill climbing time: 0.0141193s
 Hill climbing generator collection: [[8], [9], [10], [11], [12]]
 Hill climbing generator number of patterns: 5
 Hill climbing generator total PDB size: 35
-Hill climbing generator computation time: 0.0133957s
+Hill climbing generator computation time: 0.0143s
 Running dominance pruning...
 Pruned 0 of 1 pattern cliques
 Pruned 0 of 5 PDBs
-Dominance pruning took 8.296e-06s
+Dominance pruning took 8.328e-06s
 Canonical PDB heuristic number of patterns: 5
 Canonical PDB heuristic total PDB size: 35
-Canonical PDB heuristic computation time: 0.013448s
+Canonical PDB heuristic computation time: 0.014339s
 Initializing novelty heuristic...
-Building successor generator...done! [t=0.0184283s]
+Building successor generator...done! [t=0.0165923s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 4.1372e-05s
+time for successor generation creation: 4.1374e-05s
 Variables: 13
 FactPairs: 56
 Bytes per state: 4
@@ -63,7 +63,7 @@ New best h: [1, 7, 13] (iteration 842)
 New best h: [1, 8, 13] (iteration 1462) 
 New best h: [1, 9, 13] (iteration 7678) 
 Reached iteration limit.
-Actual search time: 0.0694415s [t=0.088228s]
+Actual search time: 0.0689516s [t=0.0859052s]
 Original state h-value: 10
 New state h-value: 9
 Expanded 9042 state(s).
@@ -77,9 +77,9 @@ Int hash set load factor: 10153/16384 = 0.61969
 Int hash set resizes: 14
 Open nodes: 959
 Closed states: 9042
-Search time: 0.0696992s
-Total time: 0.0882329s
+Search time: 0.0692134s
+Total time: 0.0859102s
 Solution found.
-Peak memory: 68432 KB
+Peak memory: 68460 KB
 search exit code: 0
 

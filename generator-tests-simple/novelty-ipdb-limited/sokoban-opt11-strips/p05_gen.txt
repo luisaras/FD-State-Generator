@@ -2,14 +2,14 @@ INFO     Running search (release).
 INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
-INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true),h],max_it=10000,print_h=1,max_time=60)' --internal-plan-file sas_plan
-reading input... [t=7.159e-05s]
-done reading input! [t=0.00273043s]
+INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=ipdb()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true,level=1),h],max_it=10000,print_h=1,max_time=60)' --internal-plan-file sas_plan
+reading input... [t=8.3541e-05s]
+done reading input! [t=0.00278309s]
 Initializing canonical PDB heuristic...
 Generating patterns using the hill climbing generator...
-Done calculating initial pattern collection: 0.000817451s
+Done calculating initial pattern collection: 0.000299731s
 Average operator cost: 1
-building causal graph...done! [t=0.000902853s]
+building causal graph...done! [t=0.000795188s]
 Done calculating initial candidate PDBs
 current collection size is 6
 current initial h value: 3
@@ -21,7 +21,7 @@ pattern: [42, 48] - improvement: 1000
 pattern: [45, 48] - improvement: 93
 found a better pattern with improvement 1000
 pattern: [44, 46]
-Hill climbing time so far: 0.0478598s
+Hill climbing time so far: 0.0476105s
 current collection size is 80
 current initial h value: 8
 pattern: [43, 47] - improvement: 1000
@@ -29,7 +29,7 @@ pattern: [42, 48] - improvement: 1000
 pattern: [44, 45, 46] - improvement: 1000
 found a better pattern with improvement 1000
 pattern: [43, 47]
-Hill climbing time so far: 0.12391s
+Hill climbing time so far: 0.124023s
 current collection size is 154
 current initial h value: 12
 pattern: [42, 48] - improvement: 1000
@@ -37,7 +37,7 @@ pattern: [44, 45, 46] - improvement: 1000
 pattern: [43, 45, 47] - improvement: 984
 found a better pattern with improvement 1000
 pattern: [42, 48]
-Hill climbing time so far: 0.230514s
+Hill climbing time so far: 0.231295s
 current collection size is 208
 current initial h value: 15
 pattern: [44, 45, 46] - improvement: 983
@@ -45,7 +45,7 @@ pattern: [43, 45, 47] - improvement: 902
 pattern: [42, 45, 48] - improvement: 838
 found a better pattern with improvement 983
 pattern: [44, 45, 46]
-Hill climbing time so far: 0.466043s
+Hill climbing time so far: 0.469877s
 current collection size is 3316
 current initial h value: 24
 pattern: [22, 44, 45, 46] - improvement: 2
@@ -55,7 +55,7 @@ pattern: [44, 45, 46, 47] - improvement: 75
 pattern: [44, 45, 46, 48] - improvement: 75
 found a better pattern with improvement 989
 pattern: [37, 44, 45, 46]
-Hill climbing time so far: 0.942328s
+Hill climbing time so far: 0.942282s
 current collection size is 9532
 current initial h value: 26
 pattern: [37, 40, 44, 45, 46] - improvement: 1
@@ -65,7 +65,7 @@ pattern: [22, 37, 44, 45, 46] - improvement: 1
 pattern: [25, 37, 44, 45, 46] - improvement: 1
 found a better pattern with improvement 94
 pattern: [37, 44, 45, 46, 47]
-Hill climbing time so far: 1.77321s
+Hill climbing time so far: 1.7575s
 current collection size is 21964
 current initial h value: 26
 pattern: [10, 37, 44, 45, 46, 47] - improvement: 194
@@ -76,7 +76,7 @@ pattern: [22, 37, 44, 45, 46, 47] - improvement: 923
 pattern: [25, 37, 44, 45, 46, 47] - improvement: 923
 found a better pattern with improvement 1000
 pattern: [37, 43, 44, 45, 46, 47]
-Hill climbing time so far: 15.0946s
+Hill climbing time so far: 14.9366s
 current collection size is 481948
 current initial h value: 40
 pattern: [31, 37, 43, 44, 45, 46, 47] - improvement: 1
@@ -89,7 +89,7 @@ pattern: [22, 37, 43, 44, 45, 46, 47] - improvement: 995
 pattern: [24, 37, 43, 44, 45, 46, 47] - improvement: 7
 found a better pattern with improvement 995
 pattern: [22, 37, 43, 44, 45, 46, 47]
-Hill climbing time so far: 46.4021s
+Hill climbing time so far: 46.1838s
 current collection size is 1401916
 current initial h value: 42
 pattern: [37, 40, 43, 44, 45, 46, 47] - improvement: 1
@@ -103,7 +103,7 @@ pattern: [22, 37, 43, 44, 45, 46, 47, 48] - improvement: 84
 pattern: [22, 24, 37, 43, 44, 45, 46, 47] - improvement: 5
 found a better pattern with improvement 1000
 pattern: [8, 22, 37, 43, 44, 45, 46, 47]
-Hill climbing time so far: 46.844s
+Hill climbing time so far: 46.6328s
 current collection size is 3241852
 current initial h value: 46
 pattern: [37, 40, 43, 44, 45, 46, 47] - improvement: 1
@@ -118,22 +118,22 @@ Hill climbing iterations: 10
 Hill climbing generated patterns: 429
 Hill climbing rejected patterns: 194
 Hill climbing maximum PDB size: 1839936
-Hill climbing time: 47.3329s
+Hill climbing time: 47.1252s
 Hill climbing generator collection: [[46], [47], [48], [44, 46], [43, 47], [42, 48], [44, 45, 46], [37, 44, 45, 46], [37, 44, 45, 46, 47], [37, 43, 44, 45, 46, 47], [22, 37, 43, 44, 45, 46, 47], [8, 22, 37, 43, 44, 45, 46, 47]]
 Hill climbing generator number of patterns: 12
 Hill climbing generator total PDB size: 3241852
-Hill climbing generator computation time: 47.3584s
+Hill climbing generator computation time: 47.1499s
 Running dominance pruning...
 Pruned 12 of 14 pattern cliques
 Pruned 8 of 12 PDBs
-Dominance pruning took 1.1022e-05s
+Dominance pruning took 1.0351e-05s
 Canonical PDB heuristic number of patterns: 4
 Canonical PDB heuristic total PDB size: 1840138
-Canonical PDB heuristic computation time: 47.3589s
+Canonical PDB heuristic computation time: 47.1504s
 Initializing novelty heuristic...
-Building successor generator...done! [t=47.3659s]
+Building successor generator...done! [t=47.1572s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 0.000196673s
+time for successor generation creation: 0.000198824s
 Variables: 49
 FactPairs: 233
 Bytes per state: 16
@@ -170,7 +170,7 @@ New best h: [1, 11, 28] (iteration 758)
 New best h: [1, 11, 29] (iteration 1538) 
 New best h: [1, 11, 30] (iteration 1574) 
 Reached iteration limit.
-Actual search time: 0.127088s [t=47.4941s]
+Actual search time: 0.126217s [t=47.2845s]
 Original state h-value: 46
 New state h-value: 11
 Expanded 8309 state(s).
@@ -184,9 +184,9 @@ Int hash set load factor: 10084/16384 = 0.615479
 Int hash set resizes: 14
 Open nodes: 1692
 Closed states: 8309
-Search time: 0.128001s
-Total time: 47.4941s
+Search time: 0.127113s
+Total time: 47.2845s
 Solution found.
-Peak memory: 539132 KB
+Peak memory: 539148 KB
 search exit code: 0
 

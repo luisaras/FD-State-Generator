@@ -3,13 +3,13 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=lmcut()' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true,level=2),h],max_it=10000,print_h=1,max_time=60)' --internal-plan-file sas_plan
-reading input... [t=6.916e-05s]
-done reading input! [t=0.00107772s]
+reading input... [t=4.5567e-05s]
+done reading input! [t=0.00059017s]
 Initializing landmark cut heuristic...
 Initializing novelty heuristic...
-Building successor generator...done! [t=0.00406406s]
+Building successor generator...done! [t=0.00283741s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 5.6629e-05s
+time for successor generation creation: 7.3697e-05s
 Variables: 15
 FactPairs: 72
 Bytes per state: 8
@@ -40,7 +40,7 @@ New best h: [2, 9, 15] (iteration 1694)
 New best h: [2, 10, 15] (iteration 1962) 
 New best h: [2, 11, 15] (iteration 1997) 
 Reached iteration limit.
-Actual search time: 0.496797s [t=0.501403s]
+Actual search time: 0.500207s [t=0.503768s]
 Original state h-value: 13
 New state h-value: 11
 Expanded 4209 state(s).
@@ -54,9 +54,9 @@ Int hash set load factor: 10396/16384 = 0.634521
 Int hash set resizes: 14
 Open nodes: 5792
 Closed states: 4209
-Search time: 0.497234s
-Total time: 0.501409s
+Search time: 0.500789s
+Total time: 0.503774s
 Solution found.
-Peak memory: 70012 KB
+Peak memory: 70016 KB
 search exit code: 0
 

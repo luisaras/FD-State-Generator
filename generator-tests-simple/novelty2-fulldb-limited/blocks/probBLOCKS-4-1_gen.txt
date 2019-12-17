@@ -3,18 +3,18 @@ INFO     search stdin: None
 INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search command line string: /home/lrasantos/Planning/FD-State-Generator/builds/release/bin/downward output.sas --evaluator 'h=pdb(greedy(max_states=infinity))' --search 'generator_abstract([novelty_h(prune=false,eval=h,reverse=true,level=2),h],max_it=10000,print_h=1,max_time=60)' --internal-plan-file sas_plan
-reading input... [t=3.7001e-05s]
-done reading input! [t=0.00028752s]
+reading input... [t=6.9605e-05s]
+done reading input! [t=0.000544584s]
 Generating a pattern using the greedy generator...
-building causal graph...done! [t=0.000103492s]
+building causal graph...done! [t=7.7667e-05s]
 Greedy generator pattern: [0, 1, 2, 3, 4, 5, 6, 7, 8]
 Greedy generator number of variables: 9
 Greedy generator PDB size: 20000
-Greedy generator computation time: 0.000137872s
+Greedy generator computation time: 0.000108694s
 Initializing novelty heuristic...
-Building successor generator...done! [t=0.00844208s]
+Building successor generator...done! [t=0.0091882s]
 peak memory difference for successor generator creation: 0 KB
-time for successor generation creation: 2.554e-05s
+time for successor generation creation: 2.5047e-05s
 Variables: 9
 FactPairs: 30
 Bytes per state: 4
@@ -43,7 +43,7 @@ New best h: [2, 10, 9] (iteration 1472)
 New best h: [2, 11, 9] (iteration 2237) 
 New best h: [2, 12, 9] (iteration 2241) 
 Completely explored state space.
-Actual search time: 0.0759484s [t=0.0846552s]
+Actual search time: 0.0766156s [t=0.0860716s]
 Original state h-value: 10
 New state h-value: 12
 Expanded 7051 state(s).
@@ -57,9 +57,9 @@ Int hash set load factor: 7051/8192 = 0.860718
 Int hash set resizes: 13
 Open nodes: 0
 Closed states: 7051
-Search time: 0.0761141s
-Total time: 0.0846601s
+Search time: 0.0767834s
+Total time: 0.0860765s
 Solution found.
-Peak memory: 68596 KB
+Peak memory: 68600 KB
 search exit code: 0
 
