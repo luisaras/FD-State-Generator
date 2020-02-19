@@ -141,7 +141,7 @@ void StateGenerator::save_plan_if_necessary() {
 
 void StateGenerator::save_task_if_necessary() {
     if (verbosity > utils::Verbosity::SILENT) {
-        assert(print_h < original_state_eval.size());
+        assert(print_h < (int) original_state_eval.size());
         cout << "Original state h-value: " << original_state_eval[print_h] << endl;
         cout << "New state h-value: " << best_state_eval[print_h] << endl;
     }
@@ -151,8 +151,13 @@ void StateGenerator::save_task_if_necessary() {
     }
     shared_ptr<AbstractTask> new_task = make_shared<extra_tasks::ModifiedInitTask>(task, best_state);
     ofstream file(get_plan_manager().plan_filename);
-    file << new_task;
-    file.close();
+    if (file) {
+        file << new_task;
+        file.close();
+        cout << "New task written to: " << get_plan_manager().plan_filename << endl;
+    } else {
+        cout << "Failed to open file: " << get_plan_manager().plan_filename << endl;
+    }
 }
 
 bool StateGenerator::found_solution() const {

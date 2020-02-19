@@ -85,7 +85,7 @@ generate()  {
     fi
 
     # Generate $i_task.sas
-    ulimit -S -v unlimited
+    ulimit -S -v $GEN_MEM
     ulimit -S -t $GEN_TIME
     if [ -f $SEARCH_TEMP ]; then
         rm $SEARCH_TEMP
@@ -337,11 +337,16 @@ test_sokoban() {
 
 
 LIMIT=$2
-if [ -z "$2" ]
+if [ $LIMIT = 1 ]
 then
-    GEN_TIME=910
+    GEN_TIME=1810 # 30 minutes
+    GEN_MEM=8000000 # 8GB
+elif [ $LIMIT = 2 ]
+    GEN_TIME=310 # 5 minutes
+    GEN_MEM=1000000 # 1GB
 else
-    GEN_TIME=310
+    GEN_TIME=unlimited
+    GEN_MEM=unlimited
 fi
 
 PLAN=$3

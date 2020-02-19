@@ -3,8 +3,10 @@
 
 #include <memory>
 #include <utility>
+#include <fstream>
 
 namespace utils {
+
 /*
   make_unique_ptr is a poor man's version of make_unique. Once we
   require C++14, we should change all occurrences of make_unique_ptr

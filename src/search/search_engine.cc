@@ -13,6 +13,7 @@
 #include "utils/rng_options.h"
 #include "utils/system.h"
 #include "utils/timer.h"
+#include "utils/memory.h"
 
 #include <cassert>
 #include <iostream>
@@ -59,6 +60,7 @@ SearchEngine::SearchEngine(const Options &opts)
       cost_type(static_cast<OperatorCost>(opts.get_enum("cost_type"))),
       is_unit_cost(task_properties::is_unit_cost(task_proxy)),
       max_time(opts.get<double>("max_time")),
+      max_mem(opts.get<unsigned long>("max_mem")),
       best_solved_state(StateID::no_state),
       best_solved_cost(EvaluationResult::INFTY) {
     if (opts.get<int>("bound") < 0) {
@@ -94,12 +96,20 @@ void SearchEngine::set_plan(const Plan &p) {
 void SearchEngine::search() {
     initialize();
     utils::CountdownTimer timer(max_time);
+    if (!utils::extra_memory_padding_is_reserved()) 
+        utils::reserve_extra_memory_padding(50);
     while (status == IN_PROGRESS) {
         status = step();
         if (timer.is_expired()) {
             if (verbosity > utils::Verbosity::SILENT)
                 cout << "Time limit reached. Abort search." << endl;
             status = TIMEOUT;
+            break;
+        }
+        if (!utils::extra_memory_padding_is_reserved()) {
+            if (verbosity > utils::Verbosity::SILENT)
+                cout << "Memory limit reached. Abort search." << endl;
+            status = OUTOFMEM;
             break;
         }
     }
@@ -182,6 +192,10 @@ void SearchEngine::add_options_to_parser(OptionParser &parser) {
         "longer. Therefore, this parameter should not be used for time-limiting "
         "experiments. Timed-out searches are treated as failed searches, "
         "just like incomplete search algorithms that exhaust their search space.",
+        "infinity");
+    parser.add_option<unsigned long>(
+        "max_mem",
+        "maximum virtual memory used by the process in KBs.",
         "infinity");
     parser.add_option<bool>(
         "undef_value",

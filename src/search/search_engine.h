@@ -26,7 +26,7 @@ namespace utils {
 enum class Verbosity;
 }
 
-enum SearchStatus {IN_PROGRESS, TIMEOUT, FAILED, SOLVED};
+enum SearchStatus {IN_PROGRESS, TIMEOUT, OUTOFMEM, FAILED, SOLVED};
 
 class SearchEngine {
     const options::Options opts;
@@ -50,6 +50,7 @@ protected:
     OperatorCost cost_type;
     bool is_unit_cost;
     double max_time;
+    unsigned long max_mem;
     
     StateID best_solved_state;
     int best_solved_cost;

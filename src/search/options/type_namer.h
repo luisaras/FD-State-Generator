@@ -46,6 +46,13 @@ struct TypeNamer<int> {
 };
 
 template<>
+struct TypeNamer<unsigned long> {
+    static std::string name(const Registry &) {
+        return "ulong";
+    }
+};
+
+template<>
 struct TypeNamer<bool> {
     static std::string name(const Registry &) {
         return "bool";

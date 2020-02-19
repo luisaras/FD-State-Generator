@@ -202,6 +202,51 @@ inline int TokenParser<int>::parse(OptionParser &parser) {
     return x * factor;
 }
 
+// unsigned long needs a specialization to allow "infinity".
+template<>
+inline unsigned long TokenParser<unsigned long>::parse(OptionParser &parser) {
+    std::string value = parser.get_root_value();
+
+    if (value.empty()) {
+        parser.error("unsigned long argument must not be empty");
+    } else if (value == "infinity") {
+        return std::numeric_limits<unsigned long>::max();
+    }
+
+    char suffix = value.back();
+    unsigned long factor = 1;
+    if (isalpha(suffix)) {
+        /* Option values from the command line are already lower case, but
+           default values specified in the code might be upper case. */
+        suffix = static_cast<char>(std::tolower(suffix));
+        if (suffix == 'k') {
+            factor = 1000;
+        } else if (suffix == 'm') {
+            factor = 1000000;
+        } else if (suffix == 'g') {
+            factor = 1000000000;
+        } else {
+            parser.error("invalid suffix for unsigned long argument (valid: K, M, G)");
+        }
+        value.pop_back();
+    }
+
+    std::istringstream stream(value);
+    unsigned long x;
+    stream >> std::noskipws >> x;
+    if (stream.fail() || !stream.eof()) {
+        parser.error("could not parse unsigned long argument");
+    }
+
+    unsigned long min_long = std::numeric_limits<unsigned long>::min();
+    // Reserve highest value for "infinity".
+    unsigned long max_long = std::numeric_limits<unsigned long>::max() - 1;
+    if (!utils::is_product_within_limits(x, factor, min_long, max_long)) {
+        parser.error("overflow for unsigned long argument");
+    }
+    return x * factor;
+}
+
 // double needs a specialization to allow "infinity".
 template<>
 inline double TokenParser<double>::parse(OptionParser &parser) {
@@ -285,6 +330,10 @@ void OptionParser::check_bounds(
 template<>
 void OptionParser::check_bounds<int>(
     const std::string &key, const int &value, const Bounds &bounds);
+
+template<>
+void OptionParser::check_bounds<unsigned long>(
+    const std::string &key, const unsigned long &value, const Bounds &bounds);
 
 template<>
 void OptionParser::check_bounds<double>(

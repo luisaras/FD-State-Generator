@@ -12,6 +12,11 @@ void NoveltyRecord::clear() {
     reached_facts.clear();
 }
 
+// reached_facts facts already found by search algorithm
+// state_values values of each variable
+// r number of elements they are missing in the set
+// var last variable with undefined value
+// d current index of the element to be set
 bool subset(set<vector<FactPair>>& reached_facts, const std::vector<int>& state_values, int r, int var, int d, vector<FactPair>& tuple) {
     if (r == 0) {
         if (reached_facts.count(tuple) == 0) {

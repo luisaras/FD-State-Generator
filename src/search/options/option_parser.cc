@@ -44,6 +44,22 @@ void OptionParser::check_bounds<int>(
 }
 
 template<>
+void OptionParser::check_bounds<unsigned long>(
+    const string &key, const unsigned long &value, const Bounds &bounds) {
+    unsigned long lower_bound = numeric_limits<unsigned long>::lowest();
+    unsigned long upper_bound = numeric_limits<unsigned long>::max();
+    if (!bounds.min.empty()) {
+        OptionParser bound_parser(bounds.min, registry, predefinitions, dry_run());
+        lower_bound = TokenParser<unsigned long>::parse(bound_parser);
+    }
+    if (!bounds.max.empty()) {
+        OptionParser bound_parser(bounds.max, registry, predefinitions, dry_run());
+        upper_bound = TokenParser<unsigned long>::parse(bound_parser);
+    }
+    _check_bounds(*this, key, value, lower_bound, upper_bound);
+}
+
+template<>
 void OptionParser::check_bounds<double>(
     const string &key, const double &value, const Bounds &bounds) {
     double lower_bound = -numeric_limits<double>::infinity();

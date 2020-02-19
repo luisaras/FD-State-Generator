@@ -3,9 +3,12 @@
 #include <cassert>
 #include <iostream>
 
+#include <unistd.h>
+
 using namespace std;
 
 namespace utils {
+
 static char *extra_memory_padding = nullptr;
 
 // Save standard out-of-memory handler.

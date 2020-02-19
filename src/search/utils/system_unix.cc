@@ -164,7 +164,7 @@ void out_of_memory_handler() {
     */
     write_reentrant_str(STDOUT_FILENO, "Failed to allocate memory.\n");
     set_new_handler(nullptr);
-    //exit_with(ExitCode::SEARCH_OUT_OF_MEMORY);
+    exit_with(ExitCode::SEARCH_OUT_OF_MEMORY);
 }
 
 void signal_handler(int signal_number) {
