@@ -165,8 +165,7 @@ plan() {
 }
 
 #       <h> <w(h),h>   <c,h>        <w(h),c,h>           <c,w(h),h>
-#ALLGEN=("" "novelty-" "conflicts-" "novelty-conflicts-" "conflicts-novelty-")
-ALLGEN=("novelty-" "novelty2-")
+ALLGEN=("" "novelty-" "novelty2-" "conflicts-" "novelty-conflicts-" "conflicts-novelty-")
 
 test() {
     local PROBLEM=$1
@@ -176,7 +175,7 @@ test() {
     fi
     for h in "${ALLH[@]}"; do
         for g in "${ALLGEN[@]}"; do
-            generate $PROBLEM $INST $g$h$LIMIT $BENCHMARKS
+            generate $PROBLEM $INST $g$h-$LIMIT $BENCHMARKS
         done
     done
 }
@@ -339,11 +338,12 @@ test_sokoban() {
 LIMIT=$2
 if [ $LIMIT = 1 ]
 then
-    GEN_TIME=1810 # 30 minutes
-    GEN_MEM=8000000 # 8GB
+    GEN_TIME=3610 # 60 minutes
+    GEN_MEM=8050000 # 8GB
 elif [ $LIMIT = 2 ]
+then
     GEN_TIME=310 # 5 minutes
-    GEN_MEM=1000000 # 1GB
+    GEN_MEM=550000 # 500MB
 else
     GEN_TIME=unlimited
     GEN_MEM=unlimited
