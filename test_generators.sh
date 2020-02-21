@@ -265,15 +265,15 @@ test_blocks_simple() {
     ALLH=(lmcut ipdb fulldb)
     BENCHMARKS=ipc
     TEST_FOLDER=generator-tests-simple
-    test blocks probBLOCKS-4-0
-    test blocks probBLOCKS-4-1
-    test blocks probBLOCKS-4-2
-    test blocks probBLOCKS-5-0
-    test blocks probBLOCKS-5-1
-    test blocks probBLOCKS-5-2
-    test blocks probBLOCKS-6-0
-    test blocks probBLOCKS-6-1
-    test blocks probBLOCKS-6-2
+#    test blocks probBLOCKS-4-0
+#    test blocks probBLOCKS-4-1
+#    test blocks probBLOCKS-4-2
+#    test blocks probBLOCKS-5-0
+#    test blocks probBLOCKS-5-1
+#    test blocks probBLOCKS-5-2
+#    test blocks probBLOCKS-6-0
+#    test blocks probBLOCKS-6-1
+#   test blocks probBLOCKS-6-2
     test blocks probBLOCKS-7-0
     test blocks probBLOCKS-7-1
     test blocks probBLOCKS-7-2
@@ -339,11 +339,11 @@ LIMIT=$2
 if [ $LIMIT = 1 ]
 then
     GEN_TIME=3610 # 60 minutes
-    GEN_MEM=8050000 # 8GB
+    GEN_MEM=8100000 # 8GB
 elif [ $LIMIT = 2 ]
 then
     GEN_TIME=310 # 5 minutes
-    GEN_MEM=550000 # 500MB
+    GEN_MEM=1100000 # 1GB
 else
     GEN_TIME=unlimited
     GEN_MEM=unlimited

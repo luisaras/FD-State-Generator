@@ -149,6 +149,7 @@ void StateGenerator::save_task_if_necessary() {
         if (best_state[i] == -1 || best_state[i] >= task->get_variable_domain_size(i))
             best_state[i] = 0;
     }
+    open_list.reset();
     shared_ptr<AbstractTask> new_task = make_shared<extra_tasks::ModifiedInitTask>(task, best_state);
     ofstream file(get_plan_manager().plan_filename);
     if (file) {
