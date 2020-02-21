@@ -4,8 +4,11 @@
 #include <memory>
 #include <utility>
 #include <fstream>
+#include <functional>
 
 namespace utils {
+
+extern std::function<void()> mem_recoverer;
 
 /*
   make_unique_ptr is a poor man's version of make_unique. Once we

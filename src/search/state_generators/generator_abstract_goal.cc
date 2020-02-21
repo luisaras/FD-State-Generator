@@ -78,6 +78,9 @@ SearchStatus GeneratorAbstractGoal::step() {
 
     // Expand
     for (int op_id : applicable_operator_ids) {
+
+        if (!utils::extra_memory_padding_is_reserved())
+            break;
         
         // Get values of previous state
         ReverseOperator& op = operators[op_id];

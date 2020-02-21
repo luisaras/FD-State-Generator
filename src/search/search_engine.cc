@@ -94,10 +94,12 @@ void SearchEngine::set_plan(const Plan &p) {
 }
 
 void SearchEngine::search() {
-    initialize();
-    utils::CountdownTimer timer(max_time);
     if (!utils::extra_memory_padding_is_reserved()) 
-        utils::reserve_extra_memory_padding(50);
+        utils::reserve_extra_memory_padding(75);
+    initialize();
+    utils::mem_recoverer = [this] { this->save_task_if_necessary(); };
+    utils::CountdownTimer timer(max_time);
+
     while (status == IN_PROGRESS) {
         status = step();
         if (timer.is_expired()) {
@@ -116,6 +118,7 @@ void SearchEngine::search() {
     if (verbosity > utils::Verbosity::SILENT)
         cout << "Actual search time: " << timer.get_elapsed_time()
              << " [t=" << utils::g_timer << "]" << endl;
+    utils::mem_recoverer = 0;
 }
 
 bool SearchEngine::check_goal_and_set_plan(const GlobalState &state) {

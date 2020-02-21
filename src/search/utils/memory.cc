@@ -9,6 +9,8 @@ using namespace std;
 
 namespace utils {
 
+function<void()> mem_recoverer = 0;
+
 static char *extra_memory_padding = nullptr;
 
 // Save standard out-of-memory handler.
@@ -31,6 +33,8 @@ void release_extra_memory_padding() {
     extra_memory_padding = nullptr;
     assert(standard_out_of_memory_handler);
     set_new_handler(standard_out_of_memory_handler);
+    if (mem_recoverer)
+        mem_recoverer();
 }
 
 bool extra_memory_padding_is_reserved() {

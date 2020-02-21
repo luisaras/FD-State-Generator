@@ -339,11 +339,11 @@ LIMIT=$2
 if [ $LIMIT = 1 ]
 then
     GEN_TIME=3610 # 60 minutes
-    GEN_MEM=8050000 # 8GB
+    GEN_MEM=8100000 # 8GB
 elif [ $LIMIT = 2 ]
 then
     GEN_TIME=310 # 5 minutes
-    GEN_MEM=550000 # 500MB
+    GEN_MEM=1100000 # 1GB
 else
     GEN_TIME=unlimited
     GEN_MEM=unlimited
