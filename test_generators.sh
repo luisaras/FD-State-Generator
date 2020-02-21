@@ -265,15 +265,15 @@ test_blocks_simple() {
     ALLH=(lmcut ipdb fulldb)
     BENCHMARKS=ipc
     TEST_FOLDER=generator-tests-simple
-    test blocks probBLOCKS-4-0
-    test blocks probBLOCKS-4-1
-    test blocks probBLOCKS-4-2
-    test blocks probBLOCKS-5-0
-    test blocks probBLOCKS-5-1
-    test blocks probBLOCKS-5-2
-    test blocks probBLOCKS-6-0
-    test blocks probBLOCKS-6-1
-    test blocks probBLOCKS-6-2
+#    test blocks probBLOCKS-4-0
+#    test blocks probBLOCKS-4-1
+#    test blocks probBLOCKS-4-2
+#    test blocks probBLOCKS-5-0
+#    test blocks probBLOCKS-5-1
+#    test blocks probBLOCKS-5-2
+#    test blocks probBLOCKS-6-0
+#    test blocks probBLOCKS-6-1
+#   test blocks probBLOCKS-6-2
     test blocks probBLOCKS-7-0
     test blocks probBLOCKS-7-1
     test blocks probBLOCKS-7-2
